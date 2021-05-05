@@ -3,7 +3,7 @@ import React from 'react';
 import './i18n/i18n';
 
 import Loading from 'components/Loading';
-import Home from './Home';
+import Home from 'views/Home';
 
 function App() {
   return (

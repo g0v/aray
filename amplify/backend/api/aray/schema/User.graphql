@@ -1,0 +1,23 @@
+type User
+  @model (subscriptions: { level: public })
+  @key(fields: ["username"])
+  @auth(rules: [
+    {allow: owner, ownerField: "username", operations: [read, create, update]},
+    {allow: groups, groups: ["Admins"]},
+  ])
+{
+  username: String!
+  status: UserStatus!
+
+  email: String
+
+  createdAt: AWSDateTime!
+  createdBy: String!
+  updatedAt: AWSDateTime!
+  updatedBy: String!
+}
+
+enum UserStatus {
+  active
+  inactive
+}

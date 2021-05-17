@@ -1,1 +1,7 @@
-app_name: ＡＲＡＹ(待決定)
+app_name: ARAY 阿賴～
+app_short_name: 阿賴～
+
+config_locale: zh-TW
+config_time_zone: Asia/Taipei
+
+title_dashboard: 總覽

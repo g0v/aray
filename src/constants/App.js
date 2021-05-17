@@ -1,0 +1,5 @@
+export const DRAWER_WIDTH = 180;
+
+export const AUTO_UPDATE_INTERVAL_IN_MILLISECONDS = 30 * 1000;
+
+export const PASSWORD_MIN_LENGTH = 8;

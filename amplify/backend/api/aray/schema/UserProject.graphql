@@ -1,0 +1,25 @@
+type UserProject
+  @model
+  @key(name: "byUser", fields: ["username", "projectId"])
+  @key(name: "byProject", fields: ["projectId", "username"])
+  @auth(rules: [
+    { allow: groups, groups: ["Users"], operations: [read] },
+    { allow: groups, groups: ["Admins"] },
+  ])
+{
+  id: ID!
+  projectId: ID!
+  username: String!
+
+  project: Project! @connection(fields: ["projectId"])
+  user: User! @connection(fields: ["username"])
+
+  role: UserProjectRole!
+  completedHours: Int!
+  completedTasks: Int!
+}
+
+enum UserProjectRole {
+  manager
+  contributor
+}

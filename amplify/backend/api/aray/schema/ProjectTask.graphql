@@ -1,0 +1,29 @@
+type ProjectTask
+  @model
+  @key(name: "byProjectIdByStatus",
+    fields: ["projectId","status"], queryField: "getProjectTasksByProjectIdByStatus")
+
+  @auth(rules: [
+    # Use custom graphql api to create/update project tasks (based on the project @auth)
+    { allow: groups, groups: ["Users"], operations: [read] },
+    { allow: groups, groups: ["Admins"] },
+  ])
+{
+  id: ID!
+  projectId: ID!
+  status: ProjectTaskStatus!
+
+  summary: String!
+  description: String
+  hours: Int!
+
+  createdAt: AWSDateTime!
+  createdBy: String!
+  updatedAt: AWSDateTime!
+  updatedBy: String!
+}
+
+enum ProjectTaskStatus {
+  active
+  inactive
+}

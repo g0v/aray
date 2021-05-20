@@ -1,0 +1,16 @@
+type ProjectTag
+  @model
+  @key(name: "byTag", fields: ["tagId", "projectId"])
+  @key(name: "byProject", fields: ["projectId", "tagId"])
+  @auth(rules: [
+    { allow: groups, groups: ["Users"], operations: [read, create] },
+    { allow: groups, groups: ["Admins"] },
+  ])
+{
+  id: ID!
+  projectId: ID!
+  tagId: ID!
+
+  project: Project! @connection(fields: ["projectId"])
+  tag: Tag! @connection(fields: ["tagId"])
+}

@@ -31,6 +31,9 @@ import CustomAppBar from 'components/CustomAppBar';
 import Loading from 'components/Loading';
 import Colors from 'constants/Colors';
 import { DRAWER_WIDTH } from 'constants/App';
+import { request } from 'utils/graph';
+import { getUser } from 'graphql/queries';
+import { createUser } from 'graphql/mutations';
 
 // Disable oauth for web
 delete awsconfig.oauth;
@@ -86,12 +89,32 @@ function ReactApp() {
 
   React.useEffect(() => {
     (async () => {
-      const [err, user] = await to(Auth.currentAuthenticatedUser({ bypassCache: true }));
+      const [err, cognitoUser] = await to(Auth.currentAuthenticatedUser({ bypassCache: true }));
       if (err) {
         setIsLoading(false);
         history.push(initialPath);
       } else {
-        setUser(user);
+        const { username } = cognitoUser;
+        const { data: { getUser: userData } } = await request(getUser, { username });
+
+        console.log('user', cognitoUser);
+        console.log('userData', userData);
+        // TODO: move to the backend function
+        if (!userData) {
+          await request(createUser, {
+            input: {
+              username,
+              status: 'active',
+              name: cognitoUser.attributes.name,
+              email: cognitoUser.attributes.email,
+              selfIntroduction: '無',
+              createdBy: username,
+              updatedBy: username,
+            },
+          });
+        }
+
+        setUser(cognitoUser);
         setIsLoading(false);
       }
     })();
@@ -122,9 +145,11 @@ function ReactApp() {
     history.push(initialPath);
   }, [user]);
 
-  if (isLoading) {
+  if (isLoading || !user) {
     return (<Loading />);
   }
+
+  console.log('user', user);
 
   return (
     <Router history={history}>

@@ -1,0 +1,24 @@
+type CreateOrUpdateProjectResponse {
+  # errors: [String] @aws_cognito_user_pools
+  # message: String @aws_cognito_user_pools
+  id: String @aws_cognito_user_pools
+}
+
+input CreateOrUpdateProjectRequest {
+  id: ID # optional for update
+  status: ProjectStatus!
+  # owner
+  managers: [String]
+  name: String!
+  summary: String
+  description: String
+  links: [ProjectLinkRequest]
+
+  # TODO: update tags
+  # updatedTags: []
+}
+
+input ProjectLinkRequest {
+  name: String!
+  url: String!
+}

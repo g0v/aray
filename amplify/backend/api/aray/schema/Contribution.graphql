@@ -1,0 +1,26 @@
+type Contribution
+  @model
+  @key(name: "byUsernameByCreatedAt",
+    fields: ["username","createdAt"], queryField: "getContributionsByUsernameByCreatedAt")
+  @key(name: "byProjectIdByCreatedAt",
+    fields: ["projectId","createdAt"], queryField: "getContributionsByProjectIdByCreatedAt")
+  @auth(rules: [
+    # Use custom graphql api to create contribution and calculate the hours
+    { allow: groups, groups: ["Users"], operations: [read] },
+    { allow: groups, groups: ["Admins"] },
+  ])
+{
+  id: ID!
+  username: String!
+  projectId: ID!
+  projectTaskId: ID
+  summary: String!
+  description: String
+
+  hours: Int!
+
+  createdAt: AWSDateTime!
+  createdBy: String!
+  updatedAt: AWSDateTime!
+  updatedBy: String!
+}

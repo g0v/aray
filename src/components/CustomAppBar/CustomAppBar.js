@@ -37,6 +37,8 @@ import Version from 'components/Version';
 // import UserAvatar from 'components/UserAvatar';
 import Colors from 'constants/Colors';
 import { DRAWER_WIDTH } from 'constants/App';
+import LanguageSelector from 'components/LanguageSelector';
+import GithubLinkButton from 'components/GithubLinkButton';
 
 const useStyles = makeStyles((theme) => ({
   root: {
@@ -175,8 +177,6 @@ export default function CustomAppBar({ user, routes, open, onUpdate }) {
         elevation={1}
       >
         <Toolbar style={{ height: 64 }}>
-          <img src="/assets/images/g0v-banner.svg" alt="Logo" width="192" style={{ marginRight: 16 }} />
-
           {user ?
             <IconButton
               color="inherit"
@@ -198,6 +198,7 @@ export default function CustomAppBar({ user, routes, open, onUpdate }) {
                 <MenuIcon />
               </IconButton>
             </Hidden>}
+          <img src="/assets/images/g0v-banner.svg" alt="Logo" width="192" style={{ marginRight: 16 }} />
           {!open &&
             <Typography component="h1" variant="h6" color="inherit" noWrap className={classes.title}>
               <Link to="/" className={classes.unstyledHyperlink} data-test-id="title">
@@ -205,6 +206,8 @@ export default function CustomAppBar({ user, routes, open, onUpdate }) {
               </Link>
             </Typography>}
           <div className={classes.flexbox} />
+          <GithubLinkButton url='g0v/aray' />
+          <LanguageSelector />
           {user ?
             <React.Fragment>
               <IconButton color="inherit">
@@ -235,6 +238,7 @@ export default function CustomAppBar({ user, routes, open, onUpdate }) {
                   機構申請
                 </Link>
               </Typography> */}
+              <Version showName={false} style={{ marginRight: 8 }} />
               <Button
                 color="inherit"
                 component={Link}
@@ -303,13 +307,13 @@ export default function CustomAppBar({ user, routes, open, onUpdate }) {
                 key={index}
                 button
                 component={Link}
-                selected={window.location.pathname.startsWith(route.link || route.path)}
+                // selected={window.location.pathname.startsWith(route.link || route.path)}
                 to={route.link || route.path}
               >
                 <ListItemIcon style={{ minWidth: 36 }}>
                   {route.icon ? <route.icon /> : null}
                 </ListItemIcon>
-                <ListItemText primary={route.title} />
+                <ListItemText primary={t(route.title)} />
                 {route.badge && <route.badge />}
               </ListItem>
             ))}
@@ -324,7 +328,8 @@ export default function CustomAppBar({ user, routes, open, onUpdate }) {
                 <Version />
               </ListItemText>
             </ListItem>
-          </List>:<List>
+          </List>:
+          <List>
             <ListItem button onClick={()=>history.push('/application')}>
               <ListItemIcon><PersonAddIcon /></ListItemIcon>
               <ListItemText primary={'申請加入'} />

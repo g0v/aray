@@ -1,0 +1,16 @@
+type UserKeyword
+  @model
+  @key(name: "byUser", fields: ["username", "keywordId"])
+  @key(name: "byKeyword", fields: ["keywordId", "username"])
+  @auth(rules: [
+    { allow: groups, groups: ["Users"], operations: [read, create] },
+    { allow: groups, groups: ["Admins"] },
+  ])
+{
+  id: ID!
+  keywordId: ID!
+  username: String!
+
+  keyword: Keyword! @connection(fields: ["keywordId"])
+  user: User! @connection(fields: ["username"])
+}

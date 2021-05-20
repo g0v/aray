@@ -2,6 +2,16 @@ app_name: ARAY 阿賴～
 app_short_name: 阿賴～
 
 config_locale: zh-TW
-config_time_zone: Asia/Taipei
 
 title_dashboard: 總覽
+title_myProfile: 我的頁面
+title_myProjectList: 我的專案
+title_projectList: 專案列表
+title_userList: 貢獻者列表
+
+myProjectList_myProjects: 我的專案
+myProjectList_otherProjects: 參與專案
+
+projectList_projects: 專案
+
+userList_users: 貢獻者

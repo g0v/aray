@@ -1,5 +1,5 @@
 type User
-  @model (subscriptions: { level: public })
+  @model
   @key(fields: ["username"])
   @auth(rules: [
     {allow: owner, ownerField: "username", operations: [read, create, update]},
@@ -9,7 +9,13 @@ type User
   username: String!
   status: UserStatus!
 
-  email: String
+  name: String!
+  email: String!
+
+  selfIntroduction: String
+
+  projects: [UserProject] @connection(keyName: "byUser", fields: ["username"])
+  keywords: [UserKeyword] @connection(keyName: "byUser", fields: ["username"])
 
   createdAt: AWSDateTime!
   createdBy: String!

@@ -3,7 +3,7 @@ import PropTypes from 'prop-types';
 import Button from '@material-ui/core/Button';
 import IconButton from '@material-ui/core/IconButton';
 import Tooltip from '@material-ui/core/Tooltip';
-import Link from 'react-router-dom/Link';
+import { Link } from 'react-router-dom';
 
 function VisitButton({
   url = '',

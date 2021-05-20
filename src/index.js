@@ -90,6 +90,7 @@ function ReactApp() {
   React.useEffect(() => {
     (async () => {
       const [err, cognitoUser] = await to(Auth.currentAuthenticatedUser({ bypassCache: true }));
+      console.log({ err, cognitoUser });
       if (err) {
         setIsLoading(false);
         history.push(initialPath);
@@ -145,7 +146,7 @@ function ReactApp() {
     history.push(initialPath);
   }, [user]);
 
-  if (isLoading || !user) {
+  if (isLoading) {
     return (<Loading />);
   }
 

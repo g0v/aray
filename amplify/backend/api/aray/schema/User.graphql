@@ -3,6 +3,7 @@ type User
   @key(fields: ["username"])
   @auth(rules: [
     {allow: owner, ownerField: "username", operations: [read, create, update]},
+    {allow: groups, groups: ["Users"], operations: [read]},
     {allow: groups, groups: ["Admins"]},
   ])
 {

@@ -14,6 +14,7 @@ import 'react-redux-toastr/lib/css/react-redux-toastr.min.css';
 import { Provider } from 'react-redux';
 import ReduxToastr from 'react-redux-toastr';
 
+import 'react-calendar-heatmap/dist/styles.css';
 import './global';
 import './i18n/i18n';
 import './i18n/Amplify';
@@ -50,6 +51,12 @@ const theme = createMuiTheme({
       light: Colors.primaryLight,
       main: Colors.primary,
       dark: Colors.primaryDark,
+      contrastText: '#fff',
+    },
+    secondary: {
+      light: Colors.secondaryLight,
+      main: Colors.secondary,
+      dark: Colors.secondaryDark,
       contrastText: '#fff',
     },
   },
@@ -108,7 +115,9 @@ function ReactApp() {
               status: 'active',
               name: cognitoUser.attributes.name,
               email: cognitoUser.attributes.email,
-              selfIntroduction: '無',
+              // selfIntroduction: '無',
+              totalCompletedHours: 0,
+              totalCompletedTasks: 0,
               createdBy: username,
               updatedBy: username,
             },

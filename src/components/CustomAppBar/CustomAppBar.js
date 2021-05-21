@@ -161,7 +161,8 @@ export default function CustomAppBar({ user, routes, open, onUpdate }) {
     try {
       localStorage.clear();
       await Auth.signOut();
-      history.push('/app');
+      window.location.reload();
+      // history.push('/app');
     } catch (e) {
       history.push('/app');
     }

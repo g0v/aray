@@ -11,7 +11,7 @@ const useStyles = makeStyles((theme) => ({
   },
 }));
 
-export default function UserAvatar({ username }) {
+export default function UserAvatar({ username, name, size = 24 }) {
   const classes = useStyles();
 
   const [uri, setUri] = useState();
@@ -32,11 +32,16 @@ export default function UserAvatar({ username }) {
       alt={''}
       src={uri}
       variant="circle"
+      style={{ height: size, width: size, fontSize: size * 0.6 }}
       className={classes.avatar}
-    />
+    >
+      {(name ||' ')[0]}
+    </Avatar>
   );
 }
 
 UserAvatar.propTypes = {
   username: PropTypes.string.isRequired,
+  name: PropTypes.string,
+  size: PropTypes.number,
 };

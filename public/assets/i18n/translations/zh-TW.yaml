@@ -6,8 +6,8 @@ config_locale: zh-TW
 title_dashboard: 總覽
 title_myProfile: 我的頁面
 title_myProjectList: 我的專案
-title_projectList: 專案列表
-title_userList: 貢獻者列表
+title_projectList: 找專案(坑)
+title_userList: 找幫手
 
 myProjectList_myProjects: 我的專案
 myProjectList_otherProjects: 參與專案
@@ -15,3 +15,33 @@ myProjectList_otherProjects: 參與專案
 projectList_projects: 專案
 
 userList_users: 貢獻者
+
+user_editProfile: 更新個人資料
+user_editKeywords: 更新關鍵字
+user_totalHoursInThePastYear: 過去一年的貢獻總時數
+user_keywords: 關鍵字
+user_totalCompletedHours: 總貢獻時數 
+user_totalCompletedTasks: 總完成任務
+user_participateProjects: 參與的專案
+user_recentContributions: 近期貢獻紀錄
+
+datetime_month01: 一月
+datetime_month02: 二月
+datetime_month03: 三月
+datetime_month04: 四月
+datetime_month05: 五月
+datetime_month06: 六月
+datetime_month07: 七月
+datetime_month08: 八月
+datetime_month09: 九月
+datetime_month10: 十月
+datetime_month11: 十一月
+datetime_month12: 十二月
+datetime_weekday0: 日
+datetime_weekday1: 一
+datetime_weekday2: 二
+datetime_weekday3: 三
+datetime_weekday4: 四
+datetime_weekday5: 五
+datetime_weekday6: 六
+

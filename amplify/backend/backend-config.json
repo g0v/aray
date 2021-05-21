@@ -90,5 +90,11 @@
         }
       ]
     }
+  },
+  "storage": {
+    "aray": {
+      "service": "S3",
+      "providerPlugin": "awscloudformation"
+    }
   }
 }

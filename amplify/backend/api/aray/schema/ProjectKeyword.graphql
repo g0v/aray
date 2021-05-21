@@ -1,0 +1,16 @@
+type ProjectKeyword
+  @model
+  @key(name: "byKeyword", fields: ["keywordId", "projectId"])
+  @key(name: "byProject", fields: ["projectId", "keywordId"])
+  @auth(rules: [
+    { allow: groups, groups: ["Users"], operations: [read, create] },
+    { allow: groups, groups: ["Admins"] },
+  ])
+{
+  id: ID!
+  projectId: ID!
+  keywordId: ID!
+
+  project: Project! @connection(fields: ["projectId"])
+  keyword: Keyword! @connection(fields: ["keywordId"])
+}

@@ -43,8 +43,6 @@ export default function ProjectCard({ project: inProject, projectId: inProjectId
     })();
   }, [inProjectId]);
 
-  console.log('project', project);
-
   if (!project) return null;
 
   return (

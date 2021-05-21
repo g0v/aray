@@ -1,6 +1,6 @@
 {
     "identityPoolName": "aray6131feb9_identitypool_6131feb9",
-    "allowUnauthenticatedIdentities": false,
+    "allowUnauthenticatedIdentities": true,
     "resourceNameTruncated": "aray6131feb9",
     "userPoolName": "aray6131feb9_userpool_6131feb9",
     "autoVerifiedAttributes": [

@@ -1,4 +1,4 @@
-type Tag
+type Need
   @model
   @auth(rules: [
     { allow: groups, groups: ["Users"], operations: [read, create] },
@@ -8,7 +8,7 @@ type Tag
   id: ID!
   label: String!
 
-  projects: [ProjectTag] @connection(keyName: "byTag", fields: ["id"])
+  projects: [ProjectNeed] @connection(keyName: "byNeed", fields: ["id"])
 
   createdAt: AWSDateTime!
   updatedAt: AWSDateTime!

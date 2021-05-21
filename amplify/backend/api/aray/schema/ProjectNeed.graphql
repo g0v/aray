@@ -1,0 +1,16 @@
+type ProjectNeed
+  @model
+  @key(name: "byNeed", fields: ["needId", "projectId"])
+  @key(name: "byProject", fields: ["projectId", "needId"])
+  @auth(rules: [
+    { allow: groups, groups: ["Users"], operations: [read, create] },
+    { allow: groups, groups: ["Admins"] },
+  ])
+{
+  id: ID!
+  projectId: ID!
+  needId: ID!
+
+  project: Project! @connection(fields: ["projectId"])
+  need: Need! @connection(fields: ["needId"])
+}

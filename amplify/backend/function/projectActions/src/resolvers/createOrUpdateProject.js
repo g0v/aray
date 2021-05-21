@@ -23,6 +23,9 @@ module.exports = async ({
     summary,
     description,
     links = [],
+    // tags = [],
+    // keywords = [],
+    // needs = [],
   } = input;
 
   const existingProject = inId ? await getProject(inId) : {};
@@ -89,6 +92,7 @@ module.exports = async ({
       });
     }
   });
+
   allProjectUsers.forEach((projectUser) => {
     // downgrade from manager to contributor
     if (!allAdminUsernames.includes(projectUser.username)) {

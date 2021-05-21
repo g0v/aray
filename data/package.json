@@ -1,0 +1,31 @@
+{
+  "name": "data",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "seed": "node -r esm ./seeds",
+    "seed:test": "node -r esm ./seeds-for-testing",
+    "migrations": "node -r esm ./migrations",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "adm-zip": "^0.4.16",
+    "aws-ddb-client-extra": "^1.0.2",
+    "aws-sdk": "^2.649.0",
+    "csvtojson": "^2.0.10",
+    "esm": "^3.2.25",
+    "got": "^11.6.2",
+    "graphql": "^15.3.0",
+    "graphql-2-json-schema": "^0.2.0",
+    "inquirer": "^7.1.0",
+    "json2csv": "^5.0.1",
+    "jsonexport": "^3.0.1",
+    "moment": "^2.24.0",
+    "quicktype-core": "^6.0.69",
+    "save": "^2.4.0",
+    "uuid": "^8.3.2"
+  }
+}

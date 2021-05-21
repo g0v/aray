@@ -1,0 +1,15 @@
+type DataMigration
+  @model(
+    queries: null
+    mutations: null
+    subscriptions: null
+  )
+  @key(fields: ["name"])
+  @auth(rules: [
+    { allow: groups, groups: ["Admins"]}
+  ])
+  {
+    name: String!
+    notes: String
+  }
+  

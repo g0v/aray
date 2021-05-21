@@ -11,9 +11,22 @@ type User
   status: UserStatus!
 
   name: String!
-  email: String!
+  email: AWSEmail!
 
   selfIntroduction: String
+  location: String
+
+  slackId: String
+  
+  urlWebsite: AWSURL
+  urlGithub: AWSURL
+  urlLinkedIn: AWSURL
+  urlFacebook: AWSURL
+  urlTwitter: AWSURL
+  urlInstagram: AWSURL
+
+  totalCompletedHours: Int
+  totalCompletedTasks: Int
 
   projects: [UserProject] @connection(keyName: "byUser", fields: ["username"])
   keywords: [UserKeyword] @connection(keyName: "byUser", fields: ["username"])

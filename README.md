@@ -25,3 +25,5 @@ npm start
 ## Links
 
 - [Hackmd](https://g0v.hackmd.io/vJ7_irbLRQGMYF29C9mZGA)
+- [g0v 專案名稱的華英對照表](https://docs.google.com/spreadsheets/d/1hFAl4CvtkPGAFY5QaXYXWki2GNXJkElebgonU3RHRdk/edit#gid=0)
+- [g0v database 中英介紹](https://docs.google.com/spreadsheets/d/1C9-g1pvkfqBJbfkjPB0gvfBbBxVlWYJj6tTVwaI5_x8/edit#gid=0)

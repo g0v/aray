@@ -5,6 +5,7 @@ import Container from '@material-ui/core/Container';
 import Typography from '@material-ui/core/Typography';
 import Button from '@material-ui/core/Button';
 import Card from '@material-ui/core/Card';
+import CircularProgress from '@material-ui/core/CircularProgress';
 
 import InstagramIcon from '@material-ui/icons/Instagram';
 import TwitterIcon from '@material-ui/icons/Twitter';
@@ -34,9 +35,11 @@ import {
 } from 'graphql/queries';
 import VisitButton from 'components/VisitButton';
 import KeywordChip from 'components/KeywordChip';
-import Colors from 'constants/Colors';
+import NeedChip from 'components/NeedChip';
 import ProjectCard from 'components/ProjectCard';
 import UserAvatar from 'components/UserAvatar';
+import StatsCard from 'components/StatsCard';
+
 import ContributionList from './ContributionList';
 
 const useStyles = makeStyles((theme) => ({
@@ -57,11 +60,6 @@ const useStyles = makeStyles((theme) => ({
   listItemText: {
     marginLeft: theme.spacing(1),
   },
-  itemContainer: {
-    border: `1px solid ${Colors.light2}`,
-    borderRadius: 5,
-    padding: theme.spacing(2),
-  },
   header: {
     marginTop: theme.spacing(2),
   },
@@ -70,7 +68,7 @@ const useStyles = makeStyles((theme) => ({
 const today = moment().endOf('day');
 const aYearAgo = moment().add(-1, 'years').startOf('day');
 
-export default function User({ id: inId, computedMatch }) {
+export default function User({ id: inId, computedMatch, match }) {
   const classes = useStyles();
   const { t } = useTranslation();
 
@@ -83,20 +81,25 @@ export default function User({ id: inId, computedMatch }) {
   const [contributions, setContributions] = useState([]);
   const [keywords, setKeywords] = useState([]);
   const [projects, setProjects] = useState([]);
+  const [needs, setNeeds] = useState([]);
+  const [canEdit, setCanEdit] = useState(false);
 
   useEffect(() => {
     if (inId) {
       setId(inId);
     } else
-    if (computedMatch) {
-      const { params: { id } } = computedMatch;
+    if (computedMatch || match) {
+      const { params: { id } } = computedMatch || match;
       const username = localStorage.getItem('app:username');
       setId(id || username);
     }
-  }, [inId, computedMatch]);
+  }, [inId, computedMatch, match]);
 
   useEffect(() => {
     if (!id) return;
+    const username = localStorage.getItem('app:username');
+    setCanEdit(username === id);
+
     (async () => {
       const [
         { data: { getUser: data } },
@@ -112,7 +115,7 @@ export default function User({ id: inId, computedMatch }) {
               today.toISOString(),
             ],
           },
-          limit: 10,
+          limit: 5,
           sortDirection: 'DESC',
         }),
         asyncListAll(getStatementsByUsernameByDate, {
@@ -124,6 +127,7 @@ export default function User({ id: inId, computedMatch }) {
             ],
           },
           sortDirection: 'DESC',
+          limit: 500,
         }),
       ]);
       console.log('data', data);
@@ -167,9 +171,12 @@ export default function User({ id: inId, computedMatch }) {
         icon: <InstagramIcon />,
         url: data.urlInstagram || '',
         color: '#000000',
-      }]);
+      }].filter(({ url }) => url !== ''));
+
+      const projects = data.projects.items.map(({ project }) => project);
       setKeywords(data.keywords.items.map(({ keyword }) => keyword));
-      setProjects(data.projects.items.map(({ project }) => project));
+      setProjects(projects);
+      setNeeds(data.needs.items.map(({ need }) => need));
 
       let totalHoursInThePastYear = 0;
       const heatmapData = userStatements.map(({ date, completedHours }) => {
@@ -180,12 +187,21 @@ export default function User({ id: inId, computedMatch }) {
         };
       });
       setHeatmapData(heatmapData);
-      setContributions(userContributions);
+      setContributions(userContributions.map((item) => {
+        item.project = projects.find(({ id }) => id === item.projectId);
+        return item;
+      }));
       setTotalHoursInThePastYear(totalHoursInThePastYear);
     })();
   }, [id]);
 
-  if (!user) return null;
+  if (!user) {
+    return (
+      <Container className={classes.container} style={{ textAlign: 'center' }}>
+        <CircularProgress color="primary" />
+      </Container>
+    );
+  }
 
   return (
     <Container className={classes.container}>
@@ -210,11 +226,12 @@ export default function User({ id: inId, computedMatch }) {
                 {user.selfIntroduction || ''}
               </Typography>
             </Grid>
+            {canEdit &&
             <Grid item xs={12}>
               <Button variant="outlined" fullWidth>
                 {t('user_editProfile')}
               </Button>
-            </Grid>
+            </Grid>}
             <Grid item xs={12}>
               {details.map((item, index)=>(
                 <div key={index} className={classes.listItem}>
@@ -235,11 +252,12 @@ export default function User({ id: inId, computedMatch }) {
                 />
               ))}
             </Grid>
+            {canEdit &&
             <Grid item xs={12}>
               <Button variant="outlined" fullWidth>
                 {t('user_editKeywords')}
               </Button>
-            </Grid>
+            </Grid>}
             <Grid item xs={12}>
               <Typography variant="body1" gutterBottom>
                 {t('user_keywords')}
@@ -248,55 +266,47 @@ export default function User({ id: inId, computedMatch }) {
                 <KeywordChip key={index} data={item} size="medium" />
               ))}
             </Grid>
+            {canEdit &&
+            <Grid item xs={12}>
+              <Button variant="outlined" fullWidth>
+                {t('user_editNeeds')}
+              </Button>
+            </Grid>}
+            <Grid item xs={12}>
+              <Typography variant="body1" gutterBottom>
+                {t('user_needs')}
+              </Typography>
+              {needs.map((item, index)=>(
+                <NeedChip key={index} data={item} size="medium" />
+              ))}
+            </Grid>
           </Grid>
           <Grid item xs={9} container spacing={2}>
             <Grid item xs={4}>
-              <div className={classes.itemContainer}>
-                <Typography variant="body1" gutterBottom>
-                  {t('user_participateProjects')}
-                </Typography>
-                <Typography variant="h3" gutterBottom align="center">
-                  <NumberFormat
-                    value={projects.length}
-                    displayType="text"
-                    thousandSeparator={true}
-                  />
-                </Typography>
-              </div>
+              <StatsCard
+                label={t('user_participateProjects')}
+                value={projects.length} />
             </Grid>
             <Grid item xs={4}>
-              <div className={classes.itemContainer}>
-                <Typography variant="body1" gutterBottom>
-                  {t('user_totalCompletedHours')}
-                </Typography>
-                <Typography variant="h3" gutterBottom align="center">
-                  <NumberFormat
-                    value={user.totalCompletedHours || 0}
-                    displayType="text"
-                    thousandSeparator={true}
-                  />
-                </Typography>
-              </div>
+              <StatsCard
+                label={t('user_totalCompletedHours')}
+                value={user.totalCompletedHours} />
             </Grid>
             <Grid item xs={4}>
-              <div className={classes.itemContainer}>
-                <Typography variant="body1" gutterBottom>
-                  {t('user_totalCompletedTasks')}
-                </Typography>
-                <Typography variant="h3" gutterBottom align="center">
-                  <NumberFormat
-                    value={user.totalCompletedTasks || 0}
-                    displayType="text"
-                    thousandSeparator={true}
-                  />
-                </Typography>
-              </div>
+              <StatsCard
+                label={t('user_totalCompletedTasks')}
+                value={user.totalCompletedTasks} />
             </Grid>
             <Grid item xs={12}>
               <Typography variant="h6" gutterBottom className={classes.header}>
-                {t('user_totalHoursInThePastYear')}: {totalHoursInThePastYear}
+                {t('user_totalHoursInThePastYear')}:&nbsp;
+                <NumberFormat
+                  value={totalHoursInThePastYear}
+                  displayType="text"
+                  thousandSeparator={true}
+                />
+                {t('user_hours')}
               </Typography>
-              {/* <div className={classes.itemContainer} style={{ paddingBottom: 0 }}> */}
               <CalendarHeatmap
                 startDate={aYearAgo}
                 endDate={today}
@@ -354,7 +364,10 @@ export default function User({ id: inId, computedMatch }) {
               </Typography>
             </Grid>
             <Grid item xs={12}>
-              <ContributionList data={contributions} max={5} />
+              <ContributionList
+                data={contributions}
+                max={5}
+              />
             </Grid>
             <div style={{ flex: 1 }} />
           </Grid>
@@ -367,6 +380,11 @@ export default function User({ id: inId, computedMatch }) {
 User.propTypes = {
   id: PropTypes.string,
   computedMatch: PropTypes.shape({
+    params: PropTypes.shape({
+      id: PropTypes.string,
+    }),
+  }),
+  match: PropTypes.shape({
     params: PropTypes.shape({
       id: PropTypes.string,
     }),

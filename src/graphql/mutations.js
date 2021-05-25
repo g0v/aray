@@ -256,6 +256,10 @@ export const createNeed = /* GraphQL */ `
           id
           projectId
           needId
+          createdAt
+          createdBy
+          updatedAt
+          updatedBy
           need {
             id
             label
@@ -264,10 +268,6 @@ export const createNeed = /* GraphQL */ `
             updatedAt
             updatedBy
           }
-          createdAt
-          createdBy
-          updatedAt
-          updatedBy
           project {
             id
             status
@@ -304,6 +304,10 @@ export const updateNeed = /* GraphQL */ `
           id
           projectId
           needId
+          createdAt
+          createdBy
+          updatedAt
+          updatedBy
           need {
             id
             label
@@ -312,10 +316,6 @@ export const updateNeed = /* GraphQL */ `
             updatedAt
             updatedBy
           }
-          createdAt
-          createdBy
-          updatedAt
-          updatedBy
           project {
             id
             status
@@ -352,6 +352,10 @@ export const deleteNeed = /* GraphQL */ `
           id
           projectId
           needId
+          createdAt
+          createdBy
+          updatedAt
+          updatedBy
           need {
             id
             label
@@ -360,10 +364,6 @@ export const deleteNeed = /* GraphQL */ `
             updatedAt
             updatedBy
           }
-          createdAt
-          createdBy
-          updatedAt
-          updatedBy
           project {
             id
             status
@@ -442,6 +442,10 @@ export const createProject = /* GraphQL */ `
           id
           projectId
           needId
+          createdAt
+          createdBy
+          updatedAt
+          updatedBy
           need {
             id
             label
@@ -450,10 +454,6 @@ export const createProject = /* GraphQL */ `
             updatedAt
             updatedBy
           }
-          createdAt
-          createdBy
-          updatedAt
-          updatedBy
           project {
             id
             status
@@ -615,6 +615,10 @@ export const updateProject = /* GraphQL */ `
           id
           projectId
           needId
+          createdAt
+          createdBy
+          updatedAt
+          updatedBy
           need {
             id
             label
@@ -623,10 +627,6 @@ export const updateProject = /* GraphQL */ `
             updatedAt
             updatedBy
           }
-          createdAt
-          createdBy
-          updatedAt
-          updatedBy
           project {
             id
             status
@@ -788,6 +788,10 @@ export const deleteProject = /* GraphQL */ `
           id
           projectId
           needId
+          createdAt
+          createdBy
+          updatedAt
+          updatedBy
           need {
             id
             label
@@ -796,10 +800,6 @@ export const deleteProject = /* GraphQL */ `
             updatedAt
             updatedBy
           }
-          createdAt
-          createdBy
-          updatedAt
-          updatedBy
           project {
             id
             status
@@ -1223,6 +1223,10 @@ export const createProjectNeed = /* GraphQL */ `
       id
       projectId
       needId
+      createdAt
+      createdBy
+      updatedAt
+      updatedBy
       need {
         id
         label
@@ -1243,10 +1247,6 @@ export const createProjectNeed = /* GraphQL */ `
           nextToken
         }
       }
-      createdAt
-      createdBy
-      updatedAt
-      updatedBy
       project {
         id
         status
@@ -1327,6 +1327,10 @@ export const updateProjectNeed = /* GraphQL */ `
       id
       projectId
       needId
+      createdAt
+      createdBy
+      updatedAt
+      updatedBy
       need {
         id
         label
@@ -1347,10 +1351,6 @@ export const updateProjectNeed = /* GraphQL */ `
           nextToken
         }
       }
-      createdAt
-      createdBy
-      updatedAt
-      updatedBy
       project {
         id
         status
@@ -1431,6 +1431,10 @@ export const deleteProjectNeed = /* GraphQL */ `
       id
       projectId
       needId
+      createdAt
+      createdBy
+      updatedAt
+      updatedBy
       need {
         id
         label
@@ -1451,10 +1455,6 @@ export const deleteProjectNeed = /* GraphQL */ `
           nextToken
         }
       }
-      createdAt
-      createdBy
-      updatedAt
-      updatedBy
       project {
         id
         status
@@ -2175,6 +2175,10 @@ export const createUser = /* GraphQL */ `
           id
           needId
           username
+          createdAt
+          createdBy
+          updatedAt
+          updatedBy
           need {
             id
             label
@@ -2183,10 +2187,6 @@ export const createUser = /* GraphQL */ `
             updatedAt
             updatedBy
           }
-          createdAt
-          createdBy
-          updatedAt
-          updatedBy
           user {
             username
             status
@@ -2338,6 +2338,10 @@ export const updateUser = /* GraphQL */ `
           id
           needId
           username
+          createdAt
+          createdBy
+          updatedAt
+          updatedBy
           need {
             id
             label
@@ -2346,10 +2350,6 @@ export const updateUser = /* GraphQL */ `
             updatedAt
             updatedBy
           }
-          createdAt
-          createdBy
-          updatedAt
-          updatedBy
           user {
             username
             status
@@ -2501,6 +2501,10 @@ export const deleteUser = /* GraphQL */ `
           id
           needId
           username
+          createdAt
+          createdBy
+          updatedAt
+          updatedBy
           need {
             id
             label
@@ -2509,10 +2513,6 @@ export const deleteUser = /* GraphQL */ `
             updatedAt
             updatedBy
           }
-          createdAt
-          createdBy
-          updatedAt
-          updatedBy
           user {
             username
             status
@@ -2891,6 +2891,10 @@ export const createUserNeed = /* GraphQL */ `
       id
       needId
       username
+      createdAt
+      createdBy
+      updatedAt
+      updatedBy
       need {
         id
         label
@@ -2911,10 +2915,6 @@ export const createUserNeed = /* GraphQL */ `
           nextToken
         }
       }
-      createdAt
-      createdBy
-      updatedAt
-      updatedBy
       user {
         username
         status
@@ -2988,6 +2988,10 @@ export const updateUserNeed = /* GraphQL */ `
       id
       needId
       username
+      createdAt
+      createdBy
+      updatedAt
+      updatedBy
       need {
         id
         label
@@ -3008,10 +3012,6 @@ export const updateUserNeed = /* GraphQL */ `
           nextToken
         }
       }
-      createdAt
-      createdBy
-      updatedAt
-      updatedBy
       user {
         username
         status
@@ -3085,6 +3085,10 @@ export const deleteUserNeed = /* GraphQL */ `
       id
       needId
       username
+      createdAt
+      createdBy
+      updatedAt
+      updatedBy
       need {
         id
         label
@@ -3105,10 +3109,6 @@ export const deleteUserNeed = /* GraphQL */ `
           nextToken
         }
       }
-      createdAt
-      createdBy
-      updatedAt
-      updatedBy
       user {
         username
         status

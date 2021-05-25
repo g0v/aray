@@ -71,7 +71,14 @@ export default function App({ location }) {
   }, [location]);
 
   React.useEffect(() => {
-    if (!user || !user.signInUserSession || !user.attributes) return;
+    if (!user || !user.signInUserSession || !user.attributes) {
+      const filteredRoutes = appRoutes.filter(({ roles }) => {
+        return !roles || roles.length === 0;
+      });
+      console.log('filteredRoutes', filteredRoutes);
+      setFilteredRoutes(filteredRoutes);
+      return;
+    }
 
     const userGroups = user.signInUserSession.accessToken.payload['cognito:groups'];
     const filteredRoutes = appRoutes.filter(({ roles }) => {
@@ -90,7 +97,7 @@ export default function App({ location }) {
     });
   }, []);
 
-  return authState === AuthState.SignedIn && user ? (
+  return (authState === AuthState.SignedIn && user) ? (
     <div className={classes.root} data-test-id="app-container">
       <Switch>
         {filteredRoutes.map((item)=>(

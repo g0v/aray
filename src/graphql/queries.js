@@ -1,82 +1,6 @@
 /* eslint-disable */
 // this is an auto generated file. This will be overwritten
 
-export const getNeed = /* GraphQL */ `
-  query GetNeed($id: ID!) {
-    getNeed(id: $id) {
-      id
-      label
-      createdAt
-      createdBy
-      updatedAt
-      updatedBy
-      projects {
-        items {
-          id
-          projectId
-          needId
-          need {
-            id
-            label
-            createdAt
-            createdBy
-            updatedAt
-            updatedBy
-          }
-          createdAt
-          createdBy
-          updatedAt
-          updatedBy
-          project {
-            id
-            status
-            owner
-            managers
-            name
-            summary
-            description
-            createdAt
-            createdBy
-            updatedAt
-            updatedBy
-          }
-        }
-        nextToken
-      }
-    }
-  }
-`;
-export const listNeeds = /* GraphQL */ `
-  query ListNeeds(
-    $filter: ModelNeedFilterInput
-    $limit: Int
-    $nextToken: String
-  ) {
-    listNeeds(filter: $filter, limit: $limit, nextToken: $nextToken) {
-      items {
-        id
-        label
-        createdAt
-        createdBy
-        updatedAt
-        updatedBy
-        projects {
-          items {
-            id
-            projectId
-            needId
-            createdAt
-            createdBy
-            updatedAt
-            updatedBy
-          }
-          nextToken
-        }
-      }
-      nextToken
-    }
-  }
-`;
 export const getContribution = /* GraphQL */ `
   query GetContribution($id: ID!) {
     getContribution(id: $id) {
@@ -271,6 +195,82 @@ export const listKeywords = /* GraphQL */ `
     }
   }
 `;
+export const getNeed = /* GraphQL */ `
+  query GetNeed($id: ID!) {
+    getNeed(id: $id) {
+      id
+      label
+      createdAt
+      createdBy
+      updatedAt
+      updatedBy
+      projects {
+        items {
+          id
+          projectId
+          needId
+          createdAt
+          createdBy
+          updatedAt
+          updatedBy
+          need {
+            id
+            label
+            createdAt
+            createdBy
+            updatedAt
+            updatedBy
+          }
+          project {
+            id
+            status
+            owner
+            managers
+            name
+            summary
+            description
+            createdAt
+            createdBy
+            updatedAt
+            updatedBy
+          }
+        }
+        nextToken
+      }
+    }
+  }
+`;
+export const listNeeds = /* GraphQL */ `
+  query ListNeeds(
+    $filter: ModelNeedFilterInput
+    $limit: Int
+    $nextToken: String
+  ) {
+    listNeeds(filter: $filter, limit: $limit, nextToken: $nextToken) {
+      items {
+        id
+        label
+        createdAt
+        createdBy
+        updatedAt
+        updatedBy
+        projects {
+          items {
+            id
+            projectId
+            needId
+            createdAt
+            createdBy
+            updatedAt
+            updatedBy
+          }
+          nextToken
+        }
+      }
+      nextToken
+    }
+  }
+`;
 export const getProject = /* GraphQL */ `
   query GetProject($id: ID!) {
     getProject(id: $id) {
@@ -327,6 +327,10 @@ export const getProject = /* GraphQL */ `
           id
           projectId
           needId
+          createdAt
+          createdBy
+          updatedAt
+          updatedBy
           need {
             id
             label
@@ -335,10 +339,6 @@ export const getProject = /* GraphQL */ `
             updatedAt
             updatedBy
           }
-          createdAt
-          createdBy
-          updatedAt
-          updatedBy
           project {
             id
             status
@@ -687,6 +687,10 @@ export const getProjectNeed = /* GraphQL */ `
       id
       projectId
       needId
+      createdAt
+      createdBy
+      updatedAt
+      updatedBy
       need {
         id
         label
@@ -707,10 +711,6 @@ export const getProjectNeed = /* GraphQL */ `
           nextToken
         }
       }
-      createdAt
-      createdBy
-      updatedAt
-      updatedBy
       project {
         id
         status
@@ -793,6 +793,10 @@ export const listProjectNeeds = /* GraphQL */ `
         id
         projectId
         needId
+        createdAt
+        createdBy
+        updatedAt
+        updatedBy
         need {
           id
           label
@@ -804,10 +808,6 @@ export const listProjectNeeds = /* GraphQL */ `
             nextToken
           }
         }
-        createdAt
-        createdBy
-        updatedAt
-        updatedBy
         project {
           id
           status
@@ -1299,6 +1299,10 @@ export const getUser = /* GraphQL */ `
           id
           needId
           username
+          createdAt
+          createdBy
+          updatedAt
+          updatedBy
           need {
             id
             label
@@ -1307,10 +1311,6 @@ export const getUser = /* GraphQL */ `
             updatedAt
             updatedBy
           }
-          createdAt
-          createdBy
-          updatedAt
-          updatedBy
           user {
             username
             status
@@ -1631,6 +1631,10 @@ export const getUserNeed = /* GraphQL */ `
       id
       needId
       username
+      createdAt
+      createdBy
+      updatedAt
+      updatedBy
       need {
         id
         label
@@ -1651,10 +1655,6 @@ export const getUserNeed = /* GraphQL */ `
           nextToken
         }
       }
-      createdAt
-      createdBy
-      updatedAt
-      updatedBy
       user {
         username
         status
@@ -1730,6 +1730,10 @@ export const listUserNeeds = /* GraphQL */ `
         id
         needId
         username
+        createdAt
+        createdBy
+        updatedAt
+        updatedBy
         need {
           id
           label
@@ -1741,10 +1745,6 @@ export const listUserNeeds = /* GraphQL */ `
             nextToken
           }
         }
-        createdAt
-        createdBy
-        updatedAt
-        updatedBy
         user {
           username
           status

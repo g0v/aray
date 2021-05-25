@@ -13,15 +13,18 @@ import Typography from '@material-ui/core/Typography';
 
 import { request } from 'utils/graph';
 import { getUser } from 'graphql/queries';
+import KeywordChip from 'components/KeywordChip';
+import NeedChip from 'components/NeedChip';
 
-const useStyles = makeStyles({
+const useStyles = makeStyles((theme) => ({
   root: {
-    maxWidth: 345,
+    // maxWidth: 345,
+    margin: theme.spacing(1),
   },
   media: {
     height: 140,
   },
-});
+}));
 
 export default function UserCard({ user: inUser, username: inUsername }) {
   const classes = useStyles();
@@ -43,8 +46,6 @@ export default function UserCard({ user: inUser, username: inUsername }) {
     })();
   }, [inUsername]);
 
-  console.log('user', user);
-
   if (!user) return null;
 
   return (
@@ -52,6 +53,9 @@ export default function UserCard({ user: inUser, username: inUsername }) {
       <Link
         to={`/user/${user.username}`}
         component={RouteLink}
+        style={{
+          textDecoration: 'none',
+        }}
       >
         <CardActionArea>
           <CardMedia
@@ -63,9 +67,12 @@ export default function UserCard({ user: inUser, username: inUsername }) {
             <Typography gutterBottom variant="h5" component="h2">
               {user.name} ({user.username})
             </Typography>
-            <Typography variant="body2" color="textSecondary" component="p">
-              {user.keywords.items.map((item)=>item.keyword.label).join(' ')}
-            </Typography>
+            {user.keywords && user.keywords.items.map((item, index)=>(
+              <KeywordChip key={index} data={item.keyword} size="small" />
+            ))}
+            {user.needs && user.needs.items.map((item, index)=>(
+              <NeedChip key={index} data={item.need} size="small" />
+            ))}
           </CardContent>
         </CardActionArea>
       </Link>

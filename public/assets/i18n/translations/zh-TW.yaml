@@ -8,6 +8,7 @@ title_myProfile: 我的頁面
 title_myProjectList: 我的專案
 title_projectList: 找專案(坑)
 title_userList: 找幫手
+title_user: 貢獻者
 
 myProjectList_myProjects: 我的專案
 myProjectList_otherProjects: 參與專案
@@ -18,12 +19,20 @@ userList_users: 貢獻者
 
 user_editProfile: 更新個人資料
 user_editKeywords: 更新關鍵字
+user_editNeeds: 更新專長
 user_totalHoursInThePastYear: 過去一年的貢獻總時數
 user_keywords: 關鍵字
 user_totalCompletedHours: 總貢獻時數 
 user_totalCompletedTasks: 總完成任務
 user_participateProjects: 參與的專案
 user_recentContributions: 近期貢獻紀錄
+user_hours: 小時
+user_needs: 專長
+
+project_tags: 標籤
+project_keywords: 關鍵字
+project_needs: 人力需求
+project_contributors: 貢獻者
 
 datetime_month01: 一月
 datetime_month02: 二月

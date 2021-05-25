@@ -3,7 +3,7 @@ import PropTypes from 'prop-types';
 import Chip from '@material-ui/core/Chip';
 // import { request } from 'utilities/graph';
 
-export default function KeywordChip({
+export default function NeedChip({
   data,
   variant = 'outlined',
   size = 'small',
@@ -27,13 +27,13 @@ export default function KeywordChip({
       label={value}
       variant={variant}
       size={size}
-      color={'secondary'}
+      color={'primary'}
       style={{ marginRight: 2 }}
     />
   );
 }
 
-KeywordChip.propTypes = {
+NeedChip.propTypes = {
   data: PropTypes.shape({
     label: PropTypes.string,
   }),

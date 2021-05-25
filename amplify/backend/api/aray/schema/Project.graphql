@@ -40,5 +40,6 @@ enum ProjectStatus {
 
 type ProjectLink {
   name: String!
+  description: String
   url: String!
 }

@@ -1,6 +1,7 @@
 type Need
   @model
   @auth(rules: [
+    { allow: public, operations: [read] },
     { allow: groups, groups: ["Users"], operations: [read, create] },
     { allow: groups, groups: ["Admins"] },
   ])

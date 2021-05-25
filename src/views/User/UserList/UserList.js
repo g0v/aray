@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from 'react';
-// import PropTypes from 'prop-types';
+import PropTypes from 'prop-types';
 import Container from '@material-ui/core/Container';
 import Grid from '@material-ui/core/Grid';
 import Typography from '@material-ui/core/Typography';
@@ -9,13 +9,13 @@ import { asyncListAll } from 'utils/graph';
 // import { listUsers } from 'graphql/queries';
 import UserCard from 'components/UserCard';
 
-export default function UserList() {
+export default function UserList({ data: inData }) {
   const { t } = useTranslation();
   const [users, setUsers] = useState([]);
 
   useEffect(() => {
     (async () => {
-      const data = await asyncListAll(/* GraphQL */ `
+      const data = inData || await asyncListAll( /* GraphQL */ `
         query ListUsers(
           $username: String
           $filter: ModelUserFilterInput
@@ -36,36 +36,22 @@ export default function UserList() {
               name
               email
               selfIntroduction
-              # projects {
-              #   items {
-              #     id
-              #     projectId
-              #     username
-              #     role
-              #     completedHours
-              #     completedTasks
-              #     createdAt
-              #     updatedAt
-              #   }
-              #   nextToken
-              # }
               keywords {
                 items {
-                  # id
-                  # keywordId
                   keyword {
                     label
                   }
-                  # username
-                  # createdAt
-                  # updatedAt
                 }
                 nextToken
               }
-              createdAt
-              createdBy
-              updatedAt
-              updatedBy
+              needs {
+                items {
+                  need {
+                    label
+                  }
+                }
+                nextToken
+              }
             }
             nextToken
           }
@@ -73,16 +59,18 @@ export default function UserList() {
       `);
       setUsers(data);
     })();
-  }, []);
+  }, [inData]);
 
   return (
     <Container>
       <Typography variant="h5" gutterBottom align="center" style={{ marginTop: 16 }}>
         {t('userList_users')}
       </Typography>
-      <Grid container spacing={2}>
+      {/* TODO: Search by keywords and needs */}
+      {/* TODO: pagination */}
+      <Grid container>
         {users.map((item, index)=>(
-          <Grid item xs={12} sm={6} md={4} lg={3} key={index}>
+          <Grid item xs={12} sm={6} md={4} lg={3} xl={2} key={index}>
             <UserCard user={item} />
           </Grid>
         ))}
@@ -91,4 +79,6 @@ export default function UserList() {
   );
 }
 
-UserList.propTypes = {};
+UserList.propTypes = {
+  data: PropTypes.array,
+};

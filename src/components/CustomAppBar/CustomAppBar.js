@@ -114,7 +114,7 @@ const useStyles = makeStyles((theme) => ({
   },
 }));
 
-export default function CustomAppBar({ user, routes, open, onUpdate }) {
+export default function CustomAppBar({ user = {}, routes, open, onUpdate }) {
   const classes = useStyles();
   const history = useHistory();
   const { t } = useTranslation();
@@ -209,7 +209,7 @@ export default function CustomAppBar({ user, routes, open, onUpdate }) {
           <div className={classes.flexbox} />
           <GithubLinkButton url='g0v/aray' />
           <LanguageSelector />
-          {user ?
+          {user && user.username ?
             <React.Fragment>
               <IconButton color="inherit">
                 <Badge badgeContent={0} max={99} color="secondary">
@@ -231,15 +231,6 @@ export default function CustomAppBar({ user, routes, open, onUpdate }) {
               </Button>
             </React.Fragment>:
             <React.Fragment>
-              {/* <Typography component="p" color="inherit" noWrap className={classes.title}>
-                <Link
-                  to={'/application'}
-                  className={classes.unsty  ledHyperlink}
-                >
-                  機構申請
-                </Link>
-              </Typography> */}
-              <Version showName={false} style={{ marginRight: 8 }} />
               <Button
                 color="inherit"
                 component={Link}
@@ -301,50 +292,34 @@ export default function CustomAppBar({ user, routes, open, onUpdate }) {
           </IconButton> */}
         </div>
         <Divider />
-        {user ?
-          <List>
-            {routes.filter((x) => !x.hideFromMenu).map((route, index) => (
-              <ListItem
-                key={index}
-                button
-                component={Link}
-                // selected={window.location.pathname.startsWith(route.link || route.path)}
-                to={route.link || route.path}
-              >
-                <ListItemIcon style={{ minWidth: 36 }}>
-                  {route.icon ? <route.icon /> : null}
-                </ListItemIcon>
-                <ListItemText primary={t(route.title)} />
-                {route.badge && <route.badge />}
-              </ListItem>
-            ))}
-            <Divider />
+        <List>
+          {routes.filter((x) => !x.hideFromMenu).map((route, index) => (
+            <ListItem
+              key={index}
+              button
+              component={Link}
+              // selected={window.location.pathname.startsWith(route.link || route.path)}
+              to={route.link || route.path}
+            >
+              <ListItemIcon style={{ minWidth: 36 }}>
+                {route.icon ? <route.icon /> : null}
+              </ListItemIcon>
+              <ListItemText primary={t(route.title)} />
+              {route.badge && <route.badge />}
+            </ListItem>
+          ))}
+          <Divider />
+          {user && user.username &&
             <ListItem button onClick={handleSignOut}>
               <ListItemIcon><ExitToAppIcon /></ListItemIcon>
               <ListItemText primary={'登出'} />
-            </ListItem>
-            <div className={classes.flexbox} />
-            <ListItem>
-              <ListItemText>
-                <Version />
-              </ListItemText>
-            </ListItem>
-          </List>:
-          <List>
-            <ListItem button onClick={()=>history.push('/application')}>
-              <ListItemIcon><PersonAddIcon /></ListItemIcon>
-              <ListItemText primary={'申請加入'} />
-            </ListItem>
-            <Divider />
-            {/* <ListItem button onClick={()=>history.push('/app', { state: 'signup' })}>
-              <ListItemIcon><PersonAddIcon /></ListItemIcon>
-              <ListItemText primary={'註冊'} />
-            </ListItem> */}
-            <ListItem button onClick={()=>history.push('/app', { state: 'signin' })}>
-              <ListItemIcon><PersonIcon /></ListItemIcon>
-              <ListItemText primary={'登入'} />
-            </ListItem>
-          </List>}
+            </ListItem>}
+          <ListItem>
+            <ListItemText>
+              <Version />
+            </ListItemText>
+          </ListItem>
+        </List>
       </Drawer>
     </Box>
   );

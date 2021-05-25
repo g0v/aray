@@ -1,141 +1,6 @@
 /* eslint-disable */
 // this is an auto generated file. This will be overwritten
 
-export const onCreateNeed = /* GraphQL */ `
-  subscription OnCreateNeed {
-    onCreateNeed {
-      id
-      label
-      createdAt
-      createdBy
-      updatedAt
-      updatedBy
-      projects {
-        items {
-          id
-          projectId
-          needId
-          need {
-            id
-            label
-            createdAt
-            createdBy
-            updatedAt
-            updatedBy
-          }
-          createdAt
-          createdBy
-          updatedAt
-          updatedBy
-          project {
-            id
-            status
-            owner
-            managers
-            name
-            summary
-            description
-            createdAt
-            createdBy
-            updatedAt
-            updatedBy
-          }
-        }
-        nextToken
-      }
-    }
-  }
-`;
-export const onUpdateNeed = /* GraphQL */ `
-  subscription OnUpdateNeed {
-    onUpdateNeed {
-      id
-      label
-      createdAt
-      createdBy
-      updatedAt
-      updatedBy
-      projects {
-        items {
-          id
-          projectId
-          needId
-          need {
-            id
-            label
-            createdAt
-            createdBy
-            updatedAt
-            updatedBy
-          }
-          createdAt
-          createdBy
-          updatedAt
-          updatedBy
-          project {
-            id
-            status
-            owner
-            managers
-            name
-            summary
-            description
-            createdAt
-            createdBy
-            updatedAt
-            updatedBy
-          }
-        }
-        nextToken
-      }
-    }
-  }
-`;
-export const onDeleteNeed = /* GraphQL */ `
-  subscription OnDeleteNeed {
-    onDeleteNeed {
-      id
-      label
-      createdAt
-      createdBy
-      updatedAt
-      updatedBy
-      projects {
-        items {
-          id
-          projectId
-          needId
-          need {
-            id
-            label
-            createdAt
-            createdBy
-            updatedAt
-            updatedBy
-          }
-          createdAt
-          createdBy
-          updatedAt
-          updatedBy
-          project {
-            id
-            status
-            owner
-            managers
-            name
-            summary
-            description
-            createdAt
-            createdBy
-            updatedAt
-            updatedBy
-          }
-        }
-        nextToken
-      }
-    }
-  }
-`;
 export const onCreateContribution = /* GraphQL */ `
   subscription OnCreateContribution {
     onCreateContribution {
@@ -349,6 +214,141 @@ export const onDeleteKeyword = /* GraphQL */ `
     }
   }
 `;
+export const onCreateNeed = /* GraphQL */ `
+  subscription OnCreateNeed {
+    onCreateNeed {
+      id
+      label
+      createdAt
+      createdBy
+      updatedAt
+      updatedBy
+      projects {
+        items {
+          id
+          projectId
+          needId
+          createdAt
+          createdBy
+          updatedAt
+          updatedBy
+          need {
+            id
+            label
+            createdAt
+            createdBy
+            updatedAt
+            updatedBy
+          }
+          project {
+            id
+            status
+            owner
+            managers
+            name
+            summary
+            description
+            createdAt
+            createdBy
+            updatedAt
+            updatedBy
+          }
+        }
+        nextToken
+      }
+    }
+  }
+`;
+export const onUpdateNeed = /* GraphQL */ `
+  subscription OnUpdateNeed {
+    onUpdateNeed {
+      id
+      label
+      createdAt
+      createdBy
+      updatedAt
+      updatedBy
+      projects {
+        items {
+          id
+          projectId
+          needId
+          createdAt
+          createdBy
+          updatedAt
+          updatedBy
+          need {
+            id
+            label
+            createdAt
+            createdBy
+            updatedAt
+            updatedBy
+          }
+          project {
+            id
+            status
+            owner
+            managers
+            name
+            summary
+            description
+            createdAt
+            createdBy
+            updatedAt
+            updatedBy
+          }
+        }
+        nextToken
+      }
+    }
+  }
+`;
+export const onDeleteNeed = /* GraphQL */ `
+  subscription OnDeleteNeed {
+    onDeleteNeed {
+      id
+      label
+      createdAt
+      createdBy
+      updatedAt
+      updatedBy
+      projects {
+        items {
+          id
+          projectId
+          needId
+          createdAt
+          createdBy
+          updatedAt
+          updatedBy
+          need {
+            id
+            label
+            createdAt
+            createdBy
+            updatedAt
+            updatedBy
+          }
+          project {
+            id
+            status
+            owner
+            managers
+            name
+            summary
+            description
+            createdAt
+            createdBy
+            updatedAt
+            updatedBy
+          }
+        }
+        nextToken
+      }
+    }
+  }
+`;
 export const onCreateProject = /* GraphQL */ `
   subscription OnCreateProject($owner: String, $managers: String) {
     onCreateProject(owner: $owner, managers: $managers) {
@@ -405,6 +405,10 @@ export const onCreateProject = /* GraphQL */ `
           id
           projectId
           needId
+          createdAt
+          createdBy
+          updatedAt
+          updatedBy
           need {
             id
             label
@@ -413,10 +417,6 @@ export const onCreateProject = /* GraphQL */ `
             updatedAt
             updatedBy
           }
-          createdAt
-          createdBy
-          updatedAt
-          updatedBy
           project {
             id
             status
@@ -575,6 +575,10 @@ export const onUpdateProject = /* GraphQL */ `
           id
           projectId
           needId
+          createdAt
+          createdBy
+          updatedAt
+          updatedBy
           need {
             id
             label
@@ -583,10 +587,6 @@ export const onUpdateProject = /* GraphQL */ `
             updatedAt
             updatedBy
           }
-          createdAt
-          createdBy
-          updatedAt
-          updatedBy
           project {
             id
             status
@@ -745,6 +745,10 @@ export const onDeleteProject = /* GraphQL */ `
           id
           projectId
           needId
+          createdAt
+          createdBy
+          updatedAt
+          updatedBy
           need {
             id
             label
@@ -753,10 +757,6 @@ export const onDeleteProject = /* GraphQL */ `
             updatedAt
             updatedBy
           }
-          createdAt
-          createdBy
-          updatedAt
-          updatedBy
           project {
             id
             status
@@ -1168,6 +1168,10 @@ export const onCreateProjectNeed = /* GraphQL */ `
       id
       projectId
       needId
+      createdAt
+      createdBy
+      updatedAt
+      updatedBy
       need {
         id
         label
@@ -1188,10 +1192,6 @@ export const onCreateProjectNeed = /* GraphQL */ `
           nextToken
         }
       }
-      createdAt
-      createdBy
-      updatedAt
-      updatedBy
       project {
         id
         status
@@ -1269,6 +1269,10 @@ export const onUpdateProjectNeed = /* GraphQL */ `
       id
       projectId
       needId
+      createdAt
+      createdBy
+      updatedAt
+      updatedBy
       need {
         id
         label
@@ -1289,10 +1293,6 @@ export const onUpdateProjectNeed = /* GraphQL */ `
           nextToken
         }
       }
-      createdAt
-      createdBy
-      updatedAt
-      updatedBy
       project {
         id
         status
@@ -1370,6 +1370,10 @@ export const onDeleteProjectNeed = /* GraphQL */ `
       id
       projectId
       needId
+      createdAt
+      createdBy
+      updatedAt
+      updatedBy
       need {
         id
         label
@@ -1390,10 +1394,6 @@ export const onDeleteProjectNeed = /* GraphQL */ `
           nextToken
         }
       }
-      createdAt
-      createdBy
-      updatedAt
-      updatedBy
       project {
         id
         status
@@ -2075,6 +2075,10 @@ export const onCreateUser = /* GraphQL */ `
           id
           needId
           username
+          createdAt
+          createdBy
+          updatedAt
+          updatedBy
           need {
             id
             label
@@ -2083,10 +2087,6 @@ export const onCreateUser = /* GraphQL */ `
             updatedAt
             updatedBy
           }
-          createdAt
-          createdBy
-          updatedAt
-          updatedBy
           user {
             username
             status
@@ -2235,6 +2235,10 @@ export const onUpdateUser = /* GraphQL */ `
           id
           needId
           username
+          createdAt
+          createdBy
+          updatedAt
+          updatedBy
           need {
             id
             label
@@ -2243,10 +2247,6 @@ export const onUpdateUser = /* GraphQL */ `
             updatedAt
             updatedBy
           }
-          createdAt
-          createdBy
-          updatedAt
-          updatedBy
           user {
             username
             status
@@ -2395,6 +2395,10 @@ export const onDeleteUser = /* GraphQL */ `
           id
           needId
           username
+          createdAt
+          createdBy
+          updatedAt
+          updatedBy
           need {
             id
             label
@@ -2403,10 +2407,6 @@ export const onDeleteUser = /* GraphQL */ `
             updatedAt
             updatedBy
           }
-          createdAt
-          createdBy
-          updatedAt
-          updatedBy
           user {
             username
             status
@@ -2773,6 +2773,10 @@ export const onCreateUserNeed = /* GraphQL */ `
       id
       needId
       username
+      createdAt
+      createdBy
+      updatedAt
+      updatedBy
       need {
         id
         label
@@ -2793,10 +2797,6 @@ export const onCreateUserNeed = /* GraphQL */ `
           nextToken
         }
       }
-      createdAt
-      createdBy
-      updatedAt
-      updatedBy
       user {
         username
         status
@@ -2867,6 +2867,10 @@ export const onUpdateUserNeed = /* GraphQL */ `
       id
       needId
       username
+      createdAt
+      createdBy
+      updatedAt
+      updatedBy
       need {
         id
         label
@@ -2887,10 +2891,6 @@ export const onUpdateUserNeed = /* GraphQL */ `
           nextToken
         }
       }
-      createdAt
-      createdBy
-      updatedAt
-      updatedBy
       user {
         username
         status
@@ -2961,6 +2961,10 @@ export const onDeleteUserNeed = /* GraphQL */ `
       id
       needId
       username
+      createdAt
+      createdBy
+      updatedAt
+      updatedBy
       need {
         id
         label
@@ -2981,10 +2985,6 @@ export const onDeleteUserNeed = /* GraphQL */ `
           nextToken
         }
       }
-      createdAt
-      createdBy
-      updatedAt
-      updatedBy
       user {
         username
         status

@@ -32,6 +32,20 @@
           ]
         }
       ]
+    },
+    "statementGenerator": {
+      "build": true,
+      "providerPlugin": "awscloudformation",
+      "service": "Lambda",
+      "dependsOn": [
+        {
+          "category": "api",
+          "resourceName": "aray",
+          "attributes": [
+            "GraphQLAPIIdOutput"
+          ]
+        }
+      ]
     }
   },
   "auth": {
@@ -64,7 +78,15 @@
               "userPoolId": "autharay6131feb9"
             }
           },
-          "additionalAuthenticationProviders": []
+          "additionalAuthenticationProviders": [
+            {
+              "authenticationType": "API_KEY",
+              "apiKeyConfig": {
+                "apiKeyExpirationDays": 7,
+                "description": "public"
+              }
+            }
+          ]
         }
       }
     },

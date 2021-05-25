@@ -6,7 +6,7 @@ type DataMigration
   )
   @key(fields: ["name"])
   @auth(rules: [
-    { allow: groups, groups: ["Admins"]}
+    { allow: groups, groups: ["Admins"] }
   ])
   {
     name: String!

@@ -27,7 +27,11 @@ import { makeStyles } from '@material-ui/core/styles';
 import { useTranslation } from 'react-i18next';
 
 import { request, asyncListAll } from 'utils/graph';
-import { getUser, getContributionsByUsernameByCreatedAt } from 'graphql/queries';
+import {
+  getUser,
+  getContributionsByUsernameByCreatedAt,
+  getStatementsByUsernameByDate,
+} from 'graphql/queries';
 import VisitButton from 'components/VisitButton';
 import KeywordChip from 'components/KeywordChip';
 import Colors from 'constants/Colors';
@@ -96,10 +100,11 @@ export default function User({ id: inId, computedMatch }) {
     (async () => {
       const [
         { data: { getUser: data } },
-        userContributions,
+        { data: { getContributionsByUsernameByCreatedAt: { items: userContributions } } },
+        userStatements,
       ] = await Promise.all([
         request(getUser, { username: id }),
-        asyncListAll(getContributionsByUsernameByCreatedAt, {
+        request(getContributionsByUsernameByCreatedAt, {
           username: id,
           createdAt: {
             between: [
@@ -107,10 +112,23 @@ export default function User({ id: inId, computedMatch }) {
               today.toISOString(),
             ],
           },
+          limit: 10,
+          sortDirection: 'DESC',
+        }),
+        asyncListAll(getStatementsByUsernameByDate, {
+          username: id,
+          createdAt: {
+            between: [
+              aYearAgo.toISOString(),
+              today.toISOString(),
+            ],
+          },
+          sortDirection: 'DESC',
         }),
       ]);
       console.log('data', data);
       console.log('userContributions', userContributions);
+      console.log('userStatements', userStatements);
       setUser(data);
       setDetails([{
         icon: <RoomIcon />,
@@ -154,17 +172,14 @@ export default function User({ id: inId, computedMatch }) {
       setProjects(data.projects.items.map(({ project }) => project));
 
       let totalHoursInThePastYear = 0;
-      const groupedContributionsMapping = userContributions.reduce((mapping, item) => {
-        const date = moment(item.createdAt).format('YYYY-MM-DD');
-        mapping[date] = mapping[date] || {
+      const heatmapData = userStatements.map(({ date, completedHours }) => {
+        totalHoursInThePastYear += completedHours;
+        return {
           date,
-          count: 0,
+          count: completedHours,
         };
-        mapping[date].count += item.hours;
-        totalHoursInThePastYear += item.hours;
-        return mapping;
-      }, {});
-      setHeatmapData(Object.keys(groupedContributionsMapping).map((key) => groupedContributionsMapping[key]));
+      });
+      setHeatmapData(heatmapData);
       setContributions(userContributions);
       setTotalHoursInThePastYear(totalHoursInThePastYear);
     })();

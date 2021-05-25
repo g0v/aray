@@ -3,6 +3,7 @@ type ProjectNeed
   @key(name: "byNeed", fields: ["needId", "projectId"])
   @key(name: "byProject", fields: ["projectId", "needId"])
   @auth(rules: [
+    { allow: public, operations: [read] },
     { allow: groups, groups: ["Users"], operations: [read, create] },
     { allow: groups, groups: ["Admins"] },
   ])
@@ -13,4 +14,9 @@ type ProjectNeed
 
   project: Project! @connection(fields: ["projectId"])
   need: Need! @connection(fields: ["needId"])
+
+  createdAt: AWSDateTime!
+  createdBy: String!
+  updatedAt: AWSDateTime!
+  updatedBy: String!
 }

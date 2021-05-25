@@ -4,6 +4,7 @@ type ProjectTask
     fields: ["projectId","status"], queryField: "getProjectTasksByProjectIdByStatus")
 
   @auth(rules: [
+    { allow: public, operations: [read] },
     # Use custom graphql api to create/update project tasks (based on the project @auth)
     { allow: groups, groups: ["Users"], operations: [read] },
     { allow: groups, groups: ["Admins"] },
@@ -15,7 +16,7 @@ type ProjectTask
 
   summary: String!
   description: String
-  hours: Int!
+  hours: Float!
 
   createdAt: AWSDateTime!
   createdBy: String!

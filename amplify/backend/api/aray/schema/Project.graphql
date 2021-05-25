@@ -1,6 +1,7 @@
 type Project
   @model
   @auth(rules: [
+    { allow: public, operations: [read] },
     # Defaults to use the "owner" field.
     { allow: owner },
     # Authorize the update mutation and both queries.

@@ -2,9 +2,10 @@ type User
   @model
   @key(fields: ["username"])
   @auth(rules: [
-    {allow: owner, ownerField: "username", operations: [read, create, update]},
-    {allow: groups, groups: ["Users"], operations: [read]},
-    {allow: groups, groups: ["Admins"]},
+    { allow: public, operations: [read] },
+    # {allow: owner, ownerField: "username", operations: [read, create, update]},
+    { allow: groups, groups: ["Users"], operations: [read] },
+    { allow: groups, groups: ["Admins"] },
   ])
 {
   username: String!
@@ -15,6 +16,7 @@ type User
 
   selfIntroduction: String
   location: String
+  timeZone: String
 
   slackId: String
   
@@ -25,11 +27,12 @@ type User
   urlTwitter: AWSURL
   urlInstagram: AWSURL
 
-  totalCompletedHours: Int
+  totalCompletedHours: Float
   totalCompletedTasks: Int
 
   projects: [UserProject] @connection(keyName: "byUser", fields: ["username"])
   keywords: [UserKeyword] @connection(keyName: "byUser", fields: ["username"])
+  needs: [UserNeed] @connection(keyName: "byUser", fields: ["username"])
 
   createdAt: AWSDateTime!
   createdBy: String!

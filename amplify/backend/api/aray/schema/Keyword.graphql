@@ -1,6 +1,7 @@
 type Keyword
   @model
   @auth(rules: [
+    { allow: public, operations: [read] },
     { allow: groups, groups: ["Users"], operations: [read, create] },
     { allow: groups, groups: ["Admins"] },
   ])
@@ -11,5 +12,7 @@ type Keyword
   users: [UserKeyword] @connection(keyName: "byKeyword", fields: ["id"])
 
   createdAt: AWSDateTime!
+  createdBy: String!
   updatedAt: AWSDateTime!
+  updatedBy: String!
 }

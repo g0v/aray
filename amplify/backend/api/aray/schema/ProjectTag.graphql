@@ -3,6 +3,7 @@ type ProjectTag
   @key(name: "byTag", fields: ["tagId", "projectId"])
   @key(name: "byProject", fields: ["projectId", "tagId"])
   @auth(rules: [
+    { allow: public, operations: [read] },
     { allow: groups, groups: ["Users"], operations: [read, create] },
     { allow: groups, groups: ["Admins"] },
   ])
@@ -13,4 +14,9 @@ type ProjectTag
 
   project: Project! @connection(fields: ["projectId"])
   tag: Tag! @connection(fields: ["tagId"])
+
+  createdAt: AWSDateTime!
+  createdBy: String!
+  updatedAt: AWSDateTime!
+  updatedBy: String!
 }

@@ -76,16 +76,26 @@ export const createKeyword = /* GraphQL */ `
     createKeyword(input: $input, condition: $condition) {
       id
       label
+      createdAt
+      createdBy
+      updatedAt
+      updatedBy
       users {
         items {
           id
           keywordId
           username
+          createdAt
+          createdBy
+          updatedAt
+          updatedBy
           keyword {
             id
             label
             createdAt
+            createdBy
             updatedAt
+            updatedBy
           }
           user {
             username
@@ -94,6 +104,7 @@ export const createKeyword = /* GraphQL */ `
             email
             selfIntroduction
             location
+            timeZone
             slackId
             urlWebsite
             urlGithub
@@ -108,13 +119,9 @@ export const createKeyword = /* GraphQL */ `
             updatedAt
             updatedBy
           }
-          createdAt
-          updatedAt
         }
         nextToken
       }
-      createdAt
-      updatedAt
     }
   }
 `;
@@ -126,16 +133,26 @@ export const updateKeyword = /* GraphQL */ `
     updateKeyword(input: $input, condition: $condition) {
       id
       label
+      createdAt
+      createdBy
+      updatedAt
+      updatedBy
       users {
         items {
           id
           keywordId
           username
+          createdAt
+          createdBy
+          updatedAt
+          updatedBy
           keyword {
             id
             label
             createdAt
+            createdBy
             updatedAt
+            updatedBy
           }
           user {
             username
@@ -144,6 +161,7 @@ export const updateKeyword = /* GraphQL */ `
             email
             selfIntroduction
             location
+            timeZone
             slackId
             urlWebsite
             urlGithub
@@ -158,13 +176,9 @@ export const updateKeyword = /* GraphQL */ `
             updatedAt
             updatedBy
           }
-          createdAt
-          updatedAt
         }
         nextToken
       }
-      createdAt
-      updatedAt
     }
   }
 `;
@@ -176,16 +190,26 @@ export const deleteKeyword = /* GraphQL */ `
     deleteKeyword(input: $input, condition: $condition) {
       id
       label
+      createdAt
+      createdBy
+      updatedAt
+      updatedBy
       users {
         items {
           id
           keywordId
           username
+          createdAt
+          createdBy
+          updatedAt
+          updatedBy
           keyword {
             id
             label
             createdAt
+            createdBy
             updatedAt
+            updatedBy
           }
           user {
             username
@@ -194,6 +218,7 @@ export const deleteKeyword = /* GraphQL */ `
             email
             selfIntroduction
             location
+            timeZone
             slackId
             urlWebsite
             urlGithub
@@ -208,13 +233,9 @@ export const deleteKeyword = /* GraphQL */ `
             updatedAt
             updatedBy
           }
-          createdAt
-          updatedAt
         }
         nextToken
       }
-      createdAt
-      updatedAt
     }
   }
 `;
@@ -226,11 +247,27 @@ export const createNeed = /* GraphQL */ `
     createNeed(input: $input, condition: $condition) {
       id
       label
+      createdAt
+      createdBy
+      updatedAt
+      updatedBy
       projects {
         items {
           id
           projectId
           needId
+          need {
+            id
+            label
+            createdAt
+            createdBy
+            updatedAt
+            updatedBy
+          }
+          createdAt
+          createdBy
+          updatedAt
+          updatedBy
           project {
             id
             status
@@ -244,19 +281,9 @@ export const createNeed = /* GraphQL */ `
             updatedAt
             updatedBy
           }
-          need {
-            id
-            label
-            createdAt
-            updatedAt
-          }
-          createdAt
-          updatedAt
         }
         nextToken
       }
-      createdAt
-      updatedAt
     }
   }
 `;
@@ -268,11 +295,27 @@ export const updateNeed = /* GraphQL */ `
     updateNeed(input: $input, condition: $condition) {
       id
       label
+      createdAt
+      createdBy
+      updatedAt
+      updatedBy
       projects {
         items {
           id
           projectId
           needId
+          need {
+            id
+            label
+            createdAt
+            createdBy
+            updatedAt
+            updatedBy
+          }
+          createdAt
+          createdBy
+          updatedAt
+          updatedBy
           project {
             id
             status
@@ -286,19 +329,9 @@ export const updateNeed = /* GraphQL */ `
             updatedAt
             updatedBy
           }
-          need {
-            id
-            label
-            createdAt
-            updatedAt
-          }
-          createdAt
-          updatedAt
         }
         nextToken
       }
-      createdAt
-      updatedAt
     }
   }
 `;
@@ -310,11 +343,27 @@ export const deleteNeed = /* GraphQL */ `
     deleteNeed(input: $input, condition: $condition) {
       id
       label
+      createdAt
+      createdBy
+      updatedAt
+      updatedBy
       projects {
         items {
           id
           projectId
           needId
+          need {
+            id
+            label
+            createdAt
+            createdBy
+            updatedAt
+            updatedBy
+          }
+          createdAt
+          createdBy
+          updatedAt
+          updatedBy
           project {
             id
             status
@@ -328,19 +377,9 @@ export const deleteNeed = /* GraphQL */ `
             updatedAt
             updatedBy
           }
-          need {
-            id
-            label
-            createdAt
-            updatedAt
-          }
-          createdAt
-          updatedAt
         }
         nextToken
       }
-      createdAt
-      updatedAt
     }
   }
 `;
@@ -361,11 +400,121 @@ export const createProject = /* GraphQL */ `
         name
         url
       }
+      createdAt
+      createdBy
+      updatedAt
+      updatedBy
+      keywords {
+        items {
+          id
+          projectId
+          keywordId
+          createdAt
+          createdBy
+          updatedAt
+          updatedBy
+          keyword {
+            id
+            label
+            createdAt
+            createdBy
+            updatedAt
+            updatedBy
+          }
+          project {
+            id
+            status
+            owner
+            managers
+            name
+            summary
+            description
+            createdAt
+            createdBy
+            updatedAt
+            updatedBy
+          }
+        }
+        nextToken
+      }
+      needs {
+        items {
+          id
+          projectId
+          needId
+          need {
+            id
+            label
+            createdAt
+            createdBy
+            updatedAt
+            updatedBy
+          }
+          createdAt
+          createdBy
+          updatedAt
+          updatedBy
+          project {
+            id
+            status
+            owner
+            managers
+            name
+            summary
+            description
+            createdAt
+            createdBy
+            updatedAt
+            updatedBy
+          }
+        }
+        nextToken
+      }
+      tags {
+        items {
+          id
+          projectId
+          tagId
+          createdAt
+          createdBy
+          updatedAt
+          updatedBy
+          project {
+            id
+            status
+            owner
+            managers
+            name
+            summary
+            description
+            createdAt
+            createdBy
+            updatedAt
+            updatedBy
+          }
+          tag {
+            id
+            label
+            createdAt
+            createdBy
+            updatedAt
+            updatedBy
+          }
+        }
+        nextToken
+      }
       contributors {
         items {
           id
           projectId
           username
+          role
+          completedHours
+          completedTasks
+          createdAt
+          createdBy
+          updatedAt
+          updatedBy
           project {
             id
             status
@@ -386,6 +535,7 @@ export const createProject = /* GraphQL */ `
             email
             selfIntroduction
             location
+            timeZone
             slackId
             urlWebsite
             urlGithub
@@ -400,105 +550,9 @@ export const createProject = /* GraphQL */ `
             updatedAt
             updatedBy
           }
-          role
-          completedHours
-          completedTasks
-          createdAt
-          updatedAt
         }
         nextToken
       }
-      tags {
-        items {
-          id
-          projectId
-          tagId
-          project {
-            id
-            status
-            owner
-            managers
-            name
-            summary
-            description
-            createdAt
-            createdBy
-            updatedAt
-            updatedBy
-          }
-          tag {
-            id
-            label
-            createdAt
-            updatedAt
-          }
-          createdAt
-          updatedAt
-        }
-        nextToken
-      }
-      keywords {
-        items {
-          id
-          projectId
-          keywordId
-          project {
-            id
-            status
-            owner
-            managers
-            name
-            summary
-            description
-            createdAt
-            createdBy
-            updatedAt
-            updatedBy
-          }
-          keyword {
-            id
-            label
-            createdAt
-            updatedAt
-          }
-          createdAt
-          updatedAt
-        }
-        nextToken
-      }
-      needs {
-        items {
-          id
-          projectId
-          needId
-          project {
-            id
-            status
-            owner
-            managers
-            name
-            summary
-            description
-            createdAt
-            createdBy
-            updatedAt
-            updatedBy
-          }
-          need {
-            id
-            label
-            createdAt
-            updatedAt
-          }
-          createdAt
-          updatedAt
-        }
-        nextToken
-      }
-      createdAt
-      createdBy
-      updatedAt
-      updatedBy
     }
   }
 `;
@@ -519,11 +573,121 @@ export const updateProject = /* GraphQL */ `
         name
         url
       }
+      createdAt
+      createdBy
+      updatedAt
+      updatedBy
+      keywords {
+        items {
+          id
+          projectId
+          keywordId
+          createdAt
+          createdBy
+          updatedAt
+          updatedBy
+          keyword {
+            id
+            label
+            createdAt
+            createdBy
+            updatedAt
+            updatedBy
+          }
+          project {
+            id
+            status
+            owner
+            managers
+            name
+            summary
+            description
+            createdAt
+            createdBy
+            updatedAt
+            updatedBy
+          }
+        }
+        nextToken
+      }
+      needs {
+        items {
+          id
+          projectId
+          needId
+          need {
+            id
+            label
+            createdAt
+            createdBy
+            updatedAt
+            updatedBy
+          }
+          createdAt
+          createdBy
+          updatedAt
+          updatedBy
+          project {
+            id
+            status
+            owner
+            managers
+            name
+            summary
+            description
+            createdAt
+            createdBy
+            updatedAt
+            updatedBy
+          }
+        }
+        nextToken
+      }
+      tags {
+        items {
+          id
+          projectId
+          tagId
+          createdAt
+          createdBy
+          updatedAt
+          updatedBy
+          project {
+            id
+            status
+            owner
+            managers
+            name
+            summary
+            description
+            createdAt
+            createdBy
+            updatedAt
+            updatedBy
+          }
+          tag {
+            id
+            label
+            createdAt
+            createdBy
+            updatedAt
+            updatedBy
+          }
+        }
+        nextToken
+      }
       contributors {
         items {
           id
           projectId
           username
+          role
+          completedHours
+          completedTasks
+          createdAt
+          createdBy
+          updatedAt
+          updatedBy
           project {
             id
             status
@@ -544,6 +708,7 @@ export const updateProject = /* GraphQL */ `
             email
             selfIntroduction
             location
+            timeZone
             slackId
             urlWebsite
             urlGithub
@@ -558,105 +723,9 @@ export const updateProject = /* GraphQL */ `
             updatedAt
             updatedBy
           }
-          role
-          completedHours
-          completedTasks
-          createdAt
-          updatedAt
         }
         nextToken
       }
-      tags {
-        items {
-          id
-          projectId
-          tagId
-          project {
-            id
-            status
-            owner
-            managers
-            name
-            summary
-            description
-            createdAt
-            createdBy
-            updatedAt
-            updatedBy
-          }
-          tag {
-            id
-            label
-            createdAt
-            updatedAt
-          }
-          createdAt
-          updatedAt
-        }
-        nextToken
-      }
-      keywords {
-        items {
-          id
-          projectId
-          keywordId
-          project {
-            id
-            status
-            owner
-            managers
-            name
-            summary
-            description
-            createdAt
-            createdBy
-            updatedAt
-            updatedBy
-          }
-          keyword {
-            id
-            label
-            createdAt
-            updatedAt
-          }
-          createdAt
-          updatedAt
-        }
-        nextToken
-      }
-      needs {
-        items {
-          id
-          projectId
-          needId
-          project {
-            id
-            status
-            owner
-            managers
-            name
-            summary
-            description
-            createdAt
-            createdBy
-            updatedAt
-            updatedBy
-          }
-          need {
-            id
-            label
-            createdAt
-            updatedAt
-          }
-          createdAt
-          updatedAt
-        }
-        nextToken
-      }
-      createdAt
-      createdBy
-      updatedAt
-      updatedBy
     }
   }
 `;
@@ -677,11 +746,121 @@ export const deleteProject = /* GraphQL */ `
         name
         url
       }
+      createdAt
+      createdBy
+      updatedAt
+      updatedBy
+      keywords {
+        items {
+          id
+          projectId
+          keywordId
+          createdAt
+          createdBy
+          updatedAt
+          updatedBy
+          keyword {
+            id
+            label
+            createdAt
+            createdBy
+            updatedAt
+            updatedBy
+          }
+          project {
+            id
+            status
+            owner
+            managers
+            name
+            summary
+            description
+            createdAt
+            createdBy
+            updatedAt
+            updatedBy
+          }
+        }
+        nextToken
+      }
+      needs {
+        items {
+          id
+          projectId
+          needId
+          need {
+            id
+            label
+            createdAt
+            createdBy
+            updatedAt
+            updatedBy
+          }
+          createdAt
+          createdBy
+          updatedAt
+          updatedBy
+          project {
+            id
+            status
+            owner
+            managers
+            name
+            summary
+            description
+            createdAt
+            createdBy
+            updatedAt
+            updatedBy
+          }
+        }
+        nextToken
+      }
+      tags {
+        items {
+          id
+          projectId
+          tagId
+          createdAt
+          createdBy
+          updatedAt
+          updatedBy
+          project {
+            id
+            status
+            owner
+            managers
+            name
+            summary
+            description
+            createdAt
+            createdBy
+            updatedAt
+            updatedBy
+          }
+          tag {
+            id
+            label
+            createdAt
+            createdBy
+            updatedAt
+            updatedBy
+          }
+        }
+        nextToken
+      }
       contributors {
         items {
           id
           projectId
           username
+          role
+          completedHours
+          completedTasks
+          createdAt
+          createdBy
+          updatedAt
+          updatedBy
           project {
             id
             status
@@ -702,6 +881,7 @@ export const deleteProject = /* GraphQL */ `
             email
             selfIntroduction
             location
+            timeZone
             slackId
             urlWebsite
             urlGithub
@@ -716,105 +896,9 @@ export const deleteProject = /* GraphQL */ `
             updatedAt
             updatedBy
           }
-          role
-          completedHours
-          completedTasks
-          createdAt
-          updatedAt
         }
         nextToken
       }
-      tags {
-        items {
-          id
-          projectId
-          tagId
-          project {
-            id
-            status
-            owner
-            managers
-            name
-            summary
-            description
-            createdAt
-            createdBy
-            updatedAt
-            updatedBy
-          }
-          tag {
-            id
-            label
-            createdAt
-            updatedAt
-          }
-          createdAt
-          updatedAt
-        }
-        nextToken
-      }
-      keywords {
-        items {
-          id
-          projectId
-          keywordId
-          project {
-            id
-            status
-            owner
-            managers
-            name
-            summary
-            description
-            createdAt
-            createdBy
-            updatedAt
-            updatedBy
-          }
-          keyword {
-            id
-            label
-            createdAt
-            updatedAt
-          }
-          createdAt
-          updatedAt
-        }
-        nextToken
-      }
-      needs {
-        items {
-          id
-          projectId
-          needId
-          project {
-            id
-            status
-            owner
-            managers
-            name
-            summary
-            description
-            createdAt
-            createdBy
-            updatedAt
-            updatedBy
-          }
-          need {
-            id
-            label
-            createdAt
-            updatedAt
-          }
-          createdAt
-          updatedAt
-        }
-        nextToken
-      }
-      createdAt
-      createdBy
-      updatedAt
-      updatedBy
     }
   }
 `;
@@ -827,6 +911,30 @@ export const createProjectKeyword = /* GraphQL */ `
       id
       projectId
       keywordId
+      createdAt
+      createdBy
+      updatedAt
+      updatedBy
+      keyword {
+        id
+        label
+        createdAt
+        createdBy
+        updatedAt
+        updatedBy
+        users {
+          items {
+            id
+            keywordId
+            username
+            createdAt
+            createdBy
+            updatedAt
+            updatedBy
+          }
+          nextToken
+        }
+      }
       project {
         id
         status
@@ -839,36 +947,19 @@ export const createProjectKeyword = /* GraphQL */ `
           name
           url
         }
-        contributors {
-          items {
-            id
-            projectId
-            username
-            role
-            completedHours
-            completedTasks
-            createdAt
-            updatedAt
-          }
-          nextToken
-        }
-        tags {
-          items {
-            id
-            projectId
-            tagId
-            createdAt
-            updatedAt
-          }
-          nextToken
-        }
+        createdAt
+        createdBy
+        updatedAt
+        updatedBy
         keywords {
           items {
             id
             projectId
             keywordId
             createdAt
+            createdBy
             updatedAt
+            updatedBy
           }
           nextToken
         }
@@ -878,33 +969,40 @@ export const createProjectKeyword = /* GraphQL */ `
             projectId
             needId
             createdAt
+            createdBy
             updatedAt
+            updatedBy
           }
           nextToken
         }
-        createdAt
-        createdBy
-        updatedAt
-        updatedBy
-      }
-      keyword {
-        id
-        label
-        users {
+        tags {
           items {
             id
-            keywordId
-            username
+            projectId
+            tagId
             createdAt
+            createdBy
             updatedAt
+            updatedBy
           }
           nextToken
         }
-        createdAt
-        updatedAt
+        contributors {
+          items {
+            id
+            projectId
+            username
+            role
+            completedHours
+            completedTasks
+            createdAt
+            createdBy
+            updatedAt
+            updatedBy
+          }
+          nextToken
+        }
       }
-      createdAt
-      updatedAt
     }
   }
 `;
@@ -917,6 +1015,30 @@ export const updateProjectKeyword = /* GraphQL */ `
       id
       projectId
       keywordId
+      createdAt
+      createdBy
+      updatedAt
+      updatedBy
+      keyword {
+        id
+        label
+        createdAt
+        createdBy
+        updatedAt
+        updatedBy
+        users {
+          items {
+            id
+            keywordId
+            username
+            createdAt
+            createdBy
+            updatedAt
+            updatedBy
+          }
+          nextToken
+        }
+      }
       project {
         id
         status
@@ -929,36 +1051,19 @@ export const updateProjectKeyword = /* GraphQL */ `
           name
           url
         }
-        contributors {
-          items {
-            id
-            projectId
-            username
-            role
-            completedHours
-            completedTasks
-            createdAt
-            updatedAt
-          }
-          nextToken
-        }
-        tags {
-          items {
-            id
-            projectId
-            tagId
-            createdAt
-            updatedAt
-          }
-          nextToken
-        }
+        createdAt
+        createdBy
+        updatedAt
+        updatedBy
         keywords {
           items {
             id
             projectId
             keywordId
             createdAt
+            createdBy
             updatedAt
+            updatedBy
           }
           nextToken
         }
@@ -968,33 +1073,40 @@ export const updateProjectKeyword = /* GraphQL */ `
             projectId
             needId
             createdAt
+            createdBy
             updatedAt
+            updatedBy
           }
           nextToken
         }
-        createdAt
-        createdBy
-        updatedAt
-        updatedBy
-      }
-      keyword {
-        id
-        label
-        users {
+        tags {
           items {
             id
-            keywordId
-            username
+            projectId
+            tagId
             createdAt
+            createdBy
             updatedAt
+            updatedBy
           }
           nextToken
         }
-        createdAt
-        updatedAt
+        contributors {
+          items {
+            id
+            projectId
+            username
+            role
+            completedHours
+            completedTasks
+            createdAt
+            createdBy
+            updatedAt
+            updatedBy
+          }
+          nextToken
+        }
       }
-      createdAt
-      updatedAt
     }
   }
 `;
@@ -1007,6 +1119,30 @@ export const deleteProjectKeyword = /* GraphQL */ `
       id
       projectId
       keywordId
+      createdAt
+      createdBy
+      updatedAt
+      updatedBy
+      keyword {
+        id
+        label
+        createdAt
+        createdBy
+        updatedAt
+        updatedBy
+        users {
+          items {
+            id
+            keywordId
+            username
+            createdAt
+            createdBy
+            updatedAt
+            updatedBy
+          }
+          nextToken
+        }
+      }
       project {
         id
         status
@@ -1019,36 +1155,19 @@ export const deleteProjectKeyword = /* GraphQL */ `
           name
           url
         }
-        contributors {
-          items {
-            id
-            projectId
-            username
-            role
-            completedHours
-            completedTasks
-            createdAt
-            updatedAt
-          }
-          nextToken
-        }
-        tags {
-          items {
-            id
-            projectId
-            tagId
-            createdAt
-            updatedAt
-          }
-          nextToken
-        }
+        createdAt
+        createdBy
+        updatedAt
+        updatedBy
         keywords {
           items {
             id
             projectId
             keywordId
             createdAt
+            createdBy
             updatedAt
+            updatedBy
           }
           nextToken
         }
@@ -1058,33 +1177,40 @@ export const deleteProjectKeyword = /* GraphQL */ `
             projectId
             needId
             createdAt
+            createdBy
             updatedAt
+            updatedBy
           }
           nextToken
         }
-        createdAt
-        createdBy
-        updatedAt
-        updatedBy
-      }
-      keyword {
-        id
-        label
-        users {
+        tags {
           items {
             id
-            keywordId
-            username
+            projectId
+            tagId
             createdAt
+            createdBy
             updatedAt
+            updatedBy
           }
           nextToken
         }
-        createdAt
-        updatedAt
+        contributors {
+          items {
+            id
+            projectId
+            username
+            role
+            completedHours
+            completedTasks
+            createdAt
+            createdBy
+            updatedAt
+            updatedBy
+          }
+          nextToken
+        }
       }
-      createdAt
-      updatedAt
     }
   }
 `;
@@ -1097,6 +1223,30 @@ export const createProjectNeed = /* GraphQL */ `
       id
       projectId
       needId
+      need {
+        id
+        label
+        createdAt
+        createdBy
+        updatedAt
+        updatedBy
+        projects {
+          items {
+            id
+            projectId
+            needId
+            createdAt
+            createdBy
+            updatedAt
+            updatedBy
+          }
+          nextToken
+        }
+      }
+      createdAt
+      createdBy
+      updatedAt
+      updatedBy
       project {
         id
         status
@@ -1109,36 +1259,19 @@ export const createProjectNeed = /* GraphQL */ `
           name
           url
         }
-        contributors {
-          items {
-            id
-            projectId
-            username
-            role
-            completedHours
-            completedTasks
-            createdAt
-            updatedAt
-          }
-          nextToken
-        }
-        tags {
-          items {
-            id
-            projectId
-            tagId
-            createdAt
-            updatedAt
-          }
-          nextToken
-        }
+        createdAt
+        createdBy
+        updatedAt
+        updatedBy
         keywords {
           items {
             id
             projectId
             keywordId
             createdAt
+            createdBy
             updatedAt
+            updatedBy
           }
           nextToken
         }
@@ -1148,33 +1281,40 @@ export const createProjectNeed = /* GraphQL */ `
             projectId
             needId
             createdAt
+            createdBy
             updatedAt
+            updatedBy
           }
           nextToken
         }
-        createdAt
-        createdBy
-        updatedAt
-        updatedBy
-      }
-      need {
-        id
-        label
-        projects {
+        tags {
           items {
             id
             projectId
-            needId
+            tagId
             createdAt
+            createdBy
             updatedAt
+            updatedBy
           }
           nextToken
         }
-        createdAt
-        updatedAt
+        contributors {
+          items {
+            id
+            projectId
+            username
+            role
+            completedHours
+            completedTasks
+            createdAt
+            createdBy
+            updatedAt
+            updatedBy
+          }
+          nextToken
+        }
       }
-      createdAt
-      updatedAt
     }
   }
 `;
@@ -1187,6 +1327,30 @@ export const updateProjectNeed = /* GraphQL */ `
       id
       projectId
       needId
+      need {
+        id
+        label
+        createdAt
+        createdBy
+        updatedAt
+        updatedBy
+        projects {
+          items {
+            id
+            projectId
+            needId
+            createdAt
+            createdBy
+            updatedAt
+            updatedBy
+          }
+          nextToken
+        }
+      }
+      createdAt
+      createdBy
+      updatedAt
+      updatedBy
       project {
         id
         status
@@ -1199,36 +1363,19 @@ export const updateProjectNeed = /* GraphQL */ `
           name
           url
         }
-        contributors {
-          items {
-            id
-            projectId
-            username
-            role
-            completedHours
-            completedTasks
-            createdAt
-            updatedAt
-          }
-          nextToken
-        }
-        tags {
-          items {
-            id
-            projectId
-            tagId
-            createdAt
-            updatedAt
-          }
-          nextToken
-        }
+        createdAt
+        createdBy
+        updatedAt
+        updatedBy
         keywords {
           items {
             id
             projectId
             keywordId
             createdAt
+            createdBy
             updatedAt
+            updatedBy
           }
           nextToken
         }
@@ -1238,33 +1385,40 @@ export const updateProjectNeed = /* GraphQL */ `
             projectId
             needId
             createdAt
+            createdBy
             updatedAt
+            updatedBy
           }
           nextToken
         }
-        createdAt
-        createdBy
-        updatedAt
-        updatedBy
-      }
-      need {
-        id
-        label
-        projects {
+        tags {
           items {
             id
             projectId
-            needId
+            tagId
             createdAt
+            createdBy
             updatedAt
+            updatedBy
           }
           nextToken
         }
-        createdAt
-        updatedAt
+        contributors {
+          items {
+            id
+            projectId
+            username
+            role
+            completedHours
+            completedTasks
+            createdAt
+            createdBy
+            updatedAt
+            updatedBy
+          }
+          nextToken
+        }
       }
-      createdAt
-      updatedAt
     }
   }
 `;
@@ -1277,6 +1431,30 @@ export const deleteProjectNeed = /* GraphQL */ `
       id
       projectId
       needId
+      need {
+        id
+        label
+        createdAt
+        createdBy
+        updatedAt
+        updatedBy
+        projects {
+          items {
+            id
+            projectId
+            needId
+            createdAt
+            createdBy
+            updatedAt
+            updatedBy
+          }
+          nextToken
+        }
+      }
+      createdAt
+      createdBy
+      updatedAt
+      updatedBy
       project {
         id
         status
@@ -1289,36 +1467,19 @@ export const deleteProjectNeed = /* GraphQL */ `
           name
           url
         }
-        contributors {
-          items {
-            id
-            projectId
-            username
-            role
-            completedHours
-            completedTasks
-            createdAt
-            updatedAt
-          }
-          nextToken
-        }
-        tags {
-          items {
-            id
-            projectId
-            tagId
-            createdAt
-            updatedAt
-          }
-          nextToken
-        }
+        createdAt
+        createdBy
+        updatedAt
+        updatedBy
         keywords {
           items {
             id
             projectId
             keywordId
             createdAt
+            createdBy
             updatedAt
+            updatedBy
           }
           nextToken
         }
@@ -1328,33 +1489,40 @@ export const deleteProjectNeed = /* GraphQL */ `
             projectId
             needId
             createdAt
+            createdBy
             updatedAt
+            updatedBy
           }
           nextToken
         }
-        createdAt
-        createdBy
-        updatedAt
-        updatedBy
-      }
-      need {
-        id
-        label
-        projects {
+        tags {
           items {
             id
             projectId
-            needId
+            tagId
             createdAt
+            createdBy
             updatedAt
+            updatedBy
           }
           nextToken
         }
-        createdAt
-        updatedAt
+        contributors {
+          items {
+            id
+            projectId
+            username
+            role
+            completedHours
+            completedTasks
+            createdAt
+            createdBy
+            updatedAt
+            updatedBy
+          }
+          nextToken
+        }
       }
-      createdAt
-      updatedAt
     }
   }
 `;
@@ -1367,6 +1535,10 @@ export const createProjectTag = /* GraphQL */ `
       id
       projectId
       tagId
+      createdAt
+      createdBy
+      updatedAt
+      updatedBy
       project {
         id
         status
@@ -1379,36 +1551,19 @@ export const createProjectTag = /* GraphQL */ `
           name
           url
         }
-        contributors {
-          items {
-            id
-            projectId
-            username
-            role
-            completedHours
-            completedTasks
-            createdAt
-            updatedAt
-          }
-          nextToken
-        }
-        tags {
-          items {
-            id
-            projectId
-            tagId
-            createdAt
-            updatedAt
-          }
-          nextToken
-        }
+        createdAt
+        createdBy
+        updatedAt
+        updatedBy
         keywords {
           items {
             id
             projectId
             keywordId
             createdAt
+            createdBy
             updatedAt
+            updatedBy
           }
           nextToken
         }
@@ -1418,33 +1573,60 @@ export const createProjectTag = /* GraphQL */ `
             projectId
             needId
             createdAt
+            createdBy
             updatedAt
+            updatedBy
           }
           nextToken
         }
-        createdAt
-        createdBy
-        updatedAt
-        updatedBy
+        tags {
+          items {
+            id
+            projectId
+            tagId
+            createdAt
+            createdBy
+            updatedAt
+            updatedBy
+          }
+          nextToken
+        }
+        contributors {
+          items {
+            id
+            projectId
+            username
+            role
+            completedHours
+            completedTasks
+            createdAt
+            createdBy
+            updatedAt
+            updatedBy
+          }
+          nextToken
+        }
       }
       tag {
         id
         label
+        createdAt
+        createdBy
+        updatedAt
+        updatedBy
         projects {
           items {
             id
             projectId
             tagId
             createdAt
+            createdBy
             updatedAt
+            updatedBy
           }
           nextToken
         }
-        createdAt
-        updatedAt
       }
-      createdAt
-      updatedAt
     }
   }
 `;
@@ -1457,6 +1639,10 @@ export const updateProjectTag = /* GraphQL */ `
       id
       projectId
       tagId
+      createdAt
+      createdBy
+      updatedAt
+      updatedBy
       project {
         id
         status
@@ -1469,36 +1655,19 @@ export const updateProjectTag = /* GraphQL */ `
           name
           url
         }
-        contributors {
-          items {
-            id
-            projectId
-            username
-            role
-            completedHours
-            completedTasks
-            createdAt
-            updatedAt
-          }
-          nextToken
-        }
-        tags {
-          items {
-            id
-            projectId
-            tagId
-            createdAt
-            updatedAt
-          }
-          nextToken
-        }
+        createdAt
+        createdBy
+        updatedAt
+        updatedBy
         keywords {
           items {
             id
             projectId
             keywordId
             createdAt
+            createdBy
             updatedAt
+            updatedBy
           }
           nextToken
         }
@@ -1508,33 +1677,60 @@ export const updateProjectTag = /* GraphQL */ `
             projectId
             needId
             createdAt
+            createdBy
             updatedAt
+            updatedBy
           }
           nextToken
         }
-        createdAt
-        createdBy
-        updatedAt
-        updatedBy
+        tags {
+          items {
+            id
+            projectId
+            tagId
+            createdAt
+            createdBy
+            updatedAt
+            updatedBy
+          }
+          nextToken
+        }
+        contributors {
+          items {
+            id
+            projectId
+            username
+            role
+            completedHours
+            completedTasks
+            createdAt
+            createdBy
+            updatedAt
+            updatedBy
+          }
+          nextToken
+        }
       }
       tag {
         id
         label
+        createdAt
+        createdBy
+        updatedAt
+        updatedBy
         projects {
           items {
             id
             projectId
             tagId
             createdAt
+            createdBy
             updatedAt
+            updatedBy
           }
           nextToken
         }
-        createdAt
-        updatedAt
       }
-      createdAt
-      updatedAt
     }
   }
 `;
@@ -1547,6 +1743,10 @@ export const deleteProjectTag = /* GraphQL */ `
       id
       projectId
       tagId
+      createdAt
+      createdBy
+      updatedAt
+      updatedBy
       project {
         id
         status
@@ -1559,36 +1759,19 @@ export const deleteProjectTag = /* GraphQL */ `
           name
           url
         }
-        contributors {
-          items {
-            id
-            projectId
-            username
-            role
-            completedHours
-            completedTasks
-            createdAt
-            updatedAt
-          }
-          nextToken
-        }
-        tags {
-          items {
-            id
-            projectId
-            tagId
-            createdAt
-            updatedAt
-          }
-          nextToken
-        }
+        createdAt
+        createdBy
+        updatedAt
+        updatedBy
         keywords {
           items {
             id
             projectId
             keywordId
             createdAt
+            createdBy
             updatedAt
+            updatedBy
           }
           nextToken
         }
@@ -1598,33 +1781,60 @@ export const deleteProjectTag = /* GraphQL */ `
             projectId
             needId
             createdAt
+            createdBy
             updatedAt
+            updatedBy
           }
           nextToken
         }
-        createdAt
-        createdBy
-        updatedAt
-        updatedBy
+        tags {
+          items {
+            id
+            projectId
+            tagId
+            createdAt
+            createdBy
+            updatedAt
+            updatedBy
+          }
+          nextToken
+        }
+        contributors {
+          items {
+            id
+            projectId
+            username
+            role
+            completedHours
+            completedTasks
+            createdAt
+            createdBy
+            updatedAt
+            updatedBy
+          }
+          nextToken
+        }
       }
       tag {
         id
         label
+        createdAt
+        createdBy
+        updatedAt
+        updatedBy
         projects {
           items {
             id
             projectId
             tagId
             createdAt
+            createdBy
             updatedAt
+            updatedBy
           }
           nextToken
         }
-        createdAt
-        updatedAt
       }
-      createdAt
-      updatedAt
     }
   }
 `;
@@ -1685,6 +1895,69 @@ export const deleteProjectTask = /* GraphQL */ `
     }
   }
 `;
+export const createStatement = /* GraphQL */ `
+  mutation CreateStatement(
+    $input: CreateStatementInput!
+    $condition: ModelStatementConditionInput
+  ) {
+    createStatement(input: $input, condition: $condition) {
+      id
+      username
+      type
+      date
+      totalCompletedHours
+      totalCompletedTasks
+      completedHours
+      completedTasks
+      createdAt
+      createdBy
+      updatedAt
+      updatedBy
+    }
+  }
+`;
+export const updateStatement = /* GraphQL */ `
+  mutation UpdateStatement(
+    $input: UpdateStatementInput!
+    $condition: ModelStatementConditionInput
+  ) {
+    updateStatement(input: $input, condition: $condition) {
+      id
+      username
+      type
+      date
+      totalCompletedHours
+      totalCompletedTasks
+      completedHours
+      completedTasks
+      createdAt
+      createdBy
+      updatedAt
+      updatedBy
+    }
+  }
+`;
+export const deleteStatement = /* GraphQL */ `
+  mutation DeleteStatement(
+    $input: DeleteStatementInput!
+    $condition: ModelStatementConditionInput
+  ) {
+    deleteStatement(input: $input, condition: $condition) {
+      id
+      username
+      type
+      date
+      totalCompletedHours
+      totalCompletedTasks
+      completedHours
+      completedTasks
+      createdAt
+      createdBy
+      updatedAt
+      updatedBy
+    }
+  }
+`;
 export const createTag = /* GraphQL */ `
   mutation CreateTag(
     $input: CreateTagInput!
@@ -1693,11 +1966,19 @@ export const createTag = /* GraphQL */ `
     createTag(input: $input, condition: $condition) {
       id
       label
+      createdAt
+      createdBy
+      updatedAt
+      updatedBy
       projects {
         items {
           id
           projectId
           tagId
+          createdAt
+          createdBy
+          updatedAt
+          updatedBy
           project {
             id
             status
@@ -1715,15 +1996,13 @@ export const createTag = /* GraphQL */ `
             id
             label
             createdAt
+            createdBy
             updatedAt
+            updatedBy
           }
-          createdAt
-          updatedAt
         }
         nextToken
       }
-      createdAt
-      updatedAt
     }
   }
 `;
@@ -1735,11 +2014,19 @@ export const updateTag = /* GraphQL */ `
     updateTag(input: $input, condition: $condition) {
       id
       label
+      createdAt
+      createdBy
+      updatedAt
+      updatedBy
       projects {
         items {
           id
           projectId
           tagId
+          createdAt
+          createdBy
+          updatedAt
+          updatedBy
           project {
             id
             status
@@ -1757,15 +2044,13 @@ export const updateTag = /* GraphQL */ `
             id
             label
             createdAt
+            createdBy
             updatedAt
+            updatedBy
           }
-          createdAt
-          updatedAt
         }
         nextToken
       }
-      createdAt
-      updatedAt
     }
   }
 `;
@@ -1777,11 +2062,19 @@ export const deleteTag = /* GraphQL */ `
     deleteTag(input: $input, condition: $condition) {
       id
       label
+      createdAt
+      createdBy
+      updatedAt
+      updatedBy
       projects {
         items {
           id
           projectId
           tagId
+          createdAt
+          createdBy
+          updatedAt
+          updatedBy
           project {
             id
             status
@@ -1799,15 +2092,13 @@ export const deleteTag = /* GraphQL */ `
             id
             label
             createdAt
+            createdBy
             updatedAt
+            updatedBy
           }
-          createdAt
-          updatedAt
         }
         nextToken
       }
-      createdAt
-      updatedAt
     }
   }
 `;
@@ -1823,6 +2114,7 @@ export const createUser = /* GraphQL */ `
       email
       selfIntroduction
       location
+      timeZone
       slackId
       urlWebsite
       urlGithub
@@ -1832,11 +2124,106 @@ export const createUser = /* GraphQL */ `
       urlInstagram
       totalCompletedHours
       totalCompletedTasks
+      createdAt
+      createdBy
+      updatedAt
+      updatedBy
+      keywords {
+        items {
+          id
+          keywordId
+          username
+          createdAt
+          createdBy
+          updatedAt
+          updatedBy
+          keyword {
+            id
+            label
+            createdAt
+            createdBy
+            updatedAt
+            updatedBy
+          }
+          user {
+            username
+            status
+            name
+            email
+            selfIntroduction
+            location
+            timeZone
+            slackId
+            urlWebsite
+            urlGithub
+            urlLinkedIn
+            urlFacebook
+            urlTwitter
+            urlInstagram
+            totalCompletedHours
+            totalCompletedTasks
+            createdAt
+            createdBy
+            updatedAt
+            updatedBy
+          }
+        }
+        nextToken
+      }
+      needs {
+        items {
+          id
+          needId
+          username
+          need {
+            id
+            label
+            createdAt
+            createdBy
+            updatedAt
+            updatedBy
+          }
+          createdAt
+          createdBy
+          updatedAt
+          updatedBy
+          user {
+            username
+            status
+            name
+            email
+            selfIntroduction
+            location
+            timeZone
+            slackId
+            urlWebsite
+            urlGithub
+            urlLinkedIn
+            urlFacebook
+            urlTwitter
+            urlInstagram
+            totalCompletedHours
+            totalCompletedTasks
+            createdAt
+            createdBy
+            updatedAt
+            updatedBy
+          }
+        }
+        nextToken
+      }
       projects {
         items {
           id
           projectId
           username
+          role
+          completedHours
+          completedTasks
+          createdAt
+          createdBy
+          updatedAt
+          updatedBy
           project {
             id
             status
@@ -1857,6 +2244,7 @@ export const createUser = /* GraphQL */ `
             email
             selfIntroduction
             location
+            timeZone
             slackId
             urlWebsite
             urlGithub
@@ -1871,55 +2259,9 @@ export const createUser = /* GraphQL */ `
             updatedAt
             updatedBy
           }
-          role
-          completedHours
-          completedTasks
-          createdAt
-          updatedAt
         }
         nextToken
       }
-      keywords {
-        items {
-          id
-          keywordId
-          username
-          keyword {
-            id
-            label
-            createdAt
-            updatedAt
-          }
-          user {
-            username
-            status
-            name
-            email
-            selfIntroduction
-            location
-            slackId
-            urlWebsite
-            urlGithub
-            urlLinkedIn
-            urlFacebook
-            urlTwitter
-            urlInstagram
-            totalCompletedHours
-            totalCompletedTasks
-            createdAt
-            createdBy
-            updatedAt
-            updatedBy
-          }
-          createdAt
-          updatedAt
-        }
-        nextToken
-      }
-      createdAt
-      createdBy
-      updatedAt
-      updatedBy
     }
   }
 `;
@@ -1935,6 +2277,7 @@ export const updateUser = /* GraphQL */ `
       email
       selfIntroduction
       location
+      timeZone
       slackId
       urlWebsite
       urlGithub
@@ -1944,11 +2287,106 @@ export const updateUser = /* GraphQL */ `
       urlInstagram
       totalCompletedHours
       totalCompletedTasks
+      createdAt
+      createdBy
+      updatedAt
+      updatedBy
+      keywords {
+        items {
+          id
+          keywordId
+          username
+          createdAt
+          createdBy
+          updatedAt
+          updatedBy
+          keyword {
+            id
+            label
+            createdAt
+            createdBy
+            updatedAt
+            updatedBy
+          }
+          user {
+            username
+            status
+            name
+            email
+            selfIntroduction
+            location
+            timeZone
+            slackId
+            urlWebsite
+            urlGithub
+            urlLinkedIn
+            urlFacebook
+            urlTwitter
+            urlInstagram
+            totalCompletedHours
+            totalCompletedTasks
+            createdAt
+            createdBy
+            updatedAt
+            updatedBy
+          }
+        }
+        nextToken
+      }
+      needs {
+        items {
+          id
+          needId
+          username
+          need {
+            id
+            label
+            createdAt
+            createdBy
+            updatedAt
+            updatedBy
+          }
+          createdAt
+          createdBy
+          updatedAt
+          updatedBy
+          user {
+            username
+            status
+            name
+            email
+            selfIntroduction
+            location
+            timeZone
+            slackId
+            urlWebsite
+            urlGithub
+            urlLinkedIn
+            urlFacebook
+            urlTwitter
+            urlInstagram
+            totalCompletedHours
+            totalCompletedTasks
+            createdAt
+            createdBy
+            updatedAt
+            updatedBy
+          }
+        }
+        nextToken
+      }
       projects {
         items {
           id
           projectId
           username
+          role
+          completedHours
+          completedTasks
+          createdAt
+          createdBy
+          updatedAt
+          updatedBy
           project {
             id
             status
@@ -1969,6 +2407,7 @@ export const updateUser = /* GraphQL */ `
             email
             selfIntroduction
             location
+            timeZone
             slackId
             urlWebsite
             urlGithub
@@ -1983,55 +2422,9 @@ export const updateUser = /* GraphQL */ `
             updatedAt
             updatedBy
           }
-          role
-          completedHours
-          completedTasks
-          createdAt
-          updatedAt
         }
         nextToken
       }
-      keywords {
-        items {
-          id
-          keywordId
-          username
-          keyword {
-            id
-            label
-            createdAt
-            updatedAt
-          }
-          user {
-            username
-            status
-            name
-            email
-            selfIntroduction
-            location
-            slackId
-            urlWebsite
-            urlGithub
-            urlLinkedIn
-            urlFacebook
-            urlTwitter
-            urlInstagram
-            totalCompletedHours
-            totalCompletedTasks
-            createdAt
-            createdBy
-            updatedAt
-            updatedBy
-          }
-          createdAt
-          updatedAt
-        }
-        nextToken
-      }
-      createdAt
-      createdBy
-      updatedAt
-      updatedBy
     }
   }
 `;
@@ -2047,6 +2440,7 @@ export const deleteUser = /* GraphQL */ `
       email
       selfIntroduction
       location
+      timeZone
       slackId
       urlWebsite
       urlGithub
@@ -2056,11 +2450,106 @@ export const deleteUser = /* GraphQL */ `
       urlInstagram
       totalCompletedHours
       totalCompletedTasks
+      createdAt
+      createdBy
+      updatedAt
+      updatedBy
+      keywords {
+        items {
+          id
+          keywordId
+          username
+          createdAt
+          createdBy
+          updatedAt
+          updatedBy
+          keyword {
+            id
+            label
+            createdAt
+            createdBy
+            updatedAt
+            updatedBy
+          }
+          user {
+            username
+            status
+            name
+            email
+            selfIntroduction
+            location
+            timeZone
+            slackId
+            urlWebsite
+            urlGithub
+            urlLinkedIn
+            urlFacebook
+            urlTwitter
+            urlInstagram
+            totalCompletedHours
+            totalCompletedTasks
+            createdAt
+            createdBy
+            updatedAt
+            updatedBy
+          }
+        }
+        nextToken
+      }
+      needs {
+        items {
+          id
+          needId
+          username
+          need {
+            id
+            label
+            createdAt
+            createdBy
+            updatedAt
+            updatedBy
+          }
+          createdAt
+          createdBy
+          updatedAt
+          updatedBy
+          user {
+            username
+            status
+            name
+            email
+            selfIntroduction
+            location
+            timeZone
+            slackId
+            urlWebsite
+            urlGithub
+            urlLinkedIn
+            urlFacebook
+            urlTwitter
+            urlInstagram
+            totalCompletedHours
+            totalCompletedTasks
+            createdAt
+            createdBy
+            updatedAt
+            updatedBy
+          }
+        }
+        nextToken
+      }
       projects {
         items {
           id
           projectId
           username
+          role
+          completedHours
+          completedTasks
+          createdAt
+          createdBy
+          updatedAt
+          updatedBy
           project {
             id
             status
@@ -2081,6 +2570,7 @@ export const deleteUser = /* GraphQL */ `
             email
             selfIntroduction
             location
+            timeZone
             slackId
             urlWebsite
             urlGithub
@@ -2095,55 +2585,9 @@ export const deleteUser = /* GraphQL */ `
             updatedAt
             updatedBy
           }
-          role
-          completedHours
-          completedTasks
-          createdAt
-          updatedAt
         }
         nextToken
       }
-      keywords {
-        items {
-          id
-          keywordId
-          username
-          keyword {
-            id
-            label
-            createdAt
-            updatedAt
-          }
-          user {
-            username
-            status
-            name
-            email
-            selfIntroduction
-            location
-            slackId
-            urlWebsite
-            urlGithub
-            urlLinkedIn
-            urlFacebook
-            urlTwitter
-            urlInstagram
-            totalCompletedHours
-            totalCompletedTasks
-            createdAt
-            createdBy
-            updatedAt
-            updatedBy
-          }
-          createdAt
-          updatedAt
-        }
-        nextToken
-      }
-      createdAt
-      createdBy
-      updatedAt
-      updatedBy
     }
   }
 `;
@@ -2156,21 +2600,29 @@ export const createUserKeyword = /* GraphQL */ `
       id
       keywordId
       username
+      createdAt
+      createdBy
+      updatedAt
+      updatedBy
       keyword {
         id
         label
+        createdAt
+        createdBy
+        updatedAt
+        updatedBy
         users {
           items {
             id
             keywordId
             username
             createdAt
+            createdBy
             updatedAt
+            updatedBy
           }
           nextToken
         }
-        createdAt
-        updatedAt
       }
       user {
         username
@@ -2179,6 +2631,7 @@ export const createUserKeyword = /* GraphQL */ `
         email
         selfIntroduction
         location
+        timeZone
         slackId
         urlWebsite
         urlGithub
@@ -2188,6 +2641,34 @@ export const createUserKeyword = /* GraphQL */ `
         urlInstagram
         totalCompletedHours
         totalCompletedTasks
+        createdAt
+        createdBy
+        updatedAt
+        updatedBy
+        keywords {
+          items {
+            id
+            keywordId
+            username
+            createdAt
+            createdBy
+            updatedAt
+            updatedBy
+          }
+          nextToken
+        }
+        needs {
+          items {
+            id
+            needId
+            username
+            createdAt
+            createdBy
+            updatedAt
+            updatedBy
+          }
+          nextToken
+        }
         projects {
           items {
             id
@@ -2197,27 +2678,13 @@ export const createUserKeyword = /* GraphQL */ `
             completedHours
             completedTasks
             createdAt
+            createdBy
             updatedAt
+            updatedBy
           }
           nextToken
         }
-        keywords {
-          items {
-            id
-            keywordId
-            username
-            createdAt
-            updatedAt
-          }
-          nextToken
-        }
-        createdAt
-        createdBy
-        updatedAt
-        updatedBy
       }
-      createdAt
-      updatedAt
     }
   }
 `;
@@ -2230,21 +2697,29 @@ export const updateUserKeyword = /* GraphQL */ `
       id
       keywordId
       username
+      createdAt
+      createdBy
+      updatedAt
+      updatedBy
       keyword {
         id
         label
+        createdAt
+        createdBy
+        updatedAt
+        updatedBy
         users {
           items {
             id
             keywordId
             username
             createdAt
+            createdBy
             updatedAt
+            updatedBy
           }
           nextToken
         }
-        createdAt
-        updatedAt
       }
       user {
         username
@@ -2253,6 +2728,7 @@ export const updateUserKeyword = /* GraphQL */ `
         email
         selfIntroduction
         location
+        timeZone
         slackId
         urlWebsite
         urlGithub
@@ -2262,6 +2738,34 @@ export const updateUserKeyword = /* GraphQL */ `
         urlInstagram
         totalCompletedHours
         totalCompletedTasks
+        createdAt
+        createdBy
+        updatedAt
+        updatedBy
+        keywords {
+          items {
+            id
+            keywordId
+            username
+            createdAt
+            createdBy
+            updatedAt
+            updatedBy
+          }
+          nextToken
+        }
+        needs {
+          items {
+            id
+            needId
+            username
+            createdAt
+            createdBy
+            updatedAt
+            updatedBy
+          }
+          nextToken
+        }
         projects {
           items {
             id
@@ -2271,27 +2775,13 @@ export const updateUserKeyword = /* GraphQL */ `
             completedHours
             completedTasks
             createdAt
+            createdBy
             updatedAt
+            updatedBy
           }
           nextToken
         }
-        keywords {
-          items {
-            id
-            keywordId
-            username
-            createdAt
-            updatedAt
-          }
-          nextToken
-        }
-        createdAt
-        createdBy
-        updatedAt
-        updatedBy
       }
-      createdAt
-      updatedAt
     }
   }
 `;
@@ -2304,21 +2794,29 @@ export const deleteUserKeyword = /* GraphQL */ `
       id
       keywordId
       username
+      createdAt
+      createdBy
+      updatedAt
+      updatedBy
       keyword {
         id
         label
+        createdAt
+        createdBy
+        updatedAt
+        updatedBy
         users {
           items {
             id
             keywordId
             username
             createdAt
+            createdBy
             updatedAt
+            updatedBy
           }
           nextToken
         }
-        createdAt
-        updatedAt
       }
       user {
         username
@@ -2327,6 +2825,7 @@ export const deleteUserKeyword = /* GraphQL */ `
         email
         selfIntroduction
         location
+        timeZone
         slackId
         urlWebsite
         urlGithub
@@ -2336,6 +2835,34 @@ export const deleteUserKeyword = /* GraphQL */ `
         urlInstagram
         totalCompletedHours
         totalCompletedTasks
+        createdAt
+        createdBy
+        updatedAt
+        updatedBy
+        keywords {
+          items {
+            id
+            keywordId
+            username
+            createdAt
+            createdBy
+            updatedAt
+            updatedBy
+          }
+          nextToken
+        }
+        needs {
+          items {
+            id
+            needId
+            username
+            createdAt
+            createdBy
+            updatedAt
+            updatedBy
+          }
+          nextToken
+        }
         projects {
           items {
             id
@@ -2345,27 +2872,304 @@ export const deleteUserKeyword = /* GraphQL */ `
             completedHours
             completedTasks
             createdAt
+            createdBy
             updatedAt
+            updatedBy
           }
           nextToken
         }
+      }
+    }
+  }
+`;
+export const createUserNeed = /* GraphQL */ `
+  mutation CreateUserNeed(
+    $input: CreateUserNeedInput!
+    $condition: ModelUserNeedConditionInput
+  ) {
+    createUserNeed(input: $input, condition: $condition) {
+      id
+      needId
+      username
+      need {
+        id
+        label
+        createdAt
+        createdBy
+        updatedAt
+        updatedBy
+        projects {
+          items {
+            id
+            projectId
+            needId
+            createdAt
+            createdBy
+            updatedAt
+            updatedBy
+          }
+          nextToken
+        }
+      }
+      createdAt
+      createdBy
+      updatedAt
+      updatedBy
+      user {
+        username
+        status
+        name
+        email
+        selfIntroduction
+        location
+        timeZone
+        slackId
+        urlWebsite
+        urlGithub
+        urlLinkedIn
+        urlFacebook
+        urlTwitter
+        urlInstagram
+        totalCompletedHours
+        totalCompletedTasks
+        createdAt
+        createdBy
+        updatedAt
+        updatedBy
         keywords {
           items {
             id
             keywordId
             username
             createdAt
+            createdBy
             updatedAt
+            updatedBy
           }
           nextToken
         }
+        needs {
+          items {
+            id
+            needId
+            username
+            createdAt
+            createdBy
+            updatedAt
+            updatedBy
+          }
+          nextToken
+        }
+        projects {
+          items {
+            id
+            projectId
+            username
+            role
+            completedHours
+            completedTasks
+            createdAt
+            createdBy
+            updatedAt
+            updatedBy
+          }
+          nextToken
+        }
+      }
+    }
+  }
+`;
+export const updateUserNeed = /* GraphQL */ `
+  mutation UpdateUserNeed(
+    $input: UpdateUserNeedInput!
+    $condition: ModelUserNeedConditionInput
+  ) {
+    updateUserNeed(input: $input, condition: $condition) {
+      id
+      needId
+      username
+      need {
+        id
+        label
         createdAt
         createdBy
         updatedAt
         updatedBy
+        projects {
+          items {
+            id
+            projectId
+            needId
+            createdAt
+            createdBy
+            updatedAt
+            updatedBy
+          }
+          nextToken
+        }
       }
       createdAt
+      createdBy
       updatedAt
+      updatedBy
+      user {
+        username
+        status
+        name
+        email
+        selfIntroduction
+        location
+        timeZone
+        slackId
+        urlWebsite
+        urlGithub
+        urlLinkedIn
+        urlFacebook
+        urlTwitter
+        urlInstagram
+        totalCompletedHours
+        totalCompletedTasks
+        createdAt
+        createdBy
+        updatedAt
+        updatedBy
+        keywords {
+          items {
+            id
+            keywordId
+            username
+            createdAt
+            createdBy
+            updatedAt
+            updatedBy
+          }
+          nextToken
+        }
+        needs {
+          items {
+            id
+            needId
+            username
+            createdAt
+            createdBy
+            updatedAt
+            updatedBy
+          }
+          nextToken
+        }
+        projects {
+          items {
+            id
+            projectId
+            username
+            role
+            completedHours
+            completedTasks
+            createdAt
+            createdBy
+            updatedAt
+            updatedBy
+          }
+          nextToken
+        }
+      }
+    }
+  }
+`;
+export const deleteUserNeed = /* GraphQL */ `
+  mutation DeleteUserNeed(
+    $input: DeleteUserNeedInput!
+    $condition: ModelUserNeedConditionInput
+  ) {
+    deleteUserNeed(input: $input, condition: $condition) {
+      id
+      needId
+      username
+      need {
+        id
+        label
+        createdAt
+        createdBy
+        updatedAt
+        updatedBy
+        projects {
+          items {
+            id
+            projectId
+            needId
+            createdAt
+            createdBy
+            updatedAt
+            updatedBy
+          }
+          nextToken
+        }
+      }
+      createdAt
+      createdBy
+      updatedAt
+      updatedBy
+      user {
+        username
+        status
+        name
+        email
+        selfIntroduction
+        location
+        timeZone
+        slackId
+        urlWebsite
+        urlGithub
+        urlLinkedIn
+        urlFacebook
+        urlTwitter
+        urlInstagram
+        totalCompletedHours
+        totalCompletedTasks
+        createdAt
+        createdBy
+        updatedAt
+        updatedBy
+        keywords {
+          items {
+            id
+            keywordId
+            username
+            createdAt
+            createdBy
+            updatedAt
+            updatedBy
+          }
+          nextToken
+        }
+        needs {
+          items {
+            id
+            needId
+            username
+            createdAt
+            createdBy
+            updatedAt
+            updatedBy
+          }
+          nextToken
+        }
+        projects {
+          items {
+            id
+            projectId
+            username
+            role
+            completedHours
+            completedTasks
+            createdAt
+            createdBy
+            updatedAt
+            updatedBy
+          }
+          nextToken
+        }
+      }
     }
   }
 `;
@@ -2378,6 +3182,13 @@ export const createUserProject = /* GraphQL */ `
       id
       projectId
       username
+      role
+      completedHours
+      completedTasks
+      createdAt
+      createdBy
+      updatedAt
+      updatedBy
       project {
         id
         status
@@ -2390,36 +3201,19 @@ export const createUserProject = /* GraphQL */ `
           name
           url
         }
-        contributors {
-          items {
-            id
-            projectId
-            username
-            role
-            completedHours
-            completedTasks
-            createdAt
-            updatedAt
-          }
-          nextToken
-        }
-        tags {
-          items {
-            id
-            projectId
-            tagId
-            createdAt
-            updatedAt
-          }
-          nextToken
-        }
+        createdAt
+        createdBy
+        updatedAt
+        updatedBy
         keywords {
           items {
             id
             projectId
             keywordId
             createdAt
+            createdBy
             updatedAt
+            updatedBy
           }
           nextToken
         }
@@ -2429,14 +3223,39 @@ export const createUserProject = /* GraphQL */ `
             projectId
             needId
             createdAt
+            createdBy
             updatedAt
+            updatedBy
           }
           nextToken
         }
-        createdAt
-        createdBy
-        updatedAt
-        updatedBy
+        tags {
+          items {
+            id
+            projectId
+            tagId
+            createdAt
+            createdBy
+            updatedAt
+            updatedBy
+          }
+          nextToken
+        }
+        contributors {
+          items {
+            id
+            projectId
+            username
+            role
+            completedHours
+            completedTasks
+            createdAt
+            createdBy
+            updatedAt
+            updatedBy
+          }
+          nextToken
+        }
       }
       user {
         username
@@ -2445,6 +3264,7 @@ export const createUserProject = /* GraphQL */ `
         email
         selfIntroduction
         location
+        timeZone
         slackId
         urlWebsite
         urlGithub
@@ -2454,6 +3274,34 @@ export const createUserProject = /* GraphQL */ `
         urlInstagram
         totalCompletedHours
         totalCompletedTasks
+        createdAt
+        createdBy
+        updatedAt
+        updatedBy
+        keywords {
+          items {
+            id
+            keywordId
+            username
+            createdAt
+            createdBy
+            updatedAt
+            updatedBy
+          }
+          nextToken
+        }
+        needs {
+          items {
+            id
+            needId
+            username
+            createdAt
+            createdBy
+            updatedAt
+            updatedBy
+          }
+          nextToken
+        }
         projects {
           items {
             id
@@ -2463,30 +3311,13 @@ export const createUserProject = /* GraphQL */ `
             completedHours
             completedTasks
             createdAt
+            createdBy
             updatedAt
+            updatedBy
           }
           nextToken
         }
-        keywords {
-          items {
-            id
-            keywordId
-            username
-            createdAt
-            updatedAt
-          }
-          nextToken
-        }
-        createdAt
-        createdBy
-        updatedAt
-        updatedBy
       }
-      role
-      completedHours
-      completedTasks
-      createdAt
-      updatedAt
     }
   }
 `;
@@ -2499,6 +3330,13 @@ export const updateUserProject = /* GraphQL */ `
       id
       projectId
       username
+      role
+      completedHours
+      completedTasks
+      createdAt
+      createdBy
+      updatedAt
+      updatedBy
       project {
         id
         status
@@ -2511,36 +3349,19 @@ export const updateUserProject = /* GraphQL */ `
           name
           url
         }
-        contributors {
-          items {
-            id
-            projectId
-            username
-            role
-            completedHours
-            completedTasks
-            createdAt
-            updatedAt
-          }
-          nextToken
-        }
-        tags {
-          items {
-            id
-            projectId
-            tagId
-            createdAt
-            updatedAt
-          }
-          nextToken
-        }
+        createdAt
+        createdBy
+        updatedAt
+        updatedBy
         keywords {
           items {
             id
             projectId
             keywordId
             createdAt
+            createdBy
             updatedAt
+            updatedBy
           }
           nextToken
         }
@@ -2550,14 +3371,39 @@ export const updateUserProject = /* GraphQL */ `
             projectId
             needId
             createdAt
+            createdBy
             updatedAt
+            updatedBy
           }
           nextToken
         }
-        createdAt
-        createdBy
-        updatedAt
-        updatedBy
+        tags {
+          items {
+            id
+            projectId
+            tagId
+            createdAt
+            createdBy
+            updatedAt
+            updatedBy
+          }
+          nextToken
+        }
+        contributors {
+          items {
+            id
+            projectId
+            username
+            role
+            completedHours
+            completedTasks
+            createdAt
+            createdBy
+            updatedAt
+            updatedBy
+          }
+          nextToken
+        }
       }
       user {
         username
@@ -2566,6 +3412,7 @@ export const updateUserProject = /* GraphQL */ `
         email
         selfIntroduction
         location
+        timeZone
         slackId
         urlWebsite
         urlGithub
@@ -2575,6 +3422,34 @@ export const updateUserProject = /* GraphQL */ `
         urlInstagram
         totalCompletedHours
         totalCompletedTasks
+        createdAt
+        createdBy
+        updatedAt
+        updatedBy
+        keywords {
+          items {
+            id
+            keywordId
+            username
+            createdAt
+            createdBy
+            updatedAt
+            updatedBy
+          }
+          nextToken
+        }
+        needs {
+          items {
+            id
+            needId
+            username
+            createdAt
+            createdBy
+            updatedAt
+            updatedBy
+          }
+          nextToken
+        }
         projects {
           items {
             id
@@ -2584,30 +3459,13 @@ export const updateUserProject = /* GraphQL */ `
             completedHours
             completedTasks
             createdAt
+            createdBy
             updatedAt
+            updatedBy
           }
           nextToken
         }
-        keywords {
-          items {
-            id
-            keywordId
-            username
-            createdAt
-            updatedAt
-          }
-          nextToken
-        }
-        createdAt
-        createdBy
-        updatedAt
-        updatedBy
       }
-      role
-      completedHours
-      completedTasks
-      createdAt
-      updatedAt
     }
   }
 `;
@@ -2620,6 +3478,13 @@ export const deleteUserProject = /* GraphQL */ `
       id
       projectId
       username
+      role
+      completedHours
+      completedTasks
+      createdAt
+      createdBy
+      updatedAt
+      updatedBy
       project {
         id
         status
@@ -2632,36 +3497,19 @@ export const deleteUserProject = /* GraphQL */ `
           name
           url
         }
-        contributors {
-          items {
-            id
-            projectId
-            username
-            role
-            completedHours
-            completedTasks
-            createdAt
-            updatedAt
-          }
-          nextToken
-        }
-        tags {
-          items {
-            id
-            projectId
-            tagId
-            createdAt
-            updatedAt
-          }
-          nextToken
-        }
+        createdAt
+        createdBy
+        updatedAt
+        updatedBy
         keywords {
           items {
             id
             projectId
             keywordId
             createdAt
+            createdBy
             updatedAt
+            updatedBy
           }
           nextToken
         }
@@ -2671,14 +3519,39 @@ export const deleteUserProject = /* GraphQL */ `
             projectId
             needId
             createdAt
+            createdBy
             updatedAt
+            updatedBy
           }
           nextToken
         }
-        createdAt
-        createdBy
-        updatedAt
-        updatedBy
+        tags {
+          items {
+            id
+            projectId
+            tagId
+            createdAt
+            createdBy
+            updatedAt
+            updatedBy
+          }
+          nextToken
+        }
+        contributors {
+          items {
+            id
+            projectId
+            username
+            role
+            completedHours
+            completedTasks
+            createdAt
+            createdBy
+            updatedAt
+            updatedBy
+          }
+          nextToken
+        }
       }
       user {
         username
@@ -2687,6 +3560,7 @@ export const deleteUserProject = /* GraphQL */ `
         email
         selfIntroduction
         location
+        timeZone
         slackId
         urlWebsite
         urlGithub
@@ -2696,6 +3570,34 @@ export const deleteUserProject = /* GraphQL */ `
         urlInstagram
         totalCompletedHours
         totalCompletedTasks
+        createdAt
+        createdBy
+        updatedAt
+        updatedBy
+        keywords {
+          items {
+            id
+            keywordId
+            username
+            createdAt
+            createdBy
+            updatedAt
+            updatedBy
+          }
+          nextToken
+        }
+        needs {
+          items {
+            id
+            needId
+            username
+            createdAt
+            createdBy
+            updatedAt
+            updatedBy
+          }
+          nextToken
+        }
         projects {
           items {
             id
@@ -2705,30 +3607,13 @@ export const deleteUserProject = /* GraphQL */ `
             completedHours
             completedTasks
             createdAt
+            createdBy
             updatedAt
+            updatedBy
           }
           nextToken
         }
-        keywords {
-          items {
-            id
-            keywordId
-            username
-            createdAt
-            updatedAt
-          }
-          nextToken
-        }
-        createdAt
-        createdBy
-        updatedAt
-        updatedBy
       }
-      role
-      completedHours
-      completedTasks
-      createdAt
-      updatedAt
     }
   }
 `;

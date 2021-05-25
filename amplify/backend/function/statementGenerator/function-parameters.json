@@ -1,0 +1,24 @@
+{
+  "permissions": {
+    "storage": {
+      "Contribution:@model(appsync)": [
+        "read"
+      ],
+      "Project:@model(appsync)": [
+        "read"
+      ],
+      "Statement:@model(appsync)": [
+        "create",
+        "read",
+        "update"
+      ],
+      "User:@model(appsync)": [
+        "read"
+      ],
+      "UserProject:@model(appsync)": [
+        "read"
+      ]
+    }
+  },
+  "lambdaLayers": []
+}

@@ -6,6 +6,7 @@ type Contribution
     fields: ["projectId","createdAt"], queryField: "getContributionsByProjectIdByCreatedAt")
   @auth(rules: [
     # Use custom graphql api to create contribution and calculate the hours
+    { allow: public, operations: [read] },
     { allow: groups, groups: ["Users"], operations: [read] },
     { allow: groups, groups: ["Admins"] },
   ])
@@ -17,7 +18,7 @@ type Contribution
   summary: String!
   description: String
 
-  hours: Int!
+  hours: Float!
 
   createdAt: AWSDateTime!
   createdBy: String!

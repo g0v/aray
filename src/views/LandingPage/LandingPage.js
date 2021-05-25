@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useEffect } from 'react';
 import { makeStyles } from '@material-ui/core/styles';
 import Container from '@material-ui/core/Container';
 import Grid from '@material-ui/core/Grid';
@@ -6,6 +6,8 @@ import Box from '@material-ui/core/Box';
 // import Button from '@material-ui/core/Button';
 // import AndroidIcon from '@material-ui/icons/Android';
 // import AppleIcon from '@material-ui/icons/Apple';
+import { request } from 'utils/graph';
+import { getUser } from 'graphql/queries';
 
 const useStyles = makeStyles((theme) => ({
   content: {
@@ -17,6 +19,14 @@ const useStyles = makeStyles((theme) => ({
 
 export default function LandingPage() {
   const classes = useStyles();
+
+  useEffect(() => {
+    (async () => {
+      console.log('LandingPage...');
+      const res = await request(getUser, { username: 'demo' });
+      console.log(res);
+    })();
+  }, []);
 
   return (
     <Container>

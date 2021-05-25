@@ -11,5 +11,7 @@ type Need
   projects: [ProjectNeed] @connection(keyName: "byNeed", fields: ["id"])
 
   createdAt: AWSDateTime!
+  createdBy: String!
   updatedAt: AWSDateTime!
+  updatedBy: String!
 }

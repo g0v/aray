@@ -1,7 +1,7 @@
-type UserProject
+type Statement
   @model
-  @key(name: "byUser", fields: ["username", "projectId"])
-  @key(name: "byProject", fields: ["projectId", "username"])
+  @key(name: "byUsernameByDate",
+    fields: ["username","date"], queryField: "getStatementsByUsernameByDate")
   @auth(rules: [
     { allow: public, operations: [read] },
     { allow: groups, groups: ["Users"], operations: [read] },
@@ -9,13 +9,11 @@ type UserProject
   ])
 {
   id: ID!
-  projectId: ID!
   username: String!
-
-  project: Project! @connection(fields: ["projectId"])
-  user: User! @connection(fields: ["username"])
-
-  role: UserProjectRole!
+  type: StatementType!
+  date: AWSDate! # YYYY-MM-DD Time zone applied
+  totalCompletedHours: Float!
+  totalCompletedTasks: Int!
   completedHours: Float!
   completedTasks: Int!
 
@@ -25,7 +23,10 @@ type UserProject
   updatedBy: String!
 }
 
-enum UserProjectRole {
-  manager
-  contributor
+enum StatementType {
+  daily
+  weekly
+  monthly
+  quarterly
+  yearly
 }

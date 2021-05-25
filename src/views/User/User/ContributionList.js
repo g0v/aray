@@ -16,8 +16,6 @@ const useStyles = makeStyles((theme) => ({
 export default function ContributionList({ data, max = 10 }) {
   const classes = useStyles();
 
-  console.log('ContributionList data', data);
-
   return (
     <List className={classes.root}>
       {data.filter((x, index) => index < max).map((item, index)=>(

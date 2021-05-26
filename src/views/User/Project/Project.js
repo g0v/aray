@@ -8,6 +8,9 @@ import Card from '@material-ui/core/Card';
 import CircularProgress from '@material-ui/core/CircularProgress';
 import { makeStyles } from '@material-ui/core/styles';
 import { useTranslation } from 'react-i18next';
+import Tabs from '@material-ui/core/Tabs';
+import Tab from '@material-ui/core/Tab';
+
 
 import { request } from 'utils/graph';
 import { getProject } from 'graphql/queries';
@@ -17,6 +20,9 @@ import UserList from 'views/User/UserList';
 import TagChip from 'components/TagChip';
 import KeywordChip from 'components/KeywordChip';
 import NeedChip from 'components/NeedChip';
+import DataJoinEditor from 'components/DataJoinEditor';
+import Note from 'components/Note';
+import VisitButton from 'components/VisitButton';
 
 const useStyles = makeStyles((theme) => ({
   container: {
@@ -26,6 +32,7 @@ const useStyles = makeStyles((theme) => ({
   card: {
     padding: theme.spacing(4),
     paddingRight: theme.spacing(2),
+    minHeight: 600,
   },
   listItem: {
     display: 'flex',
@@ -51,6 +58,8 @@ export default function Project({ id: inId, computedMatch, match }) {
   const [needs, setNeeds] = useState([]);
   const [tags, setTags] = useState([]);
   const [canEdit, setCanEdit] = useState(false);
+  const [lastUpdatedAt, setLastUpdatedAt] = useState(Date.now());
+  const [tabIndex, setTabIndex] = useState(0);
 
   useEffect(() => {
     if (inId) {
@@ -76,7 +85,7 @@ export default function Project({ id: inId, computedMatch, match }) {
       const canEdit = [data.owner, ...data.managers].includes(username);
       setCanEdit(canEdit);
     })();
-  }, [id]);
+  }, [id, lastUpdatedAt]);
 
   if (!project) {
     return (
@@ -88,7 +97,6 @@ export default function Project({ id: inId, computedMatch, match }) {
 
   return (
     <Container className={classes.container}>
-      {canEdit && <ProjectEditButton mode={'edit'} item={project} />}
       <Card className={classes.card}>
         <Grid container spacing={4}>
           <Grid item xs={3} container spacing={2} style={{ height: 100 }}>
@@ -99,13 +107,42 @@ export default function Project({ id: inId, computedMatch, match }) {
               <Typography variant="body1" gutterBottom>
                 {project.summary || ''}
               </Typography>
-              <Typography variant="body1">
-                {project.description || ''}
-              </Typography>
+              <Note data={project.description} />
             </Grid>
             <Grid item xs={12}>
               <Typography variant="body1" gutterBottom>
+                {t('project_links')}
+              </Typography>
+              {project.links.map((link, index)=>(
+                <div key={index} style={{ margin: 1, display: 'inline-block' }}>
+                  <VisitButton
+                    title={link.name}
+                    url={link.url}
+                    variant={'outlined'}
+                    color={'secondary'}
+                  />
+                </div>
+              ))}
+            </Grid>
+            {canEdit &&
+            <Grid item xs={12}>
+              <ProjectEditButton
+                mode={'edit'}
+                item={project}
+                onUpdate={() => setLastUpdatedAt(Date.now())}
+              />
+            </Grid>}
+            <Grid item xs={12}>
+              <Typography variant="body1" gutterBottom>
                 {t('project_tags')}
+                {canEdit &&
+                <DataJoinEditor
+                  title={t('project_tags')}
+                  mode={'project-tag'}
+                  projectId={project.id}
+                  joinData={project.tags.items}
+                  onUpdate={() => setLastUpdatedAt(Date.now())}
+                />}
               </Typography>
               {tags.map((item, index)=>(
                 <TagChip key={index} data={item} size="medium" />
@@ -114,6 +151,14 @@ export default function Project({ id: inId, computedMatch, match }) {
             <Grid item xs={12}>
               <Typography variant="body1" gutterBottom>
                 {t('project_keywords')}
+                {canEdit &&
+                <DataJoinEditor
+                  title={t('project_keywords')}
+                  mode={'project-keyword'}
+                  projectId={project.id}
+                  joinData={project.keywords.items}
+                  onUpdate={() => setLastUpdatedAt(Date.now())}
+                />}
               </Typography>
               {keywords.map((item, index)=>(
                 <KeywordChip key={index} data={item} size="medium" />
@@ -122,6 +167,14 @@ export default function Project({ id: inId, computedMatch, match }) {
             <Grid item xs={12}>
               <Typography variant="body1" gutterBottom>
                 {t('project_needs')}
+                {canEdit &&
+                <DataJoinEditor
+                  title={t('project_needs')}
+                  mode={'project-need'}
+                  projectId={project.id}
+                  joinData={project.needs.items}
+                  onUpdate={() => setLastUpdatedAt(Date.now())}
+                />}
               </Typography>
               {needs.map((item, index)=>(
                 <NeedChip key={index} data={item} size="medium" />
@@ -129,8 +182,24 @@ export default function Project({ id: inId, computedMatch, match }) {
             </Grid>
           </Grid>
           <Grid item xs={9} container spacing={2}>
+            <Tabs
+              value={tabIndex}
+              indicatorColor="primary"
+              textColor="primary"
+              onChange={(e, newValue)=>setTabIndex(newValue)}
+              style={{ width: '100%' }}
+              aria-label="disabled tabs example"
+            >
+              <Tab label={t('project_contributors')} />
+              <Tab label={t('project_tasks')} disabled />
+              <Tab label={t('project_pastProposals')} disabled />
+            </Tabs>
+
             <Grid item xs={12}>
-              <UserList data={project.contributors.items.map(({ user }) => user)} />
+              <UserList
+                data={project.contributors.items.map(({ user }) => user)}
+                hideTitle={true}
+              />
             </Grid>
             <div style={{ flex: 1 }} />
           </Grid>

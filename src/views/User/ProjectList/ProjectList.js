@@ -22,7 +22,7 @@ export default function UserProjectList() {
   }, []);
 
   return (
-    <Container>
+    <Container maxWidth={false}>
       <Typography variant="h5" gutterBottom align="center" style={{ marginTop: 16 }}>
         {t('projectList_projects')}
       </Typography>

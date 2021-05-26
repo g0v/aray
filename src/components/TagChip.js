@@ -5,7 +5,7 @@ import Chip from '@material-ui/core/Chip';
 
 export default function TagChip({
   data,
-  variant = 'contained',
+  variant = 'outlined',
   size = 'small',
 }) {
   const [value, setValue] = useState();
@@ -27,8 +27,8 @@ export default function TagChip({
       label={value}
       variant={variant}
       size={size}
-      color={'primary'}
-      style={{ marginRight: 2 }}
+      color={'default'}
+      style={{ margin: 1 }}
     />
   );
 }

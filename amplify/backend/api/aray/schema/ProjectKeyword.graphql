@@ -4,7 +4,7 @@ type ProjectKeyword
   @key(name: "byProject", fields: ["projectId", "keywordId"])
   @auth(rules: [
     { allow: public, operations: [read] },
-    { allow: groups, groups: ["Users"], operations: [read, create] },
+    { allow: groups, groups: ["Users"], operations: [read, create, update, delete] },
     { allow: groups, groups: ["Admins"] },
   ])
 {

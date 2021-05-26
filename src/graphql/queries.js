@@ -283,6 +283,7 @@ export const getProject = /* GraphQL */ `
       description
       links {
         name
+        description
         url
       }
       createdAt
@@ -458,6 +459,7 @@ export const listProjects = /* GraphQL */ `
         description
         links {
           name
+          description
           url
         }
         createdAt
@@ -560,6 +562,7 @@ export const getProjectKeyword = /* GraphQL */ `
         description
         links {
           name
+          description
           url
         }
         createdAt
@@ -657,6 +660,7 @@ export const listProjectKeywords = /* GraphQL */ `
           description
           links {
             name
+            description
             url
           }
           createdAt
@@ -721,6 +725,7 @@ export const getProjectNeed = /* GraphQL */ `
         description
         links {
           name
+          description
           url
         }
         createdAt
@@ -818,6 +823,7 @@ export const listProjectNeeds = /* GraphQL */ `
           description
           links {
             name
+            description
             url
           }
           createdAt
@@ -862,6 +868,7 @@ export const getProjectTag = /* GraphQL */ `
         description
         links {
           name
+          description
           url
         }
         createdAt
@@ -968,6 +975,7 @@ export const listProjectTags = /* GraphQL */ `
           description
           links {
             name
+            description
             url
           }
           createdAt
@@ -1804,6 +1812,7 @@ export const getUserProject = /* GraphQL */ `
         description
         links {
           name
+          description
           url
         }
         createdAt
@@ -1954,6 +1963,7 @@ export const listUserProjects = /* GraphQL */ `
           description
           links {
             name
+            description
             url
           }
           createdAt

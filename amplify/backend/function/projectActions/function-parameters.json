@@ -6,7 +6,27 @@
         "read",
         "update"
       ],
+      "Keyword:@model(appsync)": [
+        "create",
+        "read",
+        "update"
+      ],
+      "Need:@model(appsync)": [
+        "create",
+        "read",
+        "update"
+      ],
       "Project:@model(appsync)": [
+        "create",
+        "read",
+        "update"
+      ],
+      "ProjectKeyword:@model(appsync)": [
+        "create",
+        "read",
+        "update"
+      ],
+      "ProjectNeed:@model(appsync)": [
         "create",
         "read",
         "update"

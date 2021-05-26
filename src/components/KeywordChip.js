@@ -28,7 +28,7 @@ export default function KeywordChip({
       variant={variant}
       size={size}
       color={'secondary'}
-      style={{ marginRight: 2 }}
+      style={{ margin: 1 }}
     />
   );
 }

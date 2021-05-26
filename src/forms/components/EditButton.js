@@ -19,6 +19,8 @@ export default function EditButton({
   item,
   onUpdate,
   fullScreen = false,
+  showIcon = true,
+  fullWidth = false,
   ...props // form
 }) {
   const [open, setOpen] = useState(false);
@@ -58,6 +60,7 @@ export default function EditButton({
             aria-label={mode}
             size={size}
             variant={variant}
+            fullWidth={fullWidth}
             onClick={() => {
               if (!open) {
                 setOpen(true);
@@ -65,8 +68,8 @@ export default function EditButton({
               }
             }}
           >
-            {mode ==='edit' ? <EditIcon /> : <AddIcon />}
-            新增{title}
+            {showIcon ? (mode ==='edit' ? <EditIcon /> : <AddIcon />) : ''}
+            {mode ==='edit' ? '更新' : '新增'}{title}
           </Button>}
         {open &&
           <FormDialog
@@ -100,4 +103,6 @@ EditButton.propTypes = {
   item: PropTypes.object,
   onUpdate: PropTypes.func,
   fullScreen: PropTypes.bool,
+  showIcon: PropTypes.bool,
+  fullWidth: PropTypes.bool,
 };

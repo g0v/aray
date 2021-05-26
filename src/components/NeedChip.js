@@ -28,7 +28,7 @@ export default function NeedChip({
       variant={variant}
       size={size}
       color={'primary'}
-      style={{ marginRight: 2 }}
+      style={{ margin: 1 }}
     />
   );
 }

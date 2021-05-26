@@ -13,6 +13,8 @@ import Typography from '@material-ui/core/Typography';
 
 import { request } from 'utils/graph';
 import { getProject } from 'graphql/queries';
+import KeywordChip from 'components/KeywordChip';
+import NeedChip from 'components/NeedChip';
 
 const useStyles = makeStyles({
   root: {
@@ -50,6 +52,9 @@ export default function ProjectCard({ project: inProject, projectId: inProjectId
       <Link
         to={`/project/${project.id}`}
         component={RouteLink}
+        style={{
+          textDecoration: 'none',
+        }}
       >
         <CardActionArea>
           <CardMedia
@@ -64,6 +69,12 @@ export default function ProjectCard({ project: inProject, projectId: inProjectId
             <Typography variant="body2" color="textSecondary" component="p">
               {project.summary || '無'}
             </Typography>
+            {project.keywords && project.keywords.items.map((item, index)=>(
+              <KeywordChip key={index} data={item.keyword} size="small" />
+            ))}
+            {project.needs && project.needs.items.map((item, index)=>(
+              <NeedChip key={index} data={item.need} size="small" />
+            ))}
           </CardContent>
         </CardActionArea>
       </Link>

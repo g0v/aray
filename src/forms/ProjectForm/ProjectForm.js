@@ -3,7 +3,7 @@ import PropTypes from 'prop-types';
 
 import DataForm from 'forms/DataForm';
 import { request } from 'utils/graph';
-import { createOrUpdateProject } from 'graphql/mutations';
+import { createOrUpdateProject, updateProject } from 'graphql/mutations';
 
 import schema from './schema';
 import uiSchema from './uiSchema';
@@ -20,8 +20,27 @@ export default function ProjectForm({ ...props }) {
   };
 
   const updateFunc = async (data) => {
-    console.log(data);
-    await request(createOrUpdateProject, { input: data });
+    console.log('ProjectForm:updateFunc', data);
+    const username = localStorage.getItem('app:username');
+    const {
+      id,
+      status,
+      name,
+      summary,
+      description,
+      links,
+    } = data;
+    const input = {
+      id,
+      status,
+      name,
+      summary,
+      description,
+      links,
+      updatedBy: username,
+    };
+
+    await request(updateProject, { input });
   };
 
   return (

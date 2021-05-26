@@ -9,7 +9,7 @@ import { asyncListAll } from 'utils/graph';
 // import { listUsers } from 'graphql/queries';
 import UserCard from 'components/UserCard';
 
-export default function UserList({ data: inData }) {
+export default function UserList({ data: inData, hideTitle = false }) {
   const { t } = useTranslation();
   const [users, setUsers] = useState([]);
 
@@ -62,10 +62,11 @@ export default function UserList({ data: inData }) {
   }, [inData]);
 
   return (
-    <Container>
+    <Container maxWidth={false}>
+      {!hideTitle &&
       <Typography variant="h5" gutterBottom align="center" style={{ marginTop: 16 }}>
         {t('userList_users')}
-      </Typography>
+      </Typography>}
       {/* TODO: Search by keywords and needs */}
       {/* TODO: pagination */}
       <Grid container>
@@ -81,4 +82,5 @@ export default function UserList({ data: inData }) {
 
 UserList.propTypes = {
   data: PropTypes.array,
+  hideTitle: PropTypes.bool,
 };

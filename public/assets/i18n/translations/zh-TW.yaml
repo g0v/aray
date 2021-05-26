@@ -29,10 +29,16 @@ user_recentContributions: 近期貢獻紀錄
 user_hours: 小時
 user_needs: 專長
 
+project_links: 文件連結
 project_tags: 標籤
 project_keywords: 關鍵字
 project_needs: 人力需求
 project_contributors: 貢獻者
+project_pastProposals: 過往提案
+project_tasks: 任務
+
+dataJoinEditor_update: 更新
+dataJoinEditor_confirm: 確認
 
 datetime_month01: 一月
 datetime_month02: 二月

@@ -129,7 +129,7 @@ export default function DataForm({
       disabled={isLoading}
       // liveValidate={true}
       onChange={({ formData }) =>{
-        console.log('formData update', formData);
+        // console.log('formData update', formData);
         setFormData(formData);
         setDirty(true);
         onChange && onChange(formData);

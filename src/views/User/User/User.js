@@ -3,7 +3,6 @@ import PropTypes from 'prop-types';
 import Grid from '@material-ui/core/Grid';
 import Container from '@material-ui/core/Container';
 import Typography from '@material-ui/core/Typography';
-import Button from '@material-ui/core/Button';
 import Card from '@material-ui/core/Card';
 import CircularProgress from '@material-ui/core/CircularProgress';
 
@@ -16,10 +15,6 @@ import GitHubIcon from '@material-ui/icons/GitHub';
 import RoomIcon from '@material-ui/icons/Room';
 import MailOutlineIcon from '@material-ui/icons/MailOutline';
 import ChatBubbleOutlineIcon from '@material-ui/icons/ChatBubbleOutline';
-// import List from '@material-ui/core/List';
-// import ListItem from '@material-ui/core/ListItem';
-// import ListItemIcon from '@material-ui/core/ListItemIcon';
-// import ListItemText from '@material-ui/core/ListItemText';
 import CalendarHeatmap from 'react-calendar-heatmap';
 import moment from 'moment';
 import NumberFormat from 'react-number-format';
@@ -39,8 +34,9 @@ import NeedChip from 'components/NeedChip';
 import ProjectCard from 'components/ProjectCard';
 import UserAvatar from 'components/UserAvatar';
 import StatsCard from 'components/StatsCard';
-
 import ContributionList from './ContributionList';
+import UserEditButton from 'forms/UserForm/UserEditButton';
+import DataJoinEditor from 'components/DataJoinEditor';
 
 const useStyles = makeStyles((theme) => ({
   container: {
@@ -83,6 +79,7 @@ export default function User({ id: inId, computedMatch, match }) {
   const [projects, setProjects] = useState([]);
   const [needs, setNeeds] = useState([]);
   const [canEdit, setCanEdit] = useState(false);
+  const [lastUpdatedAt, setLastUpdatedAt] = useState(Date.now());
 
   useEffect(() => {
     if (inId) {
@@ -150,28 +147,28 @@ export default function User({ id: inId, computedMatch, match }) {
       setLinks([{
         icon: <LanguageIcon />,
         url: data.urlWebsite || '',
-        color: '#000000',
+        color: 'default',
       }, {
-        icon: <GitHubIcon />,
+        icon: <GitHubIcon/>,
         url: data.urlGithub || '',
-        color: '#000000',
+        color: 'default',
       }, {
         icon: <LinkedInIcon />,
         url: data.urlLinkedIn || '',
-        color: 'blue',
+        color: 'default',
       }, {
         icon: <FacebookIcon />,
         url: data.urlFacebook || '',
-        color: '#000000',
+        color: 'default',
       }, {
         icon: <TwitterIcon />,
         url: data.urlTwitter || '',
-        color: '#000000',
+        color: 'default',
       }, {
         icon: <InstagramIcon />,
         url: data.urlInstagram || '',
-        color: '#000000',
-      }].filter(({ url }) => url !== ''));
+        color: 'default',
+      }]);
 
       const projects = data.projects.items.map(({ project }) => project);
       setKeywords(data.keywords.items.map(({ keyword }) => keyword));
@@ -193,7 +190,7 @@ export default function User({ id: inId, computedMatch, match }) {
       }));
       setTotalHoursInThePastYear(totalHoursInThePastYear);
     })();
-  }, [id]);
+  }, [id, lastUpdatedAt]);
 
   if (!user) {
     return (
@@ -212,7 +209,7 @@ export default function User({ id: inId, computedMatch, match }) {
               <UserAvatar
                 username={user.username}
                 name={user.name}
-                size={200}
+                size={150}
               />
             </Grid>
             <Grid item xs={12}>
@@ -228,9 +225,11 @@ export default function User({ id: inId, computedMatch, match }) {
             </Grid>
             {canEdit &&
             <Grid item xs={12}>
-              <Button variant="outlined" fullWidth>
-                {t('user_editProfile')}
-              </Button>
+              <UserEditButton
+                mode={'edit'}
+                item={user}
+                onUpdate={() => setLastUpdatedAt(Date.now())}
+              />
             </Grid>}
             <Grid item xs={12}>
               {details.map((item, index)=>(
@@ -248,33 +247,35 @@ export default function User({ id: inId, computedMatch, match }) {
                   key={index}
                   url={link.url}
                   icon={link.icon}
-                  // color={link.color}
+                  color={link.color}
                 />
               ))}
             </Grid>
-            {canEdit &&
-            <Grid item xs={12}>
-              <Button variant="outlined" fullWidth>
-                {t('user_editKeywords')}
-              </Button>
-            </Grid>}
             <Grid item xs={12}>
               <Typography variant="body1" gutterBottom>
                 {t('user_keywords')}
+                {canEdit &&
+                <DataJoinEditor
+                  title={t('user_keywords')}
+                  mode={'user-keyword'}
+                  joinData={user.keywords.items}
+                  onUpdate={() => setLastUpdatedAt(Date.now())}
+                />}
               </Typography>
               {keywords.map((item, index)=>(
                 <KeywordChip key={index} data={item} size="medium" />
               ))}
             </Grid>
-            {canEdit &&
-            <Grid item xs={12}>
-              <Button variant="outlined" fullWidth>
-                {t('user_editNeeds')}
-              </Button>
-            </Grid>}
             <Grid item xs={12}>
               <Typography variant="body1" gutterBottom>
                 {t('user_needs')}
+                {canEdit &&
+                <DataJoinEditor
+                  title={t('user_needs')}
+                  mode={'user-need'}
+                  joinData={user.needs.items}
+                  onUpdate={() => setLastUpdatedAt(Date.now())}
+                />}
               </Typography>
               {needs.map((item, index)=>(
                 <NeedChip key={index} data={item} size="medium" />
@@ -353,7 +354,7 @@ export default function User({ id: inId, computedMatch, match }) {
             </Grid>
             <Grid item xs={12} container spacing={2}>
               {projects.map((item, index)=>(
-                <Grid item xs={12} sm={3} key={index}>
+                <Grid item xs={12} sm={6} md={4} lg={3} xl={2} key={index}>
                   <ProjectCard project={item} />
                 </Grid>
               ))}

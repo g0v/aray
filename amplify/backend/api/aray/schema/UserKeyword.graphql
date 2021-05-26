@@ -4,7 +4,7 @@ type UserKeyword
   @key(name: "byKeyword", fields: ["keywordId", "username"])
   @auth(rules: [
     { allow: public, operations: [read] },
-    { allow: groups, groups: ["Users"], operations: [read, create] },
+    { allow: groups, groups: ["Users"], operations: [read, create, update, delete] },
     { allow: groups, groups: ["Admins"] },
   ])
 {

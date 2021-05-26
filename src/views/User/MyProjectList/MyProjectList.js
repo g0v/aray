@@ -55,7 +55,7 @@ export default function MyProjectList() {
           </Grid>
         ))}
       </Grid>
-      <ProjectEditButton mode={'add'} />
+      <ProjectEditButton mode={'add'} type="floating-button" />
     </Container>
   );
 }

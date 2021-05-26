@@ -78,7 +78,7 @@ export default function DetailFormDialog({ children, title = '新增資料', ope
 }
 
 DetailFormDialog.propTypes = {
-  children: PropTypes.element,
+  children: PropTypes.any,
   title: PropTypes.string,
   openOnInit: PropTypes.bool,
   onClose: PropTypes.func,

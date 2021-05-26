@@ -13,12 +13,14 @@ input CreateOrUpdateProjectRequest {
   summary: String
   description: String
   links: [ProjectLinkRequest]
-
-  # TODO: update tags
-  # updatedTags: []
 }
 
 input ProjectLinkRequest {
   name: String!
   url: String!
+}
+
+input ProjectItemRequest {
+  id: ID!
+  label: String!
 }

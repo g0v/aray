@@ -361,6 +361,7 @@ export const onCreateProject = /* GraphQL */ `
       description
       links {
         name
+        description
         url
       }
       createdAt
@@ -531,6 +532,7 @@ export const onUpdateProject = /* GraphQL */ `
       description
       links {
         name
+        description
         url
       }
       createdAt
@@ -701,6 +703,7 @@ export const onDeleteProject = /* GraphQL */ `
       description
       links {
         name
+        description
         url
       }
       createdAt
@@ -899,6 +902,7 @@ export const onCreateProjectKeyword = /* GraphQL */ `
         description
         links {
           name
+          description
           url
         }
         createdAt
@@ -1000,6 +1004,7 @@ export const onUpdateProjectKeyword = /* GraphQL */ `
         description
         links {
           name
+          description
           url
         }
         createdAt
@@ -1101,6 +1106,7 @@ export const onDeleteProjectKeyword = /* GraphQL */ `
         description
         links {
           name
+          description
           url
         }
         createdAt
@@ -1202,6 +1208,7 @@ export const onCreateProjectNeed = /* GraphQL */ `
         description
         links {
           name
+          description
           url
         }
         createdAt
@@ -1303,6 +1310,7 @@ export const onUpdateProjectNeed = /* GraphQL */ `
         description
         links {
           name
+          description
           url
         }
         createdAt
@@ -1404,6 +1412,7 @@ export const onDeleteProjectNeed = /* GraphQL */ `
         description
         links {
           name
+          description
           url
         }
         createdAt
@@ -1485,6 +1494,7 @@ export const onCreateProjectTag = /* GraphQL */ `
         description
         links {
           name
+          description
           url
         }
         createdAt
@@ -1586,6 +1596,7 @@ export const onUpdateProjectTag = /* GraphQL */ `
         description
         links {
           name
+          description
           url
         }
         createdAt
@@ -1687,6 +1698,7 @@ export const onDeleteProjectTag = /* GraphQL */ `
         description
         links {
           name
+          description
           url
         }
         createdAt
@@ -2006,8 +2018,8 @@ export const onDeleteTag = /* GraphQL */ `
   }
 `;
 export const onCreateUser = /* GraphQL */ `
-  subscription OnCreateUser {
-    onCreateUser {
+  subscription OnCreateUser($username: String) {
+    onCreateUser(username: $username) {
       username
       status
       name
@@ -2166,8 +2178,8 @@ export const onCreateUser = /* GraphQL */ `
   }
 `;
 export const onUpdateUser = /* GraphQL */ `
-  subscription OnUpdateUser {
-    onUpdateUser {
+  subscription OnUpdateUser($username: String) {
+    onUpdateUser(username: $username) {
       username
       status
       name
@@ -2326,8 +2338,8 @@ export const onUpdateUser = /* GraphQL */ `
   }
 `;
 export const onDeleteUser = /* GraphQL */ `
-  subscription OnDeleteUser {
-    onDeleteUser {
+  subscription OnDeleteUser($username: String) {
+    onDeleteUser(username: $username) {
       username
       status
       name
@@ -3072,6 +3084,7 @@ export const onCreateUserProject = /* GraphQL */ `
         description
         links {
           name
+          description
           url
         }
         createdAt
@@ -3217,6 +3230,7 @@ export const onUpdateUserProject = /* GraphQL */ `
         description
         links {
           name
+          description
           url
         }
         createdAt
@@ -3362,6 +3376,7 @@ export const onDeleteUserProject = /* GraphQL */ `
         description
         links {
           name
+          description
           url
         }
         createdAt

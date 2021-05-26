@@ -263,7 +263,7 @@ export default function User({ id: inId, computedMatch, match }) {
                 />}
               </Typography>
               {keywords.map((item, index)=>(
-                <KeywordChip key={index} data={item} size="medium" />
+                <KeywordChip key={index} data={item} />
               ))}
             </Grid>
             <Grid item xs={12}>
@@ -278,7 +278,7 @@ export default function User({ id: inId, computedMatch, match }) {
                 />}
               </Typography>
               {needs.map((item, index)=>(
-                <NeedChip key={index} data={item} size="medium" />
+                <NeedChip key={index} data={item} />
               ))}
             </Grid>
           </Grid>

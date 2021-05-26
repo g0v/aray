@@ -1,12 +1,12 @@
 import React, { useState, useEffect } from 'react';
 import PropTypes from 'prop-types';
-import Chip from '@material-ui/core/Chip';
+// import Chip from '@material-ui/core/Chip';
 // import { request } from 'utilities/graph';
+import Chip from './Chip';
+import Colors from 'constants/Colors';
 
 export default function NeedChip({
   data,
-  variant = 'outlined',
-  size = 'small',
 }) {
   const [value, setValue] = useState();
 
@@ -25,10 +25,7 @@ export default function NeedChip({
   return (
     <Chip
       label={value}
-      variant={variant}
-      size={size}
-      color={'primary'}
-      style={{ margin: 1 }}
+      color={Colors.secondaryDark}
     />
   );
 }
@@ -37,6 +34,4 @@ NeedChip.propTypes = {
   data: PropTypes.shape({
     label: PropTypes.string,
   }),
-  variant: PropTypes.string,
-  size: PropTypes.string,
 };

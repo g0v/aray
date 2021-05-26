@@ -16,7 +16,7 @@ import { request } from 'utils/graph';
 import { getProject } from 'graphql/queries';
 import ProjectEditButton from 'forms/ProjectForm/ProjectEditButton';
 
-import UserList from 'views/User/UserList';
+import UserCard from 'components/UserCard';
 import TagChip from 'components/TagChip';
 import KeywordChip from 'components/KeywordChip';
 import NeedChip from 'components/NeedChip';
@@ -26,13 +26,11 @@ import VisitButton from 'components/VisitButton';
 
 const useStyles = makeStyles((theme) => ({
   container: {
-    paddingTop: theme.spacing(2),
+    paddingTop: theme.spacing(3),
     paddingBottom: theme.spacing(2),
   },
   card: {
     padding: theme.spacing(4),
-    paddingRight: theme.spacing(2),
-    minHeight: 600,
   },
   listItem: {
     display: 'flex',
@@ -45,6 +43,9 @@ const useStyles = makeStyles((theme) => ({
   },
   header: {
     marginTop: theme.spacing(2),
+  },
+  chipContainer: {
+    paddingTop: theme.spacing(2),
   },
 }));
 
@@ -97,9 +98,9 @@ export default function Project({ id: inId, computedMatch, match }) {
 
   return (
     <Container className={classes.container}>
-      <Card className={classes.card}>
-        <Grid container spacing={4}>
-          <Grid item xs={3} container spacing={2} style={{ height: 100 }}>
+      <Grid container spacing={4}>
+        <Grid item xs={3} container spacing={2} style={{ height: 100 }}>
+          <Card className={classes.card}>
             <Grid item xs={12}>
               <Typography variant="h4">
                 {project.name}
@@ -109,7 +110,7 @@ export default function Project({ id: inId, computedMatch, match }) {
               </Typography>
               <Note data={project.description} />
             </Grid>
-            <Grid item xs={12}>
+            <Grid item xs={12} className={classes.chipContainer}>
               <Typography variant="body1" gutterBottom>
                 {t('project_links')}
               </Typography>
@@ -125,14 +126,14 @@ export default function Project({ id: inId, computedMatch, match }) {
               ))}
             </Grid>
             {canEdit &&
-            <Grid item xs={12}>
+            <Grid item xs={12} className={classes.chipContainer}>
               <ProjectEditButton
                 mode={'edit'}
                 item={project}
                 onUpdate={() => setLastUpdatedAt(Date.now())}
               />
             </Grid>}
-            <Grid item xs={12}>
+            <Grid item xs={12} className={classes.chipContainer}>
               <Typography variant="body1" gutterBottom>
                 {t('project_tags')}
                 {canEdit &&
@@ -145,10 +146,10 @@ export default function Project({ id: inId, computedMatch, match }) {
                 />}
               </Typography>
               {tags.map((item, index)=>(
-                <TagChip key={index} data={item} size="medium" />
+                <TagChip key={index} data={item} />
               ))}
             </Grid>
-            <Grid item xs={12}>
+            <Grid item xs={12} className={classes.chipContainer}>
               <Typography variant="body1" gutterBottom>
                 {t('project_keywords')}
                 {canEdit &&
@@ -161,10 +162,10 @@ export default function Project({ id: inId, computedMatch, match }) {
                 />}
               </Typography>
               {keywords.map((item, index)=>(
-                <KeywordChip key={index} data={item} size="medium" />
+                <KeywordChip key={index} data={item} />
               ))}
             </Grid>
-            <Grid item xs={12}>
+            <Grid item xs={12} className={classes.chipContainer}>
               <Typography variant="body1" gutterBottom>
                 {t('project_needs')}
                 {canEdit &&
@@ -177,34 +178,34 @@ export default function Project({ id: inId, computedMatch, match }) {
                 />}
               </Typography>
               {needs.map((item, index)=>(
-                <NeedChip key={index} data={item} size="medium" />
+                <NeedChip key={index} data={item} />
               ))}
             </Grid>
-          </Grid>
-          <Grid item xs={9} container spacing={2}>
+          </Card>
+        </Grid>
+        <Grid item xs={9} container spacing={2}>
+          <Grid item xs={12}>
             <Tabs
               value={tabIndex}
               indicatorColor="primary"
               textColor="primary"
               onChange={(e, newValue)=>setTabIndex(newValue)}
-              style={{ width: '100%' }}
-              aria-label="disabled tabs example"
+              aria-label="Project Tabs"
+              // centered
             >
               <Tab label={t('project_contributors')} />
               <Tab label={t('project_tasks')} disabled />
               <Tab label={t('project_pastProposals')} disabled />
             </Tabs>
-
-            <Grid item xs={12}>
-              <UserList
-                data={project.contributors.items.map(({ user }) => user)}
-                hideTitle={true}
-              />
-            </Grid>
-            <div style={{ flex: 1 }} />
           </Grid>
+          {project.contributors.items.map(({ user }) => user).map((item, index)=>(
+            <Grid item xs={12} sm={6} md={4} lg={3} xl={2} key={index}>
+              <UserCard user={item} />
+            </Grid>
+          ))}
+          <div style={{ flex: 1 }} />
         </Grid>
-      </Card>
+      </Grid>
     </Container>
   );
 }

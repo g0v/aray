@@ -227,8 +227,10 @@ export const getNeed = /* GraphQL */ `
             owner
             managers
             name
+            altName
             summary
             description
+            slackChannel
             totalCompletedHours
             totalCompletedTasks
             totalContributors
@@ -282,8 +284,17 @@ export const getProject = /* GraphQL */ `
       owner
       managers
       name
+      altName
       summary
       description
+      intros {
+        languageCode
+        name
+        altName
+        summary
+        description
+      }
+      slackChannel
       links {
         name
         description
@@ -319,8 +330,10 @@ export const getProject = /* GraphQL */ `
             owner
             managers
             name
+            altName
             summary
             description
+            slackChannel
             totalCompletedHours
             totalCompletedTasks
             totalContributors
@@ -355,8 +368,10 @@ export const getProject = /* GraphQL */ `
             owner
             managers
             name
+            altName
             summary
             description
+            slackChannel
             totalCompletedHours
             totalCompletedTasks
             totalContributors
@@ -383,8 +398,10 @@ export const getProject = /* GraphQL */ `
             owner
             managers
             name
+            altName
             summary
             description
+            slackChannel
             totalCompletedHours
             totalCompletedTasks
             totalContributors
@@ -422,8 +439,10 @@ export const getProject = /* GraphQL */ `
             owner
             managers
             name
+            altName
             summary
             description
+            slackChannel
             totalCompletedHours
             totalCompletedTasks
             totalContributors
@@ -473,8 +492,17 @@ export const listProjects = /* GraphQL */ `
         owner
         managers
         name
+        altName
         summary
         description
+        intros {
+          languageCode
+          name
+          altName
+          summary
+          description
+        }
+        slackChannel
         links {
           name
           description
@@ -579,8 +607,17 @@ export const getProjectKeyword = /* GraphQL */ `
         owner
         managers
         name
+        altName
         summary
         description
+        intros {
+          languageCode
+          name
+          altName
+          summary
+          description
+        }
+        slackChannel
         links {
           name
           description
@@ -680,8 +717,17 @@ export const listProjectKeywords = /* GraphQL */ `
           owner
           managers
           name
+          altName
           summary
           description
+          intros {
+            languageCode
+            name
+            altName
+            summary
+            description
+          }
+          slackChannel
           links {
             name
             description
@@ -748,8 +794,17 @@ export const getProjectNeed = /* GraphQL */ `
         owner
         managers
         name
+        altName
         summary
         description
+        intros {
+          languageCode
+          name
+          altName
+          summary
+          description
+        }
+        slackChannel
         links {
           name
           description
@@ -849,8 +904,17 @@ export const listProjectNeeds = /* GraphQL */ `
           owner
           managers
           name
+          altName
           summary
           description
+          intros {
+            languageCode
+            name
+            altName
+            summary
+            description
+          }
+          slackChannel
           links {
             name
             description
@@ -897,8 +961,17 @@ export const getProjectTag = /* GraphQL */ `
         owner
         managers
         name
+        altName
         summary
         description
+        intros {
+          languageCode
+          name
+          altName
+          summary
+          description
+        }
+        slackChannel
         links {
           name
           description
@@ -1007,8 +1080,17 @@ export const listProjectTags = /* GraphQL */ `
           owner
           managers
           name
+          altName
           summary
           description
+          intros {
+            languageCode
+            name
+            altName
+            summary
+            description
+          }
+          slackChannel
           links {
             name
             description
@@ -1224,8 +1306,10 @@ export const getTag = /* GraphQL */ `
             owner
             managers
             name
+            altName
             summary
             description
+            slackChannel
             totalCompletedHours
             totalCompletedTasks
             totalContributors
@@ -1404,8 +1488,10 @@ export const getUser = /* GraphQL */ `
             owner
             managers
             name
+            altName
             summary
             description
+            slackChannel
             totalCompletedHours
             totalCompletedTasks
             totalContributors
@@ -1853,8 +1939,17 @@ export const getUserProject = /* GraphQL */ `
         owner
         managers
         name
+        altName
         summary
         description
+        intros {
+          languageCode
+          name
+          altName
+          summary
+          description
+        }
+        slackChannel
         links {
           name
           description
@@ -2007,8 +2102,17 @@ export const listUserProjects = /* GraphQL */ `
           owner
           managers
           name
+          altName
           summary
           description
+          intros {
+            languageCode
+            name
+            altName
+            summary
+            description
+          }
+          slackChannel
           links {
             name
             description

@@ -27,6 +27,9 @@ export default function ContributionHeatmap({
           return 'color-empty';
         }
         let scaleValue;
+        if (value.count === 0) {
+          scaleValue = 0;
+        } else
         if (value.count <= 5) {
           scaleValue = 1;
         } else

@@ -5,7 +5,7 @@ import Link from '@material-ui/core/Link';
 import { Link as RouteLink } from 'react-router-dom';
 import { withStyles } from '@material-ui/core/styles';
 
-import UserAvatar from 'components/UserAvatar';
+import ProjectAvatar from 'components/ProjectAvatar';
 import Colors from 'constants/Colors';
 
 const StyleChip = withStyles({
@@ -18,19 +18,20 @@ const StyleChip = withStyles({
   },
 })(Chip);
 
-export default function UserChip({
-  username,
+export default function ProjectChip({
+  projectId,
+  projectName,
 }) {
-  const avatar = <UserAvatar
-    username={username}
-    name={username}
+  const avatar = <ProjectAvatar
+    projectId={projectId}
+    name={projectName}
     size={24}
     variant={'square'}
   />;
 
   return (
     <Link
-      to={`/user/${username}`}
+      to={`/project/${projectId}`}
       component={RouteLink}
       style={{
         textDecoration: 'none',
@@ -38,7 +39,7 @@ export default function UserChip({
     >
       <StyleChip
         avatar={avatar}
-        label={username}
+        label={projectName}
         clickable
         color="default"
       />
@@ -46,6 +47,7 @@ export default function UserChip({
   );
 }
 
-UserChip.propTypes = {
-  username: PropTypes.string.isRequired,
+ProjectChip.propTypes = {
+  projectId: PropTypes.string.isRequired,
+  projectName: PropTypes.string.isRequired,
 };

@@ -4,7 +4,10 @@ import { makeStyles } from '@material-ui/core/styles';
 import List from '@material-ui/core/List';
 import ListItem from '@material-ui/core/ListItem';
 import ListItemText from '@material-ui/core/ListItemText';
+import Typography from '@material-ui/core/Typography';
 import moment from 'moment';
+
+import ProjectChip from 'components/ProjectChip';
 
 const useStyles = makeStyles((theme) => ({
   root: {
@@ -22,8 +25,18 @@ export default function ContributionList({ data, max = 10 }) {
       {data.filter((x, index) => index < max).map((item, index)=>(
         <ListItem key={index}>
           <ListItemText
-            primary={item.summary}
-            secondary={`${moment(item.createdAt).format('YYYY-MM-DD')} ${item.project ? item.project.name : ''}`} />
+            primary={<Typography variant="body1" color="textPrimary" gutterBottom>
+              {item.summary || ''}
+            </Typography>}
+            secondary={<React.Fragment>
+              <Typography variant="body2" color="textSecondary">
+                {item.description || ''}
+              </Typography>
+              <Typography variant="body2" color="textSecondary">
+                <ProjectChip projectId={item.project.id} projectName={item.project.name} /> @ {moment(item.createdAt).format('YYYY-MM-DD')}
+              </Typography>
+            </React.Fragment>}
+          />
           <ListItemText primary={`+ ${item.hours}`} />
         </ListItem>
       ))}

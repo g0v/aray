@@ -246,8 +246,10 @@ export const onCreateNeed = /* GraphQL */ `
             owner
             managers
             name
+            altName
             summary
             description
+            slackChannel
             totalCompletedHours
             totalCompletedTasks
             totalContributors
@@ -294,8 +296,10 @@ export const onUpdateNeed = /* GraphQL */ `
             owner
             managers
             name
+            altName
             summary
             description
+            slackChannel
             totalCompletedHours
             totalCompletedTasks
             totalContributors
@@ -342,8 +346,10 @@ export const onDeleteNeed = /* GraphQL */ `
             owner
             managers
             name
+            altName
             summary
             description
+            slackChannel
             totalCompletedHours
             totalCompletedTasks
             totalContributors
@@ -366,8 +372,17 @@ export const onCreateProject = /* GraphQL */ `
       owner
       managers
       name
+      altName
       summary
       description
+      intros {
+        languageCode
+        name
+        altName
+        summary
+        description
+      }
+      slackChannel
       links {
         name
         description
@@ -403,8 +418,10 @@ export const onCreateProject = /* GraphQL */ `
             owner
             managers
             name
+            altName
             summary
             description
+            slackChannel
             totalCompletedHours
             totalCompletedTasks
             totalContributors
@@ -439,8 +456,10 @@ export const onCreateProject = /* GraphQL */ `
             owner
             managers
             name
+            altName
             summary
             description
+            slackChannel
             totalCompletedHours
             totalCompletedTasks
             totalContributors
@@ -467,8 +486,10 @@ export const onCreateProject = /* GraphQL */ `
             owner
             managers
             name
+            altName
             summary
             description
+            slackChannel
             totalCompletedHours
             totalCompletedTasks
             totalContributors
@@ -506,8 +527,10 @@ export const onCreateProject = /* GraphQL */ `
             owner
             managers
             name
+            altName
             summary
             description
+            slackChannel
             totalCompletedHours
             totalCompletedTasks
             totalContributors
@@ -552,8 +575,17 @@ export const onUpdateProject = /* GraphQL */ `
       owner
       managers
       name
+      altName
       summary
       description
+      intros {
+        languageCode
+        name
+        altName
+        summary
+        description
+      }
+      slackChannel
       links {
         name
         description
@@ -589,8 +621,10 @@ export const onUpdateProject = /* GraphQL */ `
             owner
             managers
             name
+            altName
             summary
             description
+            slackChannel
             totalCompletedHours
             totalCompletedTasks
             totalContributors
@@ -625,8 +659,10 @@ export const onUpdateProject = /* GraphQL */ `
             owner
             managers
             name
+            altName
             summary
             description
+            slackChannel
             totalCompletedHours
             totalCompletedTasks
             totalContributors
@@ -653,8 +689,10 @@ export const onUpdateProject = /* GraphQL */ `
             owner
             managers
             name
+            altName
             summary
             description
+            slackChannel
             totalCompletedHours
             totalCompletedTasks
             totalContributors
@@ -692,8 +730,10 @@ export const onUpdateProject = /* GraphQL */ `
             owner
             managers
             name
+            altName
             summary
             description
+            slackChannel
             totalCompletedHours
             totalCompletedTasks
             totalContributors
@@ -738,8 +778,17 @@ export const onDeleteProject = /* GraphQL */ `
       owner
       managers
       name
+      altName
       summary
       description
+      intros {
+        languageCode
+        name
+        altName
+        summary
+        description
+      }
+      slackChannel
       links {
         name
         description
@@ -775,8 +824,10 @@ export const onDeleteProject = /* GraphQL */ `
             owner
             managers
             name
+            altName
             summary
             description
+            slackChannel
             totalCompletedHours
             totalCompletedTasks
             totalContributors
@@ -811,8 +862,10 @@ export const onDeleteProject = /* GraphQL */ `
             owner
             managers
             name
+            altName
             summary
             description
+            slackChannel
             totalCompletedHours
             totalCompletedTasks
             totalContributors
@@ -839,8 +892,10 @@ export const onDeleteProject = /* GraphQL */ `
             owner
             managers
             name
+            altName
             summary
             description
+            slackChannel
             totalCompletedHours
             totalCompletedTasks
             totalContributors
@@ -878,8 +933,10 @@ export const onDeleteProject = /* GraphQL */ `
             owner
             managers
             name
+            altName
             summary
             description
+            slackChannel
             totalCompletedHours
             totalCompletedTasks
             totalContributors
@@ -952,8 +1009,17 @@ export const onCreateProjectKeyword = /* GraphQL */ `
         owner
         managers
         name
+        altName
         summary
         description
+        intros {
+          languageCode
+          name
+          altName
+          summary
+          description
+        }
+        slackChannel
         links {
           name
           description
@@ -1057,8 +1123,17 @@ export const onUpdateProjectKeyword = /* GraphQL */ `
         owner
         managers
         name
+        altName
         summary
         description
+        intros {
+          languageCode
+          name
+          altName
+          summary
+          description
+        }
+        slackChannel
         links {
           name
           description
@@ -1162,8 +1237,17 @@ export const onDeleteProjectKeyword = /* GraphQL */ `
         owner
         managers
         name
+        altName
         summary
         description
+        intros {
+          languageCode
+          name
+          altName
+          summary
+          description
+        }
+        slackChannel
         links {
           name
           description
@@ -1267,8 +1351,17 @@ export const onCreateProjectNeed = /* GraphQL */ `
         owner
         managers
         name
+        altName
         summary
         description
+        intros {
+          languageCode
+          name
+          altName
+          summary
+          description
+        }
+        slackChannel
         links {
           name
           description
@@ -1372,8 +1465,17 @@ export const onUpdateProjectNeed = /* GraphQL */ `
         owner
         managers
         name
+        altName
         summary
         description
+        intros {
+          languageCode
+          name
+          altName
+          summary
+          description
+        }
+        slackChannel
         links {
           name
           description
@@ -1477,8 +1579,17 @@ export const onDeleteProjectNeed = /* GraphQL */ `
         owner
         managers
         name
+        altName
         summary
         description
+        intros {
+          languageCode
+          name
+          altName
+          summary
+          description
+        }
+        slackChannel
         links {
           name
           description
@@ -1562,8 +1673,17 @@ export const onCreateProjectTag = /* GraphQL */ `
         owner
         managers
         name
+        altName
         summary
         description
+        intros {
+          languageCode
+          name
+          altName
+          summary
+          description
+        }
+        slackChannel
         links {
           name
           description
@@ -1667,8 +1787,17 @@ export const onUpdateProjectTag = /* GraphQL */ `
         owner
         managers
         name
+        altName
         summary
         description
+        intros {
+          languageCode
+          name
+          altName
+          summary
+          description
+        }
+        slackChannel
         links {
           name
           description
@@ -1772,8 +1901,17 @@ export const onDeleteProjectTag = /* GraphQL */ `
         owner
         managers
         name
+        altName
         summary
         description
+        intros {
+          languageCode
+          name
+          altName
+          summary
+          description
+        }
+        slackChannel
         links {
           name
           description
@@ -1987,8 +2125,10 @@ export const onCreateTag = /* GraphQL */ `
             owner
             managers
             name
+            altName
             summary
             description
+            slackChannel
             totalCompletedHours
             totalCompletedTasks
             totalContributors
@@ -2035,8 +2175,10 @@ export const onUpdateTag = /* GraphQL */ `
             owner
             managers
             name
+            altName
             summary
             description
+            slackChannel
             totalCompletedHours
             totalCompletedTasks
             totalContributors
@@ -2083,8 +2225,10 @@ export const onDeleteTag = /* GraphQL */ `
             owner
             managers
             name
+            altName
             summary
             description
+            slackChannel
             totalCompletedHours
             totalCompletedTasks
             totalContributors
@@ -2232,8 +2376,10 @@ export const onCreateUser = /* GraphQL */ `
             owner
             managers
             name
+            altName
             summary
             description
+            slackChannel
             totalCompletedHours
             totalCompletedTasks
             totalContributors
@@ -2395,8 +2541,10 @@ export const onUpdateUser = /* GraphQL */ `
             owner
             managers
             name
+            altName
             summary
             description
+            slackChannel
             totalCompletedHours
             totalCompletedTasks
             totalContributors
@@ -2558,8 +2706,10 @@ export const onDeleteUser = /* GraphQL */ `
             owner
             managers
             name
+            altName
             summary
             description
+            slackChannel
             totalCompletedHours
             totalCompletedTasks
             totalContributors
@@ -3179,8 +3329,17 @@ export const onCreateUserProject = /* GraphQL */ `
         owner
         managers
         name
+        altName
         summary
         description
+        intros {
+          languageCode
+          name
+          altName
+          summary
+          description
+        }
+        slackChannel
         links {
           name
           description
@@ -3328,8 +3487,17 @@ export const onUpdateUserProject = /* GraphQL */ `
         owner
         managers
         name
+        altName
         summary
         description
+        intros {
+          languageCode
+          name
+          altName
+          summary
+          description
+        }
+        slackChannel
         links {
           name
           description
@@ -3477,8 +3645,17 @@ export const onDeleteUserProject = /* GraphQL */ `
         owner
         managers
         name
+        altName
         summary
         description
+        intros {
+          languageCode
+          name
+          altName
+          summary
+          description
+        }
+        slackChannel
         links {
           name
           description

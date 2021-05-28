@@ -18,8 +18,14 @@ type Project
 
   # TODO: translation?
   name: String!
+  altName: String
   summary: String
   description: String
+
+  # multiple languages
+  intros: [ProjectIntro]
+
+  slackChannel: String
   links: [ProjectLink]
 
   totalCompletedHours: Float
@@ -46,4 +52,12 @@ type ProjectLink {
   name: String!
   description: String
   url: String!
+}
+
+type ProjectIntro {
+  languageCode: String! # zh-TW, ja, ko, en-US
+  name: String!
+  altName: String
+  summary: String
+  description: String
 }

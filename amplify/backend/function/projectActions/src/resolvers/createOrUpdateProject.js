@@ -5,9 +5,7 @@ const {
   getProject,
   updateProjects,
   listProjectUsers,
-  // listProjectTags,
   updateUserProjects,
-  // getTag,
 } = require('../lib/db');
 
 module.exports = async ({
@@ -22,12 +20,12 @@ module.exports = async ({
     status: inStatus,
     managers = [],
     name,
+    altName,
     summary,
     description,
     links = [],
-    // tagItems = [],
-    // keywordItems = [],
-    // needItems = [],
+    slackChannel,
+    intros = [],
   } = input;
 
   const existingProject = inId ? await getProject(inId) : {};
@@ -58,9 +56,12 @@ module.exports = async ({
     status,
     managers,
     name,
+    altName,
     summary,
     description,
     links,
+    slackChannel,
+    intros,
     updatedAt: now,
     updatedBy: currentUsername,
   });

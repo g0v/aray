@@ -10,14 +10,25 @@ input CreateOrUpdateProjectRequest {
   # owner
   managers: [String]
   name: String!
+  altName: String
   summary: String
   description: String
   links: [ProjectLinkRequest]
+  slackChannel: String
+  intros: [ProjectIntroRequest]
 }
 
 input ProjectLinkRequest {
   name: String!
   url: String!
+}
+
+input ProjectIntroRequest {
+  languageCode: String! # zh-TW, ja, ko, en-US
+  name: String!
+  altName: String
+  summary: String
+  description: String
 }
 
 input ProjectItemRequest {

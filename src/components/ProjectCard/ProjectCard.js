@@ -72,15 +72,15 @@ export default function ProjectCard({
         <CardActionArea>
           <CardMedia
             className={classes.media}
-            image="https://g0v.tw/assets/img/g0v-hero.jpg"
+            image={`https://avatars.dicebear.com/api/jdenticon/${project.id}.svg`}
             title="Project"
           />
           <CardContent>
             <Typography gutterBottom variant="h5" component="h2">
               {project.name}
             </Typography>
-            <Typography variant="body1" color="textPrimary" component="p" gutterBottom>
-              {project.summary || '無'}
+            <Typography variant="body2" color="textSecondary" component="p" gutterBottom>
+              {project.summary || ''}
             </Typography>
             <div>
               {project.tags && project.tags.items.map((item, index)=>(

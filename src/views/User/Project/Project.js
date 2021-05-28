@@ -3,7 +3,6 @@ import PropTypes from 'prop-types';
 import Grid from '@material-ui/core/Grid';
 import Container from '@material-ui/core/Container';
 import Typography from '@material-ui/core/Typography';
-// import Button from '@material-ui/core/Button';
 import Card from '@material-ui/core/Card';
 import CircularProgress from '@material-ui/core/CircularProgress';
 import { makeStyles } from '@material-ui/core/styles';
@@ -25,6 +24,7 @@ import VisitButton from 'components/VisitButton';
 import ProjectTasks from './ProjectTasks';
 import ProjectContributions from './ProjectContributions';
 import UserChip from 'components/UserChip';
+import ProjectAvatar from 'components/ProjectAvatar';
 
 const useStyles = makeStyles((theme) => ({
   container: {
@@ -131,102 +131,111 @@ export default function Project({ id: inId, computedMatch, match }) {
   return (
     <Container className={classes.container}>
       <Grid container spacing={4}>
-        <Grid item xs={3} container spacing={2} style={{ height: 100 }}>
+        <Grid item xs={3} container style={{ height: 100 }}>
           <Card className={classes.card}>
-            <Grid item xs={12}>
-              <Typography variant="h4">
-                {project.name}
-              </Typography>
-              <Typography variant="body1" gutterBottom>
-                {project.summary || ''}
-              </Typography>
-              <Note data={project.description} />
-              <Typography variant="body1" gutterBottom>
-                {t('project_owner')}
-              </Typography>
-              <div className={classes.userChipContainer}>
-                <UserChip username={project.owner}/>
-              </div>
-              {project.managers.length > 0 &&
-              <Typography variant="body1" gutterBottom>
-                {t('project_managers')}
-              </Typography>}
-              <div className={classes.userChipContainer}>
-                {project.managers.map((username, index)=>(
-                  <UserChip key={index} username={username}/>
-                ))}
-              </div>
-            </Grid>
-            <Grid item xs={12} className={classes.chipContainer}>
-              <Typography variant="body1" gutterBottom>
-                {t('project_links')}
-              </Typography>
-              {project.links.map((link, index)=>(
-                <div key={index} style={{ margin: 1, display: 'inline-block' }}>
-                  <VisitButton
-                    title={link.name}
-                    url={link.url}
-                    variant={'outlined'}
-                    color={'secondary'}
-                  />
+            <Grid item xs={12} container spacing={2}>
+              <Grid item xs={12} align="center">
+                <ProjectAvatar
+                  projectId={project.id}
+                  name={project.name}
+                  size={150}
+                />
+              </Grid>
+              <Grid item xs={12}>
+                <Typography variant="h4">
+                  {project.name}
+                </Typography>
+                <Typography variant="body1" gutterBottom>
+                  {project.summary || ''}
+                </Typography>
+                <Note data={project.description} />
+                <Typography variant="body1" gutterBottom>
+                  {t('project_owner')}
+                </Typography>
+                <div className={classes.userChipContainer}>
+                  <UserChip username={project.owner}/>
                 </div>
-              ))}
-            </Grid>
-            {canEdit &&
-            <Grid item xs={12} className={classes.chipContainer}>
-              <ProjectEditButton
-                mode={'edit'}
-                item={project}
-                onUpdate={() => setLastUpdatedAt(Date.now())}
-              />
-            </Grid>}
-            <Grid item xs={12} className={classes.chipContainer}>
-              <Typography variant="body1" gutterBottom>
-                {t('project_tags')}
-                {canEdit &&
-                <DataJoinEditor
-                  title={t('project_tags')}
-                  mode={'project-tag'}
-                  projectId={project.id}
-                  joinData={project.tags.items}
+                {project.managers.length > 0 &&
+                <Typography variant="body1" gutterBottom>
+                  {t('project_managers')}
+                </Typography>}
+                <div className={classes.userChipContainer}>
+                  {project.managers.map((username, index)=>(
+                    <UserChip key={index} username={username}/>
+                  ))}
+                </div>
+              </Grid>
+              <Grid item xs={12} className={classes.chipContainer}>
+                <Typography variant="body1" gutterBottom>
+                  {t('project_links')}
+                </Typography>
+                {project.links.map((link, index)=>(
+                  <div key={index} style={{ margin: 1, display: 'inline-block' }}>
+                    <VisitButton
+                      title={link.name}
+                      url={link.url}
+                      variant={'outlined'}
+                      color={'secondary'}
+                    />
+                  </div>
+                ))}
+              </Grid>
+              {canEdit &&
+              <Grid item xs={12} className={classes.chipContainer}>
+                <ProjectEditButton
+                  mode={'edit'}
+                  item={project}
                   onUpdate={() => setLastUpdatedAt(Date.now())}
-                />}
-              </Typography>
-              {tags.map((item, index)=>(
-                <TagChip key={index} data={item} />
-              ))}
-            </Grid>
-            <Grid item xs={12} className={classes.chipContainer}>
-              <Typography variant="body1" gutterBottom>
-                {t('project_keywords')}
-                {canEdit &&
-                <DataJoinEditor
-                  title={t('project_keywords')}
-                  mode={'project-keyword'}
-                  projectId={project.id}
-                  joinData={project.keywords.items}
-                  onUpdate={() => setLastUpdatedAt(Date.now())}
-                />}
-              </Typography>
-              {keywords.map((item, index)=>(
-                <KeywordChip key={index} data={item} />
-              ))}
-            </Grid>
-            <Grid item xs={12} className={classes.chipContainer}>
-              <Typography variant="body1" gutterBottom>
-                {t('project_needs')}
-                {canEdit &&
-                <DataJoinEditor
-                  title={t('project_needs')}
-                  mode={'project-need'}
-                  projectId={project.id}
-                  joinData={project.needs.items}
-                  onUpdate={() => setLastUpdatedAt(Date.now())}
-                />}
-              </Typography>
-              {needs.map((item, index)=>(
-                <NeedChip key={index} data={item} />
-              ))}
+                />
+              </Grid>}
+              <Grid item xs={12} className={classes.chipContainer}>
+                <Typography variant="body1" gutterBottom>
+                  {t('project_tags')}
+                  {canEdit &&
+                  <DataJoinEditor
+                    title={t('project_tags')}
+                    mode={'project-tag'}
+                    projectId={project.id}
+                    joinData={project.tags.items}
+                    onUpdate={() => setLastUpdatedAt(Date.now())}
+                  />}
+                </Typography>
+                {tags.map((item, index)=>(
+                  <TagChip key={index} data={item} />
+                ))}
+              </Grid>
+              <Grid item xs={12} className={classes.chipContainer}>
+                <Typography variant="body1" gutterBottom>
+                  {t('project_keywords')}
+                  {canEdit &&
+                  <DataJoinEditor
+                    title={t('project_keywords')}
+                    mode={'project-keyword'}
+                    projectId={project.id}
+                    joinData={project.keywords.items}
+                    onUpdate={() => setLastUpdatedAt(Date.now())}
+                  />}
+                </Typography>
+                {keywords.map((item, index)=>(
+                  <KeywordChip key={index} data={item} />
+                ))}
+              </Grid>
+              <Grid item xs={12} className={classes.chipContainer}>
+                <Typography variant="body1" gutterBottom>
+                  {t('project_needs')}
+                  {canEdit &&
+                  <DataJoinEditor
+                    title={t('project_needs')}
+                    mode={'project-need'}
+                    projectId={project.id}
+                    joinData={project.needs.items}
+                    onUpdate={() => setLastUpdatedAt(Date.now())}
+                  />}
+                </Typography>
+                {needs.map((item, index)=>(
+                  <NeedChip key={index} data={item} />
+                ))}
+              </Grid>
             </Grid>
           </Card>
         </Grid>

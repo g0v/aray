@@ -13,7 +13,7 @@ import LinkedInIcon from '@material-ui/icons/LinkedIn';
 import LanguageIcon from '@material-ui/icons/Language';
 import GitHubIcon from '@material-ui/icons/GitHub';
 import RoomIcon from '@material-ui/icons/Room';
-import MailOutlineIcon from '@material-ui/icons/MailOutline';
+// import MailOutlineIcon from '@material-ui/icons/MailOutline';
 import ChatBubbleOutlineIcon from '@material-ui/icons/ChatBubbleOutline';
 import moment from 'moment';
 import NumberFormat from 'react-number-format';
@@ -61,6 +61,7 @@ const useStyles = makeStyles((theme) => ({
   },
 }));
 
+const todayFromBeginning = moment().startOf('day');
 const today = moment().endOf('day');
 const aYearAgo = moment().add(-1, 'years').startOf('day');
 
@@ -101,6 +102,7 @@ export default function User({ id: inId, computedMatch, match }) {
       const [
         { data: { getUser: data } },
         { data: { getContributionsByUsernameByCreatedAt: { items: userContributions } } },
+        todayContributions,
         userStatements,
       ] = await Promise.all([
         request(getUser, { username: id }),
@@ -113,6 +115,17 @@ export default function User({ id: inId, computedMatch, match }) {
             ],
           },
           limit: 5,
+          sortDirection: 'DESC',
+        }),
+        asyncListAll(getContributionsByUsernameByCreatedAt, {
+          username: id,
+          createdAt: {
+            between: [
+              todayFromBeginning.toISOString(),
+              today.toISOString(),
+            ],
+          },
+          limit: 1000,
           sortDirection: 'DESC',
         }),
         asyncListAll(getStatementsByUsernameByDate, {
@@ -135,10 +148,11 @@ export default function User({ id: inId, computedMatch, match }) {
         icon: <RoomIcon />,
         value: data.location,
         display: data.location ? true : false,
-      }, {
-        icon: <MailOutlineIcon />,
-        value: data.email,
-        display: true,
+        // TODO: Do not return email in response
+        // }, {
+        //   icon: <MailOutlineIcon />,
+        //   value: data.email,
+        //   display: true,
       }, {
         icon: <ChatBubbleOutlineIcon />,
         value: `slack: ${data.slackId || ''}`,
@@ -177,12 +191,20 @@ export default function User({ id: inId, computedMatch, match }) {
 
       let totalHoursInThePastYear = 0;
       const heatmapData = userStatements.map(({ date, completedHours }) => {
+        if (date === today.format('YYYY-MM-DD')) {
+          completedHours += todayContributions.reduce((sum, { hours }) => {
+            return sum + hours;
+          }, 0);
+        }
+
         totalHoursInThePastYear += completedHours;
+
         return {
           date,
           count: completedHours,
         };
       });
+
       setHeatmapData(heatmapData);
       setContributions(userContributions.map((item) => {
         item.project = projects.find(({ id }) => id === item.projectId);
@@ -216,7 +238,7 @@ export default function User({ id: inId, computedMatch, match }) {
               <Typography variant="h4">
                 {user.name}
               </Typography>
-              <Typography variant="body1" gutterBottom>
+              <Typography variant="body1" color="textSecondary" gutterBottom>
                 {user.username}
               </Typography>
               <Typography variant="body1">

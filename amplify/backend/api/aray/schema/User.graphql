@@ -3,7 +3,7 @@ type User
   @key(fields: ["username"])
   @auth(rules: [
     { allow: public, operations: [read] },
-    { allow: owner, ownerField: "username", operations: [read, create, update] },
+    { allow: owner, ownerField: "username", operations: [read, update] },
     { allow: groups, groups: ["Users"], operations: [read] },
     { allow: groups, groups: ["Admins"] },
   ])
@@ -13,6 +13,9 @@ type User
 
   name: String!
   email: AWSEmail!
+    # @auth(rules: [ 
+    #   { allow: groups, groups: ["Admins"], operations: [read] },
+    # ])
 
   selfIntroduction: String
   location: String

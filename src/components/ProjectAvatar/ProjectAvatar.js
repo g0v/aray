@@ -11,11 +11,11 @@ const useStyles = makeStyles((theme) => ({
   },
 }));
 
-export default function UserAvatar({
-  username,
+export default function ProjectAvatar({
+  projectId,
   name,
   size = 24,
-  variant = 'circle',
+  variant = 'square',
 }) {
   const classes = useStyles();
 
@@ -30,8 +30,8 @@ export default function UserAvatar({
 
   useEffect(() => {
     // setS3Key(`users/${username}/avatar.jpeg`);
-    setUri(`https://avatars.dicebear.com/api/bottts/${username}.svg`);
-  }, [username]);
+    setUri(`https://avatars.dicebear.com/api/jdenticon/${projectId}.svg`);
+  }, [projectId]);
 
   return (
     <Avatar
@@ -41,13 +41,13 @@ export default function UserAvatar({
       style={{ height: size, width: size, fontSize: size * 0.6 }}
       className={classes.avatar}
     >
-      {(name || username || ' ')[0]}
+      {(name || projectId || ' ')[0]}
     </Avatar>
   );
 }
 
-UserAvatar.propTypes = {
-  username: PropTypes.string.isRequired,
+ProjectAvatar.propTypes = {
+  projectId: PropTypes.string.isRequired,
   name: PropTypes.string,
   size: PropTypes.number,
   variant: PropTypes.string,

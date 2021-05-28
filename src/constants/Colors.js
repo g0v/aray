@@ -41,6 +41,7 @@ export default {
   //
   background: {
     light: '#ebebeb',
+    light2: '#f5f5f5',
   },
 
   tintColor: primary,

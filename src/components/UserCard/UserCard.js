@@ -74,12 +74,15 @@ export default function UserCard({
         <CardActionArea>
           <CardMedia
             className={classes.media}
-            image="https://scontent-sjc3-1.xx.fbcdn.net/v/t31.18172-8/680443_631365800238043_1735233757_o.png?_nc_cat=110&ccb=1-3&_nc_sid=09cbfe&_nc_ohc=HVWkuIk1_z8AX-PAdYo&_nc_ht=scontent-sjc3-1.xx&oh=489ad99377c6b63ea1571fd9e8ebf0f9&oe=60C9286B" // eslint-disable-line
+            image={`https://avatars.dicebear.com/api/bottts/${user.username}.svg`}
             title="avatar"
           />
           <CardContent>
-            <Typography variant="h5" component="h2" color="textPrimary" gutterBottom>
-              {user.name} ({user.username})
+            <Typography variant="h5" component="h2" color="textPrimary">
+              {user.name}
+            </Typography>
+            <Typography variant="body2" component="p" color="textSecondary" gutterBottom>
+              {user.username}
             </Typography>
             {user.keywords && user.keywords.items.map((item, index)=>(
               <KeywordChip key={index} data={item.keyword} size="small" />

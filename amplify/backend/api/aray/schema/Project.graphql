@@ -22,6 +22,10 @@ type Project
   description: String
   links: [ProjectLink]
 
+  totalCompletedHours: Float
+  totalCompletedTasks: Int
+  totalContributors: Int
+
   contributors: [UserProject] @connection(keyName: "byProject", fields: ["id"])
   tags: [ProjectTag] @connection(keyName: "byProject", fields: ["id"])
   keywords: [ProjectKeyword] @connection(keyName: "byProject", fields: ["id"])

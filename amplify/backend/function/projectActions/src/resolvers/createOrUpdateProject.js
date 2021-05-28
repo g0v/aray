@@ -80,6 +80,7 @@ module.exports = async ({
         toUpdateUserProjects.push(Object.assign(matched, {
           role: 'manager',
           updatedAt: now,
+          updatedBy: currentUsername,
         }));
       } else
       if (!matched) {
@@ -93,6 +94,8 @@ module.exports = async ({
           completedTasks: 0,
           updatedAt: now,
           createdAt: now,
+          createdBy: currentUsername,
+          updatedBy: currentUsername,
         });
       }
     });
@@ -103,6 +106,7 @@ module.exports = async ({
         toUpdateUserProjects.push(Object.assign(projectUser, {
           role: 'contributor',
           updatedAt: now,
+          updatedBy: currentUsername,
         }));
       }
     });

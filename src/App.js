@@ -71,6 +71,7 @@ export default function App({ location }) {
   }, [location]);
 
   React.useEffect(() => {
+    console.log(user);
     if (!user || !user.signInUserSession || !user.attributes) {
       const filteredRoutes = appRoutes.filter(({ roles }) => {
         return !roles || roles.length === 0;
@@ -113,7 +114,8 @@ export default function App({ location }) {
               </DocumentTitle>)
             }/>
         ))}
-        <Redirect to={filteredRoutes[0] ? filteredRoutes[0].path : '/'} />
+        {/* <Redirect to={filteredRoutes[0] ? filteredRoutes[0].path : '/'} /> */}
+        <Redirect to={'/'} />
       </Switch>
     </div>
   ) : <div className="amplify-authenticator" >

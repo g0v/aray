@@ -1,5 +1,5 @@
-app_name: ARAY 阿賴～
-app_short_name: 阿賴～
+app_name: ARAY
+app_short_name: ARAY
 
 config_locale: zh-TW
 
@@ -7,15 +7,21 @@ title_dashboard: 總覽
 title_myProfile: 我的頁面
 title_myProjectList: 我的專案
 title_projectList: 找專案(坑)
+title_project: 專案
 title_userList: 找幫手
 title_user: 貢獻者
 
 myProjectList_myProjects: 我的專案
 myProjectList_otherProjects: 參與專案
 
-projectList_projects: 專案
+projectList_projects: 專案列表
+projectList_searchByTags: 用標籤搜尋
+projectList_searchByKeywords: 用關鍵字搜尋
+projectList_searchByNeeds: 用人力需求搜尋
 
 userList_users: 貢獻者
+userList_searchByKeywords: 用關鍵字搜尋
+userList_searchByNeeds: 用專長搜尋
 
 user_editProfile: 更新個人資料
 user_editKeywords: 更新關鍵字
@@ -36,6 +42,17 @@ project_needs: 人力需求
 project_contributors: 貢獻者
 project_pastProposals: 過往提案
 project_tasks: 任務
+project_contributions: 貢獻紀錄
+project_owner: 坑主
+project_managers: 共同坑主
+
+projectTasks_hours: 小時
+
+userCard_completedTasks: 完成任務
+userCard_completedHours: 貢獻時數
+
+projectCard_completedTasks: 完成任務
+projectCard_completedHours: 貢獻時數
 
 dataJoinEditor_update: 更新
 dataJoinEditor_confirm: 確認

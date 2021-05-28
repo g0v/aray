@@ -1,9 +1,9 @@
 import React, { useState, useEffect } from 'react';
 import PropTypes from 'prop-types';
 import IconButton from '@material-ui/core/IconButton';
-import Chip from '@material-ui/core/Chip';
-import Autocomplete from '@material-ui/lab/Autocomplete';
-import TextField from '@material-ui/core/TextField';
+// import Chip from '@material-ui/core/Chip';
+// import Autocomplete from '@material-ui/lab/Autocomplete';
+// import TextField from '@material-ui/core/TextField';
 import Button from '@material-ui/core/Button';
 import EditIcon from '@material-ui/icons/Edit';
 import { useTranslation } from 'react-i18next';
@@ -12,94 +12,13 @@ import { useTranslation } from 'react-i18next';
 // import CheckBoxIcon from '@material-ui/icons/CheckBox';
 
 import {
-  listKeywords,
-  listNeeds,
-  listTags,
-} from 'graphql/queries';
-import {
-  createKeyword,
-  createUserKeyword,
-  deleteUserKeyword,
-  createNeed,
-  createUserNeed,
-  deleteUserNeed,
-  createProjectKeyword,
-  deleteProjectKeyword,
-  createProjectNeed,
-  deleteProjectNeed,
-  createTag,
-  createProjectTag,
-  deleteProjectTag,
-} from 'graphql/mutations';
-import {
   request,
   asyncListAll,
 } from 'utils/graph';
 
 import FormDialog from 'forms/components/FormDialog';
-
-// const icon = <CheckBoxOutlineBlankIcon fontSize="small" />;
-// const checkedIcon = <CheckBoxIcon fontSize="small" />;
-
-const getPropsByMode = (mode) => {
-  let listOptionsQueryName;
-  let createQueryName;
-  let key;
-  let linkKey;
-  let createJoinDataQueryName;
-  let deleteJoinDataQueryName;
-  switch (mode) {
-  case 'user-keyword':
-    key = 'keywordId';
-    linkKey = 'username';
-    listOptionsQueryName = listKeywords;
-    createQueryName = createKeyword;
-    createJoinDataQueryName = createUserKeyword;
-    deleteJoinDataQueryName = deleteUserKeyword;
-    break;
-  case 'user-need':
-    key = 'needId';
-    linkKey = 'username';
-    listOptionsQueryName = listNeeds;
-    createQueryName = createNeed;
-    createJoinDataQueryName = createUserNeed;
-    deleteJoinDataQueryName = deleteUserNeed;
-    break;
-  case 'project-keyword':
-    key = 'keywordId';
-    linkKey = 'projectId';
-    listOptionsQueryName = listKeywords;
-    createQueryName = createKeyword;
-    createJoinDataQueryName = createProjectKeyword;
-    deleteJoinDataQueryName = deleteProjectKeyword;
-    break;
-  case 'project-tag':
-    key = 'tagId';
-    linkKey = 'projectId';
-    listOptionsQueryName = listTags;
-    createQueryName = createTag;
-    createJoinDataQueryName = createProjectTag;
-    deleteJoinDataQueryName = deleteProjectTag;
-    break;
-  case 'project-need':
-    key = 'needId';
-    linkKey = 'projectId';
-    listOptionsQueryName = listNeeds;
-    createQueryName = createNeed;
-    createJoinDataQueryName = createProjectNeed;
-    deleteJoinDataQueryName = deleteProjectNeed;
-    break;
-  default:
-  }
-  return {
-    key,
-    linkKey,
-    listOptionsQueryName,
-    createQueryName,
-    createJoinDataQueryName,
-    deleteJoinDataQueryName,
-  };
-};
+import DataJoinEditorInput from './DataJoinEditorInput';
+import { getPropsByMode } from './helpers';
 
 export default function DataJoinEditor({
   title = '',
@@ -111,8 +30,8 @@ export default function DataJoinEditor({
   const { t } = useTranslation();
   const [open, setOpen] = useState(false);
   const [allOptions, setAllOptions] = useState([]);
-  const [filteredOptions, setFilteredOptions] = useState([]);
-  const [defaultValues, setDefaultValues] = useState();
+  // const [filteredOptions, setFilteredOptions] = useState([]);
+  // const [defaultValues, setDefaultValues] = useState();
   const [values, setValues] = useState([]);
   const [isLoading, setIsLoading] = useState(false);
 
@@ -196,7 +115,6 @@ export default function DataJoinEditor({
         }),
       ]);
       setOpen(false);
-      setDefaultValues(null);
       if (onUpdate) {
         onUpdate();
       }
@@ -207,23 +125,6 @@ export default function DataJoinEditor({
     }
   };
 
-  const handleChange = (event, values) => {
-    setValues([...values]);
-  };
-
-  useEffect(() => {
-    setFilteredOptions(allOptions
-      .map((option) => option.label)
-      .filter((x) => !values.includes(x))
-      .sort((a, b) => a > b ? 1 : -1));
-  }, [allOptions, values]);
-
-  useEffect(() => {
-    const values = joinData.map((item) => item[mode.split('-')[1]].label);
-    setDefaultValues(values);
-    setValues(values);
-  }, [joinData]);
-
   useEffect(() => {
     (async () => {
       const { listOptionsQueryName } = getPropsByMode(mode);
@@ -232,8 +133,6 @@ export default function DataJoinEditor({
       setAllOptions(restuls);
     })();
   }, [mode]);
-
-  if (!defaultValues) return null;
 
   return (
     <React.Fragment>
@@ -249,32 +148,12 @@ export default function DataJoinEditor({
               setOpen(false);
             }}
           >
-            <Autocomplete
-              multiple
-              id="tags-filled"
-              options={filteredOptions}
-              defaultValue={defaultValues}
-              freeSolo
-              renderTags={(value, getTagProps) =>
-                value.map((option, index) => (
-                  <Chip key={index} variant="outlined" label={option} {...getTagProps({ index })} />
-                ))
-              }
-              renderInput={(params) => (
-                <TextField {...params} variant="outlined" label={title} placeholder="" />
-              )}
-              // renderOption={(option, { selected }) => (
-              //   <React.Fragment>
-              //     <Checkbox
-              //       icon={icon}
-              //       checkedIcon={checkedIcon}
-              //       style={{ marginRight: 8 }}
-              //       checked={selected}
-              //     />
-              //     {option.title}
-              //   </React.Fragment>
-              // )}
-              onChange={handleChange}
+            <DataJoinEditorInput
+              title={title}
+              mode={mode}
+              joinData={joinData}
+              onChange={setValues}
+              onUpdateOptions={setAllOptions}
               disabled={isLoading}
             />
             <div style={{ width: '100%', textAlign: 'center', paddingTop: 16 }}>

@@ -5,6 +5,8 @@ import Grid from '@material-ui/core/Grid';
 
 import {
   getLinksSchema,
+  getUsernameSchema,
+  getProjectTaskIdSchema,
 } from 'forms/schemas';
 import {
   getLinksUiSchema,
@@ -32,6 +34,7 @@ export default function DataForm({
   formData: inFormData,
   children,
   onChange,
+  onChangeUpdate,
   hideSubmitButton = false,
   ...props
 }) {
@@ -40,6 +43,14 @@ export default function DataForm({
   const [isLoading, setIsLoading] = useState(false);
   const [formData, setFormData] = useState({});
   const [dirty, setDirty] = useState(false);
+
+  const reload = () => {
+    const currentSchema = schema;
+    setSchema(undefined);
+    setTimeout(() => {
+      setSchema(currentSchema);
+    });
+  };
 
   const handleSubmit = async ({ formData }) => {
     try {
@@ -81,7 +92,9 @@ export default function DataForm({
     (async () => {
       // Update schema
       const extMappings = [
+        { key: 'username', func: getUsernameSchema },
         { key: 'links', func: getLinksSchema },
+        { key: 'projectTaskId', func: () => getProjectTaskIdSchema((inFormData || {}).projectId) },
       ];
       const schema = inSchema;
 
@@ -127,12 +140,27 @@ export default function DataForm({
       formData={formData}
       onSubmit={handleSubmit}
       disabled={isLoading}
-      // liveValidate={true}
-      onChange={({ formData }) =>{
-        // console.log('formData update', formData);
+      showErrorList={false}
+      // liveValidate={onChangeUpdate ? true : false}
+      onChange={({ formData, ...props }) => {
+        console.log(props);
+        if (process.env.NODE_ENV !== 'production') {
+          console.log('formData update', formData);
+        }
+
+        let shouldRefresh = false;
+        if (onChangeUpdate) {
+          const res = onChangeUpdate(formData);
+          formData = res.formData;
+          shouldRefresh = res.shouldRefresh;
+        }
         setFormData(formData);
         setDirty(true);
         onChange && onChange(formData);
+
+        if (shouldRefresh) {
+          reload();
+        }
       }}
       ArrayFieldTemplate={ArrayTemplate}
       ObjectFieldTemplate={ObjectFieldTemplate}
@@ -158,6 +186,7 @@ DataForm.propTypes = {
   formData: PropTypes.object,
   onComplete: PropTypes.func,
   onChange: PropTypes.func,
+  onChangeUpdate: PropTypes.func,
   children: PropTypes.element,
   hideSubmitButton: PropTypes.bool,
 };

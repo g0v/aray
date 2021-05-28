@@ -15,6 +15,7 @@ export default function MyProjectList() {
 
   const [ownProjects, setOwnProjects] = useState([]);
   const [otherProjects, setOtherProjects] = useState([]);
+  const [lastUpdatedAt, setLastUpdatedAt] = useState(Date.now());
 
   // const handleCreateProject = async () => {
   //   console.log('create project');
@@ -29,7 +30,7 @@ export default function MyProjectList() {
       setOwnProjects(projects.filter(({ role }) => role === 'manager'));
       setOtherProjects(projects.filter(({ role }) => role === 'contributor'));
     })();
-  }, []);
+  }, [lastUpdatedAt]);
 
   // console.log({ ownProjects, otherProjects });
 
@@ -55,7 +56,11 @@ export default function MyProjectList() {
           </Grid>
         ))}
       </Grid>
-      <ProjectEditButton mode={'add'} type="floating-button" />
+      <ProjectEditButton
+        mode={'add'}
+        type="floating-button"
+        onUpdate={() => setLastUpdatedAt(Date.now())}
+      />
     </Container>
   );
 }

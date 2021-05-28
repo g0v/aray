@@ -248,6 +248,9 @@ export const onCreateNeed = /* GraphQL */ `
             name
             summary
             description
+            totalCompletedHours
+            totalCompletedTasks
+            totalContributors
             createdAt
             createdBy
             updatedAt
@@ -293,6 +296,9 @@ export const onUpdateNeed = /* GraphQL */ `
             name
             summary
             description
+            totalCompletedHours
+            totalCompletedTasks
+            totalContributors
             createdAt
             createdBy
             updatedAt
@@ -338,6 +344,9 @@ export const onDeleteNeed = /* GraphQL */ `
             name
             summary
             description
+            totalCompletedHours
+            totalCompletedTasks
+            totalContributors
             createdAt
             createdBy
             updatedAt
@@ -364,6 +373,9 @@ export const onCreateProject = /* GraphQL */ `
         description
         url
       }
+      totalCompletedHours
+      totalCompletedTasks
+      totalContributors
       createdAt
       createdBy
       updatedAt
@@ -393,6 +405,9 @@ export const onCreateProject = /* GraphQL */ `
             name
             summary
             description
+            totalCompletedHours
+            totalCompletedTasks
+            totalContributors
             createdAt
             createdBy
             updatedAt
@@ -426,6 +441,9 @@ export const onCreateProject = /* GraphQL */ `
             name
             summary
             description
+            totalCompletedHours
+            totalCompletedTasks
+            totalContributors
             createdAt
             createdBy
             updatedAt
@@ -451,6 +469,9 @@ export const onCreateProject = /* GraphQL */ `
             name
             summary
             description
+            totalCompletedHours
+            totalCompletedTasks
+            totalContributors
             createdAt
             createdBy
             updatedAt
@@ -487,6 +508,9 @@ export const onCreateProject = /* GraphQL */ `
             name
             summary
             description
+            totalCompletedHours
+            totalCompletedTasks
+            totalContributors
             createdAt
             createdBy
             updatedAt
@@ -535,6 +559,9 @@ export const onUpdateProject = /* GraphQL */ `
         description
         url
       }
+      totalCompletedHours
+      totalCompletedTasks
+      totalContributors
       createdAt
       createdBy
       updatedAt
@@ -564,6 +591,9 @@ export const onUpdateProject = /* GraphQL */ `
             name
             summary
             description
+            totalCompletedHours
+            totalCompletedTasks
+            totalContributors
             createdAt
             createdBy
             updatedAt
@@ -597,6 +627,9 @@ export const onUpdateProject = /* GraphQL */ `
             name
             summary
             description
+            totalCompletedHours
+            totalCompletedTasks
+            totalContributors
             createdAt
             createdBy
             updatedAt
@@ -622,6 +655,9 @@ export const onUpdateProject = /* GraphQL */ `
             name
             summary
             description
+            totalCompletedHours
+            totalCompletedTasks
+            totalContributors
             createdAt
             createdBy
             updatedAt
@@ -658,6 +694,9 @@ export const onUpdateProject = /* GraphQL */ `
             name
             summary
             description
+            totalCompletedHours
+            totalCompletedTasks
+            totalContributors
             createdAt
             createdBy
             updatedAt
@@ -706,6 +745,9 @@ export const onDeleteProject = /* GraphQL */ `
         description
         url
       }
+      totalCompletedHours
+      totalCompletedTasks
+      totalContributors
       createdAt
       createdBy
       updatedAt
@@ -735,6 +777,9 @@ export const onDeleteProject = /* GraphQL */ `
             name
             summary
             description
+            totalCompletedHours
+            totalCompletedTasks
+            totalContributors
             createdAt
             createdBy
             updatedAt
@@ -768,6 +813,9 @@ export const onDeleteProject = /* GraphQL */ `
             name
             summary
             description
+            totalCompletedHours
+            totalCompletedTasks
+            totalContributors
             createdAt
             createdBy
             updatedAt
@@ -793,6 +841,9 @@ export const onDeleteProject = /* GraphQL */ `
             name
             summary
             description
+            totalCompletedHours
+            totalCompletedTasks
+            totalContributors
             createdAt
             createdBy
             updatedAt
@@ -829,6 +880,9 @@ export const onDeleteProject = /* GraphQL */ `
             name
             summary
             description
+            totalCompletedHours
+            totalCompletedTasks
+            totalContributors
             createdAt
             createdBy
             updatedAt
@@ -905,6 +959,9 @@ export const onCreateProjectKeyword = /* GraphQL */ `
           description
           url
         }
+        totalCompletedHours
+        totalCompletedTasks
+        totalContributors
         createdAt
         createdBy
         updatedAt
@@ -1007,6 +1064,9 @@ export const onUpdateProjectKeyword = /* GraphQL */ `
           description
           url
         }
+        totalCompletedHours
+        totalCompletedTasks
+        totalContributors
         createdAt
         createdBy
         updatedAt
@@ -1109,6 +1169,9 @@ export const onDeleteProjectKeyword = /* GraphQL */ `
           description
           url
         }
+        totalCompletedHours
+        totalCompletedTasks
+        totalContributors
         createdAt
         createdBy
         updatedAt
@@ -1211,6 +1274,9 @@ export const onCreateProjectNeed = /* GraphQL */ `
           description
           url
         }
+        totalCompletedHours
+        totalCompletedTasks
+        totalContributors
         createdAt
         createdBy
         updatedAt
@@ -1313,6 +1379,9 @@ export const onUpdateProjectNeed = /* GraphQL */ `
           description
           url
         }
+        totalCompletedHours
+        totalCompletedTasks
+        totalContributors
         createdAt
         createdBy
         updatedAt
@@ -1415,6 +1484,9 @@ export const onDeleteProjectNeed = /* GraphQL */ `
           description
           url
         }
+        totalCompletedHours
+        totalCompletedTasks
+        totalContributors
         createdAt
         createdBy
         updatedAt
@@ -1497,6 +1569,9 @@ export const onCreateProjectTag = /* GraphQL */ `
           description
           url
         }
+        totalCompletedHours
+        totalCompletedTasks
+        totalContributors
         createdAt
         createdBy
         updatedAt
@@ -1599,6 +1674,9 @@ export const onUpdateProjectTag = /* GraphQL */ `
           description
           url
         }
+        totalCompletedHours
+        totalCompletedTasks
+        totalContributors
         createdAt
         createdBy
         updatedAt
@@ -1701,6 +1779,9 @@ export const onDeleteProjectTag = /* GraphQL */ `
           description
           url
         }
+        totalCompletedHours
+        totalCompletedTasks
+        totalContributors
         createdAt
         createdBy
         updatedAt
@@ -1908,6 +1989,9 @@ export const onCreateTag = /* GraphQL */ `
             name
             summary
             description
+            totalCompletedHours
+            totalCompletedTasks
+            totalContributors
             createdAt
             createdBy
             updatedAt
@@ -1953,6 +2037,9 @@ export const onUpdateTag = /* GraphQL */ `
             name
             summary
             description
+            totalCompletedHours
+            totalCompletedTasks
+            totalContributors
             createdAt
             createdBy
             updatedAt
@@ -1998,6 +2085,9 @@ export const onDeleteTag = /* GraphQL */ `
             name
             summary
             description
+            totalCompletedHours
+            totalCompletedTasks
+            totalContributors
             createdAt
             createdBy
             updatedAt
@@ -2144,6 +2234,9 @@ export const onCreateUser = /* GraphQL */ `
             name
             summary
             description
+            totalCompletedHours
+            totalCompletedTasks
+            totalContributors
             createdAt
             createdBy
             updatedAt
@@ -2304,6 +2397,9 @@ export const onUpdateUser = /* GraphQL */ `
             name
             summary
             description
+            totalCompletedHours
+            totalCompletedTasks
+            totalContributors
             createdAt
             createdBy
             updatedAt
@@ -2464,6 +2560,9 @@ export const onDeleteUser = /* GraphQL */ `
             name
             summary
             description
+            totalCompletedHours
+            totalCompletedTasks
+            totalContributors
             createdAt
             createdBy
             updatedAt
@@ -3087,6 +3186,9 @@ export const onCreateUserProject = /* GraphQL */ `
           description
           url
         }
+        totalCompletedHours
+        totalCompletedTasks
+        totalContributors
         createdAt
         createdBy
         updatedAt
@@ -3233,6 +3335,9 @@ export const onUpdateUserProject = /* GraphQL */ `
           description
           url
         }
+        totalCompletedHours
+        totalCompletedTasks
+        totalContributors
         createdAt
         createdBy
         updatedAt
@@ -3379,6 +3484,9 @@ export const onDeleteUserProject = /* GraphQL */ `
           description
           url
         }
+        totalCompletedHours
+        totalCompletedTasks
+        totalContributors
         createdAt
         createdBy
         updatedAt

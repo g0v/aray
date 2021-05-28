@@ -1,7 +1,7 @@
 const docClient = require('./docClient');
 
 const {
-  // API_ARAY_CONTRIBUTIONTABLE_NAME,
+  API_ARAY_CONTRIBUTIONTABLE_NAME,
   API_ARAY_PROJECTTABLE_NAME,
   // API_ARAY_KEYWORDTABLE_NAME,
   // API_ARAY_NEEDTABLE_NAME,
@@ -12,7 +12,7 @@ const {
   // API_ARAY_PROJECTTASKTABLE_NAME,
   // API_ARAY_TAGTABLE_NAME,
   API_ARAY_USERPROJECTTABLE_NAME,
-  // API_ARAY_USERTABLE_NAME,
+  API_ARAY_USERTABLE_NAME,
 } = process.env;
 
 exports.getProject = async (id) => {
@@ -31,6 +31,30 @@ exports.getTag = async (id) => {
   }).promise();
 
   return Item;
+};
+
+exports.getUser = async (username) => {
+  const { Item } = await docClient.get({
+    TableName: API_ARAY_USERTABLE_NAME,
+    Key: { username },
+  }).promise();
+
+  return Item;
+};
+
+exports.getUserProject = async (username, projectId) => {
+  const items = docClient.queryAll({
+    TableName: API_ARAY_USERPROJECTTABLE_NAME,
+    IndexName: 'byUser',
+    KeyConditionExpression: 'username = :username AND projectId = :projectId',
+    ExpressionAttributeValues: {
+      ':username': username,
+      ':projectId': projectId,
+    },
+    ScanIndexForward: false,
+  });
+
+  return items[0];
 };
 
 exports.listProjectTags = async (projectId) => {
@@ -71,11 +95,6 @@ exports.updateTags = async (items) => {
   await docClient.batchUpdate(API_ARAY_TAGTABLE_NAME, items);
 };
 
-exports.updateUserProjects = async (items) => {
-  if (items.length === 0) return [];
-  await docClient.batchUpdate(API_ARAY_USERPROJECTTABLE_NAME, items);
-};
-
 exports.updateProjectTags = async (items) => {
   if (items.length === 0) return [];
   await docClient.batchUpdate(API_ARAY_PROJECTTAGTABLE_NAME, items);
@@ -84,4 +103,19 @@ exports.updateProjectTags = async (items) => {
 exports.removeProjectTags = async (items) => {
   if (items.length === 0) return [];
   await docClient.batchDelete(API_ARAY_PROJECTTAGTABLE_NAME, 'id', undefined, items);
+};
+
+exports.updateUsers = async (items) => {
+  if (items.length === 0) return [];
+  await docClient.batchUpdate(API_ARAY_USERTABLE_NAME, items);
+};
+
+exports.updateUserProjects = async (items) => {
+  if (items.length === 0) return [];
+  await docClient.batchUpdate(API_ARAY_USERPROJECTTABLE_NAME, items);
+};
+
+exports.updateContributions = async (items) => {
+  if (items.length === 0) return [];
+  await docClient.batchUpdate(API_ARAY_CONTRIBUTIONTABLE_NAME, items);
 };

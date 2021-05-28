@@ -7,11 +7,16 @@ import { makeStyles } from '@material-ui/core/styles';
 
 const useStyles = makeStyles((theme) => ({
   avatar: {
-    border: '1px solid rgba(255,255,255,0.3)',
+    // border: '1px solid rgba(255,255,255,0.3)',
   },
 }));
 
-export default function UserAvatar({ username, name, size = 24 }) {
+export default function UserAvatar({
+  username,
+  name,
+  size = 24,
+  variant = 'circle',
+}) {
   const classes = useStyles();
 
   const [uri, setUri] = useState();
@@ -31,7 +36,7 @@ export default function UserAvatar({ username, name, size = 24 }) {
     <Avatar
       alt={''}
       src={uri}
-      variant="circle"
+      variant={variant}
       style={{ height: size, width: size, fontSize: size * 0.6 }}
       className={classes.avatar}
     >
@@ -44,4 +49,5 @@ UserAvatar.propTypes = {
   username: PropTypes.string.isRequired,
   name: PropTypes.string,
   size: PropTypes.number,
+  variant: PropTypes.string,
 };

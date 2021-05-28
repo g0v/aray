@@ -10,6 +10,8 @@ import CardContent from '@material-ui/core/CardContent';
 import CardMedia from '@material-ui/core/CardMedia';
 // import Button from '@material-ui/core/Button';
 import Typography from '@material-ui/core/Typography';
+import { useTranslation } from 'react-i18next';
+import NumberFormat from 'react-number-format';
 
 import { request } from 'utils/graph';
 import { getUser } from 'graphql/queries';
@@ -26,10 +28,22 @@ const useStyles = makeStyles((theme) => ({
   },
 }));
 
-export default function UserCard({ user: inUser, username: inUsername }) {
+export default function UserCard({
+  user: inUser,
+  username: inUsername,
+  userProject,
+}) {
   const classes = useStyles();
+  const { t } = useTranslation();
 
   const [user, setUser] = useState();
+
+  useEffect(() => {
+    if (!userProject) return;
+    (async () => {
+      setUser(userProject.user);
+    })();
+  }, [userProject]);
 
   useEffect(() => {
     if (!inUser) return;
@@ -64,7 +78,7 @@ export default function UserCard({ user: inUser, username: inUsername }) {
             title="avatar"
           />
           <CardContent>
-            <Typography gutterBottom variant="h5" component="h2">
+            <Typography variant="h5" component="h2" color="textPrimary" gutterBottom>
               {user.name} ({user.username})
             </Typography>
             {user.keywords && user.keywords.items.map((item, index)=>(
@@ -73,6 +87,24 @@ export default function UserCard({ user: inUser, username: inUsername }) {
             {user.needs && user.needs.items.map((item, index)=>(
               <NeedChip key={index} data={item.need} size="small" />
             ))}
+            {userProject &&
+            <Typography variant="body2" color="textSecondary" component="p">
+              {t('userCard_completedTasks')}:&nbsp;
+              <NumberFormat
+                value={userProject.completedTasks}
+                displayType="text"
+                thousandSeparator={true}
+              />
+            </Typography>}
+            {userProject &&
+            <Typography variant="body2" color="textSecondary" component="p">
+              {t('userCard_completedHours')}:&nbsp;
+              <NumberFormat
+                value={userProject.completedHours}
+                displayType="text"
+                thousandSeparator={true}
+              />
+            </Typography>}
           </CardContent>
         </CardActionArea>
       </Link>
@@ -91,4 +123,5 @@ export default function UserCard({ user: inUser, username: inUsername }) {
 UserCard.propTypes = {
   user: PropTypes.object,
   username: PropTypes.string,
+  userProject: PropTypes.object,
 };

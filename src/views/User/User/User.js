@@ -15,7 +15,6 @@ import GitHubIcon from '@material-ui/icons/GitHub';
 import RoomIcon from '@material-ui/icons/Room';
 import MailOutlineIcon from '@material-ui/icons/MailOutline';
 import ChatBubbleOutlineIcon from '@material-ui/icons/ChatBubbleOutline';
-import CalendarHeatmap from 'react-calendar-heatmap';
 import moment from 'moment';
 import NumberFormat from 'react-number-format';
 
@@ -37,6 +36,7 @@ import StatsCard from 'components/StatsCard';
 import ContributionList from './ContributionList';
 import UserEditButton from 'forms/UserForm/UserEditButton';
 import DataJoinEditor from 'components/DataJoinEditor';
+import ContributionHeatmap from './ContributionHeatmap';
 
 const useStyles = makeStyles((theme) => ({
   container: {
@@ -76,7 +76,7 @@ export default function User({ id: inId, computedMatch, match }) {
   const [heatmapData, setHeatmapData] = useState([]);
   const [contributions, setContributions] = useState([]);
   const [keywords, setKeywords] = useState([]);
-  const [projects, setProjects] = useState([]);
+  const [userProjects, setUserProjects] = useState([]);
   const [needs, setNeeds] = useState([]);
   const [canEdit, setCanEdit] = useState(false);
   const [lastUpdatedAt, setLastUpdatedAt] = useState(Date.now());
@@ -172,7 +172,7 @@ export default function User({ id: inId, computedMatch, match }) {
 
       const projects = data.projects.items.map(({ project }) => project);
       setKeywords(data.keywords.items.map(({ keyword }) => keyword));
-      setProjects(projects);
+      setUserProjects(data.projects.items);
       setNeeds(data.needs.items.map(({ need }) => need));
 
       let totalHoursInThePastYear = 0;
@@ -286,7 +286,7 @@ export default function User({ id: inId, computedMatch, match }) {
             <Grid item xs={4}>
               <StatsCard
                 label={t('user_participateProjects')}
-                value={projects.length} />
+                value={userProjects.length} />
             </Grid>
             <Grid item xs={4}>
               <StatsCard
@@ -308,44 +308,11 @@ export default function User({ id: inId, computedMatch, match }) {
                 />
                 {t('user_hours')}
               </Typography>
-              <CalendarHeatmap
+              <ContributionHeatmap
                 startDate={aYearAgo}
                 endDate={today}
-                showWeekdayLabels={true}
-                monthLabels={['01', '02', '03', '04', '05', '06', '07', '08', '09', '10', '11', '12'].map((i)=>t(`datetime_month${i}`))}
-                weekdayLabels={['0', '1', '2', '3', '4', '5', '6'].map((i)=>t(`datetime_weekday${i}`))}
                 values={heatmapData}
-                classForValue={(value) => {
-                  if (!value) {
-                    return 'color-empty';
-                  }
-                  let scaleValue;
-                  if (value.count <= 5) {
-                    scaleValue = 1;
-                  } else
-                  if (value.count <= 10) {
-                    scaleValue = 2;
-                  } else
-                  if (value.count <= 20) {
-                    scaleValue = 3;
-                  } else
-                  if (value.count <= 30) {
-                    scaleValue = 4;
-                  } else {
-                    scaleValue = 5;
-                  }
-                  return `color-scale-${scaleValue}`;
-                }}
-                tooltipDataAttrs={(value) => {
-                  return {
-                    'data-tip': `${value.date} has count: ${
-                      value.count
-                    }`,
-                  };
-                }}
-                onClick={(v)=>console.log(v)}
               />
-              {/* </div> */}
             </Grid>
             <Grid item xs={12}>
               <Typography variant="h6" gutterBottom>
@@ -353,9 +320,11 @@ export default function User({ id: inId, computedMatch, match }) {
               </Typography>
             </Grid>
             <Grid item xs={12} container spacing={2}>
-              {projects.map((item, index)=>(
-                <Grid item xs={12} sm={6} md={4} lg={3} xl={2} key={index}>
-                  <ProjectCard project={item} />
+              {userProjects.map((item, index)=>(
+                <Grid item xs={12} sm={6} md={4} lg={3} key={index}>
+                  <ProjectCard
+                    userProject={item}
+                  />
                 </Grid>
               ))}
             </Grid>

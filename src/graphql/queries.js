@@ -229,6 +229,9 @@ export const getNeed = /* GraphQL */ `
             name
             summary
             description
+            totalCompletedHours
+            totalCompletedTasks
+            totalContributors
             createdAt
             createdBy
             updatedAt
@@ -286,6 +289,9 @@ export const getProject = /* GraphQL */ `
         description
         url
       }
+      totalCompletedHours
+      totalCompletedTasks
+      totalContributors
       createdAt
       createdBy
       updatedAt
@@ -315,6 +321,9 @@ export const getProject = /* GraphQL */ `
             name
             summary
             description
+            totalCompletedHours
+            totalCompletedTasks
+            totalContributors
             createdAt
             createdBy
             updatedAt
@@ -348,6 +357,9 @@ export const getProject = /* GraphQL */ `
             name
             summary
             description
+            totalCompletedHours
+            totalCompletedTasks
+            totalContributors
             createdAt
             createdBy
             updatedAt
@@ -373,6 +385,9 @@ export const getProject = /* GraphQL */ `
             name
             summary
             description
+            totalCompletedHours
+            totalCompletedTasks
+            totalContributors
             createdAt
             createdBy
             updatedAt
@@ -409,6 +424,9 @@ export const getProject = /* GraphQL */ `
             name
             summary
             description
+            totalCompletedHours
+            totalCompletedTasks
+            totalContributors
             createdAt
             createdBy
             updatedAt
@@ -462,6 +480,9 @@ export const listProjects = /* GraphQL */ `
           description
           url
         }
+        totalCompletedHours
+        totalCompletedTasks
+        totalContributors
         createdAt
         createdBy
         updatedAt
@@ -565,6 +586,9 @@ export const getProjectKeyword = /* GraphQL */ `
           description
           url
         }
+        totalCompletedHours
+        totalCompletedTasks
+        totalContributors
         createdAt
         createdBy
         updatedAt
@@ -663,6 +687,9 @@ export const listProjectKeywords = /* GraphQL */ `
             description
             url
           }
+          totalCompletedHours
+          totalCompletedTasks
+          totalContributors
           createdAt
           createdBy
           updatedAt
@@ -728,6 +755,9 @@ export const getProjectNeed = /* GraphQL */ `
           description
           url
         }
+        totalCompletedHours
+        totalCompletedTasks
+        totalContributors
         createdAt
         createdBy
         updatedAt
@@ -826,6 +856,9 @@ export const listProjectNeeds = /* GraphQL */ `
             description
             url
           }
+          totalCompletedHours
+          totalCompletedTasks
+          totalContributors
           createdAt
           createdBy
           updatedAt
@@ -871,6 +904,9 @@ export const getProjectTag = /* GraphQL */ `
           description
           url
         }
+        totalCompletedHours
+        totalCompletedTasks
+        totalContributors
         createdAt
         createdBy
         updatedAt
@@ -978,6 +1014,9 @@ export const listProjectTags = /* GraphQL */ `
             description
             url
           }
+          totalCompletedHours
+          totalCompletedTasks
+          totalContributors
           createdAt
           createdBy
           updatedAt
@@ -1187,6 +1226,9 @@ export const getTag = /* GraphQL */ `
             name
             summary
             description
+            totalCompletedHours
+            totalCompletedTasks
+            totalContributors
             createdAt
             createdBy
             updatedAt
@@ -1364,6 +1406,9 @@ export const getUser = /* GraphQL */ `
             name
             summary
             description
+            totalCompletedHours
+            totalCompletedTasks
+            totalContributors
             createdAt
             createdBy
             updatedAt
@@ -1815,6 +1860,9 @@ export const getUserProject = /* GraphQL */ `
           description
           url
         }
+        totalCompletedHours
+        totalCompletedTasks
+        totalContributors
         createdAt
         createdBy
         updatedAt
@@ -1966,6 +2014,9 @@ export const listUserProjects = /* GraphQL */ `
             description
             url
           }
+          totalCompletedHours
+          totalCompletedTasks
+          totalContributors
           createdAt
           createdBy
           updatedAt

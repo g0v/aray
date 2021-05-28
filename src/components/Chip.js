@@ -5,10 +5,13 @@ import { makeStyles } from '@material-ui/core/styles';
 
 const useStyles = makeStyles((theme) => ({
   container: {
-    margin: 1,
+    margin: 2,
     display: 'inline-block',
-    padding: 5,
-    borderRadius: 10,
+    paddingTop: 2,
+    paddingBottom: 2,
+    paddingLeft: 5,
+    paddingRight: 5,
+    borderRadius: 5,
   },
 }));
 

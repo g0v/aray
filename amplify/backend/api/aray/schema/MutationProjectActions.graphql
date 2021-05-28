@@ -24,3 +24,25 @@ input ProjectItemRequest {
   id: ID!
   label: String!
 }
+
+# Project contributions
+type CreateOrUpdateProjectContributionsResponse {
+  # errors: [String] @aws_cognito_user_pools
+  # message: String @aws_cognito_user_pools
+  data: [ID] @aws_cognito_user_pools
+}
+
+input CreateOrUpdateProjectContributionsRequest {
+  projectId: ID!
+  contributions: [ProjectContributionRequest]
+}
+
+input ProjectContributionRequest {
+  id: ID # optional for update
+  username: String!
+  projectId: ID!
+  projectTaskId: ID
+  summary: String!
+  description: String
+  hours: Float!
+}

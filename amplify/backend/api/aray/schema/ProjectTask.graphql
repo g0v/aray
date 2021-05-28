@@ -5,8 +5,8 @@ type ProjectTask
 
   @auth(rules: [
     { allow: public, operations: [read] },
-    # Use custom graphql api to create/update project tasks (based on the project @auth)
-    { allow: groups, groups: ["Users"], operations: [read] },
+    # TODO: Use custom graphql api to create/update project tasks (based on the project @auth)
+    { allow: groups, groups: ["Users"], operations: [read, create, update] },
     { allow: groups, groups: ["Admins"] },
   ])
 {

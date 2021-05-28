@@ -20,6 +20,7 @@ const useStyles = makeStyles((theme) => ({
     position: 'fixed',
     bottom: theme.spacing(2),
     right: theme.spacing(2),
+    zIndex: 100,
   },
   fabGreen: {
     'color': theme.palette.common.white,

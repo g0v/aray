@@ -7,7 +7,7 @@ import { Link } from 'react-router-dom';
 
 function VisitButton({
   url = '',
-  title = 'Visit',
+  title = '',
   tooltip,
   icon,
   className,

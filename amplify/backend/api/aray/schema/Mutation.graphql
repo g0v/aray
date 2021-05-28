@@ -5,4 +5,10 @@ type Mutation {
     @auth(rules: [
       {allow: groups, groups: ["Admins", "Users"]},
   ])
+  createOrUpdateProjectContributions(input: CreateOrUpdateProjectContributionsRequest!): CreateOrUpdateProjectContributionsResponse
+    @function(name: "projectActions-${env}")
+    @aws_cognito_user_pools
+    @auth(rules: [
+      {allow: groups, groups: ["Admins", "Users"]},
+  ])
 }

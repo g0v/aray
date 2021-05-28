@@ -11,7 +11,6 @@ import { useTranslation } from 'react-i18next';
 import Tabs from '@material-ui/core/Tabs';
 import Tab from '@material-ui/core/Tab';
 
-
 import { request } from 'utils/graph';
 import { getProject } from 'graphql/queries';
 import ProjectEditButton from 'forms/ProjectForm/ProjectEditButton';
@@ -23,6 +22,9 @@ import NeedChip from 'components/NeedChip';
 import DataJoinEditor from 'components/DataJoinEditor';
 import Note from 'components/Note';
 import VisitButton from 'components/VisitButton';
+import ProjectTasks from './ProjectTasks';
+import ProjectContributions from './ProjectContributions';
+import UserChip from 'components/UserChip';
 
 const useStyles = makeStyles((theme) => ({
   container: {
@@ -47,6 +49,9 @@ const useStyles = makeStyles((theme) => ({
   chipContainer: {
     paddingTop: theme.spacing(2),
   },
+  userChipContainer: {
+    paddingBottom: theme.spacing(1),
+  },
 }));
 
 export default function Project({ id: inId, computedMatch, match }) {
@@ -61,6 +66,33 @@ export default function Project({ id: inId, computedMatch, match }) {
   const [canEdit, setCanEdit] = useState(false);
   const [lastUpdatedAt, setLastUpdatedAt] = useState(Date.now());
   const [tabIndex, setTabIndex] = useState(0);
+
+  const tabs = [
+    {
+      label: t('project_contributors'),
+      component: () => <React.Fragment>
+        {project.contributors.items.map((item, index)=>(
+          <Grid item xs={12} sm={6} md={4} lg={3} key={index}>
+            <UserCard userProject={item} />
+          </Grid>
+        ))}
+      </React.Fragment>,
+    },
+    {
+      label: t('project_contributions'),
+      component: () => <ProjectContributions project={project} />,
+    },
+    {
+      label: t('project_tasks'),
+      component: () => <ProjectTasks project={project} />,
+    },
+    // {
+    //   label: t('project_pastProposals'),
+    //   component: <React.Fragment>
+    //   </React.Fragment>,
+    //   disabled: true,
+    // },
+  ];
 
   useEffect(() => {
     if (inId) {
@@ -109,6 +141,21 @@ export default function Project({ id: inId, computedMatch, match }) {
                 {project.summary || ''}
               </Typography>
               <Note data={project.description} />
+              <Typography variant="body1" gutterBottom>
+                {t('project_owner')}
+              </Typography>
+              <div className={classes.userChipContainer}>
+                <UserChip username={project.owner}/>
+              </div>
+              {project.managers.length > 0 &&
+              <Typography variant="body1" gutterBottom>
+                {t('project_managers')}
+              </Typography>}
+              <div className={classes.userChipContainer}>
+                {project.managers.map((username, index)=>(
+                  <UserChip key={index} username={username}/>
+                ))}
+              </div>
             </Grid>
             <Grid item xs={12} className={classes.chipContainer}>
               <Typography variant="body1" gutterBottom>
@@ -193,15 +240,13 @@ export default function Project({ id: inId, computedMatch, match }) {
               aria-label="Project Tabs"
               // centered
             >
-              <Tab label={t('project_contributors')} />
-              <Tab label={t('project_tasks')} disabled />
-              <Tab label={t('project_pastProposals')} disabled />
+              {tabs.map(({ label, disabled }, index)=>(
+                <Tab key={index} label={label} disabled={disabled} />
+              ))}
             </Tabs>
           </Grid>
-          {project.contributors.items.map(({ user }) => user).map((item, index)=>(
-            <Grid item xs={12} sm={6} md={4} lg={3} xl={2} key={index}>
-              <UserCard user={item} />
-            </Grid>
+          {tabs.filter((x, index) => index === tabIndex).map((item, index)=>(
+            <item.component key={index} />
           ))}
           <div style={{ flex: 1 }} />
         </Grid>

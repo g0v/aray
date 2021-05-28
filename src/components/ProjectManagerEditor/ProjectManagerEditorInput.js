@@ -63,7 +63,7 @@ export default function DataJoinEditorInput({
         id="project-managers"
         options={filteredOptions}
         defaultValue={defaultValues}
-        freeSolo
+        // freeSolo
         renderTags={(value, getTagProps) =>
           value.map((option, index) => (
             <Chip key={index} variant="outlined" label={option} {...getTagProps({ index })} />

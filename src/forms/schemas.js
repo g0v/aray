@@ -4,17 +4,17 @@ import { sortBy } from 'utils/sorting';
 export const getLinksSchema = () => {
   return {
     'type': 'array',
-    'title': '連結',
+    'title': 'projectFormSchema_links',
     'items': {
       'type': 'object',
       'properties': {
         'name': {
           'type': 'string',
-          'title': '名稱',
+          'title': 'projectFormSchema_linksName',
         },
         'url': {
           'type': 'string',
-          'title': '網址',
+          'title': 'projectFormSchema_linksUrl',
         },
       },
     },

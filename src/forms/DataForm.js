@@ -2,6 +2,7 @@ import React, { useState, useEffect } from 'react';
 import PropTypes from 'prop-types';
 import Form from '@rjsf/material-ui';
 import Grid from '@material-ui/core/Grid';
+import { useTranslation } from 'react-i18next';
 
 import {
   getLinksSchema,
@@ -38,6 +39,8 @@ export default function DataForm({
   hideSubmitButton = false,
   ...props
 }) {
+  const { t } = useTranslation();
+
   const [schema, setSchema] = useState();
   const [uiSchema, setUiSchema] = useState();
   const [isLoading, setIsLoading] = useState(false);
@@ -98,6 +101,8 @@ export default function DataForm({
       ];
       const schema = inSchema;
 
+      schema.title = t(schema.title);
+
       const promises = Object.keys(schema.properties).map(async (key) => {
         const matched = extMappings.find((item) => item.key === key);
         if (matched) {
@@ -105,6 +110,9 @@ export default function DataForm({
           const extSchema = await matched.func(currentValue, schema.properties[key].title);
           schema.properties[key] = Object.assign(schema.properties[key], extSchema);
         }
+
+        schema.properties[key].title = t(schema.properties[key].title);
+        schema.properties[key].description = t(schema.properties[key].description);
       });
       await Promise.all(promises);
 

@@ -2,7 +2,7 @@
 import ProjectStatus from 'constants/ProjectStatus';
 
 export default {
-  "title": "專案",
+  "title": "projectFormSchema_title",
   "type": "object",
   "required": [
     "status", "name"
@@ -10,22 +10,22 @@ export default {
   "properties": {
     "status": {
       "type": "string",
-      "title": "狀態",
+      "title": "projectFormSchema_status",
       'enum': ProjectStatus.map(({ value }) => value),
       'enumNames': ProjectStatus.map(({ label }) => label),
       'default': ProjectStatus[0].value,
     },
     "name": {
       "type": "string",
-      "title": "名稱"
+      "title": "projectFormSchema_status"
     },
     "summary": {
       "type": ["string", "null"],
-      "title": "簡述"
+      "title": "projectFormSchema_summary"
     },
     "description": {
       "type": ["string", "null"],
-      "title": "詳細敘述"
+      "title": "projectFormSchema_description"
     },
     "links": {
       "type": "array"

@@ -54,6 +54,15 @@ projectManagerEditor_confirm: 確認
 
 projectTasks_hours: 小時
 
+projectFormSchema_title: 專案
+projectFormSchema_status: 狀態
+projectFormSchema_name: 名稱
+projectFormSchema_summary: 簡述
+projectFormSchema_description: 詳細描述
+projectFormSchema_links: 連結
+projectFormSchema_linksName: 名稱
+projectFormSchema_linksUrl: 網址
+
 userCard_completedTasks: 完成任務
 userCard_completedHours: 貢獻時數
 

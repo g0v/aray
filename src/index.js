@@ -2,7 +2,12 @@ import React from 'react';
 import clsx from 'clsx';
 import ReactDOM from 'react-dom';
 import { createBrowserHistory } from 'history';
-import { Router, Route, Switch, Redirect } from 'react-router';
+import {
+  Router,
+  Route,
+  Switch,
+  Redirect,
+} from 'react-router';
 import Amplify, { Auth } from 'aws-amplify';
 import Analytics from '@aws-amplify/analytics';
 import to from 'await-to-js';
@@ -13,7 +18,10 @@ import { makeStyles } from '@material-ui/core/styles';
 import 'react-redux-toastr/lib/css/react-redux-toastr.min.css';
 import { Provider } from 'react-redux';
 import ReduxToastr from 'react-redux-toastr';
+import DocumentTitle from 'react-document-title';
+import { useTranslation } from 'react-i18next';
 
+import 'react-calendar-heatmap/dist/styles.css';
 import './global';
 import './i18n/i18n';
 import './i18n/Amplify';
@@ -49,6 +57,12 @@ const theme = createMuiTheme({
       dark: Colors.primaryDark,
       contrastText: '#fff',
     },
+    secondary: {
+      light: Colors.secondaryLight,
+      main: Colors.secondary,
+      dark: Colors.secondaryDark,
+      contrastText: '#fff',
+    },
   },
 });
 
@@ -63,6 +77,7 @@ const useStyles = makeStyles((theme) => ({
       duration: theme.transitions.duration.leavingScreen,
     }),
     marginLeft: DRAWER_WIDTH,
+    minHeight: 'calc(100vh - 64px)',
   },
   contentShift: {
     transition: theme.transitions.create('margin', {
@@ -78,31 +93,38 @@ const initialPath = history.location;
 
 function ReactApp() {
   const classes = useStyles();
+  const { t } = useTranslation();
 
   const [isLoading, setIsLoading] = React.useState(true);
   const [user, setUser] = React.useState();
   const [filteredRoutes, setFilteredRoutes] = React.useState([]);
-  const [open, setOpen] = React.useState(false);
+  const [open, setOpen] = React.useState(true);
 
   React.useEffect(() => {
     (async () => {
-      const [err, user] = await to(Auth.currentAuthenticatedUser({ bypassCache: true }));
+      const [err, cognitoUser] = await to(Auth.currentAuthenticatedUser({ bypassCache: true }));
+      console.log({ err, cognitoUser });
       if (err) {
         setIsLoading(false);
         history.push(initialPath);
       } else {
-        setUser(user);
+        setUser(cognitoUser);
         setIsLoading(false);
       }
     })();
-    return onAuthUIStateChange((nextAuthState, authData) => {
+    return onAuthUIStateChange(async (nextAuthState, authData) => {
+      console.log('onAuthUIStateChange', nextAuthState, authData);
       setUser(authData);
     });
   }, []);
 
   React.useEffect(() => {
     if (!user || !user.signInUserSession) {
-      setFilteredRoutes([]);
+      const filteredRoutes = appRoutes.filter(({ roles }) => {
+        return !roles || roles.length === 0;
+      });
+      console.log('filteredRoutes', filteredRoutes);
+      setFilteredRoutes(filteredRoutes);
       return;
     }
     // console.log(user);
@@ -126,6 +148,8 @@ function ReactApp() {
     return (<Loading />);
   }
 
+  console.log('user', user);
+
   return (
     <Router history={history}>
       <CustomAppBar
@@ -144,6 +168,19 @@ function ReactApp() {
             <Route path="/" component={App} />:
             <React.Fragment>
               <Route path="/" exact component={LandingPage} />
+              {filteredRoutes.map((item)=>(
+                <item.route
+                  key={item.path}
+                  exact={item.exact}
+                  path={item.path}
+                  roles={item.roles}
+                  user={user}
+                  render={ (props) => (
+                    <DocumentTitle title={`${t('app_short_name')} | ${t(item.title)}`}>
+                      <item.component {...props} />
+                    </DocumentTitle>)
+                  }/>
+              ))}
               <Redirect to="/" />
             </React.Fragment>}
         </Switch>

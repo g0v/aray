@@ -8,7 +8,7 @@
     "test": "react-scripts test",
     "eject": "react-scripts eject",
     "lint": "npx eslint src data amplify/backend tests --ext .js,.jsx,.ts",
-    "push": "amplify api gql-compile && amplify push -y && amplify codegen"
+    "push": "amplify api gql-compile && amplify push -y && amplify codegen --maxDepth 4"
   },
   "dependencies": {
     "@aws-amplify/ui-components": "^1.3.0",
@@ -16,6 +16,8 @@
     "@material-ui/core": "^4.11.4",
     "@material-ui/icons": "^4.11.2",
     "@material-ui/lab": "^4.0.0-alpha.58",
+    "@rjsf/core": "^2.5.1",
+    "@rjsf/material-ui": "^2.5.1",
     "@testing-library/jest-dom": "^5.11.4",
     "@testing-library/react": "^11.1.0",
     "@testing-library/user-event": "^12.1.10",
@@ -24,12 +26,16 @@
     "i18next": "^20.2.2",
     "i18next-xhr-backend": "^3.2.2",
     "js-yaml": "^3.13.1",
+    "moment": "^2.29.1",
+    "moment-timezone": "^0.5.33",
     "prop-types": "^15.7.2",
     "query-string": "^4.3.4",
     "react": "^17.0.2",
+    "react-calendar-heatmap": "^1.8.1",
     "react-document-title": "^2.0.3",
     "react-dom": "^17.0.2",
     "react-i18next": "^11.8.15",
+    "react-number-format": "^4.5.5",
     "react-redux": "^7.2.4",
     "react-redux-toastr": "^7.6.5",
     "react-router": "^5.2.0",
@@ -38,6 +44,7 @@
     "web-vitals": "^1.0.1"
   },
   "devDependencies": {
+    "dotenv": "^8.2.0",
     "eslint": "^7.25.0",
     "eslint-config-google": "^0.14.0",
     "eslint-plugin-import": "^2.22.1",

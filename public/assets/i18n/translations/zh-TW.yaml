@@ -1,7 +1,94 @@
-app_name: ARAY 阿賴～
-app_short_name: 阿賴～
+app_name: ARAY
+app_short_name: ARAY
 
 config_locale: zh-TW
-config_time_zone: Asia/Taipei
 
 title_dashboard: 總覽
+title_myProfile: 我的頁面
+title_myProjectList: 我的專案
+title_projectList: 找專案(坑)
+title_project: 專案
+title_userList: 找幫手
+title_user: 貢獻者
+
+myProjectList_myProjects: 我的專案
+myProjectList_otherProjects: 參與的專案
+
+projectList_projects: 專案列表
+projectList_searchByTags: 用標籤搜尋
+projectList_searchByKeywords: 用關鍵字搜尋
+projectList_searchByNeeds: 用人力需求搜尋
+projectList_searchByText: 用字串搜尋
+
+userList_users: 貢獻者
+userList_searchByKeywords: 用關鍵字搜尋
+userList_searchByNeeds: 用專長搜尋
+userList_searchByText: 用字串搜尋
+
+user_editProfile: 更新個人資料
+user_editKeywords: 更新關鍵字
+user_editNeeds: 更新專長
+user_totalHoursInThePastYear: 過去一年的貢獻總時數
+user_keywords: 關鍵字
+user_totalCompletedHours: 總貢獻時數 
+user_totalCompletedTasks: 總完成任務
+user_participateProjects: 參與的專案
+user_recentContributions: 近期貢獻紀錄
+user_hours: 小時
+user_needs: 專長
+
+project_links: 文件連結
+project_tags: 標籤
+project_keywords: 關鍵字
+project_needs: 人力需求
+project_contributors: 貢獻者
+project_pastProposals: 過往提案
+project_tasks: 任務
+project_contributions: 貢獻紀錄
+project_owner: 坑主
+project_managers: 共同坑主
+
+projectManagerEditor_update: 更新
+projectManagerEditor_title: 共同管理坑主
+projectManagerEditor_confirm: 確認
+
+projectTasks_hours: 小時
+
+projectFormSchema_title: 專案
+projectFormSchema_status: 狀態
+projectFormSchema_name: 名稱
+projectFormSchema_summary: 簡述
+projectFormSchema_description: 詳細描述
+projectFormSchema_links: 連結
+projectFormSchema_linksName: 名稱
+projectFormSchema_linksUrl: 網址
+
+userCard_completedTasks: 完成任務
+userCard_completedHours: 貢獻時數
+
+projectCard_completedTasks: 完成任務
+projectCard_completedHours: 貢獻時數
+
+dataJoinEditor_update: 更新
+dataJoinEditor_confirm: 確認
+
+datetime_month01: 一月
+datetime_month02: 二月
+datetime_month03: 三月
+datetime_month04: 四月
+datetime_month05: 五月
+datetime_month06: 六月
+datetime_month07: 七月
+datetime_month08: 八月
+datetime_month09: 九月
+datetime_month10: 十月
+datetime_month11: 十一月
+datetime_month12: 十二月
+datetime_weekday0: 日
+datetime_weekday1: 一
+datetime_weekday2: 二
+datetime_weekday3: 三
+datetime_weekday4: 四
+datetime_weekday5: 五
+datetime_weekday6: 六
+

@@ -1,0 +1,22 @@
+type ProjectKeyword
+  @model
+  @key(name: "byKeyword", fields: ["keywordId", "projectId"])
+  @key(name: "byProject", fields: ["projectId", "keywordId"])
+  @auth(rules: [
+    { allow: public, operations: [read] },
+    { allow: groups, groups: ["Users"], operations: [read, create, update, delete] },
+    { allow: groups, groups: ["Admins"] },
+  ])
+{
+  id: ID!
+  projectId: ID!
+  keywordId: ID!
+
+  project: Project! @connection(fields: ["projectId"])
+  keyword: Keyword! @connection(fields: ["keywordId"])
+
+  createdAt: AWSDateTime!
+  createdBy: String!
+  updatedAt: AWSDateTime!
+  updatedBy: String!
+}

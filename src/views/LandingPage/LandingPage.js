@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useEffect } from 'react';
 import { makeStyles } from '@material-ui/core/styles';
 import Container from '@material-ui/core/Container';
 import Grid from '@material-ui/core/Grid';
@@ -6,6 +6,8 @@ import Box from '@material-ui/core/Box';
 // import Button from '@material-ui/core/Button';
 // import AndroidIcon from '@material-ui/icons/Android';
 // import AppleIcon from '@material-ui/icons/Apple';
+import { request } from 'utils/graph';
+import { getUser } from 'graphql/queries';
 
 const useStyles = makeStyles((theme) => ({
   content: {
@@ -18,11 +20,21 @@ const useStyles = makeStyles((theme) => ({
 export default function LandingPage() {
   const classes = useStyles();
 
+  useEffect(() => {
+    (async () => {
+      console.log('LandingPage...');
+      const res = await request(getUser, { username: 'demo' });
+      console.log(res);
+    })();
+  }, []);
+
   return (
-    <Container maxWidth="sm">
+    <Container>
       <Grid className={classes.content} container alignItems="center" justify="center" direction="column">
         <Box component="div" p={4}>
-          <img src="/logo/logo_256.png" alt="Logo" width="256" />
+          {/* <img src="/logo/logo_256.png" alt="Logo" width="256" /> */}
+          零時小學校在今年預計將與 g0ver @John Huang 和日本 Code for Japan、韓國 Code for Korea 合作「時數系統」專案，讓零時小學校的營隊學生和專案參與者，都可以將上課或貢獻專案的時數登錄在系統上，並可輸出時數證明，讓你在社群的貢獻可以被看見。
+          「時數系統」專案第一階段將開放零時小學校和合作社群的學生使用，第二階段會再開放 g0v 所有坑主加入，也就是坑主以後都可以加入這個系統，協助坑內成員做時數認證或其他貢獻的串連。
         </Box>
 
         {/* <Grid container justify="space-around" alignItems="center">

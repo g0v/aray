@@ -15,6 +15,7 @@ const StyleChip = withStyles({
     paddingTop: 0,
     paddingBottom: 0,
     height: 24,
+    margin: 2,
   },
 })(Chip);
 

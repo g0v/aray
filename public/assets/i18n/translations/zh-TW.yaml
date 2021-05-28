@@ -18,10 +18,12 @@ projectList_projects: 專案列表
 projectList_searchByTags: 用標籤搜尋
 projectList_searchByKeywords: 用關鍵字搜尋
 projectList_searchByNeeds: 用人力需求搜尋
+projectList_searchByText: 用字串搜尋
 
 userList_users: 貢獻者
 userList_searchByKeywords: 用關鍵字搜尋
 userList_searchByNeeds: 用專長搜尋
+userList_searchByText: 用字串搜尋
 
 user_editProfile: 更新個人資料
 user_editKeywords: 更新關鍵字
@@ -45,6 +47,10 @@ project_tasks: 任務
 project_contributions: 貢獻紀錄
 project_owner: 坑主
 project_managers: 共同坑主
+
+projectManagerEditor_update: 更新
+projectManagerEditor_title: 共同管理坑主
+projectManagerEditor_confirm: 確認
 
 projectTasks_hours: 小時
 

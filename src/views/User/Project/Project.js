@@ -25,6 +25,7 @@ import ProjectTasks from './ProjectTasks';
 import ProjectContributions from './ProjectContributions';
 import UserChip from 'components/UserChip';
 import ProjectAvatar from 'components/ProjectAvatar';
+import ProjectManagerEditor from 'components/ProjectManagerEditor';
 
 const useStyles = makeStyles((theme) => ({
   container: {
@@ -131,7 +132,7 @@ export default function Project({ id: inId, computedMatch, match }) {
   return (
     <Container className={classes.container}>
       <Grid container spacing={4}>
-        <Grid item xs={3} container style={{ height: 100 }}>
+        <Grid item xs={3} container>
           <Card className={classes.card}>
             <Grid item xs={12} container spacing={2}>
               <Grid item xs={12} align="center">
@@ -142,23 +143,29 @@ export default function Project({ id: inId, computedMatch, match }) {
                 />
               </Grid>
               <Grid item xs={12}>
-                <Typography variant="h4">
+                <Typography variant="h4" gutterBottom>
                   {project.name}
                 </Typography>
                 <Typography variant="body1" gutterBottom>
                   {project.summary || ''}
                 </Typography>
                 <Note data={project.description} />
+              </Grid>
+              <Grid item xs={12}>
                 <Typography variant="body1" gutterBottom>
                   {t('project_owner')}
                 </Typography>
                 <div className={classes.userChipContainer}>
                   <UserChip username={project.owner}/>
                 </div>
-                {project.managers.length > 0 &&
                 <Typography variant="body1" gutterBottom>
                   {t('project_managers')}
-                </Typography>}
+                  {canEdit &&
+                  <ProjectManagerEditor
+                    project={project}
+                    onUpdate={() => setLastUpdatedAt(Date.now())}
+                  />}
+                </Typography>
                 <div className={classes.userChipContainer}>
                   {project.managers.map((username, index)=>(
                     <UserChip key={index} username={username}/>
@@ -239,8 +246,8 @@ export default function Project({ id: inId, computedMatch, match }) {
             </Grid>
           </Card>
         </Grid>
-        <Grid item xs={9} container spacing={2}>
-          <Grid item xs={12}>
+        <Grid item xs={9}>
+          <Grid item xs={12} style={{ height: 64 }}>
             <Tabs
               value={tabIndex}
               indicatorColor="primary"
@@ -254,9 +261,11 @@ export default function Project({ id: inId, computedMatch, match }) {
               ))}
             </Tabs>
           </Grid>
-          {tabs.filter((x, index) => index === tabIndex).map((item, index)=>(
-            <item.component key={index} />
-          ))}
+          <Grid item xs={12} container alignItems="flex-start" justify="flex-start">
+            {tabs.filter((x, index) => index === tabIndex).map((item, index)=>(
+              <item.component key={index} />
+            ))}
+          </Grid>
           <div style={{ flex: 1 }} />
         </Grid>
       </Grid>

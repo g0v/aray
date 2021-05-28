@@ -84,12 +84,16 @@ export default function UserCard({
             <Typography variant="body2" component="p" color="textSecondary" gutterBottom>
               {user.username}
             </Typography>
-            {user.keywords && user.keywords.items.map((item, index)=>(
-              <KeywordChip key={index} data={item.keyword} size="small" />
-            ))}
-            {user.needs && user.needs.items.map((item, index)=>(
-              <NeedChip key={index} data={item.need} size="small" />
-            ))}
+            <div>
+              {user.keywords && user.keywords.items.map((item, index)=>(
+                <KeywordChip key={index} data={item.keyword} size="small" />
+              ))}
+            </div>
+            <div>
+              {user.needs && user.needs.items.map((item, index)=>(
+                <NeedChip key={index} data={item.need} size="small" />
+              ))}
+            </div>
             {userProject &&
             <Typography variant="body2" color="textSecondary" component="p">
               {t('userCard_completedTasks')}:&nbsp;

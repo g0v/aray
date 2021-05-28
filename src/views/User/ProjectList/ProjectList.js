@@ -3,6 +3,7 @@ import React, { useState, useEffect } from 'react';
 import Container from '@material-ui/core/Container';
 import Grid from '@material-ui/core/Grid';
 import Typography from '@material-ui/core/Typography';
+import TextField from '@material-ui/core/TextField';
 import { useTranslation } from 'react-i18next';
 import Card from '@material-ui/core/Card';
 
@@ -20,7 +21,7 @@ export default function UserProjectList() {
   const [filteredProjects, setFilteredProjects] = useState([]);
 
   const handleFilter = (key) => (values) => {
-    console.log(key, values);
+    // console.log(key, values);
     setFilters({
       ...filters,
       [key]: values,
@@ -31,6 +32,14 @@ export default function UserProjectList() {
     const filtered = projects.filter((project) => {
       let shouldDisplay = true;
       Object.keys(filters).forEach((key) => {
+        if (key === 'text') {
+          shouldDisplay = [
+            project.name, project.altName, project.summary, project.description,
+          ].some((value) => {
+            return value ? value.toLowerCase().includes(filters[key]) : false;
+          });
+          return;
+        }
         const targetValues = filters[key];
         if (targetValues.length === 0) {
           return;
@@ -96,6 +105,17 @@ export default function UserProjectList() {
               onChange={handleFilter('needs')}
               onUpdateOptions={()=>{}}
               disabled={isLoading}
+            />
+          </Grid>
+          <Grid item xs={12} md={12}>
+            <TextField
+              id="projectList_searchByText"
+              label={t('projectList_searchByText')}
+              variant="outlined"
+              onChange={(e)=>{
+                handleFilter('text')(e.target.value.toLowerCase());
+              }}
+              fullWidth
             />
           </Grid>
         </Grid>

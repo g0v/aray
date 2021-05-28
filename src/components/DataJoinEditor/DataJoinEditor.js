@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from 'react';
+import React, { useState } from 'react';
 import PropTypes from 'prop-types';
 import IconButton from '@material-ui/core/IconButton';
 // import Chip from '@material-ui/core/Chip';
@@ -13,7 +13,7 @@ import { useTranslation } from 'react-i18next';
 
 import {
   request,
-  asyncListAll,
+  // asyncListAll,
 } from 'utils/graph';
 
 import FormDialog from 'forms/components/FormDialog';
@@ -125,14 +125,14 @@ export default function DataJoinEditor({
     }
   };
 
-  useEffect(() => {
-    (async () => {
-      const { listOptionsQueryName } = getPropsByMode(mode);
-      const restuls = await asyncListAll(listOptionsQueryName, { limit: 1000 });
-      console.log('restuls', restuls);
-      setAllOptions(restuls);
-    })();
-  }, [mode]);
+  // useEffect(() => {
+  //   (async () => {
+  //     const { listOptionsQueryName } = getPropsByMode(mode);
+  //     const restuls = await asyncListAll(listOptionsQueryName, { limit: 1000 });
+  //     console.log('restuls', restuls);
+  //     setAllOptions(restuls);
+  //   })();
+  // }, [mode]);
 
   return (
     <React.Fragment>

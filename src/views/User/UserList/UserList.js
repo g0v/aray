@@ -5,6 +5,7 @@ import Grid from '@material-ui/core/Grid';
 import Typography from '@material-ui/core/Typography';
 import { useTranslation } from 'react-i18next';
 import Card from '@material-ui/core/Card';
+import TextField from '@material-ui/core/TextField';
 
 import { asyncListAll } from 'utils/graph';
 // import { listUsers } from 'graphql/queries';
@@ -30,6 +31,14 @@ export default function UserList({ data: inData, hideTitle = false }) {
     const filtered = users.filter((user) => {
       let shouldDisplay = true;
       Object.keys(filters).forEach((key) => {
+        if (key === 'text') {
+          shouldDisplay = [
+            user.username, user.name, user.selfIntroduction,
+          ].some((value) => {
+            return value ? value.toLowerCase().includes(filters[key]) : false;
+          });
+          return;
+        }
         const targetValues = filters[key];
         if (targetValues.length === 0) {
           return;
@@ -125,6 +134,17 @@ export default function UserList({ data: inData, hideTitle = false }) {
               onChange={handleFilter('needs')}
               onUpdateOptions={()=>{}}
               disabled={isLoading}
+            />
+          </Grid>
+          <Grid item xs={12} md={12}>
+            <TextField
+              id="userList_searchByText"
+              label={t('userList_searchByText')}
+              variant="outlined"
+              onChange={(e)=>{
+                handleFilter('text')(e.target.value.toLowerCase());
+              }}
+              fullWidth
             />
           </Grid>
         </Grid>

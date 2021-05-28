@@ -12,6 +12,7 @@ export default function Note({ data, variant = 'body1' }) {
           variant={variant}
           color="textSecondary"
           component="p"
+          gutterBottom
         >
           {item}
         </Typography>

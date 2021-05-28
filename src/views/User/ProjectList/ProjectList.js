@@ -28,8 +28,6 @@ export default function UserProjectList() {
   };
 
   useEffect(() => {
-    console.log('setFilteredProjects', { filters }, { project: projects[0] });
-
     const filtered = projects.filter((project) => {
       let shouldDisplay = true;
       Object.keys(filters).forEach((key) => {
@@ -104,7 +102,7 @@ export default function UserProjectList() {
       </Card>
       <Grid container spacing={2}>
         {filteredProjects.map((item, index)=>(
-          <Grid item xs={12} sm={6} md={4} lg={3} key={index}>
+          <Grid item xs={12} sm={6} md={3} lg={2} key={index}>
             <ProjectCard project={item} />
           </Grid>
         ))}

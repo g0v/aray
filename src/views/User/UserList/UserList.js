@@ -132,7 +132,7 @@ export default function UserList({ data: inData, hideTitle = false }) {
       {/* TODO: pagination */}
       <Grid container>
         {filteredUsers.map((item, index)=>(
-          <Grid item xs={12} sm={6} md={4} lg={3} key={index}>
+          <Grid item xs={12} sm={6} md={3} lg={2} key={index}>
             <UserCard user={item} />
           </Grid>
         ))}

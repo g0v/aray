@@ -124,8 +124,8 @@ export default function CustomAppBar({ user = {}, routes, open, onUpdate }) {
   const anchorRef = useRef(null);
   const prevOpen = useRef(open);
 
-  // const username = localStorage.getItem('app:username') || '';
-  const userName = localStorage.getItem('app:name') || '';
+  const username = localStorage.getItem('app:username') || '';
+  // const userName = localStorage.getItem('app:name') || '';
   // const userCognitoGroupName = localStorage.getItem('app:cognitoGroup') || '';
   // const userCognitoGroupLabel = userCognitoGroupName ? cognitoGroups.find(({ value }) => value === userCognitoGroupName).label : '';
 
@@ -227,7 +227,7 @@ export default function CustomAppBar({ user = {}, routes, open, onUpdate }) {
                 // startIcon={<UserAvatar username={username} />}
                 className={classes.titleButton}
               >
-                {userName}
+                {username}
               </Button>
             </React.Fragment>:
             <React.Fragment>

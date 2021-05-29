@@ -37,6 +37,8 @@ import Version from 'components/Version';
 // import UserAvatar from 'components/UserAvatar';
 import Colors from 'constants/Colors';
 import { DRAWER_WIDTH } from 'constants/App';
+import LanguageSelector from 'components/LanguageSelector';
+import GithubLinkButton from 'components/GithubLinkButton';
 
 const useStyles = makeStyles((theme) => ({
   root: {
@@ -112,7 +114,7 @@ const useStyles = makeStyles((theme) => ({
   },
 }));
 
-export default function CustomAppBar({ user, routes, open, onUpdate }) {
+export default function CustomAppBar({ user = {}, routes, open, onUpdate }) {
   const classes = useStyles();
   const history = useHistory();
   const { t } = useTranslation();
@@ -122,8 +124,8 @@ export default function CustomAppBar({ user, routes, open, onUpdate }) {
   const anchorRef = useRef(null);
   const prevOpen = useRef(open);
 
-  // const username = localStorage.getItem('app:username') || '';
-  const userName = localStorage.getItem('app:name') || '';
+  const username = localStorage.getItem('app:username') || '';
+  // const userName = localStorage.getItem('app:name') || '';
   // const userCognitoGroupName = localStorage.getItem('app:cognitoGroup') || '';
   // const userCognitoGroupLabel = userCognitoGroupName ? cognitoGroups.find(({ value }) => value === userCognitoGroupName).label : '';
 
@@ -159,7 +161,8 @@ export default function CustomAppBar({ user, routes, open, onUpdate }) {
     try {
       localStorage.clear();
       await Auth.signOut();
-      history.push('/app');
+      window.location.reload();
+      // history.push('/app');
     } catch (e) {
       history.push('/app');
     }
@@ -175,8 +178,6 @@ export default function CustomAppBar({ user, routes, open, onUpdate }) {
         elevation={1}
       >
         <Toolbar style={{ height: 64 }}>
-          <img src="/assets/images/g0v-banner.svg" alt="Logo" width="192" style={{ marginRight: 16 }} />
-
           {user ?
             <IconButton
               color="inherit"
@@ -198,6 +199,7 @@ export default function CustomAppBar({ user, routes, open, onUpdate }) {
                 <MenuIcon />
               </IconButton>
             </Hidden>}
+          <img src="/assets/images/g0v-banner.svg" alt="Logo" width="192" style={{ marginRight: 16 }} />
           {!open &&
             <Typography component="h1" variant="h6" color="inherit" noWrap className={classes.title}>
               <Link to="/" className={classes.unstyledHyperlink} data-test-id="title">
@@ -205,7 +207,9 @@ export default function CustomAppBar({ user, routes, open, onUpdate }) {
               </Link>
             </Typography>}
           <div className={classes.flexbox} />
-          {user ?
+          <GithubLinkButton url='g0v/aray' />
+          <LanguageSelector />
+          {user && user.username ?
             <React.Fragment>
               <IconButton color="inherit">
                 <Badge badgeContent={0} max={99} color="secondary">
@@ -223,18 +227,10 @@ export default function CustomAppBar({ user, routes, open, onUpdate }) {
                 // startIcon={<UserAvatar username={username} />}
                 className={classes.titleButton}
               >
-                {userName}
+                {username}
               </Button>
             </React.Fragment>:
             <React.Fragment>
-              {/* <Typography component="p" color="inherit" noWrap className={classes.title}>
-                <Link
-                  to={'/application'}
-                  className={classes.unsty  ledHyperlink}
-                >
-                  機構申請
-                </Link>
-              </Typography> */}
               <Button
                 color="inherit"
                 component={Link}
@@ -296,49 +292,34 @@ export default function CustomAppBar({ user, routes, open, onUpdate }) {
           </IconButton> */}
         </div>
         <Divider />
-        {user ?
-          <List>
-            {routes.filter((x) => !x.hideFromMenu).map((route, index) => (
-              <ListItem
-                key={index}
-                button
-                component={Link}
-                selected={window.location.pathname.startsWith(route.link || route.path)}
-                to={route.link || route.path}
-              >
-                <ListItemIcon style={{ minWidth: 36 }}>
-                  {route.icon ? <route.icon /> : null}
-                </ListItemIcon>
-                <ListItemText primary={route.title} />
-                {route.badge && <route.badge />}
-              </ListItem>
-            ))}
-            <Divider />
+        <List>
+          {routes.filter((x) => !x.hideFromMenu).map((route, index) => (
+            <ListItem
+              key={index}
+              button
+              component={Link}
+              // selected={window.location.pathname.startsWith(route.link || route.path)}
+              to={route.link || route.path}
+            >
+              <ListItemIcon style={{ minWidth: 36 }}>
+                {route.icon ? <route.icon /> : null}
+              </ListItemIcon>
+              <ListItemText primary={t(route.title)} />
+              {route.badge && <route.badge />}
+            </ListItem>
+          ))}
+          <Divider />
+          {user && user.username &&
             <ListItem button onClick={handleSignOut}>
               <ListItemIcon><ExitToAppIcon /></ListItemIcon>
               <ListItemText primary={'登出'} />
-            </ListItem>
-            <div className={classes.flexbox} />
-            <ListItem>
-              <ListItemText>
-                <Version />
-              </ListItemText>
-            </ListItem>
-          </List>:<List>
-            <ListItem button onClick={()=>history.push('/application')}>
-              <ListItemIcon><PersonAddIcon /></ListItemIcon>
-              <ListItemText primary={'申請加入'} />
-            </ListItem>
-            <Divider />
-            {/* <ListItem button onClick={()=>history.push('/app', { state: 'signup' })}>
-              <ListItemIcon><PersonAddIcon /></ListItemIcon>
-              <ListItemText primary={'註冊'} />
-            </ListItem> */}
-            <ListItem button onClick={()=>history.push('/app', { state: 'signin' })}>
-              <ListItemIcon><PersonIcon /></ListItemIcon>
-              <ListItemText primary={'登入'} />
-            </ListItem>
-          </List>}
+            </ListItem>}
+          <ListItem>
+            <ListItemText>
+              <Version />
+            </ListItemText>
+          </ListItem>
+        </List>
       </Drawer>
     </Box>
   );

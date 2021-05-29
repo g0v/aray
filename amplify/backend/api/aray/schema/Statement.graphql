@@ -1,0 +1,32 @@
+type Statement
+  @model
+  @key(name: "byUsernameByDate",
+    fields: ["username","date"], queryField: "getStatementsByUsernameByDate")
+  @auth(rules: [
+    { allow: public, operations: [read] },
+    { allow: groups, groups: ["Users"], operations: [read] },
+    { allow: groups, groups: ["Admins"] },
+  ])
+{
+  id: ID!
+  username: String!
+  type: StatementType!
+  date: AWSDate! # YYYY-MM-DD Time zone applied
+  totalCompletedHours: Float!
+  totalCompletedTasks: Int!
+  completedHours: Float!
+  completedTasks: Int!
+
+  createdAt: AWSDateTime!
+  createdBy: String!
+  updatedAt: AWSDateTime!
+  updatedBy: String!
+}
+
+enum StatementType {
+  daily
+  weekly
+  monthly
+  quarterly
+  yearly
+}

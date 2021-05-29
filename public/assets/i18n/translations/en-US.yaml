@@ -1,1 +1,10 @@
 app_name: ARAY
+app_short_name: ARAY
+
+config_locale: en-US
+
+title_dashboard: Dashboard
+title_projectList: Projects
+
+projectList_myProjects: My Projects
+projectList_otherProjects: Other Projects

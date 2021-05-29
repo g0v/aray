@@ -1,0 +1,22 @@
+type UserKeyword
+  @model
+  @key(name: "byUser", fields: ["username", "keywordId"])
+  @key(name: "byKeyword", fields: ["keywordId", "username"])
+  @auth(rules: [
+    { allow: public, operations: [read] },
+    { allow: groups, groups: ["Users"], operations: [read, create, update, delete] },
+    { allow: groups, groups: ["Admins"] },
+  ])
+{
+  id: ID!
+  keywordId: ID!
+  username: String!
+
+  keyword: Keyword! @connection(fields: ["keywordId"])
+  user: User! @connection(fields: ["username"])
+
+  createdAt: AWSDateTime!
+  createdBy: String!
+  updatedAt: AWSDateTime!
+  updatedBy: String!
+}

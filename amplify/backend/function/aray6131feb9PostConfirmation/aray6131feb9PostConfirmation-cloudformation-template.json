@@ -173,6 +173,18 @@
             {
               "Effect": "Allow",
               "Action": [
+                "cognito-idp:AdminListGroupsForUser",
+                "appsync:ListGraphqlApis",
+                "dynamodb:Get*",
+                "dynamodb:Create*",
+                "dynamodb:BatchWriteItem",
+                "dynamodb:Put*"
+              ],
+              "Resource": "*"
+            },
+            {
+              "Effect": "Allow",
+              "Action": [
                 "logs:CreateLogGroup",
                 "logs:CreateLogStream",
                 "logs:PutLogEvents"

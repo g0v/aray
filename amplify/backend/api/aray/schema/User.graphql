@@ -1,15 +1,49 @@
 type User
-  @model (subscriptions: { level: public })
+  @model
   @key(fields: ["username"])
   @auth(rules: [
-    {allow: owner, ownerField: "username", operations: [read, create, update]},
-    {allow: groups, groups: ["Admins"]},
+    { allow: public, operations: [read] },
+    { allow: owner, ownerField: "username", operations: [read, update] },
+    { allow: groups, groups: ["Users"], operations: [read] },
+    { allow: groups, groups: ["Admins"] },
   ])
 {
   username: String!
   status: UserStatus!
 
-  email: String
+  name: String!
+  email: AWSEmail!
+    # @auth(rules: [ 
+    #   { allow: groups, groups: ["Admins"], operations: [read] },
+    # ])
+
+  selfIntroduction: String
+  location: String
+  timeZone: String
+
+  slackId: String
+  
+  urlWebsite: AWSURL
+  urlGithub: AWSURL
+  urlLinkedIn: AWSURL
+  urlFacebook: AWSURL
+  urlTwitter: AWSURL
+  urlInstagram: AWSURL
+
+  totalCompletedHours: Float
+    # @auth(rules: [ 
+    #   { allow: public, operations: [read] },
+    #   { allow: groups, groups: ["Users"], operations: [read] },
+    # ])
+  totalCompletedTasks: Int
+    # @auth(rules: [ 
+    #   { allow: public, operations: [read] },
+    #   { allow: groups, groups: ["Users"], operations: [read] },
+    # ])
+
+  projects: [UserProject] @connection(keyName: "byUser", fields: ["username"])
+  keywords: [UserKeyword] @connection(keyName: "byUser", fields: ["username"])
+  needs: [UserNeed] @connection(keyName: "byUser", fields: ["username"])
 
   createdAt: AWSDateTime!
   createdBy: String!

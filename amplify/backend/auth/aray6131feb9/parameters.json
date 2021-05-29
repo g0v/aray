@@ -1,6 +1,6 @@
 {
     "identityPoolName": "aray6131feb9_identitypool_6131feb9",
-    "allowUnauthenticatedIdentities": false,
+    "allowUnauthenticatedIdentities": true,
     "resourceNameTruncated": "aray6131feb9",
     "userPoolName": "aray6131feb9_userpool_6131feb9",
     "autoVerifiedAttributes": [
@@ -10,10 +10,10 @@
     "mfaTypes": [
         "SMS Text Message"
     ],
-    "smsAuthenticationMessage": "Your authentication code is {####}",
-    "smsVerificationMessage": "Your verification code is {####}",
-    "emailVerificationSubject": "Your verification code",
-    "emailVerificationMessage": "Your verification code is {####}",
+    "smsAuthenticationMessage": "[ARAY] Code/驗證碼 {####}",
+    "smsVerificationMessage": "[ARAY] Code/驗證碼 {####}",
+    "emailVerificationSubject": "[ARAY] Code/驗證碼",
+    "emailVerificationMessage": "[ARAY] Code/驗證碼 {####}",
     "defaultPasswordPolicy": false,
     "passwordPolicyMinLength": 8,
     "passwordPolicyCharacters": [],

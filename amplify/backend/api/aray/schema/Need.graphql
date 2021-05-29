@@ -1,0 +1,18 @@
+type Need
+  @model
+  @auth(rules: [
+    { allow: public, operations: [read] },
+    { allow: groups, groups: ["Users"], operations: [read, create] },
+    { allow: groups, groups: ["Admins"] },
+  ])
+{
+  id: ID!
+  label: String!
+
+  projects: [ProjectNeed] @connection(keyName: "byNeed", fields: ["id"])
+
+  createdAt: AWSDateTime!
+  createdBy: String!
+  updatedAt: AWSDateTime!
+  updatedBy: String!
+}

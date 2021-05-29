@@ -13,7 +13,13 @@ const ProtectedRoute = ({ component: Component, render, roles, user: inUser, ...
 
   useEffect(() => {
     if (!isAuthenticated) return;
+    console.log({ roles, user });
     if (roles) {
+      // first time right after confirm signup
+      if (!user.signInUserSession) {
+        window.location.reload();
+        return;
+      }
       const userGroups = user.signInUserSession.accessToken.payload['cognito:groups'];
       const isAuthorized = userGroups && userGroups.some((group) => roles.includes(group)) ? true : false;
       setIsAuthorized(isAuthorized);

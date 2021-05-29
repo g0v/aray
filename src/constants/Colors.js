@@ -1,7 +1,10 @@
 const primaryLight = '#ff363c';
 const primary = '#C42126';
 const primaryDark = '#821114';
-const active = '#2189DC';
+const secondary = '#2189DC';
+const secondaryDark = '#085b9e';
+const secondaryLight = '#52adf7';
+const active = secondary;
 const accent = '#f8aa5d';
 const raised = '#f05a5a';
 const focused = '#439463';
@@ -18,6 +21,9 @@ export default {
   primary,
   primaryLight,
   primaryDark,
+  secondary,
+  secondaryLight,
+  secondaryDark,
   active,
   accent,
   raised,
@@ -35,6 +41,7 @@ export default {
   //
   background: {
     light: '#ebebeb',
+    light2: '#f5f5f5',
   },
 
   tintColor: primary,

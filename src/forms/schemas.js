@@ -1,27 +1,6 @@
 import { request, asyncListAll } from 'utils/graph';
 import { sortBy } from 'utils/sorting';
 
-export const getLinksSchema = () => {
-  return {
-    'type': 'array',
-    'title': 'projectFormSchema_links',
-    'items': {
-      'type': 'object',
-      'properties': {
-        'name': {
-          'type': 'string',
-          'title': 'projectFormSchema_linksName',
-        },
-        'url': {
-          'type': 'string',
-          'title': 'projectFormSchema_linksUrl',
-        },
-      },
-    },
-    'default': [],
-  };
-};
-
 export const getUsernameSchema = async (inUsername) => {
   if (inUsername) {
     const { data: { getUser: user } } = await request( /* GraphQL */ `

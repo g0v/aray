@@ -1,5 +1,5 @@
 /* eslint-disable quotes, comma-dangle */
-import ProjectStatus from 'constants/ProjectStatus';
+import ProjectStatus from "constants/ProjectStatus";
 
 export default {
   "title": "projectFormSchema_title",
@@ -11,13 +11,13 @@ export default {
     "status": {
       "type": "string",
       "title": "projectFormSchema_status",
-      'enum': ProjectStatus.map(({ value }) => value),
-      'enumNames': ProjectStatus.map(({ label }) => label),
-      'default': ProjectStatus[0].value,
+      "enum": ProjectStatus.map(({ value }) => value),
+      "enumNames": ProjectStatus.map(({ label }) => label),
+      "default": ProjectStatus[0].value,
     },
     "name": {
       "type": "string",
-      "title": "projectFormSchema_status"
+      "title": "projectFormSchema_name"
     },
     "summary": {
       "type": ["string", "null"],
@@ -28,7 +28,22 @@ export default {
       "title": "projectFormSchema_description"
     },
     "links": {
-      "type": "array"
+      "type": "array",
+      "title": "projectFormSchema_links",
+      "items": {
+        "type": "object",
+        "properties": {
+          "name": {
+            "type": "string",
+            "title": "projectFormSchema_linksName",
+          },
+          "url": {
+            "type": "string",
+            "title": "projectFormSchema_linksUrl",
+          },
+        },
+      },
+      "default": []
     }
   }
 };

@@ -5,7 +5,6 @@ import Grid from '@material-ui/core/Grid';
 import { useTranslation } from 'react-i18next';
 
 import {
-  getLinksSchema,
   getUsernameSchema,
   getProjectTaskIdSchema,
 } from 'forms/schemas';
@@ -89,6 +88,17 @@ export default function DataForm({
     }
   };
 
+  const updateLang = (schema) => {
+    Object.keys(schema.properties).forEach((key) => {
+      schema.properties[key].title = t(schema.properties[key].title);
+      schema.properties[key].description = t(schema.properties[key].description);
+
+      if (schema.properties[key].items) {
+        updateLang(schema.properties[key].items);
+      }
+    });
+  };
+
   useEffect(() => {
     if (schema) return;
 
@@ -96,7 +106,6 @@ export default function DataForm({
       // Update schema
       const extMappings = [
         { key: 'username', func: getUsernameSchema },
-        { key: 'links', func: getLinksSchema },
         { key: 'projectTaskId', func: () => getProjectTaskIdSchema((inFormData || {}).projectId) },
       ];
       const schema = inSchema;
@@ -111,8 +120,7 @@ export default function DataForm({
           schema.properties[key] = Object.assign(schema.properties[key], extSchema);
         }
 
-        schema.properties[key].title = t(schema.properties[key].title);
-        schema.properties[key].description = t(schema.properties[key].description);
+        updateLang(schema);
       });
       await Promise.all(promises);
 

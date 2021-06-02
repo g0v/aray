@@ -98,7 +98,7 @@ function ReactApp() {
   const [isLoading, setIsLoading] = React.useState(true);
   const [user, setUser] = React.useState();
   const [filteredRoutes, setFilteredRoutes] = React.useState([]);
-  const [open, setOpen] = React.useState(true);
+  const [open, setOpen] = React.useState(false);
 
   React.useEffect(() => {
     (async () => {

@@ -5,10 +5,12 @@ import Link from '@material-ui/core/Link';
 import { Link as RouteLink } from 'react-router-dom';
 import Card from '@material-ui/core/Card';
 import CardActionArea from '@material-ui/core/CardActionArea';
+import CardHeader from '@material-ui/core/CardHeader';
 // import CardActions from '@material-ui/core/CardActions';
 import CardContent from '@material-ui/core/CardContent';
-import CardMedia from '@material-ui/core/CardMedia';
+// import CardMedia from '@material-ui/core/CardMedia';
 // import Button from '@material-ui/core/Button';
+// import Box from '@material-ui/core/Box';
 import Typography from '@material-ui/core/Typography';
 import { useTranslation } from 'react-i18next';
 import NumberFormat from 'react-number-format';
@@ -17,6 +19,7 @@ import { request } from 'utils/graph';
 import { getUser } from 'graphql/queries';
 import KeywordChip from 'components/KeywordChip';
 import NeedChip from 'components/NeedChip';
+import UserAvatar from 'components/UserAvatar';
 
 const useStyles = makeStyles((theme) => ({
   root: {
@@ -26,12 +29,16 @@ const useStyles = makeStyles((theme) => ({
   media: {
     height: 140,
   },
+  avatarContainer: {
+    textAlign: 'center',
+  },
 }));
 
 export default function UserCard({
   user: inUser,
   username: inUsername,
   userProject,
+  variant,
 }) {
   const classes = useStyles();
   const { t } = useTranslation();
@@ -63,7 +70,7 @@ export default function UserCard({
   if (!user) return null;
 
   return (
-    <Card className={classes.root}>
+    <Card className={classes.root} variant={variant}>
       <Link
         to={`/user/${user.username}`}
         component={RouteLink}
@@ -72,18 +79,14 @@ export default function UserCard({
         }}
       >
         <CardActionArea>
-          <CardMedia
-            className={classes.media}
-            image={`https://avatars.dicebear.com/api/bottts/${user.username}.svg`}
-            title="avatar"
+          <CardHeader
+            avatar={
+              <UserAvatar username={user.username} size={50} />
+            }
+            title={user.name}
+            subheader={user.username}
           />
-          <CardContent>
-            <Typography variant="h5" component="h2" color="textPrimary">
-              {user.name}
-            </Typography>
-            <Typography variant="body2" component="p" color="textSecondary" gutterBottom>
-              {user.username}
-            </Typography>
+          <CardContent style={{ paddingTop: 0 }}>
             <div>
               {user.keywords && user.keywords.items.map((item, index)=>(
                 <KeywordChip key={index} data={item.keyword} size="small" />
@@ -131,4 +134,5 @@ UserCard.propTypes = {
   user: PropTypes.object,
   username: PropTypes.string,
   userProject: PropTypes.object,
+  variant: PropTypes.string,
 };

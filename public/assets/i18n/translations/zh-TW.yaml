@@ -47,12 +47,15 @@ project_tasks: 任務
 project_contributions: 貢獻紀錄
 project_owner: 坑主
 project_managers: 共同坑主
+project_main: 介紹
 
 projectManagerEditor_update: 更新
 projectManagerEditor_title: 共同管理坑主
 projectManagerEditor_confirm: 確認
 
 projectTasks_hours: 小時
+
+projectAvatar_updateAvatar: 更新專案圖片
 
 projectFormSchema_title: 專案
 projectFormSchema_status: 狀態
@@ -65,6 +68,12 @@ projectFormSchema_linksUrl: 網址
 
 userCard_completedTasks: 完成任務
 userCard_completedHours: 貢獻時數
+
+userAvatar_updateAvatar: 更新頭像
+
+avatarEditor_clickAndUpload: 點擊上傳圖片
+avatarEditor_cancel: 取消
+avatarEditor_submit: 更新
 
 projectCard_completedTasks: 完成任務
 projectCard_completedHours: 貢獻時數

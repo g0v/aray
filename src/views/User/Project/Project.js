@@ -70,11 +70,17 @@ export default function Project({ id: inId, computedMatch, match }) {
 
   const tabs = [
     {
+      label: t('project_main'),
+      component: () => <React.Fragment>
+        <Note data={project.description} />
+      </React.Fragment>,
+    },
+    {
       label: t('project_contributors'),
       component: () => <React.Fragment>
         {project.contributors.items.map((item, index)=>(
           <Grid item xs={12} sm={6} md={4} lg={3} key={index}>
-            <UserCard userProject={item} />
+            <UserCard userProject={item} variant="outlined" />
           </Grid>
         ))}
       </React.Fragment>,
@@ -131,25 +137,27 @@ export default function Project({ id: inId, computedMatch, match }) {
 
   return (
     <Container className={classes.container}>
-      <Grid container spacing={4}>
-        <Grid item xs={3} container>
-          <Card className={classes.card}>
+      <Card className={classes.card}>
+        <Grid container spacing={4}>
+          <Grid item xs={3} container>
             <Grid item xs={12} container spacing={2}>
               <Grid item xs={12} align="center">
                 <ProjectAvatar
                   projectId={project.id}
                   name={project.name}
                   size={150}
+                  showEditor={true}
+                  canEdit={canEdit}
                 />
               </Grid>
               <Grid item xs={12}>
                 <Typography variant="h4" gutterBottom>
                   {project.name}
                 </Typography>
-                <Typography variant="body1" gutterBottom>
+                {/* <Typography variant="body1" gutterBottom>
                   {project.summary || ''}
-                </Typography>
-                <Note data={project.description} />
+                </Typography> */}
+                <Note data={project.summary} />
               </Grid>
               <Grid item xs={12}>
                 <Typography variant="body1" gutterBottom>
@@ -244,31 +252,31 @@ export default function Project({ id: inId, computedMatch, match }) {
                 ))}
               </Grid>
             </Grid>
-          </Card>
-        </Grid>
-        <Grid item xs={9}>
-          <Grid item xs={12} style={{ height: 64 }}>
-            <Tabs
-              value={tabIndex}
-              indicatorColor="primary"
-              textColor="primary"
-              onChange={(e, newValue)=>setTabIndex(newValue)}
-              aria-label="Project Tabs"
-              // centered
-            >
-              {tabs.map(({ label, disabled }, index)=>(
-                <Tab key={index} label={label} disabled={disabled} />
+          </Grid>
+          <Grid item xs={9}>
+            <Grid item xs={12} style={{ height: 64 }}>
+              <Tabs
+                value={tabIndex}
+                indicatorColor="primary"
+                textColor="primary"
+                onChange={(e, newValue)=>setTabIndex(newValue)}
+                aria-label="Project Tabs"
+                // centered
+              >
+                {tabs.map(({ label, disabled }, index)=>(
+                  <Tab key={index} label={label} disabled={disabled} />
+                ))}
+              </Tabs>
+            </Grid>
+            <Grid item xs={12} container alignItems="flex-start" justify="flex-start">
+              {tabs.filter((x, index) => index === tabIndex).map((item, index)=>(
+                <item.component key={index} />
               ))}
-            </Tabs>
+            </Grid>
+            <div style={{ flex: 1 }} />
           </Grid>
-          <Grid item xs={12} container alignItems="flex-start" justify="flex-start">
-            {tabs.filter((x, index) => index === tabIndex).map((item, index)=>(
-              <item.component key={index} />
-            ))}
-          </Grid>
-          <div style={{ flex: 1 }} />
         </Grid>
-      </Grid>
+      </Card>
     </Container>
   );
 }

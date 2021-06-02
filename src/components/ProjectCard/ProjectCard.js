@@ -7,8 +7,9 @@ import Card from '@material-ui/core/Card';
 import CardActionArea from '@material-ui/core/CardActionArea';
 // import CardActions from '@material-ui/core/CardActions';
 import CardContent from '@material-ui/core/CardContent';
-import CardMedia from '@material-ui/core/CardMedia';
+// import CardMedia from '@material-ui/core/CardMedia';
 // import Button from '@material-ui/core/Button';
+import Box from '@material-ui/core/Box';
 import Typography from '@material-ui/core/Typography';
 import { useTranslation } from 'react-i18next';
 import NumberFormat from 'react-number-format';
@@ -18,6 +19,7 @@ import { getProject } from 'graphql/queries';
 import KeywordChip from 'components/KeywordChip';
 import NeedChip from 'components/NeedChip';
 import TagChip from 'components/TagChip';
+import ProjectAvatar from 'components/ProjectAvatar';
 
 const useStyles = makeStyles({
   root: {
@@ -32,6 +34,8 @@ export default function ProjectCard({
   project: inProject,
   projectId: inProjectId,
   userProject,
+  variant = '',
+  hideSummary,
 }) {
   const classes = useStyles();
   const { t } = useTranslation();
@@ -61,7 +65,7 @@ export default function ProjectCard({
   if (!project) return null;
 
   return (
-    <Card className={classes.root}>
+    <Card className={classes.root} variant={variant}>
       <Link
         to={`/project/${project.id}`}
         component={RouteLink}
@@ -70,18 +74,22 @@ export default function ProjectCard({
         }}
       >
         <CardActionArea>
-          <CardMedia
+          {/* <CardMedia
             className={classes.media}
             image={`https://avatars.dicebear.com/api/jdenticon/${project.id}.svg`}
             title="Project"
-          />
+          /> */}
           <CardContent>
+            <Box align="center" justify="center" mb={2}>
+              <ProjectAvatar projectId={project.id} size={100} />
+            </Box>
             <Typography gutterBottom variant="h5" component="h2">
               {project.name}
             </Typography>
+            {!hideSummary &&
             <Typography variant="body2" color="textSecondary" component="p" gutterBottom>
               {project.summary || ''}
-            </Typography>
+            </Typography>}
             <div>
               {project.tags && project.tags.items.map((item, index)=>(
                 <TagChip key={index} data={item.tag} size="small" />
@@ -134,4 +142,6 @@ ProjectCard.propTypes = {
   project: PropTypes.object,
   projectId: PropTypes.string,
   userProject: PropTypes.object,
+  variant: PropTypes.string,
+  hideSummary: PropTypes.bool,
 };

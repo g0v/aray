@@ -46,7 +46,7 @@ export const getUsernameSchema = async (inUsername) => {
 
   return {
     enum: records.map(({ username }) => username),
-    enumNames: records.map(({ name }) => name),
+    enumNames: records.map(({ name, username }) => `${name} (${username})`),
   };
 };
 

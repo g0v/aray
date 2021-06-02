@@ -232,6 +232,8 @@ export default function User({ id: inId, computedMatch, match }) {
                 username={user.username}
                 name={user.name}
                 size={150}
+                showEditor={true}
+                canEdit={canEdit}
               />
             </Grid>
             <Grid item xs={12}>
@@ -346,6 +348,8 @@ export default function User({ id: inId, computedMatch, match }) {
                 <Grid item xs={12} sm={6} md={4} lg={3} key={index}>
                   <ProjectCard
                     userProject={item}
+                    variant="outlined"
+                    hideSummary={true}
                   />
                 </Grid>
               ))}

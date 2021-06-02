@@ -1,49 +1,48 @@
 import React, { useState, useEffect } from 'react';
 import PropTypes from 'prop-types';
-// import { Storage } from 'aws-amplify';
+import { Storage } from 'aws-amplify';
+import { useTranslation } from 'react-i18next';
 
-import Avatar from '@material-ui/core/Avatar';
-import { makeStyles } from '@material-ui/core/styles';
-
-const useStyles = makeStyles((theme) => ({
-  avatar: {
-    // border: '1px solid rgba(255,255,255,0.3)',
-  },
-}));
+import Avatar from 'components/Avatar';
 
 export default function ProjectAvatar({
   projectId,
-  name,
   size = 24,
   variant = 'square',
+  showEditor = false,
+  canEdit = false,
 }) {
-  const classes = useStyles();
+  const { t } = useTranslation();
 
   const [uri, setUri] = useState();
-  // const [s3Key, setS3Key] = useState();
-
-  // useEffect(() => {
-  //   (async () => {
-  //     setUri(await Storage.get(s3Key));
-  //   })();
-  // }, [s3Key]);
+  const [s3Key, setS3Key] = useState();
+  const [lastUpdatedAt, setLastUpdatedAt] = useState(Date.now());
 
   useEffect(() => {
-    // setS3Key(`users/${username}/avatar.jpeg`);
-    setUri(`https://avatars.dicebear.com/api/jdenticon/${projectId}.svg`);
+    if (!s3Key) return;
+    (async () => {
+      setUri(await Storage.get(s3Key));
+    })();
+  }, [lastUpdatedAt, s3Key]);
+
+  useEffect(() => {
+    if (!projectId) return;
+
+    setS3Key(`projects/${projectId}/avatar.jpeg`);
   }, [projectId]);
 
   return (
     <Avatar
-      alt={''}
-      src={uri}
+      size={size}
       variant={variant}
-      style={{ height: size, width: size, fontSize: size * 0.6 }}
-      className={classes.avatar}
-    >
-      {(name || projectId || ' ')[0]}
-    </Avatar>
-  );
+      showEditor={showEditor}
+      canEdit={canEdit}
+      src={uri}
+      fallbackSrc={`https://avatars.dicebear.com/api/jdenticon/${projectId}.svg`}
+      s3Key={s3Key}
+      editorTitle={t('projectAvatar_updateAvatar')}
+      onUpdate={() => setLastUpdatedAt(Date.now())}
+    />);
 }
 
 ProjectAvatar.propTypes = {
@@ -51,4 +50,6 @@ ProjectAvatar.propTypes = {
   name: PropTypes.string,
   size: PropTypes.number,
   variant: PropTypes.string,
+  showEditor: PropTypes.bool,
+  canEdit: PropTypes.bool,
 };

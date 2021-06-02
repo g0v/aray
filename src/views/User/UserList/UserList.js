@@ -34,6 +34,7 @@ export default function UserList({ data: inData, hideTitle = false }) {
         if (key === 'text') {
           shouldDisplay = [
             user.username, user.name, user.selfIntroduction,
+            user.keywordsString, user.needsString,
           ].some((value) => {
             return value ? value.toLowerCase().includes(filters[key]) : false;
           });
@@ -102,10 +103,16 @@ export default function UserList({ data: inData, hideTitle = false }) {
           }
         }
       `);
-      setUsers(data);
+      setUsers(data.map((user) => {
+        user.keywordsString = user.keywords.items.map((item) => item.keyword.label).join(', ');
+        user.needsString = user.needs.items.map((item) => item.need.label).join(', ');
+        return user;
+      }));
       setIsLoading(false);
     })();
   }, [inData]);
+
+  console.log(users);
 
   return (
     <Container maxWidth={false}>
@@ -152,7 +159,7 @@ export default function UserList({ data: inData, hideTitle = false }) {
       {/* TODO: pagination */}
       <Grid container>
         {filteredUsers.map((item, index)=>(
-          <Grid item xs={12} sm={6} md={3} lg={2} key={index}>
+          <Grid item xs={12} sm={6} md={4} lg={3} xl={2} key={index}>
             <UserCard user={item} />
           </Grid>
         ))}

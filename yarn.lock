@@ -5205,6 +5205,11 @@
   "resolved" "https://registry.npmjs.org/bluebird/-/bluebird-3.7.2.tgz"
   "version" "3.7.2"
 
+"blueimp-load-image@^5.14.0":
+  "integrity" "sha512-g5l+4dCOESBG8HkPLdGnBx8dhEwpQHaOZ0en623sl54o3bGhGMLYGc54L5cWfGmPvfKUjbsY7LOAmcW/xlkBSA=="
+  "resolved" "https://registry.npmjs.org/blueimp-load-image/-/blueimp-load-image-5.14.0.tgz"
+  "version" "5.14.0"
+
 "bn.js@^4.0.0", "bn.js@^4.1.0", "bn.js@^4.1.1", "bn.js@^4.4.0":
   "integrity" "sha512-ItfYfPLkWHUjckQCk8xC+LwxgK8NYcXywGigJgSwOP8Y2iyWT4f2vsZnoOXTTbo+o5yXmIUJ4gn5538SO5S3gA=="
   "resolved" "https://registry.npmjs.org/bn.js/-/bn.js-4.11.8.tgz"
@@ -7620,6 +7625,11 @@
     "onetime" "^5.1.0"
     "signal-exit" "^3.0.2"
     "strip-final-newline" "^2.0.0"
+
+"exif-js@^2.3.0":
+  "integrity" "sha1-nRCBm/Vx+HOBPnZAJBJVq5zhqBQ="
+  "resolved" "https://registry.npmjs.org/exif-js/-/exif-js-2.3.0.tgz"
+  "version" "2.3.0"
 
 "exit@^0.1.2":
   "integrity" "sha1-BjJjj42HfMghB9MKD/8aF8uhzQw="
@@ -10138,6 +10148,11 @@
   "integrity" "sha512-ZRbnvdg/NxqzC7L9Uyqzf4psi1OM4Cuc+sJAkQPjO6XkQIJTNbfK2Rsmbw8fx1p2mkZdp2FZYo2+LwXYY/uwIA=="
   "resolved" "https://registry.npmjs.org/klona/-/klona-2.0.4.tgz"
   "version" "2.0.4"
+
+"konva@^2.5.1":
+  "integrity" "sha512-LCOoavICTD9PYoAqtWo8sbxYtCiXdgEeY7vj/Sq8b2bwFmrQr9Ak0RkD4/jxAf5fcUQRL5e1zPLyfRpVndp20A=="
+  "resolved" "https://registry.npmjs.org/konva/-/konva-2.6.0.tgz"
+  "version" "2.6.0"
 
 "language-subtag-registry@~0.3.2":
   "integrity" "sha512-L0IqwlIXjilBVVYKFT37X9Ih11Um5NEl9cbJIuU/SwP/zEEAbBPOnEeeuxVMf45ydWQRDQN3Nqc96OgbH1K+Pg=="
@@ -12985,6 +13000,15 @@
     "regenerator-runtime" "^0.13.7"
     "whatwg-fetch" "^3.4.1"
 
+"react-avatar-edit@^1.0.0":
+  "integrity" "sha512-4ouAnDQe7WEeRD/mAxgdZR8dqpazWKOQXdIRwojnNvWGkqdrNRf/5oQN2LXZWHVUQjuI0C8GeES0bp760Zkgsw=="
+  "resolved" "https://registry.npmjs.org/react-avatar-edit/-/react-avatar-edit-1.0.0.tgz"
+  "version" "1.0.0"
+  dependencies:
+    "blueimp-load-image" "^5.14.0"
+    "exif-js" "^2.3.0"
+    "konva" "^2.5.1"
+
 "react-calendar-heatmap@^1.8.1":
   "integrity" "sha512-4Hbq/pDMJoCPzZnyIWFfHgokLlLXzKyGsDcMgNhYpi7zcKHcvsK9soLEPvhW2dBBqgDrQOSp/uG4wtifaDg4eQ=="
   "resolved" "https://registry.npmjs.org/react-calendar-heatmap/-/react-calendar-heatmap-1.8.1.tgz"
@@ -13060,6 +13084,11 @@
   dependencies:
     "@babel/runtime" "^7.13.6"
     "html-parse-stringify" "^3.0.1"
+
+"react-image-file-resizer@^0.4.4":
+  "integrity" "sha512-qSZ5VJwWDkFan8IKCxDZqkAlQ6OW+mIDQLA9Y8T6/mLNUbHfnl3kjTpUWACeuh7cyPDXr1i6/GjlinyI75rBmQ=="
+  "resolved" "https://registry.npmjs.org/react-image-file-resizer/-/react-image-file-resizer-0.4.4.tgz"
+  "version" "0.4.4"
 
 "react-is@^16.13.1", "react-is@^16.6.0", "react-is@^16.7.0", "react-is@^16.8.0 || ^17.0.0", "react-is@^16.8.1", "react-is@^16.9.0":
   "integrity" "sha512-24e6ynE2H+OKt4kqsOvNd8kBpV65zoxbA4BVsEOB3ARVWQki/DHzaUoC5KuON/BiccDaCCTZBuOcfZs70kR8bQ=="
@@ -13274,7 +13303,7 @@
     "loose-envify" "^1.4.0"
     "prop-types" "^15.6.2"
 
-"react@*", "react@^0.14 || ^15.0.0-0 || ^16.0.0-0 || ^17.0.0-0", "react@^0.14 || ^15.0.1 || ^16.0.0", "react@^0.14.0 || ^15.0.0 || ^16.0.0", "react@^0.14.0 || ^15.0.0 || ^16.0.0 || ^17.0.0", "react@^16.8.0 || ^17.0.0", "react@^16.8.3 || ^17", "react@^17.0.2", "react@>= 16", "react@>= 16.7.0", "react@>= 16.8.0", "react@>=15", "react@>=16", "react@>=16.6.0", "react@17.0.2":
+"react@*", "react@^0.14 || ^15.0.0-0 || ^16.0.0-0 || ^17.0.0-0", "react@^0.14 || ^15.0.1 || ^16.0.0", "react@^0.14.0 || ^15.0.0 || ^16.0.0", "react@^0.14.0 || ^15.0.0 || ^16.0.0 || ^17.0.0", "react@^16.8.0 || ^17.0.0", "react@^16.8.3 || ^17", "react@^17.0.2", "react@>= 16", "react@>= 16.7.0", "react@>= 16.8.0", "react@>=15", "react@>=16", "react@>=16.6.0", "react@16.x", "react@17.0.2":
   "integrity" "sha512-gnhPt75i/dq/z3/6q/0asP78D0u592D5L1pd7M8P+dck6Fu/jJeL6iVVK23fptSUZj8Vjf++7wXA8UNclGQcbA=="
   "resolved" "https://registry.npmjs.org/react/-/react-17.0.2.tgz"
   "version" "17.0.2"

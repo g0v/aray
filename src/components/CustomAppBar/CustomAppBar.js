@@ -34,7 +34,7 @@ import { Link, useHistory } from 'react-router-dom';
 import { Auth } from 'aws-amplify';
 
 import Version from 'components/Version';
-// import UserAvatar from 'components/UserAvatar';
+import UserAvatar from 'components/UserAvatar';
 import Colors from 'constants/Colors';
 import { DRAWER_WIDTH } from 'constants/App';
 import LanguageSelector from 'components/LanguageSelector';
@@ -201,11 +201,26 @@ export default function CustomAppBar({ user = {}, routes, open, onUpdate }) {
             </Hidden>}
           <img src="/assets/images/g0v-banner.svg" alt="Logo" width="192" style={{ marginRight: 16 }} />
           {!open &&
-            <Typography component="h1" variant="h6" color="inherit" noWrap className={classes.title}>
+            <React.Fragment>
               <Link to="/" className={classes.unstyledHyperlink} data-test-id="title">
-                {t('app_name')}
+                <Typography component="h1" variant="h6" color="inherit" noWrap className={classes.title} style={{ marginRight: 8 }}>
+                  {t('app_name')}
+                </Typography>
               </Link>
-            </Typography>}
+              {routes.filter((x) => !x.hideFromMenu).map((route, index) => (
+                <Button
+                  key={index}
+                  color="inherit"
+                  component={Link}
+                  to={route.link || route.path}
+                  startIcon={route.icon ? <route.icon /> : null}
+                >
+                  {t(route.title)}
+                  {/* {route.badge && <route.badge />} */}
+                </Button>
+              ))}
+            </React.Fragment>
+          }
           <div className={classes.flexbox} />
           <GithubLinkButton url='g0v/aray' />
           <LanguageSelector />
@@ -223,8 +238,7 @@ export default function CustomAppBar({ user = {}, routes, open, onUpdate }) {
                 aria-controls={open ? 'user-menu' : undefined}
                 aria-haspopup="true"
                 onClick={handleToggleMenu}
-                // startIcon={<PersonIcon />}
-                // startIcon={<UserAvatar username={username} />}
+                startIcon={<UserAvatar username={username} size={30} />}
                 className={classes.titleButton}
               >
                 {username}

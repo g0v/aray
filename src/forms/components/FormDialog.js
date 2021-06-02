@@ -44,7 +44,14 @@ CustomDialogTitle.propTypes = {
   onClose: PropTypes.func,
 };
 
-export default function DetailFormDialog({ children, title = '新增資料', openOnInit = false, onClose, fullScreen = false }) {
+export default function DetailFormDialog({
+  children,
+  title = '新增資料',
+  openOnInit = false,
+  onClose,
+  fullScreen = false,
+  maxWidth = 'md',
+}) {
   const classes = useStyles();
   const [open, setOpen] = useState(openOnInit);
 
@@ -59,7 +66,7 @@ export default function DetailFormDialog({ children, title = '新增資料', ope
         open={open}
         fullScreen={fullScreen}
         fullWidth={true}
-        maxWidth={'md'}
+        maxWidth={maxWidth}
         onClose={handleClose}
         disableBackdropClick={true}
         disableEscapeKeyDown={true}
@@ -83,4 +90,5 @@ DetailFormDialog.propTypes = {
   openOnInit: PropTypes.bool,
   onClose: PropTypes.func,
   fullScreen: PropTypes.bool,
+  maxWidth: PropTypes.string,
 };

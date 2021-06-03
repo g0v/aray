@@ -6,6 +6,8 @@ import Typography from '@material-ui/core/Typography';
 import TextField from '@material-ui/core/TextField';
 import { useTranslation } from 'react-i18next';
 import Card from '@material-ui/core/Card';
+import { useHistory } from 'react-router-dom';
+// import querystring from 'query-string';
 
 import { asyncListAll } from 'utils/graph';
 import { listProjects } from './ProjectListQueries';
@@ -14,6 +16,7 @@ import DataJoinEditorInput from 'components/DataJoinEditor/DataJoinEditorInput';
 
 export default function UserProjectList() {
   const { t } = useTranslation();
+  const history = useHistory();
 
   const [projects, setProjects] = useState([]);
   const [isLoading, setIsLoading] = useState(false);
@@ -22,9 +25,16 @@ export default function UserProjectList() {
 
   const handleFilter = (key) => (values) => {
     // console.log(key, values);
-    setFilters({
+    const newFilters = {
       ...filters,
       [key]: values,
+    };
+    setFilters(newFilters);
+
+    history.push({
+      search: `?${Object.keys(newFilters)
+        .map((key)=>`${key}=${key === 'text' ? newFilters[key] : newFilters[key].join(',')}`)
+        .join('&')}`,
     });
   };
 
@@ -35,6 +45,7 @@ export default function UserProjectList() {
         if (key === 'text') {
           shouldDisplay = [
             project.name, project.altName, project.summary, project.description,
+            project.tagsString, project.keywordsString, project.needsString,
           ].some((value) => {
             return value ? value.toLowerCase().includes(filters[key]) : false;
           });
@@ -56,14 +67,28 @@ export default function UserProjectList() {
     });
 
     setFilteredProjects(filtered);
-  }, [filters, projects]);
+  }, [filters, projects, history]);
 
   useEffect(() => {
     (async () => {
       setIsLoading(true);
       // TODO: indexing and pagination
       const data = await asyncListAll(listProjects);
-      setProjects(data);
+      setProjects(data.map((project) => {
+        project.tagsString = project.tags.items.map((item) => item.tag.label).join(', ');
+        project.keywordsString = project.keywords.items.map((item) => item.keyword.label).join(', ');
+        project.needsString = project.needs.items.map((item) => item.need.label).join(', ');
+        return project;
+      }));
+
+      // const filters = querystring.parse(window.location.search);
+      // Object.keys(filters).forEach((key) => {
+      //   if (key !== 'text') {
+      //     filters[key] = filters[key].split(',');
+      //   }
+      // });
+      // setFilters(filters);
+
       setIsLoading(false);
     })();
   }, []);
@@ -101,7 +126,7 @@ export default function UserProjectList() {
             <DataJoinEditorInput
               title={t('projectList_searchByNeeds')}
               mode={'project-need'}
-              joinData={[]}
+              defaultValues={filters.needs || []}
               onChange={handleFilter('needs')}
               onUpdateOptions={()=>{}}
               disabled={isLoading}

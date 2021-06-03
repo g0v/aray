@@ -6,6 +6,7 @@ import { Link as RouteLink } from 'react-router-dom';
 import Card from '@material-ui/core/Card';
 import CardActionArea from '@material-ui/core/CardActionArea';
 // import CardActions from '@material-ui/core/CardActions';
+// import CardHeader from '@material-ui/core/CardHeader';
 import CardContent from '@material-ui/core/CardContent';
 // import CardMedia from '@material-ui/core/CardMedia';
 // import Button from '@material-ui/core/Button';
@@ -13,6 +14,7 @@ import Box from '@material-ui/core/Box';
 import Typography from '@material-ui/core/Typography';
 import { useTranslation } from 'react-i18next';
 import NumberFormat from 'react-number-format';
+import moment from 'moment';
 
 import { request } from 'utils/graph';
 import { getProject } from 'graphql/queries';
@@ -20,6 +22,7 @@ import KeywordChip from 'components/KeywordChip';
 import NeedChip from 'components/NeedChip';
 import TagChip from 'components/TagChip';
 import ProjectAvatar from 'components/ProjectAvatar';
+// import UserChip from 'components/UserChip';
 
 const useStyles = makeStyles({
   root: {
@@ -89,6 +92,11 @@ export default function ProjectCard({
             {!hideSummary &&
             <Typography variant="body2" color="textSecondary" component="p" gutterBottom>
               {project.summary || ''}
+            </Typography>}
+            {!hideSummary &&
+            <Typography variant="body2" color="textSecondary" component="p" gutterBottom>
+              {/* <UserChip username={project.owner}/> */}
+              {t('projectCard_createdAt')} {moment(project.createdAt).format('YYYY-MM-DD')}
             </Typography>}
             <div>
               {project.tags && project.tags.items.map((item, index)=>(

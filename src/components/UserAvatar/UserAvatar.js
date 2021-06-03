@@ -40,7 +40,8 @@ export default function UserAvatar({
       showEditor={showEditor}
       canEdit={canEdit}
       src={uri}
-      fallbackSrc={`https://avatars.dicebear.com/api/bottts/${username}.svg`}
+      // fallbackSrc={`https://avatars.dicebear.com/api/bottts/${username}.svg`}
+      fallbackSrc={`https://robohash.org/${username}.png?set=set4`}
       s3Key={s3Key}
       editorTitle={t('userAvatar_updateAvatar')}
       onUpdate={() => setLastUpdatedAt(Date.now())}

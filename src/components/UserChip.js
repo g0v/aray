@@ -11,7 +11,7 @@ import Colors from 'constants/Colors';
 const StyleChip = withStyles({
   root: {
     backgroundColor: Colors.background.light2,
-    borderRadius: 0,
+    // borderRadius: 0,
     paddingTop: 0,
     paddingBottom: 0,
     height: 24,
@@ -25,8 +25,8 @@ export default function UserChip({
   const avatar = <UserAvatar
     username={username}
     name={username}
-    size={24}
-    variant={'square'}
+    // size={24}
+    // variant={'square'}
   />;
 
   return (

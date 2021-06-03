@@ -12,7 +12,8 @@ import { getPropsByMode } from './helpers';
 export default function DataJoinEditorInput({
   title = '',
   mode = '',
-  joinData = [],
+  joinData,
+  defaultValues: inDefaultValues,
   onChange,
   onUpdateOptions,
   disabled,
@@ -20,7 +21,7 @@ export default function DataJoinEditorInput({
   const [allOptions, setAllOptions] = useState([]);
   const [filteredOptions, setFilteredOptions] = useState([]);
   const [values, setValues] = useState([]);
-  const [defaultValues, setDefaultValues] = useState();
+  const [defaultValues, setDefaultValues] = useState(inDefaultValues);
 
   const handleChange = (event, values) => {
     setValues([...values]);
@@ -35,6 +36,7 @@ export default function DataJoinEditorInput({
   }, [allOptions, values]);
 
   useEffect(() => {
+    if (!joinData) return;
     const values = joinData.map((item) => item[mode.split('-')[1]].label);
     setDefaultValues(values);
     setValues(values);
@@ -90,6 +92,7 @@ DataJoinEditorInput.propTypes = {
   title: PropTypes.string,
   mode: PropTypes.string,
   joinData: PropTypes.array,
+  defaultValues: PropTypes.array,
   onChange: PropTypes.func,
   onUpdateOptions: PropTypes.func,
   disabled: PropTypes.bool,

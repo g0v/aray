@@ -21,6 +21,7 @@ export default function AvatarEditor({
   title = 'AvatarEditor Title',
   type = 'icon',
   size = 24,
+  cropSize = 300,
   s3Key,
   onUpdate,
 }) {
@@ -46,8 +47,8 @@ export default function AvatarEditor({
       const file = await new Promise((resolve) => {
         Resizer.imageFileResizer(
           blob,
-          150,
-          150,
+          cropSize,
+          cropSize,
           'PNG', // JPEG, PNG
           100,
           0,
@@ -136,6 +137,7 @@ AvatarEditor.propTypes = {
   title: PropTypes.string,
   type: PropTypes.string,
   size: PropTypes.number,
+  cropSize: PropTypes.number,
   s3Key: PropTypes.string,
   exportAsSquare: PropTypes.bool,
   onUpdate: PropTypes.func,

@@ -1,7 +1,10 @@
 import React from 'react';
 import Button from '@material-ui/core/Button';
+import { useTranslation } from 'react-i18next';
 
 export default function SubmitButton({ ...props }) {
+  const { t } = useTranslation();
+
   return (
     <Button
       type="submit"
@@ -10,7 +13,7 @@ export default function SubmitButton({ ...props }) {
       style={{ marginTop: 16 }}
       {...props}
     >
-      送出
+      {t('submitButton_submit')}
     </Button>
   );
 }

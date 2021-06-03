@@ -1,7 +1,7 @@
 /* eslint-disable quotes, comma-dangle */
 
 export default {
-  "title": "貢獻",
+  "title": "contributionFormSchema_title",
   "type": "object",
   "required": [
     "username", "summary"
@@ -9,24 +9,24 @@ export default {
   "properties": {
     "username": {
       "type": "string",
-      "title": "貢獻者"
+      "title": "contributionFormSchema_username"
     },
     "projectTaskId": {
       "type": ["string", "null"],
-      "title": "任務模板",
-      "description": "非必選。可以直接填帖簡述與時數。"
+      "title": "contributionFormSchema_projectTaskId",
+      "description": "contributionFormSchema_projectTaskIdDescription"
     },
     "summary": {
       "type": "string",
-      "title": "簡述"
+      "title": "contributionFormSchema_summary"
     },
     "description": {
       "type": ["string", "null"],
-      "title": "內容"
+      "title": "contributionFormSchema_description"
     },
     "hours": {
       "type": "number",
-      "title": "時數",
+      "title": "contributionFormSchema_hours",
       "default": 1
     }
   }

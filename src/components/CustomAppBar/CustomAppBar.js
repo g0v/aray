@@ -199,7 +199,7 @@ export default function CustomAppBar({ user = {}, routes, open, onUpdate }) {
                 <MenuIcon />
               </IconButton>
             </Hidden>}
-          <img src="/assets/images/g0v-banner.svg" alt="Logo" width="192" style={{ marginRight: 16 }} />
+          {/* <img src="/assets/images/g0v-banner.svg" alt="Logo" width="192" style={{ marginRight: 16 }} /> */}
           {!open &&
             <React.Fragment>
               <Link to="/" className={classes.unstyledHyperlink} data-test-id="title">
@@ -252,7 +252,7 @@ export default function CustomAppBar({ user = {}, routes, open, onUpdate }) {
                 startIcon={<PersonAddIcon />}
                 className={classes.titleButton}
               >
-                註冊
+                {t('customAppBar_register')}
               </Button>
               <Button
                 color="inherit"
@@ -261,7 +261,7 @@ export default function CustomAppBar({ user = {}, routes, open, onUpdate }) {
                 startIcon={<PersonIcon />}
                 className={classes.titleButton}
               >
-                登入
+                {t('customAppBar_login')}
               </Button>
             </React.Fragment>
           }
@@ -277,7 +277,7 @@ export default function CustomAppBar({ user = {}, routes, open, onUpdate }) {
                   <MenuItem disabled={true}>
                     <Version />
                   </MenuItem>
-                  <MenuItem onClick={handleSignOut}>登出</MenuItem>
+                  <MenuItem onClick={handleSignOut}>{t('customAppBar_logout')}</MenuItem>
                 </MenuList>
               </ClickAwayListener>
             </Paper>
@@ -325,11 +325,13 @@ export default function CustomAppBar({ user = {}, routes, open, onUpdate }) {
           <Divider />
           {user && user.username &&
             <ListItem button onClick={handleSignOut}>
-              <ListItemIcon><ExitToAppIcon /></ListItemIcon>
-              <ListItemText primary={'登出'} />
+              <ListItemIcon style={{ minWidth: 36 }}>
+                <ExitToAppIcon />
+              </ListItemIcon>
+              <ListItemText primary={t('customAppBar_logout')} />
             </ListItem>}
-          <ListItem>
-            <ListItemText>
+          <ListItem disabled button>
+            <ListItemText style={{ textAlign: 'center' }}>
               <Version />
             </ListItemText>
           </ListItem>

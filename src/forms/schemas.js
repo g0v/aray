@@ -85,7 +85,7 @@ export const getProjectTaskIdSchema = async (projectId) => {
 
   return {
     enum: [null, ...records.map(({ id }) => id)],
-    enumNames: ['無', ...records.map(({ summary, hours }) => `${summary} (+${hours})`)],
+    enumNames: ['N/A', ...records.map(({ summary, hours }) => `${summary} (+${hours})`)],
     data: records,
   };
 };

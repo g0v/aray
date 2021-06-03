@@ -132,25 +132,25 @@ export default function App({ location }) {
           formFields={[
             {
               type: 'name',
-              label: '名字',
+              label: t('appSignup_name'),
               placeholder: ' ',
               required: true,
             },
             {
               type: 'email',
-              label: 'Email',
+              label: t('appSignup_email'),
               placeholder: ' ',
               required: true,
             },
             {
               type: 'username',
-              label: '帳號',
+              label: t('appSignup_username'),
               placeholder: ' ',
               required: true,
             },
             {
               type: 'password',
-              label: '密碼',
+              label: t('appSignup_password'),
               placeholder: ' ',
               required: true,
             },

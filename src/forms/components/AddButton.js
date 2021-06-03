@@ -6,7 +6,7 @@ import AddIcon from '@material-ui/icons/Add';
 
 const AddButton = (props) => (
   <Button {...props} color="secondary">
-    <AddIcon /> 新增{props.title || ''}項目
+    <AddIcon />{props.title || ''}
   </Button>
 );
 

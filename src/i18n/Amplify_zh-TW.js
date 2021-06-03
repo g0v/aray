@@ -1,10 +1,5 @@
-import { I18n } from 'aws-amplify';
-import {
-  Translations,
-} from '@aws-amplify/ui-components';
-
 // https://github.com/aws-amplify/amplify-js/blob/4e25f923723441c6fb705584fcc3349214806558/packages/amplify-ui-components/src/common/Translations.ts
-const authStrings = {
+export default {
   BACK_TO_SIGN_IN: '回到登入頁面',
   CHANGE_PASSWORD_ACTION: '修改',
   CHANGE_PASSWORD: '修改密碼',
@@ -113,9 +108,9 @@ const authStrings = {
   SIGN_UP_FAILED: '註冊失敗',
 };
 
-I18n.putVocabulariesForLanguage('en-US',
-  Object.keys(authStrings).reduce((obj, key) => {
-    obj[Translations[key]] = authStrings[key];
-    return obj;
-  }, {}),
-);
+// I18n.putVocabulariesForLanguage('en-US',
+//   Object.keys(authStrings).reduce((obj, key) => {
+//     obj[Translations[key]] = authStrings[key];
+//     return obj;
+//   }, {}),
+// );

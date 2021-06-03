@@ -1,6 +1,6 @@
 /* eslint-disable quotes, comma-dangle */
 export default {
-  "title": "個人資料",
+  "title": "userFormSchema_title",
   "type": "object",
   "required": [
     "name", "email"
@@ -8,48 +8,48 @@ export default {
   "properties": {
     "name": {
       "type": "string",
-      "title": "名稱"
+      "title": "userFormSchema_name"
     },
     "email": {
       "type": "string",
-      "title": "Email",
+      "title": "userFormSchema_email",
       "format": "email"
     },
     "selfIntroduction": {
       "type": ["string", "null"],
-      "title": "自介"
+      "title": "userFormSchema_selfIntroduction"
     },
     "location": {
       "type": ["string", "null"],
-      "title": "所在地區"
+      "title": "userFormSchema_location"
     },
     "slackId": {
       "type": ["string", "null"],
-      "title": "Slack ID"
+      "title": "userFormSchema_slackId"
     },
     "urlWebsite": {
       "type": ["string", "null"],
-      "title": "Website 網址"
+      "title": "userFormSchema_urlWebsite"
     },
     "urlGithub": {
       "type": ["string", "null"],
-      "title": "Github 網址"
+      "title": "userFormSchema_urlGithub"
     },
     "urlLinkedIn": {
       "type": ["string", "null"],
-      "title": "LinkedIn 網址"
+      "title": "userFormSchema_urlLinkedIn"
     },
     "urlFacebook": {
       "type": ["string", "null"],
-      "title": "Facebook 網址"
+      "title": "userFormSchema_urlFacebook"
     },
     "urlTwitter": {
       "type": ["string", "null"],
-      "title": "Twitter 網址"
+      "title": "userFormSchema_urlTwitter"
     },
     "urlInstagram": {
       "type": ["string", "null"],
-      "title": "Instagram 網址"
+      "title": "userFormSchema_urlInstagram"
     }
   }
 };

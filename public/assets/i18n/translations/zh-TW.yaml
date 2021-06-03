@@ -77,6 +77,7 @@ avatarEditor_submit: 更新
 
 projectCard_completedTasks: 完成任務
 projectCard_completedHours: 貢獻時數
+projectCard_createdAt: 創立於
 
 dataJoinEditor_update: 更新
 dataJoinEditor_confirm: 確認

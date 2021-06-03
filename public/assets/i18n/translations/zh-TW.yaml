@@ -3,6 +3,11 @@ app_short_name: ARAY
 
 config_locale: zh-TW
 
+appSignup_name: 名字
+appSignup_email: Email
+appSignup_username: 帳號
+appSignup_password: 密碼
+
 title_dashboard: 總覽
 title_myProfile: 我的頁面
 title_myProjectList: 我的專案
@@ -66,10 +71,31 @@ projectFormSchema_links: 連結
 projectFormSchema_linksName: 名稱
 projectFormSchema_linksUrl: 網址
 
+projectTaskFormSchema_title: 專案任務
+projectTaskFormSchema_status: 狀態
+projectTaskFormSchema_summary: 名稱/描述
+projectTaskFormSchema_description: 詳細敘述
+projectTaskFormSchema_hours: 時數
+
 userCard_completedTasks: 完成任務
 userCard_completedHours: 貢獻時數
 
 userAvatar_updateAvatar: 更新頭像
+
+userEditButton_title: 個人資料
+
+userFormSchema_title: 個人資料
+userFormSchema_name: 名字
+userFormSchema_email: Email
+userFormSchema_selfIntroduction: 自介
+userFormSchema_location: 所在地區
+userFormSchema_slackId: Slack ID
+userFormSchema_urlWebsite: Website 網址
+userFormSchema_urlGithub: Github 網址
+userFormSchema_urlLinkedIn: LinkedIn 網址
+userFormSchema_urlFacebook: Facebook 網址
+userFormSchema_urlTwitter: Twitter 網址
+userFormSchema_urlInstagram: Instagram 網址
 
 avatarEditor_clickAndUpload: 點擊上傳圖片
 avatarEditor_cancel: 取消
@@ -78,6 +104,8 @@ avatarEditor_submit: 更新
 projectCard_completedTasks: 完成任務
 projectCard_completedHours: 貢獻時數
 projectCard_createdAt: 創立於
+
+projectEditButton_title: 專案資料
 
 dataJoinEditor_update: 更新
 dataJoinEditor_confirm: 確認
@@ -102,3 +130,21 @@ datetime_weekday4: 四
 datetime_weekday5: 五
 datetime_weekday6: 六
 
+editButton_update: 更新
+editButton_create: 創建
+
+submitButton_submit: 送出
+
+customAppBar_logout: 登出
+customAppBar_register: 註冊
+customAppBar_login: 登入
+
+contributionEditButton_title: 專案貢獻
+
+contributionFormSchema_title: 貢獻
+contributionFormSchema_username: 貢獻者 ID
+contributionFormSchema_projectTaskId: 任務模板
+contributionFormSchema_projectTaskIdDescription: 非必選。可以直接填帖簡述與時數。
+contributionFormSchema_summary: 簡述
+contributionFormSchema_description: 內容
+contributionFormSchema_hours: 時數

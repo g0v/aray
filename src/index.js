@@ -24,7 +24,7 @@ import { useTranslation } from 'react-i18next';
 import 'react-calendar-heatmap/dist/styles.css';
 import './global';
 import './i18n/i18n';
-import './i18n/Amplify';
+// import './i18n/Amplify';
 import './index.css';
 import './Amplify.css';
 
@@ -139,7 +139,7 @@ function ReactApp() {
     localStorage.setItem('app:cognitoGroup', userGroups[0]);
 
     setFilteredRoutes(filteredRoutes);
-    setOpen(true);
+    setOpen(false);
 
     history.push(initialPath);
   }, [user]);

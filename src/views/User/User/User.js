@@ -329,7 +329,7 @@ export default function User({ id: inId, computedMatch, match }) {
                   value={totalHoursInThePastYear}
                   displayType="text"
                   thousandSeparator={true}
-                />
+                />&nbsp;
                 {t('user_hours')}
               </Typography>
               <ContributionHeatmap

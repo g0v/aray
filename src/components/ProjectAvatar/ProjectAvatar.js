@@ -34,6 +34,7 @@ export default function ProjectAvatar({
   return (
     <Avatar
       size={size}
+      cropSize={300}
       variant={variant}
       showEditor={showEditor}
       canEdit={canEdit}

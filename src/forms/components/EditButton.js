@@ -6,6 +6,7 @@ import Button from '@material-ui/core/Button';
 import EditIcon from '@material-ui/icons/Edit';
 import AddIcon from '@material-ui/icons/Add';
 import Tooltip from '@material-ui/core/Tooltip';
+import { useTranslation } from 'react-i18next';
 
 import FormDialog from './FormDialog';
 import FloatingActionButton from 'components/FloatingActionButton';
@@ -23,10 +24,13 @@ export default function EditButton({
   fullWidth = false,
   ...props // form
 }) {
+  const { t } = useTranslation();
+
   const [open, setOpen] = useState(false);
   const [editItem, setEditItem] = useState();
 
-  const tooltipLabel = mode === 'edit' ? '修改資料' : '新增資料';
+  const tooltipLabel = mode === 'edit' ?
+    `${t('editButton_update')}` : `${t('editButton_create')}`;
 
   return (
     <Tooltip title={tooltipLabel}>
@@ -69,7 +73,7 @@ export default function EditButton({
             }}
           >
             {showIcon ? (mode ==='edit' ? <EditIcon /> : <AddIcon />) : ''}
-            {mode ==='edit' ? '更新' : '新增'}{title}
+            {mode ==='edit' ? `${t('editButton_update')}` : `${t('editButton_create')}`} {title}
           </Button>}
         {open &&
           <FormDialog

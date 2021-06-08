@@ -22,8 +22,9 @@ npm start
 
 ## Demo
 
-- [develop](https://develop.dpw6pfmb7twme.amplifyapp.com/)
-- [test](https://test.dpw6pfmb7twme.amplifyapp.com/)
+- [正式版 production](https://aray.g0v.tw/)
+- [測試版 test](http://tst.aray.g0v.dev/)
+- [開發版 develop](http://dev.aray.g0v.dev/)
 
 ## Framework
 

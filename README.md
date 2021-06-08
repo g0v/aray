@@ -23,8 +23,8 @@ npm start
 ## Demo
 
 - [正式版 production](https://aray.g0v.tw/)
-- [測試版 test](http://tst.aray.g0v.dev/)
-- [開發版 develop](http://dev.aray.g0v.dev/)
+- [測試版 test](https://tst.aray.g0v.dev/)
+- [開發版 develop](https://dev.aray.g0v.dev/)
 
 ## Framework
 

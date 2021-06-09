@@ -20,6 +20,7 @@ import KeywordChip from 'components/KeywordChip';
 import NeedChip from 'components/NeedChip';
 import DataJoinEditor from 'components/DataJoinEditor';
 import Note from 'components/Note';
+import RichText from 'components/RichText';
 import VisitButton from 'components/VisitButton';
 import ProjectTasks from './ProjectTasks';
 import ProjectContributions from './ProjectContributions';
@@ -72,7 +73,7 @@ export default function Project({ id: inId, computedMatch, match }) {
     {
       label: t('project_main'),
       component: () => <React.Fragment>
-        <Note data={project.description} />
+        <RichText data={project.description} />
       </React.Fragment>,
     },
     {

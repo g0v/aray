@@ -37,6 +37,7 @@ import ContributionList from './ContributionList';
 import UserEditButton from 'forms/UserForm/UserEditButton';
 import DataJoinEditor from 'components/DataJoinEditor';
 import ContributionHeatmap from './ContributionHeatmap';
+import RichText from 'components/RichText';
 
 const useStyles = makeStyles((theme) => ({
   container: {
@@ -243,9 +244,7 @@ export default function User({ id: inId, computedMatch, match }) {
               <Typography variant="body1" color="textSecondary" gutterBottom>
                 {user.username}
               </Typography>
-              <Typography variant="body1">
-                {user.selfIntroduction || ''}
-              </Typography>
+              <RichText data={user.selfIntroduction} />
             </Grid>
             {canEdit &&
             <Grid item xs={12}>

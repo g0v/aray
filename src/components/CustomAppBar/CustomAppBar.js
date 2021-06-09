@@ -201,7 +201,7 @@ export default function CustomAppBar({ user = {}, routes, open, onUpdate }) {
             </Hidden>}
           {/* <img src="/assets/images/g0v-banner.svg" alt="Logo" width="192" style={{ marginRight: 16 }} /> */}
           {!open &&
-            <React.Fragment>
+            <Hidden smDown={true}>
               <Link to="/" className={classes.unstyledHyperlink} data-test-id="title">
                 <Typography component="h1" variant="h6" color="inherit" noWrap className={classes.title} style={{ marginRight: 8 }}>
                   {t('app_name')}
@@ -219,7 +219,7 @@ export default function CustomAppBar({ user = {}, routes, open, onUpdate }) {
                   {/* {route.badge && <route.badge />} */}
                 </Button>
               ))}
-            </React.Fragment>
+            </Hidden>
           }
           <div className={classes.flexbox} />
           <GithubLinkButton url='g0v/aray' />
@@ -231,7 +231,6 @@ export default function CustomAppBar({ user = {}, routes, open, onUpdate }) {
                   <NotificationsIcon />
                 </Badge>
               </IconButton>
-
               <Button
                 ref={anchorRef}
                 color="inherit"
@@ -241,7 +240,9 @@ export default function CustomAppBar({ user = {}, routes, open, onUpdate }) {
                 startIcon={<UserAvatar username={username} size={30} />}
                 className={classes.titleButton}
               >
-                {username}
+                <Hidden smDown={true}>
+                  {username}
+                </Hidden>
               </Button>
             </React.Fragment>:
             <React.Fragment>

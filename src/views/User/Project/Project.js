@@ -52,7 +52,7 @@ const useStyles = makeStyles((theme) => ({
     paddingTop: theme.spacing(2),
   },
   userChipContainer: {
-    paddingBottom: theme.spacing(1),
+    paddingBottom: theme.spacing(0),
   },
 }));
 
@@ -140,7 +140,7 @@ export default function Project({ id: inId, computedMatch, match }) {
     <Container className={classes.container}>
       <Card className={classes.card}>
         <Grid container spacing={4}>
-          <Grid item xs={3} container>
+          <Grid item xs={12} md={3} container>
             <Grid item xs={12} container spacing={2}>
               <Grid item xs={12} align="center">
                 <ProjectAvatar
@@ -167,6 +167,8 @@ export default function Project({ id: inId, computedMatch, match }) {
                 <div className={classes.userChipContainer}>
                   <UserChip username={project.owner}/>
                 </div>
+              </Grid>
+              <Grid item xs={12}>
                 <Typography variant="body1" gutterBottom>
                   {t('project_managers')}
                   {canEdit &&
@@ -182,18 +184,19 @@ export default function Project({ id: inId, computedMatch, match }) {
                 </div>
               </Grid>
               {(project.slackChannel || project.slackChannelUrl) &&
-              <Grid item xs={12} className={classes.chipContainer}>
+              <Grid item xs={12}>
                 <Typography variant="body1" gutterBottom>
                   {t('project_slackChannel')}
                 </Typography>
                 <VisitButton
-                  title={project.slackChannel || '專案頻道'}
+                  title={`#${(project.slackChannel || '專案頻道').replace('#', '')}`}
                   url={project.slackChannelUrl || 'https://g0v-tw.slack.com/'}
                   variant={'text'}
                   color={'secondary'}
+                  style={{ padding: 0, minWidth: 0, textTransform: 'none' }}
                 />
               </Grid>}
-              <Grid item xs={12} className={classes.chipContainer}>
+              <Grid item xs={12}>
                 <Typography variant="body1" gutterBottom>
                   {t('project_links')}
                 </Typography>
@@ -216,7 +219,7 @@ export default function Project({ id: inId, computedMatch, match }) {
                   onUpdate={() => setLastUpdatedAt(Date.now())}
                 />
               </Grid>}
-              <Grid item xs={12} className={classes.chipContainer}>
+              <Grid item xs={12}>
                 <Typography variant="body1" gutterBottom>
                   {t('project_tags')}
                   {canEdit &&
@@ -232,7 +235,7 @@ export default function Project({ id: inId, computedMatch, match }) {
                   <TagChip key={index} data={item} />
                 ))}
               </Grid>
-              <Grid item xs={12} className={classes.chipContainer}>
+              <Grid item xs={12}>
                 <Typography variant="body1" gutterBottom>
                   {t('project_keywords')}
                   {canEdit &&
@@ -248,7 +251,7 @@ export default function Project({ id: inId, computedMatch, match }) {
                   <KeywordChip key={index} data={item} />
                 ))}
               </Grid>
-              <Grid item xs={12} className={classes.chipContainer}>
+              <Grid item xs={12}>
                 <Typography variant="body1" gutterBottom>
                   {t('project_needs')}
                   {canEdit &&
@@ -266,7 +269,7 @@ export default function Project({ id: inId, computedMatch, match }) {
               </Grid>
             </Grid>
           </Grid>
-          <Grid item xs={9}>
+          <Grid item xs={12} md={9}>
             <Grid item xs={12} style={{ height: 64 }}>
               <Tabs
                 value={tabIndex}

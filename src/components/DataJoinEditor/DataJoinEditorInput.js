@@ -66,6 +66,7 @@ export default function DataJoinEditorInput({
         options={filteredOptions}
         defaultValue={defaultValues}
         freeSolo
+        disableCloseOnSelect
         renderTags={(value, getTagProps) =>
           value.map((option, index) => (
             <Chip key={index} variant="outlined" label={option} {...getTagProps({ index })} />

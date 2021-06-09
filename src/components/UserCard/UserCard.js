@@ -4,7 +4,7 @@ import { makeStyles } from '@material-ui/core/styles';
 import Link from '@material-ui/core/Link';
 import { Link as RouteLink } from 'react-router-dom';
 import Card from '@material-ui/core/Card';
-import CardActionArea from '@material-ui/core/CardActionArea';
+// import CardActionArea from '@material-ui/core/CardActionArea';
 import CardHeader from '@material-ui/core/CardHeader';
 // import CardActions from '@material-ui/core/CardActions';
 import CardContent from '@material-ui/core/CardContent';
@@ -14,6 +14,7 @@ import CardContent from '@material-ui/core/CardContent';
 import Typography from '@material-ui/core/Typography';
 import { useTranslation } from 'react-i18next';
 import NumberFormat from 'react-number-format';
+import { fade } from '@material-ui/core/styles/colorManipulator';
 
 import { request } from 'utils/graph';
 import { getUser } from 'graphql/queries';
@@ -24,7 +25,11 @@ import UserAvatar from 'components/UserAvatar';
 const useStyles = makeStyles((theme) => ({
   root: {
     // maxWidth: 345,
-    margin: theme.spacing(1),
+    // margin: theme.spacing(1),
+    'height': '100%',
+    '&:hover': {
+      backgroundColor: fade(theme.palette.secondary.light, 0.1),
+    },
   },
   media: {
     height: 140,
@@ -70,63 +75,54 @@ export default function UserCard({
   if (!user) return null;
 
   return (
-    <Card className={classes.root} variant={variant}>
-      <Link
-        to={`/user/${user.username}`}
-        component={RouteLink}
-        style={{
-          textDecoration: 'none',
-        }}
-      >
-        <CardActionArea>
-          <CardHeader
-            avatar={
-              <UserAvatar username={user.username} size={50} />
-            }
-            title={user.name}
-            subheader={user.username}
-          />
-          <CardContent style={{ paddingTop: 0 }}>
-            <div>
-              {user.keywords && user.keywords.items.map((item, index)=>(
-                <KeywordChip key={index} data={item.keyword} size="small" />
-              ))}
-            </div>
-            <div>
-              {user.needs && user.needs.items.map((item, index)=>(
-                <NeedChip key={index} data={item.need} size="small" />
-              ))}
-            </div>
-            {userProject &&
-            <Typography variant="body2" color="textSecondary" component="p">
-              {t('userCard_completedTasks')}:&nbsp;
-              <NumberFormat
-                value={userProject.completedTasks}
-                displayType="text"
-                thousandSeparator={true}
-              />
-            </Typography>}
-            {userProject &&
-            <Typography variant="body2" color="textSecondary" component="p">
-              {t('userCard_completedHours')}:&nbsp;
-              <NumberFormat
-                value={userProject.completedHours}
-                displayType="text"
-                thousandSeparator={true}
-              />
-            </Typography>}
-          </CardContent>
-        </CardActionArea>
-      </Link>
-      {/* <CardActions>
-        <Button size="small" color="primary">
-          Share
-        </Button>
-        <Button size="small" color="primary">
-          Learn More
-        </Button>
-      </CardActions> */}
-    </Card>
+    <Link
+      to={`/user/${user.username}`}
+      component={RouteLink}
+      style={{
+        textDecoration: 'none',
+        height: '100%',
+      }}
+    >
+      <Card className={classes.root} variant={variant}>
+        <CardHeader
+          avatar={
+            <UserAvatar username={user.username} size={50} />
+          }
+          title={user.name}
+          subheader={user.username}
+        />
+        <CardContent style={{ paddingTop: 0 }}>
+          <div>
+            {user.keywords && user.keywords.items.map((item, index)=>(
+              <KeywordChip key={index} data={item.keyword} size="small" />
+            ))}
+          </div>
+          <div>
+            {user.needs && user.needs.items.map((item, index)=>(
+              <NeedChip key={index} data={item.need} size="small" />
+            ))}
+          </div>
+          {userProject &&
+          <Typography variant="body2" color="textSecondary" component="p">
+            {t('userCard_completedTasks')}:&nbsp;
+            <NumberFormat
+              value={userProject.completedTasks}
+              displayType="text"
+              thousandSeparator={true}
+            />
+          </Typography>}
+          {userProject &&
+          <Typography variant="body2" color="textSecondary" component="p">
+            {t('userCard_completedHours')}:&nbsp;
+            <NumberFormat
+              value={userProject.completedHours}
+              displayType="text"
+              thousandSeparator={true}
+            />
+          </Typography>}
+        </CardContent>
+      </Card>
+    </Link>
   );
 }
 

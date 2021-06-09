@@ -65,13 +65,13 @@ const useStyles = makeStyles((theme) => ({
   hide: {
     display: 'none',
   },
-  drawer: {
-    width: DRAWER_WIDTH,
-    flexShrink: 0,
-  },
-  drawerPaper: {
-    width: DRAWER_WIDTH,
-  },
+  // drawer: {
+  //   width: DRAWER_WIDTH,
+  //   flexShrink: 0,
+  // },
+  // drawerPaper: {
+  //   width: DRAWER_WIDTH,
+  // },
   drawerHeader: {
     display: 'flex',
     alignItems: 'center',
@@ -287,7 +287,7 @@ export default function CustomAppBar({ user = {}, routes, open, onUpdate }) {
       </AppBar>
       <Drawer
         className={classes.drawer}
-        variant={user ? 'persistent' : null}
+        // variant={user ? 'persistent' : null}
         anchor="left"
         open={open}
         classes={{

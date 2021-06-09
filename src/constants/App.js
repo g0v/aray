@@ -1,4 +1,4 @@
-export const DRAWER_WIDTH = 180;
+export const DRAWER_WIDTH = 0; // 180
 
 export const AUTO_UPDATE_INTERVAL_IN_MILLISECONDS = 30 * 1000;
 

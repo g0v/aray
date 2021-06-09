@@ -13,6 +13,7 @@ function VisitButton({
   className,
   color = 'primary',
   variant = 'outlined',
+  style = {},
 }) {
   if (typeof url !== 'string') return null;
 
@@ -63,6 +64,7 @@ function VisitButton({
       target="_blank"
       href={url}
       disabled={isDisabled}
+      style={style}
     >
       {title}
     </Button>);
@@ -76,6 +78,7 @@ VisitButton.propTypes = {
   className: PropTypes.string,
   variant: PropTypes.string,
   color: PropTypes.string,
+  style: PropTypes.object,
 };
 
 export default VisitButton;

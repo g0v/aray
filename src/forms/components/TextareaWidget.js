@@ -1,5 +1,6 @@
 /* eslint-disable react/prop-types */
 import React, { useState, useEffect } from 'react';
+import InputLabel from '@material-ui/core/InputLabel';
 
 import TextEditor from 'components/TextEditor';
 
@@ -32,12 +33,17 @@ export default function TextareaWidget({
   }, [id]);
 
   return (
-    <TextEditor
-      label={schema.title || label}
-      defaultValue={defaultValue}
-      placeholder={placeholder}
-      onChange={_onChange}
-    />
+    <React.Fragment>
+      <InputLabel shrink>
+        {schema.title || label}
+      </InputLabel>
+      <TextEditor
+        label={schema.title || label}
+        defaultValue={defaultValue}
+        placeholder={placeholder}
+        onChange={_onChange}
+      />
+    </React.Fragment>
   );
   // return (
   //   <Form.TextArea

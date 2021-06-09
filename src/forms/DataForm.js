@@ -3,6 +3,7 @@ import PropTypes from 'prop-types';
 import Form from '@rjsf/material-ui';
 import Grid from '@material-ui/core/Grid';
 import { useTranslation } from 'react-i18next';
+import { debounce } from 'debounce';
 
 import {
   getUsernameSchema,
@@ -16,6 +17,7 @@ import ObjectFieldTemplate from './components/ObjectFieldTemplate';
 import FieldTemplate from './components/FieldTemplate';
 import SelectWidget from './components/SelectWidget';
 import SubmitButton from './components/SubmitButton';
+import TextareaWidget from './components/TextareaWidget';
 
 // https://react-jsonschema-form.readthedocs.io/en/latest/api-reference/form-props/
 // formData
@@ -23,7 +25,10 @@ import SubmitButton from './components/SubmitButton';
 
 const widgets = {
   SelectWidget,
+  TextareaWidget,
 };
+
+const INPUT_DELAY = 300;
 
 export default function DataForm({
   schema: inSchema,
@@ -158,8 +163,7 @@ export default function DataForm({
       disabled={isLoading}
       showErrorList={false}
       // liveValidate={onChangeUpdate ? true : false}
-      onChange={({ formData, ...props }) => {
-        console.log(props);
+      onChange={debounce(({ formData, ...props }) => {
         if (process.env.NODE_ENV !== 'production') {
           console.log('formData update', formData);
         }
@@ -177,7 +181,7 @@ export default function DataForm({
         if (shouldRefresh) {
           reload();
         }
-      }}
+      }, INPUT_DELAY)}
       ArrayFieldTemplate={ArrayTemplate}
       ObjectFieldTemplate={ObjectFieldTemplate}
       FieldTemplate={FieldTemplate}

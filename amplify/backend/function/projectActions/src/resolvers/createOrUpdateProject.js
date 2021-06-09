@@ -25,6 +25,7 @@ module.exports = async ({
     description,
     links = [],
     slackChannel,
+    slackChannelUrl,
     intros = [],
   } = input;
 
@@ -61,6 +62,7 @@ module.exports = async ({
     description,
     links,
     slackChannel,
+    slackChannelUrl,
     intros,
     updatedAt: now,
     updatedBy: currentUsername,

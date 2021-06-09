@@ -15,6 +15,7 @@ input CreateOrUpdateProjectRequest {
   description: String
   links: [ProjectLinkRequest]
   slackChannel: String
+  slackChannelUrl: AWSURL
   intros: [ProjectIntroRequest]
 }
 

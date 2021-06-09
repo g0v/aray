@@ -20,6 +20,7 @@ import { Provider } from 'react-redux';
 import ReduxToastr from 'react-redux-toastr';
 import DocumentTitle from 'react-document-title';
 import { useTranslation } from 'react-i18next';
+import { loadCSS } from 'fg-loadcss';
 
 import 'react-calendar-heatmap/dist/styles.css';
 import './global';
@@ -116,6 +117,18 @@ function ReactApp() {
       console.log('onAuthUIStateChange', nextAuthState, authData);
       setUser(authData);
     });
+  }, []);
+
+  // https://material-ui.com/components/icons/#font-awesome
+  React.useEffect(() => {
+    const node = loadCSS(
+      'https://use.fontawesome.com/releases/v5.12.0/css/all.css',
+      document.querySelector('#font-awesome-css'),
+    );
+
+    return () => {
+      node.parentNode.removeChild(node);
+    };
   }, []);
 
   React.useEffect(() => {

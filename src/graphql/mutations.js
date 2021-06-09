@@ -115,6 +115,7 @@ export const createKeyword = /* GraphQL */ `
             location
             timeZone
             slackId
+            slackIdUrl
             urlWebsite
             urlGithub
             urlLinkedIn
@@ -172,6 +173,7 @@ export const updateKeyword = /* GraphQL */ `
             location
             timeZone
             slackId
+            slackIdUrl
             urlWebsite
             urlGithub
             urlLinkedIn
@@ -229,6 +231,7 @@ export const deleteKeyword = /* GraphQL */ `
             location
             timeZone
             slackId
+            slackIdUrl
             urlWebsite
             urlGithub
             urlLinkedIn
@@ -287,6 +290,7 @@ export const createNeed = /* GraphQL */ `
             summary
             description
             slackChannel
+            slackChannelUrl
             totalCompletedHours
             totalCompletedTasks
             totalContributors
@@ -340,6 +344,7 @@ export const updateNeed = /* GraphQL */ `
             summary
             description
             slackChannel
+            slackChannelUrl
             totalCompletedHours
             totalCompletedTasks
             totalContributors
@@ -393,6 +398,7 @@ export const deleteNeed = /* GraphQL */ `
             summary
             description
             slackChannel
+            slackChannelUrl
             totalCompletedHours
             totalCompletedTasks
             totalContributors
@@ -429,6 +435,7 @@ export const createProject = /* GraphQL */ `
         description
       }
       slackChannel
+      slackChannelUrl
       links {
         name
         description
@@ -468,6 +475,7 @@ export const createProject = /* GraphQL */ `
             summary
             description
             slackChannel
+            slackChannelUrl
             totalCompletedHours
             totalCompletedTasks
             totalContributors
@@ -506,6 +514,7 @@ export const createProject = /* GraphQL */ `
             summary
             description
             slackChannel
+            slackChannelUrl
             totalCompletedHours
             totalCompletedTasks
             totalContributors
@@ -536,6 +545,7 @@ export const createProject = /* GraphQL */ `
             summary
             description
             slackChannel
+            slackChannelUrl
             totalCompletedHours
             totalCompletedTasks
             totalContributors
@@ -577,6 +587,7 @@ export const createProject = /* GraphQL */ `
             summary
             description
             slackChannel
+            slackChannelUrl
             totalCompletedHours
             totalCompletedTasks
             totalContributors
@@ -594,6 +605,7 @@ export const createProject = /* GraphQL */ `
             location
             timeZone
             slackId
+            slackIdUrl
             urlWebsite
             urlGithub
             urlLinkedIn
@@ -635,6 +647,7 @@ export const updateProject = /* GraphQL */ `
         description
       }
       slackChannel
+      slackChannelUrl
       links {
         name
         description
@@ -674,6 +687,7 @@ export const updateProject = /* GraphQL */ `
             summary
             description
             slackChannel
+            slackChannelUrl
             totalCompletedHours
             totalCompletedTasks
             totalContributors
@@ -712,6 +726,7 @@ export const updateProject = /* GraphQL */ `
             summary
             description
             slackChannel
+            slackChannelUrl
             totalCompletedHours
             totalCompletedTasks
             totalContributors
@@ -742,6 +757,7 @@ export const updateProject = /* GraphQL */ `
             summary
             description
             slackChannel
+            slackChannelUrl
             totalCompletedHours
             totalCompletedTasks
             totalContributors
@@ -783,6 +799,7 @@ export const updateProject = /* GraphQL */ `
             summary
             description
             slackChannel
+            slackChannelUrl
             totalCompletedHours
             totalCompletedTasks
             totalContributors
@@ -800,6 +817,7 @@ export const updateProject = /* GraphQL */ `
             location
             timeZone
             slackId
+            slackIdUrl
             urlWebsite
             urlGithub
             urlLinkedIn
@@ -841,6 +859,7 @@ export const deleteProject = /* GraphQL */ `
         description
       }
       slackChannel
+      slackChannelUrl
       links {
         name
         description
@@ -880,6 +899,7 @@ export const deleteProject = /* GraphQL */ `
             summary
             description
             slackChannel
+            slackChannelUrl
             totalCompletedHours
             totalCompletedTasks
             totalContributors
@@ -918,6 +938,7 @@ export const deleteProject = /* GraphQL */ `
             summary
             description
             slackChannel
+            slackChannelUrl
             totalCompletedHours
             totalCompletedTasks
             totalContributors
@@ -948,6 +969,7 @@ export const deleteProject = /* GraphQL */ `
             summary
             description
             slackChannel
+            slackChannelUrl
             totalCompletedHours
             totalCompletedTasks
             totalContributors
@@ -989,6 +1011,7 @@ export const deleteProject = /* GraphQL */ `
             summary
             description
             slackChannel
+            slackChannelUrl
             totalCompletedHours
             totalCompletedTasks
             totalContributors
@@ -1006,6 +1029,7 @@ export const deleteProject = /* GraphQL */ `
             location
             timeZone
             slackId
+            slackIdUrl
             urlWebsite
             urlGithub
             urlLinkedIn
@@ -1075,6 +1099,7 @@ export const createProjectKeyword = /* GraphQL */ `
           description
         }
         slackChannel
+        slackChannelUrl
         links {
           name
           description
@@ -1192,6 +1217,7 @@ export const updateProjectKeyword = /* GraphQL */ `
           description
         }
         slackChannel
+        slackChannelUrl
         links {
           name
           description
@@ -1309,6 +1335,7 @@ export const deleteProjectKeyword = /* GraphQL */ `
           description
         }
         slackChannel
+        slackChannelUrl
         links {
           name
           description
@@ -1426,6 +1453,7 @@ export const createProjectNeed = /* GraphQL */ `
           description
         }
         slackChannel
+        slackChannelUrl
         links {
           name
           description
@@ -1543,6 +1571,7 @@ export const updateProjectNeed = /* GraphQL */ `
           description
         }
         slackChannel
+        slackChannelUrl
         links {
           name
           description
@@ -1660,6 +1689,7 @@ export const deleteProjectNeed = /* GraphQL */ `
           description
         }
         slackChannel
+        slackChannelUrl
         links {
           name
           description
@@ -1757,6 +1787,7 @@ export const createProjectTag = /* GraphQL */ `
           description
         }
         slackChannel
+        slackChannelUrl
         links {
           name
           description
@@ -1874,6 +1905,7 @@ export const updateProjectTag = /* GraphQL */ `
           description
         }
         slackChannel
+        slackChannelUrl
         links {
           name
           description
@@ -1991,6 +2023,7 @@ export const deleteProjectTag = /* GraphQL */ `
           description
         }
         slackChannel
+        slackChannelUrl
         links {
           name
           description
@@ -2229,6 +2262,7 @@ export const createTag = /* GraphQL */ `
             summary
             description
             slackChannel
+            slackChannelUrl
             totalCompletedHours
             totalCompletedTasks
             totalContributors
@@ -2282,6 +2316,7 @@ export const updateTag = /* GraphQL */ `
             summary
             description
             slackChannel
+            slackChannelUrl
             totalCompletedHours
             totalCompletedTasks
             totalContributors
@@ -2335,6 +2370,7 @@ export const deleteTag = /* GraphQL */ `
             summary
             description
             slackChannel
+            slackChannelUrl
             totalCompletedHours
             totalCompletedTasks
             totalContributors
@@ -2371,6 +2407,7 @@ export const createUser = /* GraphQL */ `
       location
       timeZone
       slackId
+      slackIdUrl
       urlWebsite
       urlGithub
       urlLinkedIn
@@ -2409,6 +2446,7 @@ export const createUser = /* GraphQL */ `
             location
             timeZone
             slackId
+            slackIdUrl
             urlWebsite
             urlGithub
             urlLinkedIn
@@ -2451,6 +2489,7 @@ export const createUser = /* GraphQL */ `
             location
             timeZone
             slackId
+            slackIdUrl
             urlWebsite
             urlGithub
             urlLinkedIn
@@ -2489,6 +2528,7 @@ export const createUser = /* GraphQL */ `
             summary
             description
             slackChannel
+            slackChannelUrl
             totalCompletedHours
             totalCompletedTasks
             totalContributors
@@ -2506,6 +2546,7 @@ export const createUser = /* GraphQL */ `
             location
             timeZone
             slackId
+            slackIdUrl
             urlWebsite
             urlGithub
             urlLinkedIn
@@ -2539,6 +2580,7 @@ export const updateUser = /* GraphQL */ `
       location
       timeZone
       slackId
+      slackIdUrl
       urlWebsite
       urlGithub
       urlLinkedIn
@@ -2577,6 +2619,7 @@ export const updateUser = /* GraphQL */ `
             location
             timeZone
             slackId
+            slackIdUrl
             urlWebsite
             urlGithub
             urlLinkedIn
@@ -2619,6 +2662,7 @@ export const updateUser = /* GraphQL */ `
             location
             timeZone
             slackId
+            slackIdUrl
             urlWebsite
             urlGithub
             urlLinkedIn
@@ -2657,6 +2701,7 @@ export const updateUser = /* GraphQL */ `
             summary
             description
             slackChannel
+            slackChannelUrl
             totalCompletedHours
             totalCompletedTasks
             totalContributors
@@ -2674,6 +2719,7 @@ export const updateUser = /* GraphQL */ `
             location
             timeZone
             slackId
+            slackIdUrl
             urlWebsite
             urlGithub
             urlLinkedIn
@@ -2707,6 +2753,7 @@ export const deleteUser = /* GraphQL */ `
       location
       timeZone
       slackId
+      slackIdUrl
       urlWebsite
       urlGithub
       urlLinkedIn
@@ -2745,6 +2792,7 @@ export const deleteUser = /* GraphQL */ `
             location
             timeZone
             slackId
+            slackIdUrl
             urlWebsite
             urlGithub
             urlLinkedIn
@@ -2787,6 +2835,7 @@ export const deleteUser = /* GraphQL */ `
             location
             timeZone
             slackId
+            slackIdUrl
             urlWebsite
             urlGithub
             urlLinkedIn
@@ -2825,6 +2874,7 @@ export const deleteUser = /* GraphQL */ `
             summary
             description
             slackChannel
+            slackChannelUrl
             totalCompletedHours
             totalCompletedTasks
             totalContributors
@@ -2842,6 +2892,7 @@ export const deleteUser = /* GraphQL */ `
             location
             timeZone
             slackId
+            slackIdUrl
             urlWebsite
             urlGithub
             urlLinkedIn
@@ -2903,6 +2954,7 @@ export const createUserKeyword = /* GraphQL */ `
         location
         timeZone
         slackId
+        slackIdUrl
         urlWebsite
         urlGithub
         urlLinkedIn
@@ -3000,6 +3052,7 @@ export const updateUserKeyword = /* GraphQL */ `
         location
         timeZone
         slackId
+        slackIdUrl
         urlWebsite
         urlGithub
         urlLinkedIn
@@ -3097,6 +3150,7 @@ export const deleteUserKeyword = /* GraphQL */ `
         location
         timeZone
         slackId
+        slackIdUrl
         urlWebsite
         urlGithub
         urlLinkedIn
@@ -3194,6 +3248,7 @@ export const createUserNeed = /* GraphQL */ `
         location
         timeZone
         slackId
+        slackIdUrl
         urlWebsite
         urlGithub
         urlLinkedIn
@@ -3291,6 +3346,7 @@ export const updateUserNeed = /* GraphQL */ `
         location
         timeZone
         slackId
+        slackIdUrl
         urlWebsite
         urlGithub
         urlLinkedIn
@@ -3388,6 +3444,7 @@ export const deleteUserNeed = /* GraphQL */ `
         location
         timeZone
         slackId
+        slackIdUrl
         urlWebsite
         urlGithub
         urlLinkedIn
@@ -3476,6 +3533,7 @@ export const createUserProject = /* GraphQL */ `
           description
         }
         slackChannel
+        slackChannelUrl
         links {
           name
           description
@@ -3549,6 +3607,7 @@ export const createUserProject = /* GraphQL */ `
         location
         timeZone
         slackId
+        slackIdUrl
         urlWebsite
         urlGithub
         urlLinkedIn
@@ -3637,6 +3696,7 @@ export const updateUserProject = /* GraphQL */ `
           description
         }
         slackChannel
+        slackChannelUrl
         links {
           name
           description
@@ -3710,6 +3770,7 @@ export const updateUserProject = /* GraphQL */ `
         location
         timeZone
         slackId
+        slackIdUrl
         urlWebsite
         urlGithub
         urlLinkedIn
@@ -3798,6 +3859,7 @@ export const deleteUserProject = /* GraphQL */ `
           description
         }
         slackChannel
+        slackChannelUrl
         links {
           name
           description
@@ -3871,6 +3933,7 @@ export const deleteUserProject = /* GraphQL */ `
         location
         timeZone
         slackId
+        slackIdUrl
         urlWebsite
         urlGithub
         urlLinkedIn

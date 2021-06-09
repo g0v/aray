@@ -181,6 +181,18 @@ export default function Project({ id: inId, computedMatch, match }) {
                   ))}
                 </div>
               </Grid>
+              {(project.slackChannel || project.slackChannelUrl) &&
+              <Grid item xs={12} className={classes.chipContainer}>
+                <Typography variant="body1" gutterBottom>
+                  {t('project_slackChannel')}
+                </Typography>
+                <VisitButton
+                  title={project.slackChannel || '專案頻道'}
+                  url={project.slackChannelUrl || 'https://g0v-tw.slack.com/'}
+                  variant={'text'}
+                  color={'secondary'}
+                />
+              </Grid>}
               <Grid item xs={12} className={classes.chipContainer}>
                 <Typography variant="body1" gutterBottom>
                   {t('project_links')}

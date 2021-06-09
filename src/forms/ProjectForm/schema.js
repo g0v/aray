@@ -27,6 +27,15 @@ export default {
       "type": ["string", "null"],
       "title": "projectFormSchema_description"
     },
+    "slackChannel": {
+      "type": ["string", "null"],
+      "title": "projectFormSchema_slackChannel"
+    },
+    "slackChannelUrl": {
+      "type": ["string", "null"],
+      "title": "projectFormSchema_slackChannelUrl",
+      "description": "projectFormSchema_slackChannelUrl_description"
+    },
     "links": {
       "type": "array",
       "title": "projectFormSchema_links",

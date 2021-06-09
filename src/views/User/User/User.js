@@ -13,8 +13,9 @@ import LinkedInIcon from '@material-ui/icons/LinkedIn';
 import LanguageIcon from '@material-ui/icons/Language';
 import GitHubIcon from '@material-ui/icons/GitHub';
 import RoomIcon from '@material-ui/icons/Room';
+import Icon from '@material-ui/core/Icon';
 // import MailOutlineIcon from '@material-ui/icons/MailOutline';
-import ChatBubbleOutlineIcon from '@material-ui/icons/ChatBubbleOutline';
+// import ChatBubbleOutlineIcon from '@material-ui/icons/ChatBubbleOutline';
 import moment from 'moment';
 import NumberFormat from 'react-number-format';
 
@@ -155,8 +156,9 @@ export default function User({ id: inId, computedMatch, match }) {
         //   value: data.email,
         //   display: true,
       }, {
-        icon: <ChatBubbleOutlineIcon />,
-        value: `slack: ${data.slackId || ''}`,
+        icon: <Icon className="fab fa-slack" />,
+        value: `${data.slackId || ''}`,
+        link: data.slackIdUrl,
         display: data.slackId ? true : false,
       }].filter(({ display }) => display));
       setLinks([{
@@ -259,7 +261,14 @@ export default function User({ id: inId, computedMatch, match }) {
                 <div key={index} className={classes.listItem}>
                   {item.icon}
                   <span className={classes.listItemText}>
-                    {item.value}
+                    {item.link ?
+                      <VisitButton
+                        title={item.value}
+                        url={item.link}
+                        variant={'text'}
+                        color={'secondary'}
+                      /> : item.value
+                    }
                   </span>
                 </div>
               ))}

@@ -26,6 +26,7 @@ type Project
   intros: [ProjectIntro]
 
   slackChannel: String
+  slackChannelUrl: AWSURL
   links: [ProjectLink]
 
   totalCompletedHours: Float

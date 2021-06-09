@@ -28,6 +28,8 @@ export default function ProjectForm({ ...props }) {
       name,
       summary,
       description,
+      slackChannel,
+      slackChannelUrl,
       links,
     } = data;
     const input = {
@@ -36,6 +38,8 @@ export default function ProjectForm({ ...props }) {
       name,
       summary,
       description,
+      slackChannel,
+      slackChannelUrl,
       links,
       updatedBy: username,
     };

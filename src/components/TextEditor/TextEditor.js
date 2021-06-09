@@ -16,7 +16,7 @@ Object.assign(defaultTheme, {
       },
       editor: {
         minHeight: 64,
-        borderBottom: '1px solid gray',
+        borderBottom: '1px solid rgba(0,0,0,0.5)',
       },
     },
   },

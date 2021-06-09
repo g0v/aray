@@ -1,13 +1,15 @@
 import React, { useState, useEffect } from 'react';
 import PropTypes from 'prop-types';
 import Chip from '@material-ui/core/Chip';
-import Autocomplete from '@material-ui/lab/Autocomplete';
+import Autocomplete, { createFilterOptions } from '@material-ui/lab/Autocomplete';
 import TextField from '@material-ui/core/TextField';
 
 import {
   asyncListAll,
 } from 'utils/graph';
 import { getPropsByMode } from './helpers';
+
+const filter = createFilterOptions();
 
 export default function DataJoinEditorInput({
   title = '',
@@ -23,7 +25,14 @@ export default function DataJoinEditorInput({
   const [values, setValues] = useState([]);
   const [defaultValues, setDefaultValues] = useState(inDefaultValues);
 
-  const handleChange = (event, values) => {
+  const handleChange = (event, newValues) => {
+    const values = newValues.map((item) => {
+      if (typeof item === 'string') {
+        return item;
+      } else {
+        return item.inputValue;
+      }
+    });
     setValues([...values]);
     onChange(values);
   };
@@ -65,10 +74,28 @@ export default function DataJoinEditorInput({
         id="tags-filled"
         options={filteredOptions}
         defaultValue={defaultValues}
+        selectOnFocus
+        clearOnBlur
         freeSolo
+        filterOptions={(options, params) => {
+          const filtered = filter(options, params);
+          if (params.inputValue !== '') {
+            filtered.push({
+              inputValue: params.inputValue,
+              title: `Add "${params.inputValue}"`,
+            });
+          }
+          return filtered;
+        }}
+        getOptionLabel={(option) => {
+          if (typeof option === 'string') {
+            return option;
+          }
+          return option.title;
+        }}
         renderTags={(value, getTagProps) =>
           value.map((option, index) => (
-            <Chip key={index} variant="outlined" label={option} {...getTagProps({ index })} />
+            <Chip key={index} variant="outlined" label={typeof option === 'string' ? option : option.inputValue} {...getTagProps({ index })} />
             // <React.Fragment key={index}>
             //   {chip({
             //     data: { label: option },

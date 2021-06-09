@@ -284,7 +284,7 @@ export default function Project({ id: inId, computedMatch, match }) {
                 ))}
               </Tabs>
             </Grid>
-            <Grid item xs={12} container alignItems="flex-start" justify="flex-start">
+            <Grid item xs={12} container alignItems="flex-start" justify="flex-start" spacing={2}>
               {tabs.filter((x, index) => index === tabIndex).map((item, index)=>(
                 <item.component key={index} />
               ))}

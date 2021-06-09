@@ -26,7 +26,8 @@ import ProjectAvatar from 'components/ProjectAvatar';
 
 const useStyles = makeStyles({
   root: {
-    maxWidth: 345,
+    // maxWidth: 345,
+    height: '100%',
   },
   media: {
     height: 140,
@@ -74,15 +75,16 @@ export default function ProjectCard({
         component={RouteLink}
         style={{
           textDecoration: 'none',
+          height: '100%',
         }}
       >
-        <CardActionArea>
+        <CardActionArea style={{ height: '100%' }}>
           {/* <CardMedia
             className={classes.media}
             image={`https://avatars.dicebear.com/api/jdenticon/${project.id}.svg`}
             title="Project"
           /> */}
-          <CardContent>
+          <CardContent style={{ height: '100%' }}>
             <Box align="center" justify="center" mb={2}>
               <ProjectAvatar projectId={project.id} size={100} />
             </Box>

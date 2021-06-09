@@ -53,6 +53,7 @@ project_contributions: 貢獻紀錄
 project_owner: 坑主
 project_managers: 共同坑主
 project_main: 介紹
+project_slackChannel: Slack 頻道
 
 projectManagerEditor_update: 更新
 projectManagerEditor_title: 共同管理坑主
@@ -67,6 +68,9 @@ projectFormSchema_status: 狀態
 projectFormSchema_name: 名稱
 projectFormSchema_summary: 簡述
 projectFormSchema_description: 詳細描述
+projectFormSchema_slackChannel: Slack 頻道
+projectFormSchema_slackChannelUrl: Slack 頻道網址
+projectFormSchema_slackChannelUrl_description: 您可以在Slack左方的頻道上按右鍵，選擇 "Copy link"。補上連結可以幫助其他使用者快速找到你的頻道。
 projectFormSchema_links: 連結
 projectFormSchema_linksName: 名稱
 projectFormSchema_linksUrl: 網址
@@ -90,6 +94,8 @@ userFormSchema_email: Email
 userFormSchema_selfIntroduction: 自介
 userFormSchema_location: 所在地區
 userFormSchema_slackId: Slack ID
+userFormSchema_slackIdUrl: Slack ID 網址
+userFormSchema_slackIdUrl_description: 你可以在Slack左方你的ID上按右鍵，選擇 "Copy link"。補上連結可以幫助其他使用者快速找到你。
 userFormSchema_urlWebsite: Website 網址
 userFormSchema_urlGithub: Github 網址
 userFormSchema_urlLinkedIn: LinkedIn 網址

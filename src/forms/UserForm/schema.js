@@ -27,6 +27,11 @@ export default {
       "type": ["string", "null"],
       "title": "userFormSchema_slackId"
     },
+    "slackIdUrl": {
+      "type": ["string", "null"],
+      "title": "userFormSchema_slackIdUrl",
+      "description": "userFormSchema_slackIdUrl_description"
+    },
     "urlWebsite": {
       "type": ["string", "null"],
       "title": "userFormSchema_urlWebsite"

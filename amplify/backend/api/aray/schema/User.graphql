@@ -22,6 +22,7 @@ type User
   timeZone: String
 
   slackId: String
+  slackIdUrl: AWSURL
   
   urlWebsite: AWSURL
   urlGithub: AWSURL

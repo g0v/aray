@@ -12,7 +12,7 @@ import FacebookIcon from '@material-ui/icons/Facebook';
 import LinkedInIcon from '@material-ui/icons/LinkedIn';
 import LanguageIcon from '@material-ui/icons/Language';
 import GitHubIcon from '@material-ui/icons/GitHub';
-import RoomIcon from '@material-ui/icons/Room';
+// import RoomIcon from '@material-ui/icons/Room';
 import Icon from '@material-ui/core/Icon';
 // import MailOutlineIcon from '@material-ui/icons/MailOutline';
 // import ChatBubbleOutlineIcon from '@material-ui/icons/ChatBubbleOutline';
@@ -147,7 +147,7 @@ export default function User({ id: inId, computedMatch, match }) {
       console.log('userStatements', userStatements);
       setUser(data);
       setDetails([{
-        icon: <RoomIcon />,
+        icon: <Icon className="fas fa-map-marker-alt" />,
         value: data.location,
         display: data.location ? true : false,
         // TODO: Do not return email in response
@@ -185,7 +185,7 @@ export default function User({ id: inId, computedMatch, match }) {
         icon: <InstagramIcon />,
         url: data.urlInstagram || '',
         color: 'default',
-      }]);
+      }].filter(({ url }) => url !== ''));
 
       const projects = data.projects.items.map(({ project }) => project);
       setKeywords(data.keywords.items.map(({ keyword }) => keyword));
@@ -229,103 +229,107 @@ export default function User({ id: inId, computedMatch, match }) {
     <Container className={classes.container}>
       <Card className={classes.card}>
         <Grid container spacing={4}>
-          <Grid item xs={3} container spacing={2} style={{ height: 100 }}>
-            <Grid item xs={12} align="center">
-              <UserAvatar
-                username={user.username}
-                name={user.name}
-                size={150}
-                showEditor={true}
-                canEdit={canEdit}
-              />
-            </Grid>
-            <Grid item xs={12}>
-              <Typography variant="h4">
-                {user.name}
-              </Typography>
-              <Typography variant="body1" color="textSecondary" gutterBottom>
-                {user.username}
-              </Typography>
-              <RichText data={user.selfIntroduction} />
-            </Grid>
-            {canEdit &&
-            <Grid item xs={12}>
-              <UserEditButton
-                mode={'edit'}
-                item={user}
-                onUpdate={() => setLastUpdatedAt(Date.now())}
-              />
-            </Grid>}
-            <Grid item xs={12}>
-              {details.map((item, index)=>(
-                <div key={index} className={classes.listItem}>
-                  {item.icon}
-                  <span className={classes.listItemText}>
-                    {item.link ?
-                      <VisitButton
-                        title={item.value}
-                        url={item.link}
-                        variant={'text'}
-                        color={'secondary'}
-                      /> : item.value
-                    }
-                  </span>
-                </div>
-              ))}
-            </Grid>
-            <Grid item xs={12}>
-              {links.map((link, index)=>(
-                <VisitButton
-                  key={index}
-                  url={link.url}
-                  icon={link.icon}
-                  color={link.color}
+          <Grid item xs={12} md={3}>
+            <Grid container spacing={2}>
+              <Grid item xs={12} align="center">
+                <UserAvatar
+                  username={user.username}
+                  name={user.name}
+                  size={150}
+                  showEditor={true}
+                  canEdit={canEdit}
                 />
-              ))}
-            </Grid>
-            <Grid item xs={12}>
-              <Typography variant="body1" gutterBottom>
-                {t('user_keywords')}
-                {canEdit &&
-                <DataJoinEditor
-                  title={t('user_keywords')}
-                  mode={'user-keyword'}
-                  joinData={user.keywords.items}
+              </Grid>
+              <Grid item xs={12}>
+                <Typography variant="h4">
+                  {user.name}
+                </Typography>
+                <Typography variant="body1" color="textSecondary" gutterBottom>
+                  {user.username}
+                </Typography>
+                <RichText data={user.selfIntroduction} />
+              </Grid>
+              {canEdit &&
+              <Grid item xs={12}>
+                <UserEditButton
+                  mode={'edit'}
+                  item={user}
                   onUpdate={() => setLastUpdatedAt(Date.now())}
-                />}
-              </Typography>
-              {keywords.map((item, index)=>(
-                <KeywordChip key={index} data={item} />
-              ))}
-            </Grid>
-            <Grid item xs={12}>
-              <Typography variant="body1" gutterBottom>
-                {t('user_needs')}
-                {canEdit &&
-                <DataJoinEditor
-                  title={t('user_needs')}
-                  mode={'user-need'}
-                  joinData={user.needs.items}
-                  onUpdate={() => setLastUpdatedAt(Date.now())}
-                />}
-              </Typography>
-              {needs.map((item, index)=>(
-                <NeedChip key={index} data={item} />
-              ))}
+                />
+              </Grid>}
+              <Grid item xs={12}>
+                {details.map((item, index)=>(
+                  <div key={index} className={classes.listItem}>
+                    {item.icon}
+                    <span className={classes.listItemText}>
+                      {item.link ?
+                        <VisitButton
+                          title={`@${(item.value || '').replace('@', '')}`}
+                          url={item.link}
+                          variant={'text'}
+                          color={'secondary'}
+                          style={{ padding: 0, minWidth: 0, textTransform: 'none' }}
+                        /> : item.value
+                      }
+                    </span>
+                  </div>
+                ))}
+              </Grid>
+              {links.length > 0 &&
+              <Grid item xs={12}>
+                {links.map((link, index)=>(
+                  <VisitButton
+                    key={index}
+                    url={link.url}
+                    icon={link.icon}
+                    color={link.color}
+                  />
+                ))}
+              </Grid>}
+              <Grid item xs={12}>
+                <Typography variant="body1" gutterBottom>
+                  {t('user_keywords')}
+                  {canEdit &&
+                  <DataJoinEditor
+                    title={t('user_keywords')}
+                    mode={'user-keyword'}
+                    joinData={user.keywords.items}
+                    onUpdate={() => setLastUpdatedAt(Date.now())}
+                  />}
+                </Typography>
+                {keywords.map((item, index)=>(
+                  <KeywordChip key={index} data={item} />
+                ))}
+              </Grid>
+              <Grid item xs={12}>
+                <Typography variant="body1" gutterBottom>
+                  {t('user_needs')}
+                  {canEdit &&
+                  <DataJoinEditor
+                    title={t('user_needs')}
+                    mode={'user-need'}
+                    joinData={user.needs.items}
+                    onUpdate={() => setLastUpdatedAt(Date.now())}
+                  />}
+                </Typography>
+                {needs.map((item, index)=>(
+                  <NeedChip key={index} data={item} />
+                ))}
+              </Grid>
             </Grid>
           </Grid>
-          <Grid item xs={9} container spacing={2}>
-            <Grid item xs={4}>
+          <Grid item xs={12} md={9} container spacing={2}>
+            <Grid item xs={12} sm={4}>
               <StatsCard
                 label={t('user_participateProjects')}
                 value={userProjects.length} />
             </Grid>
-            <Grid item xs={4}>
+            <Grid item xs={12} sm={4}>
               <StatsCard
                 label={t('user_totalCompletedHours')}
                 value={user.totalCompletedHours} />
             </Grid>
-            <Grid item xs={4}>
+            <Grid item xs={12} sm={4}>
               <StatsCard
                 label={t('user_totalCompletedTasks')}
                 value={user.totalCompletedTasks} />

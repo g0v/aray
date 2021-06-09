@@ -8,10 +8,11 @@ import { makeStyles } from '@material-ui/core/styles';
 import IconButton from '@material-ui/core/IconButton';
 import CloseIcon from '@material-ui/icons/Close';
 import Typography from '@material-ui/core/Typography';
+import withWidth, { isWidthUp } from '@material-ui/core/withWidth';
 
 const useStyles = makeStyles((theme) => ({
   dialog: {
-    minWidth: 480,
+    // minWidth: 480,
   },
   content: {
     padding: theme.spacing(3),
@@ -44,13 +45,14 @@ CustomDialogTitle.propTypes = {
   onClose: PropTypes.func,
 };
 
-export default function DetailFormDialog({
+function DetailFormDialog({
   children,
   title = '新增資料',
   openOnInit = false,
   onClose,
   fullScreen = false,
   maxWidth = 'md',
+  width,
 }) {
   const classes = useStyles();
   const [open, setOpen] = useState(openOnInit);
@@ -64,7 +66,7 @@ export default function DetailFormDialog({
     <React.Fragment>
       <Dialog
         open={open}
-        fullScreen={fullScreen}
+        fullScreen={isWidthUp('sm', width) ? fullScreen : true}
         fullWidth={true}
         maxWidth={maxWidth}
         onClose={handleClose}
@@ -91,4 +93,7 @@ DetailFormDialog.propTypes = {
   onClose: PropTypes.func,
   fullScreen: PropTypes.bool,
   maxWidth: PropTypes.string,
+  width: PropTypes.number,
 };
+
+export default withWidth()(DetailFormDialog);

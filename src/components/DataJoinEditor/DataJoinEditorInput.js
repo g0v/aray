@@ -17,12 +17,13 @@ export default function DataJoinEditorInput({
   onChange,
   onUpdateOptions,
   disabled,
-  freeSolo = true,
+  freeSolo: inFreeSolo = true,
 }) {
   const [allOptions, setAllOptions] = useState([]);
   const [filteredOptions, setFilteredOptions] = useState([]);
   const [values, setValues] = useState([]);
   const [defaultValues, setDefaultValues] = useState(inDefaultValues);
+  const [freeSolo, setFreeSolo] = useState(inFreeSolo);
 
   const handleChange = (event, values) => {
     setValues([...values]);
@@ -47,9 +48,13 @@ export default function DataJoinEditorInput({
     (async () => {
       const {
         listOptionsQueryName,
+        freeSolo,
       } = getPropsByMode(mode);
       const results = await asyncListAll(listOptionsQueryName, { limit: 1000 });
       setAllOptions(results);
+      if (!freeSolo) {
+        setFreeSolo(false);
+      }
 
       if (onUpdateOptions) {
         onUpdateOptions(results);

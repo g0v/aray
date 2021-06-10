@@ -30,6 +30,7 @@ export const getPropsByMode = (mode) => {
   let createJoinDataQueryName;
   let deleteJoinDataQueryName;
   let chip;
+  let freeSolo = true;
   switch (mode) {
   case 'user-keyword':
     key = 'keywordId';
@@ -66,6 +67,7 @@ export const getPropsByMode = (mode) => {
     createJoinDataQueryName = createProjectTag;
     deleteJoinDataQueryName = deleteProjectTag;
     chip = TagChip;
+    freeSolo = false;
     break;
   case 'project-need':
     key = 'needId';
@@ -86,5 +88,6 @@ export const getPropsByMode = (mode) => {
     createQueryName,
     createJoinDataQueryName,
     deleteJoinDataQueryName,
+    freeSolo,
   };
 };

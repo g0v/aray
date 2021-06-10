@@ -51,12 +51,12 @@ project_pastProposals: 過往提案
 project_tasks: 任務
 project_contributions: 貢獻紀錄
 project_owner: 坑主
-project_managers: 共同坑主
+project_managers: 共同管理員
 project_main: 介紹
 project_slackChannel: Slack 頻道
 
 projectManagerEditor_update: 更新
-projectManagerEditor_title: 共同管理坑主
+projectManagerEditor_title: 共同管理員
 projectManagerEditor_confirm: 確認
 
 projectTasks_hours: 小時

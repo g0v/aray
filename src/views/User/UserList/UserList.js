@@ -6,24 +6,36 @@ import Typography from '@material-ui/core/Typography';
 import { useTranslation } from 'react-i18next';
 import Card from '@material-ui/core/Card';
 import TextField from '@material-ui/core/TextField';
+import { useHistory } from 'react-router-dom';
+import querystring from 'query-string';
 
 import { asyncListAll } from 'utils/graph';
 // import { listUsers } from 'graphql/queries';
 import UserCard from 'components/UserCard';
 import DataJoinEditorInput from 'components/DataJoinEditor/DataJoinEditorInput';
+import Loading from 'components/Loading';
 
 export default function UserList({ data: inData, hideTitle = false }) {
   const { t } = useTranslation();
+  const history = useHistory();
+
   const [users, setUsers] = useState([]);
   const [isLoading, setIsLoading] = useState(false);
   const [filters, setFilters] = useState({});
   const [filteredUsers, setFilteredUsers] = useState([]);
+  const [isInit, setIsInit] = useState(false);
 
   const handleFilter = (key) => (values) => {
-    console.log(key, values);
-    setFilters({
+    const newFilters = {
       ...filters,
       [key]: values,
+    };
+    setFilters(newFilters);
+
+    history.push({
+      search: `?${Object.keys(newFilters)
+        .map((key)=>`${key}=${key === 'text' ? newFilters[key] : newFilters[key].join(',')}`)
+        .join('&')}`,
     });
   };
 
@@ -108,11 +120,24 @@ export default function UserList({ data: inData, hideTitle = false }) {
         user.needsString = user.needs.items.map((item) => item.need.label).join(', ');
         return user;
       }));
+
+      const filters = querystring.parse(window.location.search);
+      Object.keys(filters).forEach((key) => {
+        if (key !== 'text') {
+          filters[key] = filters[key].split(',');
+        }
+      });
+      console.log(filters);
+      setFilters(filters);
+
+      setIsInit(true);
       setIsLoading(false);
     })();
   }, [inData]);
 
-  console.log(users);
+  if (!isInit) {
+    return <Loading fullScreen={false} />;
+  }
 
   return (
     <Container maxWidth={false}>
@@ -128,9 +153,11 @@ export default function UserList({ data: inData, hideTitle = false }) {
               title={t('userList_searchByKeywords')}
               mode={'user-keyword'}
               joinData={[]}
+              defaultValues={filters.keywords || []}
               onChange={handleFilter('keywords')}
               onUpdateOptions={()=>{}}
               disabled={isLoading}
+              freeSolo={false}
             />
           </Grid>
           <Grid item xs={12} md={6}>
@@ -138,9 +165,11 @@ export default function UserList({ data: inData, hideTitle = false }) {
               title={t('userList_searchByNeeds')}
               mode={'user-need'}
               joinData={[]}
+              defaultValues={filters.needs || []}
               onChange={handleFilter('needs')}
               onUpdateOptions={()=>{}}
               disabled={isLoading}
+              freeSolo={false}
             />
           </Grid>
           <Grid item xs={12} md={12}>
@@ -148,6 +177,7 @@ export default function UserList({ data: inData, hideTitle = false }) {
               id="userList_searchByText"
               label={t('userList_searchByText')}
               variant="outlined"
+              value={filters.text}
               onChange={(e)=>{
                 handleFilter('text')(e.target.value.toLowerCase());
               }}

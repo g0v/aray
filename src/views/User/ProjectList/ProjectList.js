@@ -7,12 +7,13 @@ import TextField from '@material-ui/core/TextField';
 import { useTranslation } from 'react-i18next';
 import Card from '@material-ui/core/Card';
 import { useHistory } from 'react-router-dom';
-// import querystring from 'query-string';
+import querystring from 'query-string';
 
 import { asyncListAll } from 'utils/graph';
 import { listProjects } from './ProjectListQueries';
 import ProjectCard from 'components/ProjectCard';
 import DataJoinEditorInput from 'components/DataJoinEditor/DataJoinEditorInput';
+import Loading from 'components/Loading';
 
 export default function UserProjectList() {
   const { t } = useTranslation();
@@ -22,6 +23,7 @@ export default function UserProjectList() {
   const [isLoading, setIsLoading] = useState(false);
   const [filters, setFilters] = useState({});
   const [filteredProjects, setFilteredProjects] = useState([]);
+  const [isInit, setIsInit] = useState(false);
 
   const handleFilter = (key) => (values) => {
     // console.log(key, values);
@@ -81,17 +83,23 @@ export default function UserProjectList() {
         return project;
       }));
 
-      // const filters = querystring.parse(window.location.search);
-      // Object.keys(filters).forEach((key) => {
-      //   if (key !== 'text') {
-      //     filters[key] = filters[key].split(',');
-      //   }
-      // });
-      // setFilters(filters);
+      const filters = querystring.parse(window.location.search);
+      Object.keys(filters).forEach((key) => {
+        if (key !== 'text') {
+          filters[key] = filters[key].split(',');
+        }
+      });
+      console.log(filters);
+      setFilters(filters);
 
+      setIsInit(true);
       setIsLoading(false);
     })();
   }, []);
+
+  if (!isInit) {
+    return <Loading fullScreen={false} />;
+  }
 
   return (
     <Container maxWidth={false}>
@@ -107,6 +115,7 @@ export default function UserProjectList() {
               title={t('projectList_searchByTags')}
               mode={'project-tag'}
               joinData={[]}
+              defaultValues={filters.tags || []}
               onChange={handleFilter('tags')}
               onUpdateOptions={()=>{}}
               disabled={isLoading}
@@ -117,6 +126,7 @@ export default function UserProjectList() {
               title={t('projectList_searchByKeywords')}
               mode={'project-keyword'}
               joinData={[]}
+              defaultValues={filters.keywords || []}
               onChange={handleFilter('keywords')}
               onUpdateOptions={()=>{}}
               disabled={isLoading}
@@ -137,6 +147,7 @@ export default function UserProjectList() {
               id="projectList_searchByText"
               label={t('projectList_searchByText')}
               variant="outlined"
+              value={filters.text}
               onChange={(e)=>{
                 handleFilter('text')(e.target.value.toLowerCase());
               }}

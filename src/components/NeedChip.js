@@ -7,6 +7,7 @@ import Colors from 'constants/Colors';
 
 export default function NeedChip({
   data,
+  target,
 }) {
   const [value, setValue] = useState();
 
@@ -25,6 +26,7 @@ export default function NeedChip({
   return (
     <Chip
       label={value}
+      url={target ? `/${target}s?needs=${value}` : ''}
       color={Colors.secondaryDark}
     />
   );
@@ -34,4 +36,5 @@ NeedChip.propTypes = {
   data: PropTypes.shape({
     label: PropTypes.string,
   }),
+  target: PropTypes.string,
 };

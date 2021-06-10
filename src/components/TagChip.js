@@ -7,6 +7,7 @@ import Colors from 'constants/Colors';
 
 export default function TagChip({
   data,
+  target, // 'project' or 'user'
 }) {
   const [value, setValue] = useState();
 
@@ -25,6 +26,7 @@ export default function TagChip({
   return (
     <Chip
       label={value}
+      url={target ? `/${target}s?tags=${value}` : ''}
       color={Colors.focused}
     />
   );
@@ -34,4 +36,5 @@ TagChip.propTypes = {
   data: PropTypes.shape({
     label: PropTypes.string,
   }),
+  target: PropTypes.string,
 };

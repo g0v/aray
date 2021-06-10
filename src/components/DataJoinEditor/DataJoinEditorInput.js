@@ -17,6 +17,7 @@ export default function DataJoinEditorInput({
   onChange,
   onUpdateOptions,
   disabled,
+  freeSolo = true,
 }) {
   const [allOptions, setAllOptions] = useState([]);
   const [filteredOptions, setFilteredOptions] = useState([]);
@@ -65,7 +66,7 @@ export default function DataJoinEditorInput({
         id="tags-filled"
         options={filteredOptions}
         defaultValue={defaultValues}
-        freeSolo
+        freeSolo={freeSolo}
         disableCloseOnSelect
         renderTags={(value, getTagProps) =>
           value.map((option, index) => (
@@ -97,4 +98,5 @@ DataJoinEditorInput.propTypes = {
   onChange: PropTypes.func,
   onUpdateOptions: PropTypes.func,
   disabled: PropTypes.bool,
+  freeSolo: PropTypes.bool,
 };

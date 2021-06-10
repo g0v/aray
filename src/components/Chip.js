@@ -36,7 +36,7 @@ export default function Chip({ label, url, color }) {
   return (
     <Link
       to={url}
-      component={RouteLink}
+      component={url ? RouteLink : undefined}
       style={{
         textDecoration: 'none',
         height: '100%',

@@ -5,6 +5,8 @@ const {
   API_ARAY_PROJECTTABLE_NAME,
   // API_ARAY_KEYWORDTABLE_NAME,
   // API_ARAY_NEEDTABLE_NAME,
+  API_ARAY_EVENTATTENDANCETABLE_NAME,
+  API_ARAY_EVENTTABLE_NAME,
   API_ARAY_TAGTABLE_NAME,
   API_ARAY_PROJECTTAGTABLE_NAME,
   // API_ARAY_PROJECTKEYWORDTABLE_NAME,
@@ -57,6 +59,24 @@ exports.getUserProject = async (username, projectId) => {
   return items[0];
 };
 
+exports.getEvent = async (id) => {
+  const { Item } = await docClient.get({
+    TableName: API_ARAY_EVENTTABLE_NAME,
+    Key: { id },
+  }).promise();
+
+  return Item;
+};
+
+exports.getEventAttendance = async (id) => {
+  const { Item } = await docClient.get({
+    TableName: API_ARAY_EVENTATTENDANCETABLE_NAME,
+    Key: { id },
+  }).promise();
+
+  return Item;
+};
+
 exports.listProjectUsers = async (projectId) => {
   const items = await docClient.queryAll({
     TableName: API_ARAY_USERPROJECTTABLE_NAME,
@@ -104,4 +124,14 @@ exports.updateUserProjects = async (items) => {
 exports.updateContributions = async (items) => {
   if (items.length === 0) return [];
   await docClient.batchUpdate(API_ARAY_CONTRIBUTIONTABLE_NAME, items);
+};
+
+exports.updateEvents = async (items) => {
+  if (items.length === 0) return [];
+  await docClient.batchUpdate(API_ARAY_EVENTTABLE_NAME, items);
+};
+
+exports.updateEventAttendances = async (items) => {
+  if (items.length === 0) return [];
+  await docClient.batchUpdate(API_ARAY_EVENTATTENDANCETABLE_NAME, items);
 };

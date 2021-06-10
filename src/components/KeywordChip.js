@@ -7,6 +7,7 @@ import Colors from 'constants/Colors';
 
 export default function KeywordChip({
   data,
+  target,
 }) {
   const [value, setValue] = useState();
 
@@ -25,6 +26,7 @@ export default function KeywordChip({
   return (
     <Chip
       label={value}
+      url={target ? `/${target}s?keywords=${value}` : ''}
       color={Colors.primaryDark}
     />
   );
@@ -34,4 +36,5 @@ KeywordChip.propTypes = {
   data: PropTypes.shape({
     label: PropTypes.string,
   }),
+  target: PropTypes.string,
 };

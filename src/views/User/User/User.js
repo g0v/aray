@@ -4,7 +4,6 @@ import Grid from '@material-ui/core/Grid';
 import Container from '@material-ui/core/Container';
 import Typography from '@material-ui/core/Typography';
 import Card from '@material-ui/core/Card';
-import CircularProgress from '@material-ui/core/CircularProgress';
 
 import InstagramIcon from '@material-ui/icons/Instagram';
 import TwitterIcon from '@material-ui/icons/Twitter';
@@ -39,6 +38,7 @@ import UserEditButton from 'forms/UserForm/UserEditButton';
 import DataJoinEditor from 'components/DataJoinEditor';
 import ContributionHeatmap from './ContributionHeatmap';
 import RichText from 'components/RichText';
+import Loading from 'components/Loading';
 
 const useStyles = makeStyles((theme) => ({
   container: {
@@ -218,11 +218,7 @@ export default function User({ id: inId, computedMatch, match }) {
   }, [id, lastUpdatedAt]);
 
   if (!user) {
-    return (
-      <Container className={classes.container} style={{ textAlign: 'center' }}>
-        <CircularProgress color="primary" />
-      </Container>
-    );
+    return <Loading fullScreen={false} />;
   }
 
   return (
@@ -298,7 +294,7 @@ export default function User({ id: inId, computedMatch, match }) {
                   />}
                 </Typography>
                 {keywords.map((item, index)=>(
-                  <KeywordChip key={index} data={item} />
+                  <KeywordChip key={index} data={item} target="user" />
                 ))}
               </Grid>
               <Grid item xs={12}>
@@ -313,7 +309,7 @@ export default function User({ id: inId, computedMatch, match }) {
                   />}
                 </Typography>
                 {needs.map((item, index)=>(
-                  <NeedChip key={index} data={item} />
+                  <NeedChip key={index} data={item} target="user" />
                 ))}
               </Grid>
             </Grid>

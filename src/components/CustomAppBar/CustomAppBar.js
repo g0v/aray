@@ -27,8 +27,8 @@ import ClickAwayListener from '@material-ui/core/ClickAwayListener';
 import MenuList from '@material-ui/core/MenuList';
 import MenuItem from '@material-ui/core/MenuItem';
 import Hidden from '@material-ui/core/Hidden';
-import Badge from '@material-ui/core/Badge';
-import NotificationsIcon from '@material-ui/icons/Notifications';
+// import Badge from '@material-ui/core/Badge';
+// import NotificationsIcon from '@material-ui/icons/Notifications';
 
 import { Link, useHistory } from 'react-router-dom';
 import { Auth } from 'aws-amplify';
@@ -226,11 +226,11 @@ export default function CustomAppBar({ user = {}, routes, open, onUpdate }) {
           <LanguageSelector />
           {user && user.username ?
             <React.Fragment>
-              <IconButton color="inherit">
+              {/* <IconButton color="inherit">
                 <Badge badgeContent={0} max={99} color="secondary">
                   <NotificationsIcon />
                 </Badge>
-              </IconButton>
+              </IconButton> */}
               <Button
                 ref={anchorRef}
                 color="inherit"

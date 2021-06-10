@@ -17,11 +17,13 @@ export default function DataJoinEditorInput({
   onChange,
   onUpdateOptions,
   disabled,
+  freeSolo: inFreeSolo = true,
 }) {
   const [allOptions, setAllOptions] = useState([]);
   const [filteredOptions, setFilteredOptions] = useState([]);
   const [values, setValues] = useState([]);
   const [defaultValues, setDefaultValues] = useState(inDefaultValues);
+  const [freeSolo, setFreeSolo] = useState(inFreeSolo);
 
   const handleChange = (event, values) => {
     setValues([...values]);
@@ -46,9 +48,13 @@ export default function DataJoinEditorInput({
     (async () => {
       const {
         listOptionsQueryName,
+        freeSolo,
       } = getPropsByMode(mode);
       const results = await asyncListAll(listOptionsQueryName, { limit: 1000 });
       setAllOptions(results);
+      if (!freeSolo) {
+        setFreeSolo(false);
+      }
 
       if (onUpdateOptions) {
         onUpdateOptions(results);
@@ -65,7 +71,7 @@ export default function DataJoinEditorInput({
         id="tags-filled"
         options={filteredOptions}
         defaultValue={defaultValues}
-        freeSolo
+        freeSolo={freeSolo}
         disableCloseOnSelect
         renderTags={(value, getTagProps) =>
           value.map((option, index) => (
@@ -97,4 +103,5 @@ DataJoinEditorInput.propTypes = {
   onChange: PropTypes.func,
   onUpdateOptions: PropTypes.func,
   disabled: PropTypes.bool,
+  freeSolo: PropTypes.bool,
 };

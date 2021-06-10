@@ -75,9 +75,11 @@ module.exports = async ({
     const allAdminUsernames = [updatedProject.owner, ...managers];
     const allProjectUsers = await listProjectUsers(projectId);
 
+    console.log('syncProjectUsers', { allAdminUsernames, allProjectUsers });
     // Sync User Project List
     allAdminUsernames.forEach((username) => {
       const matched = allProjectUsers.find((item) => item.username === username);
+      console.log('matched', { username, matched });
       if (matched && matched.role !== 'manager') {
         // change role to manager
         toUpdateUserProjects.push(Object.assign(matched, {
@@ -105,7 +107,7 @@ module.exports = async ({
 
     allProjectUsers.forEach((projectUser) => {
       // downgrade from manager to contributor
-      if (!allAdminUsernames.includes(projectUser.username)) {
+      if (projectUser.role === 'manager' && !allAdminUsernames.includes(projectUser.username)) {
         toUpdateUserProjects.push(Object.assign(projectUser, {
           role: 'contributor',
           updatedAt: now,
@@ -115,34 +117,9 @@ module.exports = async ({
     });
   };
 
-  // const syncProjectTags = async () => {
-  //   const allProjectTags = await listProjectTags(projectId);
-
-  //   tagItems.forEach((tagItem) => {
-  //     const matched = allProjectTags.find(({ tagId }) => tagId === tagItem.id);
-  //     if (matched) {
-  //       // do nothing since it's already there.
-  //     } else {
-  //       toUpdateProjectTags.push({
-  //         __typename: 'ProjectTag',
-  //         id: uuidv1(),
-  //         projectId,
-  //         tagId: tagItem.id,
-  //         updatedAt: now,
-  //         createdAt: now,
-  //         createdBy: currentUsername,
-  //         updatedBy: currentUsername,
-  //       });
-  //     }
-  //   });
-  // };
-
-  await Promise.all([
-    syncProjectUsers(),
-    // syncProjectTags(),
-  ]);
-
   console.log({ toUpdateProjects, toUpdateUserProjects });
+
+  await syncProjectUsers();
 
   await Promise.all([
     updateProjects(toUpdateProjects),

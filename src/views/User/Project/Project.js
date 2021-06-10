@@ -4,7 +4,6 @@ import Grid from '@material-ui/core/Grid';
 import Container from '@material-ui/core/Container';
 import Typography from '@material-ui/core/Typography';
 import Card from '@material-ui/core/Card';
-import CircularProgress from '@material-ui/core/CircularProgress';
 import { makeStyles } from '@material-ui/core/styles';
 import { useTranslation } from 'react-i18next';
 import Tabs from '@material-ui/core/Tabs';
@@ -27,6 +26,7 @@ import ProjectContributions from './ProjectContributions';
 import UserChip from 'components/UserChip';
 import ProjectAvatar from 'components/ProjectAvatar';
 import ProjectManagerEditor from 'components/ProjectManagerEditor';
+import Loading from 'components/Loading';
 
 const useStyles = makeStyles((theme) => ({
   container: {
@@ -129,11 +129,7 @@ export default function Project({ id: inId, computedMatch, match }) {
   }, [id, lastUpdatedAt]);
 
   if (!project) {
-    return (
-      <Container className={classes.container} style={{ textAlign: 'center' }}>
-        <CircularProgress color="primary" />
-      </Container>
-    );
+    return <Loading fullScreen={false} />;
   }
 
   return (
@@ -232,7 +228,7 @@ export default function Project({ id: inId, computedMatch, match }) {
                   />}
                 </Typography>
                 {tags.map((item, index)=>(
-                  <TagChip key={index} data={item} />
+                  <TagChip key={index} data={item} target="project" />
                 ))}
               </Grid>
               <Grid item xs={12}>
@@ -248,7 +244,7 @@ export default function Project({ id: inId, computedMatch, match }) {
                   />}
                 </Typography>
                 {keywords.map((item, index)=>(
-                  <KeywordChip key={index} data={item} />
+                  <KeywordChip key={index} data={item} target="project" />
                 ))}
               </Grid>
               <Grid item xs={12}>
@@ -264,7 +260,7 @@ export default function Project({ id: inId, computedMatch, match }) {
                   />}
                 </Typography>
                 {needs.map((item, index)=>(
-                  <NeedChip key={index} data={item} />
+                  <NeedChip key={index} data={item} target="project" />
                 ))}
               </Grid>
             </Grid>

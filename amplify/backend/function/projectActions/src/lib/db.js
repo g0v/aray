@@ -43,7 +43,7 @@ exports.getUser = async (username) => {
 };
 
 exports.getUserProject = async (username, projectId) => {
-  const items = docClient.queryAll({
+  const items = await docClient.queryAll({
     TableName: API_ARAY_USERPROJECTTABLE_NAME,
     IndexName: 'byUser',
     KeyConditionExpression: 'username = :username AND projectId = :projectId',
@@ -57,22 +57,8 @@ exports.getUserProject = async (username, projectId) => {
   return items[0];
 };
 
-exports.listProjectTags = async (projectId) => {
-  const items = docClient.queryAll({
-    TableName: API_ARAY_PROJECTTAGTABLE_NAME,
-    IndexName: 'byProject',
-    KeyConditionExpression: 'projectId = :projectId',
-    ExpressionAttributeValues: {
-      ':projectId': projectId,
-    },
-    ScanIndexForward: false,
-  });
-
-  return items;
-};
-
 exports.listProjectUsers = async (projectId) => {
-  const items = docClient.queryAll({
+  const items = await docClient.queryAll({
     TableName: API_ARAY_USERPROJECTTABLE_NAME,
     IndexName: 'byProject',
     KeyConditionExpression: 'projectId = :projectId',

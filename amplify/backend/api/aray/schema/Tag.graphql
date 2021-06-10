@@ -8,6 +8,8 @@ type Tag
 {
   id: ID!
   label: String!
+  category: String
+  description: String
 
   projects: [ProjectTag] @connection(keyName: "byTag", fields: ["id"])
 

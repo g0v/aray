@@ -1,0 +1,53 @@
+type Event
+  @model
+  @key(name: "byProjectIdByStartDate",
+    fields: ["projectId","startDate"], queryField: "getEventsByProjectIdByStartDate")
+  @auth(rules: [
+    { allow: public, operations: [read] },
+    { allow: owner, ownerField: "hosts", operations: [read, update] },
+    { allow: groups, groups: ["Users"], operations: [read, create] },
+    { allow: groups, groups: ["Admins"] },
+  ])
+{
+  id: ID!
+  projectId: ID!
+
+  # https://www.meetup.com/meetup_api/docs/:urlname/events/#create
+  name: String!
+  type: String! # ex: 會議 活動 表演
+  description: String!
+
+  startDate: AWSDateTime!
+  endDate: AWSDateTime!
+  duration: Int! # In milliseconds -> will be used to calculate the Contribution
+
+  hosts: [String] # copy from the project.managers
+
+  annouceToContributors: Boolean! # whether or not should announce this event to all contributors
+
+  guestLimit: Int!
+  attendanceCount: Int!
+
+  rsvpQuestion: String!
+  rsvpLimit: Int!
+  rsvpOpenTime: AWSDateTime!
+  rsvpCloseTime: AWSDateTime!
+
+  # what about online event?
+  location: String # address
+  link: AWSURL # meeting url
+
+  # how to handle repeat event and attendance?
+  # Allow users to create repeated from the UI
+
+  # Album/Photos
+
+  # Attendances
+
+  # Comments
+
+  createdAt: AWSDateTime!
+  createdBy: String!
+  updatedAt: AWSDateTime!
+  updatedBy: String!
+}

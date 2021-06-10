@@ -264,7 +264,7 @@ export default function User({ id: inId, computedMatch, match }) {
                           url={item.link}
                           variant={'text'}
                           color={'secondary'}
-                          style={{ padding: 0, minWidth: 0, textTransform: 'none' }}
+                          style={{ padding: 0, minWidth: 0, textTransform: 'none', fontSize: 14 }}
                         /> : item.value
                       }
                     </span>

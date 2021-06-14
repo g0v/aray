@@ -41,6 +41,7 @@ user_participateProjects: 參與的專案
 user_recentContributions: 近期貢獻紀錄
 user_hours: 小時
 user_needs: 專長
+user_inputTagsHelperText: Please press Enter to add a new one.
 
 project_links: 文件連結
 project_tags: 標籤

@@ -6,6 +6,16 @@
         "read",
         "update"
       ],
+      "Event:@model(appsync)": [
+        "create",
+        "read",
+        "update"
+      ],
+      "EventAttendance:@model(appsync)": [
+        "create",
+        "read",
+        "update"
+      ],
       "Keyword:@model(appsync)": [
         "create",
         "read",

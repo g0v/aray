@@ -8,6 +8,9 @@ import { makeStyles } from '@material-ui/core/styles';
 import { useTranslation } from 'react-i18next';
 import Tabs from '@material-ui/core/Tabs';
 import Tab from '@material-ui/core/Tab';
+import { useHistory } from 'react-router-dom';
+import querystring from 'query-string';
+
 
 import { request } from 'utils/graph';
 import { getProject } from 'graphql/queries';
@@ -25,8 +28,10 @@ import ProjectTasks from './ProjectTasks';
 import ProjectContributions from './ProjectContributions';
 import UserChip from 'components/UserChip';
 import ProjectAvatar from 'components/ProjectAvatar';
+import ProjectOwnerEditor from 'components/ProjectOwnerEditor';
 import ProjectManagerEditor from 'components/ProjectManagerEditor';
 import Loading from 'components/Loading';
+import EventCalendar from 'components/EventCalendar';
 
 const useStyles = makeStyles((theme) => ({
   container: {
@@ -59,22 +64,41 @@ const useStyles = makeStyles((theme) => ({
 export default function Project({ id: inId, computedMatch, match }) {
   const classes = useStyles();
   const { t } = useTranslation();
+  const history = useHistory();
 
   const [id, setId] = useState();
   const [project, setProject] = useState();
   const [keywords, setKeywords] = useState([]);
   const [needs, setNeeds] = useState([]);
+  const [tabIndex, setTabIndex] = useState(0);
   const [tags, setTags] = useState([]);
   const [canEdit, setCanEdit] = useState(false);
   const [lastUpdatedAt, setLastUpdatedAt] = useState(Date.now());
-  const [tabIndex, setTabIndex] = useState(0);
+
+  const handleTabChange = (newTabIndex) => {
+    history.push({
+      search: `?tab=${newTabIndex}`,
+    });
+
+    setTabIndex(newTabIndex);
+  };
 
   const tabs = [
     {
       label: t('project_main'),
-      component: () => <React.Fragment>
-        <RichText data={project.description} />
-      </React.Fragment>,
+      component: () => <Grid container>
+        <Grid item xs={12}>
+          <RichText data={project.description} />
+        </Grid>
+      </Grid>,
+    },
+    {
+      label: t('project_events'),
+      component: () => <Grid container>
+        <Grid item xs={12}>
+          <EventCalendar projectId={project.id} />
+        </Grid>
+      </Grid>,
     },
     {
       label: t('project_contributors'),
@@ -114,13 +138,16 @@ export default function Project({ id: inId, computedMatch, match }) {
 
   useEffect(() => {
     if (!id) return;
+
     (async () => {
       const { data: { getProject: data } } = await request(getProject, { id });
-      console.log('project', data);
+      const { tab } = querystring.parse(window.location.search);
+
       setProject(data);
       setKeywords(data.keywords.items.map(({ keyword }) => keyword));
       setNeeds(data.needs.items.map(({ need }) => need));
       setTags(data.tags.items.map(({ tag }) => tag));
+      setTabIndex(parseInt(tab || 0));
 
       const username = localStorage.getItem('app:username');
       const canEdit = [data.owner, ...data.managers].includes(username);
@@ -159,6 +186,11 @@ export default function Project({ id: inId, computedMatch, match }) {
               <Grid item xs={12}>
                 <Typography variant="body1" gutterBottom>
                   {t('project_owner')}
+                  {canEdit &&
+                  <ProjectOwnerEditor
+                    project={project}
+                    onUpdate={() => setLastUpdatedAt(Date.now())}
+                  />}
                 </Typography>
                 <div className={classes.userChipContainer}>
                   <UserChip username={project.owner}/>
@@ -271,7 +303,7 @@ export default function Project({ id: inId, computedMatch, match }) {
                 value={tabIndex}
                 indicatorColor="primary"
                 textColor="primary"
-                onChange={(e, newValue)=>setTabIndex(newValue)}
+                onChange={(e, newValue) => handleTabChange(newValue)}
                 aria-label="Project Tabs"
                 // centered
               >

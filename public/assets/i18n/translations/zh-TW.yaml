@@ -52,12 +52,17 @@ project_tasks: 任務
 project_contributions: 貢獻紀錄
 project_owner: 坑主
 project_managers: 共同管理員
-project_main: 介紹
+project_main: 首頁
 project_slackChannel: Slack 頻道
+project_events: 行事曆
 
 projectManagerEditor_update: 更新
 projectManagerEditor_title: 共同管理員
 projectManagerEditor_confirm: 確認
+
+projectOwnerEditor_update: 轉讓專案
+projectOwnerEditor_title: 新坑主
+projectOwnerEditor_confirm: 確認
 
 projectTasks_hours: 小時
 

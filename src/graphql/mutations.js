@@ -17,6 +17,22 @@ export const createOrUpdateProjectContributions = /* GraphQL */ `
     }
   }
 `;
+export const changeProjectOwner = /* GraphQL */ `
+  mutation ChangeProjectOwner($input: ChangeProjectOwnerRequest!) {
+    changeProjectOwner(input: $input) {
+      id
+    }
+  }
+`;
+export const createOrUpdateEventAttendance = /* GraphQL */ `
+  mutation CreateOrUpdateEventAttendance(
+    $input: CreateOrUpdateEventAttendanceRequest!
+  ) {
+    createOrUpdateEventAttendance(input: $input) {
+      id
+    }
+  }
+`;
 export const createContribution = /* GraphQL */ `
   mutation CreateContribution(
     $input: CreateContributionInput!
@@ -70,6 +86,153 @@ export const deleteContribution = /* GraphQL */ `
       summary
       description
       hours
+      createdAt
+      createdBy
+      updatedAt
+      updatedBy
+    }
+  }
+`;
+export const createEvent = /* GraphQL */ `
+  mutation CreateEvent(
+    $input: CreateEventInput!
+    $condition: ModelEventConditionInput
+  ) {
+    createEvent(input: $input, condition: $condition) {
+      id
+      projectId
+      name
+      type
+      description
+      startDate
+      endDate
+      duration
+      hosts
+      annouceToContributors
+      guestLimit
+      attendanceCount
+      rsvpQuestion
+      rsvpLimit
+      rsvpOpenTime
+      rsvpCloseTime
+      location
+      link
+      createdAt
+      createdBy
+      updatedAt
+      updatedBy
+    }
+  }
+`;
+export const updateEvent = /* GraphQL */ `
+  mutation UpdateEvent(
+    $input: UpdateEventInput!
+    $condition: ModelEventConditionInput
+  ) {
+    updateEvent(input: $input, condition: $condition) {
+      id
+      projectId
+      name
+      type
+      description
+      startDate
+      endDate
+      duration
+      hosts
+      annouceToContributors
+      guestLimit
+      attendanceCount
+      rsvpQuestion
+      rsvpLimit
+      rsvpOpenTime
+      rsvpCloseTime
+      location
+      link
+      createdAt
+      createdBy
+      updatedAt
+      updatedBy
+    }
+  }
+`;
+export const deleteEvent = /* GraphQL */ `
+  mutation DeleteEvent(
+    $input: DeleteEventInput!
+    $condition: ModelEventConditionInput
+  ) {
+    deleteEvent(input: $input, condition: $condition) {
+      id
+      projectId
+      name
+      type
+      description
+      startDate
+      endDate
+      duration
+      hosts
+      annouceToContributors
+      guestLimit
+      attendanceCount
+      rsvpQuestion
+      rsvpLimit
+      rsvpOpenTime
+      rsvpCloseTime
+      location
+      link
+      createdAt
+      createdBy
+      updatedAt
+      updatedBy
+    }
+  }
+`;
+export const createEventAttendance = /* GraphQL */ `
+  mutation CreateEventAttendance(
+    $input: CreateEventAttendanceInput!
+    $condition: ModelEventAttendanceConditionInput
+  ) {
+    createEventAttendance(input: $input, condition: $condition) {
+      id
+      eventId
+      username
+      status
+      note
+      createdAt
+      createdBy
+      updatedAt
+      updatedBy
+    }
+  }
+`;
+export const updateEventAttendance = /* GraphQL */ `
+  mutation UpdateEventAttendance(
+    $input: UpdateEventAttendanceInput!
+    $condition: ModelEventAttendanceConditionInput
+  ) {
+    updateEventAttendance(input: $input, condition: $condition) {
+      id
+      eventId
+      username
+      status
+      note
+      createdAt
+      createdBy
+      updatedAt
+      updatedBy
+    }
+  }
+`;
+export const deleteEventAttendance = /* GraphQL */ `
+  mutation DeleteEventAttendance(
+    $input: DeleteEventAttendanceInput!
+    $condition: ModelEventAttendanceConditionInput
+  ) {
+    deleteEventAttendance(input: $input, condition: $condition) {
+      id
+      eventId
+      username
+      status
+      note
       createdAt
       createdBy
       updatedAt
@@ -557,6 +720,8 @@ export const createProject = /* GraphQL */ `
           tag {
             id
             label
+            category
+            description
             createdAt
             createdBy
             updatedAt
@@ -769,6 +934,8 @@ export const updateProject = /* GraphQL */ `
           tag {
             id
             label
+            category
+            description
             createdAt
             createdBy
             updatedAt
@@ -981,6 +1148,8 @@ export const deleteProject = /* GraphQL */ `
           tag {
             id
             label
+            category
+            description
             createdAt
             createdBy
             updatedAt
@@ -1855,6 +2024,8 @@ export const createProjectTag = /* GraphQL */ `
       tag {
         id
         label
+        category
+        description
         createdAt
         createdBy
         updatedAt
@@ -1973,6 +2144,8 @@ export const updateProjectTag = /* GraphQL */ `
       tag {
         id
         label
+        category
+        description
         createdAt
         createdBy
         updatedAt
@@ -2091,6 +2264,8 @@ export const deleteProjectTag = /* GraphQL */ `
       tag {
         id
         label
+        category
+        description
         createdAt
         createdBy
         updatedAt
@@ -2239,6 +2414,8 @@ export const createTag = /* GraphQL */ `
     createTag(input: $input, condition: $condition) {
       id
       label
+      category
+      description
       createdAt
       createdBy
       updatedAt
@@ -2274,6 +2451,8 @@ export const createTag = /* GraphQL */ `
           tag {
             id
             label
+            category
+            description
             createdAt
             createdBy
             updatedAt
@@ -2293,6 +2472,8 @@ export const updateTag = /* GraphQL */ `
     updateTag(input: $input, condition: $condition) {
       id
       label
+      category
+      description
       createdAt
       createdBy
       updatedAt
@@ -2328,6 +2509,8 @@ export const updateTag = /* GraphQL */ `
           tag {
             id
             label
+            category
+            description
             createdAt
             createdBy
             updatedAt
@@ -2347,6 +2530,8 @@ export const deleteTag = /* GraphQL */ `
     deleteTag(input: $input, condition: $condition) {
       id
       label
+      category
+      description
       createdAt
       createdBy
       updatedAt
@@ -2382,6 +2567,8 @@ export const deleteTag = /* GraphQL */ `
           tag {
             id
             label
+            category
+            description
             createdAt
             createdBy
             updatedAt

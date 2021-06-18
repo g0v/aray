@@ -110,6 +110,219 @@ export const getContributionsByProjectIdByCreatedAt = /* GraphQL */ `
     }
   }
 `;
+export const getEvent = /* GraphQL */ `
+  query GetEvent($id: ID!) {
+    getEvent(id: $id) {
+      id
+      projectId
+      name
+      type
+      description
+      startDate
+      endDate
+      duration
+      hosts
+      annouceToContributors
+      guestLimit
+      attendanceCount
+      rsvpQuestion
+      rsvpLimit
+      rsvpOpenTime
+      rsvpCloseTime
+      location
+      link
+      createdAt
+      createdBy
+      updatedAt
+      updatedBy
+    }
+  }
+`;
+export const listEvents = /* GraphQL */ `
+  query ListEvents(
+    $filter: ModelEventFilterInput
+    $limit: Int
+    $nextToken: String
+  ) {
+    listEvents(filter: $filter, limit: $limit, nextToken: $nextToken) {
+      items {
+        id
+        projectId
+        name
+        type
+        description
+        startDate
+        endDate
+        duration
+        hosts
+        annouceToContributors
+        guestLimit
+        attendanceCount
+        rsvpQuestion
+        rsvpLimit
+        rsvpOpenTime
+        rsvpCloseTime
+        location
+        link
+        createdAt
+        createdBy
+        updatedAt
+        updatedBy
+      }
+      nextToken
+    }
+  }
+`;
+export const getEventsByProjectIdByStartDate = /* GraphQL */ `
+  query GetEventsByProjectIdByStartDate(
+    $projectId: ID
+    $startDate: ModelStringKeyConditionInput
+    $sortDirection: ModelSortDirection
+    $filter: ModelEventFilterInput
+    $limit: Int
+    $nextToken: String
+  ) {
+    getEventsByProjectIdByStartDate(
+      projectId: $projectId
+      startDate: $startDate
+      sortDirection: $sortDirection
+      filter: $filter
+      limit: $limit
+      nextToken: $nextToken
+    ) {
+      items {
+        id
+        projectId
+        name
+        type
+        description
+        startDate
+        endDate
+        duration
+        hosts
+        annouceToContributors
+        guestLimit
+        attendanceCount
+        rsvpQuestion
+        rsvpLimit
+        rsvpOpenTime
+        rsvpCloseTime
+        location
+        link
+        createdAt
+        createdBy
+        updatedAt
+        updatedBy
+      }
+      nextToken
+    }
+  }
+`;
+export const getEventAttendance = /* GraphQL */ `
+  query GetEventAttendance($id: ID!) {
+    getEventAttendance(id: $id) {
+      id
+      eventId
+      username
+      status
+      note
+      createdAt
+      createdBy
+      updatedAt
+      updatedBy
+    }
+  }
+`;
+export const listEventAttendances = /* GraphQL */ `
+  query ListEventAttendances(
+    $filter: ModelEventAttendanceFilterInput
+    $limit: Int
+    $nextToken: String
+  ) {
+    listEventAttendances(
+      filter: $filter
+      limit: $limit
+      nextToken: $nextToken
+    ) {
+      items {
+        id
+        eventId
+        username
+        status
+        note
+        createdAt
+        createdBy
+        updatedAt
+        updatedBy
+      }
+      nextToken
+    }
+  }
+`;
+export const getEventAttendancesByEventIdByStatus = /* GraphQL */ `
+  query GetEventAttendancesByEventIdByStatus(
+    $eventId: ID
+    $status: ModelStringKeyConditionInput
+    $sortDirection: ModelSortDirection
+    $filter: ModelEventAttendanceFilterInput
+    $limit: Int
+    $nextToken: String
+  ) {
+    getEventAttendancesByEventIdByStatus(
+      eventId: $eventId
+      status: $status
+      sortDirection: $sortDirection
+      filter: $filter
+      limit: $limit
+      nextToken: $nextToken
+    ) {
+      items {
+        id
+        eventId
+        username
+        status
+        note
+        createdAt
+        createdBy
+        updatedAt
+        updatedBy
+      }
+      nextToken
+    }
+  }
+`;
+export const getEventAttendancesByUsernameByCreatedAt = /* GraphQL */ `
+  query GetEventAttendancesByUsernameByCreatedAt(
+    $username: String
+    $createdAt: ModelStringKeyConditionInput
+    $sortDirection: ModelSortDirection
+    $filter: ModelEventAttendanceFilterInput
+    $limit: Int
+    $nextToken: String
+  ) {
+    getEventAttendancesByUsernameByCreatedAt(
+      username: $username
+      createdAt: $createdAt
+      sortDirection: $sortDirection
+      filter: $filter
+      limit: $limit
+      nextToken: $nextToken
+    ) {
+      items {
+        id
+        eventId
+        username
+        status
+        note
+        createdAt
+        createdBy
+        updatedAt
+        updatedBy
+      }
+      nextToken
+    }
+  }
+`;
 export const getKeyword = /* GraphQL */ `
   query GetKeyword($id: ID!) {
     getKeyword(id: $id) {
@@ -419,6 +632,8 @@ export const getProject = /* GraphQL */ `
           tag {
             id
             label
+            category
+            description
             createdAt
             createdBy
             updatedAt
@@ -1053,6 +1268,8 @@ export const getProjectTag = /* GraphQL */ `
       tag {
         id
         label
+        category
+        description
         createdAt
         createdBy
         updatedAt
@@ -1134,6 +1351,8 @@ export const listProjectTags = /* GraphQL */ `
         tag {
           id
           label
+          category
+          description
           createdAt
           createdBy
           updatedAt
@@ -1302,6 +1521,8 @@ export const getTag = /* GraphQL */ `
     getTag(id: $id) {
       id
       label
+      category
+      description
       createdAt
       createdBy
       updatedAt
@@ -1337,6 +1558,8 @@ export const getTag = /* GraphQL */ `
           tag {
             id
             label
+            category
+            description
             createdAt
             createdBy
             updatedAt
@@ -1358,6 +1581,8 @@ export const listTags = /* GraphQL */ `
       items {
         id
         label
+        category
+        description
         createdAt
         createdBy
         updatedAt

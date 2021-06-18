@@ -52,6 +52,135 @@ export const onDeleteContribution = /* GraphQL */ `
     }
   }
 `;
+export const onCreateEvent = /* GraphQL */ `
+  subscription OnCreateEvent($hosts: String) {
+    onCreateEvent(hosts: $hosts) {
+      id
+      projectId
+      name
+      type
+      description
+      startDate
+      endDate
+      duration
+      hosts
+      annouceToContributors
+      guestLimit
+      attendanceCount
+      rsvpQuestion
+      rsvpLimit
+      rsvpOpenTime
+      rsvpCloseTime
+      location
+      link
+      createdAt
+      createdBy
+      updatedAt
+      updatedBy
+    }
+  }
+`;
+export const onUpdateEvent = /* GraphQL */ `
+  subscription OnUpdateEvent($hosts: String) {
+    onUpdateEvent(hosts: $hosts) {
+      id
+      projectId
+      name
+      type
+      description
+      startDate
+      endDate
+      duration
+      hosts
+      annouceToContributors
+      guestLimit
+      attendanceCount
+      rsvpQuestion
+      rsvpLimit
+      rsvpOpenTime
+      rsvpCloseTime
+      location
+      link
+      createdAt
+      createdBy
+      updatedAt
+      updatedBy
+    }
+  }
+`;
+export const onDeleteEvent = /* GraphQL */ `
+  subscription OnDeleteEvent($hosts: String) {
+    onDeleteEvent(hosts: $hosts) {
+      id
+      projectId
+      name
+      type
+      description
+      startDate
+      endDate
+      duration
+      hosts
+      annouceToContributors
+      guestLimit
+      attendanceCount
+      rsvpQuestion
+      rsvpLimit
+      rsvpOpenTime
+      rsvpCloseTime
+      location
+      link
+      createdAt
+      createdBy
+      updatedAt
+      updatedBy
+    }
+  }
+`;
+export const onCreateEventAttendance = /* GraphQL */ `
+  subscription OnCreateEventAttendance {
+    onCreateEventAttendance {
+      id
+      eventId
+      username
+      status
+      note
+      createdAt
+      createdBy
+      updatedAt
+      updatedBy
+    }
+  }
+`;
+export const onUpdateEventAttendance = /* GraphQL */ `
+  subscription OnUpdateEventAttendance {
+    onUpdateEventAttendance {
+      id
+      eventId
+      username
+      status
+      note
+      createdAt
+      createdBy
+      updatedAt
+      updatedBy
+    }
+  }
+`;
+export const onDeleteEventAttendance = /* GraphQL */ `
+  subscription OnDeleteEventAttendance {
+    onDeleteEventAttendance {
+      id
+      eventId
+      username
+      status
+      note
+      createdAt
+      createdBy
+      updatedAt
+      updatedBy
+    }
+  }
+`;
 export const onCreateKeyword = /* GraphQL */ `
   subscription OnCreateKeyword {
     onCreateKeyword {
@@ -511,6 +640,8 @@ export const onCreateProject = /* GraphQL */ `
           tag {
             id
             label
+            category
+            description
             createdAt
             createdBy
             updatedAt
@@ -720,6 +851,8 @@ export const onUpdateProject = /* GraphQL */ `
           tag {
             id
             label
+            category
+            description
             createdAt
             createdBy
             updatedAt
@@ -929,6 +1062,8 @@ export const onDeleteProject = /* GraphQL */ `
           tag {
             id
             label
+            category
+            description
             createdAt
             createdBy
             updatedAt
@@ -1782,6 +1917,8 @@ export const onCreateProjectTag = /* GraphQL */ `
       tag {
         id
         label
+        category
+        description
         createdAt
         createdBy
         updatedAt
@@ -1897,6 +2034,8 @@ export const onUpdateProjectTag = /* GraphQL */ `
       tag {
         id
         label
+        category
+        description
         createdAt
         createdBy
         updatedAt
@@ -2012,6 +2151,8 @@ export const onDeleteProjectTag = /* GraphQL */ `
       tag {
         id
         label
+        category
+        description
         createdAt
         createdBy
         updatedAt
@@ -2139,6 +2280,8 @@ export const onCreateTag = /* GraphQL */ `
     onCreateTag {
       id
       label
+      category
+      description
       createdAt
       createdBy
       updatedAt
@@ -2174,6 +2317,8 @@ export const onCreateTag = /* GraphQL */ `
           tag {
             id
             label
+            category
+            description
             createdAt
             createdBy
             updatedAt
@@ -2190,6 +2335,8 @@ export const onUpdateTag = /* GraphQL */ `
     onUpdateTag {
       id
       label
+      category
+      description
       createdAt
       createdBy
       updatedAt
@@ -2225,6 +2372,8 @@ export const onUpdateTag = /* GraphQL */ `
           tag {
             id
             label
+            category
+            description
             createdAt
             createdBy
             updatedAt
@@ -2241,6 +2390,8 @@ export const onDeleteTag = /* GraphQL */ `
     onDeleteTag {
       id
       label
+      category
+      description
       createdAt
       createdBy
       updatedAt
@@ -2276,6 +2427,8 @@ export const onDeleteTag = /* GraphQL */ `
           tag {
             id
             label
+            category
+            description
             createdAt
             createdBy
             updatedAt

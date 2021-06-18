@@ -41,6 +41,7 @@ user_participateProjects: Contributed Projects
 user_recentContributions: Recent Contributions
 user_hours: Hour(s)
 user_needs: Specialties
+user_inputTagsHelperText: Please press Enter to add a new one.
 
 project_links: Links
 project_tags: Tags

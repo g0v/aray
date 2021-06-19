@@ -46,7 +46,7 @@ export default function UserList({ data: inData, hideTitle = false }) {
         if (key === 'text') {
           shouldDisplay = [
             user.username, user.name, user.selfIntroduction,
-            user.keywordsString, user.needsString,
+            user.tagsString, user.needsString,
           ].some((value) => {
             return value ? value.toLowerCase().includes(filters[key]) : false;
           });
@@ -94,9 +94,9 @@ export default function UserList({ data: inData, hideTitle = false }) {
               name
               email
               selfIntroduction
-              keywords {
+              tags {
                 items {
-                  keyword {
+                  tag {
                     label
                   }
                 }
@@ -116,7 +116,7 @@ export default function UserList({ data: inData, hideTitle = false }) {
         }
       `);
       setUsers(data.map((user) => {
-        user.keywordsString = user.keywords.items.map((item) => item.keyword.label).join(', ');
+        user.tagsString = user.tags.items.map((item) => item.tag.label).join(', ');
         user.needsString = user.needs.items.map((item) => item.need.label).join(', ');
         return user;
       }));
@@ -150,11 +150,11 @@ export default function UserList({ data: inData, hideTitle = false }) {
           </Grid>
           <Grid item xs={12} md={6}>
             <DataJoinEditorInput
-              title={t('userList_searchByKeywords')}
-              mode={'user-keyword'}
+              title={t('userList_searchByTags')}
+              mode={'user-tag'}
               joinData={[]}
-              defaultValues={filters.keywords || []}
-              onChange={handleFilter('keywords')}
+              defaultValues={filters.tags || []}
+              onChange={handleFilter('tags')}
               onUpdateOptions={()=>{}}
               disabled={isLoading}
               freeSolo={false}

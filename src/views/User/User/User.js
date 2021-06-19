@@ -28,7 +28,7 @@ import {
   getStatementsByUsernameByDate,
 } from 'graphql/queries';
 import VisitButton from 'components/VisitButton';
-import KeywordChip from 'components/KeywordChip';
+import TagChip from 'components/TagChip';
 import NeedChip from 'components/NeedChip';
 import ProjectCard from 'components/ProjectCard';
 import UserAvatar from 'components/UserAvatar';
@@ -78,7 +78,7 @@ export default function User({ id: inId, computedMatch, match }) {
   const [totalHoursInThePastYear, setTotalHoursInThePastYear] = useState(0);
   const [heatmapData, setHeatmapData] = useState([]);
   const [contributions, setContributions] = useState([]);
-  const [keywords, setKeywords] = useState([]);
+  const [tags, setTags] = useState([]);
   const [userProjects, setUserProjects] = useState([]);
   const [needs, setNeeds] = useState([]);
   const [canEdit, setCanEdit] = useState(false);
@@ -188,7 +188,7 @@ export default function User({ id: inId, computedMatch, match }) {
       }].filter(({ url }) => url !== ''));
 
       const projects = data.projects.items.map(({ project }) => project);
-      setKeywords(data.keywords.items.map(({ keyword }) => keyword));
+      setTags(data.tags.items.map(({ tag }) => tag));
       setUserProjects(data.projects.items);
       setNeeds(data.needs.items.map(({ need }) => need));
 
@@ -284,17 +284,17 @@ export default function User({ id: inId, computedMatch, match }) {
               </Grid>}
               <Grid item xs={12}>
                 <Typography variant="body1" gutterBottom>
-                  {t('user_keywords')}
+                  {t('user_tags')}
                   {canEdit &&
                   <DataJoinEditor
-                    title={t('user_keywords')}
-                    mode={'user-keyword'}
-                    joinData={user.keywords.items}
+                    title={t('user_tags')}
+                    mode={'user-tag'}
+                    joinData={user.tags.items}
                     onUpdate={() => setLastUpdatedAt(Date.now())}
                   />}
                 </Typography>
-                {keywords.map((item, index)=>(
-                  <KeywordChip key={index} data={item} target="user" />
+                {tags.map((item, index)=>(
+                  <TagChip key={index} data={item} target="user" />
                 ))}
               </Grid>
               <Grid item xs={12}>

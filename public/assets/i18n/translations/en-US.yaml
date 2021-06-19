@@ -21,30 +21,31 @@ myProjectList_otherProjects: Contributed Projects
 
 projectList_projects: Projects
 projectList_searchByTags: Search by Tags
-projectList_searchByKeywords: Search by Keywords
+projectList_searchByCategorys: Search by Categorys
 projectList_searchByNeeds: Search by Help Needs
 projectList_searchByText: Search by Text
 
 userList_users: Contributors
-userList_searchByKeywords: Search by Keywords
+userList_searchByTags: Search by Tags
 userList_searchByNeeds: Search by Specialties
 userList_searchByText: Search by Text
 
 user_editProfile: Update Personal Info
-user_editKeywords: Update Keywords
+user_editTags: Update Tags
 user_editNeeds: Update Specialties
 user_totalHoursInThePastYear: Total contributions for the past year
-user_keywords: Keywords
+user_tags: Tags
 user_totalCompletedHours: Total Contributed Hours 
 user_totalCompletedTasks: Total Completed Tasks
 user_participateProjects: Contributed Projects
 user_recentContributions: Recent Contributions
 user_hours: Hour(s)
 user_needs: Specialties
+user_inputTagsHelperText: Please press Enter to add a new one.
 
 project_links: Links
 project_tags: Tags
-project_keywords: Keywords
+project_categorys: Categories
 project_needs: Help Needs
 project_contributors: Contributors
 project_pastProposals: Pasr Proposals

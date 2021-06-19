@@ -18,7 +18,7 @@ import moment from 'moment';
 
 import { request } from 'utils/graph';
 import { getProject } from 'graphql/queries';
-import KeywordChip from 'components/KeywordChip';
+import CategoryChip from 'components/CategoryChip';
 import NeedChip from 'components/NeedChip';
 import TagChip from 'components/TagChip';
 import ProjectAvatar from 'components/ProjectAvatar';
@@ -106,8 +106,8 @@ export default function ProjectCard({
               ))}
             </div>
             <div>
-              {project.keywords && project.keywords.items.map((item, index)=>(
-                <KeywordChip key={index} data={item.keyword} size="small" />
+              {project.categorys && project.categorys.items.map((item, index)=>(
+                <CategoryChip key={index} data={item.category} size="small" />
               ))}
             </div>
             <div>

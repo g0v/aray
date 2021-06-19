@@ -47,7 +47,7 @@ export default function UserProjectList() {
         if (key === 'text') {
           shouldDisplay = [
             project.name, project.altName, project.summary, project.description,
-            project.tagsString, project.keywordsString, project.needsString,
+            project.tagsString, project.categorysString, project.needsString,
           ].some((value) => {
             return value ? value.toLowerCase().includes(filters[key]) : false;
           });
@@ -78,7 +78,7 @@ export default function UserProjectList() {
       const data = await asyncListAll(listProjects);
       setProjects(data.map((project) => {
         project.tagsString = project.tags.items.map((item) => item.tag.label).join(', ');
-        project.keywordsString = project.keywords.items.map((item) => item.keyword.label).join(', ');
+        project.categorysString = project.categorys.items.map((item) => item.category.label).join(', ');
         project.needsString = project.needs.items.map((item) => item.need.label).join(', ');
         return project;
       }));
@@ -119,17 +119,19 @@ export default function UserProjectList() {
               onChange={handleFilter('tags')}
               onUpdateOptions={()=>{}}
               disabled={isLoading}
+              showHelperText={false}
             />
           </Grid>
           <Grid item xs={12} md={4}>
             <DataJoinEditorInput
-              title={t('projectList_searchByKeywords')}
-              mode={'project-keyword'}
+              title={t('projectList_searchByCategorys')}
+              mode={'project-category'}
               joinData={[]}
-              defaultValues={filters.keywords || []}
-              onChange={handleFilter('keywords')}
+              defaultValues={filters.categorys || []}
+              onChange={handleFilter('categorys')}
               onUpdateOptions={()=>{}}
               disabled={isLoading}
+              showHelperText={false}
             />
           </Grid>
           <Grid item xs={12} md={4}>
@@ -140,6 +142,7 @@ export default function UserProjectList() {
               onChange={handleFilter('needs')}
               onUpdateOptions={()=>{}}
               disabled={isLoading}
+              showHelperText={false}
             />
           </Grid>
           <Grid item xs={12} md={12}>

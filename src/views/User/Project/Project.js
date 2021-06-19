@@ -18,7 +18,7 @@ import ProjectEditButton from 'forms/ProjectForm/ProjectEditButton';
 
 import UserCard from 'components/UserCard';
 import TagChip from 'components/TagChip';
-import KeywordChip from 'components/KeywordChip';
+import CategoryChip from 'components/CategoryChip';
 import NeedChip from 'components/NeedChip';
 import DataJoinEditor from 'components/DataJoinEditor';
 import Note from 'components/Note';
@@ -68,7 +68,7 @@ export default function Project({ id: inId, computedMatch, match }) {
 
   const [id, setId] = useState();
   const [project, setProject] = useState();
-  const [keywords, setKeywords] = useState([]);
+  const [categorys, setCategorys] = useState([]);
   const [needs, setNeeds] = useState([]);
   const [tabIndex, setTabIndex] = useState(0);
   const [tags, setTags] = useState([]);
@@ -144,7 +144,7 @@ export default function Project({ id: inId, computedMatch, match }) {
       const { tab } = querystring.parse(window.location.search);
 
       setProject(data);
-      setKeywords(data.keywords.items.map(({ keyword }) => keyword));
+      setCategorys(data.categorys.items.map(({ category }) => category));
       setNeeds(data.needs.items.map(({ need }) => need));
       setTags(data.tags.items.map(({ tag }) => tag));
       setTabIndex(parseInt(tab || 0));
@@ -249,6 +249,23 @@ export default function Project({ id: inId, computedMatch, match }) {
               </Grid>}
               <Grid item xs={12}>
                 <Typography variant="body1" gutterBottom>
+                  {t('project_categorys')}
+                  {canEdit &&
+                  <DataJoinEditor
+                    title={t('project_categorys')}
+                    mode={'project-category'}
+                    projectId={project.id}
+                    joinData={project.categorys.items}
+                    onUpdate={() => setLastUpdatedAt(Date.now())}
+                    showHelperText={false}
+                  />}
+                </Typography>
+                {categorys.map((item, index)=>(
+                  <CategoryChip key={index} data={item} target="project" />
+                ))}
+              </Grid>
+              <Grid item xs={12}>
+                <Typography variant="body1" gutterBottom>
                   {t('project_tags')}
                   {canEdit &&
                   <DataJoinEditor
@@ -261,22 +278,6 @@ export default function Project({ id: inId, computedMatch, match }) {
                 </Typography>
                 {tags.map((item, index)=>(
                   <TagChip key={index} data={item} target="project" />
-                ))}
-              </Grid>
-              <Grid item xs={12}>
-                <Typography variant="body1" gutterBottom>
-                  {t('project_keywords')}
-                  {canEdit &&
-                  <DataJoinEditor
-                    title={t('project_keywords')}
-                    mode={'project-keyword'}
-                    projectId={project.id}
-                    joinData={project.keywords.items}
-                    onUpdate={() => setLastUpdatedAt(Date.now())}
-                  />}
-                </Typography>
-                {keywords.map((item, index)=>(
-                  <KeywordChip key={index} data={item} target="project" />
                 ))}
               </Grid>
               <Grid item xs={12}>

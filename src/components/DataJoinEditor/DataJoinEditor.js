@@ -26,6 +26,7 @@ export default function DataJoinEditor({
   projectId,
   joinData = [],
   onUpdate,
+  showHelperText = true,
 }) {
   const { t } = useTranslation();
   const [open, setOpen] = useState(false);
@@ -42,7 +43,6 @@ export default function DataJoinEditor({
       console.log('values', values);
 
       const username = localStorage.getItem('app:username');
-      // create keywords if not exist
       const toCreateLabels = values.filter((value) => {
         return !allOptions.find(({ label }) => label === value);
       });
@@ -155,6 +155,7 @@ export default function DataJoinEditor({
               onChange={setValues}
               onUpdateOptions={setAllOptions}
               disabled={isLoading}
+              showHelperText={showHelperText}
             />
             <div style={{ width: '100%', textAlign: 'center', paddingTop: 16 }}>
               <Button
@@ -177,4 +178,5 @@ DataJoinEditor.propTypes = {
   mode: PropTypes.string,
   joinData: PropTypes.array,
   onUpdate: PropTypes.func,
+  showHelperText: PropTypes.bool,
 };

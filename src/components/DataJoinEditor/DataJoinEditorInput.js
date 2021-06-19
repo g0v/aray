@@ -13,6 +13,7 @@ import { useTranslation } from 'react-i18next';
 
 export default function DataJoinEditorInput({
   title = '',
+  showHelperText = true,
   mode = '',
   joinData,
   defaultValues: inDefaultValues,
@@ -94,7 +95,8 @@ export default function DataJoinEditorInput({
         disabled={disabled}
         aria-describedby="tags-filled-helper-text"
       />
-      <FormHelperText id="tags-filled-helper-text">{t('user_inputTagsHelperText')}</FormHelperText>
+      {showHelperText &&
+        <FormHelperText id="tags-filled-helper-text">{t('user_inputTagsHelperText')}</FormHelperText>}
     </React.Fragment>
   );
 }
@@ -109,4 +111,5 @@ DataJoinEditorInput.propTypes = {
   onUpdateOptions: PropTypes.func,
   disabled: PropTypes.bool,
   freeSolo: PropTypes.bool,
+  showHelperText: PropTypes.bool,
 };

@@ -11,7 +11,6 @@ import Tab from '@material-ui/core/Tab';
 import { useHistory } from 'react-router-dom';
 import querystring from 'query-string';
 
-
 import { request } from 'utils/graph';
 import { getProject } from 'graphql/queries';
 import ProjectEditButton from 'forms/ProjectForm/ProjectEditButton';
@@ -229,12 +228,13 @@ export default function Project({ id: inId, computedMatch, match }) {
                   {t('project_links')}
                 </Typography>
                 {project.links.map((link, index)=>(
-                  <div key={index} style={{ margin: 1, display: 'inline-block' }}>
+                  <div key={index} style={{ margin: 1, display: 'block' }}>
                     <VisitButton
                       title={link.name}
                       url={link.url}
-                      variant={'outlined'}
+                      variant={'text'}
                       color={'secondary'}
+                      style={{ padding: 0, minWidth: 0, textTransform: 'none' }}
                     />
                   </div>
                 ))}

@@ -1,1 +1,128 @@
-app_name: ＡＲＡＹ(결정하지 못한)
+appSignup_email: 이메일
+appSignup_name: 이름
+appSignup_password: 패스워드
+appSignup_username: 유저명
+app_name: ARAY
+app_short_name: ARAY
+avatarEditor_cancel: 취소
+avatarEditor_clickAndUpload: 사진 업로드
+avatarEditor_submit: 갱신
+config_locale: ko
+contributionEditButton_title: 공헌하기
+contributionFormSchema_description: 내용
+contributionFormSchema_hours: 시간
+contributionFormSchema_projectTaskId: 프로젝트 템플릿
+contributionFormSchema_summary: 요약
+contributionFormSchema_title: 공헌
+contributionFormSchema_username: 공헌자 ID
+customAppBar_login: 로그인
+customAppBar_logout: 로그아웃
+customAppBar_register: 회원등록
+dataJoinEditor_confirm: 확인
+dataJoinEditor_update: 갱신
+datetime_month01: 1월
+datetime_month02: 2월
+datetime_month03: 3월
+datetime_month04: 4월
+datetime_month05: 5월
+datetime_month06: 6월
+datetime_month07: 7월
+datetime_month08: 8월
+datetime_month09: 9월
+datetime_month10: 10월
+datetime_month11: 11월
+datetime_month12: 12월
+datetime_weekday0: 일
+datetime_weekday1: 월
+datetime_weekday2: 화
+datetime_weekday3: 수
+datetime_weekday4: 목
+datetime_weekday5: 금
+datetime_weekday6: 토
+editButton_create: 생성
+editButton_update: 갱신
+myProjectList_myProjects: 내 프로젝트
+myProjectList_otherProjects: 타 프로젝트
+projectAvatar_updateAvatar: 로고 변경
+projectCard_completedHours: 공헌 시간
+projectCard_completedTasks: 갱신
+projectCard_createdAt: 작성일
+projectEditButton_title: 프로젝트 정보
+projectFormSchema_description: 상세
+projectFormSchema_links: 링크
+projectFormSchema_linksName: 이름
+projectFormSchema_linksUrl: URL
+projectFormSchema_name: 이름
+projectFormSchema_slackChannel: Slack채널
+projectFormSchema_slackChannelUrl: Slack채널url
+projectFormSchema_status: 상태
+projectFormSchema_summary: 요약
+projectFormSchema_title: 프로젝트
+projectList_projects: 프로젝트
+projectList_searchByCategorys: 카테고리 검색
+projectList_searchByNeeds: 전체 검색
+projectList_searchByTags: 태그 검색
+projectList_searchByText: 키워드 검색
+projectManagerEditor_confirm: 확인
+projectManagerEditor_title: 공동관리자
+projectManagerEditor_update: 갱신
+projectOwnerEditor_confirm: 확인
+projectOwnerEditor_title: 새로운 오너
+projectOwnerEditor_update: 갱신
+projectTaskFormSchema_description: 내용
+projectTaskFormSchema_hours: 시간
+projectTaskFormSchema_status: 상태
+projectTaskFormSchema_summary: 요약
+projectTaskFormSchema_title: 프로젝트테스크
+projectTasks_hours: 시간
+project_categorys: 카테리
+project_contributions: 공헌
+project_contributors: 공헌자
+project_events: 이벤트
+project_links: 링크
+project_main: 개요
+project_managers: 관리자
+project_needs: 도움말
+project_owner: 오너
+project_pastProposals: 지난 제안
+project_slackChannel: Slack채널
+project_tags: 태그
+project_tasks: 테스크
+submitButton_submit: 발행
+title_dashboard: 대쉬보드
+title_myProfile: 내 프로필
+title_myProjectList: 내 프로젝트
+title_project: 프로젝트
+title_projectList: 프로젝트 리스트
+title_user: 유저
+title_userList: 유저 리스트
+userAvatar_updateAvatar: 아바타 변경
+userCard_completedHours: 공헌 시간
+userCard_completedTasks: 완료한 테스크
+userEditButton_title: 개인정보
+userFormSchema_email: 이메일
+userFormSchema_location: 주소
+userFormSchema_name: 이름
+userFormSchema_selfIntroduction: 자기소개
+userFormSchema_slackId: Slack ID
+userFormSchema_slackIdUrl: Slack ID URL
+userFormSchema_title: 개인정보
+userFormSchema_urlFacebook: Facebook링크
+userFormSchema_urlGithub: Github링크
+userFormSchema_urlInstagram: Instagram링크
+userFormSchema_urlLinkedIn: LinkedIn링크
+userFormSchema_urlTwitter: Twitter링크
+userFormSchema_urlWebsite: Website링크
+userList_searchByNeeds: 카테고리 검색
+userList_searchByTags: 태그 검색
+userList_searchByText: 키워드 검색
+userList_users: 공헌자
+user_editNeeds: 스킬 편집
+user_editProfile: 프로필 편집
+user_editTags: 태그 편집
+user_hours: 시간
+user_inputTagsHelperText: '"Enter"를 눌러서 추가'
+user_needs: 스킬
+user_participateProjects: 공헌한 프로젝트
+user_recentContributions: 최근 공헌
+user_tags: 태그

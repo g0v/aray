@@ -160,3 +160,6 @@ contributionFormSchema_projectTaskIdDescription: 非必選。可以直接填帖�
 contributionFormSchema_summary: 簡述
 contributionFormSchema_description: 內容
 contributionFormSchema_hours: 時數
+
+landing_page_description: 零時小學校在今年預計將與 g0ver @John Huang 和日本 Code for Japan、韓國 Code for Korea 合作「時數系統」專案，讓零時小學校的營隊學生和專案參與者，都可以將上課或貢獻專案的時數登錄在系統上，並可輸出時數證明，讓你在社群的貢獻可以被看見。
+          「時數系統」專案第一階段將開放零時小學校和合作社群的學生使用，第二階段會再開放 g0v 所有坑主加入，也就是坑主以後都可以加入這個系統，協助坑內成員做時數認證或其他貢獻的串連。

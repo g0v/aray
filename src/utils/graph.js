@@ -14,7 +14,6 @@ export async function request(query, params, authMode) {
   // https://github.com/aws-amplify/amplify-js/blob/master/packages/api/src/types/index.ts#L75
   const username = localStorage.getItem('app:username');
   options.authMode = username ? 'AMAZON_COGNITO_USER_POOLS' : 'API_KEY';
-  // global.logger.debug(options);
   const [err, res] = await to(API.graphql(options));
 
   if (__DEV__) {
@@ -26,6 +25,7 @@ export async function request(query, params, authMode) {
   }
 
   if (err) {
+    global.logger.debug(options);
     global.logger.error(err);
 
     const msg = err.errors ? ApiErrorCodes[err.errors[0].errorType] || err.errors[0].message : err.message;

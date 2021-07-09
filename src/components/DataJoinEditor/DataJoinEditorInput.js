@@ -3,14 +3,17 @@ import PropTypes from 'prop-types';
 import Chip from '@material-ui/core/Chip';
 import Autocomplete from '@material-ui/lab/Autocomplete';
 import TextField from '@material-ui/core/TextField';
+import FormHelperText from '@material-ui/core/FormHelperText';
 
 import {
   asyncListAll,
 } from 'utils/graph';
 import { getPropsByMode } from './helpers';
+import { useTranslation } from 'react-i18next';
 
 export default function DataJoinEditorInput({
   title = '',
+  showHelperText = true,
   mode = '',
   joinData,
   defaultValues: inDefaultValues,
@@ -24,6 +27,7 @@ export default function DataJoinEditorInput({
   const [values, setValues] = useState([]);
   const [defaultValues, setDefaultValues] = useState(inDefaultValues);
   const [freeSolo, setFreeSolo] = useState(inFreeSolo);
+  const { t } = useTranslation();
 
   const handleChange = (event, values) => {
     setValues([...values]);
@@ -89,7 +93,10 @@ export default function DataJoinEditorInput({
         )}
         onChange={handleChange}
         disabled={disabled}
+        aria-describedby="tags-filled-helper-text"
       />
+      {showHelperText &&
+        <FormHelperText id="tags-filled-helper-text">{t('user_inputTagsHelperText')}</FormHelperText>}
     </React.Fragment>
   );
 }
@@ -104,4 +111,5 @@ DataJoinEditorInput.propTypes = {
   onUpdateOptions: PropTypes.func,
   disabled: PropTypes.bool,
   freeSolo: PropTypes.bool,
+  showHelperText: PropTypes.bool,
 };

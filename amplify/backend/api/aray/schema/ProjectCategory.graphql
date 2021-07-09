@@ -1,7 +1,7 @@
-type UserKeyword
+type ProjectCategory
   @model
-  @key(name: "byUser", fields: ["username", "keywordId"])
-  @key(name: "byKeyword", fields: ["keywordId", "username"])
+  @key(name: "byCategory", fields: ["categoryId", "projectId"])
+  @key(name: "byProject", fields: ["projectId", "categoryId"])
   @auth(rules: [
     { allow: public, operations: [read] },
     { allow: groups, groups: ["Users"], operations: [read, create, update, delete] },
@@ -9,11 +9,11 @@ type UserKeyword
   ])
 {
   id: ID!
-  keywordId: ID!
-  username: String!
+  projectId: ID!
+  categoryId: ID!
 
-  keyword: Keyword! @connection(fields: ["keywordId"])
-  user: User! @connection(fields: ["username"])
+  project: Project! @connection(fields: ["projectId"])
+  category: Category! @connection(fields: ["categoryId"])
 
   createdAt: AWSDateTime!
   createdBy: String!

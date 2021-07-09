@@ -23,6 +23,7 @@ import { useTranslation } from 'react-i18next';
 import { loadCSS } from 'fg-loadcss';
 
 import 'react-calendar-heatmap/dist/styles.css';
+import 'react-big-calendar/lib/css/react-big-calendar.css';
 import './global';
 import './i18n/i18n';
 // import './i18n/Amplify';

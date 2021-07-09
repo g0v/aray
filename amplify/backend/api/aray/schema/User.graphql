@@ -43,7 +43,7 @@ type User
     # ])
 
   projects: [UserProject] @connection(keyName: "byUser", fields: ["username"])
-  keywords: [UserKeyword] @connection(keyName: "byUser", fields: ["username"])
+  tags: [UserTag] @connection(keyName: "byUser", fields: ["username"])
   needs: [UserNeed] @connection(keyName: "byUser", fields: ["username"])
 
   createdAt: AWSDateTime!

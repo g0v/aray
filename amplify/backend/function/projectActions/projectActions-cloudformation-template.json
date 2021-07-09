@@ -259,32 +259,6 @@
                 ]
               ]
             },
-            "API_ARAY_KEYWORDTABLE_NAME": {
-              "Fn::ImportValue": {
-                "Fn::Sub": "${apiarayGraphQLAPIIdOutput}:GetAtt:KeywordTable:Name"
-              }
-            },
-            "API_ARAY_KEYWORDTABLE_ARN": {
-              "Fn::Join": [
-                "",
-                [
-                  "arn:aws:dynamodb:",
-                  {
-                    "Ref": "AWS::Region"
-                  },
-                  ":",
-                  {
-                    "Ref": "AWS::AccountId"
-                  },
-                  ":table/",
-                  {
-                    "Fn::ImportValue": {
-                      "Fn::Sub": "${apiarayGraphQLAPIIdOutput}:GetAtt:KeywordTable:Name"
-                    }
-                  }
-                ]
-              ]
-            },
             "API_ARAY_NEEDTABLE_NAME": {
               "Fn::ImportValue": {
                 "Fn::Sub": "${apiarayGraphQLAPIIdOutput}:GetAtt:NeedTable:Name"
@@ -311,32 +285,6 @@
                 ]
               ]
             },
-            "API_ARAY_PROJECTKEYWORDTABLE_NAME": {
-              "Fn::ImportValue": {
-                "Fn::Sub": "${apiarayGraphQLAPIIdOutput}:GetAtt:ProjectKeywordTable:Name"
-              }
-            },
-            "API_ARAY_PROJECTKEYWORDTABLE_ARN": {
-              "Fn::Join": [
-                "",
-                [
-                  "arn:aws:dynamodb:",
-                  {
-                    "Ref": "AWS::Region"
-                  },
-                  ":",
-                  {
-                    "Ref": "AWS::AccountId"
-                  },
-                  ":table/",
-                  {
-                    "Fn::ImportValue": {
-                      "Fn::Sub": "${apiarayGraphQLAPIIdOutput}:GetAtt:ProjectKeywordTable:Name"
-                    }
-                  }
-                ]
-              ]
-            },
             "API_ARAY_PROJECTNEEDTABLE_NAME": {
               "Fn::ImportValue": {
                 "Fn::Sub": "${apiarayGraphQLAPIIdOutput}:GetAtt:ProjectNeedTable:Name"
@@ -358,6 +306,58 @@
                   {
                     "Fn::ImportValue": {
                       "Fn::Sub": "${apiarayGraphQLAPIIdOutput}:GetAtt:ProjectNeedTable:Name"
+                    }
+                  }
+                ]
+              ]
+            },
+            "API_ARAY_EVENTTABLE_NAME": {
+              "Fn::ImportValue": {
+                "Fn::Sub": "${apiarayGraphQLAPIIdOutput}:GetAtt:EventTable:Name"
+              }
+            },
+            "API_ARAY_EVENTTABLE_ARN": {
+              "Fn::Join": [
+                "",
+                [
+                  "arn:aws:dynamodb:",
+                  {
+                    "Ref": "AWS::Region"
+                  },
+                  ":",
+                  {
+                    "Ref": "AWS::AccountId"
+                  },
+                  ":table/",
+                  {
+                    "Fn::ImportValue": {
+                      "Fn::Sub": "${apiarayGraphQLAPIIdOutput}:GetAtt:EventTable:Name"
+                    }
+                  }
+                ]
+              ]
+            },
+            "API_ARAY_EVENTATTENDANCETABLE_NAME": {
+              "Fn::ImportValue": {
+                "Fn::Sub": "${apiarayGraphQLAPIIdOutput}:GetAtt:EventAttendanceTable:Name"
+              }
+            },
+            "API_ARAY_EVENTATTENDANCETABLE_ARN": {
+              "Fn::Join": [
+                "",
+                [
+                  "arn:aws:dynamodb:",
+                  {
+                    "Ref": "AWS::Region"
+                  },
+                  ":",
+                  {
+                    "Ref": "AWS::AccountId"
+                  },
+                  ":table/",
+                  {
+                    "Fn::ImportValue": {
+                      "Fn::Sub": "${apiarayGraphQLAPIIdOutput}:GetAtt:EventAttendanceTable:Name"
                     }
                   }
                 ]
@@ -565,7 +565,7 @@
                       ":table/",
                       {
                         "Fn::ImportValue": {
-                          "Fn::Sub": "${apiarayGraphQLAPIIdOutput}:GetAtt:KeywordTable:Name"
+                          "Fn::Sub": "${apiarayGraphQLAPIIdOutput}:GetAtt:EventTable:Name"
                         }
                       }
                     ]
@@ -586,7 +586,68 @@
                       ":table/",
                       {
                         "Fn::ImportValue": {
-                          "Fn::Sub": "${apiarayGraphQLAPIIdOutput}:GetAtt:KeywordTable:Name"
+                          "Fn::Sub": "${apiarayGraphQLAPIIdOutput}:GetAtt:EventTable:Name"
+                        }
+                      },
+                      "/index/*"
+                    ]
+                  ]
+                }
+              ]
+            },
+            {
+              "Effect": "Allow",
+              "Action": [
+                "dynamodb:Put*",
+                "dynamodb:Create*",
+                "dynamodb:BatchWriteItem",
+                "dynamodb:Get*",
+                "dynamodb:BatchGetItem",
+                "dynamodb:List*",
+                "dynamodb:Describe*",
+                "dynamodb:Scan",
+                "dynamodb:Query",
+                "dynamodb:Update*",
+                "dynamodb:RestoreTable*"
+              ],
+              "Resource": [
+                {
+                  "Fn::Join": [
+                    "",
+                    [
+                      "arn:aws:dynamodb:",
+                      {
+                        "Ref": "AWS::Region"
+                      },
+                      ":",
+                      {
+                        "Ref": "AWS::AccountId"
+                      },
+                      ":table/",
+                      {
+                        "Fn::ImportValue": {
+                          "Fn::Sub": "${apiarayGraphQLAPIIdOutput}:GetAtt:EventAttendanceTable:Name"
+                        }
+                      }
+                    ]
+                  ]
+                },
+                {
+                  "Fn::Join": [
+                    "",
+                    [
+                      "arn:aws:dynamodb:",
+                      {
+                        "Ref": "AWS::Region"
+                      },
+                      ":",
+                      {
+                        "Ref": "AWS::AccountId"
+                      },
+                      ":table/",
+                      {
+                        "Fn::ImportValue": {
+                          "Fn::Sub": "${apiarayGraphQLAPIIdOutput}:GetAtt:EventAttendanceTable:Name"
                         }
                       },
                       "/index/*"
@@ -709,67 +770,6 @@
                       {
                         "Fn::ImportValue": {
                           "Fn::Sub": "${apiarayGraphQLAPIIdOutput}:GetAtt:ProjectTable:Name"
-                        }
-                      },
-                      "/index/*"
-                    ]
-                  ]
-                }
-              ]
-            },
-            {
-              "Effect": "Allow",
-              "Action": [
-                "dynamodb:Put*",
-                "dynamodb:Create*",
-                "dynamodb:BatchWriteItem",
-                "dynamodb:Get*",
-                "dynamodb:BatchGetItem",
-                "dynamodb:List*",
-                "dynamodb:Describe*",
-                "dynamodb:Scan",
-                "dynamodb:Query",
-                "dynamodb:Update*",
-                "dynamodb:RestoreTable*"
-              ],
-              "Resource": [
-                {
-                  "Fn::Join": [
-                    "",
-                    [
-                      "arn:aws:dynamodb:",
-                      {
-                        "Ref": "AWS::Region"
-                      },
-                      ":",
-                      {
-                        "Ref": "AWS::AccountId"
-                      },
-                      ":table/",
-                      {
-                        "Fn::ImportValue": {
-                          "Fn::Sub": "${apiarayGraphQLAPIIdOutput}:GetAtt:ProjectKeywordTable:Name"
-                        }
-                      }
-                    ]
-                  ]
-                },
-                {
-                  "Fn::Join": [
-                    "",
-                    [
-                      "arn:aws:dynamodb:",
-                      {
-                        "Ref": "AWS::Region"
-                      },
-                      ":",
-                      {
-                        "Ref": "AWS::AccountId"
-                      },
-                      ":table/",
-                      {
-                        "Fn::ImportValue": {
-                          "Fn::Sub": "${apiarayGraphQLAPIIdOutput}:GetAtt:ProjectKeywordTable:Name"
                         }
                       },
                       "/index/*"

@@ -1,4 +1,4 @@
-type Keyword
+type Category
   @model
   @auth(rules: [
     { allow: public, operations: [read] },
@@ -8,8 +8,7 @@ type Keyword
 {
   id: ID!
   label: String!
-
-  users: [UserKeyword] @connection(keyName: "byKeyword", fields: ["id"])
+  description: String
 
   createdAt: AWSDateTime!
   createdBy: String!

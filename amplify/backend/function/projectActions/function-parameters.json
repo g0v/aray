@@ -6,7 +6,12 @@
         "read",
         "update"
       ],
-      "Keyword:@model(appsync)": [
+      "Event:@model(appsync)": [
+        "create",
+        "read",
+        "update"
+      ],
+      "EventAttendance:@model(appsync)": [
         "create",
         "read",
         "update"
@@ -17,11 +22,6 @@
         "update"
       ],
       "Project:@model(appsync)": [
-        "create",
-        "read",
-        "update"
-      ],
-      "ProjectKeyword:@model(appsync)": [
         "create",
         "read",
         "update"

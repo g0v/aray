@@ -34,6 +34,10 @@ npm start
 - [Material UI](https://material-ui.com/)
 - [Icons](https://material-ui.com/components/material-icons/)
 
+## Translation
+
+- [transifex](https://www.transifex.com/g0v-ARAY/aray/dashboard/)
+
 ## Links
 
 - [Hackmd](https://g0v.hackmd.io/vJ7_irbLRQGMYF29C9mZGA)

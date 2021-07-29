@@ -78,7 +78,7 @@ export default function CustomAvatar({
 }
 
 CustomAvatar.propTypes = {
-  src: PropTypes.string.isRequired,
+  src: PropTypes.string,
   fallbackSrc: PropTypes.string,
   size: PropTypes.number,
   variant: PropTypes.string,

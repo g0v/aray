@@ -93,7 +93,7 @@ DetailFormDialog.propTypes = {
   onClose: PropTypes.func,
   fullScreen: PropTypes.bool,
   maxWidth: PropTypes.string,
-  width: PropTypes.number,
+  width: PropTypes.string,
 };
 
 export default withWidth()(DetailFormDialog);

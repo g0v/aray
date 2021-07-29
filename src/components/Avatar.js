@@ -4,7 +4,7 @@ import PropTypes from 'prop-types';
 import Avatar from '@material-ui/core/Avatar';
 import { makeStyles } from '@material-ui/core/styles';
 
-import AvatarEditor from 'components//AvatarEditor';
+import AvatarEditor from 'components/AvatarEditor';
 import Colors from 'constants/Colors';
 
 const useStyles = makeStyles((theme) => ({

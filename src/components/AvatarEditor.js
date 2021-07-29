@@ -137,7 +137,7 @@ export default function AvatarEditor({
             maxWidth={'sm'}
             onClose={onCancel}
           >
-            <Box align="center" justify="center" p={8}>
+            <Box align="center" justify="center" p={4}>
               <Dropzone
                 onDrop={(dropped) => onDrop(dropped)}
                 noClick
@@ -147,19 +147,21 @@ export default function AvatarEditor({
                 {({ getRootProps, getInputProps }) => {
                   return (
                     <div {...getRootProps()}>
-                      <ReactAvatarEditor
-                        ref={editorRef}
-                        image={preview}
-                        border={2}
-                        scale={parseFloat(scale)}
-                        width={cropSize}
-                        height={cropSize}
-                        position={position}
-                        onPositionChange={handlePositionChange}
-                        rotate={parseFloat(rotate)}
-                        borderRadius={cropSize / 2}
-                        crossOrigin="anonymous"
-                      />
+                      <Box align="center" justify="center" p={2}>
+                        <ReactAvatarEditor
+                          ref={editorRef}
+                          image={preview}
+                          border={2}
+                          scale={parseFloat(scale)}
+                          width={cropSize}
+                          height={cropSize}
+                          position={position}
+                          onPositionChange={handlePositionChange}
+                          rotate={parseFloat(rotate)}
+                          borderRadius={cropSize / 2}
+                          crossOrigin="anonymous"
+                        />
+                      </Box>
                       <Grid container alignItems="center" spacing={2}>
                         <Grid item>
                           <Typography gutterBottom>

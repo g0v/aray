@@ -65,6 +65,7 @@ export default function CustomAvatar({
       {showEditor && canEdit &&
         <div className={classes.editButton} style={{ right: `calc(50% - ${size/2}px)` }}>
           <AvatarEditor
+            src={src}
             title={editorTitle}
             s3Key={s3Key}
             exportAsSquare={variant !== 'circle'}

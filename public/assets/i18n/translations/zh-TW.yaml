@@ -21,30 +21,31 @@ myProjectList_otherProjects: 參與的專案
 
 projectList_projects: 專案列表
 projectList_searchByTags: 用標籤搜尋
-projectList_searchByKeywords: 用關鍵字搜尋
+projectList_searchByCategorys: 用議題分類搜尋
 projectList_searchByNeeds: 用人力需求搜尋
 projectList_searchByText: 用字串搜尋
 
 userList_users: 貢獻者
-userList_searchByKeywords: 用關鍵字搜尋
+userList_searchByTags: 用標籤搜尋
 userList_searchByNeeds: 用專長搜尋
 userList_searchByText: 用字串搜尋
 
 user_editProfile: 更新個人資料
-user_editKeywords: 更新關鍵字
+user_editTags: 更新標籤
 user_editNeeds: 更新專長
 user_totalHoursInThePastYear: 過去一年的貢獻總時數
-user_keywords: 關鍵字
+user_tags: 標籤
 user_totalCompletedHours: 總貢獻時數 
 user_totalCompletedTasks: 總完成任務
 user_participateProjects: 參與的專案
 user_recentContributions: 近期貢獻紀錄
 user_hours: 小時
 user_needs: 專長
+user_inputTagsHelperText: 若無選項，可自由輸入文字後按"Enter"新增。
 
 project_links: 文件連結
 project_tags: 標籤
-project_keywords: 關鍵字
+project_categorys: 議題分類
 project_needs: 人力需求
 project_contributors: 貢獻者
 project_pastProposals: 過往提案
@@ -52,12 +53,17 @@ project_tasks: 任務
 project_contributions: 貢獻紀錄
 project_owner: 坑主
 project_managers: 共同管理員
-project_main: 介紹
+project_main: 首頁
 project_slackChannel: Slack 頻道
+project_events: 行事曆
 
 projectManagerEditor_update: 更新
 projectManagerEditor_title: 共同管理員
 projectManagerEditor_confirm: 確認
+
+projectOwnerEditor_update: 轉讓專案
+projectOwnerEditor_title: 新坑主
+projectOwnerEditor_confirm: 確認
 
 projectTasks_hours: 小時
 
@@ -154,3 +160,6 @@ contributionFormSchema_projectTaskIdDescription: 非必選。可以直接填帖�
 contributionFormSchema_summary: 簡述
 contributionFormSchema_description: 內容
 contributionFormSchema_hours: 時數
+
+landing_page_description: 零時小學校在今年預計將與 g0ver @John Huang 和日本 Code for Japan、韓國 Code for Korea 合作「時數系統」專案，讓零時小學校的營隊學生和專案參與者，都可以將上課或貢獻專案的時數登錄在系統上，並可輸出時數證明，讓你在社群的貢獻可以被看見。
+          「時數系統」專案第一階段將開放零時小學校和合作社群的學生使用，第二階段會再開放 g0v 所有坑主加入，也就是坑主以後都可以加入這個系統，協助坑內成員做時數認證或其他貢獻的串連。

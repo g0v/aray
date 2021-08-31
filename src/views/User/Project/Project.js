@@ -8,6 +8,8 @@ import { makeStyles } from '@material-ui/core/styles';
 import { useTranslation } from 'react-i18next';
 import Tabs from '@material-ui/core/Tabs';
 import Tab from '@material-ui/core/Tab';
+import { useHistory } from 'react-router-dom';
+import querystring from 'query-string';
 
 import { request } from 'utils/graph';
 import { getProject } from 'graphql/queries';
@@ -15,7 +17,7 @@ import ProjectEditButton from 'forms/ProjectForm/ProjectEditButton';
 
 import UserCard from 'components/UserCard';
 import TagChip from 'components/TagChip';
-import KeywordChip from 'components/KeywordChip';
+import CategoryChip from 'components/CategoryChip';
 import NeedChip from 'components/NeedChip';
 import DataJoinEditor from 'components/DataJoinEditor';
 import Note from 'components/Note';
@@ -25,8 +27,10 @@ import ProjectTasks from './ProjectTasks';
 import ProjectContributions from './ProjectContributions';
 import UserChip from 'components/UserChip';
 import ProjectAvatar from 'components/ProjectAvatar';
+import ProjectOwnerEditor from 'components/ProjectOwnerEditor';
 import ProjectManagerEditor from 'components/ProjectManagerEditor';
 import Loading from 'components/Loading';
+import EventCalendar from 'components/EventCalendar';
 
 const useStyles = makeStyles((theme) => ({
   container: {
@@ -59,22 +63,41 @@ const useStyles = makeStyles((theme) => ({
 export default function Project({ id: inId, computedMatch, match }) {
   const classes = useStyles();
   const { t } = useTranslation();
+  const history = useHistory();
 
   const [id, setId] = useState();
   const [project, setProject] = useState();
-  const [keywords, setKeywords] = useState([]);
+  const [categorys, setCategorys] = useState([]);
   const [needs, setNeeds] = useState([]);
+  const [tabIndex, setTabIndex] = useState(0);
   const [tags, setTags] = useState([]);
   const [canEdit, setCanEdit] = useState(false);
   const [lastUpdatedAt, setLastUpdatedAt] = useState(Date.now());
-  const [tabIndex, setTabIndex] = useState(0);
+
+  const handleTabChange = (newTabIndex) => {
+    history.push({
+      search: `?tab=${newTabIndex}`,
+    });
+
+    setTabIndex(newTabIndex);
+  };
 
   const tabs = [
     {
       label: t('project_main'),
-      component: () => <React.Fragment>
-        <RichText data={project.description} />
-      </React.Fragment>,
+      component: () => <Grid container>
+        <Grid item xs={12}>
+          <RichText data={project.description} />
+        </Grid>
+      </Grid>,
+    },
+    {
+      label: t('project_events'),
+      component: () => <Grid container>
+        <Grid item xs={12}>
+          <EventCalendar projectId={project.id} />
+        </Grid>
+      </Grid>,
     },
     {
       label: t('project_contributors'),
@@ -114,13 +137,16 @@ export default function Project({ id: inId, computedMatch, match }) {
 
   useEffect(() => {
     if (!id) return;
+
     (async () => {
       const { data: { getProject: data } } = await request(getProject, { id });
-      console.log('project', data);
+      const { tab } = querystring.parse(window.location.search);
+
       setProject(data);
-      setKeywords(data.keywords.items.map(({ keyword }) => keyword));
+      setCategorys(data.categorys.items.map(({ category }) => category));
       setNeeds(data.needs.items.map(({ need }) => need));
       setTags(data.tags.items.map(({ tag }) => tag));
+      setTabIndex(parseInt(tab || 0));
 
       const username = localStorage.getItem('app:username');
       const canEdit = [data.owner, ...data.managers].includes(username);
@@ -159,6 +185,11 @@ export default function Project({ id: inId, computedMatch, match }) {
               <Grid item xs={12}>
                 <Typography variant="body1" gutterBottom>
                   {t('project_owner')}
+                  {canEdit &&
+                  <ProjectOwnerEditor
+                    project={project}
+                    onUpdate={() => setLastUpdatedAt(Date.now())}
+                  />}
                 </Typography>
                 <div className={classes.userChipContainer}>
                   <UserChip username={project.owner}/>
@@ -197,12 +228,13 @@ export default function Project({ id: inId, computedMatch, match }) {
                   {t('project_links')}
                 </Typography>
                 {project.links.map((link, index)=>(
-                  <div key={index} style={{ margin: 1, display: 'inline-block' }}>
+                  <div key={index} style={{ margin: 1, display: 'block' }}>
                     <VisitButton
                       title={link.name}
                       url={link.url}
-                      variant={'outlined'}
+                      variant={'text'}
                       color={'secondary'}
+                      style={{ padding: 0, minWidth: 0, textTransform: 'none' }}
                     />
                   </div>
                 ))}
@@ -217,6 +249,23 @@ export default function Project({ id: inId, computedMatch, match }) {
               </Grid>}
               <Grid item xs={12}>
                 <Typography variant="body1" gutterBottom>
+                  {t('project_categorys')}
+                  {canEdit &&
+                  <DataJoinEditor
+                    title={t('project_categorys')}
+                    mode={'project-category'}
+                    projectId={project.id}
+                    joinData={project.categorys.items}
+                    onUpdate={() => setLastUpdatedAt(Date.now())}
+                    showHelperText={false}
+                  />}
+                </Typography>
+                {categorys.map((item, index)=>(
+                  <CategoryChip key={index} data={item} target="project" />
+                ))}
+              </Grid>
+              <Grid item xs={12}>
+                <Typography variant="body1" gutterBottom>
                   {t('project_tags')}
                   {canEdit &&
                   <DataJoinEditor
@@ -229,22 +278,6 @@ export default function Project({ id: inId, computedMatch, match }) {
                 </Typography>
                 {tags.map((item, index)=>(
                   <TagChip key={index} data={item} target="project" />
-                ))}
-              </Grid>
-              <Grid item xs={12}>
-                <Typography variant="body1" gutterBottom>
-                  {t('project_keywords')}
-                  {canEdit &&
-                  <DataJoinEditor
-                    title={t('project_keywords')}
-                    mode={'project-keyword'}
-                    projectId={project.id}
-                    joinData={project.keywords.items}
-                    onUpdate={() => setLastUpdatedAt(Date.now())}
-                  />}
-                </Typography>
-                {keywords.map((item, index)=>(
-                  <KeywordChip key={index} data={item} target="project" />
                 ))}
               </Grid>
               <Grid item xs={12}>
@@ -271,7 +304,7 @@ export default function Project({ id: inId, computedMatch, match }) {
                 value={tabIndex}
                 indicatorColor="primary"
                 textColor="primary"
-                onChange={(e, newValue)=>setTabIndex(newValue)}
+                onChange={(e, newValue) => handleTabChange(newValue)}
                 aria-label="Project Tabs"
                 // centered
               >

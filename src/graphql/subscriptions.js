@@ -1,6 +1,45 @@
 /* eslint-disable */
 // this is an auto generated file. This will be overwritten
 
+export const onCreateCategory = /* GraphQL */ `
+  subscription OnCreateCategory {
+    onCreateCategory {
+      id
+      label
+      description
+      createdAt
+      createdBy
+      updatedAt
+      updatedBy
+    }
+  }
+`;
+export const onUpdateCategory = /* GraphQL */ `
+  subscription OnUpdateCategory {
+    onUpdateCategory {
+      id
+      label
+      description
+      createdAt
+      createdBy
+      updatedAt
+      updatedBy
+    }
+  }
+`;
+export const onDeleteCategory = /* GraphQL */ `
+  subscription OnDeleteCategory {
+    onDeleteCategory {
+      id
+      label
+      description
+      createdAt
+      createdBy
+      updatedAt
+      updatedBy
+    }
+  }
+`;
 export const onCreateContribution = /* GraphQL */ `
   subscription OnCreateContribution {
     onCreateContribution {
@@ -52,168 +91,132 @@ export const onDeleteContribution = /* GraphQL */ `
     }
   }
 `;
-export const onCreateKeyword = /* GraphQL */ `
-  subscription OnCreateKeyword {
-    onCreateKeyword {
+export const onCreateEvent = /* GraphQL */ `
+  subscription OnCreateEvent($hosts: String) {
+    onCreateEvent(hosts: $hosts) {
       id
-      label
+      projectId
+      name
+      type
+      description
+      startDate
+      endDate
+      duration
+      hosts
+      annouceToContributors
+      guestLimit
+      attendanceCount
+      rsvpQuestion
+      rsvpLimit
+      rsvpOpenTime
+      rsvpCloseTime
+      location
+      link
       createdAt
       createdBy
       updatedAt
       updatedBy
-      users {
-        items {
-          id
-          keywordId
-          username
-          createdAt
-          createdBy
-          updatedAt
-          updatedBy
-          keyword {
-            id
-            label
-            createdAt
-            createdBy
-            updatedAt
-            updatedBy
-          }
-          user {
-            username
-            status
-            name
-            email
-            selfIntroduction
-            location
-            timeZone
-            slackId
-            slackIdUrl
-            urlWebsite
-            urlGithub
-            urlLinkedIn
-            urlFacebook
-            urlTwitter
-            urlInstagram
-            totalCompletedHours
-            totalCompletedTasks
-            createdAt
-            createdBy
-            updatedAt
-            updatedBy
-          }
-        }
-        nextToken
-      }
     }
   }
 `;
-export const onUpdateKeyword = /* GraphQL */ `
-  subscription OnUpdateKeyword {
-    onUpdateKeyword {
+export const onUpdateEvent = /* GraphQL */ `
+  subscription OnUpdateEvent($hosts: String) {
+    onUpdateEvent(hosts: $hosts) {
       id
-      label
+      projectId
+      name
+      type
+      description
+      startDate
+      endDate
+      duration
+      hosts
+      annouceToContributors
+      guestLimit
+      attendanceCount
+      rsvpQuestion
+      rsvpLimit
+      rsvpOpenTime
+      rsvpCloseTime
+      location
+      link
       createdAt
       createdBy
       updatedAt
       updatedBy
-      users {
-        items {
-          id
-          keywordId
-          username
-          createdAt
-          createdBy
-          updatedAt
-          updatedBy
-          keyword {
-            id
-            label
-            createdAt
-            createdBy
-            updatedAt
-            updatedBy
-          }
-          user {
-            username
-            status
-            name
-            email
-            selfIntroduction
-            location
-            timeZone
-            slackId
-            slackIdUrl
-            urlWebsite
-            urlGithub
-            urlLinkedIn
-            urlFacebook
-            urlTwitter
-            urlInstagram
-            totalCompletedHours
-            totalCompletedTasks
-            createdAt
-            createdBy
-            updatedAt
-            updatedBy
-          }
-        }
-        nextToken
-      }
     }
   }
 `;
-export const onDeleteKeyword = /* GraphQL */ `
-  subscription OnDeleteKeyword {
-    onDeleteKeyword {
+export const onDeleteEvent = /* GraphQL */ `
+  subscription OnDeleteEvent($hosts: String) {
+    onDeleteEvent(hosts: $hosts) {
       id
-      label
+      projectId
+      name
+      type
+      description
+      startDate
+      endDate
+      duration
+      hosts
+      annouceToContributors
+      guestLimit
+      attendanceCount
+      rsvpQuestion
+      rsvpLimit
+      rsvpOpenTime
+      rsvpCloseTime
+      location
+      link
       createdAt
       createdBy
       updatedAt
       updatedBy
-      users {
-        items {
-          id
-          keywordId
-          username
-          createdAt
-          createdBy
-          updatedAt
-          updatedBy
-          keyword {
-            id
-            label
-            createdAt
-            createdBy
-            updatedAt
-            updatedBy
-          }
-          user {
-            username
-            status
-            name
-            email
-            selfIntroduction
-            location
-            timeZone
-            slackId
-            slackIdUrl
-            urlWebsite
-            urlGithub
-            urlLinkedIn
-            urlFacebook
-            urlTwitter
-            urlInstagram
-            totalCompletedHours
-            totalCompletedTasks
-            createdAt
-            createdBy
-            updatedAt
-            updatedBy
-          }
-        }
-        nextToken
-      }
+    }
+  }
+`;
+export const onCreateEventAttendance = /* GraphQL */ `
+  subscription OnCreateEventAttendance {
+    onCreateEventAttendance {
+      id
+      eventId
+      username
+      status
+      note
+      createdAt
+      createdBy
+      updatedAt
+      updatedBy
+    }
+  }
+`;
+export const onUpdateEventAttendance = /* GraphQL */ `
+  subscription OnUpdateEventAttendance {
+    onUpdateEventAttendance {
+      id
+      eventId
+      username
+      status
+      note
+      createdAt
+      createdBy
+      updatedAt
+      updatedBy
+    }
+  }
+`;
+export const onDeleteEventAttendance = /* GraphQL */ `
+  subscription OnDeleteEventAttendance {
+    onDeleteEventAttendance {
+      id
+      eventId
+      username
+      status
+      note
+      createdAt
+      createdBy
+      updatedAt
+      updatedBy
     }
   }
 `;
@@ -226,45 +229,6 @@ export const onCreateNeed = /* GraphQL */ `
       createdBy
       updatedAt
       updatedBy
-      projects {
-        items {
-          id
-          projectId
-          needId
-          createdAt
-          createdBy
-          updatedAt
-          updatedBy
-          need {
-            id
-            label
-            createdAt
-            createdBy
-            updatedAt
-            updatedBy
-          }
-          project {
-            id
-            status
-            owner
-            managers
-            name
-            altName
-            summary
-            description
-            slackChannel
-            slackChannelUrl
-            totalCompletedHours
-            totalCompletedTasks
-            totalContributors
-            createdAt
-            createdBy
-            updatedAt
-            updatedBy
-          }
-        }
-        nextToken
-      }
     }
   }
 `;
@@ -277,45 +241,6 @@ export const onUpdateNeed = /* GraphQL */ `
       createdBy
       updatedAt
       updatedBy
-      projects {
-        items {
-          id
-          projectId
-          needId
-          createdAt
-          createdBy
-          updatedAt
-          updatedBy
-          need {
-            id
-            label
-            createdAt
-            createdBy
-            updatedAt
-            updatedBy
-          }
-          project {
-            id
-            status
-            owner
-            managers
-            name
-            altName
-            summary
-            description
-            slackChannel
-            slackChannelUrl
-            totalCompletedHours
-            totalCompletedTasks
-            totalContributors
-            createdAt
-            createdBy
-            updatedAt
-            updatedBy
-          }
-        }
-        nextToken
-      }
     }
   }
 `;
@@ -328,45 +253,6 @@ export const onDeleteNeed = /* GraphQL */ `
       createdBy
       updatedAt
       updatedBy
-      projects {
-        items {
-          id
-          projectId
-          needId
-          createdAt
-          createdBy
-          updatedAt
-          updatedBy
-          need {
-            id
-            label
-            createdAt
-            createdBy
-            updatedAt
-            updatedBy
-          }
-          project {
-            id
-            status
-            owner
-            managers
-            name
-            altName
-            summary
-            description
-            slackChannel
-            slackChannelUrl
-            totalCompletedHours
-            totalCompletedTasks
-            totalContributors
-            createdAt
-            createdBy
-            updatedAt
-            updatedBy
-          }
-        }
-        nextToken
-      }
     }
   }
 `;
@@ -402,18 +288,19 @@ export const onCreateProject = /* GraphQL */ `
       createdBy
       updatedAt
       updatedBy
-      keywords {
+      categorys {
         items {
           id
           projectId
-          keywordId
+          categoryId
           createdAt
           createdBy
           updatedAt
           updatedBy
-          keyword {
+          category {
             id
             label
+            description
             createdAt
             createdBy
             updatedAt
@@ -611,18 +498,19 @@ export const onUpdateProject = /* GraphQL */ `
       createdBy
       updatedAt
       updatedBy
-      keywords {
+      categorys {
         items {
           id
           projectId
-          keywordId
+          categoryId
           createdAt
           createdBy
           updatedAt
           updatedBy
-          keyword {
+          category {
             id
             label
+            description
             createdAt
             createdBy
             updatedAt
@@ -820,18 +708,19 @@ export const onDeleteProject = /* GraphQL */ `
       createdBy
       updatedAt
       updatedBy
-      keywords {
+      categorys {
         items {
           id
           projectId
-          keywordId
+          categoryId
           createdAt
           createdBy
           updatedAt
           updatedBy
-          keyword {
+          category {
             id
             label
+            description
             createdAt
             createdBy
             updatedAt
@@ -997,35 +886,24 @@ export const onDeleteProject = /* GraphQL */ `
     }
   }
 `;
-export const onCreateProjectKeyword = /* GraphQL */ `
-  subscription OnCreateProjectKeyword {
-    onCreateProjectKeyword {
+export const onCreateProjectCategory = /* GraphQL */ `
+  subscription OnCreateProjectCategory {
+    onCreateProjectCategory {
       id
       projectId
-      keywordId
+      categoryId
       createdAt
       createdBy
       updatedAt
       updatedBy
-      keyword {
+      category {
         id
         label
+        description
         createdAt
         createdBy
         updatedAt
         updatedBy
-        users {
-          items {
-            id
-            keywordId
-            username
-            createdAt
-            createdBy
-            updatedAt
-            updatedBy
-          }
-          nextToken
-        }
       }
       project {
         id
@@ -1057,11 +935,11 @@ export const onCreateProjectKeyword = /* GraphQL */ `
         createdBy
         updatedAt
         updatedBy
-        keywords {
+        categorys {
           items {
             id
             projectId
-            keywordId
+            categoryId
             createdAt
             createdBy
             updatedAt
@@ -1112,35 +990,24 @@ export const onCreateProjectKeyword = /* GraphQL */ `
     }
   }
 `;
-export const onUpdateProjectKeyword = /* GraphQL */ `
-  subscription OnUpdateProjectKeyword {
-    onUpdateProjectKeyword {
+export const onUpdateProjectCategory = /* GraphQL */ `
+  subscription OnUpdateProjectCategory {
+    onUpdateProjectCategory {
       id
       projectId
-      keywordId
+      categoryId
       createdAt
       createdBy
       updatedAt
       updatedBy
-      keyword {
+      category {
         id
         label
+        description
         createdAt
         createdBy
         updatedAt
         updatedBy
-        users {
-          items {
-            id
-            keywordId
-            username
-            createdAt
-            createdBy
-            updatedAt
-            updatedBy
-          }
-          nextToken
-        }
       }
       project {
         id
@@ -1172,11 +1039,11 @@ export const onUpdateProjectKeyword = /* GraphQL */ `
         createdBy
         updatedAt
         updatedBy
-        keywords {
+        categorys {
           items {
             id
             projectId
-            keywordId
+            categoryId
             createdAt
             createdBy
             updatedAt
@@ -1227,35 +1094,24 @@ export const onUpdateProjectKeyword = /* GraphQL */ `
     }
   }
 `;
-export const onDeleteProjectKeyword = /* GraphQL */ `
-  subscription OnDeleteProjectKeyword {
-    onDeleteProjectKeyword {
+export const onDeleteProjectCategory = /* GraphQL */ `
+  subscription OnDeleteProjectCategory {
+    onDeleteProjectCategory {
       id
       projectId
-      keywordId
+      categoryId
       createdAt
       createdBy
       updatedAt
       updatedBy
-      keyword {
+      category {
         id
         label
+        description
         createdAt
         createdBy
         updatedAt
         updatedBy
-        users {
-          items {
-            id
-            keywordId
-            username
-            createdAt
-            createdBy
-            updatedAt
-            updatedBy
-          }
-          nextToken
-        }
       }
       project {
         id
@@ -1287,11 +1143,11 @@ export const onDeleteProjectKeyword = /* GraphQL */ `
         createdBy
         updatedAt
         updatedBy
-        keywords {
+        categorys {
           items {
             id
             projectId
-            keywordId
+            categoryId
             createdAt
             createdBy
             updatedAt
@@ -1359,18 +1215,6 @@ export const onCreateProjectNeed = /* GraphQL */ `
         createdBy
         updatedAt
         updatedBy
-        projects {
-          items {
-            id
-            projectId
-            needId
-            createdAt
-            createdBy
-            updatedAt
-            updatedBy
-          }
-          nextToken
-        }
       }
       project {
         id
@@ -1402,11 +1246,11 @@ export const onCreateProjectNeed = /* GraphQL */ `
         createdBy
         updatedAt
         updatedBy
-        keywords {
+        categorys {
           items {
             id
             projectId
-            keywordId
+            categoryId
             createdAt
             createdBy
             updatedAt
@@ -1474,18 +1318,6 @@ export const onUpdateProjectNeed = /* GraphQL */ `
         createdBy
         updatedAt
         updatedBy
-        projects {
-          items {
-            id
-            projectId
-            needId
-            createdAt
-            createdBy
-            updatedAt
-            updatedBy
-          }
-          nextToken
-        }
       }
       project {
         id
@@ -1517,11 +1349,11 @@ export const onUpdateProjectNeed = /* GraphQL */ `
         createdBy
         updatedAt
         updatedBy
-        keywords {
+        categorys {
           items {
             id
             projectId
-            keywordId
+            categoryId
             createdAt
             createdBy
             updatedAt
@@ -1589,18 +1421,6 @@ export const onDeleteProjectNeed = /* GraphQL */ `
         createdBy
         updatedAt
         updatedBy
-        projects {
-          items {
-            id
-            projectId
-            needId
-            createdAt
-            createdBy
-            updatedAt
-            updatedBy
-          }
-          nextToken
-        }
       }
       project {
         id
@@ -1632,11 +1452,11 @@ export const onDeleteProjectNeed = /* GraphQL */ `
         createdBy
         updatedAt
         updatedBy
-        keywords {
+        categorys {
           items {
             id
             projectId
-            keywordId
+            categoryId
             createdAt
             createdBy
             updatedAt
@@ -1727,11 +1547,11 @@ export const onCreateProjectTag = /* GraphQL */ `
         createdBy
         updatedAt
         updatedBy
-        keywords {
+        categorys {
           items {
             id
             projectId
-            keywordId
+            categoryId
             createdAt
             createdBy
             updatedAt
@@ -1786,18 +1606,6 @@ export const onCreateProjectTag = /* GraphQL */ `
         createdBy
         updatedAt
         updatedBy
-        projects {
-          items {
-            id
-            projectId
-            tagId
-            createdAt
-            createdBy
-            updatedAt
-            updatedBy
-          }
-          nextToken
-        }
       }
     }
   }
@@ -1842,11 +1650,11 @@ export const onUpdateProjectTag = /* GraphQL */ `
         createdBy
         updatedAt
         updatedBy
-        keywords {
+        categorys {
           items {
             id
             projectId
-            keywordId
+            categoryId
             createdAt
             createdBy
             updatedAt
@@ -1901,18 +1709,6 @@ export const onUpdateProjectTag = /* GraphQL */ `
         createdBy
         updatedAt
         updatedBy
-        projects {
-          items {
-            id
-            projectId
-            tagId
-            createdAt
-            createdBy
-            updatedAt
-            updatedBy
-          }
-          nextToken
-        }
       }
     }
   }
@@ -1957,11 +1753,11 @@ export const onDeleteProjectTag = /* GraphQL */ `
         createdBy
         updatedAt
         updatedBy
-        keywords {
+        categorys {
           items {
             id
             projectId
-            keywordId
+            categoryId
             createdAt
             createdBy
             updatedAt
@@ -2016,18 +1812,6 @@ export const onDeleteProjectTag = /* GraphQL */ `
         createdBy
         updatedAt
         updatedBy
-        projects {
-          items {
-            id
-            projectId
-            tagId
-            createdAt
-            createdBy
-            updatedAt
-            updatedBy
-          }
-          nextToken
-        }
       }
     }
   }
@@ -2143,45 +1927,6 @@ export const onCreateTag = /* GraphQL */ `
       createdBy
       updatedAt
       updatedBy
-      projects {
-        items {
-          id
-          projectId
-          tagId
-          createdAt
-          createdBy
-          updatedAt
-          updatedBy
-          project {
-            id
-            status
-            owner
-            managers
-            name
-            altName
-            summary
-            description
-            slackChannel
-            slackChannelUrl
-            totalCompletedHours
-            totalCompletedTasks
-            totalContributors
-            createdAt
-            createdBy
-            updatedAt
-            updatedBy
-          }
-          tag {
-            id
-            label
-            createdAt
-            createdBy
-            updatedAt
-            updatedBy
-          }
-        }
-        nextToken
-      }
     }
   }
 `;
@@ -2194,45 +1939,6 @@ export const onUpdateTag = /* GraphQL */ `
       createdBy
       updatedAt
       updatedBy
-      projects {
-        items {
-          id
-          projectId
-          tagId
-          createdAt
-          createdBy
-          updatedAt
-          updatedBy
-          project {
-            id
-            status
-            owner
-            managers
-            name
-            altName
-            summary
-            description
-            slackChannel
-            slackChannelUrl
-            totalCompletedHours
-            totalCompletedTasks
-            totalContributors
-            createdAt
-            createdBy
-            updatedAt
-            updatedBy
-          }
-          tag {
-            id
-            label
-            createdAt
-            createdBy
-            updatedAt
-            updatedBy
-          }
-        }
-        nextToken
-      }
     }
   }
 `;
@@ -2245,45 +1951,6 @@ export const onDeleteTag = /* GraphQL */ `
       createdBy
       updatedAt
       updatedBy
-      projects {
-        items {
-          id
-          projectId
-          tagId
-          createdAt
-          createdBy
-          updatedAt
-          updatedBy
-          project {
-            id
-            status
-            owner
-            managers
-            name
-            altName
-            summary
-            description
-            slackChannel
-            slackChannelUrl
-            totalCompletedHours
-            totalCompletedTasks
-            totalContributors
-            createdAt
-            createdBy
-            updatedAt
-            updatedBy
-          }
-          tag {
-            id
-            label
-            createdAt
-            createdBy
-            updatedAt
-            updatedBy
-          }
-        }
-        nextToken
-      }
     }
   }
 `;
@@ -2311,49 +1978,6 @@ export const onCreateUser = /* GraphQL */ `
       createdBy
       updatedAt
       updatedBy
-      keywords {
-        items {
-          id
-          keywordId
-          username
-          createdAt
-          createdBy
-          updatedAt
-          updatedBy
-          keyword {
-            id
-            label
-            createdAt
-            createdBy
-            updatedAt
-            updatedBy
-          }
-          user {
-            username
-            status
-            name
-            email
-            selfIntroduction
-            location
-            timeZone
-            slackId
-            slackIdUrl
-            urlWebsite
-            urlGithub
-            urlLinkedIn
-            urlFacebook
-            urlTwitter
-            urlInstagram
-            totalCompletedHours
-            totalCompletedTasks
-            createdAt
-            createdBy
-            updatedAt
-            updatedBy
-          }
-        }
-        nextToken
-      }
       needs {
         items {
           id
@@ -2423,6 +2047,49 @@ export const onCreateUser = /* GraphQL */ `
             totalCompletedHours
             totalCompletedTasks
             totalContributors
+            createdAt
+            createdBy
+            updatedAt
+            updatedBy
+          }
+          user {
+            username
+            status
+            name
+            email
+            selfIntroduction
+            location
+            timeZone
+            slackId
+            slackIdUrl
+            urlWebsite
+            urlGithub
+            urlLinkedIn
+            urlFacebook
+            urlTwitter
+            urlInstagram
+            totalCompletedHours
+            totalCompletedTasks
+            createdAt
+            createdBy
+            updatedAt
+            updatedBy
+          }
+        }
+        nextToken
+      }
+      tags {
+        items {
+          id
+          tagId
+          username
+          createdAt
+          createdBy
+          updatedAt
+          updatedBy
+          tag {
+            id
+            label
             createdAt
             createdBy
             updatedAt
@@ -2481,49 +2148,6 @@ export const onUpdateUser = /* GraphQL */ `
       createdBy
       updatedAt
       updatedBy
-      keywords {
-        items {
-          id
-          keywordId
-          username
-          createdAt
-          createdBy
-          updatedAt
-          updatedBy
-          keyword {
-            id
-            label
-            createdAt
-            createdBy
-            updatedAt
-            updatedBy
-          }
-          user {
-            username
-            status
-            name
-            email
-            selfIntroduction
-            location
-            timeZone
-            slackId
-            slackIdUrl
-            urlWebsite
-            urlGithub
-            urlLinkedIn
-            urlFacebook
-            urlTwitter
-            urlInstagram
-            totalCompletedHours
-            totalCompletedTasks
-            createdAt
-            createdBy
-            updatedAt
-            updatedBy
-          }
-        }
-        nextToken
-      }
       needs {
         items {
           id
@@ -2593,6 +2217,49 @@ export const onUpdateUser = /* GraphQL */ `
             totalCompletedHours
             totalCompletedTasks
             totalContributors
+            createdAt
+            createdBy
+            updatedAt
+            updatedBy
+          }
+          user {
+            username
+            status
+            name
+            email
+            selfIntroduction
+            location
+            timeZone
+            slackId
+            slackIdUrl
+            urlWebsite
+            urlGithub
+            urlLinkedIn
+            urlFacebook
+            urlTwitter
+            urlInstagram
+            totalCompletedHours
+            totalCompletedTasks
+            createdAt
+            createdBy
+            updatedAt
+            updatedBy
+          }
+        }
+        nextToken
+      }
+      tags {
+        items {
+          id
+          tagId
+          username
+          createdAt
+          createdBy
+          updatedAt
+          updatedBy
+          tag {
+            id
+            label
             createdAt
             createdBy
             updatedAt
@@ -2651,49 +2318,6 @@ export const onDeleteUser = /* GraphQL */ `
       createdBy
       updatedAt
       updatedBy
-      keywords {
-        items {
-          id
-          keywordId
-          username
-          createdAt
-          createdBy
-          updatedAt
-          updatedBy
-          keyword {
-            id
-            label
-            createdAt
-            createdBy
-            updatedAt
-            updatedBy
-          }
-          user {
-            username
-            status
-            name
-            email
-            selfIntroduction
-            location
-            timeZone
-            slackId
-            slackIdUrl
-            urlWebsite
-            urlGithub
-            urlLinkedIn
-            urlFacebook
-            urlTwitter
-            urlInstagram
-            totalCompletedHours
-            totalCompletedTasks
-            createdAt
-            createdBy
-            updatedAt
-            updatedBy
-          }
-        }
-        nextToken
-      }
       needs {
         items {
           id
@@ -2794,290 +2418,48 @@ export const onDeleteUser = /* GraphQL */ `
         }
         nextToken
       }
-    }
-  }
-`;
-export const onCreateUserKeyword = /* GraphQL */ `
-  subscription OnCreateUserKeyword {
-    onCreateUserKeyword {
-      id
-      keywordId
-      username
-      createdAt
-      createdBy
-      updatedAt
-      updatedBy
-      keyword {
-        id
-        label
-        createdAt
-        createdBy
-        updatedAt
-        updatedBy
-        users {
-          items {
+      tags {
+        items {
+          id
+          tagId
+          username
+          createdAt
+          createdBy
+          updatedAt
+          updatedBy
+          tag {
             id
-            keywordId
-            username
+            label
             createdAt
             createdBy
             updatedAt
             updatedBy
           }
-          nextToken
-        }
-      }
-      user {
-        username
-        status
-        name
-        email
-        selfIntroduction
-        location
-        timeZone
-        slackId
-        slackIdUrl
-        urlWebsite
-        urlGithub
-        urlLinkedIn
-        urlFacebook
-        urlTwitter
-        urlInstagram
-        totalCompletedHours
-        totalCompletedTasks
-        createdAt
-        createdBy
-        updatedAt
-        updatedBy
-        keywords {
-          items {
-            id
-            keywordId
+          user {
             username
+            status
+            name
+            email
+            selfIntroduction
+            location
+            timeZone
+            slackId
+            slackIdUrl
+            urlWebsite
+            urlGithub
+            urlLinkedIn
+            urlFacebook
+            urlTwitter
+            urlInstagram
+            totalCompletedHours
+            totalCompletedTasks
             createdAt
             createdBy
             updatedAt
             updatedBy
           }
-          nextToken
         }
-        needs {
-          items {
-            id
-            needId
-            username
-            createdAt
-            createdBy
-            updatedAt
-            updatedBy
-          }
-          nextToken
-        }
-        projects {
-          items {
-            id
-            projectId
-            username
-            role
-            completedHours
-            completedTasks
-            createdAt
-            createdBy
-            updatedAt
-            updatedBy
-          }
-          nextToken
-        }
-      }
-    }
-  }
-`;
-export const onUpdateUserKeyword = /* GraphQL */ `
-  subscription OnUpdateUserKeyword {
-    onUpdateUserKeyword {
-      id
-      keywordId
-      username
-      createdAt
-      createdBy
-      updatedAt
-      updatedBy
-      keyword {
-        id
-        label
-        createdAt
-        createdBy
-        updatedAt
-        updatedBy
-        users {
-          items {
-            id
-            keywordId
-            username
-            createdAt
-            createdBy
-            updatedAt
-            updatedBy
-          }
-          nextToken
-        }
-      }
-      user {
-        username
-        status
-        name
-        email
-        selfIntroduction
-        location
-        timeZone
-        slackId
-        slackIdUrl
-        urlWebsite
-        urlGithub
-        urlLinkedIn
-        urlFacebook
-        urlTwitter
-        urlInstagram
-        totalCompletedHours
-        totalCompletedTasks
-        createdAt
-        createdBy
-        updatedAt
-        updatedBy
-        keywords {
-          items {
-            id
-            keywordId
-            username
-            createdAt
-            createdBy
-            updatedAt
-            updatedBy
-          }
-          nextToken
-        }
-        needs {
-          items {
-            id
-            needId
-            username
-            createdAt
-            createdBy
-            updatedAt
-            updatedBy
-          }
-          nextToken
-        }
-        projects {
-          items {
-            id
-            projectId
-            username
-            role
-            completedHours
-            completedTasks
-            createdAt
-            createdBy
-            updatedAt
-            updatedBy
-          }
-          nextToken
-        }
-      }
-    }
-  }
-`;
-export const onDeleteUserKeyword = /* GraphQL */ `
-  subscription OnDeleteUserKeyword {
-    onDeleteUserKeyword {
-      id
-      keywordId
-      username
-      createdAt
-      createdBy
-      updatedAt
-      updatedBy
-      keyword {
-        id
-        label
-        createdAt
-        createdBy
-        updatedAt
-        updatedBy
-        users {
-          items {
-            id
-            keywordId
-            username
-            createdAt
-            createdBy
-            updatedAt
-            updatedBy
-          }
-          nextToken
-        }
-      }
-      user {
-        username
-        status
-        name
-        email
-        selfIntroduction
-        location
-        timeZone
-        slackId
-        slackIdUrl
-        urlWebsite
-        urlGithub
-        urlLinkedIn
-        urlFacebook
-        urlTwitter
-        urlInstagram
-        totalCompletedHours
-        totalCompletedTasks
-        createdAt
-        createdBy
-        updatedAt
-        updatedBy
-        keywords {
-          items {
-            id
-            keywordId
-            username
-            createdAt
-            createdBy
-            updatedAt
-            updatedBy
-          }
-          nextToken
-        }
-        needs {
-          items {
-            id
-            needId
-            username
-            createdAt
-            createdBy
-            updatedAt
-            updatedBy
-          }
-          nextToken
-        }
-        projects {
-          items {
-            id
-            projectId
-            username
-            role
-            completedHours
-            completedTasks
-            createdAt
-            createdBy
-            updatedAt
-            updatedBy
-          }
-          nextToken
-        }
+        nextToken
       }
     }
   }
@@ -3099,18 +2481,6 @@ export const onCreateUserNeed = /* GraphQL */ `
         createdBy
         updatedAt
         updatedBy
-        projects {
-          items {
-            id
-            projectId
-            needId
-            createdAt
-            createdBy
-            updatedAt
-            updatedBy
-          }
-          nextToken
-        }
       }
       user {
         username
@@ -3134,18 +2504,6 @@ export const onCreateUserNeed = /* GraphQL */ `
         createdBy
         updatedAt
         updatedBy
-        keywords {
-          items {
-            id
-            keywordId
-            username
-            createdAt
-            createdBy
-            updatedAt
-            updatedBy
-          }
-          nextToken
-        }
         needs {
           items {
             id
@@ -3166,6 +2524,18 @@ export const onCreateUserNeed = /* GraphQL */ `
             role
             completedHours
             completedTasks
+            createdAt
+            createdBy
+            updatedAt
+            updatedBy
+          }
+          nextToken
+        }
+        tags {
+          items {
+            id
+            tagId
+            username
             createdAt
             createdBy
             updatedAt
@@ -3194,18 +2564,6 @@ export const onUpdateUserNeed = /* GraphQL */ `
         createdBy
         updatedAt
         updatedBy
-        projects {
-          items {
-            id
-            projectId
-            needId
-            createdAt
-            createdBy
-            updatedAt
-            updatedBy
-          }
-          nextToken
-        }
       }
       user {
         username
@@ -3229,18 +2587,6 @@ export const onUpdateUserNeed = /* GraphQL */ `
         createdBy
         updatedAt
         updatedBy
-        keywords {
-          items {
-            id
-            keywordId
-            username
-            createdAt
-            createdBy
-            updatedAt
-            updatedBy
-          }
-          nextToken
-        }
         needs {
           items {
             id
@@ -3261,6 +2607,18 @@ export const onUpdateUserNeed = /* GraphQL */ `
             role
             completedHours
             completedTasks
+            createdAt
+            createdBy
+            updatedAt
+            updatedBy
+          }
+          nextToken
+        }
+        tags {
+          items {
+            id
+            tagId
+            username
             createdAt
             createdBy
             updatedAt
@@ -3289,18 +2647,6 @@ export const onDeleteUserNeed = /* GraphQL */ `
         createdBy
         updatedAt
         updatedBy
-        projects {
-          items {
-            id
-            projectId
-            needId
-            createdAt
-            createdBy
-            updatedAt
-            updatedBy
-          }
-          nextToken
-        }
       }
       user {
         username
@@ -3324,18 +2670,6 @@ export const onDeleteUserNeed = /* GraphQL */ `
         createdBy
         updatedAt
         updatedBy
-        keywords {
-          items {
-            id
-            keywordId
-            username
-            createdAt
-            createdBy
-            updatedAt
-            updatedBy
-          }
-          nextToken
-        }
         needs {
           items {
             id
@@ -3356,6 +2690,18 @@ export const onDeleteUserNeed = /* GraphQL */ `
             role
             completedHours
             completedTasks
+            createdAt
+            createdBy
+            updatedAt
+            updatedBy
+          }
+          nextToken
+        }
+        tags {
+          items {
+            id
+            tagId
+            username
             createdAt
             createdBy
             updatedAt
@@ -3410,11 +2756,11 @@ export const onCreateUserProject = /* GraphQL */ `
         createdBy
         updatedAt
         updatedBy
-        keywords {
+        categorys {
           items {
             id
             projectId
-            keywordId
+            categoryId
             createdAt
             createdBy
             updatedAt
@@ -3484,18 +2830,6 @@ export const onCreateUserProject = /* GraphQL */ `
         createdBy
         updatedAt
         updatedBy
-        keywords {
-          items {
-            id
-            keywordId
-            username
-            createdAt
-            createdBy
-            updatedAt
-            updatedBy
-          }
-          nextToken
-        }
         needs {
           items {
             id
@@ -3516,6 +2850,18 @@ export const onCreateUserProject = /* GraphQL */ `
             role
             completedHours
             completedTasks
+            createdAt
+            createdBy
+            updatedAt
+            updatedBy
+          }
+          nextToken
+        }
+        tags {
+          items {
+            id
+            tagId
+            username
             createdAt
             createdBy
             updatedAt
@@ -3570,11 +2916,11 @@ export const onUpdateUserProject = /* GraphQL */ `
         createdBy
         updatedAt
         updatedBy
-        keywords {
+        categorys {
           items {
             id
             projectId
-            keywordId
+            categoryId
             createdAt
             createdBy
             updatedAt
@@ -3644,18 +2990,6 @@ export const onUpdateUserProject = /* GraphQL */ `
         createdBy
         updatedAt
         updatedBy
-        keywords {
-          items {
-            id
-            keywordId
-            username
-            createdAt
-            createdBy
-            updatedAt
-            updatedBy
-          }
-          nextToken
-        }
         needs {
           items {
             id
@@ -3676,6 +3010,18 @@ export const onUpdateUserProject = /* GraphQL */ `
             role
             completedHours
             completedTasks
+            createdAt
+            createdBy
+            updatedAt
+            updatedBy
+          }
+          nextToken
+        }
+        tags {
+          items {
+            id
+            tagId
+            username
             createdAt
             createdBy
             updatedAt
@@ -3730,11 +3076,11 @@ export const onDeleteUserProject = /* GraphQL */ `
         createdBy
         updatedAt
         updatedBy
-        keywords {
+        categorys {
           items {
             id
             projectId
-            keywordId
+            categoryId
             createdAt
             createdBy
             updatedAt
@@ -3804,18 +3150,6 @@ export const onDeleteUserProject = /* GraphQL */ `
         createdBy
         updatedAt
         updatedBy
-        keywords {
-          items {
-            id
-            keywordId
-            username
-            createdAt
-            createdBy
-            updatedAt
-            updatedBy
-          }
-          nextToken
-        }
         needs {
           items {
             id
@@ -3836,6 +3170,267 @@ export const onDeleteUserProject = /* GraphQL */ `
             role
             completedHours
             completedTasks
+            createdAt
+            createdBy
+            updatedAt
+            updatedBy
+          }
+          nextToken
+        }
+        tags {
+          items {
+            id
+            tagId
+            username
+            createdAt
+            createdBy
+            updatedAt
+            updatedBy
+          }
+          nextToken
+        }
+      }
+    }
+  }
+`;
+export const onCreateUserTag = /* GraphQL */ `
+  subscription OnCreateUserTag {
+    onCreateUserTag {
+      id
+      tagId
+      username
+      createdAt
+      createdBy
+      updatedAt
+      updatedBy
+      tag {
+        id
+        label
+        createdAt
+        createdBy
+        updatedAt
+        updatedBy
+      }
+      user {
+        username
+        status
+        name
+        email
+        selfIntroduction
+        location
+        timeZone
+        slackId
+        slackIdUrl
+        urlWebsite
+        urlGithub
+        urlLinkedIn
+        urlFacebook
+        urlTwitter
+        urlInstagram
+        totalCompletedHours
+        totalCompletedTasks
+        createdAt
+        createdBy
+        updatedAt
+        updatedBy
+        needs {
+          items {
+            id
+            needId
+            username
+            createdAt
+            createdBy
+            updatedAt
+            updatedBy
+          }
+          nextToken
+        }
+        projects {
+          items {
+            id
+            projectId
+            username
+            role
+            completedHours
+            completedTasks
+            createdAt
+            createdBy
+            updatedAt
+            updatedBy
+          }
+          nextToken
+        }
+        tags {
+          items {
+            id
+            tagId
+            username
+            createdAt
+            createdBy
+            updatedAt
+            updatedBy
+          }
+          nextToken
+        }
+      }
+    }
+  }
+`;
+export const onUpdateUserTag = /* GraphQL */ `
+  subscription OnUpdateUserTag {
+    onUpdateUserTag {
+      id
+      tagId
+      username
+      createdAt
+      createdBy
+      updatedAt
+      updatedBy
+      tag {
+        id
+        label
+        createdAt
+        createdBy
+        updatedAt
+        updatedBy
+      }
+      user {
+        username
+        status
+        name
+        email
+        selfIntroduction
+        location
+        timeZone
+        slackId
+        slackIdUrl
+        urlWebsite
+        urlGithub
+        urlLinkedIn
+        urlFacebook
+        urlTwitter
+        urlInstagram
+        totalCompletedHours
+        totalCompletedTasks
+        createdAt
+        createdBy
+        updatedAt
+        updatedBy
+        needs {
+          items {
+            id
+            needId
+            username
+            createdAt
+            createdBy
+            updatedAt
+            updatedBy
+          }
+          nextToken
+        }
+        projects {
+          items {
+            id
+            projectId
+            username
+            role
+            completedHours
+            completedTasks
+            createdAt
+            createdBy
+            updatedAt
+            updatedBy
+          }
+          nextToken
+        }
+        tags {
+          items {
+            id
+            tagId
+            username
+            createdAt
+            createdBy
+            updatedAt
+            updatedBy
+          }
+          nextToken
+        }
+      }
+    }
+  }
+`;
+export const onDeleteUserTag = /* GraphQL */ `
+  subscription OnDeleteUserTag {
+    onDeleteUserTag {
+      id
+      tagId
+      username
+      createdAt
+      createdBy
+      updatedAt
+      updatedBy
+      tag {
+        id
+        label
+        createdAt
+        createdBy
+        updatedAt
+        updatedBy
+      }
+      user {
+        username
+        status
+        name
+        email
+        selfIntroduction
+        location
+        timeZone
+        slackId
+        slackIdUrl
+        urlWebsite
+        urlGithub
+        urlLinkedIn
+        urlFacebook
+        urlTwitter
+        urlInstagram
+        totalCompletedHours
+        totalCompletedTasks
+        createdAt
+        createdBy
+        updatedAt
+        updatedBy
+        needs {
+          items {
+            id
+            needId
+            username
+            createdAt
+            createdBy
+            updatedAt
+            updatedBy
+          }
+          nextToken
+        }
+        projects {
+          items {
+            id
+            projectId
+            username
+            role
+            completedHours
+            completedTasks
+            createdAt
+            createdBy
+            updatedAt
+            updatedBy
+          }
+          nextToken
+        }
+        tags {
+          items {
+            id
+            tagId
+            username
             createdAt
             createdBy
             updatedAt

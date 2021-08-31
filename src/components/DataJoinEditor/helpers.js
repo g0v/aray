@@ -1,24 +1,24 @@
 import {
-  listKeywords,
+  listCategorys,
   listNeeds,
   listTags,
 } from 'graphql/queries';
 import {
-  createKeyword,
-  createUserKeyword,
-  deleteUserKeyword,
+  createUserTag,
+  deleteUserTag,
   createNeed,
   createUserNeed,
   deleteUserNeed,
-  createProjectKeyword,
-  deleteProjectKeyword,
+  createCategory,
+  createProjectCategory,
+  deleteProjectCategory,
   createProjectNeed,
   deleteProjectNeed,
   createTag,
   createProjectTag,
   deleteProjectTag,
 } from 'graphql/mutations';
-import KeywordChip from 'components/KeywordChip';
+import CategoryChip from 'components/CategoryChip';
 import TagChip from 'components/TagChip';
 import NeedChip from 'components/NeedChip';
 
@@ -32,14 +32,14 @@ export const getPropsByMode = (mode) => {
   let chip;
   let freeSolo = true;
   switch (mode) {
-  case 'user-keyword':
-    key = 'keywordId';
+  case 'user-tag':
+    key = 'tagId';
     linkKey = 'username';
-    listOptionsQueryName = listKeywords;
-    createQueryName = createKeyword;
-    createJoinDataQueryName = createUserKeyword;
-    deleteJoinDataQueryName = deleteUserKeyword;
-    chip = KeywordChip;
+    listOptionsQueryName = listTags;
+    createQueryName = createTag;
+    createJoinDataQueryName = createUserTag;
+    deleteJoinDataQueryName = deleteUserTag;
+    chip = CategoryChip;
     break;
   case 'user-need':
     key = 'needId';
@@ -50,14 +50,15 @@ export const getPropsByMode = (mode) => {
     deleteJoinDataQueryName = deleteUserNeed;
     chip = NeedChip;
     break;
-  case 'project-keyword':
-    key = 'keywordId';
+  case 'project-category':
+    key = 'categoryId';
     linkKey = 'projectId';
-    listOptionsQueryName = listKeywords;
-    createQueryName = createKeyword;
-    createJoinDataQueryName = createProjectKeyword;
-    deleteJoinDataQueryName = deleteProjectKeyword;
-    chip = KeywordChip;
+    listOptionsQueryName = listCategorys;
+    createQueryName = createCategory;
+    createJoinDataQueryName = createProjectCategory;
+    deleteJoinDataQueryName = deleteProjectCategory;
+    chip = CategoryChip;
+    freeSolo = false;
     break;
   case 'project-tag':
     key = 'tagId';
@@ -67,7 +68,6 @@ export const getPropsByMode = (mode) => {
     createJoinDataQueryName = createProjectTag;
     deleteJoinDataQueryName = deleteProjectTag;
     chip = TagChip;
-    freeSolo = false;
     break;
   case 'project-need':
     key = 'needId';

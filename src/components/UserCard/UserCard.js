@@ -18,7 +18,7 @@ import { fade } from '@material-ui/core/styles/colorManipulator';
 
 import { request } from 'utils/graph';
 import { getUser } from 'graphql/queries';
-import KeywordChip from 'components/KeywordChip';
+import TagChip from 'components/TagChip';
 import NeedChip from 'components/NeedChip';
 import UserAvatar from 'components/UserAvatar';
 
@@ -93,8 +93,8 @@ export default function UserCard({
         />
         <CardContent style={{ paddingTop: 0 }}>
           <div>
-            {user.keywords && user.keywords.items.map((item, index)=>(
-              <KeywordChip key={index} data={item.keyword} size="small" />
+            {user.tags && user.tags.items.map((item, index)=>(
+              <TagChip key={index} data={item.tag} size="small" />
             ))}
           </div>
           <div>

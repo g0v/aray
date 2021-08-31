@@ -2,14 +2,14 @@
 
 ## Features
 
-- 使用者
-  - 可以瀏覽專案
-  - 可以瀏覽其他使用者
-  - 可以創建專案變成坑主
-- 坑主/共同坑主
-  - 可以新增專案任務
-  - 可以給予其他使用者貢獻時數
-  - 可以新增專案共同坑主
+- Users can:
+  - View projects
+  - View other users
+  - Create new project and become a project organiser
+- Pit owners/Pit co-owners can:
+  - Create new tasks
+  - Give contribution hours to other users
+  - Create new projects with a pit co-owner
 
 ## GetStarted
 
@@ -22,9 +22,9 @@ npm start
 
 ## Demo
 
-- [正式版 production](https://aray.g0v.tw/)
-- [測試版 test](https://tst.aray.g0v.dev/)
-- [開發版 develop](https://dev.aray.g0v.dev/)
+- [production](https://aray.g0v.tw/)
+- [test](https://tst.aray.g0v.dev/)
+- [develop](https://dev.aray.g0v.dev/)
 
 ## Framework
 
@@ -34,8 +34,12 @@ npm start
 - [Material UI](https://material-ui.com/)
 - [Icons](https://material-ui.com/components/material-icons/)
 
+## Translation
+
+- [transifex](https://www.transifex.com/g0v-ARAY/aray/dashboard/)
+
 ## Links
 
 - [Hackmd](https://g0v.hackmd.io/vJ7_irbLRQGMYF29C9mZGA)
-- [g0v 專案名稱的華英對照表](https://docs.google.com/spreadsheets/d/1hFAl4CvtkPGAFY5QaXYXWki2GNXJkElebgonU3RHRdk/edit#gid=0)
-- [g0v database 中英介紹](https://docs.google.com/spreadsheets/d/1C9-g1pvkfqBJbfkjPB0gvfBbBxVlWYJj6tTVwaI5_x8/edit#gid=0)
+- [g0v Chinese/English comparison table for project names](https://docs.google.com/spreadsheets/d/1hFAl4CvtkPGAFY5QaXYXWki2GNXJkElebgonU3RHRdk/edit#gid=0)
+- [g0v database Chinese/English Introduction](https://docs.google.com/spreadsheets/d/1C9-g1pvkfqBJbfkjPB0gvfBbBxVlWYJj6tTVwaI5_x8/edit#gid=0)

@@ -59,17 +59,25 @@ input ProjectContributionRequest {
   hours: Float!
 }
 
-# # Project Event
-# type CreateOrUpdateEventAttendanceResponse {
-#   # errors: [String] @aws_cognito_user_pools
-#   # message: String @aws_cognito_user_pools
-#   id: String @aws_cognito_user_pools
-# }
+# Project Owner
+type ChangeProjectOwnerResponse {
+  id: String @aws_cognito_user_pools
+}
 
-# input CreateOrUpdateEventAttendanceRequest {
-#   id: ID
-#   eventId: ID!
-#   username: String! # use from the request
-#   status: EventAttendanceStatus!
-#   note: String
-# }
+input ChangeProjectOwnerRequest {
+  projectId: ID
+  newOwner: String!
+}
+
+# Project Event
+type CreateOrUpdateEventAttendanceResponse {
+  id: String @aws_cognito_user_pools
+}
+
+input CreateOrUpdateEventAttendanceRequest {
+  id: ID
+  eventId: ID!
+  username: String! # use from the request
+  status: EventAttendanceStatus!
+  note: String
+}

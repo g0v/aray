@@ -5,7 +5,7 @@ import PropTypes from 'prop-types';
 import Chip from './Chip';
 import Colors from 'constants/Colors';
 
-export default function KeywordChip({
+export default function CategoryChip({
   data,
   target,
 }) {
@@ -26,13 +26,13 @@ export default function KeywordChip({
   return (
     <Chip
       label={value}
-      url={target ? `/${target}s?keywords=${value}` : ''}
+      url={target ? `/${target}s?categorys=${value}` : ''}
       color={Colors.primaryDark}
     />
   );
 }
 
-KeywordChip.propTypes = {
+CategoryChip.propTypes = {
   data: PropTypes.shape({
     label: PropTypes.string,
   }),

@@ -25,9 +25,9 @@ export const listProjects = /* GraphQL */ `
         # createdBy
         # updatedAt
         # updatedBy
-        keywords {
+        categorys {
           items {
-            keyword {
+            category {
               label
             }
           }

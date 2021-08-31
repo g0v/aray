@@ -1,115 +1,27 @@
+appSignup_email: Email
+appSignup_name: Name
+appSignup_password: Password
+appSignup_username: Username
 app_name: ARAY
 app_short_name: ARAY
-
-config_locale: en-US
-
-appSignup_name: Name
-appSignup_email: Email
-appSignup_username: Username
-appSignup_password: Password
-
-title_dashboard: Dashboard
-title_myProfile: My Profie
-title_myProjectList: My Projects
-title_projectList: Projects
-title_project: Project
-title_userList: Contributors
-title_user: Contributors
-
-myProjectList_myProjects: My Projects
-myProjectList_otherProjects: Contributed Projects
-
-projectList_projects: Projects
-projectList_searchByTags: Search by Tags
-projectList_searchByKeywords: Search by Keywords
-projectList_searchByNeeds: Search by Help Needs
-projectList_searchByText: Search by Text
-
-userList_users: Contributors
-userList_searchByKeywords: Search by Keywords
-userList_searchByNeeds: Search by Specialties
-userList_searchByText: Search by Text
-
-user_editProfile: Update Personal Info
-user_editKeywords: Update Keywords
-user_editNeeds: Update Specialties
-user_totalHoursInThePastYear: Total contributions for the past year
-user_keywords: Keywords
-user_totalCompletedHours: Total Contributed Hours 
-user_totalCompletedTasks: Total Completed Tasks
-user_participateProjects: Contributed Projects
-user_recentContributions: Recent Contributions
-user_hours: Hour(s)
-user_needs: Specialties
-
-project_links: Links
-project_tags: Tags
-project_keywords: Keywords
-project_needs: Help Needs
-project_contributors: Contributors
-project_pastProposals: Pasr Proposals
-project_tasks: Tasks
-project_contributions: Contributions
-project_owner: Owner
-project_managers: Managers
-project_main: Introduction
-
-projectManagerEditor_update: Update
-projectManagerEditor_title: Project Managers
-projectManagerEditor_confirm: Confirm
-
-projectTasks_hours: Hour(s)
-
-projectAvatar_updateAvatar: Update Project Logo
-
-projectFormSchema_title: Project
-projectFormSchema_status: Status
-projectFormSchema_name: Name
-projectFormSchema_summary: Summary
-projectFormSchema_description: Description
-projectFormSchema_links: Links
-projectFormSchema_linksName: Name
-projectFormSchema_linksUrl: URL
-
-projectTaskFormSchema_title: Project Task
-projectTaskFormSchema_status: Status
-projectTaskFormSchema_summary: Summary
-projectTaskFormSchema_description: Description
-projectTaskFormSchema_hours: Hour(s)
-
-userCard_completedTasks: Completed Tasks
-userCard_completedHours: Contributed Hours
-
-userAvatar_updateAvatar: Update Avatar
-
-userEditButton_title: Info
-
-userFormSchema_title: Personal Info
-userFormSchema_name: Name
-userFormSchema_email: Email
-userFormSchema_selfIntroduction: Self Introduction
-userFormSchema_location: Location
-userFormSchema_slackId: Slack ID
-userFormSchema_urlWebsite: Website Link
-userFormSchema_urlGithub: Github Link
-userFormSchema_urlLinkedIn: LinkedIn Link
-userFormSchema_urlFacebook: Facebook Link
-userFormSchema_urlTwitter: Twitter Link
-userFormSchema_urlInstagram: Instagram Link
-
-avatarEditor_clickAndUpload: Click and Upload Image
 avatarEditor_cancel: Cancel
+avatarEditor_clickAndUpload: Click and Upload Image
 avatarEditor_submit: Update
-
-projectCard_completedTasks: Completed Tasks
-projectCard_completedHours: Contributed Hours
-projectCard_createdAt: Created At
-
-projectEditButton_title: Project Info
-
-dataJoinEditor_update: Update
+config_locale: en-US
+contributionEditButton_title: Project Contributions
+contributionFormSchema_description: Description
+contributionFormSchema_hours: Hour(s)
+contributionFormSchema_projectTaskId: Project Task Template
+contributionFormSchema_projectTaskIdDescription: (Optional) You may enter the summary
+  and hours directly for custom contributions.
+contributionFormSchema_summary: Summary
+contributionFormSchema_title: Contribution
+contributionFormSchema_username: Contributor Username
+customAppBar_login: Login
+customAppBar_logout: Logout
+customAppBar_register: Signup
 dataJoinEditor_confirm: Confirm
-
+dataJoinEditor_update: Update
 datetime_month01: Jan
 datetime_month02: Feb
 datetime_month03: Mar
@@ -129,22 +41,93 @@ datetime_weekday3: Wed
 datetime_weekday4: Thur
 datetime_weekday5: Fri
 datetime_weekday6: Sat
-
-editButton_update: Update
 editButton_create: Create
-
+editButton_update: Update
+myProjectList_myProjects: My Projects
+myProjectList_otherProjects: Contributed Projects
+projectAvatar_updateAvatar: Update Project Logo
+projectCard_completedHours: Contributed Hours
+projectCard_completedTasks: Completed Tasks
+projectCard_createdAt: Created At
+projectEditButton_title: Project Info
+projectFormSchema_description: Description
+projectFormSchema_links: Links
+projectFormSchema_linksName: Name
+projectFormSchema_linksUrl: URL
+projectFormSchema_name: Name
+projectFormSchema_slackChannel: Slack Channel
+projectFormSchema_slackChannelUrl: Slack Channel URL
+projectFormSchema_status: Status
+projectFormSchema_summary: Summary
+projectFormSchema_title: Project
+projectList_projects: Projects
+projectList_searchByCategorys: Search by Categorys
+projectList_searchByNeeds: Search by Help Needs
+projectList_searchByTags: Search by Tags
+projectList_searchByText: Search by Text
+projectManagerEditor_confirm: Confirm
+projectManagerEditor_title: Project Managers
+projectManagerEditor_update: Update
+projectOwnerEditor_confirm: Confirm
+projectOwnerEditor_title: New Owner
+projectOwnerEditor_update: Update
+projectTaskFormSchema_description: Description
+projectTaskFormSchema_hours: Hour(s)
+projectTaskFormSchema_status: Status
+projectTaskFormSchema_summary: Summary
+projectTaskFormSchema_title: Project Task
+projectTasks_hours: Hour(s)
+project_categorys: Categories
+project_contributions: Contributions
+project_contributors: Contributors
+project_events: Event
+project_links: Links
+project_main: Introduction
+project_managers: Managers
+project_needs: Help Needs
+project_owner: Owner
+project_pastProposals: Past Proposals
+project_slackChannel: Slack Channel
+project_tags: Tags
+project_tasks: Tasks
 submitButton_submit: Submit
-
-customAppBar_logout: Logout
-customAppBar_register: Signup
-customAppBar_login: Login
-
-contributionEditButton_title: Project Contributions
-
-contributionFormSchema_title: Contribution
-contributionFormSchema_username: Contributor Username
-contributionFormSchema_projectTaskId: Project Task Template
-contributionFormSchema_projectTaskIdDescription: (Optional) You may enter the summary and hours directly for custom contributions.
-contributionFormSchema_summary: Summary
-contributionFormSchema_description: Description
-contributionFormSchema_hours: Hour(s)
+title_dashboard: Dashboard
+title_myProfile: My Profile
+title_myProjectList: My Projects
+title_project: Project
+title_projectList: Projects
+title_user: Contributors
+title_userList: Contributors
+userAvatar_updateAvatar: Update Avatar
+userCard_completedHours: Contributed Hours
+userCard_completedTasks: Completed Tasks
+userEditButton_title: Info
+userFormSchema_email: Email
+userFormSchema_location: Location
+userFormSchema_name: Name
+userFormSchema_selfIntroduction: Self Introduction
+userFormSchema_slackId: Slack ID
+userFormSchema_slackIdUrl: Slack ID URL
+userFormSchema_title: Personal Info
+userFormSchema_urlFacebook: Facebook Link
+userFormSchema_urlGithub: Github Link
+userFormSchema_urlInstagram: Instagram Link
+userFormSchema_urlLinkedIn: LinkedIn Link
+userFormSchema_urlTwitter: Twitter Link
+userFormSchema_urlWebsite: Website Link
+userList_searchByNeeds: Search by Specialties
+userList_searchByTags: Search by Tags
+userList_searchByText: Search by Text
+userList_users: Contributors
+user_editNeeds: Update Specialties
+user_editProfile: Update Personal Info
+user_editTags: Update Tags
+user_hours: Hour(s)
+user_inputTagsHelperText: Please press Enter to add a new one.
+user_needs: Specialties
+user_participateProjects: Contributed Projects
+user_recentContributions: Recent Contributions
+user_tags: Tags
+user_totalCompletedHours: Total Contributed Hours
+user_totalCompletedTasks: Total Completed Tasks
+user_totalHoursInThePastYear: Total contributions for the past year

@@ -9,7 +9,7 @@ type Need
   id: ID!
   label: String!
 
-  projects: [ProjectNeed] @connection(keyName: "byNeed", fields: ["id"])
+  # projects: [ProjectNeed] @connection(keyName: "byNeed", fields: ["id"])
 
   createdAt: AWSDateTime!
   createdBy: String!

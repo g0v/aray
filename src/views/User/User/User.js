@@ -1,9 +1,11 @@
-import React, { useState, useEffect } from 'react';
+import React, { useState, useEffect, useRef } from 'react';
 import PropTypes from 'prop-types';
 import Grid from '@material-ui/core/Grid';
 import Container from '@material-ui/core/Container';
 import Typography from '@material-ui/core/Typography';
 import Card from '@material-ui/core/Card';
+import Dialog from '@material-ui/core/Dialog';
+import DialogActions from '@material-ui/core/DialogActions';
 
 import InstagramIcon from '@material-ui/icons/Instagram';
 import TwitterIcon from '@material-ui/icons/Twitter';
@@ -39,7 +41,12 @@ import DataJoinEditor from 'components/DataJoinEditor';
 import ContributionHeatmap from './ContributionHeatmap';
 import RichText from 'components/RichText';
 import Loading from 'components/Loading';
-
+import Button from '@material-ui/core/Button';
+import ReactToPrint from 'react-to-print';
+import Table from '@material-ui/core/Table';
+import TableBody from '@material-ui/core/TableBody';
+import TableCell from '@material-ui/core/TableCell';
+import TableRow from '@material-ui/core/TableRow';
 const useStyles = makeStyles((theme) => ({
   container: {
     paddingTop: theme.spacing(2),
@@ -61,6 +68,28 @@ const useStyles = makeStyles((theme) => ({
   header: {
     marginTop: theme.spacing(2),
   },
+
+  certification: {
+    '& h2': {
+      textAlign: 'center',
+      height: '2rem',
+      verticalAlign: 'middle',
+    },
+    '& div': {
+      textAlign: 'center',
+    },
+    'textAlign': 'center',
+    'fontSize': '0.8rem',
+    'padding': '5mm',
+    'margin': '2mm',
+  },
+
+  g0vOnly: {
+    height: '2rem',
+    verticalAlign: 'middle',
+    marginLeft: '0.2rem',
+    marginBottom: '0.2rem',
+  },
 }));
 
 const todayFromBeginning = moment().startOf('day');
@@ -68,6 +97,7 @@ const today = moment().endOf('day');
 const aYearAgo = moment().add(-1, 'years').startOf('day');
 
 export default function User({ id: inId, computedMatch, match }) {
+  const componentRef = useRef();
   const classes = useStyles();
   const { t } = useTranslation();
 
@@ -83,6 +113,7 @@ export default function User({ id: inId, computedMatch, match }) {
   const [needs, setNeeds] = useState([]);
   const [canEdit, setCanEdit] = useState(false);
   const [lastUpdatedAt, setLastUpdatedAt] = useState(Date.now());
+  const [open, setOpen] = useState(false);
 
   useEffect(() => {
     if (inId) {
@@ -221,8 +252,58 @@ export default function User({ id: inId, computedMatch, match }) {
     return <Loading fullScreen={false} />;
   }
 
+  const handleClickOpen = () => {
+    setOpen(true);
+  };
+
+  const handleClose = () => {
+    setOpen(false);
+  };
+
+  const formatDate = (date) => date.substring(0, 10);
+
   return (
     <Container className={classes.container}>
+      <Dialog open={open}>
+        <Card variant="outlined" ref={componentRef} className={classes.certification}>
+          <div>
+            <img src="assets/images/pring-logo.png"/>
+          </div>
+          <p>
+            Congratulation to {user.name} for contributing {userProjects.length} project,
+            to finshed {user.totalCompletedTasks} missions in {user.totalCompletedHours} hours.<br/>
+            <br/>
+            You are the best!......Hooray!!!!!
+          </p>
+          <h2>
+          Contribution Summarize
+          </h2>
+          Contributed Projects {userProjects.length}, Total Contributed Hours {user.totalCompletedHours},
+          Total Completed Tasks {user.totalCompletedTasks}
+
+          <Table>
+            <TableBody>
+              {userProjects.map((up)=>(
+                <TableRow key={up.project.name}>
+                  <TableCell style={{ borderBottom: 'none' }}>{up.project.name}</TableCell>
+                  <TableCell style={{ borderBottom: 'none' }}>{up.completedTasks} Missions,
+                    {up.completedHours} Hours from {formatDate(up.project.createdAt)} to {formatDate(up.project.updatedAt)}.</TableCell>
+                </TableRow>
+              ))}
+            </TableBody>
+          </Table>
+          <h2>POWERED BY <img className={classes.g0vOnly} src="assets/images/g0v-only.svg"/></h2>
+          {new Date().getFullYear()}&sdot;{new Date().getMonth()+1}&sdot;{new Date().getDate()}
+        </Card>
+        <DialogActions>
+          <Button onClick={handleClose}>Cancel</Button>
+          <ReactToPrint
+            trigger={() => <Button onClick={handleClose}>Print</Button>}
+            content={() => componentRef.current}
+          />
+        </DialogActions>
+      </Dialog>
+
       <Card className={classes.card}>
         <Grid container spacing={4}>
           <Grid item xs={12} md={3}>
@@ -253,6 +334,9 @@ export default function User({ id: inId, computedMatch, match }) {
                   onUpdate={() => setLastUpdatedAt(Date.now())}
                 />
               </Grid>}
+              <Grid item xs={12}>
+                <Button fullWidth={true} size='small' variant='outlined' onClick={handleClickOpen}>Certification</Button>
+              </Grid>
               <Grid item xs={12}>
                 {details.map((item, index)=>(
                   <div key={index} className={classes.listItem}>

@@ -142,9 +142,13 @@ export default function User({ id: inId, computedMatch, match }) {
           limit: 500,
         }),
       ]);
+
       console.log('data', data);
       console.log('userContributions', userContributions);
       console.log('userStatements', userStatements);
+
+      if (!data) return;
+
       setUser(data);
       setDetails([{
         icon: <Icon className="fas fa-map-marker-alt" />,

@@ -19,6 +19,7 @@ import UserCard from 'components/UserCard';
 import TagChip from 'components/TagChip';
 import CategoryChip from 'components/CategoryChip';
 import NeedChip from 'components/NeedChip';
+import GovernmentAgencyChip from 'components/GovernmentAgencyChip';
 import DataJoinEditor from 'components/DataJoinEditor';
 import Note from 'components/Note';
 import RichText from 'components/RichText';
@@ -71,6 +72,7 @@ export default function Project({ id: inId, computedMatch, match }) {
   const [needs, setNeeds] = useState([]);
   const [tabIndex, setTabIndex] = useState(0);
   const [tags, setTags] = useState([]);
+  const [governmentAgencies, setGovernmentAgencies] = useState([]);
   const [canEdit, setCanEdit] = useState(false);
   const [lastUpdatedAt, setLastUpdatedAt] = useState(Date.now());
 
@@ -146,6 +148,7 @@ export default function Project({ id: inId, computedMatch, match }) {
       setCategorys(data.categorys.items.map(({ category }) => category));
       setNeeds(data.needs.items.map(({ need }) => need));
       setTags(data.tags.items.map(({ tag }) => tag));
+      setGovernmentAgencies(data.governmentAgencies.items.map(({ governmentAgency }) => governmentAgency));
       setTabIndex(parseInt(tab || 0));
 
       const username = localStorage.getItem('app:username');
@@ -262,6 +265,22 @@ export default function Project({ id: inId, computedMatch, match }) {
                 </Typography>
                 {categorys.map((item, index)=>(
                   <CategoryChip key={index} data={item} target="project" />
+                ))}
+              </Grid>
+              <Grid item xs={12}>
+                <Typography variant="body1" gutterBottom>
+                  {t('project_governmentAgencies')}
+                  {canEdit &&
+                  <DataJoinEditor
+                    title={t('project_governmentAgencies')}
+                    mode={'project-governmentAgency'}
+                    projectId={project.id}
+                    joinData={project.governmentAgencies.items}
+                    onUpdate={() => setLastUpdatedAt(Date.now())}
+                  />}
+                </Typography>
+                {governmentAgencies.map((item, index)=>(
+                  <GovernmentAgencyChip key={index} data={item} target="project" />
                 ))}
               </Grid>
               <Grid item xs={12}>

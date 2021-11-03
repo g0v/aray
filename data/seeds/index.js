@@ -37,7 +37,7 @@ const { writeData } = require('../helper');
       const tableName = tableNames.find((x) => x.startsWith(`${typeName}-`));
 
       await writeData(tableName, typeName, data);
-      // await writeData(dbMigrationTableName, 'DataMigration', [{ name: seedName, notes: 'Seed Data' }]);
+      await writeData(dbMigrationTableName, 'DataMigration', [{ name: seedName, notes: 'Seed Data' }]);
     });
     await Promise.all(promises);
   } catch (e) {

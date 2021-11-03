@@ -220,6 +220,48 @@ export const onDeleteEventAttendance = /* GraphQL */ `
     }
   }
 `;
+export const onCreateGovernmentAgency = /* GraphQL */ `
+  subscription OnCreateGovernmentAgency {
+    onCreateGovernmentAgency {
+      id
+      label
+      description
+      link
+      createdAt
+      createdBy
+      updatedAt
+      updatedBy
+    }
+  }
+`;
+export const onUpdateGovernmentAgency = /* GraphQL */ `
+  subscription OnUpdateGovernmentAgency {
+    onUpdateGovernmentAgency {
+      id
+      label
+      description
+      link
+      createdAt
+      createdBy
+      updatedAt
+      updatedBy
+    }
+  }
+`;
+export const onDeleteGovernmentAgency = /* GraphQL */ `
+  subscription OnDeleteGovernmentAgency {
+    onDeleteGovernmentAgency {
+      id
+      label
+      description
+      link
+      createdAt
+      createdBy
+      updatedAt
+      updatedBy
+    }
+  }
+`;
 export const onCreateNeed = /* GraphQL */ `
   subscription OnCreateNeed {
     onCreateNeed {
@@ -301,6 +343,47 @@ export const onCreateProject = /* GraphQL */ `
             id
             label
             description
+            createdAt
+            createdBy
+            updatedAt
+            updatedBy
+          }
+          project {
+            id
+            status
+            owner
+            managers
+            name
+            altName
+            summary
+            description
+            slackChannel
+            slackChannelUrl
+            totalCompletedHours
+            totalCompletedTasks
+            totalContributors
+            createdAt
+            createdBy
+            updatedAt
+            updatedBy
+          }
+        }
+        nextToken
+      }
+      governmentAgencies {
+        items {
+          id
+          projectId
+          governmentAgencyId
+          createdAt
+          createdBy
+          updatedAt
+          updatedBy
+          governmentAgency {
+            id
+            label
+            description
+            link
             createdAt
             createdBy
             updatedAt
@@ -538,6 +621,47 @@ export const onUpdateProject = /* GraphQL */ `
         }
         nextToken
       }
+      governmentAgencies {
+        items {
+          id
+          projectId
+          governmentAgencyId
+          createdAt
+          createdBy
+          updatedAt
+          updatedBy
+          governmentAgency {
+            id
+            label
+            description
+            link
+            createdAt
+            createdBy
+            updatedAt
+            updatedBy
+          }
+          project {
+            id
+            status
+            owner
+            managers
+            name
+            altName
+            summary
+            description
+            slackChannel
+            slackChannelUrl
+            totalCompletedHours
+            totalCompletedTasks
+            totalContributors
+            createdAt
+            createdBy
+            updatedAt
+            updatedBy
+          }
+        }
+        nextToken
+      }
       needs {
         items {
           id
@@ -721,6 +845,47 @@ export const onDeleteProject = /* GraphQL */ `
             id
             label
             description
+            createdAt
+            createdBy
+            updatedAt
+            updatedBy
+          }
+          project {
+            id
+            status
+            owner
+            managers
+            name
+            altName
+            summary
+            description
+            slackChannel
+            slackChannelUrl
+            totalCompletedHours
+            totalCompletedTasks
+            totalContributors
+            createdAt
+            createdBy
+            updatedAt
+            updatedBy
+          }
+        }
+        nextToken
+      }
+      governmentAgencies {
+        items {
+          id
+          projectId
+          governmentAgencyId
+          createdAt
+          createdBy
+          updatedAt
+          updatedBy
+          governmentAgency {
+            id
+            label
+            description
+            link
             createdAt
             createdBy
             updatedAt
@@ -947,6 +1112,18 @@ export const onCreateProjectCategory = /* GraphQL */ `
           }
           nextToken
         }
+        governmentAgencies {
+          items {
+            id
+            projectId
+            governmentAgencyId
+            createdAt
+            createdBy
+            updatedAt
+            updatedBy
+          }
+          nextToken
+        }
         needs {
           items {
             id
@@ -1044,6 +1221,18 @@ export const onUpdateProjectCategory = /* GraphQL */ `
             id
             projectId
             categoryId
+            createdAt
+            createdBy
+            updatedAt
+            updatedBy
+          }
+          nextToken
+        }
+        governmentAgencies {
+          items {
+            id
+            projectId
+            governmentAgencyId
             createdAt
             createdBy
             updatedAt
@@ -1155,6 +1344,369 @@ export const onDeleteProjectCategory = /* GraphQL */ `
           }
           nextToken
         }
+        governmentAgencies {
+          items {
+            id
+            projectId
+            governmentAgencyId
+            createdAt
+            createdBy
+            updatedAt
+            updatedBy
+          }
+          nextToken
+        }
+        needs {
+          items {
+            id
+            projectId
+            needId
+            createdAt
+            createdBy
+            updatedAt
+            updatedBy
+          }
+          nextToken
+        }
+        tags {
+          items {
+            id
+            projectId
+            tagId
+            createdAt
+            createdBy
+            updatedAt
+            updatedBy
+          }
+          nextToken
+        }
+        contributors {
+          items {
+            id
+            projectId
+            username
+            role
+            completedHours
+            completedTasks
+            createdAt
+            createdBy
+            updatedAt
+            updatedBy
+          }
+          nextToken
+        }
+      }
+    }
+  }
+`;
+export const onCreateProjectGovernmentAgency = /* GraphQL */ `
+  subscription OnCreateProjectGovernmentAgency {
+    onCreateProjectGovernmentAgency {
+      id
+      projectId
+      governmentAgencyId
+      createdAt
+      createdBy
+      updatedAt
+      updatedBy
+      governmentAgency {
+        id
+        label
+        description
+        link
+        createdAt
+        createdBy
+        updatedAt
+        updatedBy
+      }
+      project {
+        id
+        status
+        owner
+        managers
+        name
+        altName
+        summary
+        description
+        intros {
+          languageCode
+          name
+          altName
+          summary
+          description
+        }
+        slackChannel
+        slackChannelUrl
+        links {
+          name
+          description
+          url
+        }
+        totalCompletedHours
+        totalCompletedTasks
+        totalContributors
+        createdAt
+        createdBy
+        updatedAt
+        updatedBy
+        categorys {
+          items {
+            id
+            projectId
+            categoryId
+            createdAt
+            createdBy
+            updatedAt
+            updatedBy
+          }
+          nextToken
+        }
+        governmentAgencies {
+          items {
+            id
+            projectId
+            governmentAgencyId
+            createdAt
+            createdBy
+            updatedAt
+            updatedBy
+          }
+          nextToken
+        }
+        needs {
+          items {
+            id
+            projectId
+            needId
+            createdAt
+            createdBy
+            updatedAt
+            updatedBy
+          }
+          nextToken
+        }
+        tags {
+          items {
+            id
+            projectId
+            tagId
+            createdAt
+            createdBy
+            updatedAt
+            updatedBy
+          }
+          nextToken
+        }
+        contributors {
+          items {
+            id
+            projectId
+            username
+            role
+            completedHours
+            completedTasks
+            createdAt
+            createdBy
+            updatedAt
+            updatedBy
+          }
+          nextToken
+        }
+      }
+    }
+  }
+`;
+export const onUpdateProjectGovernmentAgency = /* GraphQL */ `
+  subscription OnUpdateProjectGovernmentAgency {
+    onUpdateProjectGovernmentAgency {
+      id
+      projectId
+      governmentAgencyId
+      createdAt
+      createdBy
+      updatedAt
+      updatedBy
+      governmentAgency {
+        id
+        label
+        description
+        link
+        createdAt
+        createdBy
+        updatedAt
+        updatedBy
+      }
+      project {
+        id
+        status
+        owner
+        managers
+        name
+        altName
+        summary
+        description
+        intros {
+          languageCode
+          name
+          altName
+          summary
+          description
+        }
+        slackChannel
+        slackChannelUrl
+        links {
+          name
+          description
+          url
+        }
+        totalCompletedHours
+        totalCompletedTasks
+        totalContributors
+        createdAt
+        createdBy
+        updatedAt
+        updatedBy
+        categorys {
+          items {
+            id
+            projectId
+            categoryId
+            createdAt
+            createdBy
+            updatedAt
+            updatedBy
+          }
+          nextToken
+        }
+        governmentAgencies {
+          items {
+            id
+            projectId
+            governmentAgencyId
+            createdAt
+            createdBy
+            updatedAt
+            updatedBy
+          }
+          nextToken
+        }
+        needs {
+          items {
+            id
+            projectId
+            needId
+            createdAt
+            createdBy
+            updatedAt
+            updatedBy
+          }
+          nextToken
+        }
+        tags {
+          items {
+            id
+            projectId
+            tagId
+            createdAt
+            createdBy
+            updatedAt
+            updatedBy
+          }
+          nextToken
+        }
+        contributors {
+          items {
+            id
+            projectId
+            username
+            role
+            completedHours
+            completedTasks
+            createdAt
+            createdBy
+            updatedAt
+            updatedBy
+          }
+          nextToken
+        }
+      }
+    }
+  }
+`;
+export const onDeleteProjectGovernmentAgency = /* GraphQL */ `
+  subscription OnDeleteProjectGovernmentAgency {
+    onDeleteProjectGovernmentAgency {
+      id
+      projectId
+      governmentAgencyId
+      createdAt
+      createdBy
+      updatedAt
+      updatedBy
+      governmentAgency {
+        id
+        label
+        description
+        link
+        createdAt
+        createdBy
+        updatedAt
+        updatedBy
+      }
+      project {
+        id
+        status
+        owner
+        managers
+        name
+        altName
+        summary
+        description
+        intros {
+          languageCode
+          name
+          altName
+          summary
+          description
+        }
+        slackChannel
+        slackChannelUrl
+        links {
+          name
+          description
+          url
+        }
+        totalCompletedHours
+        totalCompletedTasks
+        totalContributors
+        createdAt
+        createdBy
+        updatedAt
+        updatedBy
+        categorys {
+          items {
+            id
+            projectId
+            categoryId
+            createdAt
+            createdBy
+            updatedAt
+            updatedBy
+          }
+          nextToken
+        }
+        governmentAgencies {
+          items {
+            id
+            projectId
+            governmentAgencyId
+            createdAt
+            createdBy
+            updatedAt
+            updatedBy
+          }
+          nextToken
+        }
         needs {
           items {
             id
@@ -1251,6 +1803,18 @@ export const onCreateProjectNeed = /* GraphQL */ `
             id
             projectId
             categoryId
+            createdAt
+            createdBy
+            updatedAt
+            updatedBy
+          }
+          nextToken
+        }
+        governmentAgencies {
+          items {
+            id
+            projectId
+            governmentAgencyId
             createdAt
             createdBy
             updatedAt
@@ -1361,6 +1925,18 @@ export const onUpdateProjectNeed = /* GraphQL */ `
           }
           nextToken
         }
+        governmentAgencies {
+          items {
+            id
+            projectId
+            governmentAgencyId
+            createdAt
+            createdBy
+            updatedAt
+            updatedBy
+          }
+          nextToken
+        }
         needs {
           items {
             id
@@ -1464,6 +2040,18 @@ export const onDeleteProjectNeed = /* GraphQL */ `
           }
           nextToken
         }
+        governmentAgencies {
+          items {
+            id
+            projectId
+            governmentAgencyId
+            createdAt
+            createdBy
+            updatedAt
+            updatedBy
+          }
+          nextToken
+        }
         needs {
           items {
             id
@@ -1552,6 +2140,18 @@ export const onCreateProjectTag = /* GraphQL */ `
             id
             projectId
             categoryId
+            createdAt
+            createdBy
+            updatedAt
+            updatedBy
+          }
+          nextToken
+        }
+        governmentAgencies {
+          items {
+            id
+            projectId
+            governmentAgencyId
             createdAt
             createdBy
             updatedAt
@@ -1662,6 +2262,18 @@ export const onUpdateProjectTag = /* GraphQL */ `
           }
           nextToken
         }
+        governmentAgencies {
+          items {
+            id
+            projectId
+            governmentAgencyId
+            createdAt
+            createdBy
+            updatedAt
+            updatedBy
+          }
+          nextToken
+        }
         needs {
           items {
             id
@@ -1758,6 +2370,18 @@ export const onDeleteProjectTag = /* GraphQL */ `
             id
             projectId
             categoryId
+            createdAt
+            createdBy
+            updatedAt
+            updatedBy
+          }
+          nextToken
+        }
+        governmentAgencies {
+          items {
+            id
+            projectId
+            governmentAgencyId
             createdAt
             createdBy
             updatedAt
@@ -2768,6 +3392,18 @@ export const onCreateUserProject = /* GraphQL */ `
           }
           nextToken
         }
+        governmentAgencies {
+          items {
+            id
+            projectId
+            governmentAgencyId
+            createdAt
+            createdBy
+            updatedAt
+            updatedBy
+          }
+          nextToken
+        }
         needs {
           items {
             id
@@ -2928,6 +3564,18 @@ export const onUpdateUserProject = /* GraphQL */ `
           }
           nextToken
         }
+        governmentAgencies {
+          items {
+            id
+            projectId
+            governmentAgencyId
+            createdAt
+            createdBy
+            updatedAt
+            updatedBy
+          }
+          nextToken
+        }
         needs {
           items {
             id
@@ -3081,6 +3729,18 @@ export const onDeleteUserProject = /* GraphQL */ `
             id
             projectId
             categoryId
+            createdAt
+            createdBy
+            updatedAt
+            updatedBy
+          }
+          nextToken
+        }
+        governmentAgencies {
+          items {
+            id
+            projectId
+            governmentAgencyId
             createdAt
             createdBy
             updatedAt

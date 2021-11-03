@@ -47,7 +47,7 @@ export default function UserProjectList() {
         if (key === 'text') {
           shouldDisplay = [
             project.name, project.altName, project.summary, project.description,
-            project.tagsString, project.categorysString, project.needsString,
+            project.tagsString, project.categorysString, project.needsString, project.governmentAgencyString,
           ].some((value) => {
             return value ? value.toLowerCase().includes(filters[key]) : false;
           });
@@ -80,6 +80,7 @@ export default function UserProjectList() {
         project.tagsString = project.tags.items.map((item) => item.tag.label).join(', ');
         project.categorysString = project.categorys.items.map((item) => item.category.label).join(', ');
         project.needsString = project.needs.items.map((item) => item.need.label).join(', ');
+        project.governmentAgencyString = project.governmentAgencies.items.map((item) => item.governmentAgency.label).join(', ');
         return project;
       }));
 
@@ -110,19 +111,7 @@ export default function UserProjectList() {
               {t('projectList_projects')}
             </Typography>
           </Grid>
-          <Grid item xs={12} md={4}>
-            <DataJoinEditorInput
-              title={t('projectList_searchByTags')}
-              mode={'project-tag'}
-              joinData={[]}
-              defaultValues={filters.tags || []}
-              onChange={handleFilter('tags')}
-              onUpdateOptions={()=>{}}
-              disabled={isLoading}
-              showHelperText={false}
-            />
-          </Grid>
-          <Grid item xs={12} md={4}>
+          <Grid item xs={12} md={3}>
             <DataJoinEditorInput
               title={t('projectList_searchByCategorys')}
               mode={'project-category'}
@@ -134,7 +123,30 @@ export default function UserProjectList() {
               showHelperText={false}
             />
           </Grid>
-          <Grid item xs={12} md={4}>
+          <Grid item xs={12} md={3}>
+            <DataJoinEditorInput
+              title={t('projectList_searchByGovernmentAgencies')}
+              mode={'project-governmentAgency'}
+              defaultValues={filters.governmentAgencies || []}
+              onChange={handleFilter('governmentAgencies')}
+              onUpdateOptions={()=>{}}
+              disabled={isLoading}
+              showHelperText={false}
+            />
+          </Grid>
+          <Grid item xs={12} md={3}>
+            <DataJoinEditorInput
+              title={t('projectList_searchByTags')}
+              mode={'project-tag'}
+              joinData={[]}
+              defaultValues={filters.tags || []}
+              onChange={handleFilter('tags')}
+              onUpdateOptions={()=>{}}
+              disabled={isLoading}
+              showHelperText={false}
+            />
+          </Grid>
+          <Grid item xs={12} md={3}>
             <DataJoinEditorInput
               title={t('projectList_searchByNeeds')}
               mode={'project-need'}

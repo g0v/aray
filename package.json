@@ -7,7 +7,7 @@
     "build": "react-scripts build",
     "test": "react-scripts test",
     "eject": "react-scripts eject",
-    "lint": "npx eslint src data amplify/backend tests --ext .js,.jsx,.ts",
+    "lint": "npx eslint src data amplify/backend --ext .js,.jsx,.ts",
     "push": "amplify api gql-compile && amplify push -y && amplify codegen --maxDepth 4",
     "ampliy_download_schema": "aws appsync get-introspection-schema --api-id=w5utc7ntdvaf5d7ej3l432vzgu --format=JSON schema.json --profile=jothon"
   },

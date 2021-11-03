@@ -12,12 +12,12 @@ export default function ArrayTemplate(props) {
 
   function handleChange(event, values) {
     // how to pass value (strings array) from Autocomplete to formData as an array value?
-    // props.formData = {...props.formData, [props.title]: value }; // formData is readOnly
-    console.log('handleChange', { event, values });
-    // props.onAddClick(event); //adds new item to the array, but without value.
-    console.log(props.items);
+    // // props.formData = {...props.formData, [props.title]: value }; // formData is readOnly
+    // console.log('handleChange', { event, values });
+    // // props.onAddClick(event); //adds new item to the array, but without value.
+    // console.log(props.items);
     values.forEach((value, index) => {
-      props.items[index].children.props.onChange(value);
+      props.items[index].children.props.onChange(value); // eslint-disable-line react/prop-types
     });
   }
 

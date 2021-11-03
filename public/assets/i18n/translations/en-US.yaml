@@ -63,6 +63,7 @@ projectFormSchema_title: Project
 projectList_projects: Projects
 projectList_searchByCategorys: Search by Categorys
 projectList_searchByNeeds: Search by Help Needs
+projectList_searchByGovernmentAgencies: Search by Government Agencies
 projectList_searchByTags: Search by Tags
 projectList_searchByText: Search by Text
 projectManagerEditor_confirm: Confirm
@@ -85,6 +86,7 @@ project_links: Links
 project_main: Introduction
 project_managers: Managers
 project_needs: Help Needs
+project_governmentAgencies: Government Agencies
 project_owner: Owner
 project_pastProposals: Past Proposals
 project_slackChannel: Slack Channel

@@ -1,6 +1,4 @@
-# SDGs
-# https://g0v.hackmd.io/@jothon/ARAY/https%3A%2F%2Fg0v.hackmd.io%2FoRzJ35zxQGe4lc3aaTqMPg
-type Category
+type GovernmentAgency
   @model
   @auth(rules: [
     { allow: public, operations: [read] },
@@ -11,6 +9,8 @@ type Category
   id: ID!
   label: String!
   description: String
+  link: String
+  # TODO: Tree structure
 
   createdAt: AWSDateTime!
   createdBy: String!

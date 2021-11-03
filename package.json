@@ -1,13 +1,14 @@
 {
   "name": "aray",
-  "version": "0.1.0",
+  "version": "0.2.0",
   "private": true,
   "scripts": {
     "start": "react-scripts start",
     "build": "react-scripts build",
-    "test": "react-scripts test",
+    "test": "echo 'test'",
+    "test_react": "react-scripts test",
     "eject": "react-scripts eject",
-    "lint": "npx eslint src data amplify/backend tests --ext .js,.jsx,.ts",
+    "lint": "npx eslint src data amplify/backend --ext .js,.jsx,.ts",
     "push": "amplify api gql-compile && amplify push -y && amplify codegen --maxDepth 4",
     "ampliy_download_schema": "aws appsync get-introspection-schema --api-id=w5utc7ntdvaf5d7ej3l432vzgu --format=JSON schema.json --profile=jothon"
   },

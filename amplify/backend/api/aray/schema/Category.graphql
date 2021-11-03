@@ -1,3 +1,5 @@
+# SDGs
+# https://g0v.hackmd.io/@jothon/ARAY/https%3A%2F%2Fg0v.hackmd.io%2FoRzJ35zxQGe4lc3aaTqMPg
 type Category
   @model
   @auth(rules: [

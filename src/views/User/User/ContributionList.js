@@ -37,7 +37,7 @@ export default function ContributionList({ data, max = 10 }) {
               </Typography>
             </React.Fragment>}
           />
-          <ListItemText primary={`+ ${item.hours}`} />
+          <ListItemText primary={`+ ${item.hours}`} style={{ maxWidth: 60, textAlign: 'right' }}/>
         </ListItem>
       ))}
     </List>

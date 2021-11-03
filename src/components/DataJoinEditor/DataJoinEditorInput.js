@@ -95,7 +95,7 @@ export default function DataJoinEditorInput({
         disabled={disabled}
         aria-describedby="tags-filled-helper-text"
       />
-      {showHelperText &&
+      {showHelperText && freeSolo &&
         <FormHelperText id="tags-filled-helper-text">{t('user_inputTagsHelperText')}</FormHelperText>}
     </React.Fragment>
   );

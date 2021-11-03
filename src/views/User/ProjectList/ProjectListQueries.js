@@ -49,6 +49,14 @@ export const listProjects = /* GraphQL */ `
           }
           nextToken
         }
+        governmentAgencies {
+          items {
+            governmentAgency {
+              label
+            }
+          }
+          nextToken
+        }
       }
       nextToken
     }

@@ -49,6 +49,7 @@ const handleType = (inType, inValue) => {
 
 class Schema {
   constructor(inTypeName) {
+    console.log('inTypeName', inTypeName);
     const { inputFields } = inTypeName === 'DataMigration' ? { inputFields: [] } :
       types.find(({ name }) => name === `Create${inTypeName}Input`);
 

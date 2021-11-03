@@ -21,6 +21,7 @@ import { getProject } from 'graphql/queries';
 import CategoryChip from 'components/CategoryChip';
 import NeedChip from 'components/NeedChip';
 import TagChip from 'components/TagChip';
+import GovernmentAgencyChip from 'components/GovernmentAgencyChip';
 import ProjectAvatar from 'components/ProjectAvatar';
 // import UserChip from 'components/UserChip';
 
@@ -101,13 +102,18 @@ export default function ProjectCard({
               {t('projectCard_createdAt')} {moment(project.createdAt).format('YYYY-MM-DD')}
             </Typography>}
             <div>
-              {project.tags && project.tags.items.map((item, index)=>(
-                <TagChip key={index} data={item.tag} size="small" />
+              {project.categorys && project.categorys.items.map((item, index)=>(
+                <CategoryChip key={index} data={item.category} size="small" />
               ))}
             </div>
             <div>
-              {project.categorys && project.categorys.items.map((item, index)=>(
-                <CategoryChip key={index} data={item.category} size="small" />
+              {project.governmentAgencies && project.governmentAgencies.items.map((item, index)=>(
+                <GovernmentAgencyChip key={index} data={item.governmentAgency} size="small" />
+              ))}
+            </div>
+            <div>
+              {project.tags && project.tags.items.map((item, index)=>(
+                <TagChip key={index} data={item.tag} size="small" />
               ))}
             </div>
             <div>

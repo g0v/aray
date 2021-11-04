@@ -4,7 +4,7 @@ import PropTypes from 'prop-types';
 import Avatar from '@material-ui/core/Avatar';
 import { makeStyles } from '@material-ui/core/styles';
 
-import AvatarEditor from 'components//AvatarEditor';
+import AvatarEditor from 'components/AvatarEditor';
 import Colors from 'constants/Colors';
 
 const useStyles = makeStyles((theme) => ({
@@ -65,6 +65,7 @@ export default function CustomAvatar({
       {showEditor && canEdit &&
         <div className={classes.editButton} style={{ right: `calc(50% - ${size/2}px)` }}>
           <AvatarEditor
+            src={src}
             title={editorTitle}
             s3Key={s3Key}
             exportAsSquare={variant !== 'circle'}
@@ -77,7 +78,7 @@ export default function CustomAvatar({
 }
 
 CustomAvatar.propTypes = {
-  src: PropTypes.string.isRequired,
+  src: PropTypes.string,
   fallbackSrc: PropTypes.string,
   size: PropTypes.number,
   variant: PropTypes.string,

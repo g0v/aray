@@ -271,7 +271,7 @@ export default function User({ id: inId, computedMatch, match }) {
       <Dialog open={open}>
         <Card variant="outlined" ref={componentRef} className={classes.certification}>
           <div>
-            <img src="assets/images/pring-logo.png"/>
+            <img src="/assets/images/pring-logo.png"/>
           </div>
           <p>
             Congratulation to {user.name} for contributing {userProjects.length} project,
@@ -296,7 +296,7 @@ export default function User({ id: inId, computedMatch, match }) {
               ))}
             </TableBody>
           </Table>
-          <h2>POWERED BY <img className={classes.g0vOnly} src="assets/images/g0v-only.svg"/></h2>
+          <h2>POWERED BY <img className={classes.g0vOnly} src="/assets/images/g0v-only.svg"/></h2>
           {new Date().getFullYear()}&sdot;{new Date().getMonth()+1}&sdot;{new Date().getDate()}
         </Card>
         <DialogActions>

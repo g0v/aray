@@ -1,0 +1,22 @@
+type ProjectGovernmentAgency
+  @model
+  @key(name: "byGovernmentAgency", fields: ["governmentAgencyId", "projectId"])
+  @key(name: "byProject", fields: ["projectId", "governmentAgencyId"])
+  @auth(rules: [
+    { allow: public, operations: [read] },
+    { allow: groups, groups: ["Users"], operations: [read, create, update, delete] },
+    { allow: groups, groups: ["Admins"] },
+  ])
+{
+  id: ID!
+  projectId: ID!
+  governmentAgencyId: ID!
+
+  project: Project! @connection(fields: ["projectId"])
+  governmentAgency: GovernmentAgency! @connection(fields: ["governmentAgencyId"])
+
+  createdAt: AWSDateTime!
+  createdBy: String!
+  updatedAt: AWSDateTime!
+  updatedBy: String!
+}

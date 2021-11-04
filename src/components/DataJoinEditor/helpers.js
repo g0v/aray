@@ -2,6 +2,7 @@ import {
   listCategorys,
   listNeeds,
   listTags,
+  listGovernmentAgencys,
 } from 'graphql/queries';
 import {
   createUserTag,
@@ -17,10 +18,14 @@ import {
   createTag,
   createProjectTag,
   deleteProjectTag,
+  createGovernmentAgency,
+  createProjectGovernmentAgency,
+  deleteProjectGovernmentAgency,
 } from 'graphql/mutations';
 import CategoryChip from 'components/CategoryChip';
 import TagChip from 'components/TagChip';
 import NeedChip from 'components/NeedChip';
+import GovernmentAgencyChip from 'components/GovernmentAgencyChip';
 
 export const getPropsByMode = (mode) => {
   let listOptionsQueryName;
@@ -77,6 +82,16 @@ export const getPropsByMode = (mode) => {
     createJoinDataQueryName = createProjectNeed;
     deleteJoinDataQueryName = deleteProjectNeed;
     chip = NeedChip;
+    break;
+  case 'project-governmentAgency':
+    key = 'governmentAgencyId';
+    linkKey = 'projectId';
+    listOptionsQueryName = listGovernmentAgencys;
+    createQueryName = createGovernmentAgency;
+    createJoinDataQueryName = createProjectGovernmentAgency;
+    deleteJoinDataQueryName = deleteProjectGovernmentAgency;
+    chip = GovernmentAgencyChip;
+    freeSolo = false;
     break;
   default:
   }

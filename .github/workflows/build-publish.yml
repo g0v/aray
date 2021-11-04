@@ -1,0 +1,26 @@
+name: Bump Version & Trigger Amplify build
+
+on:
+  push:
+    branches: [ develop ]
+    paths-ignore:
+        - package.json
+        - package-lock.json
+
+jobs:
+  bump-version:
+    name: "Bump Version on release branch"
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v2
+        with:  
+          token: ${{ secrets.ACTION_GITHUB_TOKEN }} # ACTION_GITHUB_TOKEN is a personal access secrets
+      - name: "Automated Version Bump"
+        id: version-bump
+        uses: "phips28/gh-action-bump-version@master"
+        env:
+          GITHUB_TOKEN: ${{ secrets.ACTION_GITHUB_TOKEN }}
+      - name: Trigger Amplify Build
+        run: curl -X POST -d {} "${{ secrets.AMPLIFY_WEBHOOK_URL }}" -H "Content-Type:application/json"

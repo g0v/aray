@@ -1,10 +1,10 @@
 // import React from 'react';
 import { Route } from 'react-router-dom';
 
-import DashboardIcon from '@material-ui/icons/Dashboard';
-import ListAltIcon from '@material-ui/icons/ListAlt';
-import GroupIcon from '@material-ui/icons/Group';
-import PersonIcon from '@material-ui/icons/Person';
+import DashboardIcon from '@mui/icons-material/Dashboard';
+import ListAltIcon from '@mui/icons-material/ListAlt';
+import GroupIcon from '@mui/icons-material/Group';
+import PersonIcon from '@mui/icons-material/Person';
 
 import ProtectedRoute from 'components/ProtectedRoute';
 

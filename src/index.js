@@ -1,4 +1,5 @@
 import React from 'react';
+import { styled } from '@mui/material/styles';
 import clsx from 'clsx';
 import ReactDOM from 'react-dom';
 import { createBrowserHistory } from 'history';
@@ -12,15 +13,17 @@ import Amplify, { Auth } from 'aws-amplify';
 import Analytics from '@aws-amplify/analytics';
 import to from 'await-to-js';
 import { onAuthUIStateChange } from '@aws-amplify/ui-components';
-import { createMuiTheme } from '@material-ui/core/styles';
-import { ThemeProvider } from '@material-ui/styles';
-import { makeStyles } from '@material-ui/core/styles';
+import { ThemeProvider, StyledEngineProvider, createTheme } from '@mui/material/styles';
 import 'react-redux-toastr/lib/css/react-redux-toastr.min.css';
 import { Provider } from 'react-redux';
 import ReduxToastr from 'react-redux-toastr';
 import DocumentTitle from 'react-document-title';
 import { useTranslation } from 'react-i18next';
 import { loadCSS } from 'fg-loadcss';
+import '@fontsource/roboto/300.css';
+import '@fontsource/roboto/400.css';
+import '@fontsource/roboto/500.css';
+import '@fontsource/roboto/700.css';
 
 import 'react-calendar-heatmap/dist/styles.css';
 import 'react-big-calendar/lib/css/react-big-calendar.css';
@@ -31,7 +34,7 @@ import './index.css';
 import './Amplify.css';
 
 import { appRoutes } from './routes';
-import awsconfig from './aws-exports.js';
+import awsconfig from './aws-exports';
 import App from './App';
 import store from './App.reducer';
 import reportWebVitals from './reportWebVitals';
@@ -42,6 +45,34 @@ import Loading from 'components/Loading';
 import Colors from 'constants/Colors';
 import { DRAWER_WIDTH } from 'constants/App';
 
+const classes = {
+  content: `index-content`,
+  contentShift: `index-contentShift`,
+};
+
+const StyledReactStrictMode = styled(React.StrictMode)(({ theme }) => ({
+  [`& .${classes.content}`]: {
+    marginTop: 64,
+    overflow: 'auto',
+    flexGrow: 1,
+    // padding: theme.spacing(3),
+    transition: theme.transitions.create('margin', {
+      easing: theme.transitions.easing.sharp,
+      duration: theme.transitions.duration.leavingScreen,
+    }),
+    marginLeft: DRAWER_WIDTH,
+    minHeight: 'calc(100vh - 64px)',
+  },
+
+  [`& .${classes.contentShift}`]: {
+    transition: theme.transitions.create('margin', {
+      easing: theme.transitions.easing.easeOut,
+      duration: theme.transitions.duration.enteringScreen,
+    }),
+    marginLeft: 0,
+  },
+}));
+
 // Disable oauth for web
 delete awsconfig.oauth;
 
@@ -51,7 +82,7 @@ Analytics.disable();
 const history = createBrowserHistory();
 
 // https://material-ui.com/customization/default-theme/
-const theme = createMuiTheme({
+const theme = createTheme({
   palette: {
     primary: {
       light: Colors.primaryLight,
@@ -68,33 +99,10 @@ const theme = createMuiTheme({
   },
 });
 
-const useStyles = makeStyles((theme) => ({
-  content: {
-    marginTop: 64,
-    overflow: 'auto',
-    flexGrow: 1,
-    // padding: theme.spacing(3),
-    transition: theme.transitions.create('margin', {
-      easing: theme.transitions.easing.sharp,
-      duration: theme.transitions.duration.leavingScreen,
-    }),
-    marginLeft: DRAWER_WIDTH,
-    minHeight: 'calc(100vh - 64px)',
-  },
-  contentShift: {
-    transition: theme.transitions.create('margin', {
-      easing: theme.transitions.easing.easeOut,
-      duration: theme.transitions.duration.enteringScreen,
-    }),
-    marginLeft: 0,
-  },
-}));
-
 const initialPath = history.location;
 // console.log(`initialPath`, initialPath);
 
 function ReactApp() {
-  const classes = useStyles();
   const { t } = useTranslation();
 
   const [isLoading, setIsLoading] = React.useState(true);
@@ -204,26 +212,28 @@ function ReactApp() {
 }
 
 ReactDOM.render(
-  <React.StrictMode>
+  <StyledReactStrictMode>
     <React.Suspense fallback={<Loading />}>
-      <ThemeProvider theme={theme}>
-        <Provider store={store}>
-          <div>
-            <ReduxToastr
-              timeOut={10000}
-              newestOnTop={false}
-              preventDuplicates
-              position='top-right'
-              transitionIn='fadeIn'
-              transitionOut='fadeOut'
-              progressBar
-              closeOnToastrClick={false}/>
-          </div>
-        </Provider>
-        <ReactApp />
-      </ThemeProvider>
+      <StyledEngineProvider injectFirst>
+        <ThemeProvider theme={theme}>
+          <Provider store={store}>
+            <div>
+              <ReduxToastr
+                timeOut={10000}
+                newestOnTop={false}
+                preventDuplicates
+                position='top-right'
+                transitionIn='fadeIn'
+                transitionOut='fadeOut'
+                progressBar
+                closeOnToastrClick={false}/>
+            </div>
+          </Provider>
+          <ReactApp />
+        </ThemeProvider>
+      </StyledEngineProvider>
     </React.Suspense>
-  </React.StrictMode>,
+  </StyledReactStrictMode>,
   document.getElementById('root'),
 );
 

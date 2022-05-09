@@ -1,12 +1,12 @@
 import React, { useState } from 'react';
 import PropTypes from 'prop-types';
 
-import IconButton from '@material-ui/core/IconButton';
-import EditIcon from '@material-ui/icons/Edit';
-import Tooltip from '@material-ui/core/Tooltip';
-import Box from '@material-ui/core/Box';
-import Grid from '@material-ui/core/Grid';
-import Button from '@material-ui/core/Button';
+import IconButton from '@mui/material/IconButton';
+import EditIcon from '@mui/icons-material/Edit';
+import Tooltip from '@mui/material/Tooltip';
+import Box from '@mui/material/Box';
+import Grid from '@mui/material/Grid';
+import Button from '@mui/material/Button';
 
 import ReactAvatarEdit from 'react-avatar-edit';
 import Resizer from 'react-image-file-resizer';
@@ -109,7 +109,7 @@ export default function AvatarEditor({
                 exportAsSquare={exportAsSquare}
               />
             </Box>
-            <Grid container align="center" justify="center">
+            <Grid container align="center" justifyContent="center">
               <Button
                 onClick={()=> setOpen(false)}
                 variant="outlined"
@@ -129,7 +129,8 @@ export default function AvatarEditor({
             </Grid>
           </FormDialog>}
       </React.Fragment>
-    </Tooltip>);
+    </Tooltip>
+  );
 }
 
 AvatarEditor.propTypes = {

@@ -1,11 +1,11 @@
 import React, { useState, useEffect } from 'react';
 import PropTypes from 'prop-types';
-import Container from '@material-ui/core/Container';
-import Grid from '@material-ui/core/Grid';
-import Typography from '@material-ui/core/Typography';
+import Container from '@mui/material/Container';
+import Grid from '@mui/material/Grid';
+import Typography from '@mui/material/Typography';
 import { useTranslation } from 'react-i18next';
-import Card from '@material-ui/core/Card';
-import TextField from '@material-ui/core/TextField';
+import Card from '@mui/material/Card';
+import TextField from '@mui/material/TextField';
 import { useHistory } from 'react-router-dom';
 import querystring from 'query-string';
 
@@ -73,7 +73,7 @@ export default function UserList({ data: inData, hideTitle = false }) {
   useEffect(() => {
     (async () => {
       setIsLoading(true);
-      const data = inData || await asyncListAll( /* GraphQL */ `
+      const data = inData || (await asyncListAll( /* GraphQL */ `
         query ListUsers(
           $username: String
           $filter: ModelUserFilterInput
@@ -114,7 +114,7 @@ export default function UserList({ data: inData, hideTitle = false }) {
             nextToken
           }
         }
-      `);
+      `));
       setUsers(data.map((user) => {
         user.tagsString = user.tags.items.map((item) => item.tag.label).join(', ');
         user.needsString = user.needs.items.map((item) => item.need.label).join(', ');

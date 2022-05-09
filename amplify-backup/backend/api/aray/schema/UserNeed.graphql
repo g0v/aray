@@ -1,0 +1,22 @@
+type UserNeed
+  @model
+  @key(name: "byUser", fields: ["username", "needId"])
+  @key(name: "byNeed", fields: ["needId", "username"])
+  @auth(rules: [
+    { allow: public, operations: [read] },
+    { allow: groups, groups: ["Users"], operations: [read, create, update, delete] },
+    { allow: groups, groups: ["Admins"] },
+  ])
+{
+  id: ID!
+  needId: ID!
+  username: String!
+
+  need: Need! @connection(fields: ["needId"])
+  user: User! @connection(fields: ["username"])
+
+  createdAt: AWSDateTime!
+  createdBy: String!
+  updatedAt: AWSDateTime!
+  updatedBy: String!
+}

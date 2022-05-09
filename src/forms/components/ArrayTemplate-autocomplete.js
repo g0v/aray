@@ -1,8 +1,8 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 
-import { Chip, TextField as MaterialTextField } from '@material-ui/core';
-import { Autocomplete } from '@material-ui/lab';
+import { Chip, TextField as MaterialTextField } from '@mui/material';
+import { Autocomplete } from '@mui/material';
 
 // https://github.com/rjsf-team/react-jsonschema-form/issues/1960
 export default function ArrayTemplate(props) {

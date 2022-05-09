@@ -1,6 +1,6 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-// import { makeStyles } from '@material-ui/core/styles';
+// import { makeStyles } from '@mui/material/styles';
 import CalendarHeatmap from 'react-calendar-heatmap';
 import { useTranslation } from 'react-i18next';
 

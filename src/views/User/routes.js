@@ -1,6 +1,6 @@
-// import DashboardIcon from '@material-ui/icons/Dashboard';
-import FavoriteBorderIcon from '@material-ui/icons/FavoriteBorder';
-import PersonIcon from '@material-ui/icons/Person';
+// import DashboardIcon from '@mui/icons-material/Dashboard';
+import FavoriteBorderIcon from '@mui/icons-material/FavoriteBorder';
+import PersonIcon from '@mui/icons-material/Person';
 
 // import Dashboard from './Dashboard';
 import MyProjectList from './MyProjectList';

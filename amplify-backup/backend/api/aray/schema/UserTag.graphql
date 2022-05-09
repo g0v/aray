@@ -1,0 +1,22 @@
+type UserTag
+  @model
+  @key(name: "byUser", fields: ["username", "tagId"])
+  @key(name: "byTag", fields: ["tagId", "username"])
+  @auth(rules: [
+    { allow: public, operations: [read] },
+    { allow: groups, groups: ["Users"], operations: [read, create, update, delete] },
+    { allow: groups, groups: ["Admins"] },
+  ])
+{
+  id: ID!
+  tagId: ID!
+  username: String!
+
+  tag: Tag! @connection(fields: ["tagId"])
+  user: User! @connection(fields: ["username"])
+
+  createdAt: AWSDateTime!
+  createdBy: String!
+  updatedAt: AWSDateTime!
+  updatedBy: String!
+}

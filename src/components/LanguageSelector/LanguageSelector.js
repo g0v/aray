@@ -1,10 +1,10 @@
 import React, { useState, useEffect } from 'react';
+import { styled } from '@mui/material/styles';
 import { useTranslation } from 'react-i18next';
-import { makeStyles } from '@material-ui/core/styles';
-import MenuItem from '@material-ui/core/MenuItem';
-import FormControl from '@material-ui/core/FormControl';
-import Select from '@material-ui/core/Select';
-import OutlinedInput from '@material-ui/core/OutlinedInput';
+import MenuItem from '@mui/material/MenuItem';
+import FormControl from '@mui/material/FormControl';
+import Select from '@mui/material/Select';
+import OutlinedInput from '@mui/material/OutlinedInput';
 import { I18n } from 'aws-amplify';
 import { Translations } from '@aws-amplify/ui-components';
 import querystring from 'query-string';
@@ -16,20 +16,25 @@ import zhTwAuthString from 'i18n/Amplify_zh-TW';
 import jaAuthString from 'i18n/Amplify_ja';
 import koAuthString from 'i18n/Amplify_ko';
 
-const useStyles = makeStyles((theme) => ({
-  formControl: {
+const classes = {
+  formControl: `LanguageSelector-formControl`,
+  input: `LanguageSelector-input`,
+};
+
+const StyledFormControl = styled(FormControl)(({ theme }) => ({
+  [`&.${classes.formControl}`]: {
     margin: theme.spacing(1),
     minWidth: 120,
     backgroundColor: '#fff',
     borderRadius: 5,
   },
-  input: {
+
+  [`& .${classes.input}`]: {
     padding: '10px 14px',
   },
 }));
 
 const LanguageSelector = () => {
-  const classes = useStyles();
   const { i18n } = useTranslation();
   const history = useHistory();
 
@@ -82,7 +87,7 @@ const LanguageSelector = () => {
   }, [currentValue]);
 
   return (
-    <FormControl variant="outlined" className={classes.formControl}>
+    <StyledFormControl variant="outlined" className={classes.formControl}>
       <Select
         labelId="translation"
         id="translation"
@@ -96,7 +101,7 @@ const LanguageSelector = () => {
           <MenuItem key={value} value={value}>{title}</MenuItem>
         ))}
       </Select>
-    </FormControl>
+    </StyledFormControl>
   );
 };
 

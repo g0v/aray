@@ -1,0 +1,26 @@
+type Mutation {
+  createOrUpdateProject(input: CreateOrUpdateProjectRequest!): CreateOrUpdateProjectResponse
+    @function(name: "projectActions-${env}")
+    @aws_cognito_user_pools
+    @auth(rules: [
+      {allow: groups, groups: ["Admins", "Users"]},
+  ])
+  createOrUpdateProjectContributions(input: CreateOrUpdateProjectContributionsRequest!): CreateOrUpdateProjectContributionsResponse
+    @function(name: "projectActions-${env}")
+    @aws_cognito_user_pools
+    @auth(rules: [
+      {allow: groups, groups: ["Admins", "Users"]},
+  ])
+  changeProjectOwner(input: ChangeProjectOwnerRequest!): ChangeProjectOwnerResponse
+    @function(name: "projectActions-${env}")
+    @aws_cognito_user_pools
+    @auth(rules: [
+      {allow: groups, groups: ["Admins", "Users"]},
+  ])
+  createOrUpdateEventAttendance(input: CreateOrUpdateEventAttendanceRequest!): CreateOrUpdateEventAttendanceResponse
+    @function(name: "projectActions-${env}")
+    @aws_cognito_user_pools
+    @auth(rules: [
+      {allow: groups, groups: ["Admins", "Users"]},
+  ])
+}

@@ -4,10 +4,10 @@ import React from 'react';
 
 import { utils } from '@rjsf/core';
 
-import Box from '@material-ui/core/Box';
-import Grid from '@material-ui/core/Grid';
-import FormControl from '@material-ui/core/FormControl';
-import InputLabel from '@material-ui/core/InputLabel';
+import Box from '@mui/material/Box';
+import Grid from '@mui/material/Grid';
+import FormControl from '@mui/material/FormControl';
+import InputLabel from '@mui/material/InputLabel';
 
 import AddButton from './AddButton';
 import IconButton from './IconButton';
@@ -86,7 +86,7 @@ const renderDefaultArrayItem = (props) => {
               iconProps={{ fontSize: 'small' }}
               disabled={props.disabled || props.readonly || !props.hasMoveUp}
               onClick={props.onReorderClick(props.index, props.index - 1)}
-            />
+              size="large" />
           )}
 
           {(props.hasMoveUp || props.hasMoveDown) && (
@@ -97,7 +97,7 @@ const renderDefaultArrayItem = (props) => {
               iconProps={{ fontSize: 'small' }}
               disabled={props.disabled || props.readonly || !props.hasMoveDown}
               onClick={props.onReorderClick(props.index, props.index + 1)}
-            />
+              size="large" />
           )}
 
           {props.hasRemove && (
@@ -108,7 +108,7 @@ const renderDefaultArrayItem = (props) => {
               iconProps={{ fontSize: 'small' }}
               disabled={props.disabled || props.readonly}
               onClick={props.onDropIndexClick(props.index)}
-            />
+              size="large" />
           )}
         </Grid>
       )}
@@ -182,7 +182,7 @@ const DefaultNormalArrayFieldTemplate = (props) => {
           {props.items && props.items.map((p) => renderDefaultArrayItem(p))}
 
           {props.canAdd && (
-            <Grid container justify="center">
+            <Grid container justifyContent="center">
               <Grid item={true}>
                 <Box mt={2}>
                   <AddButton

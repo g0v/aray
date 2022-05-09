@@ -1,12 +1,16 @@
 import React from 'react';
+import { styled } from '@mui/material/styles';
 import PropTypes from 'prop-types';
-import { makeStyles } from '@material-ui/core/styles';
-// import Typography from '@material-ui/core/Typography';
-import Link from '@material-ui/core/Link';
+// import Typography from '@mui/material/Typography';
+import Link from '@mui/material/Link';
 import { Link as RouteLink } from 'react-router-dom';
 
-const useStyles = makeStyles((theme) => ({
-  container: {
+const classes = {
+  container: `Chip-container`,
+};
+
+const StyledLink = styled(Link)(({ theme }) => ({
+  [`& .${classes.container}`]: {
     marginRight: 5,
     marginBottom: 5,
     display: 'inline-block',
@@ -19,8 +23,6 @@ const useStyles = makeStyles((theme) => ({
 }));
 
 export default function Chip({ label, url, color }) {
-  const classes = useStyles();
-
   const style = {
     color: '#fff',
     backgroundColor: color,
@@ -34,7 +36,7 @@ export default function Chip({ label, url, color }) {
   };
 
   return (
-    <Link
+    <StyledLink
       to={url}
       component={url ? RouteLink : undefined}
       style={{
@@ -45,7 +47,7 @@ export default function Chip({ label, url, color }) {
       <div className={classes.container} style={style}>
         {label}
       </div>
-    </Link>
+    </StyledLink>
   );
 }
 

@@ -1,26 +1,26 @@
 import React, { useState, useEffect, useRef } from 'react';
+import { styled } from '@mui/material/styles';
 import PropTypes from 'prop-types';
-import Grid from '@material-ui/core/Grid';
-import Container from '@material-ui/core/Container';
-import Typography from '@material-ui/core/Typography';
-import Card from '@material-ui/core/Card';
-import Dialog from '@material-ui/core/Dialog';
-import DialogActions from '@material-ui/core/DialogActions';
+import Grid from '@mui/material/Grid';
+import Container from '@mui/material/Container';
+import Typography from '@mui/material/Typography';
+import Card from '@mui/material/Card';
+import Dialog from '@mui/material/Dialog';
+import DialogActions from '@mui/material/DialogActions';
 
-import InstagramIcon from '@material-ui/icons/Instagram';
-import TwitterIcon from '@material-ui/icons/Twitter';
-import FacebookIcon from '@material-ui/icons/Facebook';
-import LinkedInIcon from '@material-ui/icons/LinkedIn';
-import LanguageIcon from '@material-ui/icons/Language';
-import GitHubIcon from '@material-ui/icons/GitHub';
-// import RoomIcon from '@material-ui/icons/Room';
-import Icon from '@material-ui/core/Icon';
-// import MailOutlineIcon from '@material-ui/icons/MailOutline';
-// import ChatBubbleOutlineIcon from '@material-ui/icons/ChatBubbleOutline';
+import InstagramIcon from '@mui/icons-material/Instagram';
+import TwitterIcon from '@mui/icons-material/Twitter';
+import FacebookIcon from '@mui/icons-material/Facebook';
+import LinkedInIcon from '@mui/icons-material/LinkedIn';
+import LanguageIcon from '@mui/icons-material/Language';
+import GitHubIcon from '@mui/icons-material/GitHub';
+// import RoomIcon from '@mui/icons-material/Room';
+import Icon from '@mui/material/Icon';
+// import MailOutlineIcon from '@mui/icons-material/MailOutline';
+// import ChatBubbleOutlineIcon from '@mui/icons-material/ChatBubbleOutline';
 import moment from 'moment';
 import NumberFormat from 'react-number-format';
 
-import { makeStyles } from '@material-ui/core/styles';
 import { useTranslation } from 'react-i18next';
 
 import { request, asyncListAll } from 'utils/graph';
@@ -41,35 +41,51 @@ import DataJoinEditor from 'components/DataJoinEditor';
 import ContributionHeatmap from './ContributionHeatmap';
 import RichText from 'components/RichText';
 import Loading from 'components/Loading';
-import Button from '@material-ui/core/Button';
+import Button from '@mui/material/Button';
 import ReactToPrint from 'react-to-print';
-import Table from '@material-ui/core/Table';
-import TableBody from '@material-ui/core/TableBody';
-import TableCell from '@material-ui/core/TableCell';
-import TableRow from '@material-ui/core/TableRow';
-const useStyles = makeStyles((theme) => ({
-  container: {
+import Table from '@mui/material/Table';
+import TableBody from '@mui/material/TableBody';
+import TableCell from '@mui/material/TableCell';
+import TableRow from '@mui/material/TableRow';
+const PREFIX = 'User';
+
+const classes = {
+  container: `${PREFIX}-container`,
+  card: `${PREFIX}-card`,
+  listItem: `${PREFIX}-listItem`,
+  listItemText: `${PREFIX}-listItemText`,
+  header: `${PREFIX}-header`,
+  certification: `${PREFIX}-certification`,
+  g0vOnly: `${PREFIX}-g0vOnly`,
+};
+
+const StyledContainer = styled(Container)(({ theme }) => ({
+  [`&.${classes.container}`]: {
     paddingTop: theme.spacing(2),
     paddingBottom: theme.spacing(2),
   },
-  card: {
+
+  [`& .${classes.card}`]: {
     padding: theme.spacing(4),
     paddingRight: theme.spacing(2),
   },
-  listItem: {
+
+  [`& .${classes.listItem}`]: {
     display: 'flex',
     alignItems: 'center',
     flexWrap: 'wrap',
     marginBottom: theme.spacing(1),
   },
-  listItemText: {
+
+  [`& .${classes.listItemText}`]: {
     marginLeft: theme.spacing(1),
   },
-  header: {
+
+  [`& .${classes.header}`]: {
     marginTop: theme.spacing(2),
   },
 
-  certification: {
+  [`& .${classes.certification}`]: {
     '& h2': {
       textAlign: 'center',
       height: '2rem',
@@ -84,7 +100,7 @@ const useStyles = makeStyles((theme) => ({
     'margin': '2mm',
   },
 
-  g0vOnly: {
+  [`& .${classes.g0vOnly}`]: {
     height: '2rem',
     verticalAlign: 'middle',
     marginLeft: '0.2rem',
@@ -98,7 +114,7 @@ const aYearAgo = moment().add(-1, 'years').startOf('day');
 
 export default function User({ id: inId, computedMatch, match }) {
   const componentRef = useRef();
-  const classes = useStyles();
+
   const { t } = useTranslation();
 
   const [id, setId] = useState();
@@ -267,7 +283,7 @@ export default function User({ id: inId, computedMatch, match }) {
   const formatDate = (date) => date.substring(0, 10);
 
   return (
-    <Container className={classes.container}>
+    <StyledContainer className={classes.container}>
       <Dialog open={open}>
         <Card variant="outlined" ref={componentRef} className={classes.certification}>
           <div>
@@ -465,7 +481,7 @@ export default function User({ id: inId, computedMatch, match }) {
           </Grid>
         </Grid>
       </Card>
-    </Container>
+    </StyledContainer>
   );
 }
 

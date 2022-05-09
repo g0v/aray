@@ -1,0 +1,22 @@
+type ProjectCategory
+  @model
+  @key(name: "byCategory", fields: ["categoryId", "projectId"])
+  @key(name: "byProject", fields: ["projectId", "categoryId"])
+  @auth(rules: [
+    { allow: public, operations: [read] },
+    { allow: groups, groups: ["Users"], operations: [read, create, update, delete] },
+    { allow: groups, groups: ["Admins"] },
+  ])
+{
+  id: ID!
+  projectId: ID!
+  categoryId: ID!
+
+  project: Project! @connection(fields: ["projectId"])
+  category: Category! @connection(fields: ["categoryId"])
+
+  createdAt: AWSDateTime!
+  createdBy: String!
+  updatedAt: AWSDateTime!
+  updatedBy: String!
+}

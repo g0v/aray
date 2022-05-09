@@ -1,28 +1,37 @@
 import React from 'react';
+import { styled } from '@mui/material/styles';
 import PropTypes from 'prop-types';
 import clsx from 'clsx';
-import { makeStyles, useTheme } from '@material-ui/core/styles';
-import Zoom from '@material-ui/core/Zoom';
-import Fab from '@material-ui/core/Fab';
-import AddIcon from '@material-ui/icons/Add';
-import EditIcon from '@material-ui/icons/Edit';
-import UpIcon from '@material-ui/icons/KeyboardArrowUp';
-import { green } from '@material-ui/core/colors';
+import { useTheme } from '@mui/material/styles';
+import Zoom from '@mui/material/Zoom';
+import Fab from '@mui/material/Fab';
+import AddIcon from '@mui/icons-material/Add';
+import EditIcon from '@mui/icons-material/Edit';
+import UpIcon from '@mui/icons-material/KeyboardArrowUp';
+import { green } from '@mui/material/colors';
 
-const useStyles = makeStyles((theme) => ({
-  root: {
+const classes = {
+  root: `FloatingActionButton-root`,
+  fab: `FloatingActionButton-fab`,
+  fabGreen: `FloatingActionButton-fabGreen`,
+};
+
+const StyledZoom = styled(Zoom)(({ theme }) => ({
+  [`& .${classes.root}`]: {
     backgroundColor: theme.palette.background.paper,
     width: 500,
     position: 'relative',
     minHeight: 200,
   },
-  fab: {
+
+  [`& .${classes.fab}`]: {
     position: 'fixed',
     bottom: theme.spacing(4),
     right: theme.spacing(4),
     zIndex: 100,
   },
-  fabGreen: {
+
+  [`& .${classes.fabGreen}`]: {
     'color': theme.palette.common.white,
     'backgroundColor': green[500],
     '&:hover': {
@@ -32,7 +41,6 @@ const useStyles = makeStyles((theme) => ({
 }));
 
 export default function FloatingActionButton({ mode = 'add', onClick }) {
-  const classes = useStyles();
   const theme = useTheme();
 
   const transitionDuration = {
@@ -67,7 +75,7 @@ export default function FloatingActionButton({ mode = 'add', onClick }) {
   const fab = fabs.find((item) => item.mode === mode);
 
   return (
-    <Zoom
+    <StyledZoom
       key={fab.color}
       in={true}
       timeout={transitionDuration}
@@ -79,7 +87,7 @@ export default function FloatingActionButton({ mode = 'add', onClick }) {
       <Fab aria-label={fab.label} className={fab.className} color={fab.color} onClick={onClick}>
         {fab.icon}
       </Fab>
-    </Zoom>
+    </StyledZoom>
   );
 }
 

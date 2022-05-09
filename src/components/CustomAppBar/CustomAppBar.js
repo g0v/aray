@@ -1,34 +1,34 @@
 import React, { useState, useEffect, useRef } from 'react';
+import { styled } from '@mui/material/styles';
 import clsx from 'clsx';
 import PropTypes from 'prop-types';
-import { makeStyles } from '@material-ui/core/styles';
-import Drawer from '@material-ui/core/Drawer';
-import AppBar from '@material-ui/core/AppBar';
-import Toolbar from '@material-ui/core/Toolbar';
-import Button from '@material-ui/core/Button';
-import Popper from '@material-ui/core/Popper';
-import Paper from '@material-ui/core/Paper';
-import Box from '@material-ui/core/Box';
+import Drawer from '@mui/material/Drawer';
+import AppBar from '@mui/material/AppBar';
+import Toolbar from '@mui/material/Toolbar';
+import Button from '@mui/material/Button';
+import Popper from '@mui/material/Popper';
+import Paper from '@mui/material/Paper';
+import Box from '@mui/material/Box';
 import { useTranslation } from 'react-i18next';
 
-import List from '@material-ui/core/List';
-import Typography from '@material-ui/core/Typography';
-import Divider from '@material-ui/core/Divider';
-import IconButton from '@material-ui/core/IconButton';
-import MenuIcon from '@material-ui/icons/Menu';
-import VerticalSplitIcon from '@material-ui/icons/VerticalSplit';
-import ExitToAppIcon from '@material-ui/icons/ExitToApp';
-import PersonIcon from '@material-ui/icons/Person';
-import PersonAddIcon from '@material-ui/icons/PersonAdd';
-import ListItem from '@material-ui/core/ListItem';
-import ListItemIcon from '@material-ui/core/ListItemIcon';
-import ListItemText from '@material-ui/core/ListItemText';
-import ClickAwayListener from '@material-ui/core/ClickAwayListener';
-import MenuList from '@material-ui/core/MenuList';
-import MenuItem from '@material-ui/core/MenuItem';
-import Hidden from '@material-ui/core/Hidden';
-// import Badge from '@material-ui/core/Badge';
-// import NotificationsIcon from '@material-ui/icons/Notifications';
+import List from '@mui/material/List';
+import Typography from '@mui/material/Typography';
+import Divider from '@mui/material/Divider';
+import IconButton from '@mui/material/IconButton';
+import MenuIcon from '@mui/icons-material/Menu';
+import VerticalSplitIcon from '@mui/icons-material/VerticalSplit';
+import ExitToAppIcon from '@mui/icons-material/ExitToApp';
+import PersonIcon from '@mui/icons-material/Person';
+import PersonAddIcon from '@mui/icons-material/PersonAdd';
+import ListItem from '@mui/material/ListItem';
+import ListItemIcon from '@mui/material/ListItemIcon';
+import ListItemText from '@mui/material/ListItemText';
+import ClickAwayListener from '@mui/material/ClickAwayListener';
+import MenuList from '@mui/material/MenuList';
+import MenuItem from '@mui/material/MenuItem';
+import Hidden from '@mui/material/Hidden';
+// import Badge from '@mui/material/Badge';
+// import NotificationsIcon from '@mui/icons-material/Notifications';
 
 import { Link, useHistory } from 'react-router-dom';
 import { Auth } from 'aws-amplify';
@@ -40,18 +40,34 @@ import { DRAWER_WIDTH } from 'constants/App';
 import LanguageSelector from 'components/LanguageSelector';
 import GithubLinkButton from 'components/GithubLinkButton';
 
-const useStyles = makeStyles((theme) => ({
-  root: {
+const classes = {
+  root: `CustomAppBar-root`,
+  appBar: `CustomAppBar-appBar`,
+  appBarShift: `CustomAppBar-appBarShift`,
+  menuButton: `CustomAppBar-menuButton`,
+  hide: `CustomAppBar-hide`,
+  drawerHeader: `CustomAppBar-drawerHeader`,
+  content: `CustomAppBar-content`,
+  contentShift: `CustomAppBar-contentShift`,
+  unstyledHyperlink: `CustomAppBar-unstyledHyperlink`,
+  unstyledHyperlinkPrimary: `CustomAppBar-unstyledHyperlinkPrimary`,
+  flexbox: `CustomAppBar-flexbox`,
+};
+
+const StyledBox = styled(Box)(({ theme }) => ({
+  [`& .${classes.root}`]: {
     display: 'flex',
   },
-  appBar: {
+
+  [`& .${classes.appBar}`]: {
     transition: theme.transitions.create(['margin', 'width'], {
       easing: theme.transitions.easing.sharp,
       duration: theme.transitions.duration.leavingScreen,
     }),
     backgroundColor: Colors.dark,
   },
-  appBarShift: {
+
+  [`& .${classes.appBarShift}`]: {
     width: `calc(100% - ${DRAWER_WIDTH}px)`,
     marginLeft: DRAWER_WIDTH,
     transition: theme.transitions.create(['margin', 'width'], {
@@ -59,12 +75,15 @@ const useStyles = makeStyles((theme) => ({
       duration: theme.transitions.duration.enteringScreen,
     }),
   },
-  menuButton: {
+
+  [`& .${classes.menuButton}`]: {
     marginRight: theme.spacing(2),
   },
-  hide: {
+
+  [`& .${classes.hide}`]: {
     display: 'none',
   },
+
   // drawer: {
   //   width: DRAWER_WIDTH,
   //   flexShrink: 0,
@@ -72,7 +91,7 @@ const useStyles = makeStyles((theme) => ({
   // drawerPaper: {
   //   width: DRAWER_WIDTH,
   // },
-  drawerHeader: {
+  [`& .${classes.drawerHeader}`]: {
     display: 'flex',
     alignItems: 'center',
     // padding: theme.spacing(0, 1, 0, 2),
@@ -83,7 +102,8 @@ const useStyles = makeStyles((theme) => ({
     // justifyContent: 'flex-end',
     justifyContent: 'center',
   },
-  content: {
+
+  [`& .${classes.content}`]: {
     flexGrow: 1,
     padding: theme.spacing(3),
     transition: theme.transitions.create('margin', {
@@ -92,30 +112,33 @@ const useStyles = makeStyles((theme) => ({
     }),
     marginLeft: -DRAWER_WIDTH,
   },
-  contentShift: {
+
+  [`& .${classes.contentShift}`]: {
     transition: theme.transitions.create('margin', {
       easing: theme.transitions.easing.easeOut,
       duration: theme.transitions.duration.enteringScreen,
     }),
     marginLeft: 0,
   },
+
   // custom
-  unstyledHyperlink: {
+  [`& .${classes.unstyledHyperlink}`]: {
     textDecoration: 'none',
     color: 'white',
   },
-  unstyledHyperlinkPrimary: {
+
+  [`& .${classes.unstyledHyperlinkPrimary}`]: {
     textDecoration: 'none',
     color: Colors.primary,
     fontWeight: 'bold',
   },
-  flexbox: {
+
+  [`& .${classes.flexbox}`]: {
     flexGrow: 1,
   },
 }));
 
 export default function CustomAppBar({ user = {}, routes, open, onUpdate }) {
-  const classes = useStyles();
   const history = useHistory();
   const { t } = useTranslation();
 
@@ -169,7 +192,7 @@ export default function CustomAppBar({ user = {}, routes, open, onUpdate }) {
   }
 
   return (
-    <Box displayPrint="none">
+    <StyledBox displayPrint="none">
       <AppBar
         position="fixed"
         className={clsx(classes.appBar, {
@@ -185,7 +208,7 @@ export default function CustomAppBar({ user = {}, routes, open, onUpdate }) {
               onClick={open ? handleDrawerClose: handleDrawerOpen}
               edge="start"
               className={clsx(classes.menuButton)}
-            >
+              size="large">
               {open ? <VerticalSplitIcon /> : <MenuIcon />}
             </IconButton>:
             <Hidden mdUp={true}>
@@ -195,13 +218,13 @@ export default function CustomAppBar({ user = {}, routes, open, onUpdate }) {
                 onClick={handleDrawerOpen}
                 edge="start"
                 className={clsx(classes.menuButton, open && classes.hide)}
-              >
+                size="large">
                 <MenuIcon />
               </IconButton>
             </Hidden>}
           {/* <img src="/assets/images/g0v-banner.svg" alt="Logo" width="192" style={{ marginRight: 16 }} /> */}
           {!open &&
-            <Hidden smDown={true}>
+            <Hidden mdDown={true}>
               <Link to="/" className={classes.unstyledHyperlink} data-test-id="title">
                 <Typography component="h1" variant="h6" color="inherit" noWrap className={classes.title} style={{ marginRight: 8 }}>
                   {t('app_name')}
@@ -240,7 +263,7 @@ export default function CustomAppBar({ user = {}, routes, open, onUpdate }) {
                 startIcon={<UserAvatar username={username} size={30} />}
                 className={classes.titleButton}
               >
-                <Hidden smDown={true}>
+                <Hidden mdDown={true}>
                   {username}
                 </Hidden>
               </Button>
@@ -338,7 +361,7 @@ export default function CustomAppBar({ user = {}, routes, open, onUpdate }) {
           </ListItem>
         </List>
       </Drawer>
-    </Box>
+    </StyledBox>
   );
 }
 

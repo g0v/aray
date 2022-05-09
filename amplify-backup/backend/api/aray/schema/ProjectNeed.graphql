@@ -1,0 +1,22 @@
+type ProjectNeed
+  @model
+  @key(name: "byNeed", fields: ["needId", "projectId"])
+  @key(name: "byProject", fields: ["projectId", "needId"])
+  @auth(rules: [
+    { allow: public, operations: [read] },
+    { allow: groups, groups: ["Users"], operations: [read, create, update, delete] },
+    { allow: groups, groups: ["Admins"] },
+  ])
+{
+  id: ID!
+  projectId: ID!
+  needId: ID!
+
+  project: Project! @connection(fields: ["projectId"])
+  need: Need! @connection(fields: ["needId"])
+
+  createdAt: AWSDateTime!
+  createdBy: String!
+  updatedAt: AWSDateTime!
+  updatedBy: String!
+}

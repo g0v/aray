@@ -1,17 +1,17 @@
 import React, { useState, useEffect } from 'react';
+import { styled } from '@mui/material/styles';
 import PropTypes from 'prop-types';
-import { makeStyles } from '@material-ui/core/styles';
-import Link from '@material-ui/core/Link';
+import Link from '@mui/material/Link';
 import { Link as RouteLink } from 'react-router-dom';
-import Card from '@material-ui/core/Card';
-import CardActionArea from '@material-ui/core/CardActionArea';
-// import CardActions from '@material-ui/core/CardActions';
-// import CardHeader from '@material-ui/core/CardHeader';
-import CardContent from '@material-ui/core/CardContent';
-// import CardMedia from '@material-ui/core/CardMedia';
-// import Button from '@material-ui/core/Button';
-import Box from '@material-ui/core/Box';
-import Typography from '@material-ui/core/Typography';
+import Card from '@mui/material/Card';
+import CardActionArea from '@mui/material/CardActionArea';
+// import CardActions from '@mui/material/CardActions';
+// import CardHeader from '@mui/material/CardHeader';
+import CardContent from '@mui/material/CardContent';
+// import CardMedia from '@mui/material/CardMedia';
+// import Button from '@mui/material/Button';
+import Box from '@mui/material/Box';
+import Typography from '@mui/material/Typography';
 import { useTranslation } from 'react-i18next';
 import NumberFormat from 'react-number-format';
 import moment from 'moment';
@@ -23,14 +23,18 @@ import NeedChip from 'components/NeedChip';
 import TagChip from 'components/TagChip';
 import GovernmentAgencyChip from 'components/GovernmentAgencyChip';
 import ProjectAvatar from 'components/ProjectAvatar';
-// import UserChip from 'components/UserChip';
 
-const useStyles = makeStyles({
-  root: {
+const classes = {
+  root: `ProjectCard-root`,
+  media: `ProjectCard-media`,
+};
+
+const StyledCard = styled(Card)({
+  [`&.${classes.root}`]: {
     // maxWidth: 345,
     height: '100%',
   },
-  media: {
+  [`& .${classes.media}`]: {
     height: 140,
   },
 });
@@ -42,7 +46,6 @@ export default function ProjectCard({
   variant = '',
   hideSummary,
 }) {
-  const classes = useStyles();
   const { t } = useTranslation();
 
   const [project, setProject] = useState();
@@ -70,7 +73,7 @@ export default function ProjectCard({
   if (!project) return null;
 
   return (
-    <Card className={classes.root} variant={variant}>
+    <StyledCard className={classes.root} variant={variant}>
       <Link
         to={`/project/${project.id}`}
         component={RouteLink}
@@ -150,7 +153,7 @@ export default function ProjectCard({
           Learn More
         </Button>
       </CardActions> */}
-    </Card>
+    </StyledCard>
   );
 }
 

@@ -1,4 +1,5 @@
 import React from 'react';
+import { styled } from '@mui/material/styles';
 import PropTypes from 'prop-types';
 import {
   AmplifyAuthenticator,
@@ -10,7 +11,6 @@ import {
   onAuthUIStateChange,
 } from '@aws-amplify/ui-components';
 import { Switch, Redirect } from 'react-router';
-import { makeStyles } from '@material-ui/core/styles';
 import DocumentTitle from 'react-document-title';
 import querystring from 'query-string';
 import { Hub } from 'aws-amplify';
@@ -24,8 +24,12 @@ import { appRoutes } from './routes';
 import Colors from 'constants/Colors';
 import AuthErrorCodes from 'constants/AuthErrorCodes';
 
-const useStyles = makeStyles((theme) => ({
-  root: {
+const classes = {
+  root: `App-root`,
+};
+
+const Root = styled('div')(({ theme }) => ({
+  [`&.${classes.root}`]: {
     display: 'flex',
     overflow: 'hidden',
     backgroundColor: Colors.background.light,
@@ -50,7 +54,6 @@ const authListener = ({ payload: { event, data } }) => {
 };
 
 export default function App({ location }) {
-  const classes = useStyles();
   const { t } = useTranslation();
 
   const [authState, setAuthState] = React.useState(null);
@@ -99,7 +102,7 @@ export default function App({ location }) {
   }, []);
 
   return (authState === AuthState.SignedIn && user) ? (
-    <div className={classes.root} data-test-id="app-container">
+    <Root className={classes.root} data-test-id="app-container">
       <Switch>
         {filteredRoutes.map((item)=>(
           <item.route
@@ -117,7 +120,7 @@ export default function App({ location }) {
         {/* <Redirect to={filteredRoutes[0] ? filteredRoutes[0].path : '/'} /> */}
         <Redirect to={'/'} />
       </Switch>
-    </div>
+    </Root>
   ) : <div className="amplify-authenticator" >
     {initialAuthState &&
       <AmplifyAuthenticator initialAuthState={initialAuthState}>

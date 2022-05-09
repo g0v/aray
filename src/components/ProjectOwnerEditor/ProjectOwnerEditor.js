@@ -1,15 +1,15 @@
 import React, { useState } from 'react';
 import PropTypes from 'prop-types';
-import IconButton from '@material-ui/core/IconButton';
-// import Chip from '@material-ui/core/Chip';
-// import Autocomplete from '@material-ui/lab/Autocomplete';
-// import TextField from '@material-ui/core/TextField';
-import Button from '@material-ui/core/Button';
-import EditIcon from '@material-ui/icons/Edit';
+import IconButton from '@mui/material/IconButton';
+// import Chip from '@mui/material/Chip';
+// import Autocomplete from '@mui/lab/Autocomplete';
+// import TextField from '@mui/material/TextField';
+import Button from '@mui/material/Button';
+import EditIcon from '@mui/icons-material/Edit';
 import { useTranslation } from 'react-i18next';
-// import Checkbox from '@material-ui/core/Checkbox';
-// import CheckBoxOutlineBlankIcon from '@material-ui/icons/CheckBoxOutlineBlank';
-// import CheckBoxIcon from '@material-ui/icons/CheckBox';
+// import Checkbox from '@mui/material/Checkbox';
+// import CheckBoxOutlineBlankIcon from '@mui/icons-material/CheckBoxOutlineBlank';
+// import CheckBoxIcon from '@mui/icons-material/CheckBox';
 
 import {
   request,

@@ -1,28 +1,44 @@
 import React, { useState, useEffect } from 'react';
+import { styled } from '@mui/material/styles';
 import PropTypes from 'prop-types';
-import Tabs from '@material-ui/core/Tabs';
-import Tab from '@material-ui/core/Tab';
-import { makeStyles } from '@material-ui/core/styles';
+import Tabs from '@mui/material/Tabs';
+import Tab from '@mui/material/Tab';
 import { useHistory } from 'react-router-dom';
 import querystring from 'query-string';
 
 import TabPanel from 'components/Tab/TabPanel';
 
-export const useStyles = makeStyles((theme) => ({
-  root: {
+const PREFIX = 'VerticalTabs';
+
+const classes = {
+  root: `${PREFIX}-root`,
+  tabs: `${PREFIX}-tabs`,
+  panels: `${PREFIX}-panels`
+};
+
+const Root = styled('div')((
+  {
+    theme
+  }
+) => ({
+  [`&.${classes.root}`]: {
     flex: 1,
     display: 'flex',
     // backgroundColor: Colors.background.light,
   },
-  tabs: {
+
+  [`& .${classes.tabs}`]: {
     borderRight: `1px solid ${theme.palette.divider}`,
     marginRight: theme.spacing(2),
     minWidth: 160,
   },
-  panels: {
+
+  [`& .${classes.panels}`]: {
     flex: 1,
-  },
+  }
 }));
+
+export {};
 
 export default function VerticalTabs({
   tabs = [],
@@ -30,7 +46,7 @@ export default function VerticalTabs({
   defaultTabIndex = 0,
   padding = 16,
 }) {
-  const classes = useStyles();
+
   const history = useHistory();
 
   const [tabIndex, setTabIndex] = useState(defaultTabIndex);
@@ -57,7 +73,7 @@ export default function VerticalTabs({
   }, [isNested, tabs]);
 
   return (
-    <div className={classes.root} style={{ padding }}>
+    <Root className={classes.root} style={{ padding }}>
       <Tabs
         orientation="vertical"
         variant="scrollable"
@@ -74,7 +90,7 @@ export default function VerticalTabs({
           {component}
         </TabPanel>
       ))}
-    </div>
+    </Root>
   );
 }
 

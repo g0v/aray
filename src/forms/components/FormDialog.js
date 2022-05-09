@@ -1,24 +1,35 @@
 import React, { useState } from 'react';
+import { styled, useTheme } from '@mui/material/styles';
 import PropTypes from 'prop-types';
 
-import Dialog from '@material-ui/core/Dialog';
-import DialogContent from '@material-ui/core/DialogContent';
-import DialogTitle from '@material-ui/core/DialogTitle';
-import { makeStyles } from '@material-ui/core/styles';
-import IconButton from '@material-ui/core/IconButton';
-import CloseIcon from '@material-ui/icons/Close';
-import Typography from '@material-ui/core/Typography';
-import withWidth, { isWidthUp } from '@material-ui/core/withWidth';
+import Dialog from '@mui/material/Dialog';
+import DialogContent from '@mui/material/DialogContent';
+import DialogTitle from '@mui/material/DialogTitle';
+import IconButton from '@mui/material/IconButton';
+import CloseIcon from '@mui/icons-material/Close';
+import Typography from '@mui/material/Typography';
+import useMediaQuery from '@mui/material/useMediaQuery';
 
-const useStyles = makeStyles((theme) => ({
-  dialog: {
+const PREFIX = 'FormDialog';
+
+const classes = {
+  dialog: `${PREFIX}-dialog`,
+  content: `${PREFIX}-content`,
+  closeButton: `${PREFIX}-closeButton`,
+};
+
+// TODO jss-to-styled codemod: The Fragment root was replaced by div. Change the tag if needed.
+const Root = styled('div')(({ theme }) => ({
+  [`& .${classes.dialog}`]: {
     // minWidth: 480,
   },
-  content: {
+
+  [`& .${classes.content}`]: {
     padding: theme.spacing(3),
     paddingTop: theme.spacing(1),
   },
-  closeButton: {
+
+  [`& .${classes.closeButton}`]: {
     position: 'absolute',
     right: theme.spacing(1),
     top: theme.spacing(1),
@@ -26,13 +37,19 @@ const useStyles = makeStyles((theme) => ({
   },
 }));
 
+// FIXME checkout https://mui.com/components/use-media-query/#migrating-from-withwidth
+const withWidth = () => (WrappedComponent) => (props) => <WrappedComponent {...props} width="xs" />;
+
 const CustomDialogTitle = ({ children, onClose, ...other }) => {
-  const classes = useStyles();
   return (
-    <DialogTitle disableTypography className={classes.root} {...other}>
+    <DialogTitle className={classes.root} {...other}>
       <Typography variant="h6">{children}</Typography>
       {onClose ? (
-        <IconButton aria-label="close" className={classes.closeButton} onClick={onClose}>
+        <IconButton
+          aria-label="close"
+          className={classes.closeButton}
+          onClick={onClose}
+          size="large">
           <CloseIcon />
         </IconButton>
       ) : null}
@@ -45,6 +62,11 @@ CustomDialogTitle.propTypes = {
   onClose: PropTypes.func,
 };
 
+function useIsWidthUp(breakpoint) {
+  const theme = useTheme();
+  return useMediaQuery(theme.breakpoints.up(breakpoint));
+}
+
 function DetailFormDialog({
   children,
   title = '新增資料',
@@ -54,7 +76,6 @@ function DetailFormDialog({
   maxWidth = 'md',
   width,
 }) {
-  const classes = useStyles();
   const [open, setOpen] = useState(openOnInit);
 
   const handleClose = () => {
@@ -62,19 +83,19 @@ function DetailFormDialog({
     onClose && onClose();
   };
 
+  const isWidthUp = useIsWidthUp('md');
+
   return (
-    <React.Fragment>
+    <Root>
       <Dialog
         open={open}
         fullScreen={isWidthUp('sm', width) ? fullScreen : true}
         fullWidth={true}
         maxWidth={maxWidth}
         onClose={handleClose}
-        disableBackdropClick={true}
         disableEscapeKeyDown={true}
         aria-labelledby="form-dialog-title"
-        className={classes.dialog}
-      >
+        className={classes.dialog}>
         <CustomDialogTitle id="form-dialog-titlse" onClose={handleClose}>
           {title}
         </CustomDialogTitle>
@@ -82,7 +103,7 @@ function DetailFormDialog({
           {children}
         </DialogContent>
       </Dialog>
-    </React.Fragment>
+    </Root>
   );
 }
 

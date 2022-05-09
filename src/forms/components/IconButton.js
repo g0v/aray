@@ -1,11 +1,11 @@
 /* eslint-disable react/prop-types */
 import React from 'react';
 
-import Button from '@material-ui/core/Button';
-import Add from '@material-ui/icons/Add';
-import ArrowUpward from '@material-ui/icons/ArrowUpward';
-import ArrowDownward from '@material-ui/icons/ArrowDownward';
-import Close from '@material-ui/icons/Close';
+import Button from '@mui/material/Button';
+import Add from '@mui/icons-material/Add';
+import ArrowUpward from '@mui/icons-material/ArrowUpward';
+import ArrowDownward from '@mui/icons-material/ArrowDownward';
+import Close from '@mui/icons-material/Close';
 
 const mappings = {
   'close': Close,

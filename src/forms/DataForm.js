@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import PropTypes from 'prop-types';
 import Form from '@rjsf/material-ui';
-import Grid from '@material-ui/core/Grid';
+import Grid from '@mui/material/Grid';
 import { useTranslation } from 'react-i18next';
 import { debounce } from 'debounce';
 
@@ -191,7 +191,7 @@ export default function DataForm({
       {children}
 
       {!hideSubmitButton &&
-      <Grid container justify="center" spacing={2}>
+      <Grid container justifyContent="center" spacing={2}>
         <SubmitButton disabled={!dirty || isLoading} />
       </Grid>}
     </Form>

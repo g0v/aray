@@ -1,13 +1,13 @@
 import React, { useState, useEffect } from 'react';
+import { styled } from '@mui/material/styles';
 import PropTypes from 'prop-types';
-import Grid from '@material-ui/core/Grid';
-import Container from '@material-ui/core/Container';
-import Typography from '@material-ui/core/Typography';
-import Card from '@material-ui/core/Card';
-import { makeStyles } from '@material-ui/core/styles';
+import Grid from '@mui/material/Grid';
+import Container from '@mui/material/Container';
+import Typography from '@mui/material/Typography';
+import Card from '@mui/material/Card';
 import { useTranslation } from 'react-i18next';
-import Tabs from '@material-ui/core/Tabs';
-import Tab from '@material-ui/core/Tab';
+import Tabs from '@mui/material/Tabs';
+import Tab from '@mui/material/Tab';
 import { useHistory } from 'react-router-dom';
 import querystring from 'query-string';
 
@@ -33,36 +33,53 @@ import ProjectManagerEditor from 'components/ProjectManagerEditor';
 import Loading from 'components/Loading';
 import EventCalendar from 'components/EventCalendar';
 
-const useStyles = makeStyles((theme) => ({
-  container: {
+const PREFIX = 'Project';
+
+const classes = {
+  container: `${PREFIX}-container`,
+  card: `${PREFIX}-card`,
+  listItem: `${PREFIX}-listItem`,
+  listItemText: `${PREFIX}-listItemText`,
+  header: `${PREFIX}-header`,
+  chipContainer: `${PREFIX}-chipContainer`,
+  userChipContainer: `${PREFIX}-userChipContainer`,
+};
+
+const StyledContainer = styled(Container)(({ theme }) => ({
+  [`&.${classes.container}`]: {
     paddingTop: theme.spacing(3),
     paddingBottom: theme.spacing(2),
   },
-  card: {
+
+  [`& .${classes.card}`]: {
     padding: theme.spacing(4),
   },
-  listItem: {
+
+  [`& .${classes.listItem}`]: {
     display: 'flex',
     alignItems: 'center',
     flexWrap: 'wrap',
     marginBottom: theme.spacing(1),
   },
-  listItemText: {
+
+  [`& .${classes.listItemText}`]: {
     marginLeft: theme.spacing(1),
   },
-  header: {
+
+  [`& .${classes.header}`]: {
     marginTop: theme.spacing(2),
   },
-  chipContainer: {
+
+  [`& .${classes.chipContainer}`]: {
     paddingTop: theme.spacing(2),
   },
-  userChipContainer: {
+
+  [`& .${classes.userChipContainer}`]: {
     paddingBottom: theme.spacing(0),
   },
 }));
 
 export default function Project({ id: inId, computedMatch, match }) {
-  const classes = useStyles();
   const { t } = useTranslation();
   const history = useHistory();
 
@@ -162,7 +179,7 @@ export default function Project({ id: inId, computedMatch, match }) {
   }
 
   return (
-    <Container className={classes.container}>
+    <StyledContainer className={classes.container}>
       <Card className={classes.card}>
         <Grid container spacing={4}>
           <Grid item xs={12} md={3} container>
@@ -332,7 +349,7 @@ export default function Project({ id: inId, computedMatch, match }) {
                 ))}
               </Tabs>
             </Grid>
-            <Grid item xs={12} container alignItems="flex-start" justify="flex-start" spacing={2}>
+            <Grid item xs={12} container alignItems="flex-start" justifyContent="flex-start" spacing={2}>
               {tabs.filter((x, index) => index === tabIndex).map((item, index)=>(
                 <item.component key={index} />
               ))}
@@ -341,7 +358,7 @@ export default function Project({ id: inId, computedMatch, match }) {
           </Grid>
         </Grid>
       </Card>
-    </Container>
+    </StyledContainer>
   );
 }
 

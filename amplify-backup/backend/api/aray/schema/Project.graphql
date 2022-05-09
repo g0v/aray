@@ -1,0 +1,65 @@
+type Project
+  @model
+  @auth(rules: [
+    { allow: public, operations: [read] },
+    # Defaults to use the "owner" field.
+    { allow: owner },
+    # Authorize the update mutation and both queries.
+    { allow: owner, ownerField: "managers", operations: [read, update] },
+    { allow: groups, groups: ["Users"], operations: [read] },
+    { allow: groups, groups: ["Admins"] },
+  ])
+{
+  id: ID!
+  status: ProjectStatus!
+
+  owner: String!
+  managers: [String]
+
+  # TODO: translation?
+  name: String!
+  altName: String
+  summary: String
+  description: String
+
+  # multiple languages
+  intros: [ProjectIntro]
+
+  slackChannel: String
+  slackChannelUrl: AWSURL
+  links: [ProjectLink]
+
+  totalCompletedHours: Float
+  totalCompletedTasks: Int
+  totalContributors: Int
+
+  contributors: [UserProject] @connection(keyName: "byProject", fields: ["id"])
+  tags: [ProjectTag] @connection(keyName: "byProject", fields: ["id"])
+  categorys: [ProjectCategory] @connection(keyName: "byProject", fields: ["id"])
+  needs: [ProjectNeed] @connection(keyName: "byProject", fields: ["id"])
+  governmentAgencies: [ProjectGovernmentAgency] @connection(keyName: "byProject", fields: ["id"])
+
+  createdAt: AWSDateTime!
+  createdBy: String!
+  updatedAt: AWSDateTime!
+  updatedBy: String!
+}
+
+enum ProjectStatus {
+  active
+  archived
+}
+
+type ProjectLink {
+  name: String!
+  description: String
+  url: String!
+}
+
+type ProjectIntro {
+  languageCode: String! # zh-TW, ja, ko, en-US
+  name: String!
+  altName: String
+  summary: String
+  description: String
+}

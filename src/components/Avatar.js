@@ -1,21 +1,29 @@
 import React from 'react';
+import { styled } from '@mui/material/styles';
 import PropTypes from 'prop-types';
 
-import Avatar from '@material-ui/core/Avatar';
-import { makeStyles } from '@material-ui/core/styles';
+import Avatar from '@mui/material/Avatar';
 
 import AvatarEditor from 'components//AvatarEditor';
 import Colors from 'constants/Colors';
 
-const useStyles = makeStyles((theme) => ({
-  avatar: {
+const classes = {
+  avatar: `Avatar-avatar`,
+  avatarContainer: `Avatar-avatarContainer`,
+  editButton: `Avatar-editButton`,
+};
+
+const Root = styled('div')(({ theme }) => ({
+  [`& .${classes.avatar}`]: {
     // border: '1px solid rgba(255,255,255,0.3)',
     backgroundColor: '#fff',
   },
-  avatarContainer: {
+
+  [`&.${classes.avatarContainer}`]: {
     position: 'relative',
   },
-  editButton: {
+
+  [`& .${classes.editButton}`]: {
     position: 'absolute',
     bottom: 0,
     backgroundColor: Colors.background.light,
@@ -35,8 +43,6 @@ export default function CustomAvatar({
   editorTitle,
   onUpdate,
 }) {
-  const classes = useStyles();
-
   const avatarStyle = {
     height: size,
     width: size,
@@ -46,7 +52,7 @@ export default function CustomAvatar({
   if (!src) return null;
 
   return (
-    <div className={classes.avatarContainer}>
+    <Root className={classes.avatarContainer}>
       <Avatar
         alt={''}
         src={src}
@@ -72,7 +78,7 @@ export default function CustomAvatar({
           />
         </div>
       }
-    </div>
+    </Root>
   );
 }
 

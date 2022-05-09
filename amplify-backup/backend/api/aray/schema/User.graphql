@@ -1,0 +1,58 @@
+type User
+  @model
+  @key(fields: ["username"])
+  @auth(rules: [
+    { allow: public, operations: [read] },
+    { allow: owner, ownerField: "username", operations: [read, update] },
+    { allow: groups, groups: ["Users"], operations: [read] },
+    { allow: groups, groups: ["Admins"] },
+  ])
+{
+  username: String!
+  status: UserStatus!
+
+  name: String!
+  email: AWSEmail!
+    # @auth(rules: [ 
+    #   { allow: groups, groups: ["Admins"], operations: [read] },
+    # ])
+
+  selfIntroduction: String
+  location: String
+  timeZone: String
+
+  slackId: String
+  slackIdUrl: AWSURL
+  
+  urlWebsite: AWSURL
+  urlGithub: AWSURL
+  urlLinkedIn: AWSURL
+  urlFacebook: AWSURL
+  urlTwitter: AWSURL
+  urlInstagram: AWSURL
+
+  totalCompletedHours: Float
+    # @auth(rules: [ 
+    #   { allow: public, operations: [read] },
+    #   { allow: groups, groups: ["Users"], operations: [read] },
+    # ])
+  totalCompletedTasks: Int
+    # @auth(rules: [ 
+    #   { allow: public, operations: [read] },
+    #   { allow: groups, groups: ["Users"], operations: [read] },
+    # ])
+
+  projects: [UserProject] @connection(keyName: "byUser", fields: ["username"])
+  tags: [UserTag] @connection(keyName: "byUser", fields: ["username"])
+  needs: [UserNeed] @connection(keyName: "byUser", fields: ["username"])
+
+  createdAt: AWSDateTime!
+  createdBy: String!
+  updatedAt: AWSDateTime!
+  updatedBy: String!
+}
+
+enum UserStatus {
+  active
+  inactive
+}

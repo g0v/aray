@@ -1,11 +1,15 @@
 import React, { useState, useEffect } from 'react';
 // import PropTypes from 'prop-types';
-import Container from '@material-ui/core/Container';
-import Grid from '@material-ui/core/Grid';
-import Typography from '@material-ui/core/Typography';
-import TextField from '@material-ui/core/TextField';
+import Container from '@mui/material/Container';
+import Grid from '@mui/material/Grid';
+import Box from '@mui/material/Box';
+import Masonry from '@mui/lab/Masonry';
+import Paper from '@mui/material/Paper';
+import { styled } from '@mui/material/styles';
+import Typography from '@mui/material/Typography';
+import TextField from '@mui/material/TextField';
 import { useTranslation } from 'react-i18next';
-import Card from '@material-ui/core/Card';
+import Card from '@mui/material/Card';
 import { useHistory } from 'react-router-dom';
 import querystring from 'query-string';
 
@@ -14,6 +18,58 @@ import { listProjects } from './ProjectListQueries';
 import ProjectCard from 'components/ProjectCard';
 import DataJoinEditorInput from 'components/DataJoinEditor/DataJoinEditorInput';
 import Loading from 'components/Loading';
+
+const classes = {
+  container: `ProjectList-container`,
+  card: `ProjectList-card`,
+  listItem: `ProjectList-listItem`,
+  listItemText: `ProjectList-listItemText`,
+  header: `ProjectList-header`,
+  masonryContainer: `ProjectList-masonryContainer`,
+  ProjectCard: `ProjectList-ProjectCard`,
+};
+
+const StyledContainer = styled(Container)(({ theme }) => ({
+  [`&.${classes.container}`]: {
+    padding: theme.spacing(3),
+  },
+
+  [`& .${classes.card}`]: {
+    padding: theme.spacing(2),
+    margin: theme.spacing(2),
+  },
+
+  [`& .${classes.listItem}`]: {
+    display: 'flex',
+    alignItems: 'center',
+    flexWrap: 'wrap',
+    marginBottom: theme.spacing(1),
+  },
+
+  [`& .${classes.listItemText}`]: {
+    marginLeft: theme.spacing(1),
+  },
+
+  [`& .${classes.header}`]: {
+    marginTop: theme.spacing(2),
+  },
+
+  [`& .${classes.masonryContainer}`]: {
+    margin: theme.spacing(2),
+  },
+
+  [`& .${classes.ProjectCard}`]: {
+    paddingTop: theme.spacing(2),
+  },
+}));
+
+const Item = styled(Paper)(({ theme }) => ({
+  backgroundColor: theme.palette.mode === 'dark' ? '#1A2027' : '#fff',
+  ...theme.typography.body2,
+  padding: theme.spacing(0.5),
+  textAlign: 'center',
+  color: theme.palette.text.secondary,
+}));
 
 export default function UserProjectList() {
   const { t } = useTranslation();
@@ -24,6 +80,7 @@ export default function UserProjectList() {
   const [filters, setFilters] = useState({});
   const [filteredProjects, setFilteredProjects] = useState([]);
   const [isInit, setIsInit] = useState(false);
+  const heights = [150, 30, 90, 70, 110, 150, 130, 80, 50, 90, 100, 150, 30, 50, 80];
 
   const handleFilter = (key) => (values) => {
     // console.log(key, values);
@@ -103,8 +160,8 @@ export default function UserProjectList() {
   }
 
   return (
-    <Container maxWidth={false}>
-      <Card style={{ padding: 16, marginTop: 16, marginBottom: 16 }}>
+    <StyledContainer className={classes.container} maxWidth={false}>
+      <Card className={classes.card}>
         <Grid container spacing={2}>
           <Grid item xs={12}>
             <Typography variant="h5" gutterBottom align="center" style={{ marginTop: 16 }}>
@@ -171,6 +228,15 @@ export default function UserProjectList() {
           </Grid>
         </Grid>
       </Card>
+      <Box>
+        <Masonry columns={4} spacing={2}>
+          {heights.map((height, index) => (
+            <Item key={index} sx={{ height }}>
+              {index + 1}
+            </Item>
+          ))}
+        </Masonry>
+      </Box>
       <Grid container spacing={2}>
         {filteredProjects.map((item, index)=>(
           <Grid item xs={12} sm={6} md={3} lg={2} key={index}>
@@ -178,7 +244,7 @@ export default function UserProjectList() {
           </Grid>
         ))}
       </Grid>
-    </Container>
+    </StyledContainer>
   );
 }
 

@@ -1,0 +1,62 @@
+{
+  "permissions": {
+    "storage": {
+      "Contribution:@model(appsync)": [
+        "create",
+        "read",
+        "update"
+      ],
+      "Event:@model(appsync)": [
+        "create",
+        "read",
+        "update"
+      ],
+      "EventAttendance:@model(appsync)": [
+        "create",
+        "read",
+        "update"
+      ],
+      "Need:@model(appsync)": [
+        "create",
+        "read",
+        "update"
+      ],
+      "Project:@model(appsync)": [
+        "create",
+        "read",
+        "update"
+      ],
+      "ProjectNeed:@model(appsync)": [
+        "create",
+        "read",
+        "update"
+      ],
+      "ProjectTag:@model(appsync)": [
+        "create",
+        "read",
+        "update"
+      ],
+      "ProjectTask:@model(appsync)": [
+        "create",
+        "read",
+        "update"
+      ],
+      "Tag:@model(appsync)": [
+        "create",
+        "read",
+        "update"
+      ],
+      "User:@model(appsync)": [
+        "create",
+        "read",
+        "update"
+      ],
+      "UserProject:@model(appsync)": [
+        "create",
+        "read",
+        "update"
+      ]
+    }
+  },
+  "lambdaLayers": []
+}

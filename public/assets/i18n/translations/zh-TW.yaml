@@ -20,34 +20,34 @@ myProjectList_myProjects: 我的專案
 myProjectList_otherProjects: 參與的專案
 
 projectList_projects: 專案列表
-projectList_searchByTags: 用標籤搜尋
+projectList_searchByTags: 用專案關鍵字搜尋
 projectList_searchByCategorys: 用議題分類搜尋
-projectList_searchByNeeds: 用技術需求搜尋
-projectList_searchByText: 用字串搜尋
+projectList_searchByNeeds: 用技能需求搜尋
+projectList_searchByText: 全文搜尋
 projectList_searchByGovernmentAgencies: 用政府相關單位搜尋
 
 userList_users: 貢獻者
-userList_searchByTags: 用標籤搜尋
-userList_searchByNeeds: 用相關技術搜尋
-userList_searchByText: 用字串搜尋
+userList_searchByTags: 用關鍵字搜尋
+userList_searchByNeeds: 用技能搜尋
+userList_searchByText: 全文搜尋
 
 user_editProfile: 更新個人資料
-user_editTags: 更新標籤
-user_editNeeds: 更新相關技術
+user_editTags: 更新關鍵字
+user_editNeeds: 更新技能
 user_totalHoursInThePastYear: 過去一年的貢獻總時數
-user_tags: 標籤
+user_tags: 關鍵字
 user_totalCompletedHours: 總貢獻時數 
 user_totalCompletedTasks: 總完成任務
 user_participateProjects: 參與的專案
 user_recentContributions: 近期貢獻紀錄
 user_hours: 小時
-user_needs: 相關技術
+user_needs: 技能
 user_inputTagsHelperText: 若無選項，可自由輸入文字後按"Enter"新增。
 
 project_links: 文件連結
-project_tags: 標籤
+project_tags: 專案關鍵字
 project_categorys: 議題分類
-project_needs: 技術需求
+project_needs: 技能需求
 project_governmentAgencies: 政府相關單位
 project_contributors: 貢獻者
 project_pastProposals: 過往提案

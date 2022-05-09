@@ -1,16 +1,20 @@
 import React from 'react';
+import { styled } from '@mui/material/styles';
 import PropTypes from 'prop-types';
-import { makeStyles } from '@material-ui/core/styles';
-import List from '@material-ui/core/List';
-import ListItem from '@material-ui/core/ListItem';
-import ListItemText from '@material-ui/core/ListItemText';
-import Typography from '@material-ui/core/Typography';
+import List from '@mui/material/List';
+import ListItem from '@mui/material/ListItem';
+import ListItemText from '@mui/material/ListItemText';
+import Typography from '@mui/material/Typography';
 import moment from 'moment';
 
 import ProjectChip from 'components/ProjectChip';
 
-const useStyles = makeStyles((theme) => ({
-  root: {
+const classes = {
+  root: `ContributionList-root`,
+};
+
+const StyledList = styled(List)(({ theme }) => ({
+  [`&.${classes.root}`]: {
     width: '100%',
     maxWidth: '100%',
     // backgroundColor: theme.palette.background.paper,
@@ -18,10 +22,8 @@ const useStyles = makeStyles((theme) => ({
 }));
 
 export default function ContributionList({ data, max = 10 }) {
-  const classes = useStyles();
-
   return (
-    <List className={classes.root}>
+    <StyledList className={classes.root}>
       {data.filter((x, index) => index < max).map((item, index)=>(
         <ListItem key={index}>
           <ListItemText
@@ -40,7 +42,7 @@ export default function ContributionList({ data, max = 10 }) {
           <ListItemText primary={`+ ${item.hours}`} style={{ maxWidth: 60, textAlign: 'right' }}/>
         </ListItem>
       ))}
-    </List>
+    </StyledList>
   );
 }
 

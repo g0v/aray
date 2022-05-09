@@ -1,15 +1,19 @@
 import React from 'react';
+import { styled } from '@mui/material/styles';
 import PropTypes from 'prop-types';
-import Chip from '@material-ui/core/Chip';
-import Link from '@material-ui/core/Link';
+import Chip from '@mui/material/Chip';
+import Link from '@mui/material/Link';
 import { Link as RouteLink } from 'react-router-dom';
-import { withStyles } from '@material-ui/core/styles';
 
 import UserAvatar from 'components/UserAvatar';
 import Colors from 'constants/Colors';
 
-const StyleChip = withStyles({
-  root: {
+const classes = {
+  root: `UserChip-root`,
+};
+
+const StyledLink = styled(Link)({
+  [`& .${classes.root}`]: {
     backgroundColor: Colors.background.light2,
     // borderRadius: 0,
     paddingTop: 0,
@@ -17,7 +21,9 @@ const StyleChip = withStyles({
     height: 24,
     margin: 2,
   },
-})(Chip);
+});
+
+const StyleChip = Chip;
 
 export default function UserChip({
   username,
@@ -30,7 +36,7 @@ export default function UserChip({
   />;
 
   return (
-    <Link
+    <StyledLink
       to={`/user/${username}`}
       component={RouteLink}
       style={{
@@ -42,8 +48,10 @@ export default function UserChip({
         label={username}
         clickable
         color="default"
-      />
-    </Link>
+        classes={{
+          root: classes.root,
+        }} />
+    </StyledLink>
   );
 }
 

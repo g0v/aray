@@ -1,20 +1,26 @@
 /* eslint-disable react/prop-types */
 import React from 'react';
 
-import Grid from '@material-ui/core/Grid';
-import { makeStyles } from '@material-ui/styles';
+import { styled } from '@mui/material/styles';
+
+import Grid from '@mui/material/Grid';
 
 import { utils } from '@rjsf/core';
 
 import AddButton from './AddButton';
 
-const { canExpand } = utils;
+const classes = {
+  root: `ObjectFieldTemplate-root`,
+};
 
-const useStyles = makeStyles({
-  root: {
+// TODO jss-to-styled codemod: The Fragment root was replaced by div. Change the tag if needed.
+const Root = styled('div')({
+  [`& .${classes.root}`]: {
     marginTop: 10,
   },
 });
+
+const { canExpand } = utils;
 
 const ObjectFieldTemplate = ({
   DescriptionField,
@@ -31,10 +37,8 @@ const ObjectFieldTemplate = ({
   formData,
   onAddClick,
 }) => {
-  const classes = useStyles();
-
   return (
-    <React.Fragment>
+    <Root>
       {(uiSchema['ui:title'] || title) && (
         <TitleField
           id={`${idSchema.$id}-title-${Math.random()}`}
@@ -64,7 +68,7 @@ const ObjectFieldTemplate = ({
           );
         })}
         {canExpand(schema, uiSchema, formData) && (
-          <Grid container justify='flex-end'>
+          <Grid container justifyContent='flex-end'>
             <Grid item={true}>
               <AddButton
                 className='object-property-expand'
@@ -75,7 +79,7 @@ const ObjectFieldTemplate = ({
           </Grid>
         )}
       </Grid>
-    </React.Fragment>
+    </Root>
   );
 };
 

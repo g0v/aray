@@ -1,0 +1,19 @@
+# SDGs
+# https://g0v.hackmd.io/@jothon/ARAY/https%3A%2F%2Fg0v.hackmd.io%2FoRzJ35zxQGe4lc3aaTqMPg
+type Category
+  @model
+  @auth(rules: [
+    { allow: public, operations: [read] },
+    { allow: groups, groups: ["Users"], operations: [read, create] },
+    { allow: groups, groups: ["Admins"] },
+  ])
+{
+  id: ID!
+  label: String!
+  description: String
+
+  createdAt: AWSDateTime!
+  createdBy: String!
+  updatedAt: AWSDateTime!
+  updatedBy: String!
+}

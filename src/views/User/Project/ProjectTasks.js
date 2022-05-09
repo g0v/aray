@@ -1,11 +1,11 @@
 import React, { useEffect, useState } from 'react';
+import { styled } from '@mui/material/styles';
 import PropTypes from 'prop-types';
-import { makeStyles, withStyles } from '@material-ui/core/styles';
-import List from '@material-ui/core/List';
-import ListItem from '@material-ui/core/ListItem';
-import ListItemText from '@material-ui/core/ListItemText';
-import ListItemSecondaryAction from '@material-ui/core/ListItemSecondaryAction';
-import Typography from '@material-ui/core/Typography';
+import List from '@mui/material/List';
+import ListItem from '@mui/material/ListItem';
+import ListItemText from '@mui/material/ListItemText';
+import ListItemSecondaryAction from '@mui/material/ListItemSecondaryAction';
+import Typography from '@mui/material/Typography';
 import moment from 'moment';
 import { useTranslation } from 'react-i18next';
 
@@ -13,25 +13,28 @@ import ProjectTaskEditButton from 'forms/ProjectTaskForm/ProjectTaskEditButton';
 import { asyncListAll } from 'utils/graph';
 import { getProjectTasksByProjectIdByStatus } from 'graphql/queries';
 
-const useStyles = makeStyles((theme) => ({
-  root: {
+const classes = {
+  secondaryAction: `'ProjectTasks'-secondaryAction`,
+  root: `'ProjectTasks'-root`,
+  hoursContainer: `'ProjectTasks'-hoursContainer`,
+};
+
+// TODO jss-to-styled codemod: The Fragment root was replaced by div. Change the tag if needed.
+const Root = styled('div')(({ theme }) => ({
+  [`& .${classes.root}`]: {
     width: '100%',
     maxWidth: '100%',
     backgroundColor: theme.palette.background.paper,
   },
-  hoursContainer: {
+
+  [`& .${classes.hoursContainer}`]: {
     paddingRight: theme.spacing(2),
   },
 }));
 
-const ListItemWithWiderSecondaryAction = withStyles({
-  secondaryAction: {
-    paddingRight: 96,
-  },
-})(ListItem);
+const ListItemWithWiderSecondaryAction = ListItem;
 
 export default function ProjectTasks({ project }) {
-  const classes = useStyles();
   const { t } = useTranslation();
 
   const [data, setData] = useState([]);
@@ -54,7 +57,7 @@ export default function ProjectTasks({ project }) {
   }, [project, lastUpdatedAt]);
 
   return (
-    <React.Fragment>
+    <Root>
       {canEdit &&
       <ProjectTaskEditButton
         mode="add"
@@ -68,7 +71,9 @@ export default function ProjectTasks({ project }) {
             key={index}
             dense
             divider
-          >
+            classes={{
+              secondaryAction: classes.secondaryAction,
+            }}>
             <ListItemText
               primary={<Typography variant="body1" color="textPrimary" gutterBottom>
                 {item.summary || ''}
@@ -96,7 +101,7 @@ export default function ProjectTasks({ project }) {
           </ListItemWithWiderSecondaryAction>
         ))}
       </List>
-    </React.Fragment>
+    </Root>
   );
 }
 

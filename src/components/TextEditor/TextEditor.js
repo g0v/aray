@@ -1,11 +1,11 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import MUIRichTextEditor from 'mui-rte';
-import { createMuiTheme, MuiThemeProvider } from '@material-ui/core/styles';
+import { createTheme, ThemeProvider, StyledEngineProvider } from '@mui/material/styles';
 import { convertToRaw } from 'draft-js';
 import { debounce } from 'debounce';
 
-const defaultTheme = createMuiTheme();
+const defaultTheme = createTheme();
 
 Object.assign(defaultTheme, {
   overrides: {
@@ -33,13 +33,15 @@ export default function TextEditor({
   }, 500);
 
   return (
-    <MuiThemeProvider theme={defaultTheme}>
-      <MUIRichTextEditor
-        label={label}
-        defaultValue={defaultValue}
-        onChange={handleChange}
-      />
-    </MuiThemeProvider>
+    <StyledEngineProvider injectFirst>
+      <ThemeProvider theme={defaultTheme}>
+        <MUIRichTextEditor
+          label={label}
+          defaultValue={defaultValue}
+          onChange={handleChange}
+        />
+      </ThemeProvider>
+    </StyledEngineProvider>
   );
 }
 

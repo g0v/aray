@@ -1,8 +1,8 @@
 import React, { useState, useEffect } from 'react';
 // import PropTypes from 'prop-types';
-import Container from '@material-ui/core/Container';
-import Grid from '@material-ui/core/Grid';
-import Typography from '@material-ui/core/Typography';
+import Container from '@mui/material/Container';
+import Grid from '@mui/material/Grid';
+import Typography from '@mui/material/Typography';
 import { useTranslation } from 'react-i18next';
 
 import { request } from 'utils/graph';

@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import { styled } from '@mui/material/styles';
 import PropTypes from 'prop-types';
+// import Container from '@mui/material/Container';
 import Link from '@mui/material/Link';
 import { Link as RouteLink } from 'react-router-dom';
 import Card from '@mui/material/Card';
@@ -27,17 +28,32 @@ import ProjectAvatar from 'components/ProjectAvatar';
 const classes = {
   root: `ProjectCard-root`,
   media: `ProjectCard-media`,
+  avatar: `ProjectCard-avatar`,
 };
 
-const StyledCard = styled(Card)({
+const options = {
+  shouldForwardProp: (prop) => prop !== 'hoverShadow',
+};
+const StyledCard = styled(
+  Card,
+  options,
+)(({ theme, hoverShadow = 0 }) => ({
+  ':hover': {
+    boxShadow: theme.shadows[hoverShadow],
+  },
   [`&.${classes.root}`]: {
-    // maxWidth: 345,
     height: '100%',
+    borderRadius: 12,
   },
   [`& .${classes.media}`]: {
     height: 140,
   },
-});
+  [`& .${classes.avatar}`]: {
+    display: 'flex',
+    alignItems: 'center',
+    justifyContent: 'center',
+  },
+}));
 
 export default function ProjectCard({
   project: inProject,
@@ -73,7 +89,7 @@ export default function ProjectCard({
   if (!project) return null;
 
   return (
-    <StyledCard className={classes.root} variant={variant}>
+    <StyledCard className={classes.root} hoverShadow={10} variant={variant}>
       <Link
         to={`/project/${project.id}`}
         component={RouteLink}
@@ -89,7 +105,7 @@ export default function ProjectCard({
             title="Project"
           /> */}
           <CardContent style={{ height: '100%' }}>
-            <Box align="center" justify="center" mb={2}>
+            <Box className={classes.avatar} mb={2}>
               <ProjectAvatar projectId={project.id} size={100} />
             </Box>
             <Typography gutterBottom variant="h5" component="h2">

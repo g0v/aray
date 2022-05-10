@@ -4,7 +4,6 @@ import Container from '@mui/material/Container';
 import Grid from '@mui/material/Grid';
 import Box from '@mui/material/Box';
 import Masonry from '@mui/lab/Masonry';
-import Paper from '@mui/material/Paper';
 import { styled } from '@mui/material/styles';
 import Typography from '@mui/material/Typography';
 import TextField from '@mui/material/TextField';
@@ -32,11 +31,15 @@ const classes = {
 const StyledContainer = styled(Container)(({ theme }) => ({
   [`&.${classes.container}`]: {
     padding: theme.spacing(3),
+    marginTop: theme.spacing(8),
+    backgroundColor: '#f2f2f2',
+    height: '100vh',
   },
 
   [`& .${classes.card}`]: {
     padding: theme.spacing(2),
     margin: theme.spacing(2),
+    borderRadius: 12,
   },
 
   [`& .${classes.listItem}`]: {
@@ -55,20 +58,8 @@ const StyledContainer = styled(Container)(({ theme }) => ({
   },
 
   [`& .${classes.masonryContainer}`]: {
-    margin: theme.spacing(2),
+    marginLeft: theme.spacing(2),
   },
-
-  [`& .${classes.ProjectCard}`]: {
-    paddingTop: theme.spacing(2),
-  },
-}));
-
-const Item = styled(Paper)(({ theme }) => ({
-  backgroundColor: theme.palette.mode === 'dark' ? '#1A2027' : '#fff',
-  ...theme.typography.body2,
-  padding: theme.spacing(0.5),
-  textAlign: 'center',
-  color: theme.palette.text.secondary,
 }));
 
 export default function UserProjectList() {
@@ -80,8 +71,6 @@ export default function UserProjectList() {
   const [filters, setFilters] = useState({});
   const [filteredProjects, setFilteredProjects] = useState([]);
   const [isInit, setIsInit] = useState(false);
-  const heights = [150, 30, 90, 70, 110, 150, 130, 80, 50, 90, 100, 150, 30, 50, 80];
-
   const handleFilter = (key) => (values) => {
     // console.log(key, values);
     const newFilters = {
@@ -228,22 +217,15 @@ export default function UserProjectList() {
           </Grid>
         </Grid>
       </Card>
-      <Box>
-        <Masonry columns={4} spacing={2}>
-          {heights.map((height, index) => (
-            <Item key={index} sx={{ height }}>
-              {index + 1}
-            </Item>
+      <Box className={classes.masonryContainer}>
+        <Masonry columns={4} spacing={3}>
+          {filteredProjects.map((item, index) => (
+            <div key={index}>
+              <ProjectCard project={item} />
+            </div>
           ))}
         </Masonry>
       </Box>
-      <Grid container spacing={2}>
-        {filteredProjects.map((item, index)=>(
-          <Grid item xs={12} sm={6} md={3} lg={2} key={index}>
-            <ProjectCard project={item} />
-          </Grid>
-        ))}
-      </Grid>
     </StyledContainer>
   );
 }

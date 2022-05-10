@@ -9,6 +9,7 @@ import { I18n } from 'aws-amplify';
 import { Translations } from '@aws-amplify/ui-components';
 import querystring from 'query-string';
 import { useHistory } from 'react-router-dom';
+import { alpha } from '@mui/material/styles';
 
 import { getCache, setCache } from 'utils/cache';
 import list from 'i18n/list';
@@ -31,6 +32,7 @@ const StyledFormControl = styled(FormControl)(({ theme }) => ({
 
   [`& .${classes.input}`]: {
     padding: '10px 14px',
+    backgroundColor: alpha('#000000', 0.1),
   },
 }));
 

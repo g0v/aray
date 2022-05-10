@@ -63,6 +63,7 @@ const StyledContainer = styled(Container)(({ theme }) => ({
   [`&.${classes.container}`]: {
     paddingTop: theme.spacing(2),
     paddingBottom: theme.spacing(2),
+    marginTop: theme.spacing(8),
   },
 
   [`& .${classes.card}`]: {

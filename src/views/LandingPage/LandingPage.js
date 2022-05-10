@@ -14,6 +14,7 @@ const StyledContainer = styled(Container)(({ theme }) => ({
   [`& .${classes.content}`]: {
     flex: 1,
     padding: theme.spacing(4),
+    margin: theme.spacing(3),
     // height: `calc(100vh - 64px)`,
   },
 }));

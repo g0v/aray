@@ -1,4 +1,5 @@
 import React, { useState, useEffect } from 'react';
+import { styled } from '@mui/material/styles';
 import PropTypes from 'prop-types';
 import Container from '@mui/material/Container';
 import Grid from '@mui/material/Grid';
@@ -14,6 +15,26 @@ import { asyncListAll } from 'utils/graph';
 import UserCard from 'components/UserCard';
 import DataJoinEditorInput from 'components/DataJoinEditor/DataJoinEditorInput';
 import Loading from 'components/Loading';
+
+const classes = {
+  container: `UserList-container`,
+  card: `UserList-card`,
+};
+
+const StyledContainer = styled(Container)(({ theme }) => ({
+  [`&.${classes.container}`]: {
+    padding: theme.spacing(5),
+    marginTop: theme.spacing(8),
+    backgroundColor: '#f2f2f2',
+    height: '100vh',
+  },
+
+  [`& .${classes.card}`]: {
+    padding: theme.spacing(2),
+    marginBottom: theme.spacing(2),
+    borderRadius: 12,
+  },
+}));
 
 export default function UserList({ data: inData, hideTitle = false }) {
   const { t } = useTranslation();
@@ -140,8 +161,8 @@ export default function UserList({ data: inData, hideTitle = false }) {
   }
 
   return (
-    <Container maxWidth={false}>
-      <Card style={{ padding: 16, marginTop: 16, marginBottom: 16 }}>
+    <StyledContainer className={classes.container} maxWidth={false}>
+      <Card className={classes.card}>
         <Grid container spacing={2}>
           <Grid item xs={12}>
             <Typography variant="h5" gutterBottom align="center" style={{ marginTop: 16 }}>
@@ -194,7 +215,7 @@ export default function UserList({ data: inData, hideTitle = false }) {
           </Grid>
         ))}
       </Grid>
-    </Container>
+    </StyledContainer>
   );
 }
 

@@ -34,7 +34,7 @@ import './index.css';
 import './Amplify.css';
 
 import { appRoutes } from './routes';
-import awsconfig from './aws-exports';
+import awsconfig from './aws-exports.js';
 import App from './App';
 import store from './App.reducer';
 import reportWebVitals from './reportWebVitals';
@@ -52,7 +52,7 @@ const classes = {
 
 const StyledReactStrictMode = styled(React.StrictMode)(({ theme }) => ({
   [`& .${classes.content}`]: {
-    marginTop: 64,
+    marginTop: theme.spacing(3),
     overflow: 'auto',
     flexGrow: 1,
     // padding: theme.spacing(3),
@@ -95,6 +95,12 @@ const theme = createTheme({
       main: Colors.secondary,
       dark: Colors.secondaryDark,
       contrastText: '#fff',
+    },
+    background: {
+      default: Colors.background.light,
+    },
+    focus: {
+      Card: Colors.hoverCard,
     },
   },
 });

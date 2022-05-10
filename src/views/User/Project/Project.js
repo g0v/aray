@@ -2,7 +2,6 @@ import React, { useState, useEffect } from 'react';
 import { styled } from '@mui/material/styles';
 import PropTypes from 'prop-types';
 import Grid from '@mui/material/Grid';
-import Container from '@mui/material/Container';
 import Typography from '@mui/material/Typography';
 import Card from '@mui/material/Card';
 import { useTranslation } from 'react-i18next';
@@ -45,14 +44,20 @@ const classes = {
   userChipContainer: `${PREFIX}-userChipContainer`,
 };
 
-const StyledContainer = styled(Container)(({ theme }) => ({
+const StyledContainer = styled(Card)(({ theme }) => ({
   [`&.${classes.container}`]: {
-    paddingTop: theme.spacing(3),
-    paddingBottom: theme.spacing(2),
+    display: 'flex',
+    paddingTop: theme.spacing(5),
+    marginTop: theme.spacing(8),
+    backgroundColor: '#f2f2f2',
+    height: '100vh',
+    width: '100vw',
+    justifyContent: 'center',
   },
 
   [`& .${classes.card}`]: {
     padding: theme.spacing(4),
+    width: '70vw',
   },
 
   [`& .${classes.listItem}`]: {

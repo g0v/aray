@@ -28,22 +28,27 @@ const classes = {
   avatarContainer: `UserCard-avatarContainer`,
 };
 
-const StyledLink = styled(Link)(({ theme }) => ({
-  [`& .${classes.root}`]: {
-    // maxWidth: 345,
-    // margin: theme.spacing(1),
-    'height': '100%',
-    '&:hover': {
-      backgroundColor: alpha(theme.palette.secondary.light, 0.1),
-    },
+const options = {
+  shouldForwardProp: (prop) => prop !== 'hoverShadow',
+};
+const StyledCard = styled(
+  Card,
+  options,
+)(({ theme, hoverShadow = 0 }) => ({
+  ':hover': {
+    boxShadow: theme.shadows[hoverShadow],
+    backgroundColor: alpha(theme.palette.primary.main, 0.05),
   },
-
+  [`&.${classes.root}`]: {
+    height: '100%',
+    borderRadius: 12,
+  },
   [`& .${classes.media}`]: {
     height: 140,
   },
-
-  [`& .${classes.avatarContainer}`]: {
-    textAlign: 'center',
+  [`& .${classes.avatar}`]: {
+    display: 'flex',
+    alignItems: 'center',
   },
 }));
 
@@ -82,18 +87,18 @@ export default function UserCard({
   if (!user) return null;
 
   return (
-    <StyledLink
-      to={`/user/${user.username}`}
-      component={RouteLink}
-      style={{
-        textDecoration: 'none',
-        height: '100%',
-      }}
-    >
-      <Card className={classes.root} variant={variant}>
+    <StyledCard className={classes.root} hoverShadow={10} variant={variant}>
+      <Link
+        to={`/user/${user.username}`}
+        component={RouteLink}
+        style={{
+          textDecoration: 'none',
+          height: '100%',
+        }}
+      >
         <CardHeader
           avatar={
-            <UserAvatar username={user.username} size={50} />
+            <UserAvatar className={classes.avatar} username={user.username} size={50} />
           }
           title={user.name}
           subheader={user.username}
@@ -128,8 +133,8 @@ export default function UserCard({
             />
           </Typography>}
         </CardContent>
-      </Card>
-    </StyledLink>
+      </Link>
+    </StyledCard>
   );
 }
 

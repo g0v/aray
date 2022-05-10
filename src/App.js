@@ -32,7 +32,7 @@ const Root = styled('div')(({ theme }) => ({
   [`&.${classes.root}`]: {
     display: 'flex',
     overflow: 'hidden',
-    backgroundColor: Colors.background.light,
+    background: Colors.background.light,
     minHeight: 'calc(100vh - 64px)',
   },
 }));

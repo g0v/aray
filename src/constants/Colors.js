@@ -1,20 +1,21 @@
 const primaryLight = '#ff363c';
 const primary = '#C42126';
-const primaryDark = '#821114';
+const primaryDark = '#9EAC9A';
 const secondary = '#2189DC';
-const secondaryDark = '#085b9e';
-const secondaryLight = '#52adf7';
+const secondaryDark = '#D8ABB1';
+const secondaryLight = '#85c5f9';
 const active = secondary;
 const accent = '#f8aa5d';
 const raised = '#f05a5a';
-const focused = '#439463';
+const focused = '#A8B6C7';
+const hoverCard = '#000000';
 const error = 'red';
 
 const dark = '#121212'; // #363636
-const light = '#888889';
+const light = '#8995A7';
 const light2 = '#d1d3d8';
-const highlight = '#f7f7f7';
-const disabled = '#e3e3e3';
+const highlight = '#ffffff';
+const disabled = '#f2f2f2';
 
 export default {
   useDark: true,
@@ -28,6 +29,7 @@ export default {
   accent,
   raised,
   focused,
+  hoverCard,
 
   // text
   primaryText: dark,
@@ -40,11 +42,11 @@ export default {
 
   //
   background: {
-    light: '#ebebeb',
+    light: '#f2f2f2',
     light2: '#f5f5f5',
   },
 
-  tintColor: primary,
+  tintColor: 'primary',
   tabIconDefault: light,
   tabIconSelected: focused,
   tabBar: primary,

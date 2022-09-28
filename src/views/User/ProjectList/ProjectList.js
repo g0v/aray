@@ -14,6 +14,7 @@ import { listProjects } from './ProjectListQueries';
 import ProjectCard from 'components/ProjectCard';
 import DataJoinEditorInput from 'components/DataJoinEditor/DataJoinEditorInput';
 import Loading from 'components/Loading';
+import { sortBy } from 'utils/sorting';
 
 export default function UserProjectList() {
   const { t } = useTranslation();
@@ -76,7 +77,7 @@ export default function UserProjectList() {
       setIsLoading(true);
       // TODO: indexing and pagination
       const data = await asyncListAll(listProjects);
-      setProjects(data.map((project) => {
+      setProjects(data.sort(sortBy('updatedAt', true)).map((project) => {
         project.tagsString = project.tags.items.map((item) => item.tag.label).join(', ');
         project.categorysString = project.categorys.items.map((item) => item.category.label).join(', ');
         project.needsString = project.needs.items.map((item) => item.need.label).join(', ');

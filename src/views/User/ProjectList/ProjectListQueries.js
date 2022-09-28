@@ -21,9 +21,9 @@ export const listProjects = /* GraphQL */ `
         totalCompletedHours
         totalCompletedTasks
         totalContributors
-        # createdAt
+        createdAt
         # createdBy
-        # updatedAt
+        updatedAt
         # updatedBy
         categorys {
           items {

@@ -107,6 +107,7 @@ function ReactApp() {
       const [err, cognitoUser] = await to(Auth.currentAuthenticatedUser({ bypassCache: true }));
       console.log({ err, cognitoUser });
       if (err) {
+        localStorage.clear();
         setIsLoading(false);
         history.push(initialPath);
       } else {

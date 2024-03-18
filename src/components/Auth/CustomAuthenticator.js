@@ -5,6 +5,9 @@ import {
 } from '@aws-amplify/ui-react';
 import querystring from 'query-string';
 import { useTranslation } from 'react-i18next';
+import { I18n } from 'aws-amplify';
+
+import { dict } from 'i18n/Amplify';
 
 export default function CustomAuthenticator({
   children = <React.Fragment />,
@@ -46,6 +49,8 @@ export default function CustomAuthenticator({
   };
 
   useEffect(() => {
+    I18n.putVocabularies(dict);
+
     const { state } = querystring.parse(window.location.search);
     setAuthState(state || 'signIn');
   }, []);

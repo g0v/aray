@@ -25,8 +25,7 @@ import { AmplifyProvider } from '@aws-amplify/ui-react';
 import 'react-calendar-heatmap/dist/styles.css';
 import 'react-big-calendar/lib/css/react-big-calendar.css';
 import './global';
-import './i18n/i18n';
-// import './i18n/Amplify';
+import i18nInit from './i18n/i18n';
 import './index.css';
 import './Amplify.css';
 
@@ -88,12 +87,22 @@ const useStyles = makeStyles((theme) => ({
     }),
     marginLeft: 0,
   },
+  root: {
+    display: 'flex',
+    [theme.breakpoints.up('md')]: {
+      overflow: 'auto',
+    },
+    [theme.breakpoints.down('md')]: {
+      overflowX: 'hidden',
+    },
+    height: 'calc(100vh - 64px)', // 64px appbar + 52px footer
+  },
 }));
 
 const initialPath = history.location;
 // console.log(`initialPath`, initialPath);
 
-// const publicRoutes = appRoutes.filter(({ roles }) => !roles || roles.length === 0);
+const publicRoutes = appRoutes.filter(({ roles }) => !roles || roles.length === 0);
 
 function ReactApp() {
   const classes = useStyles();
@@ -103,6 +112,14 @@ function ReactApp() {
   const [user, setUser] = React.useState();
   const [filteredRoutes, setFilteredRoutes] = React.useState([]);
   const [open, setOpen] = React.useState(false);
+  const [i18nReady, setI18nReady] = React.useState(false);
+
+  React.useEffect(() => {
+    (async () => {
+      await i18nInit();
+      setI18nReady(true);
+    })();
+  }, []);
 
   React.useEffect(() => {
     (async () => {
@@ -172,9 +189,9 @@ function ReactApp() {
     setOpen(false);
 
     history.push(initialPath);
-  }, [user]);
+  }, [user, i18nReady]);
 
-  if (isLoading) {
+  if (isLoading || !i18nReady) {
     return (<Loading />);
   }
 
@@ -192,18 +209,20 @@ function ReactApp() {
         className={clsx(classes.content, {
           [classes.contentShift]: !open,
         })}>
-        <Switch>
-          <Route path="/app" component={App} />
-          {/* {user ?
-            <Route path="/">
-              <App user={user} />
-            </Route>:
-            <React.Fragment>
-              {publicRoutes.map(({ path, exact, component }, index)=>(
-                <Route key={index} path={path} exact={exact} component={component} />
-              ))}
-            </React.Fragment>} */}
-        </Switch>
+        <div className={classes.root}>
+          <Switch>
+            <Route path="/app" component={App} />
+            {user ?
+              <Route path="/">
+                <App user={user} />
+              </Route>:
+              <React.Fragment>
+                {publicRoutes.map(({ path, exact, component }, index)=>(
+                  <Route key={index} path={path} exact={exact} component={component} />
+                ))}
+              </React.Fragment>}
+          </Switch>
+        </div>
       </div>
     </Router>
   );

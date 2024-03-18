@@ -15,6 +15,9 @@ import Colors from 'constants/Colors';
 import AuthErrorCodes from 'constants/AuthErrorCodes';
 import CustomAuthenticator from 'components/Auth/CustomAuthenticator';
 
+import '@aws-amplify/ui-react/styles.css';
+import './i18n/Amplify';
+
 const useStyles = makeStyles((theme) => ({
   root: {
     display: 'flex',
@@ -40,7 +43,7 @@ const authListener = ({ payload: { event, data } }) => {
   }
 };
 
-export default function App({ user }) {
+function App({ user }) {
   const classes = useStyles();
   const { t } = useTranslation();
 
@@ -98,7 +101,7 @@ App.propTypes = {
   user: PropTypes.any,
 };
 
-function AuthenticatedApp({ user }) {
+export default function AuthenticatedApp({ user }) {
   return (
     <CustomAuthenticator>
       <App user={user} />

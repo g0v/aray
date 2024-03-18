@@ -11,18 +11,15 @@ import { useHistory } from 'react-router-dom';
 
 import { getCache, setCache } from 'utils/cache';
 import list from 'i18n/list';
-import zhTwAuthString from 'i18n/Amplify_zh-TW';
-import jaAuthString from 'i18n/Amplify_ja';
-import koAuthString from 'i18n/Amplify_ko';
+// import zhTwAuthString from 'i18n/Amplify_zh-TW';
+// import jaAuthString from 'i18n/Amplify_ja';
+// import koAuthString from 'i18n/Amplify_ko';
 
-const dict = {
-  'zh': zhTwAuthString,
-  'ja': jaAuthString,
-  'ko': koAuthString,
-};
-
-I18n.putVocabularies(dict);
-I18n.setLanguage('zh-Hant');
+// const dict = {
+//   'zh': zhTwAuthString,
+//   'ja': jaAuthString,
+//   'ko': koAuthString,
+// };
 
 const useStyles = makeStyles((theme) => ({
   formControl: {

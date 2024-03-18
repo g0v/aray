@@ -22,5 +22,10 @@ jobs:
         uses: "phips28/gh-action-bump-version@master"
         env:
           GITHUB_TOKEN: ${{ secrets.ACTION_GITHUB_TOKEN }}
+        with:
+          skip-tag:  'true'
+          # version-type: 'patch'
+          # default: 'patch'
+          # tag-prefix:  'v'
       - name: Trigger Amplify Build
         run: curl -X POST -d {} "${{ secrets.AMPLIFY_WEBHOOK_URL }}" -H "Content-Type:application/json"

@@ -164,17 +164,17 @@ function ReactApp() {
     Hub.listen('auth', ({ payload: { event, data } }) => {
       // global.logger.debug({ event, data });
       switch (event) {
-        case 'signIn':
-          setUser(data);
-          break;
-        case 'user':
-          setUser(data);
-          break;
-        case 'signOut':
-          setUser();
-          setOpen(false);
-          break;
-        default:
+      case 'signIn':
+        setUser(data);
+        break;
+      case 'user':
+        setUser(data);
+        break;
+      case 'signOut':
+        setUser();
+        setOpen(false);
+        break;
+      default:
       }
     });
   }, []);

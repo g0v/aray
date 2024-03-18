@@ -31,11 +31,11 @@ const authListener = ({ payload: { event, data } }) => {
   console.log(event, data);
   let errorMessage;
   switch (event) {
-    case 'signUp_failure':
-    case 'signIn_failure':
-      errorMessage = AuthErrorCodes[data.code] || data.code;
-      break;
-    default:
+  case 'signUp_failure':
+  case 'signIn_failure':
+    errorMessage = AuthErrorCodes[data.code] || data.code;
+    break;
+  default:
   }
 
   if (errorMessage) {

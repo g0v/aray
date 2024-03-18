@@ -1,7 +1,7 @@
 /* eslint-disable react/prop-types, no-prototype-builtins */
 import React from 'react';
 
-import { utils } from '@rjsf/core';
+import { ADDITIONAL_PROPERTY_FLAG } from '@rjsf/utils';
 
 import Grid from '@material-ui/core/Grid';
 import FormControl from '@material-ui/core/FormControl';
@@ -9,8 +9,6 @@ import Input from '@material-ui/core/Input';
 import InputLabel from '@material-ui/core/InputLabel';
 
 import IconButton from './IconButton';
-
-const { ADDITIONAL_PROPERTY_FLAG } = utils;
 
 const WrapIfAdditional = ({
   children,

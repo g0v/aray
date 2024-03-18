@@ -215,7 +215,7 @@
             "Arn"
           ]
         },
-        "Runtime": "nodejs14.x",
+        "Runtime": "nodejs16.x",
         "Layers": [],
         "Timeout": "25"
       }
@@ -673,6 +673,14 @@
     "CloudWatchEventRule": {
       "Value": {
         "Ref": "CloudWatchEvent"
+      }
+    },
+    "LambdaExecutionRoleArn": {
+      "Value": {
+        "Fn::GetAtt": [
+          "LambdaExecutionRole",
+          "Arn"
+        ]
       }
     }
   }

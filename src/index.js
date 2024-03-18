@@ -6,27 +6,26 @@ import {
   Router,
   Route,
   Switch,
-  Redirect,
+  // Redirect,
 } from 'react-router';
-import Amplify, { Auth } from 'aws-amplify';
-import Analytics from '@aws-amplify/analytics';
+import { Amplify, Auth, Hub } from 'aws-amplify';
+import { Analytics } from '@aws-amplify/analytics';
 import to from 'await-to-js';
-import { onAuthUIStateChange } from '@aws-amplify/ui-components';
-import { createMuiTheme } from '@material-ui/core/styles';
+import { createTheme } from '@material-ui/core/styles';
 import { ThemeProvider } from '@material-ui/styles';
 import { makeStyles } from '@material-ui/core/styles';
 import 'react-redux-toastr/lib/css/react-redux-toastr.min.css';
 import { Provider } from 'react-redux';
 import ReduxToastr from 'react-redux-toastr';
-import DocumentTitle from 'react-document-title';
-import { useTranslation } from 'react-i18next';
+// import DocumentTitle from 'react-document-title';
+// import { useTranslation } from 'react-i18next';
 import { loadCSS } from 'fg-loadcss';
+import { AmplifyProvider } from '@aws-amplify/ui-react';
 
 import 'react-calendar-heatmap/dist/styles.css';
 import 'react-big-calendar/lib/css/react-big-calendar.css';
 import './global';
-import './i18n/i18n';
-// import './i18n/Amplify';
+import i18nInit from './i18n/i18n';
 import './index.css';
 import './Amplify.css';
 
@@ -36,7 +35,7 @@ import App from './App';
 import store from './App.reducer';
 import reportWebVitals from './reportWebVitals';
 
-import LandingPage from 'views/LandingPage';
+// import LandingPage from 'views/LandingPage';
 import CustomAppBar from 'components/CustomAppBar';
 import Loading from 'components/Loading';
 import Colors from 'constants/Colors';
@@ -51,7 +50,7 @@ Analytics.disable();
 const history = createBrowserHistory();
 
 // https://material-ui.com/customization/default-theme/
-const theme = createMuiTheme({
+const theme = createTheme({
   palette: {
     primary: {
       light: Colors.primaryLight,
@@ -88,19 +87,65 @@ const useStyles = makeStyles((theme) => ({
     }),
     marginLeft: 0,
   },
+  root: {},
 }));
+
+const amplifyTheme = {
+  name: 'amplify-theme',
+  // https://github.com/aws-amplify/amplify-ui/tree/main/packages/ui/src/theme/tokens/components
+  tokens: {
+    components: {
+      authenticator: {
+        modal: {
+          backgroundColor: {
+            value: Colors.background.light,
+          },
+        },
+      },
+    },
+    colors: {
+      font: {
+        primary: { value: Colors.primary },
+      },
+      brand: {
+        primary: {
+          // 10: { value: Colors.primary },
+          // 20: { value: Colors.primary },
+          // 30: { value: Colors.primary },
+          // 40: { value: Colors.primary },
+          // 50: { value: Colors.primary },
+          60: { value: Colors.primary },
+          70: { value: Colors.primary },
+          80: { value: Colors.primary },
+          90: { value: Colors.primary },
+          100: { value: Colors.primary },
+        },
+      },
+    },
+  },
+};
 
 const initialPath = history.location;
 // console.log(`initialPath`, initialPath);
 
+const publicRoutes = appRoutes.filter(({ roles }) => !roles || roles.length === 0);
+
 function ReactApp() {
   const classes = useStyles();
-  const { t } = useTranslation();
+  // const { t } = useTranslation();
 
   const [isLoading, setIsLoading] = React.useState(true);
   const [user, setUser] = React.useState();
   const [filteredRoutes, setFilteredRoutes] = React.useState([]);
   const [open, setOpen] = React.useState(false);
+  const [i18nReady, setI18nReady] = React.useState(false);
+
+  React.useEffect(() => {
+    (async () => {
+      await i18nInit();
+      setI18nReady(true);
+    })();
+  }, []);
 
   React.useEffect(() => {
     (async () => {
@@ -115,9 +160,22 @@ function ReactApp() {
         setIsLoading(false);
       }
     })();
-    return onAuthUIStateChange(async (nextAuthState, authData) => {
-      console.log('onAuthUIStateChange', nextAuthState, authData);
-      setUser(authData);
+
+    Hub.listen('auth', ({ payload: { event, data } }) => {
+      // global.logger.debug({ event, data });
+      switch (event) {
+        case 'signIn':
+          setUser(data);
+          break;
+        case 'user':
+          setUser(data);
+          break;
+        case 'signOut':
+          setUser();
+          setOpen(false);
+          break;
+        default:
+      }
     });
   }, []);
 
@@ -157,9 +215,9 @@ function ReactApp() {
     setOpen(false);
 
     history.push(initialPath);
-  }, [user]);
+  }, [user, i18nReady]);
 
-  if (isLoading) {
+  if (isLoading || !i18nReady) {
     return (<Loading />);
   }
 
@@ -180,23 +238,13 @@ function ReactApp() {
         <Switch>
           <Route path="/app" component={App} />
           {user ?
-            <Route path="/" component={App} />:
+            <Route path="/">
+              <App user={user} />
+            </Route>:
             <React.Fragment>
-              <Route path="/" exact component={LandingPage} />
-              {filteredRoutes.map((item)=>(
-                <item.route
-                  key={item.path}
-                  exact={item.exact}
-                  path={item.path}
-                  roles={item.roles}
-                  user={user}
-                  render={ (props) => (
-                    <DocumentTitle title={`${t('app_short_name')} | ${t(item.title)}`}>
-                      <item.component {...props} />
-                    </DocumentTitle>)
-                  }/>
+              {publicRoutes.map(({ path, exact, component }, index)=>(
+                <Route key={index} path={path} exact={exact} component={component} />
               ))}
-              <Redirect to="/" />
             </React.Fragment>}
         </Switch>
       </div>
@@ -205,26 +253,24 @@ function ReactApp() {
 }
 
 ReactDOM.render(
-  <React.StrictMode>
-    <React.Suspense fallback={<Loading />}>
-      <ThemeProvider theme={theme}>
-        <Provider store={store}>
-          <div>
-            <ReduxToastr
-              timeOut={10000}
-              newestOnTop={false}
-              preventDuplicates
-              position='top-right'
-              transitionIn='fadeIn'
-              transitionOut='fadeOut'
-              progressBar
-              closeOnToastrClick={false}/>
-          </div>
-        </Provider>
-        <ReactApp />
-      </ThemeProvider>
-    </React.Suspense>
-  </React.StrictMode>,
+  <ThemeProvider theme={theme}>
+    <Provider store={store}>
+      <div>
+        <ReduxToastr
+          timeOut={10000}
+          newestOnTop={false}
+          preventDuplicates
+          position='top-right'
+          transitionIn='fadeIn'
+          transitionOut='fadeOut'
+          progressBar
+          closeOnToastrClick={false}/>
+      </div>
+    </Provider>
+    <AmplifyProvider theme={amplifyTheme}>
+      <ReactApp />
+    </AmplifyProvider>
+  </ThemeProvider>,
   document.getElementById('root'),
 );
 

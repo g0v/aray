@@ -1,18 +1,8 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import {
-  AmplifyAuthenticator,
-  AmplifySignIn,
-  AmplifySignUp,
-} from '@aws-amplify/ui-react';
-import {
-  AuthState,
-  onAuthUIStateChange,
-} from '@aws-amplify/ui-components';
 import { Switch, Redirect } from 'react-router';
 import { makeStyles } from '@material-ui/core/styles';
 import DocumentTitle from 'react-document-title';
-import querystring from 'query-string';
 import { Hub } from 'aws-amplify';
 import { toastr } from 'react-redux-toastr';
 import { useTranslation } from 'react-i18next';
@@ -23,6 +13,10 @@ import { appRoutes } from './routes';
 // import Home from 'views/Home';
 import Colors from 'constants/Colors';
 import AuthErrorCodes from 'constants/AuthErrorCodes';
+import CustomAuthenticator from 'components/Auth/CustomAuthenticator';
+
+import '@aws-amplify/ui-react/styles.css';
+import './i18n/Amplify';
 
 const useStyles = makeStyles((theme) => ({
   root: {
@@ -37,11 +31,11 @@ const authListener = ({ payload: { event, data } }) => {
   console.log(event, data);
   let errorMessage;
   switch (event) {
-  case 'signUp_failure':
-  case 'signIn_failure':
-    errorMessage = AuthErrorCodes[data.code] || data.code;
-    break;
-  default:
+    case 'signUp_failure':
+    case 'signIn_failure':
+      errorMessage = AuthErrorCodes[data.code] || data.code;
+      break;
+    default:
   }
 
   if (errorMessage) {
@@ -49,28 +43,15 @@ const authListener = ({ payload: { event, data } }) => {
   }
 };
 
-export default function App({ location }) {
+function App({ user }) {
   const classes = useStyles();
   const { t } = useTranslation();
 
-  const [authState, setAuthState] = React.useState(null);
-  const [user, setUser] = React.useState(null);
   const [filteredRoutes, setFilteredRoutes] = React.useState(appRoutes);
-  const [initialAuthState, setInitialAuthState] = React.useState(AuthState.SignIn);
 
   React.useEffect(() => {
-    if (!location) return;
-    const { state } = querystring.parse(location.search);
-    if (state) {
-      console.log('change state?', state);
-      setInitialAuthState(null);
-      setTimeout(() => {
-        setInitialAuthState(state);
-      });
-    }
-  }, [location]);
+    if (!user || !user.signInUserSession || !user.attributes) return;
 
-  React.useEffect(() => {
     console.log(user);
     if (!user || !user.signInUserSession || !user.attributes) {
       const filteredRoutes = appRoutes.filter(({ roles }) => {
@@ -91,14 +72,9 @@ export default function App({ location }) {
 
   React.useEffect(() => {
     Hub.listen('auth', authListener);
-
-    return onAuthUIStateChange((nextAuthState, authData) => {
-      setAuthState(nextAuthState);
-      setUser(authData);
-    });
   }, []);
 
-  return (authState === AuthState.SignedIn && user) ? (
+  return (
     <div className={classes.root} data-test-id="app-container">
       <Switch>
         {filteredRoutes.map((item)=>(
@@ -118,50 +94,21 @@ export default function App({ location }) {
         <Redirect to={'/'} />
       </Switch>
     </div>
-  ) : <div className="amplify-authenticator" >
-    {initialAuthState &&
-      <AmplifyAuthenticator initialAuthState={initialAuthState}>
-        {/* https://github.com/aws-amplify/amplify-js/issues/6113 */}
-        {/* https://docs.amplify.aws/ui/auth/authenticator/q/framework/react#slots */}
-        <AmplifySignIn
-          slot="sign-in"
-          federated={{}}
-        />
-        <AmplifySignUp
-          slot="sign-up"
-          formFields={[
-            {
-              type: 'name',
-              label: t('appSignup_name'),
-              placeholder: ' ',
-              required: true,
-            },
-            {
-              type: 'email',
-              label: t('appSignup_email'),
-              placeholder: ' ',
-              required: true,
-            },
-            {
-              type: 'username',
-              label: t('appSignup_username'),
-              placeholder: ' ',
-              required: true,
-            },
-            {
-              type: 'password',
-              label: t('appSignup_password'),
-              placeholder: ' ',
-              required: true,
-            },
-          ]}
-        />
-      </AmplifyAuthenticator>}
-  </div>;
+  );
 }
 
 App.propTypes = {
-  location: PropTypes.shape({
-    search: PropTypes.string,
-  }),
+  user: PropTypes.any,
+};
+
+export default function AuthenticatedApp({ user }) {
+  return (
+    <CustomAuthenticator>
+      <App user={user} />
+    </CustomAuthenticator>
+  );
+}
+
+AuthenticatedApp.propTypes = {
+  user: PropTypes.any,
 };

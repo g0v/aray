@@ -87,17 +87,43 @@ const useStyles = makeStyles((theme) => ({
     }),
     marginLeft: 0,
   },
-  root: {
-    display: 'flex',
-    [theme.breakpoints.up('md')]: {
-      overflow: 'auto',
-    },
-    [theme.breakpoints.down('md')]: {
-      overflowX: 'hidden',
-    },
-    height: 'calc(100vh - 64px)', // 64px appbar + 52px footer
-  },
+  root: {},
 }));
+
+const amplifyTheme = {
+  name: 'amplify-theme',
+  // https://github.com/aws-amplify/amplify-ui/tree/main/packages/ui/src/theme/tokens/components
+  tokens: {
+    components: {
+      authenticator: {
+        modal: {
+          backgroundColor: {
+            value: Colors.background.light,
+          },
+        },
+      },
+    },
+    colors: {
+      font: {
+        primary: { value: Colors.primary },
+      },
+      brand: {
+        primary: {
+          // 10: { value: Colors.primary },
+          // 20: { value: Colors.primary },
+          // 30: { value: Colors.primary },
+          // 40: { value: Colors.primary },
+          // 50: { value: Colors.primary },
+          60: { value: Colors.primary },
+          70: { value: Colors.primary },
+          80: { value: Colors.primary },
+          90: { value: Colors.primary },
+          100: { value: Colors.primary },
+        },
+      },
+    },
+  },
+};
 
 const initialPath = history.location;
 // console.log(`initialPath`, initialPath);
@@ -209,20 +235,18 @@ function ReactApp() {
         className={clsx(classes.content, {
           [classes.contentShift]: !open,
         })}>
-        <div className={classes.root}>
-          <Switch>
-            <Route path="/app" component={App} />
-            {user ?
-              <Route path="/">
-                <App user={user} />
-              </Route>:
-              <React.Fragment>
-                {publicRoutes.map(({ path, exact, component }, index)=>(
-                  <Route key={index} path={path} exact={exact} component={component} />
-                ))}
-              </React.Fragment>}
-          </Switch>
-        </div>
+        <Switch>
+          <Route path="/app" component={App} />
+          {user ?
+            <Route path="/">
+              <App user={user} />
+            </Route>:
+            <React.Fragment>
+              {publicRoutes.map(({ path, exact, component }, index)=>(
+                <Route key={index} path={path} exact={exact} component={component} />
+              ))}
+            </React.Fragment>}
+        </Switch>
       </div>
     </Router>
   );
@@ -243,7 +267,7 @@ ReactDOM.render(
           closeOnToastrClick={false}/>
       </div>
     </Provider>
-    <AmplifyProvider>
+    <AmplifyProvider theme={amplifyTheme}>
       <ReactApp />
     </AmplifyProvider>
   </ThemeProvider>,

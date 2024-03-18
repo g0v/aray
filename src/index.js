@@ -6,7 +6,7 @@ import {
   Router,
   Route,
   Switch,
-  Redirect,
+  // Redirect,
 } from 'react-router';
 import { Amplify, Auth, Hub } from 'aws-amplify';
 import { Analytics } from '@aws-amplify/analytics';
@@ -17,8 +17,8 @@ import { makeStyles } from '@material-ui/core/styles';
 import 'react-redux-toastr/lib/css/react-redux-toastr.min.css';
 import { Provider } from 'react-redux';
 import ReduxToastr from 'react-redux-toastr';
-import DocumentTitle from 'react-document-title';
-import { useTranslation } from 'react-i18next';
+// import DocumentTitle from 'react-document-title';
+// import { useTranslation } from 'react-i18next';
 import { loadCSS } from 'fg-loadcss';
 import { AmplifyProvider } from '@aws-amplify/ui-react';
 
@@ -36,7 +36,7 @@ import App from './App';
 import store from './App.reducer';
 import reportWebVitals from './reportWebVitals';
 
-import LandingPage from 'views/LandingPage';
+// import LandingPage from 'views/LandingPage';
 import CustomAppBar from 'components/CustomAppBar';
 import Loading from 'components/Loading';
 import Colors from 'constants/Colors';
@@ -93,9 +93,11 @@ const useStyles = makeStyles((theme) => ({
 const initialPath = history.location;
 // console.log(`initialPath`, initialPath);
 
+// const publicRoutes = appRoutes.filter(({ roles }) => !roles || roles.length === 0);
+
 function ReactApp() {
   const classes = useStyles();
-  const { t } = useTranslation();
+  // const { t } = useTranslation();
 
   const [isLoading, setIsLoading] = React.useState(true);
   const [user, setUser] = React.useState();
@@ -119,17 +121,17 @@ function ReactApp() {
     Hub.listen('auth', ({ payload: { event, data } }) => {
       // global.logger.debug({ event, data });
       switch (event) {
-      case 'signIn':
-        setUser(data);
-        break;
-      case 'user':
-        setUser(data);
-        break;
-      case 'signOut':
-        setUser();
-        setOpen(false);
-        break;
-      default:
+        case 'signIn':
+          setUser(data);
+          break;
+        case 'user':
+          setUser(data);
+          break;
+        case 'signOut':
+          setUser();
+          setOpen(false);
+          break;
+        default:
       }
     });
   }, []);
@@ -192,27 +194,15 @@ function ReactApp() {
         })}>
         <Switch>
           <Route path="/app" component={App} />
-          {user ?
+          {/* {user ?
             <Route path="/">
               <App user={user} />
-            </Route> :
+            </Route>:
             <React.Fragment>
-              <Route path="/" exact component={LandingPage} />
-              {filteredRoutes.map((item)=>(
-                <item.route
-                  key={item.path}
-                  exact={item.exact}
-                  path={item.path}
-                  roles={item.roles}
-                  user={user}
-                  render={ (props) => (
-                    <DocumentTitle title={`${t('app_short_name')} | ${t(item.title)}`}>
-                      <item.component {...props} />
-                    </DocumentTitle>)
-                  }/>
+              {publicRoutes.map(({ path, exact, component }, index)=>(
+                <Route key={index} path={path} exact={exact} component={component} />
               ))}
-              <Redirect to="/" />
-            </React.Fragment>}
+            </React.Fragment>} */}
         </Switch>
       </div>
     </Router>
@@ -220,28 +210,24 @@ function ReactApp() {
 }
 
 ReactDOM.render(
-  <React.StrictMode>
-    <React.Suspense fallback={<Loading />}>
-      <ThemeProvider theme={theme}>
-        <Provider store={store}>
-          <div>
-            <ReduxToastr
-              timeOut={10000}
-              newestOnTop={false}
-              preventDuplicates
-              position='top-right'
-              transitionIn='fadeIn'
-              transitionOut='fadeOut'
-              progressBar
-              closeOnToastrClick={false}/>
-          </div>
-        </Provider>
-        <AmplifyProvider>
-          <ReactApp />
-        </AmplifyProvider>
-      </ThemeProvider>
-    </React.Suspense>
-  </React.StrictMode>,
+  <ThemeProvider theme={theme}>
+    <Provider store={store}>
+      <div>
+        <ReduxToastr
+          timeOut={10000}
+          newestOnTop={false}
+          preventDuplicates
+          position='top-right'
+          transitionIn='fadeIn'
+          transitionOut='fadeOut'
+          progressBar
+          closeOnToastrClick={false}/>
+      </div>
+    </Provider>
+    <AmplifyProvider>
+      <ReactApp />
+    </AmplifyProvider>
+  </ThemeProvider>,
   document.getElementById('root'),
 );
 

@@ -8,7 +8,7 @@ import Avatar from 'components/Avatar';
 export default function UserAvatar({
   username,
   size = 24,
-  variant = 'circle',
+  variant = 'circular',
   showEditor = false,
   canEdit = false,
 }) {

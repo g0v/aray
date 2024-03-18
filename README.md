@@ -14,6 +14,13 @@
 ## GetStarted
 
 ```bash
+npm install -g @aws-amplify/cli
+
+amplify configure
+# regoin ap-northeast-1
+
+amplify pull --appId dpw6pfmb7twme --envName {{ENV}}
+
 # docs/React.md
 npm i
 npm start

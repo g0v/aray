@@ -28,11 +28,11 @@ const authListener = ({ payload: { event, data } }) => {
   console.log(event, data);
   let errorMessage;
   switch (event) {
-  case 'signUp_failure':
-  case 'signIn_failure':
-    errorMessage = AuthErrorCodes[data.code] || data.code;
-    break;
-  default:
+    case 'signUp_failure':
+    case 'signIn_failure':
+      errorMessage = AuthErrorCodes[data.code] || data.code;
+      break;
+    default:
   }
 
   if (errorMessage) {
@@ -47,6 +47,8 @@ export default function App({ user }) {
   const [filteredRoutes, setFilteredRoutes] = React.useState(appRoutes);
 
   React.useEffect(() => {
+    if (!user || !user.signInUserSession || !user.attributes) return;
+
     console.log(user);
     if (!user || !user.signInUserSession || !user.attributes) {
       const filteredRoutes = appRoutes.filter(({ roles }) => {

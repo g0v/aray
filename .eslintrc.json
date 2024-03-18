@@ -5,7 +5,7 @@
     "plugin:react/recommended"
   ],
   "rules": {
-    "indent": ["error", 2],
+    "indent": ["error", 2, { "SwitchCase": 1 }],
     "linebreak-style": ["error", "unix"],
     "semi": ["error", "always"],
     "max-len": ["error", { "code": 160 }],
@@ -46,6 +46,7 @@
     "fetch": true,
     "FormData": true,
     "localStorage": true,
-    "FileReader": true
+    "FileReader": true,
+    "TPDirect": true
   }
 }

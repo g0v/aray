@@ -7,5 +7,6 @@
       "autharay6131feb9",
       "Outputs.UserPoolId"
     ]
-  }
+  },
+  "CreateAPIKey": 1
 }

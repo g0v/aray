@@ -5,10 +5,10 @@
   "scripts": {
     "start": "react-scripts start",
     "build": "react-scripts build",
-    "test": "echo 'test'",
+    "test": "npm run lint",
     "test_react": "react-scripts test",
     "eject": "react-scripts eject",
-    "lint": "npx eslint src data amplify/backend --ext .js,.jsx,.ts",
+    "lint": "npx eslint src data amplify/backend --ext .js,.jsx,.ts --fix",
     "push": "amplify api gql-compile && amplify push -y && amplify codegen --maxDepth 4",
     "ampliy_download_schema": "aws appsync get-introspection-schema --api-id=w5utc7ntdvaf5d7ej3l432vzgu --format=JSON schema.json --profile=jothon"
   },
@@ -59,11 +59,11 @@
   "devDependencies": {
     "babel-eslint": "^10.1.0",
     "dotenv": "^8.2.0",
-    "eslint": "^7.25.0",
+    "eslint": "^7.32.0",
     "eslint-config-google": "^0.14.0",
-    "eslint-plugin-import": "^2.22.1",
-    "eslint-plugin-react": "^7.23.2",
-    "eslint-plugin-react-hooks": "^4.2.0"
+    "eslint-plugin-import": "^2.20.2",
+    "eslint-plugin-react": "^7.21.3",
+    "eslint-plugin-react-hooks": "^4.6.0"
   },
   "eslintConfig": {
     "extends": [

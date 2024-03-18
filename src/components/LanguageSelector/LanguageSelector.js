@@ -22,6 +22,7 @@ const dict = {
 };
 
 I18n.putVocabularies(dict);
+I18n.setLanguage('zh-Hant');
 
 const useStyles = makeStyles((theme) => ({
   formControl: {
@@ -44,6 +45,8 @@ const LanguageSelector = () => {
 
   const handleChange = (event) => {
     const code = event.target.value;
+    console.log('handleChange', code);
+
     i18n.changeLanguage(code);
     I18n.setLanguage(code);
 
@@ -59,6 +62,7 @@ const LanguageSelector = () => {
     const { lang } = querystring.parse(window.location.search);
 
     const cache = lang || getCache('language');
+    console.log('i18n cache', cache);
     if (cache) {
       setCurrentValue(cache);
       i18n.changeLanguage(cache);

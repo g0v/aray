@@ -4,10 +4,7 @@ import React from 'react';
 // import MenuItem from '@material-ui/core/MenuItem';
 import TextField from '@material-ui/core/TextField';
 import Autocomplete from '@material-ui/lab/Autocomplete';
-
-import { utils } from '@rjsf/core';
-
-const { asNumber, guessType } = utils;
+import { asNumber, guessType } from '@rjsf/utils';
 
 const nums = new Set(['number', 'integer']);
 

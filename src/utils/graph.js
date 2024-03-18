@@ -1,4 +1,4 @@
-import API, { graphqlOperation } from '@aws-amplify/api';
+import { API, graphqlOperation } from '@aws-amplify/api';
 import to from 'await-to-js';
 import { toastr } from 'react-redux-toastr';
 

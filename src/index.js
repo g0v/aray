@@ -8,11 +8,10 @@ import {
   Switch,
   Redirect,
 } from 'react-router';
-import Amplify, { Auth } from 'aws-amplify';
-import Analytics from '@aws-amplify/analytics';
+import { Amplify, Auth, Hub } from 'aws-amplify';
+import { Analytics } from '@aws-amplify/analytics';
 import to from 'await-to-js';
-import { onAuthUIStateChange } from '@aws-amplify/ui-components';
-import { createMuiTheme } from '@material-ui/core/styles';
+import { createTheme } from '@material-ui/core/styles';
 import { ThemeProvider } from '@material-ui/styles';
 import { makeStyles } from '@material-ui/core/styles';
 import 'react-redux-toastr/lib/css/react-redux-toastr.min.css';
@@ -21,6 +20,7 @@ import ReduxToastr from 'react-redux-toastr';
 import DocumentTitle from 'react-document-title';
 import { useTranslation } from 'react-i18next';
 import { loadCSS } from 'fg-loadcss';
+import { AmplifyProvider } from '@aws-amplify/ui-react';
 
 import 'react-calendar-heatmap/dist/styles.css';
 import 'react-big-calendar/lib/css/react-big-calendar.css';
@@ -51,7 +51,7 @@ Analytics.disable();
 const history = createBrowserHistory();
 
 // https://material-ui.com/customization/default-theme/
-const theme = createMuiTheme({
+const theme = createTheme({
   palette: {
     primary: {
       light: Colors.primaryLight,
@@ -115,9 +115,22 @@ function ReactApp() {
         setIsLoading(false);
       }
     })();
-    return onAuthUIStateChange(async (nextAuthState, authData) => {
-      console.log('onAuthUIStateChange', nextAuthState, authData);
-      setUser(authData);
+
+    Hub.listen('auth', ({ payload: { event, data } }) => {
+      // global.logger.debug({ event, data });
+      switch (event) {
+      case 'signIn':
+        setUser(data);
+        break;
+      case 'user':
+        setUser(data);
+        break;
+      case 'signOut':
+        setUser();
+        setOpen(false);
+        break;
+      default:
+      }
     });
   }, []);
 
@@ -180,7 +193,9 @@ function ReactApp() {
         <Switch>
           <Route path="/app" component={App} />
           {user ?
-            <Route path="/" component={App} />:
+            <Route path="/">
+              <App user={user} />
+            </Route> :
             <React.Fragment>
               <Route path="/" exact component={LandingPage} />
               {filteredRoutes.map((item)=>(
@@ -221,7 +236,9 @@ ReactDOM.render(
               closeOnToastrClick={false}/>
           </div>
         </Provider>
-        <ReactApp />
+        <AmplifyProvider>
+          <ReactApp />
+        </AmplifyProvider>
       </ThemeProvider>
     </React.Suspense>
   </React.StrictMode>,

@@ -1,11 +1,11 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import MUIRichTextEditor from 'mui-rte';
-import { createMuiTheme, MuiThemeProvider } from '@material-ui/core/styles';
+import { createTheme, MuiThemeProvider } from '@material-ui/core/styles';
 import { convertToRaw } from 'draft-js';
 import { debounce } from 'debounce';
 
-const defaultTheme = createMuiTheme();
+const defaultTheme = createTheme();
 
 Object.assign(defaultTheme, {
   overrides: {

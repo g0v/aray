@@ -130,8 +130,7 @@ export default function Project({ id: inId, computedMatch, match }) {
   useEffect(() => {
     if (inId) {
       setId(inId);
-    } else
-    if (computedMatch || match) {
+    } else if (computedMatch || match) {
       const { params: { id } } = computedMatch || match;
       setId(id);
     }

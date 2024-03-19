@@ -11,6 +11,7 @@ projects:
         generatedFileName: ''
         docsFilePath: src/graphql
         maxDepth: 4
+        typenameIntrospection: false
 extensions:
   amplify:
     version: 3

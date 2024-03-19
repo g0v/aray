@@ -1,0 +1,28 @@
+type EventProject
+  @model
+  @key(name: "byEventIdByStatus",
+    fields: ["eventId","status"], queryField: "getEventProjectsByEventIdByStatus")
+  @auth(rules: [
+    { allow: public, operations: [read] },
+    # update through custom resovler (need to update the event.attendanceCount)
+    { allow: groups, groups: ["Users"], operations: [read] },
+    { allow: groups, groups: ["Admins"] },
+  ])
+{
+  id: ID!
+  eventId: ID!
+  projectId: ID!
+  status: EventProjectStatus!
+  title: String
+  description: String
+
+  createdAt: AWSDateTime!
+  createdBy: String!
+  updatedAt: AWSDateTime!
+  updatedBy: String!
+}
+
+enum EventProjectStatus {
+  pending
+  confirmed
+}

@@ -46,6 +46,7 @@
     "fetch": true,
     "FormData": true,
     "localStorage": true,
-    "FileReader": true
+    "FileReader": true,
+    "TPDirect": true
   }
 }

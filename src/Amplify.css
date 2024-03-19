@@ -1,20 +1,27 @@
 /* https://docs.amplify.aws/ui/customization/theming/q/framework/react */
-:root {
+/* body, :root, .MuiDialog-root {
     --amplify-font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
         'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-        sans-serif;
-    --amplify-primary-color: #C42126;
-    --amplify-primary-tint: #ff363c;
-    --amplify-primary-shade: #821114;
-}
+        sans-serif!important;;
+    --amplify-primary-color: #00913A!important;
+    --amplify-primary-tint: #68b386!important;;
+    --amplify-primary-shade: #89C9A3!important;;
+} */
 
-amplify-authenticator, .amplify-authenticator {
-    display: flex;
+[data-amplify-authenticator] {
+    --amplify-font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
+        'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
+        sans-serif!important;;
+    /* --amplify-components-checkbox-icon-background-color: #00913A;
+    --amplify-components-tabs-item-active-border-color: #00913A;
+    --amplify-components-tabs-item-active-color: #00913A;
+    --amplify-colors-font-primary: #00913A;
+    --amplify-components-button-primary-background-color:  #00913A;
+    --amplify-components-tabs-item-hover-color: #68b386;
+    --amplify-components-button-primary-hover-background-color: #68b386; */
+
     justify-content: center;
     align-items: flex-start;
-    flex: 1;
-    margin-top: -64px;
-    height: calc(100vh - 64px);
-    background-color: #ebebeb;
-    padding: 32px;
+    padding: 64px;
+    --amplify-components-autocomplete-menu-options-max-height: 120px;
 }

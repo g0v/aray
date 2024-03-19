@@ -29,17 +29,13 @@ export default function ContributionHeatmap({
         let scaleValue;
         if (value.count === 0) {
           scaleValue = 0;
-        } else
-        if (value.count <= 5) {
+        } else if (value.count <= 5) {
           scaleValue = 1;
-        } else
-        if (value.count <= 10) {
+        } else if (value.count <= 10) {
           scaleValue = 2;
-        } else
-        if (value.count <= 20) {
+        } else if (value.count <= 20) {
           scaleValue = 3;
-        } else
-        if (value.count <= 30) {
+        } else if (value.count <= 30) {
           scaleValue = 4;
         } else {
           scaleValue = 5;

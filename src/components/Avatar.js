@@ -26,7 +26,7 @@ const useStyles = makeStyles((theme) => ({
 
 export default function CustomAvatar({
   size = 24,
-  variant = 'circle',
+  variant = 'circular',
   showEditor = false,
   canEdit = false,
   src,
@@ -67,7 +67,7 @@ export default function CustomAvatar({
           <AvatarEditor
             title={editorTitle}
             s3Key={s3Key}
-            exportAsSquare={variant !== 'circle'}
+            exportAsSquare={variant !== 'circular'}
             onUpdate={onUpdate}
           />
         </div>
@@ -77,7 +77,7 @@ export default function CustomAvatar({
 }
 
 CustomAvatar.propTypes = {
-  src: PropTypes.string.isRequired,
+  src: PropTypes.string,
   fallbackSrc: PropTypes.string,
   size: PropTypes.number,
   variant: PropTypes.string,

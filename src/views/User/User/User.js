@@ -118,8 +118,7 @@ export default function User({ id: inId, computedMatch, match }) {
   useEffect(() => {
     if (inId) {
       setId(inId);
-    } else
-    if (computedMatch || match) {
+    } else if (computedMatch || match) {
       const { params: { id } } = computedMatch || match;
       const username = localStorage.getItem('app:username');
       setId(id || username);

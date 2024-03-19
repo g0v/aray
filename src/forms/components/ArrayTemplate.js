@@ -2,8 +2,6 @@
 
 import React from 'react';
 
-import { utils } from '@rjsf/core';
-
 import Box from '@material-ui/core/Box';
 import Grid from '@material-ui/core/Grid';
 import FormControl from '@material-ui/core/FormControl';
@@ -12,16 +10,13 @@ import InputLabel from '@material-ui/core/InputLabel';
 import AddButton from './AddButton';
 import IconButton from './IconButton';
 
-const {
-  isMultiSelect,
-  getDefaultRegistry,
-} = utils;
-
 const ArrayFieldTemplate = (props) => {
-  const { schema, registry = getDefaultRegistry() } = props;
+  const { schema, registry } = props;
+  const { schemaUtils } = registry;
 
   // TODO: update types so we don't have to cast registry as any
-  if (isMultiSelect(schema, registry.rootSchema)) {
+  // https://rjsf-team.github.io/react-jsonschema-form/docs/migration-guides/v5.x%20upgrade%20guide/
+  if (schemaUtils.isMultiSelect(schema, registry.rootSchema)) {
     return <DefaultFixedArrayFieldTemplate {...props} />;
   } else {
     return <DefaultNormalArrayFieldTemplate {...props} />;

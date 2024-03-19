@@ -1,6 +1,7 @@
 // import React from 'react';
 import { Route } from 'react-router-dom';
 
+import HomeIcon from '@material-ui/icons/Home';
 import DashboardIcon from '@material-ui/icons/Dashboard';
 import ListAltIcon from '@material-ui/icons/ListAlt';
 import GroupIcon from '@material-ui/icons/Group';
@@ -10,6 +11,7 @@ import ProtectedRoute from 'components/ProtectedRoute';
 
 import Dashboard from 'views/Admin/Dashboard';
 
+import LandingPage from 'views/LandingPage';
 import userAllRoutes from 'views/User/routes';
 import ProjectList from 'views/User/ProjectList';
 import Project from 'views/User/Project';
@@ -17,6 +19,12 @@ import UserList from 'views/User/UserList';
 import User from 'views/User/User';
 
 export const generalRoutes = [
+  {
+    title: '首頁',
+    icon: HomeIcon,
+    paths: [{ path: '/', exact: true }],
+    component: LandingPage,
+  },
   {
     title: 'title_projectList',
     icon: ListAltIcon,

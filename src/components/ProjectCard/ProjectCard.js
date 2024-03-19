@@ -39,7 +39,7 @@ export default function ProjectCard({
   project: inProject,
   projectId: inProjectId,
   userProject,
-  variant = '',
+  variant = 'elevation',
   hideSummary,
 }) {
   const classes = useStyles();

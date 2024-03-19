@@ -1,122 +1,225 @@
 {
-  "function": {
-    "aray6131feb9PostConfirmation": {
-      "build": true,
-      "providerPlugin": "awscloudformation",
-      "service": "Lambda"
-    },
-    "AdminQueriese3eefe7b": {
-      "service": "Lambda",
-      "providerPlugin": "awscloudformation",
-      "build": true,
+  "api": {
+    "AdminQueries": {
+      "authorizationType": "AMAZON_COGNITO_USER_POOLS",
       "dependsOn": [
         {
-          "category": "auth",
-          "resourceName": "aray6131feb9",
           "attributes": [
             "UserPoolId"
-          ]
-        }
-      ]
-    },
-    "projectActions": {
-      "build": true,
-      "providerPlugin": "awscloudformation",
-      "service": "Lambda",
-      "dependsOn": [
+          ],
+          "category": "auth",
+          "resourceName": "aray6131feb9"
+        },
         {
-          "category": "api",
-          "resourceName": "aray",
-          "attributes": [
-            "GraphQLAPIIdOutput"
-          ]
-        }
-      ]
-    },
-    "statementGenerator": {
-      "build": true,
-      "providerPlugin": "awscloudformation",
-      "service": "Lambda",
-      "dependsOn": [
-        {
-          "category": "api",
-          "resourceName": "aray",
-          "attributes": [
-            "GraphQLAPIIdOutput"
-          ]
-        }
-      ]
-    }
-  },
-  "auth": {
-    "aray6131feb9": {
-      "service": "Cognito",
-      "providerPlugin": "awscloudformation",
-      "dependsOn": [
-        {
-          "category": "function",
-          "resourceName": "aray6131feb9PostConfirmation",
-          "triggerProvider": "Cognito",
           "attributes": [
             "Arn",
             "Name"
-          ]
+          ],
+          "category": "function",
+          "resourceName": "AdminQueriese3eefe7b"
         }
       ],
-      "customAuth": false
-    }
-  },
-  "api": {
-    "aray": {
-      "service": "AppSync",
       "providerPlugin": "awscloudformation",
+      "service": "API Gateway"
+    },
+    "aray": {
+      "dependsOn": [
+        {
+          "attributes": [
+            "UserPoolId"
+          ],
+          "category": "auth",
+          "resourceName": "aray6131feb9"
+        }
+      ],
       "output": {
         "authConfig": {
+          "additionalAuthenticationProviders": [
+            {
+              "apiKeyConfig": {
+                "apiKeyExpirationDate": "2025-03-18T19:48:46.300Z",
+                "apiKeyExpirationDays": 365,
+                "description": "public"
+              },
+              "authenticationType": "API_KEY"
+            }
+          ],
           "defaultAuthentication": {
             "authenticationType": "AMAZON_COGNITO_USER_POOLS",
             "userPoolConfig": {
               "userPoolId": "autharay6131feb9"
             }
-          },
-          "additionalAuthenticationProviders": [
-            {
-              "authenticationType": "API_KEY",
-              "apiKeyConfig": {
-                "apiKeyExpirationDays": 365,
-                "description": "public"
-              }
-            }
-          ]
+          }
         }
-      }
-    },
-    "AdminQueries": {
-      "service": "API Gateway",
+      },
       "providerPlugin": "awscloudformation",
-      "authorizationType": "AMAZON_COGNITO_USER_POOLS",
+      "service": "AppSync"
+    }
+  },
+  "auth": {
+    "aray6131feb9": {
+      "customAuth": false,
       "dependsOn": [
         {
-          "category": "auth",
-          "resourceName": "aray6131feb9",
-          "attributes": [
-            "UserPoolId"
-          ]
-        },
-        {
-          "category": "function",
-          "resourceName": "AdminQueriese3eefe7b",
           "attributes": [
             "Arn",
             "Name"
-          ]
+          ],
+          "category": "function",
+          "resourceName": "aray6131feb9PostConfirmation",
+          "triggerProvider": "Cognito"
+        }
+      ],
+      "frontendAuthConfig": {
+        "mfaConfiguration": "OFF",
+        "mfaTypes": [
+          "SMS"
+        ],
+        "passwordProtectionSettings": {
+          "passwordPolicyCharacters": [],
+          "passwordPolicyMinLength": 8
+        },
+        "signupAttributes": [
+          "EMAIL",
+          "NAME"
+        ],
+        "socialProviders": [],
+        "usernameAttributes": [],
+        "verificationMechanisms": [
+          "EMAIL"
+        ]
+      },
+      "providerPlugin": "awscloudformation",
+      "service": "Cognito"
+    }
+  },
+  "function": {
+    "AdminQueriese3eefe7b": {
+      "build": true,
+      "dependsOn": [
+        {
+          "attributes": [
+            "UserPoolId"
+          ],
+          "category": "auth",
+          "resourceName": "aray6131feb9"
+        }
+      ],
+      "providerPlugin": "awscloudformation",
+      "service": "Lambda"
+    },
+    "aray6131feb9PostConfirmation": {
+      "build": true,
+      "providerPlugin": "awscloudformation",
+      "service": "Lambda"
+    },
+    "projectActions": {
+      "build": true,
+      "dependsOn": [
+        {
+          "attributes": [
+            "GraphQLAPIIdOutput"
+          ],
+          "category": "api",
+          "resourceName": "aray"
+        }
+      ],
+      "providerPlugin": "awscloudformation",
+      "service": "Lambda"
+    },
+    "statementGenerator": {
+      "build": true,
+      "dependsOn": [
+        {
+          "attributes": [
+            "GraphQLAPIIdOutput"
+          ],
+          "category": "api",
+          "resourceName": "aray"
+        }
+      ],
+      "providerPlugin": "awscloudformation",
+      "service": "Lambda"
+    }
+  },
+  "parameters": {
+    "AMPLIFY_function_AdminQueriese3eefe7b_deploymentBucketName": {
+      "usedBy": [
+        {
+          "category": "function",
+          "resourceName": "AdminQueriese3eefe7b"
+        }
+      ]
+    },
+    "AMPLIFY_function_AdminQueriese3eefe7b_s3Key": {
+      "usedBy": [
+        {
+          "category": "function",
+          "resourceName": "AdminQueriese3eefe7b"
+        }
+      ]
+    },
+    "AMPLIFY_function_aray6131feb9PostConfirmation_GROUP": {
+      "usedBy": [
+        {
+          "category": "function",
+          "resourceName": "aray6131feb9PostConfirmation"
+        }
+      ]
+    },
+    "AMPLIFY_function_aray6131feb9PostConfirmation_deploymentBucketName": {
+      "usedBy": [
+        {
+          "category": "function",
+          "resourceName": "aray6131feb9PostConfirmation"
+        }
+      ]
+    },
+    "AMPLIFY_function_aray6131feb9PostConfirmation_s3Key": {
+      "usedBy": [
+        {
+          "category": "function",
+          "resourceName": "aray6131feb9PostConfirmation"
+        }
+      ]
+    },
+    "AMPLIFY_function_projectActions_deploymentBucketName": {
+      "usedBy": [
+        {
+          "category": "function",
+          "resourceName": "projectActions"
+        }
+      ]
+    },
+    "AMPLIFY_function_projectActions_s3Key": {
+      "usedBy": [
+        {
+          "category": "function",
+          "resourceName": "projectActions"
+        }
+      ]
+    },
+    "AMPLIFY_function_statementGenerator_deploymentBucketName": {
+      "usedBy": [
+        {
+          "category": "function",
+          "resourceName": "statementGenerator"
+        }
+      ]
+    },
+    "AMPLIFY_function_statementGenerator_s3Key": {
+      "usedBy": [
+        {
+          "category": "function",
+          "resourceName": "statementGenerator"
         }
       ]
     }
   },
   "storage": {
     "aray": {
-      "service": "S3",
-      "providerPlugin": "awscloudformation"
+      "providerPlugin": "awscloudformation",
+      "service": "S3"
     }
   }
 }

@@ -3,12 +3,9 @@ import React from 'react';
 
 import Grid from '@material-ui/core/Grid';
 import { makeStyles } from '@material-ui/styles';
-
-import { utils } from '@rjsf/core';
+import { canExpand } from '@rjsf/utils';
 
 import AddButton from './AddButton';
-
-const { canExpand } = utils;
 
 const useStyles = makeStyles({
   root: {

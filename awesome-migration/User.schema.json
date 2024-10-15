@@ -1,0 +1,507 @@
+{
+    "kind": "OBJECT",
+    "name": "User",
+    "description": null,
+    "fields": [
+        {
+            "name": "username",
+            "description": null,
+            "args": [],
+            "type": {
+                "kind": "NON_NULL",
+                "name": null,
+                "ofType": {
+                    "kind": "SCALAR",
+                    "name": "String",
+                    "ofType": null
+                }
+            },
+            "isDeprecated": false,
+            "deprecationReason": null
+        },
+        {
+            "name": "status",
+            "description": null,
+            "args": [],
+            "type": {
+                "kind": "NON_NULL",
+                "name": null,
+                "ofType": {
+                    "kind": "ENUM",
+                    "name": "UserStatus",
+                    "ofType": null
+                }
+            },
+            "isDeprecated": false,
+            "deprecationReason": null
+        },
+        {
+            "name": "name",
+            "description": null,
+            "args": [],
+            "type": {
+                "kind": "NON_NULL",
+                "name": null,
+                "ofType": {
+                    "kind": "SCALAR",
+                    "name": "String",
+                    "ofType": null
+                }
+            },
+            "isDeprecated": false,
+            "deprecationReason": null
+        },
+        {
+            "name": "email",
+            "description": null,
+            "args": [],
+            "type": {
+                "kind": "NON_NULL",
+                "name": null,
+                "ofType": {
+                    "kind": "SCALAR",
+                    "name": "AWSEmail",
+                    "ofType": null
+                }
+            },
+            "isDeprecated": false,
+            "deprecationReason": null
+        },
+        {
+            "name": "selfIntroduction",
+            "description": null,
+            "args": [],
+            "type": {
+                "kind": "SCALAR",
+                "name": "String",
+                "ofType": null
+            },
+            "isDeprecated": false,
+            "deprecationReason": null
+        },
+        {
+            "name": "location",
+            "description": null,
+            "args": [],
+            "type": {
+                "kind": "SCALAR",
+                "name": "String",
+                "ofType": null
+            },
+            "isDeprecated": false,
+            "deprecationReason": null
+        },
+        {
+            "name": "timeZone",
+            "description": null,
+            "args": [],
+            "type": {
+                "kind": "SCALAR",
+                "name": "String",
+                "ofType": null
+            },
+            "isDeprecated": false,
+            "deprecationReason": null
+        },
+        {
+            "name": "slackId",
+            "description": null,
+            "args": [],
+            "type": {
+                "kind": "SCALAR",
+                "name": "String",
+                "ofType": null
+            },
+            "isDeprecated": false,
+            "deprecationReason": null
+        },
+        {
+            "name": "slackIdUrl",
+            "description": null,
+            "args": [],
+            "type": {
+                "kind": "SCALAR",
+                "name": "AWSURL",
+                "ofType": null
+            },
+            "isDeprecated": false,
+            "deprecationReason": null
+        },
+        {
+            "name": "urlWebsite",
+            "description": null,
+            "args": [],
+            "type": {
+                "kind": "SCALAR",
+                "name": "AWSURL",
+                "ofType": null
+            },
+            "isDeprecated": false,
+            "deprecationReason": null
+        },
+        {
+            "name": "urlGithub",
+            "description": null,
+            "args": [],
+            "type": {
+                "kind": "SCALAR",
+                "name": "AWSURL",
+                "ofType": null
+            },
+            "isDeprecated": false,
+            "deprecationReason": null
+        },
+        {
+            "name": "urlLinkedIn",
+            "description": null,
+            "args": [],
+            "type": {
+                "kind": "SCALAR",
+                "name": "AWSURL",
+                "ofType": null
+            },
+            "isDeprecated": false,
+            "deprecationReason": null
+        },
+        {
+            "name": "urlFacebook",
+            "description": null,
+            "args": [],
+            "type": {
+                "kind": "SCALAR",
+                "name": "AWSURL",
+                "ofType": null
+            },
+            "isDeprecated": false,
+            "deprecationReason": null
+        },
+        {
+            "name": "urlTwitter",
+            "description": null,
+            "args": [],
+            "type": {
+                "kind": "SCALAR",
+                "name": "AWSURL",
+                "ofType": null
+            },
+            "isDeprecated": false,
+            "deprecationReason": null
+        },
+        {
+            "name": "urlInstagram",
+            "description": null,
+            "args": [],
+            "type": {
+                "kind": "SCALAR",
+                "name": "AWSURL",
+                "ofType": null
+            },
+            "isDeprecated": false,
+            "deprecationReason": null
+        },
+        {
+            "name": "totalCompletedHours",
+            "description": null,
+            "args": [],
+            "type": {
+                "kind": "SCALAR",
+                "name": "Float",
+                "ofType": null
+            },
+            "isDeprecated": false,
+            "deprecationReason": null
+        },
+        {
+            "name": "totalCompletedTasks",
+            "description": null,
+            "args": [],
+            "type": {
+                "kind": "SCALAR",
+                "name": "Int",
+                "ofType": null
+            },
+            "isDeprecated": false,
+            "deprecationReason": null
+        },
+        {
+            "name": "createdAt",
+            "description": null,
+            "args": [],
+            "type": {
+                "kind": "NON_NULL",
+                "name": null,
+                "ofType": {
+                    "kind": "SCALAR",
+                    "name": "AWSDateTime",
+                    "ofType": null
+                }
+            },
+            "isDeprecated": false,
+            "deprecationReason": null
+        },
+        {
+            "name": "createdBy",
+            "description": null,
+            "args": [],
+            "type": {
+                "kind": "NON_NULL",
+                "name": null,
+                "ofType": {
+                    "kind": "SCALAR",
+                    "name": "String",
+                    "ofType": null
+                }
+            },
+            "isDeprecated": false,
+            "deprecationReason": null
+        },
+        {
+            "name": "updatedAt",
+            "description": null,
+            "args": [],
+            "type": {
+                "kind": "NON_NULL",
+                "name": null,
+                "ofType": {
+                    "kind": "SCALAR",
+                    "name": "AWSDateTime",
+                    "ofType": null
+                }
+            },
+            "isDeprecated": false,
+            "deprecationReason": null
+        },
+        {
+            "name": "updatedBy",
+            "description": null,
+            "args": [],
+            "type": {
+                "kind": "NON_NULL",
+                "name": null,
+                "ofType": {
+                    "kind": "SCALAR",
+                    "name": "String",
+                    "ofType": null
+                }
+            },
+            "isDeprecated": false,
+            "deprecationReason": null
+        },
+        {
+            "name": "needs",
+            "description": null,
+            "args": [
+                {
+                    "name": "needId",
+                    "description": null,
+                    "type": {
+                        "kind": "INPUT_OBJECT",
+                        "name": "ModelIDKeyConditionInput",
+                        "ofType": null
+                    },
+                    "defaultValue": null
+                },
+                {
+                    "name": "filter",
+                    "description": null,
+                    "type": {
+                        "kind": "INPUT_OBJECT",
+                        "name": "ModelUserNeedFilterInput",
+                        "ofType": null
+                    },
+                    "defaultValue": null
+                },
+                {
+                    "name": "sortDirection",
+                    "description": null,
+                    "type": {
+                        "kind": "ENUM",
+                        "name": "ModelSortDirection",
+                        "ofType": null
+                    },
+                    "defaultValue": null
+                },
+                {
+                    "name": "limit",
+                    "description": null,
+                    "type": {
+                        "kind": "SCALAR",
+                        "name": "Int",
+                        "ofType": null
+                    },
+                    "defaultValue": null
+                },
+                {
+                    "name": "nextToken",
+                    "description": null,
+                    "type": {
+                        "kind": "SCALAR",
+                        "name": "String",
+                        "ofType": null
+                    },
+                    "defaultValue": null
+                }
+            ],
+            "type": {
+                "kind": "OBJECT",
+                "name": "ModelUserNeedConnection",
+                "ofType": null
+            },
+            "isDeprecated": false,
+            "deprecationReason": null
+        },
+        {
+            "name": "projects",
+            "description": null,
+            "args": [
+                {
+                    "name": "projectId",
+                    "description": null,
+                    "type": {
+                        "kind": "INPUT_OBJECT",
+                        "name": "ModelIDKeyConditionInput",
+                        "ofType": null
+                    },
+                    "defaultValue": null
+                },
+                {
+                    "name": "filter",
+                    "description": null,
+                    "type": {
+                        "kind": "INPUT_OBJECT",
+                        "name": "ModelUserProjectFilterInput",
+                        "ofType": null
+                    },
+                    "defaultValue": null
+                },
+                {
+                    "name": "sortDirection",
+                    "description": null,
+                    "type": {
+                        "kind": "ENUM",
+                        "name": "ModelSortDirection",
+                        "ofType": null
+                    },
+                    "defaultValue": null
+                },
+                {
+                    "name": "limit",
+                    "description": null,
+                    "type": {
+                        "kind": "SCALAR",
+                        "name": "Int",
+                        "ofType": null
+                    },
+                    "defaultValue": null
+                },
+                {
+                    "name": "nextToken",
+                    "description": null,
+                    "type": {
+                        "kind": "SCALAR",
+                        "name": "String",
+                        "ofType": null
+                    },
+                    "defaultValue": null
+                }
+            ],
+            "type": {
+                "kind": "OBJECT",
+                "name": "ModelUserProjectConnection",
+                "ofType": null
+            },
+            "isDeprecated": false,
+            "deprecationReason": null
+        },
+        {
+            "name": "tags",
+            "description": null,
+            "args": [
+                {
+                    "name": "tagId",
+                    "description": null,
+                    "type": {
+                        "kind": "INPUT_OBJECT",
+                        "name": "ModelIDKeyConditionInput",
+                        "ofType": null
+                    },
+                    "defaultValue": null
+                },
+                {
+                    "name": "filter",
+                    "description": null,
+                    "type": {
+                        "kind": "INPUT_OBJECT",
+                        "name": "ModelUserTagFilterInput",
+                        "ofType": null
+                    },
+                    "defaultValue": null
+                },
+                {
+                    "name": "sortDirection",
+                    "description": null,
+                    "type": {
+                        "kind": "ENUM",
+                        "name": "ModelSortDirection",
+                        "ofType": null
+                    },
+                    "defaultValue": null
+                },
+                {
+                    "name": "limit",
+                    "description": null,
+                    "type": {
+                        "kind": "SCALAR",
+                        "name": "Int",
+                        "ofType": null
+                    },
+                    "defaultValue": null
+                },
+                {
+                    "name": "nextToken",
+                    "description": null,
+                    "type": {
+                        "kind": "SCALAR",
+                        "name": "String",
+                        "ofType": null
+                    },
+                    "defaultValue": null
+                }
+            ],
+            "type": {
+                "kind": "OBJECT",
+                "name": "ModelUserTagConnection",
+                "ofType": null
+            },
+            "isDeprecated": false,
+            "deprecationReason": null
+        }
+    ],
+    "inputFields": null,
+    "interfaces": [],
+    "enumValues": null,
+    "possibleTypes": null
+},
+{
+    "kind": "ENUM",
+    "name": "UserStatus",
+    "description": null,
+    "fields": null,
+    "inputFields": null,
+    "interfaces": null,
+    "enumValues": [
+        {
+            "name": "active",
+            "description": null,
+            "isDeprecated": false,
+            "deprecationReason": null
+        },
+        {
+            "name": "inactive",
+            "description": null,
+            "isDeprecated": false,
+            "deprecationReason": null
+        }
+    ],
+    "possibleTypes": null
+}

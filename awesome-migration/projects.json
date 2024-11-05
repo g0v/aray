@@ -33,11 +33,11 @@
     "source": "manual",
     "name": "Cofacts 真的假的",
     "description": "",
-    "g0v_db_rows": "377,382,364,415,438,455,469,482,501,524,562,574,593,611,633,645,652,676,694,711,726,739,752,762,777,797,817,830,843,860,883,909,919,929,948,960,974,988,1009,1016",
+    "g0v_db_rows": "377,382,364,415,438,455,469,482,501,524,562,574,593,611,633,645,652,676,694,711,726,739,752,762,777,797,817,830,843,860,883,909,919,929,948,960,974,988,1009,1016,1040",
     "owners": "MrOrz,bil",
     "tags": "事實查核",
     "github_repos": "cofacts/rumors-api,cofacts/rumors-site,cofacts/rumors-line-bot,cofacts/rumors-fb-bot,cofacts/rumors-ai,cofacts/rumors-db,cofacts/rumors-deploy",
-    "homepage": ""
+    "homepage": "https://cofacts.tw/hack"
   },
   {
     "source": "manual",
@@ -184,7 +184,7 @@
     "name": "Dev-Env",
     "description": "",
     "g0v_db_rows": "",
-    "owners": "ronnywang",
+    "owners": "Ronny Wang",
     "tags": "g0v基礎建設",
     "github_repos": "ronnywang/dev-env",
     "homepage": "https://github.com/ronnywang/dev-env"
@@ -324,7 +324,7 @@
     "name": "斧頭幫大挑戰",
     "description": "",
     "g0v_db_rows": "",
-    "owners": "ronnywang",
+    "owners": "Ronny Wang",
     "tags": "g0v基礎建設",
     "github_repos": "ronnywang/axe.g0v.tw",
     "homepage": "https://github.com/ronnywang/axe.g0v.tw"
@@ -364,7 +364,7 @@
     "name": "台灣法院判決書可分享網址產生器",
     "description": "",
     "g0v_db_rows": "",
-    "owners": "ronnywang",
+    "owners": "Ronny Wang",
     "tags": "開放資料,開放政府,法制與政府組織",
     "github_repos": "ronnywang/judicial-easyer",
     "homepage": "https://github.com/ronnywang/judicial-easyer"
@@ -414,7 +414,7 @@
     "name": "台灣內閣變化",
     "description": "",
     "g0v_db_rows": "",
-    "owners": "ronnywang",
+    "owners": "Ronny Wang",
     "tags": "開放資料,開放政府,法制與政府組織",
     "github_repos": "ronnywang/taiwan-cabinet",
     "homepage": "https://github.com/ronnywang/taiwan-cabinet"
@@ -684,7 +684,7 @@
     "name": "地址轉經緯度",
     "description": "",
     "g0v_db_rows": "",
-    "owners": "ronnywang",
+    "owners": "Ronny Wang",
     "tags": "開放資料,開放政府,政府運作",
     "github_repos": "ronnywang/taiwan-address-lookup",
     "homepage": "https://github.com/ronnywang/taiwan-address-lookup"
@@ -694,7 +694,7 @@
     "name": "政府開放資料平臺備份",
     "description": "",
     "g0v_db_rows": "",
-    "owners": "ronnywang",
+    "owners": "Ronny Wang",
     "tags": "開放資料,開放政府,政府運作",
     "github_repos": "ronnywang/data.g0v.ronny.tw",
     "homepage": "https://github.com/ronnywang/data.g0v.ronny.tw"
@@ -834,7 +834,7 @@
     "name": "台灣村里家戶用電量",
     "description": "",
     "g0v_db_rows": "",
-    "owners": "ronnywang",
+    "owners": "Ronny Wang",
     "tags": "開放資料,開放政府,公營服務",
     "github_repos": "ronnywang/ecolife.epa.gov.tw",
     "homepage": "https://github.com/ronnywang/ecolife.epa.gov.tw"
@@ -1034,7 +1034,7 @@
     "name": "求職小幫手",
     "description": "",
     "g0v_db_rows": 467,
-    "owners": "ronnywang",
+    "owners": "Ronny Wang",
     "tags": "開放資料,開放政府,經濟活動",
     "github_repos": "ronnywang/jobhelper,nansenat16/jobhelper-mobile,yisheng-liu/jobhelper_ff,nansenat16/jobhelper-ie",
     "homepage": "https://github.com/ronnywang/jobhelper"
@@ -1064,7 +1064,7 @@
     "name": "台灣公司登記資料",
     "description": "",
     "g0v_db_rows": "",
-    "owners": "ronnywang",
+    "owners": "Ronny Wang",
     "tags": "開放資料,開放政府,經濟活動",
     "github_repos": "ronnywang/twcompany",
     "homepage": "https://github.com/ronnywang/twcompany"
@@ -1074,7 +1074,7 @@
     "name": "台灣公司關係圖",
     "description": "",
     "g0v_db_rows": "",
-    "owners": "ronnywang",
+    "owners": "Ronny Wang",
     "tags": "開放資料,開放政府,經濟活動",
     "github_repos": "ronnywang/company-graph",
     "homepage": "https://github.com/ronnywang/company-graph"
@@ -1304,7 +1304,7 @@
     "name": "NewsDiff 官方新聞稿異動情況站",
     "description": "",
     "g0v_db_rows": "",
-    "owners": "ronnywang",
+    "owners": "Ronny Wang",
     "tags": "新媒體",
     "github_repos": "ronnywang/newsdiff",
     "homepage": "https://github.com/ronnywang/newsdiff"
@@ -1384,7 +1384,7 @@
     "name": "新聞趨勢統計",
     "description": "",
     "g0v_db_rows": "",
-    "owners": "ronnywang",
+    "owners": "Ronny Wang",
     "tags": "新媒體",
     "github_repos": "ronnywang/newstrend.g0v.ronny.tw",
     "homepage": "https://github.com/ronnywang/newstrend.g0v.ronny.tw"
@@ -1404,7 +1404,7 @@
     "name": "LagNews 腿新聞",
     "description": "",
     "g0v_db_rows": "",
-    "owners": "ronnywang",
+    "owners": "Ronny Wang",
     "tags": "新媒體",
     "github_repos": "ronnywang/lagnews",
     "homepage": "https://github.com/ronnywang/lagnews"
@@ -1444,7 +1444,7 @@
     "name": "動民主",
     "description": "",
     "g0v_db_rows": "55,54,106,153,154,95,65",
-    "owners": "ETBlue,tkirby",
+    "owners": "ETblue,tkirby",
     "tags": "政治,民主參與",
     "github_repos": "",
     "homepage": "https://g0v.hackpad.tw/-g0v-hackath7n-g6Ka3ms2rp3"
@@ -1453,7 +1453,7 @@
     "source": "g0v_db",
     "name": "0 時動議 LINK TOPIC",
     "description": "",
-    "g0v_db_rows": 3,
+    "g0v_db_rows": "unknown",
     "owners": "clkao,kcwu,hychen",
     "tags": "媒體",
     "github_repos": "",
@@ -1474,7 +1474,7 @@
     "name": "2015 summer of ?",
     "description": "",
     "g0v_db_rows": 206,
-    "owners": "Ly",
+    "owners": "LY",
     "tags": "法律",
     "github_repos": "",
     "homepage": "https://speakerdeck.com/yhsiang/2015-summer-of"
@@ -1534,7 +1534,7 @@
     "name": "404失蹤兒童協尋計畫",
     "description": "",
     "g0v_db_rows": 16,
-    "owners": "ET Blue",
+    "owners": "ETblue",
     "tags": "兒少",
     "github_repos": "",
     "homepage": "https://github.com/g0v/dev/wiki/Project-ChildNotFound.tw"
@@ -1584,7 +1584,7 @@
     "name": "BatDrone（婦幼治安犯罪危險地點提醒、監測）",
     "description": "",
     "g0v_db_rows": 262,
-    "owners": "kevinphy",
+    "owners": "kevinphys",
     "tags": "兒少",
     "github_repos": "",
     "homepage": "https://g0v.hackpad.com/BatDrone--BB8UPY6SPCD"
@@ -1614,7 +1614,7 @@
     "name": "Child Not Found",
     "description": "",
     "g0v_db_rows": 4,
-    "owners": "ETBlue,?",
+    "owners": "ETBlue,unknow",
     "tags": "兒少",
     "github_repos": "",
     "homepage": ""
@@ -1694,7 +1694,7 @@
     "name": "Excel 小工具",
     "description": "",
     "g0v_db_rows": 303,
-    "owners": "ronny",
+    "owners": "Ronny",
     "tags": "工具",
     "github_repos": "",
     "homepage": "https://g0v.hackpad.com/Excel--jkpco57DjJH"
@@ -1904,7 +1904,7 @@
     "name": "News Diff 來看看新聞改過了沒?",
     "description": "",
     "g0v_db_rows": 41,
-    "owners": "ronnywang",
+    "owners": "Ronny Wang",
     "tags": "媒體",
     "github_repos": "",
     "homepage": "https://github.com/ronnywang/newsdiff"
@@ -2074,7 +2074,7 @@
     "name": "The Space Hub",
     "description": "",
     "g0v_db_rows": 470,
-    "owners": "bess",
+    "owners": "Bess",
     "tags": "地圖,工具",
     "github_repos": "",
     "homepage": "https://g0v.hackpad.tw/The-Space-Hub"
@@ -2084,7 +2084,7 @@
     "name": "The good, bad and ugly of Emergency Data",
     "description": "",
     "g0v_db_rows": 547,
-    "owners": "Ziv/Peling/Dennis",
+    "owners": "Ziv,Peling,Dennis",
     "tags": "待確認",
     "github_repos": "",
     "homepage": "https://drive.google.com/file/d/19PfW0r6i2bR8g6EGStOZGTabWUP8BHBS/view?usp=sharing"
@@ -2124,7 +2124,7 @@
     "name": "WizardAmigos CodeCamps",
     "description": "",
     "g0v_db_rows": 373,
-    "owners": "NIna&Alex",
+    "owners": "NIna,Alex",
     "tags": "工具,遊戲",
     "github_repos": "",
     "homepage": "http://slides.com/ninabreznik/wizardamigos-7#"
@@ -2194,7 +2194,7 @@
     "name": "elixus 到 g0v 之 ilya 紀念共筆",
     "description": "",
     "g0v_db_rows": 567,
-    "owners": "揪松",
+    "owners": "揪松團",
     "tags": "g0v",
     "github_repos": "",
     "homepage": ""
@@ -2374,7 +2374,7 @@
     "name": "g0v-shadow 影子政府網站",
     "description": "",
     "g0v_db_rows": 472,
-    "owners": "ttcat",
+    "owners": "Ttcat",
     "tags": "政治,監督",
     "github_repos": "",
     "homepage": "https://g0v.hackpad.tw/g0v-shadow--ta138sdLdND"
@@ -2454,7 +2454,7 @@
     "name": "g0v基礎建設- 首頁2.0",
     "description": "",
     "g0v_db_rows": 38,
-    "owners": "ETblue ipa",
+    "owners": "ETBlue,ipa",
     "tags": "g0v",
     "github_repos": "",
     "homepage": "http://hack.g0v.tw/meta/YC0Ig73WEMJ"
@@ -2474,7 +2474,7 @@
     "name": "g0v宣言台語版、英語版、多國語言版",
     "description": "",
     "g0v_db_rows": 620,
-    "owners": "isabel Hou",
+    "owners": "Isabel",
     "tags": "待確認",
     "github_repos": "",
     "homepage": "g0v slack #jothon #intl"
@@ -2633,8 +2633,8 @@
     "source": "g0v_db",
     "name": "vTaiwan",
     "description": "",
-    "g0v_db_rows": "973,992,874,725,648,509,494,475,443,362,216,944,973,1019",
-    "owners": "子魚,Peace,書漾,哲輔,au,tmonk",
+    "g0v_db_rows": "973,992,874,725,648,509,494,475,443,362,216,944,973,1019,1031",
+    "owners": "子魚,Peace,書漾,哲輔,au,tmonk,Peter",
     "tags": "開放資料,開放政府,法制與政府組織,民主參與",
     "github_repos": "g0v/vue.vtaiwan.tw,g0v/vtaiwan.tw,g0v/react.vtaiwan.tw,g0v/dc.vtaiwan.tw",
     "homepage": "https://g0v.hackmd.io/@tmonk/rJHYWR9S4/https%3A%2F%2Fvtaiwan.tw%2F?type=book"
@@ -2664,7 +2664,7 @@
     "name": "「假的！」-- 護病比資料查詢",
     "description": "",
     "g0v_db_rows": 347,
-    "owners": "peggy",
+    "owners": "Peggy",
     "tags": "醫療",
     "github_repos": "",
     "homepage": "https://g0v.hackpad.com/L4KNanSM67U"
@@ -2684,7 +2684,7 @@
     "name": "「新聞分析指標」以及「轉檔工具」",
     "description": "",
     "g0v_db_rows": 410,
-    "owners": "Michael_LI（新聞松 x 媒觀）",
+    "owners": "Michael LI",
     "tags": "媒體",
     "github_repos": "",
     "homepage": "https://newshackathon.hackpad.com/--rJ6ArtkHum0"
@@ -2764,7 +2764,7 @@
     "name": "世界銀行x主計處",
     "description": "",
     "g0v_db_rows": 79,
-    "owners": "ronny",
+    "owners": "Ronny",
     "tags": "地圖,統計",
     "github_repos": "",
     "homepage": "https://docs.google.com/document/d/13tdMhFaa4AOxPhoxpfmIuCtkybDHaf69bGzuDkX6vBk/edit"
@@ -2814,7 +2814,7 @@
     "name": "人口等資訊地圖化",
     "description": "",
     "g0v_db_rows": 7,
-    "owners": "ronnywang",
+    "owners": "Ronny Wang",
     "tags": "人口",
     "github_repos": "",
     "homepage": ""
@@ -2874,7 +2874,7 @@
     "name": "信差 - 社運鄉民出來走",
     "description": "",
     "g0v_db_rows": 498,
-    "owners": "eddie",
+    "owners": "Eddie",
     "tags": "待確認",
     "github_repos": "",
     "homepage": "https://g0v.hackpad.tw/Courier--zbl3CtRxsmg"
@@ -2884,7 +2884,7 @@
     "name": "假新聞的主題：籌辦演講會／大松來玩桌遊《抓誑新聞》",
     "description": "",
     "g0v_db_rows": 555,
-    "owners": "Michael_LI",
+    "owners": "Michael LI",
     "tags": "待確認",
     "github_repos": "",
     "homepage": "https://hackmd.io/s/H10h63AIE#"
@@ -2914,7 +2914,7 @@
     "name": "全台公立動物收容所資訊統整",
     "description": "",
     "g0v_db_rows": 247,
-    "owners": "viola",
+    "owners": "Viola",
     "tags": "動物",
     "github_repos": "",
     "homepage": "https://g0v.hackpad.com/JBhVDOPxhxe"
@@ -2964,7 +2964,7 @@
     "name": "全民除黴計畫 APP4AM（新聞啄木鳥APP）＆其他專案",
     "description": "",
     "g0v_db_rows": "203,165,141",
-    "owners": "Michael_LI,Rhozan",
+    "owners": "Michael LI,Rhozan",
     "tags": "媒體",
     "github_repos": "",
     "homepage": "https://g0v.hackpad.com/-g0v--rEzVnbqCZrz"
@@ -2974,7 +2974,7 @@
     "name": "八仙塵爆　新聞分析（80天）",
     "description": "",
     "g0v_db_rows": 272,
-    "owners": "Michael_LI",
+    "owners": "Michael LI",
     "tags": "新聞,災害",
     "github_repos": "",
     "homepage": ""
@@ -3114,7 +3114,7 @@
     "name": "公民運動後勤表單、SOP",
     "description": "",
     "g0v_db_rows": 118,
-    "owners": "(有誰可以幫我廣告 XD 沒人的話就刪掉吧 =w=)",
+    "owners": "unknow",
     "tags": "政治",
     "github_repos": "",
     "homepage": "http://hackfoldr.org/congressnetwork/Q2ZQHLxhkK"
@@ -3204,7 +3204,7 @@
     "name": "判決書懶人包",
     "description": "",
     "g0v_db_rows": 256,
-    "owners": "ronny",
+    "owners": "Ronny",
     "tags": "法律",
     "github_repos": "",
     "homepage": "https://g0v.hackpad.com/suxchYnyCBR"
@@ -3244,7 +3244,7 @@
     "name": "勞基法函式庫：勞基法相關應用的基石",
     "description": "",
     "g0v_db_rows": 402,
-    "owners": "yurenju",
+    "owners": "Yuren Ju",
     "tags": "勞動",
     "github_repos": "",
     "homepage": "https://hackmd.io/c/SJES19Fy-"
@@ -3254,7 +3254,7 @@
     "name": "勞基法計算機 - 變形工時實作",
     "description": "",
     "g0v_db_rows": 341,
-    "owners": "Yuren",
+    "owners": "Yuren Ju",
     "tags": "勞動",
     "github_repos": "",
     "homepage": "https://github.com/g0v/workweek/issues/20"
@@ -3434,7 +3434,7 @@
     "name": "台北市長政見比較表",
     "description": "",
     "g0v_db_rows": 168,
-    "owners": "lololol(代理)",
+    "owners": "lololol",
     "tags": "政治",
     "github_repos": "",
     "homepage": "http://hack.etblue.tw/mayoral-table-project"
@@ -3554,7 +3554,7 @@
     "name": "國土管理局報告",
     "description": "",
     "g0v_db_rows": 60,
-    "owners": "mindos",
+    "owners": "Mindos",
     "tags": "土地",
     "github_repos": "",
     "homepage": "https://github.com/g0v/twgeojson"
@@ -3564,7 +3564,7 @@
     "name": "國家寶藏",
     "description": "",
     "g0v_db_rows": "441,408",
-    "owners": "蕭a,mooon",
+    "owners": "蕭A,mooon",
     "tags": "歷史",
     "github_repos": "national-treasures-tw/backend,national-treasures-tw/landing-page",
     "homepage": "http://beta.hackfoldr.org/national-treasures"
@@ -3654,7 +3654,7 @@
     "name": "地址轉經緯度 API",
     "description": "",
     "g0v_db_rows": 304,
-    "owners": "ronny",
+    "owners": "Ronny",
     "tags": "工具",
     "github_repos": "",
     "homepage": "https://github.com/ronnywang/taiwan-address-lookup"
@@ -3804,7 +3804,7 @@
     "name": "實價登錄 2.0 & 臺灣公寓大廈資料庫",
     "description": "",
     "g0v_db_rows": 588,
-    "owners": "易樓網 - 鄭淑麗",
+    "owners": "鄭淑麗",
     "tags": "建築",
     "github_repos": "",
     "homepage": "https://g0v.hackpad.tw/--Rxf1DaPMR6D"
@@ -3824,7 +3824,7 @@
     "name": "寵物需要我 Pet Need Me",
     "description": "",
     "g0v_db_rows": "91,75,59",
-    "owners": "jslee",
+    "owners": "jsleetw",
     "tags": "語言,文典,資料庫,社會參與",
     "github_repos": "jfsleetw/petneed.me",
     "homepage": "https://github.com/jsleetw/petneed.me"
@@ -3844,7 +3844,7 @@
     "name": "小蜜蜂戰鬥隊覆蓋率地圖視覺化",
     "description": "",
     "g0v_db_rows": 131,
-    "owners": "kirstenliu",
+    "owners": "Kirsten",
     "tags": "媒體",
     "github_repos": "",
     "homepage": "https://g0v.hackpad.com/KOsFaCMi6u0"
@@ -3864,7 +3864,7 @@
     "name": "展覽松",
     "description": "",
     "g0v_db_rows": 150,
-    "owners": "muyueh",
+    "owners": "Muyueh",
     "tags": "g0v",
     "github_repos": "",
     "homepage": "https://g0v.hackpad.com/CGK7T9IuQIw"
@@ -3904,7 +3904,7 @@
     "name": "市議員在幹嘛",
     "description": "",
     "g0v_db_rows": 479,
-    "owners": "fi",
+    "owners": "Fi",
     "tags": "議會",
     "github_repos": "",
     "homepage": "https://hackmd.io/EYQw7ArGAMAmDGBaeAWAZtRKDMLMmAA4AmLCYFSAUxGhVhCA"
@@ -3944,7 +3944,7 @@
     "name": "廢核連署平台",
     "description": "",
     "g0v_db_rows": 120,
-    "owners": "ttcat",
+    "owners": "Ttcat",
     "tags": "法律",
     "github_repos": "",
     "homepage": "https://g0v.hackpad.com/v15A2Oaw5JF"
@@ -3974,7 +3974,7 @@
     "name": "影片聲音文字圖片整理系統－－政府與民眾社會對話還原裝置",
     "description": "",
     "g0v_db_rows": 389,
-    "owners": "Michael_LI（VT System 開發團隊 ）",
+    "owners": "Michael LI",
     "tags": "工具",
     "github_repos": "",
     "homepage": "https://newshackathon.hackpad.com/vnXJ3yAaqdI"
@@ -3984,7 +3984,7 @@
     "name": "影片逐字稿自動化 & 整理系統",
     "description": "",
     "g0v_db_rows": 532,
-    "owners": "Michael_LI",
+    "owners": "Michael LI",
     "tags": "工具",
     "github_repos": "",
     "homepage": "https://grants.g0v.tw/projects/587388cb8798fb001e7324de"
@@ -4054,7 +4054,7 @@
     "name": "憲動盟野生官網 野生部落格",
     "description": "",
     "g0v_db_rows": 221,
-    "owners": "etblue",
+    "owners": "ETBlue",
     "tags": "法律",
     "github_repos": "",
     "homepage": "https://g0v.hackpad.com/-x--ZlxnPcG1xLm#:h=專案報告@2015/4/18-無殼蝸牛黑客松"
@@ -4071,20 +4071,10 @@
   },
   {
     "source": "g0v_db",
-    "name": "憲餅互動小鋪",
-    "description": "",
-    "g0v_db_rows": 220,
-    "owners": "isabel",
-    "tags": "法律",
-    "github_repos": "",
-    "homepage": "http://bit.ly/1Hi7BAf"
-  },
-  {
-    "source": "g0v_db",
     "name": "憲餅廚房",
     "description": "",
-    "g0v_db_rows": "205,186",
-    "owners": "isabel,ipa",
+    "g0v_db_rows": "220,205,186",
+    "owners": "Isabel,ipa",
     "tags": "法律",
     "github_repos": "",
     "homepage": "http://hackfoldr.org/cckitchen"
@@ -4244,7 +4234,7 @@
     "name": "授權小幫手(=ﾟωﾟ)ﾉ",
     "description": "",
     "g0v_db_rows": 250,
-    "owners": "moon_c (RS代)",
+    "owners": "moon_c",
     "tags": "法律",
     "github_repos": "",
     "homepage": "https://g0v.hackpad.com/CC-Cp3CFHqbLcx"
@@ -4331,7 +4321,7 @@
   },
   {
     "source": "g0v_db",
-    "name": "政權轉移/政策改變後\u000b被消失的那些資料",
+    "name": "政權轉移/政策改變後被消失的那些資料",
     "description": "",
     "g0v_db_rows": 352,
     "owners": "YK",
@@ -4364,7 +4354,7 @@
     "name": "政治獻金開放",
     "description": "",
     "g0v_db_rows": 460,
-    "owners": "hc",
+    "owners": "HC",
     "tags": "選舉",
     "github_repos": "",
     "homepage": ""
@@ -4444,7 +4434,7 @@
     "name": "文本分析器（用魚骨圖討論事情）",
     "description": "",
     "g0v_db_rows": 324,
-    "owners": "Michael_LI",
+    "owners": "Michael LI",
     "tags": "新聞",
     "github_repos": "",
     "homepage": "https://newshackathon.hackpad.com/2016-06-18g0v-Mrk4q9PMO40"
@@ -4494,7 +4484,7 @@
     "name": "新聞後面．觀眾留言的存檔（爬蟲機器人）",
     "description": "",
     "g0v_db_rows": 182,
-    "owners": "Michael_LI",
+    "owners": "Michael LI",
     "tags": "新聞",
     "github_repos": "",
     "homepage": "https://www.flickr.com/photos/_michael_li_/sets/72157649825519072"
@@ -4534,7 +4524,7 @@
     "name": "服務貿易協定受災地圖",
     "description": "",
     "g0v_db_rows": 51,
-    "owners": "lijung",
+    "owners": "chilijung",
     "tags": "法律",
     "github_repos": "",
     "homepage": "https://docs.google.com/file/d/0B-qcnEWFQQe3TWNDcnNMb21weUk/edit?usp=sharing"
@@ -4544,7 +4534,7 @@
     "name": "服貿專題網",
     "description": "",
     "g0v_db_rows": 125,
-    "owners": "Michael_LI",
+    "owners": "Michael LI",
     "tags": "法律",
     "github_repos": "",
     "homepage": "http://hack.g0v.tw/CSTACO"
@@ -4614,7 +4604,7 @@
     "name": "樣板劇逐字稿計畫",
     "description": "",
     "g0v_db_rows": 439,
-    "owners": "mrorz",
+    "owners": "MrOrz",
     "tags": "待確認",
     "github_repos": "",
     "homepage": "https://hackmd.io/c/ry2TPHV9W/%2Fs%2FBkkpi4uqb"
@@ -4664,7 +4654,7 @@
     "name": "沒有人在乎的「假新聞受害者」　－　X 媒體計劃",
     "description": "",
     "g0v_db_rows": 453,
-    "owners": "Michael_LI",
+    "owners": "Michael LI",
     "tags": "媒體",
     "github_repos": "",
     "homepage": "https://hackmd.io/CYTgLAjFBsAcC0BWAxrC8wDMAMZ4EMBTfAdg2mQCZhpNEBmEbYIA?view#"
@@ -4794,7 +4784,7 @@
     "name": "為匯流 N 法注射更多 NN－通訊傳播匯流修法",
     "description": "",
     "g0v_db_rows": 390,
-    "owners": "nchiild",
+    "owners": "nchild",
     "tags": "媒體",
     "github_repos": "",
     "homepage": "https://nninlaw.hackpad.com/dc"
@@ -4834,7 +4824,7 @@
     "name": "珊瑚體檢十年數據怎麼看",
     "description": "",
     "g0v_db_rows": 513,
-    "owners": "lulu",
+    "owners": "LuLu",
     "tags": "環境",
     "github_repos": "",
     "homepage": "https://docs.google.com/document/d/152VmClLsG6PYIZdliEYNdEu-ZPTdcpKQwD52n6DfprI/edit"
@@ -4874,7 +4864,7 @@
     "name": "發文附上判決書運動",
     "description": "",
     "g0v_db_rows": 236,
-    "owners": "ronny",
+    "owners": "Ronny",
     "tags": "法律",
     "github_repos": "",
     "homepage": "https://g0v.hackpad.com/hQ12Bq8UQIq"
@@ -5064,7 +5054,7 @@
     "name": "立法院 ivod下載網",
     "description": "",
     "g0v_db_rows": 219,
-    "owners": "Ly",
+    "owners": "LY",
     "tags": "法律",
     "github_repos": "",
     "homepage": "https://g0v.hackpad.com/IVOD--bwKQ3P8bGMv"
@@ -5444,7 +5434,7 @@
     "name": "菜價",
     "description": "",
     "g0v_db_rows": 105,
-    "owners": "muyueh",
+    "owners": "Muyueh",
     "tags": "農業",
     "github_repos": "",
     "homepage": "http://muyueh.com/30/veggieprice/ggplot2"
@@ -5514,7 +5504,7 @@
     "name": "要修憲了嗎？g0v 宣言修訂討論",
     "description": "",
     "g0v_db_rows": 619,
-    "owners": "isabel",
+    "owners": "Isabel",
     "tags": "g0v",
     "github_repos": "",
     "homepage": "https://g0v.hackmd.io/x-ngci7LQ1-UrAFKL5FLAQ"
@@ -5714,7 +5704,7 @@
     "name": "逆滲透 - 開放資料研究社",
     "description": "",
     "g0v_db_rows": 278,
-    "owners": "Macpaul/Mindos",
+    "owners": "Macpaul,Mindos",
     "tags": "開放資料",
     "github_repos": "",
     "homepage": ""
@@ -5734,7 +5724,7 @@
     "name": "這個社會的新聞樣貌：以八仙塵爆意外為起點",
     "description": "",
     "g0v_db_rows": 261,
-    "owners": "Michael_LI",
+    "owners": "Michael LI",
     "tags": "新聞,媒體,災害",
     "github_repos": "",
     "homepage": "https://drive.google.com/folderview?id=0B6ASgY1GMSOhfmdnbVlKMlNadjBfb3NPMnhGNkl5dUlQMnBMRnRxZk9henh6U0Rab0lJX3c&usp=sharing"
@@ -5774,7 +5764,7 @@
     "name": "連續錄影數十台新聞頻道，監督選舉假資訊傳播／紅色媒體，資訊戰，假新聞",
     "description": "",
     "g0v_db_rows": 607,
-    "owners": "Michael_LI",
+    "owners": "Michael LI",
     "tags": "待確認",
     "github_repos": "",
     "homepage": "https://hackmd.io/@MichaelLI/SywGOzlIH"
@@ -5814,7 +5804,7 @@
     "name": "選區視覺化,ly.g0v.tw website",
     "description": "",
     "g0v_db_rows": 23,
-    "owners": "kirby",
+    "owners": "Kirby",
     "tags": "選舉",
     "github_repos": "",
     "homepage": "https://github.com/clkao/TWVoteData/blob/master/mly/8"
@@ -5914,7 +5904,7 @@
     "name": "鄉民看電視",
     "description": "",
     "g0v_db_rows": 571,
-    "owners": "chihao（代）",
+    "owners": "chihao",
     "tags": "媒體",
     "github_repos": "",
     "homepage": "https://www.youtube.com/watch?v=McIkusSFtjI"
@@ -6074,7 +6064,7 @@
     "name": "開放藥典",
     "description": "",
     "g0v_db_rows": 180,
-    "owners": "蓮霧+胖胖",
+    "owners": "蓮霧,胖胖",
     "tags": "知識,文典",
     "github_repos": "",
     "homepage": "https://hackpad.com/--qNuCNFrcwnm"
@@ -6111,53 +6101,13 @@
   },
   {
     "source": "g0v_db",
-    "name": "開放都市-委員會會議記錄資料庫",
-    "description": "",
-    "g0v_db_rows": 284,
-    "owners": "理查",
-    "tags": "資料庫",
-    "github_repos": "",
-    "homepage": "https://g0v.hackpad.com/--BpW2Xt7s8AH"
-  },
-  {
-    "source": "g0v_db",
-    "name": "開放都市計畫 - API + 前端設計",
-    "description": "",
-    "g0v_db_rows": 412,
-    "owners": "理查",
-    "tags": "土地,都市計劃",
-    "github_repos": "",
-    "homepage": "https://g0v.hackpad.com/-API-QHArc116FJR"
-  },
-  {
-    "source": "g0v_db",
     "name": "開放都市計畫",
     "description": "",
-    "g0v_db_rows": 213,
-    "owners": "理查",
+    "g0v_db_rows": "213,284,412,354,243",
+    "owners": "理查 (monaludao),chewei",
     "tags": "都市",
     "github_repos": "",
     "homepage": "https://g0v.hackpad.com/f3z18AeU2uH"
-  },
-  {
-    "source": "g0v_db",
-    "name": "開放都市計畫-南港區都市計畫通盤檢討",
-    "description": "",
-    "g0v_db_rows": 354,
-    "owners": "chewei",
-    "tags": "土地,建築",
-    "github_repos": "",
-    "homepage": "https://g0v.hackpad.com/--hzxdTtdG3QU"
-  },
-  {
-    "source": "g0v_db",
-    "name": "開放都市計畫:委員會會議紀錄",
-    "description": "",
-    "g0v_db_rows": 243,
-    "owners": "理查",
-    "tags": "土地",
-    "github_repos": "",
-    "homepage": "https://g0v.hackpad.com/--BpW2Xt7s8AH"
   },
   {
     "source": "g0v_db",
@@ -6294,7 +6244,7 @@
     "name": "食用油測試",
     "description": "",
     "g0v_db_rows": 149,
-    "owners": "muyueh",
+    "owners": "Muyueh",
     "tags": "農業",
     "github_repos": "",
     "homepage": "http://hack.g0v.tw/g0v-hackath8n/sFjxTpfze7i"
@@ -6364,7 +6314,7 @@
     "name": "陳東甫老師教學系統開源計畫",
     "description": "",
     "g0v_db_rows": 650,
-    "owners": "seangau",
+    "owners": "SeanGau",
     "tags": "待確認",
     "github_repos": "",
     "homepage": "https://g0v.hackmd.io/ajSfucZcQLO2_UpBaHMDRg"
@@ -6384,7 +6334,7 @@
     "name": "線上揪松 & 2D 揪松",
     "description": "",
     "g0v_db_rows": 656,
-    "owners": "ronny",
+    "owners": "Ronny",
     "tags": "待確認",
     "github_repos": "",
     "homepage": "https://g0v.hackmd.io/dr66MVRCT4eF8E0WRweQSg"
@@ -6414,7 +6364,7 @@
     "name": "開放國會",
     "description": "",
     "g0v_db_rows": "664,690,1017,880,976",
-    "owners": "ronny,Isabel,Claire/ Weichen",
+    "owners": "ronny,Isabel,Claire,Weichen",
     "tags": "待確認",
     "github_repos": "",
     "homepage": "https://g0v.hackmd.io/@hackpad-importer/B1-gkfoYo87"
@@ -6501,23 +6451,13 @@
   },
   {
     "source": "g0v_db",
-    "name": "CC0 中文句庫 - 統計工具 Common Voice 語音庫",
-    "description": "",
-    "g0v_db_rows": "685,684,609,732,833,914",
-    "owners": "irvin",
-    "tags": "待確認",
-    "github_repos": "",
-    "homepage": ""
-  },
-  {
-    "source": "g0v_db",
     "name": "Mozilla Common Voice 語音資料庫收集",
     "description": "",
-    "g0v_db_rows": 553,
-    "owners": "irvin",
+    "g0v_db_rows": "685,684,609,800,732,833,914,553,1036",
+    "owners": "Irvin",
     "tags": "開放資料",
     "github_repos": "",
-    "homepage": "https://moztw.hackpad.tw/Common-Voice-g0v33"
+    "homepage": "https://commonvoice.mozilla.org/zh-TW"
   },
   {
     "source": "g0v_db",
@@ -6644,7 +6584,7 @@
     "name": "生命、宇宙以及萬事萬物的終極答案？",
     "description": "",
     "g0v_db_rows": 709,
-    "owners": "Fly",
+    "owners": "fly",
     "tags": "待確認",
     "github_repos": "",
     "homepage": "https://docs.google.com/document/d/1jvRjR7hN9FbsSOr9rv5QMhA5aDOcFlAlXyoFx0FYzEo/edit?usp=sharing"
@@ -6664,7 +6604,7 @@
     "name": "分心衝動好動者聯盟",
     "description": "",
     "g0v_db_rows": 713,
-    "owners": "Fly",
+    "owners": "fly",
     "tags": "待確認",
     "github_repos": "",
     "homepage": "https://g0v.hackmd.io/@flyo/adhdbody/edit"
@@ -6724,7 +6664,7 @@
     "name": "南庄桐花松．賞花、農業、做專案 (活動籌備中)",
     "description": "",
     "g0v_db_rows": 719,
-    "owners": "cheintai",
+    "owners": "chientai",
     "tags": "待確認",
     "github_repos": "",
     "homepage": "https://g0v.hackmd.io/T0sylyCcTHyv2WAXqyXUSw"
@@ -6774,27 +6714,17 @@
     "name": "新的 Firefox 出 4 週了，沒有人來更新 moztw.org 跟 release notes 啊～",
     "description": "",
     "g0v_db_rows": 731,
-    "owners": "irvin",
+    "owners": "Irvin",
     "tags": "待確認",
     "github_repos": "",
     "homepage": "t.me/moztw_dev"
   },
   {
     "source": "g0v_db",
-    "name": "來 slack #rand0m 聊天 Common Voice 來錄音 & 整理 #rand0m 文字語料",
-    "description": "",
-    "g0v_db_rows": "800,732",
-    "owners": "irvin",
-    "tags": "待確認",
-    "github_repos": "",
-    "homepage": "t.me/moztwCV"
-  },
-  {
-    "source": "g0v_db",
     "name": "疫情紓困資訊彙整 💰",
     "description": "",
     "g0v_db_rows": 734,
-    "owners": "peter",
+    "owners": "Peter",
     "tags": "待確認",
     "github_repos": "",
     "homepage": "https://g0v.hackmd.io/@jothon/S1pZe539_"
@@ -6804,7 +6734,7 @@
     "name": "Slack 歡迎訊息與 Channel 完補計畫 🙋",
     "description": "",
     "g0v_db_rows": 735,
-    "owners": "isabel",
+    "owners": "Isabel",
     "tags": "待確認",
     "github_repos": "",
     "homepage": "https://g0v.hackmd.io/@yukaii/Disfactory/%2F5QH2TlaXQR21wMo3UIKZug"
@@ -6864,7 +6794,7 @@
     "name": "Firefox release notes 翻譯 / 摩茲工寮 2020 營運報告 / CC0 語料庫",
     "description": "",
     "g0v_db_rows": 748,
-    "owners": "irvin",
+    "owners": "Irvin",
     "tags": "待確認",
     "github_repos": "",
     "homepage": ""
@@ -6894,7 +6824,7 @@
     "name": "為圖片找個家 WPWP2021 編輯松",
     "description": "",
     "g0v_db_rows": 751,
-    "owners": "Wikimedia Taiwan-Allen",
+    "owners": "Allen",
     "tags": "待確認",
     "github_repos": "",
     "homepage": "https://hackmd.io/ukav7QiqTI-LgR6bsQ7-8g"
@@ -6924,7 +6854,7 @@
     "name": "運動爭議時間軸",
     "description": "",
     "g0v_db_rows": 757,
-    "owners": "peter",
+    "owners": "Peter",
     "tags": "待確認",
     "github_repos": "",
     "homepage": "https://g0v.hackmd.io/aZQ7Uk-ARAKpkkGb_YCTNQ?both"
@@ -6944,7 +6874,7 @@
     "name": "九週年：g0v 時間軸以及 10 週年相關",
     "description": "",
     "g0v_db_rows": 761,
-    "owners": "Isabel/jothon",
+    "owners": "Isabel",
     "tags": "待確認",
     "github_repos": "",
     "homepage": "https://g0v.hackmd.io/@jothon/from9to10"
@@ -6974,7 +6904,7 @@
     "name": "g0v 九周年、wikidata 也是九周年",
     "description": "",
     "g0v_db_rows": 768,
-    "owners": "allen",
+    "owners": "Allen",
     "tags": "待確認",
     "github_repos": "",
     "homepage": "https://slides.com/allenwang6212/wikidata-g0v-46n"
@@ -7024,7 +6954,7 @@
     "name": "零時樂團",
     "description": "",
     "g0v_db_rows": 775,
-    "owners": "Ted (同上)",
+    "owners": "Ted",
     "tags": "待確認",
     "github_repos": "",
     "homepage": "https://g0v.hackmd.io/@Ted-Lu/SyciCm6wt"
@@ -7054,7 +6984,7 @@
     "name": "立委 say it",
     "description": "",
     "g0v_db_rows": 779,
-    "owners": "ronny",
+    "owners": "Ronny",
     "tags": "待確認",
     "github_repos": "",
     "homepage": "https://docs.google.com/presentation/d/1WcYS_K755l7v_oHpQ9K5168_zrfkI-uCv7AYVRAhVXo/edit?usp=sharing"
@@ -7094,7 +7024,7 @@
     "name": "S-E-E 永續所得指標",
     "description": "",
     "g0v_db_rows": 785,
-    "owners": "世界和平（Huanry）",
+    "owners": "Huanry",
     "tags": "待確認",
     "github_repos": "",
     "homepage": "https://g0v.hackmd.io/kRuCNIToRLmbOYe9mWUXTg"
@@ -7124,7 +7054,7 @@
     "name": "g0v Podcast",
     "description": "",
     "g0v_db_rows": "815,794,789",
-    "owners": "jothon(ichieh)",
+    "owners": "ichieh",
     "tags": "待確認",
     "github_repos": "",
     "homepage": "https://g0v.hackmd.io/@chihao/HkceASC_K"
@@ -7154,7 +7084,7 @@
     "name": "lysayit 立委說了什麼",
     "description": "",
     "g0v_db_rows": 792,
-    "owners": "ronnywang",
+    "owners": "Ronny Wang",
     "tags": "待確認",
     "github_repos": "",
     "homepage": "https://docs.google.com/presentation/d/1WZZb8tz4nKSrbUsxY5SV6pIv10or13XBpjhyWUGF1ts/edit?usp=sharing"
@@ -7194,7 +7124,7 @@
     "name": "疫情解封指引",
     "description": "",
     "g0v_db_rows": 799,
-    "owners": "jinwen,Sandra",
+    "owners": "JinWen,Sandra",
     "tags": "待確認",
     "github_repos": "",
     "homepage": "https://hackmd.io/jcoG0uOWRZK1IUEYWXRB6w"
@@ -7234,7 +7164,7 @@
     "name": "學習鏈",
     "description": "",
     "g0v_db_rows": 806,
-    "owners": "xing",
+    "owners": "Xing",
     "tags": "待確認",
     "github_repos": "",
     "homepage": "https://docs.google.com/presentation/d/1-3HwvWUUdFqlkrR1b6O_mvmvZO5ZBbC5sGvReCMtImU/edit#slide=id.p"
@@ -7294,7 +7224,7 @@
     "name": "白色恐怖體驗網頁遊戲",
     "description": "",
     "g0v_db_rows": 818,
-    "owners": "Holo, Vic",
+    "owners": "Holo,Vic",
     "tags": "待確認",
     "github_repos": "",
     "homepage": "https://docs.google.com/presentation/d/1gtjRDRiJx4ldGpqhyhcSle5FV7GXym5k/edit?usp=sharing&ouid=101311416682262359897&rtpof=true&sd=true"
@@ -7474,7 +7404,7 @@
     "name": "一起來辦趴：十週年零宇宙大爆炸",
     "description": "",
     "g0v_db_rows": 841,
-    "owners": "peter",
+    "owners": "Peter",
     "tags": "待確認",
     "github_repos": "",
     "homepage": "https://g0v.hackmd.io/@eaKkAb8HRjOKJ4erd2STnA/10Anni-Party"
@@ -7484,7 +7414,7 @@
     "name": "g0v 十週年參與者徽章",
     "description": "",
     "g0v_db_rows": 842,
-    "owners": "ronny",
+    "owners": "Ronny",
     "tags": "待確認",
     "github_repos": "",
     "homepage": "https://docs.google.com/presentation/d/1RIerafuSOShS7KRC9anquuKDbAA6MGQyHA7x2vEFuso/edit?usp=sharing"
@@ -7504,7 +7434,7 @@
     "name": "藝文活水向哪流",
     "description": "",
     "g0v_db_rows": 845,
-    "owners": "seangau",
+    "owners": "SeanGau",
     "tags": "待確認",
     "github_repos": "",
     "homepage": "https://g0v.hackmd.io/@SeanGau/SyIidsF_c"
@@ -7524,7 +7454,7 @@
     "name": "一起來擺攤",
     "description": "",
     "g0v_db_rows": 848,
-    "owners": "peter",
+    "owners": "Peter",
     "tags": "待確認",
     "github_repos": "",
     "homepage": "https://g0v.hackmd.io/@PnCIgRWVQsqQ4A5lSSVXEQ/BkWCxb8a9"
@@ -7583,8 +7513,8 @@
     "source": "g0v_db",
     "name": "歷史影像平台",
     "description": "",
-    "g0v_db_rows": "924,923,854",
-    "owners": "宥伯",
+    "g0v_db_rows": "924,923,854,1035",
+    "owners": "宥伯,水保署與農科院",
     "tags": "待確認",
     "github_repos": "",
     "homepage": "https://drive.google.com/drive/folders/1UXm--eVF0TFAZBc4HbxszPkw5yc-vLWP?usp=sharing"
@@ -7604,7 +7534,7 @@
     "name": "十週年生日趴",
     "description": "",
     "g0v_db_rows": 856,
-    "owners": "mglee",
+    "owners": "Mg Lee",
     "tags": "待確認",
     "github_repos": "",
     "homepage": "https://g0v.hackmd.io/@eaKkAb8HRjOKJ4erd2STnA/10Anni-Party/"
@@ -7714,7 +7644,7 @@
     "name": "indieveloper 獨立開發者",
     "description": "",
     "g0v_db_rows": 875,
-    "owners": "wancat（宏信）",
+    "owners": "宏信",
     "tags": "待確認",
     "github_repos": "",
     "homepage": "https://g0v.hackmd.io/s/B1Qz2ocds"
@@ -7734,7 +7664,7 @@
     "name": "AI 製圖坑",
     "description": "",
     "g0v_db_rows": 881,
-    "owners": "muyueh",
+    "owners": "Muyueh",
     "tags": "待確認",
     "github_repos": "",
     "homepage": "https://g0v.hackmd.io/@ichieh/Byhnsjh8j"
@@ -7914,7 +7844,7 @@
     "name": "ZKP與公民科技",
     "description": "",
     "g0v_db_rows": 905,
-    "owners": "peter",
+    "owners": "Peter",
     "tags": "待確認",
     "github_repos": "",
     "homepage": "https://g0v.hackmd.io/@noahyeh/rkwzDr-qs"
@@ -8034,7 +7964,7 @@
     "name": "醬即興 flyism.org",
     "description": "",
     "g0v_db_rows": 928,
-    "owners": "Fly",
+    "owners": "fly",
     "tags": "待確認",
     "github_repos": "",
     "homepage": "https://ideas.flyism.org / https://g0v.hackmd.io/I7pJGaH8RCa-QL2o9QlRSQ"
@@ -8084,7 +8014,7 @@
     "name": "g0v Design",
     "description": "",
     "g0v_db_rows": 934,
-    "owners": "tofus",
+    "owners": "Tofus",
     "tags": "待確認",
     "github_repos": "",
     "homepage": ""
@@ -8094,7 +8024,7 @@
     "name": "LLM我的家鄉",
     "description": "",
     "g0v_db_rows": 936,
-    "owners": "進良",
+    "owners": "進良Thomas",
     "tags": "待確認",
     "github_repos": "",
     "homepage": "https://g0v.hackmd.io/OpkxG9b_TZ2klz9p5mswKA"
@@ -8123,7 +8053,7 @@
     "source": "g0v_db",
     "name": "Joinplus",
     "description": "",
-    "g0v_db_rows": 939,
+    "g0v_db_rows": "939,1039",
     "owners": "SeanGau",
     "tags": "待確認",
     "github_repos": "",
@@ -8174,7 +8104,7 @@
     "name": "教育元語言",
     "description": "",
     "g0v_db_rows": 949,
-    "owners": "Bestian",
+    "owners": "bestian",
     "tags": "待確認",
     "github_repos": "",
     "homepage": "https://hackmd.io/gBL8KHmuQ6Gvm1sQmudDZw?both"
@@ -8214,7 +8144,7 @@
     "name": "立法院大小聲",
     "description": "",
     "g0v_db_rows": 956,
-    "owners": "Denken",
+    "owners": "denkeni",
     "tags": "待確認",
     "github_repos": "",
     "homepage": "https://www.craft.me/s/h8UBAHERtcXXcS"
@@ -8343,8 +8273,8 @@
     "source": "g0v_db",
     "name": "韌性松、數位韌性、戰時韌性",
     "description": "",
-    "g0v_db_rows": "978,996,998",
-    "owners": "Irvin,paul",
+    "g0v_db_rows": "978,996,998,1038",
+    "owners": "Irvin,Paul",
     "tags": "待確認",
     "github_repos": "",
     "homepage": "https://g0v.hackmd.io/@paulpengtw/DigiResiTh0n-home"
@@ -8383,7 +8313,7 @@
     "source": "g0v_db",
     "name": "繁體中文 AI 開源實踐計畫",
     "description": "",
-    "g0v_db_rows": 983,
+    "g0v_db_rows": "983,1028",
     "owners": "揪松團",
     "tags": "待確認",
     "github_repos": "",
@@ -8454,7 +8384,7 @@
     "name": "資料治理與公私協力的可能性",
     "description": "",
     "g0v_db_rows": 1001,
-    "owners": "宥伯=工友=unknow",
+    "owners": "宥伯",
     "tags": "待確認",
     "github_repos": "",
     "homepage": "簡介 & 共筆 https://docs.google.com/presentation/d/11_XsUYC94LMdhZlS7nOZwbmlUgP76MEp/edit?usp=sharing&ouid=106480865234997671288&rtpof=true&sd=true 共筆https://docs.google.com/document/d/1XvwPzErp951BAQLKv7A5yO0sB5XZhnrb1ucWWroQ9YQ/edit?usp=sharing"
@@ -8534,7 +8464,7 @@
     "name": "來救松",
     "description": "",
     "g0v_db_rows": 1011,
-    "owners": "救松團 chewei, Ronny",
+    "owners": "chewei, Ronny",
     "tags": "待確認",
     "github_repos": "",
     "homepage": "https://g0v.hackmd.io/0_V7AdIHScOscBHTb4wmQw?view"
@@ -8564,7 +8494,7 @@
     "name": "Collage",
     "description": "",
     "g0v_db_rows": 1015,
-    "owners": "chewei, 任翔 Sean",
+    "owners": "chewei,任翔 Sean",
     "tags": "待確認",
     "github_repos": "",
     "homepage": "https://github.com/SeanGau/city-collage"
@@ -8573,7 +8503,7 @@
     "source": "g0v_db",
     "name": "#design",
     "description": "",
-    "g0v_db_rows": 1018,
+    "g0v_db_rows": "1018,1033",
     "owners": "Tofus",
     "tags": "待確認",
     "github_repos": "",
@@ -8603,7 +8533,7 @@
     "source": "g0v_db",
     "name": "論證-公共議題論述匯整平台",
     "description": "",
-    "g0v_db_rows": 1023,
+    "g0v_db_rows": "1023,1030",
     "owners": "T",
     "tags": "待確認",
     "github_repos": "",
@@ -8621,7 +8551,7 @@
   },
   {
     "source": "g0v_db",
-    "name": "g0v 一屋兩賣",
+    "name": "一屋兩賣",
     "description": "",
     "g0v_db_rows": 1025,
     "owners": "鄭淑麗",
@@ -8631,7 +8561,7 @@
   },
   {
     "source": "g0v_db",
-    "name": "g0v 司法判決資料庫",
+    "name": "司法判決資料庫",
     "description": "",
     "g0v_db_rows": 1026,
     "owners": "Eli",
@@ -8641,12 +8571,62 @@
   },
   {
     "source": "g0v_db",
-    "name": "g0v 台灣 AI 共創實驗室",
+    "name": "台灣 AI 共創實驗室",
     "description": "",
     "g0v_db_rows": 1027,
     "owners": "Zoey",
     "tags": "待確認",
     "github_repos": "",
     "homepage": "https://docs.google.com/document/d/1x7sOW1ZxyHrkuRqZShvVUgT03-WEVnJ3fHL-3wzccIg/edit?tab=t.0#heading=h.jjrgrg9jdgqd"
+  },
+  {
+    "source": "g0v_db",
+    "name": "g0v.tw 社群心得",
+    "description": "",
+    "g0v_db_rows": 1029,
+    "owners": "SeanGau",
+    "tags": "待確認",
+    "github_repos": "",
+    "homepage": "https://g0v.hackmd.io/s/BJaGHU5uR"
+  },
+  {
+    "source": "g0v_db",
+    "name": "AgriPuzzle",
+    "description": "",
+    "g0v_db_rows": 1032,
+    "owners": "a0kman",
+    "tags": "待確認",
+    "github_repos": "",
+    "homepage": "https://docs.google.com/presentation/d/1EnMFBHt-VRcHKJlW0_ItAaUAAdudZj2_cL4XkL0jH40/edit?usp=sharing"
+  },
+  {
+    "source": "g0v_db",
+    "name": "g0v 公民科技專案與社群手冊",
+    "description": "",
+    "g0v_db_rows": 1034,
+    "owners": "Tiff",
+    "tags": "待確認",
+    "github_repos": "",
+    "homepage": "https://docs.google.com/document/d/1l_yb8OsB4fFW_vpgObUoZoPIJ1FY8CFuW2xdrRh0VGQ/edit"
+  },
+  {
+    "source": "g0v_db",
+    "name": "Pedestrian Rights (Name TBD) 行人權利（名稱待定）",
+    "description": "",
+    "g0v_db_rows": 1037,
+    "owners": "Caleb",
+    "tags": "待確認",
+    "github_repos": "",
+    "homepage": "https://hackmd.io/@i6x1MuXFR0q_Reh6_uOQDw/S16eR4nnR"
+  },
+  {
+    "source": "g0v_db",
+    "name": "GHC",
+    "description": "",
+    "g0v_db_rows": 1041,
+    "owners": "Le0n",
+    "tags": "待確認",
+    "github_repos": "",
+    "homepage": "https://g0v.hackmd.io/SdjXJQzdS2-XSel830vO5w"
   }
 ]

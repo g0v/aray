@@ -2586,7 +2586,7 @@
     "source": "g0v_db",
     "name": "slc",
     "github_id": "",
-    "slack_id": "",
+    "slack_id": "@SLC",
     "email": ""
   },
   {
@@ -3483,6 +3483,62 @@
     "name": "水保署與農科院",
     "github_id": "",
     "slack_id": "",
+    "email": ""
+  },
+  {
+    "source": "g0v_db",
+    "name": "Jasmine Ta",
+    "github_id": "",
+    "slack_id": "@Jasmine Ta",
+    "email": ""
+  },
+  {
+    "source": "g0v_db",
+    "name": "Vivian",
+    "github_id": "",
+    "slack_id": "@Vivian",
+    "email": ""
+  },
+  {
+    "source": "g0v_db",
+    "name": "Vivian",
+    "github_id": "",
+    "slack_id": "@Vivian",
+    "email": ""
+  },
+  {
+    "source": "g0v_db",
+    "name": "Annie",
+    "github_id": "",
+    "slack_id": "@Annie Huang",
+    "email": ""
+  },
+  {
+    "source": "g0v_db",
+    "name": "aokman",
+    "github_id": "",
+    "slack_id": "@aokman",
+    "email": ""
+  },
+  {
+    "source": "g0v_db",
+    "name": "yuyu1015",
+    "github_id": "",
+    "slack_id": "@aokman",
+    "email": ""
+  },
+  {
+    "source": "g0v_db",
+    "name": "Luphia",
+    "github_id": "",
+    "slack_id": "@Luphia",
+    "email": ""
+  },
+  {
+    "source": "g0v_db",
+    "name": "Kapibara",
+    "github_id": "",
+    "slack_id": "@Kapibara",
     "email": ""
   }
 ]

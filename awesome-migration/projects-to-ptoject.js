@@ -3,6 +3,8 @@ const schema = require("./schema.json");
 const projects = require("./projects.json");
 const crypto = require("node:crypto");
 const g0vJson = require("./g0vDb.json");
+const arayUsers = require("../data/scripts/aray-users.json");
+
 /**
  *
  *
@@ -45,7 +47,7 @@ function migration(json, projects) {
       owner: getArayUser(project.owners.split(",")[0]),
       //TODO: managers 從 owners 轉換成 ARAY user
       managers: [""],
-      links: [
+      links: formatLink([
         ...new Set(
           mergedG0vProjects.guideline.concat(
             mergedG0vProjects.other_document,
@@ -55,7 +57,7 @@ function migration(json, projects) {
             mergedG0vProjects.facebook
           )
         ),
-      ],
+      ]),
       slackChannel: "",
     };
   });
@@ -69,9 +71,8 @@ function getG0vProjects(dbIndex) {
   );
 }
 
-//TODO: 從 aray 取得 owner 換成 aray 的 name_uuid
 function getArayUser(owner) {
-  return "";
+  return arayUsers.filter(user => user.name === owner);
 }
 
 function mergeG0vProjects(projects) {
@@ -106,7 +107,7 @@ function mergeG0vProjects(projects) {
           ? Array.from(
               new Set([
                 ...pre.other_document_3,
-                ...cur["other document 3"].split(","),
+                ...cur["other document 3"].split(",").filter(link => isURL(link)),
               ])
             )
           : pre.other_document_3,
@@ -162,9 +163,12 @@ function isURL(link) {
   }
 }
 
-function formatLink(link) {
-  const name = link.indexOf("http") != 0 ? link : new URL(link).host;
-  return { name, link };
+function formatLink(links) {
+  return links.map(link => {
+    const name = link.indexOf("http") != 0 ? link : new URL(link).host;
+    return { name, link };
+  })
+  
 }
 
 // migration(schema, owner);

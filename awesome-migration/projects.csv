@@ -2,18 +2,18 @@ source,name,description,g0v_db_rows,owners,tags,github_repos,homepage
 manual,令人驚奇的零時政府,,,jhuang,g0v基礎建設,chunyenHuang/awesome-g0v-projects,
 manual,幸福存摺,,665,jhuang,"教育,工具",chunyenHuang/piggy-bank-of-happiness,
 manual,健保自付差額特材,,668,jhuang,"開放資料,醫療,工具",chunyenHuang/nhi-open-data-tool,
-manual,Cofacts 真的假的,,"377,382,364,415,438,455,469,482,501,524,562,574,593,611,633,645,652,676,694,711,726,739,752,762,777,797,817,830,843,860,883,909,919,929,948,960,974,988,1009,1016,1040,1053","MrOrz,bil",事實查核,"cofacts/rumors-api,cofacts/rumors-site,cofacts/rumors-line-bot,cofacts/rumors-fb-bot,cofacts/rumors-ai,cofacts/rumors-db,cofacts/rumors-deploy",https://cofacts.tw/hack
+manual,Cofacts 真的假的,,"377,382,364,415,438,455,469,482,501,524,562,574,593,611,633,645,652,676,694,711,726,739,752,762,777,797,817,830,843,860,883,909,919,929,948,960,974,988,1009,1016,1040,1053","MrOrz,bil,Johnson,斌綸,Dennis",事實查核,"cofacts/rumors-api,cofacts/rumors-site,cofacts/rumors-line-bot,cofacts/rumors-fb-bot,cofacts/rumors-ai,cofacts/rumors-db,cofacts/rumors-deploy",https://cofacts.tw/hack
 manual,美國國會台灣觀測站,,634,bruce,待確認,"ACTtaiwan/us-tw-watch-site,ACTtaiwan/ustw-site",
 manual,LikeCoin 讚賞公民共和國,,658,"kin ko,williamchong007","媒體,區塊鏈,抗審查","likecoin/likecoin,likecoin/dao,likecoin/LikeCoinButton-integration,likecoin/likecoin-button-sdk,likecoin/liker-land-browser-extension,likecoin/likecoin-wordpress,likecoin/likecoin-app,likecoin/likecoin-api-public",https://like.co
 manual,MyData Taiwan - mylog14,,,bafu,待確認,MyDataTaiwan/mylog14,https://www.mydata.org.tw
-manual,違章工廠舉報系統 Disfactory,,"840,819,783,763,736,720,700,696,670,614,600,951",小海,"農業,工業,土地",Disfactory/Disfactory,https://drive.google.com/file/d/1MB3xjIwZd8NbgH39ax6ojsy76HjaN6Rh/view?usp=sharing
+manual,違章工廠舉報系統 Disfactory,,"840,819,783,763,736,720,700,696,670,614,600,951","小海,deeper,Sandra,ael,yukai,peii","農業,工業,土地",Disfactory/Disfactory,https://drive.google.com/file/d/1MB3xjIwZd8NbgH39ax6ojsy76HjaN6Rh/view?usp=sharing
 manual,零時小學校 Sch001,,"878,858,741,721,675,941,954,989","Tiff,Bess",待確認,,https://sch001.g0v.tw/
 awesome-g0v,The web site.,,,g0v,g0v基礎建設,g0v/g0v.tw,https://github.com/g0v/g0v.tw
 awesome-g0v,Logo & styles.,,,g0v,g0v基礎建設,g0v/style-guide,https://github.com/g0v/style-guide
 awesome-g0v,glyphs,,,g0v,g0v基礎建設,g0v/glyph,https://github.com/g0v/glyph
 awesome-g0v,common bootstrap theme and design guide for websites.,,,g0v,g0v基礎建設,g0v/design-guide,https://github.com/g0v/design-guide
 awesome-g0v,The hackathon portal based on [hackfoldr](http://hackfoldr.org/).,,,g0v,g0v基礎建設,g0v/hack.g0v.tw,https://github.com/g0v/hack.g0v.tw
-awesome-g0v,g0v Summit 台灣零時政府高峰會,,"661,642,623,518,496,459,310,156,109,907,977,688,669,689,990,1000,959,945,926","ipa,Bess,hychen,Mavis,LY,g0v","g0v基礎建設,g0v Summit","g0v/summit.g0v.tw,g0v/summit2018",https://github.com/g0v/summit.g0v.tw
+awesome-g0v,g0v Summit 台灣零時政府高峰會,,"661,642,623,518,496,459,310,156,109,907,977,688,669,689,990,1000,959,945,926","ipa,Bess,hychen,Mavis,LY,g0v,pm5,hkazami,Claire,Peter,yellowsoar,Dong,RSChiang","g0v基礎建設,g0v Summit","g0v/summit.g0v.tw,g0v/summit2018",https://github.com/g0v/summit.g0v.tw
 awesome-g0v,Hackfoldr Editor,,353,g0v,g0v基礎建設,g0v/hackeditr,https://github.com/g0v/hackeditr
 awesome-g0v,Hackfoldr 2.0,,,hackfoldr,g0v基礎建設,hackfoldr/hackfoldr-2.0,https://github.com/hackfoldr/hackfoldr-2.0
 awesome-g0v,Hacktabl 協作比較表格,,,g0v,g0v基礎建設,g0v/hacktabl,https://github.com/g0v/hacktabl
@@ -143,7 +143,7 @@ awesome-g0v,LagNews 腿新聞,,,Ronny Wang,新媒體,ronnywang/lagnews,https://g
 awesome-g0v,公眾人物關係圖產生器,,"18,8",zbryikt,新媒體,zbryikt/ppllink,https://github.com/zbryikt/ppllink
 awesome-g0v,公民記者證產生器,,,g0v,新媒體,g0v/reporter,https://github.com/g0v/reporter
 awesome-g0v,新聞小幫手,,"406,45",g0v,新媒體,"g0v/newshelper-backend,g0v/newshelper-extension,yllan/newshelper-safari",https://github.com/g0v/newshelper-backend
-awesome-g0v,動民主,,"55,54,106,153,154,95,65","ETblue,tkirby","政治,民主參與",,https://g0v.hackpad.tw/-g0v-hackath7n-g6Ka3ms2rp3
+awesome-g0v,動民主,,"55,54,106,153,154,95,65","ETBlue,tkirby","政治,民主參與",,https://g0v.hackpad.tw/-g0v-hackath7n-g6Ka3ms2rp3
 g0v_db,0 時動議 LINK TOPIC,,unknown,"clkao,kcwu,hychen",媒體,,
 g0v_db,2015 WWViews ＠ TW 跨國審議 投票系統專案,,232,家華,環境,,https://g0v.hackpad.com/2015-WWViews-TW--W6l1GtZ3l1A
 g0v_db,2015 summer of ?,,206,LY,法律,,https://speakerdeck.com/yhsiang/2015-summer-of
@@ -152,7 +152,7 @@ g0v_db,2018縣市長選舉地圖,,473,積木,"政治,選舉,地圖",,https://hac
 g0v_db,2020投票指南,,594,邦宇,"選舉,政治",,https://www.figma.com/file/JUzNk4lDjWAKiHea6vH9lfxF/%E6%8A%95%E7%A5%A8%E6%8C%87%E5%8D%97?node-id=500%3A192
 g0v_db,228事件資料掃描檔文字化,,515,紅雨,轉型正義,,https://hackmd.io/GYU0UFBSRaqLsn16uGhkgA
 g0v_db,404兒少協尋專案,,27,ctf,兒少,,https://docs.google.com/document/d/1DmBXSmYh1knJk6U3zP5T_6QAWa6AhNXosVi0ENydzdQ/edit
-g0v_db,404失蹤兒童協尋計畫,,16,ETblue,兒少,,https://github.com/g0v/dev/wiki/Project-ChildNotFound.tw
+g0v_db,404失蹤兒童協尋計畫,,16,ETBlue,兒少,,https://github.com/g0v/dev/wiki/Project-ChildNotFound.tw
 g0v_db,64995公益律師呼叫系統,,42,Isabel,法律,,
 g0v_db,ARThon,,557,李紫彤,待確認,,
 g0v_db,Akoma Ntoso台灣在地化計畫,,427,雨蒼,"法律,國會",,https://hackmd.io/EYZgZgxgjATAHAFgLQgSArEhBOAbBJAQzF0KRnXQFMAGOGBGgdioSA==?view
@@ -160,7 +160,7 @@ g0v_db,BBC 拍攝,,592,BBC,"媒體,紀錄",,
 g0v_db,BatDrone（婦幼治安犯罪危險地點提醒、監測）,,262,kevinphys,兒少,,https://g0v.hackpad.com/BatDrone--BB8UPY6SPCD
 g0v_db,Build Great Bridges Around Taiwan (BGBAT),,419,Jane 汪,政策,,http://tinyurl.com/bgbatpdfjune
 g0v_db,COSCUP野生官網,,235,ETBlue,開放文化,,https://g0v.hackpad.com/COSCUP-2015--WxxpYVpXOWA
-g0v_db,Child Not Found,,4,"ETBlue,unknow",兒少,,
+g0v_db,Child Not Found,,4,"ETBlue,unknown",兒少,,
 g0v_db,Children Image,,99,小天,兒少,,https://docs.google.com/document/d/1znrHAtJEdW3mMX3pN2n60nYjbPsDCIuldgDi8FoPWKI/edit
 g0v_db,Code for Japan(Nanto) 開放資料新手村桌遊中文版,,474,子魚,待確認,,https://g0v.hackpad.tw/Code-for-JapanNanto--qIrL0tB5POF
 g0v_db,DAOJO 道場,,499,nchild,待確認,,https://g0v.hackpad.tw/daojo
@@ -310,7 +310,7 @@ g0v_db,公民團體不推薦,,89,soidid,國會,,
 g0v_db,公民百科,,52,lanfon,知識,,http://citizen.wiki.g0v.tw
 g0v_db,公民科技以外、大松以外,,530,chihao,待確認,,https://hackmd.io/k3aBxFUgTQ6EK5Dv23NQKw
 g0v_db,公民科技的資料保存與分析 civic-notebook,,431,poga,"資料庫,備份",,https://hackmd.io/CwI2FYAYBMDMGYC0l72I4wDG6AcBOYfRAQ0hAEYB2C6cANnywqA=
-g0v_db,公民運動後勤表單、SOP,,118,unknow,政治,,http://hackfoldr.org/congressnetwork/Q2ZQHLxhkK
+g0v_db,公民運動後勤表單、SOP,,118,unknown,政治,,http://hackfoldr.org/congressnetwork/Q2ZQHLxhkK
 g0v_db,公益團體觀察 --- 讓資料說話,,80,swc,公益,,
 g0v_db,公益實驗室,,193,Kenny,待確認,,https://docs.google.com/document/d/1rKRk4ZL8ROpjeS23006tt61a71jJezbwPSIuEY8jOrY/edit
 g0v_db,公眾陳情平台,,578,9k,待確認,,https://g0v.hackmd.io/ylFvVwGSTPCmQGH4gGsFRw?both
@@ -561,7 +561,7 @@ g0v_db,賽豬公...上太空！,,225,jimmy(huang),環境,,http://nspo.g0v.tw
 g0v_db,超簡單的無人機管理,,411,gavin,待確認,,
 g0v_db,超農域,,"144,124,100","simonpai,a0kman",農業,,http://hack.g0v.tw/agriculture/8Hlh2hux8xg
 g0v_db,超農域-醫農&Stage 2,,282,a0kman,"農業,地圖,疫情",,http://hackfoldr.org/agriculture/dz2qc0E8i0T
-g0v_db,跨出同溫層！先從較低對立的新聞議題開始討論,,535,ronny,待確認,,https://g0v.hackpad.tw/LaMs5uWUwb1
+g0v_db,跨出同溫層！先從較低對立的新聞議題開始討論,,535,Ronny,待確認,,https://g0v.hackpad.tw/LaMs5uWUwb1
 g0v_db,跨海峽企業環境表現資訊揭露與民間監督,,245,洪申翰,監督,,生產中
 g0v_db,踏出同溫層，中(多)立資訊平台,,"787,759,655,644,746,712",Eli,待確認,,https://docs.google.com/document/d/1G_oncGAQtPMUNEVuOLdMz8f_U6XXaTgasCjHeA56qM0/edit
 g0v_db,輻射地圖,,171,林怡,環境,,https://g0v.hackpad.com/91ZImrFjGvx
@@ -635,7 +635,7 @@ g0v_db,數位農民曆,,653,chientai,待確認,,https://g0v.hackmd.io/mO0kN-H_Qt
 g0v_db,線上揪松 & 2D 揪松,,656,Ronny,待確認,,https://g0v.hackmd.io/dr66MVRCT4eF8E0WRweQSg
 g0v_db,社群60秒,,662,Isabel,待確認,,
 g0v_db,揪松團影響力報告意見徵詢,,663,Isabel,待確認,,
-g0v_db,開放國會,,"664,690,1017,880,976","ronny,Isabel,Claire,Weichen",待確認,,https://g0v.hackmd.io/@hackpad-importer/B1-gkfoYo87
+g0v_db,開放國會,,"664,690,1017,880,976","Ronny,Isabel,Claire,Weichen",待確認,,https://g0v.hackmd.io/@hackpad-importer/B1-gkfoYo87
 g0v_db,[藝術策展] eID 竊盜行動計畫,,666,"clkao,ipa",待確認,,
 g0v_db,地下市長大平台－交通違規檢舉系統,,667,強力蕉,待確認,,
 g0v_db,地方的知識都被藏在這裡了！Wikidata 方志結構化計畫,,673,Allen,待確認,,
@@ -795,7 +795,7 @@ g0v_db,PrideWatch,,"918,913,991,979",嗡嗡,待確認,,https://g0v.hackmd.io/s/r
 g0v_db,救災民間動員量能地圖,,920,Kazan,待確認,,https://hackmd.io/@KazanV/Sy9Z7vhu3
 g0v_db,開放企業永續資料庫,,"921,958,935",ddio,待確認,,https://g0v.hackmd.io/K_N6QOg1QgC8lMneeJqdEg
 g0v_db,da0-Shoutout激勵機制,,"925,1044",da0,待確認,,https://docs.google.com/presentation/d/1NKyi_fcGAKf2y1v3kMk1zt2A9uaN4aUCgFTOYN0Ek4E/edit#slide=id.p1
-g0v_db,醬即興 flyism.org,,928,Fly,待確認,,https://ideas.flyism.org / https://g0v.hackmd.io/I7pJGaH8RCa-QL2o9QlRSQ
+g0v_db,醬即興 flyism.org,,928,fly,待確認,,https://ideas.flyism.org / https://g0v.hackmd.io/I7pJGaH8RCa-QL2o9QlRSQ
 g0v_db,揪松團活動性騷擾防治措施,,930,揪松團,待確認,,https://g0v.hackmd.io/@jothon/HJTzQ6AP2
 g0v_db,Moda 數位發展部公民科技科,,931,RR,待確認,,https://g0v.hackmd.io/Zb7w_TT0ToSMpVEATfD_yA#
 g0v_db,moztw.org,,932,Irvin,待確認,,moztw.org/tg (general版)
@@ -845,7 +845,7 @@ g0v_db,Public Code,,1006,YuTin,待確認,,https://www.canva.com/design/DAF-RnrVm
 g0v_db,GuanDOOM,,1007,Moritz,待確認,,https://docs.google.com/document/d/1EeOM_Mi04UGRNd7MqYrvCsUEfN5VOTo-hH9CKPa2f9I/edit?usp=sharing
 g0v_db,拉人更輕鬆,,"1008,1042,1050","Jasmine,Yvonne",待確認,,
 g0v_db,永續報告書分析 aka 企業捐款與合作分析,,1010,Franki,待確認,,https://hackmd.io/@FrankiCheung/SJ2GOXeT6
-g0v_db,來救松,,1011,"chewei, Ronny",待確認,,https://g0v.hackmd.io/0_V7AdIHScOscBHTb4wmQw?view
+g0v_db,來救松,,1011,"chewei,Ronny",待確認,,https://g0v.hackmd.io/0_V7AdIHScOscBHTb4wmQw?view
 g0v_db,AMO ── An Agenda Maker Based on Opass Schedule Format,,1013,Dong,待確認,,https://hackmd.io/@Dong-/AMO/https%3A%2F%2Fg0v.hackmd.io%2FtTYHgZPnR960R3Q-q4RkUQ
 g0v_db,星河計畫-自學生經驗匯流,,1014,ziaosen,待確認,,https://galacticproject.notion.site/40485be542274bb3936b0972a21b673f?pvs=4
 g0v_db,Collage,,"1015,1048","chewei,任翔 Sean",待確認,,https://github.com/SeanGau/city-collage
@@ -853,7 +853,7 @@ g0v_db,#design,,"1018,1033",Tofus,待確認,,https://g0v.hackmd.io/DlyCaahFR9-yA
 g0v_db,ChanceTix,,1021,OKHand,待確認,,https://g0v.hackmd.io/A4Vqa-T6QoqwIsKcz2NIXw?view
 g0v_db,APCS Guide,,1022,冰川,待確認,,https://hackmd.io/@c_I6awIzTxyxIF6PaOEtSg/Hkp_PcuOR
 g0v_db,論證-公共議題論述匯整平台,,"1023,1030",T,待確認,,https://docs.google.com/presentation/d/1SAW5gS00zzU8J9yy_shwWZ605N0fqStcc1-qfXOat3k/edit?usp=sharing
-g0v_db,g0v 首頁社群治理頁面,,1024,isabel,待確認,,https://g0v.hackmd.io/Ki8oBtnjTjitnyp84ckYbA?view
+g0v_db,g0v 首頁社群治理頁面,,1024,Isabel,待確認,,https://g0v.hackmd.io/Ki8oBtnjTjitnyp84ckYbA?view
 g0v_db,一屋兩賣,,1025,鄭淑麗,待確認,,https://docs.google.com/presentation/d/1NWnHCVZ-g7eLKy70jdUsP6IY4IR0AQum/edit?usp=sharing&ouid=117196307703279761842&rtpof=true&sd=true
 g0v_db,司法判決資料庫,,1026,Eli,待確認,,https://github.com/dodgydogg/judical_data_tw
 g0v_db,台灣 AI 共創實驗室,,1027,Zoey,待確認,,https://docs.google.com/document/d/1x7sOW1ZxyHrkuRqZShvVUgT03-WEVnJ3fHL-3wzccIg/edit?tab=t.0#heading=h.jjrgrg9jdgqd

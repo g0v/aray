@@ -34,7 +34,7 @@
     "name": "Cofacts 真的假的",
     "description": "",
     "g0v_db_rows": "377,382,364,415,438,455,469,482,501,524,562,574,593,611,633,645,652,676,694,711,726,739,752,762,777,797,817,830,843,860,883,909,919,929,948,960,974,988,1009,1016,1040,1053",
-    "owners": "MrOrz,bil",
+    "owners": "MrOrz,bil,Johnson,斌綸,Dennis",
     "tags": "事實查核",
     "github_repos": "cofacts/rumors-api,cofacts/rumors-site,cofacts/rumors-line-bot,cofacts/rumors-fb-bot,cofacts/rumors-ai,cofacts/rumors-db,cofacts/rumors-deploy",
     "homepage": "https://cofacts.tw/hack"
@@ -74,7 +74,7 @@
     "name": "違章工廠舉報系統 Disfactory",
     "description": "",
     "g0v_db_rows": "840,819,783,763,736,720,700,696,670,614,600,951",
-    "owners": "小海",
+    "owners": "小海,deeper,Sandra,ael,yukai,peii",
     "tags": "農業,工業,土地",
     "github_repos": "Disfactory/Disfactory",
     "homepage": "https://drive.google.com/file/d/1MB3xjIwZd8NbgH39ax6ojsy76HjaN6Rh/view?usp=sharing"
@@ -144,7 +144,7 @@
     "name": "g0v Summit 台灣零時政府高峰會",
     "description": "",
     "g0v_db_rows": "661,642,623,518,496,459,310,156,109,907,977,688,669,689,990,1000,959,945,926",
-    "owners": "ipa,Bess,hychen,Mavis,LY,g0v",
+    "owners": "ipa,Bess,hychen,Mavis,LY,g0v,pm5,hkazami,Claire,Peter,yellowsoar,Dong,RSChiang",
     "tags": "g0v基礎建設,g0v Summit",
     "github_repos": "g0v/summit.g0v.tw,g0v/summit2018",
     "homepage": "https://github.com/g0v/summit.g0v.tw"
@@ -1444,7 +1444,7 @@
     "name": "動民主",
     "description": "",
     "g0v_db_rows": "55,54,106,153,154,95,65",
-    "owners": "ETblue,tkirby",
+    "owners": "ETBlue,tkirby",
     "tags": "政治,民主參與",
     "github_repos": "",
     "homepage": "https://g0v.hackpad.tw/-g0v-hackath7n-g6Ka3ms2rp3"
@@ -1534,7 +1534,7 @@
     "name": "404失蹤兒童協尋計畫",
     "description": "",
     "g0v_db_rows": 16,
-    "owners": "ETblue",
+    "owners": "ETBlue",
     "tags": "兒少",
     "github_repos": "",
     "homepage": "https://github.com/g0v/dev/wiki/Project-ChildNotFound.tw"
@@ -1614,7 +1614,7 @@
     "name": "Child Not Found",
     "description": "",
     "g0v_db_rows": 4,
-    "owners": "ETBlue,unknow",
+    "owners": "ETBlue,unknown",
     "tags": "兒少",
     "github_repos": "",
     "homepage": ""
@@ -3114,7 +3114,7 @@
     "name": "公民運動後勤表單、SOP",
     "description": "",
     "g0v_db_rows": 118,
-    "owners": "unknow",
+    "owners": "unknown",
     "tags": "政治",
     "github_repos": "",
     "homepage": "http://hackfoldr.org/congressnetwork/Q2ZQHLxhkK"
@@ -5624,7 +5624,7 @@
     "name": "跨出同溫層！先從較低對立的新聞議題開始討論",
     "description": "",
     "g0v_db_rows": 535,
-    "owners": "ronny",
+    "owners": "Ronny",
     "tags": "待確認",
     "github_repos": "",
     "homepage": "https://g0v.hackpad.tw/LaMs5uWUwb1"
@@ -6364,7 +6364,7 @@
     "name": "開放國會",
     "description": "",
     "g0v_db_rows": "664,690,1017,880,976",
-    "owners": "ronny,Isabel,Claire,Weichen",
+    "owners": "Ronny,Isabel,Claire,Weichen",
     "tags": "待確認",
     "github_repos": "",
     "homepage": "https://g0v.hackmd.io/@hackpad-importer/B1-gkfoYo87"
@@ -7964,7 +7964,7 @@
     "name": "醬即興 flyism.org",
     "description": "",
     "g0v_db_rows": 928,
-    "owners": "Fly",
+    "owners": "fly",
     "tags": "待確認",
     "github_repos": "",
     "homepage": "https://ideas.flyism.org / https://g0v.hackmd.io/I7pJGaH8RCa-QL2o9QlRSQ"
@@ -8464,7 +8464,7 @@
     "name": "來救松",
     "description": "",
     "g0v_db_rows": 1011,
-    "owners": "chewei, Ronny",
+    "owners": "chewei,Ronny",
     "tags": "待確認",
     "github_repos": "",
     "homepage": "https://g0v.hackmd.io/0_V7AdIHScOscBHTb4wmQw?view"
@@ -8544,7 +8544,7 @@
     "name": "g0v 首頁社群治理頁面",
     "description": "",
     "g0v_db_rows": 1024,
-    "owners": "isabel",
+    "owners": "Isabel",
     "tags": "待確認",
     "github_repos": "",
     "homepage": "https://g0v.hackmd.io/Ki8oBtnjTjitnyp84ckYbA?view"

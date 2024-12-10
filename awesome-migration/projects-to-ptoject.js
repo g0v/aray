@@ -34,19 +34,18 @@ function migration(json, projects) {
     //TODO: 整併 g0vDB 資料
     const g0vProjects = getG0vProjects(project.g0v_db_rows);
     const mergedG0vProjects = mergeG0vProjects(g0vProjects);
-    console.group(project.name, project.g0v_db_rows);
-    console.log(g0vProjects);
-    console.log(mergedG0vProjects);
-    console.groupEnd();
-    return {
+    const arayformat = {
       ...projectSchema,
       id: crypto.randomUUID(),
       description: project.description,
       name: project.name,
       status: "active",
-      owner: getArayUser(project.owners.split(",")[0]),
+      owner: getArayUser(project.owners.split(",")[0]).username,
       //TODO: managers 從 owners 轉換成 ARAY user
-      managers: [""],
+      managers: project.owners
+        .split(",")
+        .slice(1)
+        .map((owner) => getArayUser(owner).username),
       links: formatLink([
         ...new Set(
           mergedG0vProjects.guideline.concat(
@@ -58,8 +57,16 @@ function migration(json, projects) {
           )
         ),
       ]),
-      slackChannel: "",
+      slackChannel: mergedG0vProjects.slack_channel.join(","),
     };
+
+    console.group(project.name, project.g0v_db_rows);
+    console.log("project", project);
+    console.log("g0vProjects", g0vProjects);
+    console.log("mergedG0vProjects", mergedG0vProjects);
+    console.log("arayformat", arayformat);
+    console.groupEnd();
+    return arayformat;
   });
 }
 
@@ -72,13 +79,18 @@ function getG0vProjects(dbIndex) {
 }
 
 function getArayUser(owner) {
-  return arayUsers.filter(user => user.name === owner);
+  return arayUsers.find((user) => user.name === owner) || {};
 }
 
 function mergeG0vProjects(projects) {
   return projects.reduce(
     (pre, cur) => {
       return {
+        owners: cur["owner name"]
+          ? Array.from(
+              new Set([...pre.owners, ...splitString(cur["owner name"])])
+            )
+          : pre.owners,
         event_name: cur["event name"]
           ? Array.from(new Set([...pre.event_name, cur["event name"]]))
           : pre.event_name,
@@ -107,7 +119,9 @@ function mergeG0vProjects(projects) {
           ? Array.from(
               new Set([
                 ...pre.other_document_3,
-                ...cur["other document 3"].split(",").filter(link => isURL(link)),
+                ...cur["other document 3"]
+                  .split(",")
+                  .filter((link) => isURL(link)),
               ])
             )
           : pre.other_document_3,
@@ -121,7 +135,7 @@ function mergeG0vProjects(projects) {
           ? Array.from(new Set([...pre.slack_id, cur["slack id"]]))
           : pre.slack_id,
         tags: cur.tags
-          ? Array.from(new Set([...pre.tags, ...cur.tags]))
+          ? Array.from(new Set(pre.tags.concat(splitString(cur.tags))))
           : pre.tags,
         slack_channel: cur["slack channel"]
           ? Array.from(
@@ -134,6 +148,7 @@ function mergeG0vProjects(projects) {
       };
     },
     {
+      owners: [],
       event_name: [],
       three_brief: [],
       manpower: [],
@@ -152,7 +167,10 @@ function mergeG0vProjects(projects) {
 }
 
 function splitString(string) {
-  return string.replace(/[.,、，；\\/](\s+)?/g, ",").split(",");
+  return string
+    .toString()
+    .replace(/[.,、，；\\/](\s+)?/g, ",")
+    .split(",");
 }
 
 function isURL(link) {
@@ -164,14 +182,12 @@ function isURL(link) {
 }
 
 function formatLink(links) {
-  return links.map(link => {
+  return links.map((link) => {
     const name = link.indexOf("http") != 0 ? link : new URL(link).host;
     return { name, link };
-  })
-  
+  });
 }
 
-// migration(schema, owner);
 fs.writeFile(
   "./data/scripts/aray-projects.json",
   JSON.stringify(migration(schema, projects)),

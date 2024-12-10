@@ -1,6 +1,6 @@
 const fs = require("node:fs");
 const schema = require("./schema.json");
-const owner = require("./owner.json");
+const owner = require("./owners.json");
 const crypto = require("node:crypto");
 
 function migration(json, owners) {

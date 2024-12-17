@@ -30,8 +30,6 @@ function migration(json, projects) {
 
   return projects.map((project) => {
     const projectSchema = JSON.parse(JSON.stringify(schema));
-
-    //TODO: 整併 g0vDB 資料
     const g0vProjects = getG0vProjects(project.g0v_db_rows);
     const mergedG0vProjects = mergeG0vProjects(g0vProjects);
     const arayformat = {
@@ -41,22 +39,11 @@ function migration(json, projects) {
       name: project.name,
       status: "active",
       owner: getArayUser(project.owners.split(",")[0]).username,
-      //TODO: managers 從 owners 轉換成 ARAY user
       managers: project.owners
         .split(",")
         .slice(1)
         .map((owner) => getArayUser(owner).username),
-      links: formatLink([
-        ...new Set(
-          mergedG0vProjects.guideline.concat(
-            mergedG0vProjects.other_document,
-            mergedG0vProjects.other_document_2,
-            mergedG0vProjects.other_document_3,
-            mergedG0vProjects.video_link,
-            mergedG0vProjects.facebook
-          )
-        ),
-      ]),
+      links: formatLink([...new Set(mergedG0vProjects.guideline)]),
       slackChannel: mergedG0vProjects.slack_channel.join(","),
     };
 

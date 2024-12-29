@@ -54,7 +54,7 @@
     "name": "LikeCoin 讚賞公民共和國",
     "description": "",
     "g0v_db_rows": 658,
-    "owners": "kin ko,williamchong007",
+    "owners": "kin ko,Phoebe",
     "tags": "媒體,區塊鏈,抗審查",
     "github_repos": "likecoin/likecoin,likecoin/dao,likecoin/LikeCoinButton-integration,likecoin/likecoin-button-sdk,likecoin/liker-land-browser-extension,likecoin/likecoin-wordpress,likecoin/likecoin-app,likecoin/likecoin-api-public",
     "homepage": "https://like.co"
@@ -83,7 +83,7 @@
     "source": "manual",
     "name": "零時小學校 Sch001",
     "description": "",
-    "g0v_db_rows": "878,858,741,721,675,941,954,989",
+    "g0v_db_rows": "878,858,741,721,706,675,941,954,989",
     "owners": "Tiff,Bess",
     "tags": "待確認",
     "github_repos": "",
@@ -1487,7 +1487,7 @@
     "owners": "MrOrz",
     "tags": "監督,政治",
     "github_repos": "",
-    "homepage": "http://beta.hackfoldr.org/president2016-folder"
+    "homepage": ""
   },
   {
     "source": "g0v_db",
@@ -1587,7 +1587,7 @@
     "owners": "kevinphys",
     "tags": "兒少",
     "github_repos": "",
-    "homepage": "https://g0v.hackpad.com/BatDrone--BB8UPY6SPCD"
+    "homepage": ""
   },
   {
     "source": "g0v_db",
@@ -1597,7 +1597,7 @@
     "owners": "Jane 汪",
     "tags": "政策",
     "github_repos": "",
-    "homepage": "http://tinyurl.com/bgbatpdfjune"
+    "homepage": ""
   },
   {
     "source": "g0v_db",
@@ -6561,16 +6561,6 @@
   },
   {
     "source": "g0v_db",
-    "name": "Sch001",
-    "description": "",
-    "g0v_db_rows": 706,
-    "owners": "揪松團",
-    "tags": "待確認",
-    "github_repos": "",
-    "homepage": "https://g0v.hackmd.io/@jothon/Sch001-2021"
-  },
-  {
-    "source": "g0v_db",
     "name": "議見零時差",
     "description": "",
     "g0v_db_rows": 708,
@@ -6913,8 +6903,8 @@
     "source": "g0v_db",
     "name": "World Can Help Us：各國解封指引彙整",
     "description": "",
-    "g0v_db_rows": 769,
-    "owners": "enen",
+    "g0v_db_rows": "769,784",
+    "owners": "enen,雨蒼",
     "tags": "待確認",
     "github_repos": "",
     "homepage": "https://hackmd.io/@World-Can-Help-Us/01"
@@ -6983,7 +6973,7 @@
     "source": "g0v_db",
     "name": "立委 say it",
     "description": "",
-    "g0v_db_rows": 779,
+    "g0v_db_rows": "779,792",
     "owners": "Ronny",
     "tags": "待確認",
     "github_repos": "",
@@ -7011,16 +7001,6 @@
   },
   {
     "source": "g0v_db",
-    "name": "各國解封指引彙整",
-    "description": "",
-    "g0v_db_rows": 784,
-    "owners": "雨蒼",
-    "tags": "待確認",
-    "github_repos": "",
-    "homepage": "https://hackmd.io/@billy3321/HkKD6b-qF"
-  },
-  {
-    "source": "g0v_db",
     "name": "S-E-E 永續所得指標",
     "description": "",
     "g0v_db_rows": 785,
@@ -7033,7 +7013,7 @@
     "source": "g0v_db",
     "name": "碳匯城鄉 - 桃園與臺南公有資產碳匯潛力地點盤點",
     "description": "",
-    "g0v_db_rows": 786,
+    "g0v_db_rows": "786,814",
     "owners": "chewei",
     "tags": "待確認",
     "github_repos": "",
@@ -7057,7 +7037,7 @@
     "owners": "ichieh",
     "tags": "待確認",
     "github_repos": "",
-    "homepage": "https://g0v.hackmd.io/@chihao/HkceASC_K"
+    "homepage": ""
   },
   {
     "source": "g0v_db",
@@ -7078,16 +7058,6 @@
     "tags": "待確認",
     "github_repos": "",
     "homepage": ""
-  },
-  {
-    "source": "g0v_db",
-    "name": "lysayit 立委說了什麼",
-    "description": "",
-    "g0v_db_rows": 792,
-    "owners": "Ronny Wang",
-    "tags": "待確認",
-    "github_repos": "",
-    "homepage": "https://docs.google.com/presentation/d/1WZZb8tz4nKSrbUsxY5SV6pIv10or13XBpjhyWUGF1ts/edit?usp=sharing"
   },
   {
     "source": "g0v_db",
@@ -7207,17 +7177,7 @@
     "owners": "chihao",
     "tags": "待確認",
     "github_repos": "",
-    "homepage": "https://g0v.hackmd.io/@chihao/g10v-book/"
-  },
-  {
-    "source": "g0v_db",
-    "name": "製作臺南市減碳機會地圖 - 碳匯城鄉",
-    "description": "",
-    "g0v_db_rows": 814,
-    "owners": "chewei",
-    "tags": "待確認",
-    "github_repos": "",
-    "homepage": "https://g0v.hackmd.io/@chewei/carbon-uptake/https%3A%2F%2Fg0v.hackmd.io%2FwSvlrDnQRWCVEOOE7N5ZaA%3Fview"
+    "homepage": ""
   },
   {
     "source": "g0v_db",
@@ -7247,7 +7207,7 @@
     "owners": "Peter cui",
     "tags": "待確認",
     "github_repos": "",
-    "homepage": "https://g0v.hackmd.io/@chihao/g10v-book/"
+    "homepage": ""
   },
   {
     "source": "g0v_db",
@@ -7393,7 +7353,7 @@
     "source": "g0v_db",
     "name": "藝文環境的補助資料視覺化",
     "description": "",
-    "g0v_db_rows": 839,
+    "g0v_db_rows": "839,845",
     "owners": "SeanGau",
     "tags": "待確認",
     "github_repos": "",
@@ -7427,7 +7387,7 @@
     "owners": "丁志仁",
     "tags": "待確認",
     "github_repos": "",
-    "homepage": "http://jendo.org:9001/p/g0v_s4e"
+    "homepage": ""
   },
   {
     "source": "g0v_db",
@@ -7458,16 +7418,6 @@
     "tags": "待確認",
     "github_repos": "",
     "homepage": "https://g0v.hackmd.io/@PnCIgRWVQsqQ4A5lSSVXEQ/BkWCxb8a9"
-  },
-  {
-    "source": "g0v_db",
-    "name": "Oh! Shown!",
-    "description": "",
-    "g0v_db_rows": 849,
-    "owners": "tai",
-    "tags": "待確認",
-    "github_repos": "",
-    "homepage": "https://hackmd.io/k9v9qVSBRNGUv0rnJcUphQ"
   },
   {
     "source": "g0v_db",
@@ -7937,7 +7887,7 @@
     "owners": "Kazan",
     "tags": "待確認",
     "github_repos": "",
-    "homepage": "https://hackmd.io/@KazanV/Sy9Z7vhu3"
+    "homepage": ""
   },
   {
     "source": "g0v_db",
@@ -8127,7 +8077,7 @@
     "owners": "Irvin",
     "tags": "待確認",
     "github_repos": "",
-    "homepage": "https://hackmd.io/@moztw/pridezilla/edit"
+    "homepage": ""
   },
   {
     "source": "g0v_db",
@@ -8243,7 +8193,7 @@
     "source": "g0v_db",
     "name": "醬活",
     "description": "",
-    "g0v_db_rows": 971,
+    "g0v_db_rows": "971,982",
     "owners": "fly",
     "tags": "待確認",
     "github_repos": "",
@@ -8298,16 +8248,6 @@
     "tags": "待確認",
     "github_repos": "",
     "homepage": "龍年賀詞募集：https://g0v.hackmd.io/@jothon/ry5TjRBhD"
-  },
-  {
-    "source": "g0v_db",
-    "name": "醬活 - 開放、即興、自然地活著",
-    "description": "",
-    "g0v_db_rows": 982,
-    "owners": "fly",
-    "tags": "待確認",
-    "github_repos": "",
-    "homepage": "https://g0v.hackmd.io/@flyo/flyism"
   },
   {
     "source": "g0v_db",

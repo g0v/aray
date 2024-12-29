@@ -1,6 +1,16 @@
 [
   {
     "source": "manual",
+    "name": "零時政府黑客松",
+    "description": "",
+    "g0v_db_rows": "",
+    "owners": "揪松團",
+    "tags": "",
+    "github_repos": "",
+    "homepage": "https://jothon.g0v.tw/"
+  },
+  {
+    "source": "manual",
     "name": "令人驚奇的零時政府",
     "description": "",
     "g0v_db_rows": "",

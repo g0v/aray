@@ -128,7 +128,7 @@ function mergeG0vProjects(projects) {
           ? Array.from(
               new Set([
                 ...pre.slack_channel,
-                ...cur["slack channel"].split(","),
+                ...splitString(cur["slack channel"]),
               ])
             )
           : pre.slack_channel,

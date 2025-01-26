@@ -1,7 +1,8 @@
-const { fs } = require("node:fs");
+const fs = require("node:fs");
 const crypto = require("node:crypto");
 const schema = require("./schema.json");
 const arayProjects = require("../data/scripts/aray-projects.json");
+const { parseFromString } = require("dom-parser");
 
 const events = require("./kktix-events.json");
 
@@ -30,16 +31,16 @@ async function arayEvents(json) {
   schema = JSON.parse("{" + schema + "}");
 
   console.log({ ...schema });
-  return events.entry.map(async (event) => {
-    const { title, description, published, url } = event;
-    const { eventTime, location, attendance } = await kktixpage(url);
-
+  return await events.entry.map(async (event) => {
+    const { title, description, published, url, content } = event;
+    // const { eventTime, location, attendance } = await kktixpage(url);
+    const { eventTime, location } = parseContent(content);
     return {
       ...schema,
       id: crypto.randomUUID(),
       name: title,
       projectId: arayProjects[0].id,
-      type: "實體活動",
+      type: location === "Online Event" ? "線上活動" : "實體活動",
       location: location.address,
       link: url,
       description,
@@ -51,13 +52,27 @@ async function arayEvents(json) {
   });
 }
 
-async function kktixpage(url) {
-  const pageResponse = await fetch(url);
-  if (pageResponse.ok) {
-    const page = await pageResponse.text();
-    const parser = new DOMParser();
-    const doc = parser.parseFromString(page, "text/html");
+/**
+ * data: 時間：2025/02/22 09:30(+0800)~17:30\n地點：National Taiwan University Innovation Hall (SPACE M) (國立臺灣大學 學新館 SPACE M) / 2F, No. 1, Section 4, Roosevelt Rd, Da’an District, Taipei City (台北市大安區舟山路10巷1弄4號)
+ * output: { eventTime: { start: "2025-02-22T09:30:00.000Z", end: "2025-02-22T17:30:00.000Z" }, location: { name: "National Taiwan University Innovation Hall (SPACE M)", address: "2F, No. 1, Section 4, Roosevelt Rd, Da’an District, Taipei City" }}
+ */
+function parseContent(content) {
+  const [time, location] = content.split("\n");
+  const eventTime = parseEventTime(time);
+  const eventLocation = parseLocation(location);
+  return { eventTime, eventLocation };
+}
 
+async function kktixpage(url) {
+  console.log("url", url);
+  const pageResponse = await fetch(url);
+
+  console.log("pageResponse", pageResponse);
+  if (pageResponse.ok) {
+    console.log(pageResponse.headers.get("url"));
+    const page = await pageResponse.text();
+    const doc = parseFromString(page);
+    console.log(doc);
     const eventTime =
       doc.getElementsByClassName("timezoneSuffix")[0].textContent +
       "~" +
@@ -85,25 +100,32 @@ function trispace(str) {
 
 /**
  * parse event time
- * time string: 2025/01/04(周六) 13:00(+0800)~17:00(+0800) to start time yyyy-MM-dd'T'HH:mm:ss.SSS'Z' and end time yyyy-MM-dd'T'HH:mm:ss.SSS'Z'
+ * time string: 時間：2025/01/04 13:00(+0800)~17:00 to start time yyyy-MM-dd'T'HH:mm:ss.SSS'Z' and end time yyyy-MM-dd'T'HH:mm:ss.SSS'Z'
  */
 function parseEventTime(time) {
+  time = time.replace("時間：", "");
   const [start, end] = time.split("~");
   const [startDate, startTime] = start.split(" ");
-  const [startHour] = startTime.split(":");
-  const [endHour] = end.split(":");
-  const date = startDate.split("(")[0];
+  const [startHour] = startTime.split("(");
   return {
-    start: new Date(date + " " + startHour + ":00").toISOString(),
-    end: new Date(date + " " + endHour + ":00").toISOString(),
+    start: new Date(startDate + " " + startHour).toISOString(),
+    end: new Date(startDate + " " + end).toISOString(),
   };
 }
 
 /**
  * parse location object
- * location string: 台北 NPO 聚落 / 台北市中正區重慶南路三段2號 to { name: "台北 NPO 聚落", address: "台北市中正區重慶南路三段2號" }
+ * location string: 地點：台北 NPO 聚落 / 台北市中正區重慶南路三段2號 to { name: "台北 NPO 聚落", address: "台北市中正區重慶南路三段2號" }
  */
 function parseLocation(location) {
+  console.log("location", location);
+  if (!location) {
+    return { name: "", address: "" };
+  }
+  if (location === "Online Event")
+    return { name: "Online Event", address: "Online Event" };
+
+  location = location.replace("地點：", "");
   const [name, address] = location.split(" / ");
   return { name, address };
 }
@@ -117,10 +139,10 @@ function parseAttentence(attentence) {
   return { current, limit };
 }
 
-await fs.writeFile(
-  "./data/scripts/aray-events.json",
-  JSON.stringify(arayEvents(schema)),
-  () => {}
-);
-
+// fs.writeFile(
+//   "./data/scripts/aray-events.json",
+//   JSON.stringify(await arayEvents(schema)),
+//   () => {}
+// );
+arayEvents(schema);
 console.log(arayEvents(schema));

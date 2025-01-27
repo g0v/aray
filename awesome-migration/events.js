@@ -1,148 +1,144 @@
-const fs = require("node:fs");
-const crypto = require("node:crypto");
-const schema = require("./schema.json");
-const arayProjects = require("../data/scripts/aray-projects.json");
-const { parseFromString } = require("dom-parser");
-
-const events = require("./kktix-events.json");
-
+const fs = require('node:fs');
+const crypto = require('node:crypto');
+const schema = require('./schema.json');
+const arayProjects = require('../data/scripts/aray-projects.json');
+const { kktixpage } = require('./event-kktix');
+const events = require('./kktix-events.json');
+const oldEvents = require('./g0v.tw-old-kktix-events.json');
 async function arayEvents(json) {
   const ignoreKey = [
-    "createdAt",
-    "createdBy",
-    "updatedAt",
-    "updatedBy",
-    "rsvpQuestion",
-    "rsvpLimit",
-    "rsvpOpenTime",
-    "rsvpCloseTime",
+    'createdAt',
+    'createdBy',
+    'updatedAt',
+    'updatedBy',
+    'rsvpQuestion',
+    'rsvpLimit',
+    'rsvpOpenTime',
+    'rsvpCloseTime',
+    'duration',
   ];
-  const schemaName = "Event";
+  const schemaName = 'Event';
   let schema = json.data.__schema.types
-    .filter((types) => types.kind === "OBJECT" && types.name === schemaName)[0]
+    .filter((types) => types.kind === 'OBJECT' && types.name === schemaName)[0]
     .fields.reduce(
       (pre, cv) =>
         (pre +=
-          cv.type.kind === "NON_NULL" && !ignoreKey.includes(cv.name)
-            ? `${pre ? "," : ""}"${cv.name}":""`
-            : ""),
-      ""
+          cv.type.kind === 'NON_NULL' && !ignoreKey.includes(cv.name) ? `${pre ? ',' : ''}"${cv.name}":""` : ''),
+      '',
     );
-  schema = JSON.parse("{" + schema + "}");
-
-  console.log({ ...schema });
-  return await events.entry.map(async (event) => {
-    const { title, description, published, url, content } = event;
-    // const { eventTime, location, attendance } = await kktixpage(url);
-    const { eventTime, location } = parseContent(content);
-    return {
+  schema = JSON.parse(('{' + schema + '}').toString());
+  const entry = [...events.entry, ...oldEvents.entry];
+  return await Promise.all( entry.map(async (event) => {
+    await sleep(5000);
+    console.log('=============');
+    console.log('event: ', event);
+    const { title, summary, url, content } = event;
+    const { attendance } = await kktixpage(url);
+    const { eventTime, eventLocation } = parseContent(content);
+    console.log(eventTime, eventLocation);
+    return await {
       ...schema,
       id: crypto.randomUUID(),
       name: title,
       projectId: arayProjects[0].id,
-      type: location === "Online Event" ? "線上活動" : "實體活動",
-      location: location.address,
+      type: eventLocation.name === 'Online Event' ? '線上活動' : '實體活動',
+      location: eventLocation,
       link: url,
-      description,
+      description: summary,
       startDate: eventTime.start,
       endDate: eventTime.end,
       attendanceCount: attendance.current,
       guestLimit: attendance.limit,
+      annouceToContributors: false,
     };
-  });
+  }));
 }
 
 /**
- * data: 時間：2025/02/22 09:30(+0800)~17:30\n地點：National Taiwan University Innovation Hall (SPACE M) (國立臺灣大學 學新館 SPACE M) / 2F, No. 1, Section 4, Roosevelt Rd, Da’an District, Taipei City (台北市大安區舟山路10巷1弄4號)
- * output: { eventTime: { start: "2025-02-22T09:30:00.000Z", end: "2025-02-22T17:30:00.000Z" }, location: { name: "National Taiwan University Innovation Hall (SPACE M)", address: "2F, No. 1, Section 4, Roosevelt Rd, Da’an District, Taipei City" }}
+ * data: 時間：2025/02/22 09:30(+0800)~17:30\n
+ * 地點：National Taiwan University Innovation Hall (SPACE M)
+ * (國立臺灣大學 學新館 SPACE M) / 2F, No. 1, Section 4, Roosevelt Rd, Da’an District, Taipei City (台北市大安區舟山路10巷1弄4號)
+ * @param {string} content
+ * output: { eventTime: { start: '2025-02-22T09:30:00.000Z', end: '2025-02-22T17:30:00.000Z' },
+ * location: { name: 'National Taiwan University Innovation Hall (SPACE M)',
+ * address: '2F, No. 1, Section 4, Roosevelt Rd, Da’an District, Taipei City' }}
+ * @return {string} content
  */
 function parseContent(content) {
-  const [time, location] = content.split("\n");
+  const [time, location] = content.split('\n');
   const eventTime = parseEventTime(time);
   const eventLocation = parseLocation(location);
   return { eventTime, eventLocation };
 }
 
-async function kktixpage(url) {
-  console.log("url", url);
-  const pageResponse = await fetch(url);
-
-  console.log("pageResponse", pageResponse);
-  if (pageResponse.ok) {
-    console.log(pageResponse.headers.get("url"));
-    const page = await pageResponse.text();
-    const doc = parseFromString(page);
-    console.log(doc);
-    const eventTime =
-      doc.getElementsByClassName("timezoneSuffix")[0].textContent +
-      "~" +
-      doc.getElementsByClassName("timezoneSuffix")[1].textContent;
-    const location = doc.getElementsByClassName("info-desc")[1];
-    const attendance = doc.getElementsByClassName("info-count")[0];
-    const host = doc.getElementsByClassName("info-org")[0];
-
+/**
+ * parse event time
+ * format 1: 時間：2025/02/22 09:30(+0800)~17:30
+ * format 2: 時間：2024/07/06 10:00(+0800) ~ 2024/08/24 17:00(+0800)
+ * @param {string} time
+ * @return {string} time string: 時間：2025/01/04 13:00(+0800)~17:00 to start time yyyy-MM-dd'T'HH:mm:ss.SSS'Z' and end time yyyy-MM-dd'T'HH:mm:ss.SSS'Z'
+ */
+function parseEventTime(time) {
+  time = time.replace('時間：', '');
+  const regex1 = /\d{4}\/\d{2}\/\d{2} \d{2}:\d{2}\(\+\d{4}\)~\d{2}:\d{2}/;
+  const regex2 = /\d{4}\/\d{2}\/\d{2} \d{2}:\d{2}\(\+\d{4}\) ~ \d{4}\/\d{2}\/\d{2} \d{2}:\d{2}\(\+\d{4}\)/;
+  if (!regex1.test(time) && !regex2.test(time)) {
+    return { start: '', end: '' };
+  } else if (regex1.test(time)) {
+    const [start, end] = time.split('~');
+    const [startDate, startTime] = start.split(' ');
+    const [startHour] = startTime.split('(');
+    console.log('startDate:', startDate + ' ' + startHour, 'endDate:', startDate + ' ' + end);
     return {
-      eventTime: parseEventTime(eventTime),
-      location: parseLocation(trispace(location)),
-      attendance: parseAttentence(trispace(attendance)),
-      link,
-      host,
+      start: new Date(startDate + ' ' + startHour).toISOString(),
+      end: new Date(startDate + ' ' + end).toISOString(),
+    };
+  } else if (regex2.test(time)) {
+    const [start, end] = time.split(' ~ ');
+    const [startDate, startTime] = start.split(' ');
+    const [startHour] = startTime.split('(');
+    const [endDate, endTime] = end.split(' ');
+    const [endHour] = endTime.split('(');
+    console.log('startDate:', startDate + ' ' + startHour, 'endDate:', endDate + ' ' + endHour);
+    return {
+      start: new Date(startDate + ' ' + startHour).toISOString(),
+      end: new Date(endDate + ' ' + endHour).toISOString(),
     };
   }
 }
 
 /**
- * '\n                  \n                  台北 NPO 聚落 / 台北市中正區重慶南路三段2號\n  to 台北 NPO 聚落 / 台北市中正區重慶南路三段2號
- */
-function trispace(str) {
-  return str.replace(/\n\s+/g, "");
-}
-
-/**
- * parse event time
- * time string: 時間：2025/01/04 13:00(+0800)~17:00 to start time yyyy-MM-dd'T'HH:mm:ss.SSS'Z' and end time yyyy-MM-dd'T'HH:mm:ss.SSS'Z'
- */
-function parseEventTime(time) {
-  time = time.replace("時間：", "");
-  const [start, end] = time.split("~");
-  const [startDate, startTime] = start.split(" ");
-  const [startHour] = startTime.split("(");
-  return {
-    start: new Date(startDate + " " + startHour).toISOString(),
-    end: new Date(startDate + " " + end).toISOString(),
-  };
-}
-
-/**
  * parse location object
- * location string: 地點：台北 NPO 聚落 / 台北市中正區重慶南路三段2號 to { name: "台北 NPO 聚落", address: "台北市中正區重慶南路三段2號" }
+ * @param {string} location
+ * @return {string} location string: 地點：台北 NPO 聚落 / 台北市中正區重慶南路三段2號 to { name: '台北 NPO 聚落', address: '台北市中正區重慶南路三段2號' }
  */
 function parseLocation(location) {
-  console.log("location", location);
+  console.log('location', location);
   if (!location) {
-    return { name: "", address: "" };
+    return { name: '', address: '' };
   }
-  if (location === "Online Event")
-    return { name: "Online Event", address: "Online Event" };
-
-  location = location.replace("地點：", "");
-  const [name, address] = location.split(" / ");
-  return { name, address };
+  if (location === 'Online Event') {
+    return { name: 'Online Event', address: 'Online Event' };
+  }
+  const [name, address] = location.replace('地點：', '').split(' / ');
+  return { name, address: address || '' };
 }
 
-/**
- * parse attentence
- * attentence string: 10 / 100 to { current: 10, limit: 100 }
- */
-function parseAttentence(attentence) {
-  const [current, limit] = attentence.split(" / ");
-  return { current, limit };
+function sleep(ms) {
+  return new Promise((resolve) => setTimeout(resolve, ms));
 }
 
-// fs.writeFile(
-//   "./data/scripts/aray-events.json",
-//   JSON.stringify(await arayEvents(schema)),
-//   () => {}
-// );
-arayEvents(schema);
-console.log(arayEvents(schema));
+(async function() {
+  const events = arayEvents(schema);
+  console.log(events);
+  events.then((data) => {
+    console.log(data);
+    fs.writeFileSync(
+      './data/scripts/aray-events.json',
+      JSON.stringify(data),
+      () => {},
+    );
+  });
+})();
+
+// arayEvents(schema);

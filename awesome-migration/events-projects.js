@@ -24,12 +24,18 @@ function eventsProject(projects) {
   const eventsProject = [];
   projects.forEach((project) => {
     const awesomeProject = getProjectFromAwesome(project.name);
+    console.log('===========');
+    console.log('awesomeProject', awesomeProject);
     if (awesomeProject['g0v_db_rows']) {
       const g0vDBRows = typeof awesomeProject['g0v_db_rows'] === 'number' ? [awesomeProject['g0v_db_rows']] : awesomeProject['g0v_db_rows'].split(',');
       g0vDBRows.forEach((g0vDbRow) => {
+        console.log('===========');
+        console.log('g0vDbRow', g0vDbRow);
         const g0vProject = getProjectFromG0v(g0vDbRow);
+        console.log('g0vProject', g0vProject);
         const eventName = formatEventName(g0vProject['event name']);
         const event = getEventFromKktix(eventName.nth);
+        console.log('eventName', eventName);
         console.log('g0vProject', g0vProject);
         console.log('event', event);
         eventsProject.push(createEventProject(event, project, g0vProject));
@@ -69,7 +75,7 @@ function getProjectFromAwesome(arayProjectName) {
 
 function getProjectFromG0v(projectIdx) {
   const idx = typeof projectIdx === 'string' ? parseInt(projectIdx) : projectIdx;
-  return g0vDB[parseInt(idx)];
+  return g0vDB[parseInt(idx-2)];
 }
 
 function getEventFromKktix(eventName) {
@@ -77,4 +83,9 @@ function getEventFromKktix(eventName) {
   return events.find((event) => event.name.toLowerCase().indexOf(eventName.toLowerCase()) > -1);
 }
 
-eventsProject(projects);
+
+fs.writeFile(
+  './data/scripts/aray-events-projects.json',
+  JSON.stringify(eventsProject(projects)),
+  () => {},
+);

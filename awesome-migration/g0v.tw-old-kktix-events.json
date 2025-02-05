@@ -370,6 +370,18 @@
       "summary": "台灣零時政府第零次動員戡亂黑客松 請注意！場地已變更至「中研院資創中心 」 感謝大家的熱情參與，本活動已額滿！若有興趣參與，請上 hackpad  與 irc 討論有興趣的主題。活動當天的開場介紹及結",
       "content": "時間：2012/12/01 09:00(+0800)~18:00\n地點：中研院資訊科技創新研究中心 / 台北市南港區研究院路二段128號",
       "author": { "name": "g0v.tw", "uri": "http://g0v.tw/" }
+    },
+    {
+      "title": "g0v hackath10n | 台灣零時政府第拾次資料科學黑客松",
+      "published": "2014-08-30T09:00:00+08:00",
+      "updated": "2014-08-30T09:00:00+08:00",
+      "url": "https://beta.hackfoldr.org/g0v-hackath10n",
+      "summary": "",
+      "content": "時間：2014/08/30 09:00(+0800)~2014/08/30 18:15(+0800)\n地點：中央研究院人資訊科學研究所  (Institution of Information Science of Academia Sinica) / 台北市南港區研究院路二段128號 (No.128, Sec. 2, Academia Rd., Nangang Dist., Taipei City 115, Taiwan)",
+      "author": { "name": "g0v.tw", "uri": "http://g0v.tw/" },
+      "attendance": {
+          "current": 0, "limit": 0 
+      }
     }
   ]
 }

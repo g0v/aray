@@ -176,7 +176,7 @@ function formatLink(links) {
 }
 
 fs.writeFile(
-  "./data/scripts/aray-projects.json",
+  './data/scripts/aray-projects.json',
   JSON.stringify(migration(schema, projects)),
   () => {}
 );

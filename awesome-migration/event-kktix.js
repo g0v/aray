@@ -1,10 +1,6 @@
 const events = require('./kktix-events.json');
 const { parse } = require('node-html-parser');
 
-function parseKKtix() {
-  Promise.all(events.entry.slice(0, 1).map((event) => kktixpage(event.url)));
-}
-
 /**
  * @param {string} url
  * @return {*}

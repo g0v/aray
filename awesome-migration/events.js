@@ -33,7 +33,12 @@ async function arayEvents(json) {
     console.log('=============');
     console.log('event: ', event);
     const { title, summary, url, content } = event;
-    const { attendance } = await kktixpage(url);
+    let attendance = { current: 0, limit: 0 };
+    if ( url.indexOf('kktix.cc') > -1) {
+      attendance = await kktixpage(url);
+    } else {
+      attendance = event.attendance;
+    }
     const { eventTime, eventLocation } = parseContent(content);
     console.log(eventTime, eventLocation);
     return await {
@@ -82,9 +87,11 @@ function parseEventTime(time) {
   time = time.replace('時間：', '');
   const regex1 = /\d{4}\/\d{2}\/\d{2} \d{2}:\d{2}\(\+\d{4}\)~\d{2}:\d{2}/;
   const regex2 = /\d{4}\/\d{2}\/\d{2} \d{2}:\d{2}\(\+\d{4}\) ~ \d{4}\/\d{2}\/\d{2} \d{2}:\d{2}\(\+\d{4}\)/;
-  if (!regex1.test(time) && !regex2.test(time)) {
+  const regex3 = /\d{4}-\d{2}-\d{2} \d{2}:\d{2}\(\+\d{4}\)~\d{2}:\d{2}/;
+  const regex4 = /\d{4}-\d{2}-\d{2} \d{2}:\d{2}\(\+\d{4}\) ~ \d{4}\/\d{2}\/\d{2} \d{2}:\d{2}\(\+\d{4}\)/;
+  if (!regex1.test(time) && !regex2.test(time) && !regex3.test(time) && !regex4.test(time)) {
     return { start: '', end: '' };
-  } else if (regex1.test(time)) {
+  } else if (regex1.test(time) || regex3.test(time)) {
     const [start, end] = time.split('~');
     const [startDate, startTime] = start.split(' ');
     const [startHour] = startTime.split('(');
@@ -93,7 +100,7 @@ function parseEventTime(time) {
       start: new Date(startDate + ' ' + startHour).toISOString(),
       end: new Date(startDate + ' ' + end).toISOString(),
     };
-  } else if (regex2.test(time)) {
+  } else if (regex2.test(time) || regex4.test(time)) {
     const [start, end] = time.split(' ~ ');
     const [startDate, startTime] = start.split(' ');
     const [startHour] = startTime.split('(');

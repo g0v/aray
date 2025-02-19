@@ -173,10 +173,6 @@ export default function User({ id: inId, computedMatch, match }) {
         }),
       ]);
 
-      console.log('data', data);
-      console.log('userContributions', userContributions);
-      console.log('userStatements', userStatements);
-
       if (!data) return;
 
       setUser(data);
@@ -226,6 +222,7 @@ export default function User({ id: inId, computedMatch, match }) {
       setUserProjects(data.projects.items);
       setNeeds(data.needs.items.map(({ need }) => need));
 
+      // TODO: handle combined user statements (multiple records for the same dates)
       let totalHoursInThePastYear = 0;
       const heatmapData = userStatements.map(({ date, completedHours }) => {
         if (date === today.format('YYYY-MM-DD')) {
@@ -250,8 +247,6 @@ export default function User({ id: inId, computedMatch, match }) {
       setTotalHoursInThePastYear(totalHoursInThePastYear);
     })();
   }, [id, lastUpdatedAt]);
-
-  console.log({ user, id });
 
   if (!user) {
     return <Loading fullScreen={false} />;

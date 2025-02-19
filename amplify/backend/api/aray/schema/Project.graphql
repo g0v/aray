@@ -1,5 +1,6 @@
 type Project
   @model
+  @key(name: "byOwnerByStatus", fields: ["owner","status"], queryField: "getProjectsByOwnerByStatus")
   @auth(rules: [
     { allow: public, operations: [read] },
     # Defaults to use the "owner" field.

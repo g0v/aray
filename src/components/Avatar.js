@@ -78,8 +78,6 @@ export default function CustomAvatar({
     setFallbackSrc(`https://robohash.org/${username}.png?set=set4`);
   }, [username]);
 
-  console.log('cache', cache);
-
   if (!fallbackSrc) return null;
 
   return (

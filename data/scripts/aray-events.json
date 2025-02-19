@@ -1,1 +1,2331 @@
-[{"id":"120b4d7b-fdab-419e-b2dc-3a01a8425ed7","projectId":"70e932c0-cb50-40f9-aba0-ced935f2d5de","name":"g0v hackath66n | 台灣零時政府第陸拾陸次友愛青年黑客松","type":"實體活動","description":"Welcome to the 66th Hackathon of the g0v community on March 29, 2025！歡迎參加 g0v 黑客松活動！","startDate":"2025-03-29T02:00:00.000Z","endDate":"2025-03-29T09:00:00.000Z","annouceToContributors":false,"location":{"name":"友愛市場二樓 - 好想工作室","address":"台南市中西區友愛街117號2樓"},"link":"https://g0v-jothon.kktix.cc/events/g0v-hackath66n"},{"id":"2c14d070-4ffa-4ee7-a46e-394fed8b9d0e","projectId":"70e932c0-cb50-40f9-aba0-ced935f2d5de","name":"g0v hackath65n | 台灣零時政府第陸拾伍次平凡而自由的黑客松 Ordinary Life with Freedom Hackathon","type":"實體活動","description":"Welcome to the 65th Hackathon of the g0v community on February 22, 2025！歡迎參加 平凡而自由的 g0v 黑客松活動！","startDate":"2025-02-22T01:30:00.000Z","endDate":"2025-02-22T09:30:00.000Z","annouceToContributors":false,"location":{"name":"National Taiwan University Innovation Hall (SPACE M) (國立臺灣大學 學新館 SPACE M)","address":"2F, No. 1, Section 4, Roosevelt Rd, Da’an District, Taipei City (台北市大安區舟山路10巷1弄4號)"},"link":"https://g0v-jothon.kktix.cc/events/g0v-hackath65n"},{"id":"6a53161f-1a6f-4538-a970-dfeffa14daad","projectId":"70e932c0-cb50-40f9-aba0-ced935f2d5de","name":"戶政資料外洩 法庭觀察松","type":"實體活動","description":"2022 年 10 月，有駭客在暗網上以 5000USD 的加密貨幣販售台灣 2300 萬人的戶政資料，至今已過了超過 2 年，但是內政部仍未對此案件做出公開說明，持續不承認戶政外洩發生。","startDate":"2025-02-18T06:30:00.000Z","endDate":"2025-02-18T07:30:00.000Z","annouceToContributors":false,"location":{"name":"台北高等行政法院","address":"台北高等行政法院 111台北市士林區福國路101號"},"link":"https://g0v-jothon.kktix.cc/events/20250218"},{"id":"6d3e9b72-7628-49bc-a3c9-6e8405329ba8","projectId":"70e932c0-cb50-40f9-aba0-ced935f2d5de","name":"20250104 第0次網路黑魔法防禦松","type":"實體活動","description":"網路充滿各種邪惡的黑魔法，兒少色情私密照片買賣、股市詐騙愛情詐騙。許多人深受這些黑魔法的傷害，想邀請有興趣的朋友一起動手協作，共享知識，希望能將 Miffy 的精神傳承下去，保護更多人免於在網路上受害","startDate":"2025-01-04T05:00:00.000Z","endDate":"2025-01-04T09:00:00.000Z","annouceToContributors":false,"location":{"name":"台北 NPO 聚落","address":"台北市中正區重慶南路三段2號"},"link":"https://g0v-jothon.kktix.cc/events/dadath0n"},{"id":"b52271cf-ef76-4cb1-acd2-5b6af4fd2dd1","projectId":"70e932c0-cb50-40f9-aba0-ced935f2d5de","name":"g0v hackath64n | 台灣零時政府第陸拾肆次黃金比例黑客松","type":"實體活動","description":"g0v 第陸拾肆次大黑客松將在 2024.11.23（六）於中研院資訊所舉辦，歡迎公民、鄉民、憤青等諸眾，帶著熱血來盡一己之力，開源協作參與社會。","startDate":"2024-11-23T01:30:00.000Z","endDate":"2024-11-23T09:20:00.000Z","annouceToContributors":false,"location":{"name":"中央研究院資訊科學所","address":"台北市南港區研究院路二段128號"},"link":"https://g0v-jothon.kktix.cc/events/g0v-hackath64n"},{"id":"4aec5c99-cb48-4e4e-8f1c-0d55911d5533","projectId":"70e932c0-cb50-40f9-aba0-ced935f2d5de","name":"[取消] g0v 第貳拾陸次基礎建設松","type":"實體活動","description":"g0v 第貳拾陸次基礎建設松將於 11/17（日）14:00 舉行，我們預計進行「g0v 官網更新進度分享與討論」，歡迎一起交流！","startDate":"2024-11-17T06:00:00.000Z","endDate":"2024-11-17T09:00:00.000Z","annouceToContributors":false,"location":{"name":"台北 NPO 聚落 論壇空間","address":"台北市中正區重慶南路三段2號2樓"},"link":"https://g0v-jothon.kktix.cc/events/infrath26n"},{"id":"147b2aa7-e461-443e-ba29-d319beffa9c9","projectId":"70e932c0-cb50-40f9-aba0-ced935f2d5de","name":"g0v 第貳拾伍次基礎建設松","type":"實體活動","description":"g0v 第貳拾伍次基礎建設松將於 10/06（日）14:00 舉行，我們預計討論「g0v 官網視覺化與心得上傳」，歡迎一起交流！","startDate":"2024-10-06T08:00:00.000Z","endDate":"2024-10-06T11:00:00.000Z","annouceToContributors":false,"location":{"name":"台北 NPO 聚落 論壇空間","address":"台北市中正區重慶南路三段2號2樓"},"link":"https://g0v-jothon.kktix.cc/events/infrath25n"},{"id":"d7c8d331-7c45-4dae-878a-2e50443cc240","projectId":"70e932c0-cb50-40f9-aba0-ced935f2d5de","name":"g0v hackath63n | 台灣零時政府第陸拾參次公民科技園遊會黑客松","type":"實體活動","description":"g0v 第陸拾參次公民科技園遊會黑客松將在 2024.09.29（日）於新店台北矽谷會議中心舉辦，歡迎公民、鄉民、憤青等諸眾，帶著熱血來盡一己之力，開源協作參與社會。","startDate":"2024-09-29T01:00:00.000Z","endDate":"2024-09-29T09:20:00.000Z","annouceToContributors":false,"location":{"name":"台北矽谷國際會議中心","address":"新北市新店區北新路三段223號"},"link":"https://g0v-jothon.kktix.cc/events/g0v-hackath63n"},{"id":"660492bb-065a-484a-96c5-7307ae1ac929","projectId":"70e932c0-cb50-40f9-aba0-ced935f2d5de","name":"g0v hackath62n | 台灣零時政府第陸拾貳次帶我去月球黑客松","type":"實體活動","description":"g0v 第陸拾貳次大黑客松將在 2024.07.20（六）於中研院資訊所舉辦，歡迎公民、鄉民、憤青等諸眾，帶著熱血來盡一己之力，開源協作參與社會。","startDate":"2024-07-20T01:00:00.000Z","endDate":"2024-07-20T10:00:00.000Z","annouceToContributors":false,"location":{"name":"中央研究院資訊科學所","address":"台北市南港區研究院路二段128號"},"link":"https://g0v-jothon.kktix.cc/events/g0v-hackath62n"},{"id":"7a8b540f-f64a-45cd-84bc-20f1aa62e757","projectId":"70e932c0-cb50-40f9-aba0-ced935f2d5de","name":"零時小學校 2024 夏日線上源力增能營 Sch001 for Source Raising","type":"線上活動","description":"本次「g0v 零時小學校 2024 夏日源力增能營」將一步步帶您認識 g0v 社群，分享這群公民黑客們，是如何用開源精神與行動力，一起用科技解決社會問題！","startDate":"2024-07-06T02:00:00.000Z","endDate":"2024-08-24T09:00:00.000Z","annouceToContributors":false,"location":{"name":"Online Event","address":""},"link":"https://g0v-jothon.kktix.cc/events/sch001ssr2024"},{"id":"ce260ad1-8303-4c24-a1b4-6654d818f0eb","projectId":"70e932c0-cb50-40f9-aba0-ced935f2d5de","name":"g0v 第貳拾肆次基礎建設松","type":"實體活動","description":"g0v 第貳拾肆次基礎建設松將於 4/20（六）12:00 舉行，我們預計討論「g0v 基礎建設更新機制」，歡迎一起交流！","startDate":"2024-04-20T04:00:00.000Z","endDate":"2024-04-20T07:00:00.000Z","annouceToContributors":false,"location":{"name":"台北 NPO 聚落 社群廚房","address":"台北市中正區重慶南路三段2號4樓"},"link":"https://g0v-jothon.kktix.cc/events/infrath24n"},{"id":"8ed895d1-94ee-41f2-a115-dc923c4c6a90","projectId":"70e932c0-cb50-40f9-aba0-ced935f2d5de","name":"g0v hackath61n | 台灣零時政府第陸拾壹次龍來 Open Data Day 黑客松暨零時小學校 4th 專案孵化競賽決選日","type":"實體活動","description":"g0v 第陸拾壹次大黑客松將在 2024.3.2（六）於臺大學新館二樓 SPACE M 空間舉辦，歡迎公民、鄉民、憤青等諸眾，帶著熱血來盡一己之力，開源協作參與社會。","startDate":"2024-03-02T01:30:00.000Z","endDate":"2024-03-02T10:00:00.000Z","annouceToContributors":false,"location":{"name":"國立臺灣大學學新館二樓 SPACE M 空間","address":"台北市大安區舟山路 10 巷 1 弄 4 號 2 樓"},"link":"https://g0v-jothon.kktix.cc/events/g0v-hackath61n"},{"id":"c271b92b-e127-4fb7-afbc-cccf1b20f60f","projectId":"70e932c0-cb50-40f9-aba0-ced935f2d5de","name":"g0v hackath60n | 台灣零時政府第陸拾次記得投票黑客松","type":"實體活動","description":"g0v 第陸拾次大黑客松將在 2024.01.06（六）於中研院資訊所舉辦，歡迎公民、鄉民、憤青等諸眾，帶著熱血來盡一己之力，開源協作參與社會。","startDate":"2024-01-06T01:30:00.000Z","endDate":"2024-01-06T09:00:00.000Z","annouceToContributors":false,"location":{"name":"中央研究院資訊科學所","address":"台北市南港區研究院路二段128號"},"link":"https://g0v-jothon.kktix.cc/events/g0v-hackath60n"},{"id":"1ac5e059-b435-457c-9760-dde49e92f6bb","projectId":"70e932c0-cb50-40f9-aba0-ced935f2d5de","name":"g0v hackath59n | 台灣零時政府第伍拾玖次輪班寫 code 救台灣黑客松","type":"實體活動","description":"g0v 第伍拾玖次大黑客松將在 2023.12.9（六）於新竹縣「竹北市中興里集會所」舉辦，歡迎公民、鄉民、憤青等諸眾，帶著熱血來盡一己之力，開源協作參與社會。","startDate":"2023-12-09T02:00:00.000Z","endDate":"2023-12-09T09:30:00.000Z","annouceToContributors":false,"location":{"name":"竹北市中興里集會所","address":"新竹縣竹北市嘉豐南路一段 11 號"},"link":"https://g0v-jothon.kktix.cc/events/g0v-hackath59n"},{"id":"9c6dc45c-588b-4429-8e7b-d9b7b068f551","projectId":"70e932c0-cb50-40f9-aba0-ced935f2d5de","name":"g0v hackath58n | 台灣零時政府第伍拾捌次 11 歲生日快樂黑客松","type":"實體活動","description":"g0v 第伍拾捌次大黑客松將在 2023.10.15（六）於中研院資訊所舉辦，歡迎公民、鄉民、憤青等諸眾，帶著熱血來盡一己之力，開源協作參與社會。","startDate":"2023-10-15T01:30:00.000Z","endDate":"2023-10-15T09:00:00.000Z","annouceToContributors":false,"location":{"name":"中央研究院資訊科學所","address":"台北市南港區研究院路二段128號"},"link":"https://g0v-jothon.kktix.cc/events/g0v-hackath58n"},{"id":"9872d3a3-ac4f-44df-be78-a7d540b63c77","projectId":"70e932c0-cb50-40f9-aba0-ced935f2d5de","name":"g0v hackath57n | 台灣零時政府第伍拾柒次開源普渡黑客松","type":"實體活動","description":"g0v 第伍拾柒次開源普渡黑客松將在 2023.08.26（六）於中研院資訊所舉辦，歡迎公民、鄉民、憤青等諸眾，帶著熱血來盡一己之力，開源協作參與社會。","startDate":"2023-08-26T01:30:00.000Z","endDate":"2023-08-26T09:00:00.000Z","annouceToContributors":false,"location":{"name":"中央研究院資訊科學所","address":"台北市南港區研究院路二段128號"},"link":"https://g0v-jothon.kktix.cc/events/g0v-hackath57n"},{"id":"0e6626c2-a11e-483d-b948-5eb3c759c517","projectId":"70e932c0-cb50-40f9-aba0-ced935f2d5de","name":"2023 零時小學校ＸSITCON - 專案實作工作坊","type":"實體活動","description":"零時小學校與 SITCON 學生計算機年會將於 8/12 合辦一日實體「專案實作工作坊」，活動由零時小學校將引導學員從問題思辨與定義、解方發想，到團隊溝通與協作，過程也將安排一組一位隊輔協助專案進行。","startDate":"2023-08-12T02:00:00.000Z","endDate":"2023-08-12T10:00:00.000Z","annouceToContributors":false,"location":{"name":"NPO HUB TAIPEI","address":"台北市中正區重慶南路三段2號"},"link":"https://g0v-jothon.kktix.cc/events/sch001ssr2023-workshop"},{"id":"e5388e24-37c6-41f3-a3f1-c6b316c3c97b","projectId":"70e932c0-cb50-40f9-aba0-ced935f2d5de","name":"零時小學校 2023 夏日線上源力增能營 Sch001 for Source Raising","type":"線上活動","description":"「AI 工具推成出新，我會被取代嗎？教育現場怎麼教？」、「Web3 去中心化時代來臨，會帶來混亂還是希望？」，究竟「如何與科技和平共處？」一起參加零時小學校 2023 夏日線上源力增能營找出生存之道！","startDate":"2023-07-22T02:00:00.000Z","endDate":"2023-08-26T02:00:00.000Z","annouceToContributors":false,"location":{"name":"Online Event","address":""},"link":"https://g0v-jothon.kktix.cc/events/sch001ssr2023"},{"id":"d19f4681-c42c-4977-85ca-3560b249e8f3","projectId":"70e932c0-cb50-40f9-aba0-ced935f2d5de","name":"g0v 揪松團 | 防衛松前講座 #2 - 躺著也中槍！資訊砲彈下老百姓的生存之道","type":"實體活動","description":"g0v 揪松團將在 7/16（日）舉辦松前講座，我們邀請到了陳廷豪及游知澔分享馬祖斷網及資訊戰經驗，並由《真相製造》作者劉致昕擔任主持人，一起探討資訊砲彈下老百姓的生存之道！","startDate":"2023-07-16T06:00:00.000Z","endDate":"2023-07-16T08:00:00.000Z","annouceToContributors":false,"location":{"name":"青平台「下一步」空間","address":"台北市中正區武昌街一段18號5樓"},"link":"https://g0v-jothon.kktix.cc/events/defense-2"},{"id":"036586fa-16c3-4b9e-a1d0-1e086213f990","projectId":"70e932c0-cb50-40f9-aba0-ced935f2d5de","name":"g0v 揪松團 | 防衛松前講座 #1 - 日常生活轉為戰時避難生活的生存之道","type":"實體活動","description":"防衛黑客松系列活動來啦～g0v 揪松團 將在 7/8（六）舉辦松前講座，我們邀請到了蘇紫雲老師及沈伯洋老師，他們將與您分享「日常生活轉為戰時避難生活的生存之道」！","startDate":"2023-07-08T02:00:00.000Z","endDate":"2023-07-08T04:00:00.000Z","annouceToContributors":false,"location":{"name":"台北 NPO 聚落 社群廚房","address":"台北市中正區重慶南路三段2號4樓"},"link":"https://g0v-jothon.kktix.cc/events/defense-1"},{"id":"d8b9b35b-33d9-4d3e-99f6-d15fdc6a2af8","projectId":"70e932c0-cb50-40f9-aba0-ced935f2d5de","name":"g0v hackath56n | 台灣零時政府第伍拾陸次真的假的黑客松 x 水保局","type":"實體活動","description":"g0v 第伍拾陸次真的假的黑客松 x 水保局 將在 2023.07.01（六）於「集思台中新烏日會議中心」舉辦，歡迎公民、鄉民、憤青等諸眾，帶著熱血來盡一己之力，開源協作參與社會。","startDate":"2023-07-01T01:30:00.000Z","endDate":"2023-07-01T09:00:00.000Z","annouceToContributors":false,"location":{"name":"集思台中新烏日會議中心","address":"台中市烏日區高鐵東一路26號4樓"},"link":"https://g0v-jothon.kktix.cc/events/g0v-hackath56n"},{"id":"4d4309f5-0b60-44b8-a982-68fa22efda4e","projectId":"70e932c0-cb50-40f9-aba0-ced935f2d5de","name":"g0v 第貳拾參次基礎建設松","type":"線上活動","description":"g0v 第貳拾參次基礎建設松將於 5/9（二）19:00 舉行，歡迎一起交流、開幹！","startDate":"2023-05-09T11:00:00.000Z","endDate":"2023-05-09T13:30:00.000Z","annouceToContributors":false,"location":{"name":"Online Event","address":""},"link":"https://g0v-jothon.kktix.cc/events/infrath23n"},{"id":"04c1af45-a81c-4412-9002-52cc136a045e","projectId":"70e932c0-cb50-40f9-aba0-ced935f2d5de","name":"g0v 南庄桐花松 2023","type":"實體活動","description":"g0v 南庄桐花松 2023 揪松團想和大家一起出去玩！ 自 2020 年起，#揪松團 和 #數位農民組合 每年共同舉辦「南庄桐花松」，與當地農民進行一場公民科技協作交流。 今年「g0v 南庄桐花松 ","startDate":"2023-04-29T03:00:00.000Z","endDate":"2023-04-30T10:00:00.000Z","annouceToContributors":false,"location":{"name":"數位農民組合大南埔共學空間","address":"苗栗縣南庄鄉南富村大南埔133-1號"},"link":"https://g0v-jothon.kktix.cc/events/tungflowerthon2023"},{"id":"8e0c0136-e89f-4f13-afe7-856bd1a4d971","projectId":"70e932c0-cb50-40f9-aba0-ced935f2d5de","name":"g0v hackath55n | 台灣零時政府第伍拾伍次 AI 也想參加黑客松","type":"實體活動","description":"g0v 第伍拾伍次大黑客松將在 2023.04.08（六）於中研院資訊所舉辦，歡迎公民、鄉民、憤青等諸眾，帶著熱血來盡一己之力，開源協作參與社會。","startDate":"2023-04-08T01:30:00.000Z","endDate":"2023-04-08T09:00:00.000Z","annouceToContributors":false,"location":{"name":"中央研究院資訊科學所","address":"台北市南港區研究院路二段128號"},"link":"https://g0v-jothon.kktix.cc/events/g0v-hackath55n"},{"id":"61c40d03-f707-4200-8cab-8b20d50a7823","projectId":"70e932c0-cb50-40f9-aba0-ced935f2d5de","name":"g0v 第貳拾貳次基礎建設松","type":"實體活動","description":"g0v 第貳拾貳次基礎建設松將於 3/4（六）13:30 舉行，歡迎自由登記提案，一起交流、開幹！","startDate":"2023-03-04T05:30:00.000Z","endDate":"2023-03-04T09:00:00.000Z","annouceToContributors":false,"location":{"name":"NPO HUB 2 樓影響力工場","address":"台北市中正區重慶南路三段2號"},"link":"https://g0v-jothon.kktix.cc/events/infrath22n"},{"id":"f6934f5d-ccb3-446a-b8e4-c194f989246f","projectId":"70e932c0-cb50-40f9-aba0-ced935f2d5de","name":"g0v hackath54n | 台灣零時政府第伍拾肆次兔兔黑客松暨零時小學校專案孵化競賽決選日","type":"實體活動","description":"g0v 第伍拾肆次大黑客松將在 2023.02.11（六）於國教院臺北院區舉辦，歡迎公民、鄉民、憤青等諸眾，帶著熱血來盡一己之力，開源協作參與社會。","startDate":"2023-02-11T01:30:00.000Z","endDate":"2023-02-11T09:00:00.000Z","annouceToContributors":false,"location":{"name":"國家教育研究院 臺北院區","address":"台北市大安區和平東路一段179號"},"link":"https://g0v-jothon.kktix.cc/events/g0v-hackath54n"},{"id":"128f653c-b71a-4107-9c91-fd927a90a9e7","projectId":"70e932c0-cb50-40f9-aba0-ced935f2d5de","name":"g0v hackath53n | 台灣零時政府第伍拾參次 18 歲公民權黑客松","type":"實體活動","description":"g0v 第伍拾參次黑客松將在 2022.12.17（六）於中研院資訊所舉辦，歡迎公民、鄉民、憤青等諸眾，帶著熱血來盡一己之力，開源協作參與社會。","startDate":"2022-12-17T01:30:00.000Z","endDate":"2022-12-17T09:00:00.000Z","annouceToContributors":false,"location":{"name":"中央研究院資訊科學所","address":"台北市南港區研究院路二段128號"},"link":"https://g0v-jothon.kktix.cc/events/g0v-hackath53n"},{"id":"934218fd-ce6d-42d3-a41b-043cfaba5657","projectId":"70e932c0-cb50-40f9-aba0-ced935f2d5de","name":"［零時小學校新竹源力增能工作坊］公民科技探究與實作課程設計","type":"實體活動","description":"探究與實作課程如何更跨領域並與真實社會連結？活動邀請 LASS 創辦人哈爸與善於跨領域教學的竹東高中韓中梅老師引導大家，一同嘗試把公民科技專案融入探究與實作課程！","startDate":"2022-11-27T02:00:00.000Z","endDate":"2022-11-27T07:00:00.000Z","annouceToContributors":false,"location":{"name":"國立竹東高中","address":"新竹縣竹東鎮大林路2號"},"link":"https://g0v-jothon.kktix.cc/events/ssr2022hsinchu"},{"id":"79dcc43b-0e30-4a30-a161-f2ca22a6747a","projectId":"70e932c0-cb50-40f9-aba0-ced935f2d5de","name":"g0v hackath52n | 台灣零時政府第伍拾貳次十週年黑客松＆論壇＆生日趴","type":"實體活動","description":"g0v 第伍拾貳次十週年黑客松 將在 2022.10.22（六）於「中央研究院 人文館 第一、二會議室」舉辦，歡迎公民、鄉民、憤青等諸眾，帶著熱血來盡一己之力，開源協作參與社會。","startDate":"2022-10-21T10:30:00.000Z","endDate":"2022-10-23T09:00:00.000Z","annouceToContributors":false,"location":{"name":"","address":""},"link":"https://g0v-jothon.kktix.cc/events/g0v-hackath52n"},{"id":"14775ae8-41b5-4ff8-9646-33d113767db4","projectId":"70e932c0-cb50-40f9-aba0-ced935f2d5de","name":"數位洄瀾黑客松","type":"實體活動","description":"數位洄瀾黑客松 將在 2022.09.24（六）於「花蓮縣政府 1 樓大禮堂」舉辦，歡迎公民、鄉民、憤青等諸眾，帶著熱血來盡一己之力，開源協作參與社會。","startDate":"2022-09-24T02:00:00.000Z","endDate":"2022-09-24T09:00:00.000Z","annouceToContributors":false,"location":{"name":"花蓮縣政府一樓大禮堂","address":"花蓮市府前路 17 號"},"link":"https://g0v-jothon.kktix.cc/events/g0v-hualienthon2022"},{"id":"f5a52b82-7d96-49f4-a9ad-babf12b26d4e","projectId":"70e932c0-cb50-40f9-aba0-ced935f2d5de","name":"g0v 第貳拾壹次基礎建設松","type":"線上活動","description":"g0v 第貳拾壹次基礎建設松將於 9/3（六）13:30 舉行，歡迎自由登記提案，一起交流、開幹！","startDate":"2022-09-03T05:30:00.000Z","endDate":"2022-09-03T09:30:00.000Z","annouceToContributors":false,"location":{"name":"Online Event","address":""},"link":"https://g0v-jothon.kktix.cc/events/infrath21n"},{"id":"75f21177-338b-4f5d-a5d5-9ab2948e936f","projectId":"70e932c0-cb50-40f9-aba0-ced935f2d5de","name":"g0v hackath51n | 台灣零時政府第伍拾壹次大肚山海豚黑客松 x 水保局","type":"實體活動","description":"g0v 第伍拾壹次大肚山海豚黑客松 x 水保局 將在 2022.08.20（六）於「集思台中新烏日會議中心」舉辦，歡迎公民、鄉民、憤青等諸眾，帶著熱血來盡一己之力，開源協作參與社會。","startDate":"2022-08-20T01:30:00.000Z","endDate":"2022-08-20T09:00:00.000Z","annouceToContributors":false,"location":{"name":"集思台中新烏日會議中心","address":"台中市烏日區高鐵東一路26號4樓"},"link":"https://g0v-jothon.kktix.cc/events/g0v-hackath51n"},{"id":"d30ce61c-840b-4d93-8422-3d822575f0df","projectId":"70e932c0-cb50-40f9-aba0-ced935f2d5de","name":"零時小學校 2022 夏日線上源力增能營 Sch001 for Source Raising","type":"實體活動","description":"g0v 如何協作出 818+ 件各領域的專案？來零時小學校 2022 夏日源力增能營找答案吧！ 7/24-8/27 你將經歷 22 堂數位公民課程、專題實作，培養數位公民力、共好行動力、跨界自學力！","startDate":"2022-07-24T01:00:00.000Z","endDate":"2022-08-27T10:00:00.000Z","annouceToContributors":false,"location":{"name":"","address":""},"link":"https://g0v-jothon.kktix.cc/events/sch001ssr2022"},{"id":"5b5e6c68-d991-4581-8d22-9e169a99e214","projectId":"70e932c0-cb50-40f9-aba0-ced935f2d5de","name":"g0v 第貳拾次基礎建設松","type":"實體活動","description":"g0v 第貳拾次基礎建設松將於 7/9（六）10:00 舉行，歡迎自由登記提案，一起交流、開幹！","startDate":"2022-07-09T02:00:00.000Z","endDate":"2022-07-09T07:00:00.000Z","annouceToContributors":false,"location":{"name":"NPO HUB 2 樓影響力論壇","address":"台北市中正區重慶南路三段2號"},"link":"https://g0v-jothon.kktix.cc/events/infrath20n"},{"id":"864d7635-b45b-444c-8e29-6f18e6a330c2","projectId":"70e932c0-cb50-40f9-aba0-ced935f2d5de","name":"g0v hackath50n | 台灣零時政府第伍拾次來電五十黑客松 x COSCUP Open Source Contributor Workshop","type":"實體活動","description":"g0v 第伍拾次來電五十黑客松 x COSCUP 將在 2022.06.18（六）於升級會議中心-松江 101 館舉辦，歡迎公民、鄉民、憤青等諸眾，帶著熱血來盡一己之力，開源協作參與社會。","startDate":"2022-06-18T01:30:00.000Z","endDate":"2022-06-18T09:00:00.000Z","annouceToContributors":false,"location":{"name":"升級會議中心-松江101館","address":"台北市中山區松江路101號4樓"},"link":"https://g0v-jothon.kktix.cc/events/g0v-hackath50n"},{"id":"9b1ea4c9-cea7-49c7-bebc-80185269fe57","projectId":"70e932c0-cb50-40f9-aba0-ced935f2d5de","name":"g0v 南庄桐花松 2022","type":"實體活動","description":"g0v 南庄桐花松 2022   2020 年，#揪松團 與 #數位農民組合 合辦了「南庄桐花松」，在「大南埔共學空間」開啟與「真 ● 農民」的公民科技協作交流，探討因時 / 因地制宜的台灣版農夫種植","startDate":"2022-05-01T02:00:00.000Z","endDate":"2022-05-01T10:00:00.000Z","annouceToContributors":false,"location":{"name":"數位農民組合大南埔共學空間","address":"苗栗縣南庄鄉南富村大南埔133-1號"},"link":"https://g0v-jothon.kktix.cc/events/tungflowerthon2022"},{"id":"2a443376-e55c-450f-b34c-e44254f36fcd","projectId":"70e932c0-cb50-40f9-aba0-ced935f2d5de","name":"g0v hackath49n | 台灣零時政府第肆拾玖次全糖去冰黑客松 x 2022 亞太社會創新高峰會","type":"實體活動","description":"g0v 第肆拾貳次大黑客松將在 2022.04.09（六）於台南 C-Hub 成大創意中心舉辦，歡迎公民、鄉民、憤青等諸眾，帶著熱血來盡一己之力，開源協作參與社會。","startDate":"2022-04-09T02:00:00.000Z","endDate":"2022-04-09T10:00:00.000Z","annouceToContributors":false,"location":{"name":"C-Hub 成大創新中心","address":"C-Hub 成大創新中心"},"link":"https://g0v-jothon.kktix.cc/events/g0v-hackath49n"},{"id":"d69b9a0e-869c-4d71-9809-8a05b2c9fcd8","projectId":"70e932c0-cb50-40f9-aba0-ced935f2d5de","name":"g0v 第拾玖次基礎建設松","type":"實體活動","description":"g0v 第拾柒次基礎建設松將於 03/12（六）13:30 舉行，歡迎自由登記提案，一起交流、開幹！","startDate":"2022-03-12T05:30:00.000Z","endDate":"2022-03-12T09:30:00.000Z","annouceToContributors":false,"location":{"name":"NPO HUB 2 樓影響力論壇","address":"台北市中正區重慶南路三段2號"},"link":"https://g0v-jothon.kktix.cc/events/infrath19n"},{"id":"3eb49461-f252-44f1-be2b-e57fb247ba92","projectId":"70e932c0-cb50-40f9-aba0-ced935f2d5de","name":"g0v hackath48n | 台灣零時政府第肆拾捌次虎來俱進黑客松","type":"實體活動","description":"g0v 第肆拾捌次大黑客松將在 2022.2.19（六）於 Gather Town 線上會議室舉辦，歡迎公民、鄉民、憤青等諸眾，帶著熱血運用一己之力，開源協作參與社會。","startDate":"2022-02-19T02:00:00.000Z","endDate":"2022-02-19T09:00:00.000Z","annouceToContributors":false,"location":{"name":"","address":""},"link":"https://g0v-jothon.kktix.cc/events/g0v-hackath48n"},{"id":"027ab1fb-e0fe-478f-9f23-114affc4ab81","projectId":"70e932c0-cb50-40f9-aba0-ced935f2d5de","name":"g0v hackath47n | 台灣零時政府第肆拾柒次板橋油庫口黑客松","type":"實體活動","description":"g0v 第肆拾柒次大黑客松將在 2021.12.11（六）於線上舉辦，歡迎公民、鄉民、憤青等諸眾，帶著熱血來盡一己之力，開源協作參與社會。","startDate":"2021-12-11T01:00:00.000Z","endDate":"2021-12-11T10:00:00.000Z","annouceToContributors":false,"location":{"name":"新板傑仕堡A棟2樓（新北板橋中山國中大門對面）","address":"新北市板橋區文化路一段188巷57號"},"link":"https://g0v-jothon.kktix.cc/events/g0v-hackath47n"},{"id":"f97792bf-8af2-4fee-a169-7f6d2f8cc855","projectId":"70e932c0-cb50-40f9-aba0-ced935f2d5de","name":"［零時小學校 × LASS］新竹小松","type":"實體活動","description":"緣起 零時小學校的實體活動回來了！這次我們要到新竹，試著將土地、河流與流域轉化為地理資料，用地理資訊系統說一個新竹的流域故事⋯⋯ 本次零時小學校的「新竹小松」將與 LASS 開源公益環境感測網路合作，","startDate":"2021-11-20T05:30:00.000Z","endDate":"2021-11-20T10:00:00.000Z","annouceToContributors":false,"location":{"name":"慕溪園","address":"新竹縣竹北市復興三路二段 82 號"},"link":"https://g0v-jothon.kktix.cc/events/sch001-hc211120"},{"id":"907937b8-a03b-4d49-b7ff-04b3becc0094","projectId":"70e932c0-cb50-40f9-aba0-ced935f2d5de","name":"g0v hackath46n | 台灣零時政府第肆拾陸次九週年黑客松","type":"實體活動","description":"g0v 第肆拾陸次大黑客松將在 2021.10.23（六）於線上舉辦，歡迎公民、鄉民、憤青等諸眾，帶著熱血來盡一己之力，開源協作參與社會。","startDate":"2021-10-23T01:00:00.000Z","endDate":"2021-10-23T09:00:00.000Z","annouceToContributors":false,"location":{"name":"集思交通部國際會議中心 3F 國際會議廳／GIS MOTC 3F Plenary Hall","address":"台北市杭州南路一段24號"},"link":"https://g0v-jothon.kktix.cc/events/g0v-hackath46n"},{"id":"c927d620-82c3-4515-9edb-a5166d95706e","projectId":"70e932c0-cb50-40f9-aba0-ced935f2d5de","name":"g0v hackath45n | 台灣零時政府第肆拾伍次原本在台中黑客松","type":"實體活動","description":"g0v 第肆拾伍次大黑客松將在 2021.08.21（六）於線上舉辦，歡迎公民、鄉民、憤青等諸眾，帶著熱血來盡一己之力，開源協作參與社會。","startDate":"2021-08-21T02:00:00.000Z","endDate":"2021-08-21T09:00:00.000Z","annouceToContributors":false,"location":{"name":"","address":""},"link":"https://g0v-jothon.kktix.cc/events/g0v-hackath45n"},{"id":"2da19919-e899-450e-93e2-0c64505a77dd","projectId":"70e932c0-cb50-40f9-aba0-ced935f2d5de","name":"【選修課】零時小學校「夏日源理」2021 線上源力增能營 Sch001 for Source Raising","type":"實體活動","description":"零時小學校「夏日源理」2021 線上源力增能營是 g0v 貢獻者與 g0v 揪松團協作推出的線上課程計畫，以「開源、協作、開放學習」為主軸，期盼以開放的方式，在線上陪伴所有學習者。","startDate":"2021-07-17T01:00:00.000Z","endDate":"2021-08-14T10:00:00.000Z","annouceToContributors":false,"location":{"name":"","address":""},"link":"https://g0v-jothon.kktix.cc/events/codeforssrelective"},{"id":"6cf64fdb-cdaf-4e78-bc4f-9ff61b22704b","projectId":"70e932c0-cb50-40f9-aba0-ced935f2d5de","name":"零時小學校「夏日源理」2021 線上源力增能營 Sch001 for Source Raising","type":"實體活動","description":"零時小學校「夏日源理」2021 線上源力增能營是 g0v 貢獻者與 g0v 揪松團協作推出的線上課程計畫，以「開源、協作、開放學習」為主軸，期盼以開放的方式，在線上陪伴所有學習者。","startDate":"2021-07-17T01:00:00.000Z","endDate":"2021-08-14T10:00:00.000Z","annouceToContributors":false,"location":{"name":"","address":""},"link":"https://g0v-jothon.kktix.cc/events/sch001ssr2021"},{"id":"337298bc-bc4d-429c-abac-5e06a674510e","projectId":"70e932c0-cb50-40f9-aba0-ced935f2d5de","name":"g0v hackath44n | 台灣零時政府第肆拾肆次世界最危險黑客松","type":"實體活動","description":"g0v 第肆拾肆次大黑客松將在 2021.06.26（六）於線上舉辦，歡迎公民、鄉民、憤青等諸眾，帶著熱血來盡一己之力，開源協作參與社會。","startDate":"2021-06-26T01:00:00.000Z","endDate":"2021-06-26T09:00:00.000Z","annouceToContributors":false,"location":{"name":"","address":""},"link":"https://g0v-jothon.kktix.cc/events/g0v-hackath44n"},{"id":"37456731-2f06-4a74-b735-5338f07afbe7","projectId":"70e932c0-cb50-40f9-aba0-ced935f2d5de","name":"「線上活動怎麼辦？」線上協作工作坊","type":"實體活動","description":"這是一場，教你怎麼辦線上活動的，線上工作坊。","startDate":"2021-06-19T11:30:00.000Z","endDate":"2021-06-19T13:30:00.000Z","annouceToContributors":false,"location":{"name":"","address":""},"link":"https://g0v-jothon.kktix.cc/events/coworkshop2021"},{"id":"6be598c0-dd23-496b-b600-c338c4e50501","projectId":"70e932c0-cb50-40f9-aba0-ced935f2d5de","name":"g0v infrath18n 第拾捌次基礎建設松","type":"實體活動","description":"g0v 第拾捌次基礎建設松將於 05/22（六）14:00 「線上」舉行，歡迎自由登記提案，一起交流、開幹！","startDate":"2021-05-22T06:00:00.000Z","endDate":"2021-05-22T10:00:00.000Z","annouceToContributors":false,"location":{"name":"","address":""},"link":"https://g0v-jothon.kktix.cc/events/infrath18n"},{"id":"13c891ae-b03f-4c47-bc4d-6baceec80246","projectId":"70e932c0-cb50-40f9-aba0-ced935f2d5de","name":"g0v hackath44n | 台灣零時政府第肆拾肆次世界最危險黑客松","type":"實體活動","description":"g0v 第肆拾肆次大黑客松將在 2021.05.22（六）於中研院資訊所舉辦，歡迎公民、鄉民、憤青等諸眾，帶著熱血來盡一己之力，開源協作參與社會。","startDate":"2021-05-22T01:00:00.000Z","endDate":"2021-05-22T10:00:00.000Z","annouceToContributors":false,"location":{"name":"中央研究院資訊科學所","address":"台北市南港區研究院路二段128號"},"link":"https://g0v-jothon.kktix.cc/events/g0v-hackath44narchived"},{"id":"c4453d96-72f0-495e-b52a-f4704ef1d28d","projectId":"70e932c0-cb50-40f9-aba0-ced935f2d5de","name":"g0v 南庄桐花松 2021","type":"實體活動","description":"g0v 南庄桐花松 2021，農業、賞花、Hacking！","startDate":"2021-05-01T02:00:00.000Z","endDate":"2021-05-01T10:00:00.000Z","annouceToContributors":false,"location":{"name":"","address":""},"link":"https://g0v-jothon.kktix.cc/events/tungflowerthon2021"},{"id":"1aad4cf2-55bc-44f1-a52f-6fe1c01d0b81","projectId":"70e932c0-cb50-40f9-aba0-ced935f2d5de","name":"g0v Hackath43n | 台灣零時政府第肆拾參次源力犇騰黑客松","type":"實體活動","description":"g0v 第肆拾參次大黑客松將在 2021.03.20（六）於中研院資訊所舉辦，歡迎公民、鄉民、憤青等諸眾，帶著熱血來盡一己之力，開源協作參與社會。","startDate":"","endDate":"","annouceToContributors":false,"location":{"name":"中央研究院資訊科學所","address":"台北市南港區研究院路二段128號"},"link":"https://g0v-jothon.kktix.cc/events/g0v-hackath43n"},{"id":"7ed4a635-4ce5-4ec9-aee5-5b49f063ecba","projectId":"70e932c0-cb50-40f9-aba0-ced935f2d5de","name":"小學校松 Sch001 2021 Workshop I","type":"實體活動","description":"零時小學校的 2021 年第一次「小學校松」將於 02/20（六）14:00 舉行，歡迎一起來交流和協作！","startDate":"2021-02-20T06:00:00.000Z","endDate":"2021-02-20T10:00:00.000Z","annouceToContributors":false,"location":{"name":"NPO HUB Taipei","address":"台北市中正區重慶南路三段2號"},"link":"https://g0v-jothon.kktix.cc/events/sch001-2021-wsi"},{"id":"265785e2-d2a3-45df-bc27-9458d33c23c3","projectId":"70e932c0-cb50-40f9-aba0-ced935f2d5de","name":"g0v hackath42n | 台灣零時政府第肆拾貳次生命、宇宙以及萬事萬物的終極答案黑客松","type":"實體活動","description":"g0v 第肆拾貳次大黑客松將在 2021.01.23（六）於中研院資訊所舉辦，歡迎公民、鄉民、憤青等諸眾，帶著熱血來盡一己之力，開源協作參與社會。","startDate":"2021-01-23T01:00:00.000Z","endDate":"2021-01-23T10:00:00.000Z","annouceToContributors":false,"location":{"name":"中央研究院資訊科學所","address":"台北市南港區研究院路二段128號"},"link":"https://g0v-jothon.kktix.cc/events/g0v-hackath42n"},{"id":"3d0c06c6-666b-416f-a7f9-bb2859efd3c9","projectId":"70e932c0-cb50-40f9-aba0-ced935f2d5de","name":"g0v 第拾柒次基礎建設松","type":"實體活動","description":"g0v 第拾柒次基礎建設松將於 01/10（日）14:00 舉行，歡迎自由登記提案，一起交流、開幹！","startDate":"2021-01-10T06:00:00.000Z","endDate":"2021-01-10T10:00:00.000Z","annouceToContributors":false,"location":{"name":"NPO Hub 4F Kitchen","address":"台北市中正區重慶南路三段2號"},"link":"https://g0v-jothon.kktix.cc/events/infrath17n"},{"id":"3676aafe-0767-4179-9313-a449aa048d03","projectId":"70e932c0-cb50-40f9-aba0-ced935f2d5de","name":"g0v hackath41n | 台灣零時政府第肆拾壹次八週年黑客松","type":"實體活動","description":"歡迎公民、鄉民、憤青、開發者、設計者、社會運動工作者、公務員、法律專家、文字工作者、插畫家與媒體工作者等諸眾，帶著熱血來盡一己之力，開源協作參與社會。","startDate":"2020-10-24T01:00:00.000Z","endDate":"2020-10-24T10:00:00.000Z","annouceToContributors":false,"location":{"name":"中央研究院資訊科學所","address":"台北市南港區研究院路二段128號"},"link":"https://g0v-jothon.kktix.cc/events/g0v-hackath41n"},{"id":"a3c78e51-c822-4302-a16c-8da190a2c6fd","projectId":"70e932c0-cb50-40f9-aba0-ced935f2d5de","name":"零時小學校 Demo Day 2020","type":"實體活動","description":"零時小學校（Sch001）是聚焦在教育的 g0v 專案，將代表數位原生世代的 0 與 1 放入代表教育的「學校（School）」，從零重新思考學校的角色，代表教育與數位社群的連結與協作。","startDate":"2020-08-30T05:30:00.000Z","endDate":"2020-08-30T10:00:00.000Z","annouceToContributors":false,"location":{"name":"華山 1914 文化創意產業園區中 3 館 2 樓拱廳","address":"台北市中正區八德路一段1號"},"link":"https://g0v-jothon.kktix.cc/events/sch001-demo-2020"},{"id":"d6e9f806-02eb-4b49-80d6-f43b2e73c997","projectId":"70e932c0-cb50-40f9-aba0-ced935f2d5de","name":"g0v hackath40n | 台灣零時政府第肆拾次集合啦！老地方黑客松","type":"實體活動","description":"歡迎公民、鄉民、憤青、開發者、設計者、社會運動工作者、公務員、法律專家、文字工作者、插畫家與媒體工作者等諸眾，帶著熱血來盡一己之力，開源協作參與社會。","startDate":"2020-07-25T01:00:00.000Z","endDate":"2020-07-25T10:00:00.000Z","annouceToContributors":false,"location":{"name":"中研院資訊所","address":"11529台灣台北市南港區研究院路二段128號"},"link":"https://g0v-jothon.kktix.cc/events/g0v-hackath40n"},{"id":"02bc63a8-a72e-4716-b6f2-dcbef9bfc493","projectId":"70e932c0-cb50-40f9-aba0-ced935f2d5de","name":"零時小學校：第三次工作坊 Sch001 Workshop III","type":"實體活動","description":"零時小學校（Sch001）是聚焦在教育的 g0v 專案，將代表數位原生世代的 0 與 1 放入代表教育的「學校（School）」，從零重新思考學校的角色，代表教育與數位社群的連結與協作。","startDate":"2020-06-21T06:00:00.000Z","endDate":"2020-06-21T11:00:00.000Z","annouceToContributors":false,"location":{"name":"台北 NPO 聚落","address":"NPO HUB Taipei 4F Kitchen Lab"},"link":"https://g0v-jothon.kktix.cc/events/sch001-wsiii"},{"id":"253a9e7f-2500-425c-a018-9cdfdad4be12","projectId":"70e932c0-cb50-40f9-aba0-ced935f2d5de","name":"g0v 南庄桐花松","type":"實體活動","description":"g0v 南庄桐花松，邊吃邊聊邊 Hacking！","startDate":"2020-05-16T02:00:00.000Z","endDate":"2020-05-16T10:00:00.000Z","annouceToContributors":false,"location":{"name":"苗栗南庄南埔國小","address":"苗栗縣南庄鄉南富村134號"},"link":"https://g0v-jothon.kktix.cc/events/tungflowerthon"},{"id":"9c3a3e91-5960-4481-8cd0-e9e1b9a0cf5f","projectId":"70e932c0-cb50-40f9-aba0-ced935f2d5de","name":"零時小學校：三月大松日 Sch001 @ g0v Hackath38n","type":"實體活動","description":"零時小學校（Sch001）是聚焦在教育的 g0v 專案，將代表數位原生世代的 0 與 1 放入代表教育的「學校（School）」，從零重新思考學校的角色，代表教育與數位社群的連結與協作。","startDate":"2020-03-14T01:00:00.000Z","endDate":"2020-03-14T10:00:00.000Z","annouceToContributors":false,"location":{"name":"台北 NPO 聚落","address":"NPO HUB Taipei 4F Kitchen"},"link":"https://g0v-jothon.kktix.cc/events/sch001-hackath38n"},{"id":"ebd9887a-f421-4b99-8473-c9848cd3419d","projectId":"70e932c0-cb50-40f9-aba0-ced935f2d5de","name":"2020 g0v 坑抗 Keng of Conf ── 坑主小聚","type":"實體活動","description":"g0v 揪松團想舉辦坑主小聚（a.k.a. g0v Keng of Conf 簡稱「坑抗」），希望可以給不同階段的坑主（初坑、中坑或深坑）一些經驗分享或共同討論解決方式。","startDate":"2020-02-02T06:00:00.000Z","endDate":"2020-02-02T10:00:00.000Z","annouceToContributors":false,"location":{"name":"","address":""},"link":"https://g0v-jothon.kktix.cc/events/kengconf01"},{"id":"2b00958a-9642-4f8c-9382-916a6b44b38c","projectId":"70e932c0-cb50-40f9-aba0-ced935f2d5de","name":"「US Taiwan Watch：美國國會台灣觀測站」首次台灣分享會","type":"實體活動","description":"「US Taiwan Watch：美國國會台灣觀測站」首次台灣分享會來了！","startDate":"2020-01-18T11:00:00.000Z","endDate":"2020-01-18T13:00:00.000Z","annouceToContributors":false,"location":{"name":"台北NPO聚落","address":"NPO HUB Taipei 4F 大廳"},"link":"https://g0v-jothon.kktix.cc/events/ustwatch2020tp"},{"id":"c838037a-4a2f-49a3-b554-84f4d0ab1796","projectId":"70e932c0-cb50-40f9-aba0-ced935f2d5de","name":"g0v 第拾伍次基礎建設松","type":"實體活動","description":"g0v 第拾伍次基礎建設松將於 01/18（六）14:00 舉行，歡迎自由登記提案，一起交流、開幹、吃午餐！","startDate":"2020-01-18T06:00:00.000Z","endDate":"2020-01-18T10:00:00.000Z","annouceToContributors":false,"location":{"name":"NPO Hub ","address":"台北市中正區重慶南路三段2號"},"link":"https://g0v-jothon.kktix.cc/events/infrath15n"},{"id":"a141a799-2b0d-48cf-9199-5ca8d55be289","projectId":"70e932c0-cb50-40f9-aba0-ced935f2d5de","name":"g0v hackath37n | 台灣零時政府第參拾柒次全臺首學黑客松","type":"實體活動","description":"歡迎公民、鄉民、憤青、開發者、設計者、社會運動工作者、公務員、法律專家、文字工作者、插畫家與媒體工作者等諸眾，帶著熱血來盡一己之力，開源協作參與社會。","startDate":"2019-12-21T01:00:00.000Z","endDate":"2019-12-21T10:00:00.000Z","annouceToContributors":false,"location":{"name":"吳園藝文中心","address":"台南市中西區民權路二段30號"},"link":"https://g0v-jothon.kktix.cc/events/g0v-hackath37n"},{"id":"ea793913-d8c4-4456-a90e-3292eb064cf5","projectId":"70e932c0-cb50-40f9-aba0-ced935f2d5de","name":"g0v 台南新手村：首場台南大松說明會","type":"實體活動","description":"「g0v 是什麼？」如果你對 g0v 黑客松有過上述疑問，g0v 首場台南大松說明會「g0v 台南新手村」就是你可以來參加的活動囉！","startDate":"2019-11-30T06:00:00.000Z","endDate":"2019-11-30T08:00:00.000Z","annouceToContributors":false,"location":{"name":"好想工作室","address":"台南市東區北門路二段16號L2A"},"link":"https://g0v-jothon.kktix.cc/events/g0villagetainan"},{"id":"9df8f86f-f17e-45d1-93e4-613e382432cb","projectId":"70e932c0-cb50-40f9-aba0-ced935f2d5de","name":"g0v Year-End Banquet | g0v 公民科技創新獎助金 2019 成果發表會暨 g0v 社群忘年會","type":"實體活動","description":"g0v 社群首次忘年會！活動包含「g0v 公民科技創新獎助金」今年獲獎團隊的成果發表會、g0v 社群閃電講與義賣競拍，邀請所有熱血公民，與 g0v 社群參與者一同參加這場史無前例的宴會。","startDate":"2019-11-16T06:00:00.000Z","endDate":"2019-11-16T11:00:00.000Z","annouceToContributors":false,"location":{"name":"華山文創園區中 3 館 2 樓拱廳","address":"台北市中正區八德路一段1號"},"link":"https://g0v-jothon.kktix.cc/events/g0v-year-end-banquet-2019"},{"id":"265bbfe1-c657-4ba8-93bf-ecaafc25370a","projectId":"70e932c0-cb50-40f9-aba0-ced935f2d5de","name":"g0v 第拾肆次基礎建設松","type":"實體活動","description":"g0v 第拾肆次基礎建設松將於 10/20（日）10:00 舉行，歡迎自由登記提案，一起交流、開幹、吃午餐！","startDate":"2019-10-20T02:00:00.000Z","endDate":"2019-10-20T10:00:00.000Z","annouceToContributors":false,"location":{"name":"NPO Hub ","address":"台北市中正區重慶南路三段2號"},"link":"https://g0v-jothon.kktix.cc/events/infrath14n"},{"id":"8c286d65-1a63-4818-84c1-99e40969f150","projectId":"70e932c0-cb50-40f9-aba0-ced935f2d5de","name":"g0v hackath36n | 台灣零時政府第參拾陸次開放台北市議會黑客松","type":"實體活動","description":"歡迎公民、鄉民、憤青、開發者、設計者、社會運動工作者、公務員、法律專家、文字工作者、插畫家與媒體工作者等諸眾，帶著熱血來盡一己之力，開源協作參與社會。","startDate":"2019-09-07T01:00:00.000Z","endDate":"2019-09-07T10:00:00.000Z","annouceToContributors":false,"location":{"name":"台北市議會","address":"台北市信義區仁愛路四段507號"},"link":"https://g0v-jothon.kktix.cc/events/g0v-hackath36n"},{"id":"3fbfa31f-bc85-4591-afbd-c6be21ae7e89","projectId":"70e932c0-cb50-40f9-aba0-ced935f2d5de","name":"g0v hackath35n | 台灣零時政府第參拾伍次最旁邊黑客松","type":"實體活動","description":"歡迎公民、鄉民、憤青、開發者、設計者、社會運動工作者、公務員、法律專家、文字工作者、插畫家與媒體工作者等諸眾，帶著熱血來盡一己之力，開源協作參與社會。","startDate":"2019-07-20T01:00:00.000Z","endDate":"2019-07-20T10:00:00.000Z","annouceToContributors":false,"location":{"name":"中央研究院資訊科學所","address":"台北市南港區研究院路二段128號"},"link":"https://g0v-jothon.kktix.cc/events/g0v-hackath35n"},{"id":"c9c14188-b9f1-42de-8972-a0e97f10d6c4","projectId":"70e932c0-cb50-40f9-aba0-ced935f2d5de","name":"第壹次電視松 × 公視       hackatv1n × PTS","type":"實體活動","description":"繼四月第零次《電視松》，這次第壹次《電視松》與公視合作，對於現在電視新聞環境感到不滿，有想法想要動手做事的，或是沒想法但想幫幫忙的，都歡迎可以來參加！","startDate":"2019-06-22T01:30:00.000Z","endDate":"2019-06-22T09:30:00.000Z","annouceToContributors":false,"location":{"name":"公視 A 棟 2 樓永久會員聯誼室","address":"114台北市內湖區康寧路三段75巷50號"},"link":"https://g0v-jothon.kktix.cc/events/hackatv1n"},{"id":"e70985aa-b384-4dce-8a3d-6fa5a7d6a9cd","projectId":"70e932c0-cb50-40f9-aba0-ced935f2d5de","name":"g0v hackath34n | 台灣零時政府第參拾肆次再開放空總黑客松","type":"實體活動","description":"歡迎公民、鄉民、憤青、開發者、設計者、社會運動工作者、公務員、法律專家、文字工作者、插畫家與媒體工作者等諸眾，帶著熱血來盡一己之力，開源協作參與社會。","startDate":"2019-05-25T01:00:00.000Z","endDate":"2019-05-25T10:00:00.000Z","annouceToContributors":false,"location":{"name":"空總臺灣當代文化實驗場·聯合餐廳","address":"106台北市大安區建國南路一段177號"},"link":"https://g0v-jothon.kktix.cc/events/g0v-hackath34n"},{"id":"d21e5b69-b9c6-44c5-8032-0a5a7199786b","projectId":"70e932c0-cb50-40f9-aba0-ced935f2d5de","name":"第零次電視松","type":"實體活動","description":"電視媒體至今仍有很大的影響力，無論是在小吃店內或是家中客廳。但現在的電視媒體充滿許多亂象。該是由政府來管控，還是要透過市場機制，又或是要推動媒體自律？怎麼做？來電視松討論協作吧～","startDate":"2019-04-28T06:00:00.000Z","endDate":"2019-04-28T10:00:00.000Z","annouceToContributors":false,"location":{"name":"群島 archipiélago","address":"圓山花博爭艷館"},"link":"https://g0v-jothon.kktix.cc/events/hackatv0n"},{"id":"6437738b-f027-4be8-9b6f-f759d51e1af5","projectId":"70e932c0-cb50-40f9-aba0-ced935f2d5de","name":"g0v hackath33n | 台灣零時政府第參拾參次不顧北京反對___黑客松","type":"實體活動","description":"歡迎公民、鄉民、憤青、開發者、設計者、社會運動工作者、公務員、法律專家、文字工作者、插畫家與媒體工作者等諸眾，帶著熱血來盡一己之力，開源協作參與社會。","startDate":"2019-03-09T01:00:00.000Z","endDate":"2019-03-09T10:00:00.000Z","annouceToContributors":false,"location":{"name":"中央研究院資訊科學所","address":"台北市南港區研究院路二段128號"},"link":"https://g0v-jothon.kktix.cc/events/g0v-hackath33n"},{"id":"dcb100ad-73cf-4ab3-accf-dd97c34bfcc7","projectId":"70e932c0-cb50-40f9-aba0-ced935f2d5de","name":"g0v hackath32n | 台灣零時政府第参拾貳次蜂蜜檸檬黑客松","type":"實體活動","description":"歡迎公民、鄉民、憤青、開發者、設計者、社會運動工作者、公務員、法律專家、文字工作者、插畫家與媒體工作者等諸眾，帶著熱血來盡一己之力，開源協作參與社會。","startDate":"2018-12-08T01:00:00.000Z","endDate":"2018-12-08T10:00:00.000Z","annouceToContributors":false,"location":{"name":"中央研究院資訊科學所","address":"台北市南港區研究院路二段128號"},"link":"https://g0v-jothon.kktix.cc/events/g0v-hackath32n"},{"id":"0a7729b5-08f9-492a-a888-1d00dc0b43cd","projectId":"70e932c0-cb50-40f9-aba0-ced935f2d5de","name":"11/11 g0v 第拾參次基礎建設松","type":"實體活動","description":"g0v 第拾參次基礎建設松將於 11/11（日）14:00 舉行，歡迎自由登記提案，一起交流、開幹、喝啤酒！","startDate":"2018-11-11T05:30:00.000Z","endDate":"2018-11-11T10:00:00.000Z","annouceToContributors":false,"location":{"name":"Cymking Space","address":"台北市南港區南港路三段52號"},"link":"https://g0v-jothon.kktix.cc/events/infrath13n"},{"id":"0e818a31-0cf9-4890-9e48-d9e06ed02458","projectId":"70e932c0-cb50-40f9-aba0-ced935f2d5de","name":"9/2 g0v 第拾貳次基礎建設松","type":"實體活動","description":"g0v 第拾貳次基礎建設松將於 9/2（日）14:00 舉行，歡迎自由登記提案，一起交流、開幹、喝啤酒！","startDate":"2018-09-02T06:00:00.000Z","endDate":"2018-09-02T09:00:00.000Z","annouceToContributors":false,"location":{"name":"摩茲工寮","address":"台北市中正區八德路一段94號3樓"},"link":"https://g0v-jothon.kktix.cc/events/infrath12n"},{"id":"c3c72b07-8a2a-4e8b-b7ec-f62d0bbb7c9e","projectId":"70e932c0-cb50-40f9-aba0-ced935f2d5de","name":"g0v hackath31n | 台灣零時政府第參拾壹次香蕉吃到飽松","type":"實體活動","description":"歡迎公民、鄉民、憤青、開發者、設計者、社會運動工作者、公務員、法律專家、文字工作者、插畫家與媒體工作者等諸眾，帶著熱血來盡一己之力，開源協作參與社會。","startDate":"2018-07-07T01:00:00.000Z","endDate":"2018-07-07T10:00:00.000Z","annouceToContributors":false,"location":{"name":"中央研究院資訊科學所","address":"台北市南港區研究院路二段128號"},"link":"https://g0v-jothon.kktix.cc/events/g0v-hackath31n"},{"id":"86e7febe-6f85-4c15-bf81-c10c8f7c9222","projectId":"70e932c0-cb50-40f9-aba0-ced935f2d5de","name":"6/19 g0v 第拾壹次基礎建設「傍晚熱炒晚上松」 ft. Frank Pasquale","type":"實體活動","description":"本次 g0v 第拾壹次基礎建設「傍晚熱炒晚上松」ft. Frank Pasquale & Ray Cha 將於 6/19（二）19:00 舉行，難得短講與交流機會，一起來 hacking 吧！","startDate":"2018-06-19T11:00:00.000Z","endDate":"2018-06-19T14:00:00.000Z","annouceToContributors":false,"location":{"name":"群島","address":"台北市中山區長安東路一段45-2號3樓"},"link":"https://g0v-jothon.kktix.cc/events/infrath11n"},{"id":"ccf9377b-92ba-4307-b945-0c39181ac187","projectId":"70e932c0-cb50-40f9-aba0-ced935f2d5de","name":"g0v hackath30n | 台灣零時政府第參拾次佛系黑客松","type":"實體活動","description":"本次 g0v 大黑客松將於 5/5 舉辦，歡迎公民、鄉民、憤青、開發者、設計者、社會運動工作者、公務員、法律專家、文字工作者、插畫家與媒體工作者等諸眾，帶著熱血來盡一己之力，開源協作參與社會。","startDate":"2018-05-05T01:00:00.000Z","endDate":"2018-05-05T10:00:00.000Z","annouceToContributors":false,"location":{"name":"中央研究院資訊科學所","address":"115台北市南港區研究院路二段128號"},"link":"https://g0v-jothon.kktix.cc/events/g0v-hackath30n"},{"id":"807fa502-35cf-4646-9ed1-bbffc3b213f5","projectId":"70e932c0-cb50-40f9-aba0-ced935f2d5de","name":"g0v 復活節第拾次基礎建設松","type":"實體活動","description":"本次 g0v 基礎建設松將於 4/14（六）14:00 舉行，一起組裝 g0v 社群工具模組，促進人坑松的交流吧！","startDate":"2018-04-14T06:00:00.000Z","endDate":"2018-04-14T10:00:00.000Z","annouceToContributors":false,"location":{"name":"摩茲工寮 Mozilla Space ","address":"台北市八德路一段 94 號 3 樓"},"link":"https://g0v-jothon.kktix.cc/events/infrath10n"},{"id":"747fb2de-7ae4-402a-9d98-0a819c76ab61","projectId":"70e932c0-cb50-40f9-aba0-ced935f2d5de","name":"g0v hackath29n | 台灣零時政府第貳拾玖次開放資料黑客松","type":"實體活動","description":"台灣零時政府 g0v.tw 雙月大黑客松 不只寫程式改造社會 不要問為什麼沒有人做這個，先承認你就是沒有人 本次 g0v 大黑客松將於 3/3 日 與全世界 128 個活動共同響應「世界開放資料日」 ","startDate":"2018-03-03T01:00:00.000Z","endDate":"2018-03-03T10:00:00.000Z","annouceToContributors":false,"location":{"name":"中央研究院資訊科學所","address":""},"link":"https://g0v-jothon.kktix.cc/events/g0v-hackath29n"},{"id":"2cecd21f-eefe-4d0a-9730-67bbdcedcbe1","projectId":"70e932c0-cb50-40f9-aba0-ced935f2d5de","name":"g0v hackath28n | 台灣零時政府第貳拾捌次高牆功德黑客松","type":"實體活動","description":"台灣零時政府 g0v.tw 雙月大黑客松 不只寫程式改造社會 還要有菩薩心會許願蓋高牆做功德 不要問為什麼沒有人做功德，先承認你就是沒有人 來吧！來提新專案、來做舊專案、來認識新朋友！ 拓展開源、開幹","startDate":"2018-01-13T01:00:00.000Z","endDate":"2018-01-13T10:00:00.000Z","annouceToContributors":false,"location":{"name":"中央研究院資訊科學所","address":""},"link":"https://g0v-jothon.kktix.cc/events/g0v-hackath28n"},{"id":"86b098db-32ba-4cc1-a9d7-02ca038dddd9","projectId":"70e932c0-cb50-40f9-aba0-ced935f2d5de","name":"在開源社群改造社會：2018 年 g0v 公民科技創新獎助金提案說明工作坊","type":"實體活動","description":"2018 g0v 公民科技創新獎助金上線啦！1/1-1/21 線上公開提案。不知道怎麼提案嗎？不會寫程式嗎？歡迎來參加 12/27 的提案說明工作坊，一起入坑。","startDate":"2018-01-03T11:00:00.000Z","endDate":"2018-01-03T13:00:00.000Z","annouceToContributors":false,"location":{"name":"摩茲工寮 Mozilla Space","address":"台北市八德路一段 94 號 3 樓"},"link":"https://g0v-jothon.kktix.cc/events/grant-apply-worksh0p-moz"},{"id":"13593868-5102-4eaa-a2bf-3dc5f59ab9fb","projectId":"70e932c0-cb50-40f9-aba0-ced935f2d5de","name":"公民團體與科技協力：從透明足跡到 g0v 獎助金（2018 年 g0v 公民科技創新獎助金提案說明工作坊）","type":"實體活動","description":"2018 g0v 公民科技創新獎助金上線啦！1/1-1/21 線上公開提案。不知道怎麼提案嗎？不會寫程式嗎？歡迎來參加 12/27 的提案說明工作坊，一起入坑。","startDate":"2017-12-27T11:00:00.000Z","endDate":"2017-12-27T13:00:00.000Z","annouceToContributors":false,"location":{"name":"綠盟辦公室","address":"台北市羅斯福路二段 70 號 8 樓之 3"},"link":"https://g0v-jothon.kktix.cc/events/grant-apply-worksh0p-gcaa"},{"id":"43a7287d-3e08-4f8d-bfd8-1cdb49fa912b","projectId":"70e932c0-cb50-40f9-aba0-ced935f2d5de","name":"g0v hackath27n | 台灣零時政府全球開放立法松","type":"實體活動","description":"台灣零時政府 g0v.tw 雙月大黑客松 不只寫程式改造社會 不要問為什麼沒有人做這個，先承認你就是沒有人   \t \t\t \t\t\t \t\t\tGLOW^4 是開放政府夥伴聯盟（OGP）開放立法工作小組所舉辦","startDate":"2017-11-25T01:00:00.000Z","endDate":"2017-11-25T10:00:00.000Z","annouceToContributors":false,"location":{"name":"中央研究院資訊科學所","address":"中央研究院資訊科學所"},"link":"https://g0v-jothon.kktix.cc/events/g0v-hackath27n"},{"id":"0712b6d8-58ae-487b-88de-5a7556681b34","projectId":"70e932c0-cb50-40f9-aba0-ced935f2d5de","name":"g0v 第玖次基礎建設松","type":"實體活動","description":"本次 g0v 基礎建設松將於 10/21（六）13:30 舉行，一起組裝 g0v 社群工具模組，促進人坑松的交流吧！","startDate":"2017-10-21T05:30:00.000Z","endDate":"2017-10-21T10:00:00.000Z","annouceToContributors":false,"location":{"name":"摩茲工寮 Mozilla Space ","address":"台北市八德路一段 94 號 3 樓"},"link":"https://g0v-jothon.kktix.cc/events/infrath9n"},{"id":"b4b42b63-a516-40da-bc78-47ff3e217e6e","projectId":"70e932c0-cb50-40f9-aba0-ced935f2d5de","name":"g0v hackath26n | 台灣零時政府五週年黑客松","type":"實體活動","description":"g0v 五週年啦，要擴大舉辦，一起跨界公民協作，吃吃喝喝做專案！Join g0v 5th anniversary hackathon to do cool civic tech projects. ","startDate":"2017-09-16T01:00:00.000Z","endDate":"2017-09-16T10:00:00.000Z","annouceToContributors":false,"location":{"name":"TAF 空總創新基地聯合餐廳","address":"106台北市大安區建國南路一段177號"},"link":"https://g0v-jothon.kktix.cc/events/g0v-hackath26n"},{"id":"114677db-ed15-4e30-bb61-f44cd69284d1","projectId":"70e932c0-cb50-40f9-aba0-ced935f2d5de","name":"g0v 公民科技創新獎助金— 2017 春季成果發表會","type":"實體活動","description":"2017 年春季 g0v 公民科技創新獎助金獲獎專案，將在 Google 台北辦公室分享 6 個月加速開發所創造的社會改變。會後為 WCIT x Civic Tech Fest 合辦的國際交流晚會。","startDate":"2017-09-11T09:30:00.000Z","endDate":"2017-09-11T12:30:00.000Z","annouceToContributors":false,"location":{"name":"Google 台北辦公室","address":"台北市信義區信義路五段 7 號台北 101 大樓 75 樓"},"link":"https://g0v-jothon.kktix.cc/events/2017a-g0v-grant-demo"},{"id":"8b0f260b-e8be-4a49-ac3f-1713a0d4c214","projectId":"70e932c0-cb50-40f9-aba0-ced935f2d5de","name":"g0v@Bangkok hackath0n | Let's Make Some Data Open!","type":"實體活動","description":"Ask not why nobody is doing this. You are the \"nobody\"! Join the frist g0v's hackathon @ Bangkok to ","startDate":"2017-07-29T01:00:00.000Z","endDate":"2017-07-29T10:00:00.000Z","annouceToContributors":false,"location":{"name":"Room 710 (7th Floor)","address":"Mahitaladhibesra Building, Chulalongkorn University "},"link":"https://g0v-jothon.kktix.cc/events/bangkok-hackath0n"},{"id":"9cc4f440-f6e1-4bd8-9f4b-2eb637e03e4f","projectId":"70e932c0-cb50-40f9-aba0-ced935f2d5de","name":"g0v hackath25n | 台灣零時政府第貳拾伍次一綱多本黑客松","type":"實體活動","description":"台灣零時政府 g0v.tw 雙月大黑客松 不只寫程式改造社會 不要問為什麼沒有人做這個，先承認你就是沒有人 來吧！來提新專案、來做舊專案、來認識新朋友！ 拓展開源、開幹、開花的公民行動精神 ‣ 本活動","startDate":"2017-07-01T01:00:00.000Z","endDate":"2017-07-01T10:00:00.000Z","annouceToContributors":false,"location":{"name":"中央研究院資訊科學所","address":""},"link":"https://g0v-jothon.kktix.cc/events/g0v-hackath25n"},{"id":"56cd1bd2-99e0-4ba1-a771-8837417cc64d","projectId":"70e932c0-cb50-40f9-aba0-ced935f2d5de","name":"2017 年秋季 g0v 公民科技創新獎助金提案說明工作坊","type":"實體活動","description":"下一期 g0v 公民科技創新獎助金即將開跑！7/1 -7/16 線上公開提案。不知道怎麼提案嗎？歡迎來參加 6/17 的提案說明工作坊，帶上你的點子和行動力，一起來挖坑。","startDate":"2017-06-17T06:00:00.000Z","endDate":"2017-06-17T09:00:00.000Z","annouceToContributors":false,"location":{"name":"摩茲工寮 Mozilla Space ","address":"台北市八德路一段 94 號 3 樓"},"link":"https://g0v-jothon.kktix.cc/events/grant-apply-worksh0p"},{"id":"a4ad81ee-6fe6-42f5-8dd4-f3ee1f8199e8","projectId":"70e932c0-cb50-40f9-aba0-ced935f2d5de","name":"搶救 g0v Hackpad 松","type":"實體活動","description":"Hackpad 即將在 7/19 結束服務，需要大家一起搶救公民運動的資料！將討論如何備份g0v 眾多專案以及許多公民運動的紀錄，以及如何創造同樣友善有效的線上協作平台。","startDate":"2017-06-10T05:30:00.000Z","endDate":"2017-06-10T10:00:00.000Z","annouceToContributors":false,"location":{"name":"摩茲工寮 Mozilla Space ","address":"台北市八德路一段 94 號 3 樓"},"link":"https://g0v-jothon.kktix.cc/events/hackpadthon"},{"id":"1e80b25a-5402-4d09-bf30-3625081a25bb","projectId":"70e932c0-cb50-40f9-aba0-ced935f2d5de","name":"g0v hackath24n | 台灣零時政府第貳拾肆次凍省黑客松","type":"實體活動","description":"台灣零時政府 g0v.tw 雙月大黑客松 不只寫程式改造社會 不要問為什麼沒有人做這個，先承認你就是沒有人 來吧！來提新專案、來做舊專案、來認識新朋友！ 拓展開源、開幹、開花的公民行動精神 ‣ 本活動","startDate":"2017-05-06T01:00:00.000Z","endDate":"2017-05-06T10:00:00.000Z","annouceToContributors":false,"location":{"name":"中央研究院資訊科學所","address":""},"link":"https://g0v-jothon.kktix.cc/events/g0v-hackath24n"},{"id":"c381ae16-b306-4c39-b6ce-69d8271d3bb7","projectId":"70e932c0-cb50-40f9-aba0-ced935f2d5de","name":"g0v 第捌次基礎建設松","type":"實體活動","description":"本次 g0v 基礎建設松將於 4/20（四）19:00 舉行，一起組裝 g0v 社群工具模組，讓更多人使用吧！","startDate":"2017-04-20T11:00:00.000Z","endDate":"2017-04-20T13:30:00.000Z","annouceToContributors":false,"location":{"name":"摩茲工寮 Mozilla Space ","address":"台北市八德路一段 94 號 3 樓"},"link":"https://g0v-jothon.kktix.cc/events/infrath8n"},{"id":"bcf412cb-0d13-48c7-88ac-5a5304d47d00","projectId":"70e932c0-cb50-40f9-aba0-ced935f2d5de","name":"g0v hackath23n | 台灣零時政府第貳拾參次開放資料黑客松","type":"實體活動","description":"本次 g0v 大黑客松將於 3/4 日舉行，並與全世界 130 個城市共同響應「世界開放資料日」！","startDate":"2017-03-04T01:00:00.000Z","endDate":"2017-03-04T10:00:00.000Z","annouceToContributors":false,"location":{"name":"中央研究院資訊科學所","address":""},"link":"https://g0v-jothon.kktix.cc/events/g0v-hackath23n"},{"id":"5ed38de5-c320-4cb1-83ae-9338836a1b16","projectId":"70e932c0-cb50-40f9-aba0-ced935f2d5de","name":"g0v 第柒次基礎建設緊急松 - 德國 Prototype Fund x g0v 獎助金 2/16","type":"實體活動","description":"德國開放知識基金會的 Eileen 在 Code For All 的交換計畫支持下，來台灣一個月在 OCF 辦公室 co-work，並將一起與社群的夥伴協作公民科技獎助金、g0v.news 等專案。我","startDate":"","endDate":"","annouceToContributors":false,"location":{"name":"摩茲工寮 Mozilla Space","address":"台北市八德路一段 94 號 3 樓"},"link":"https://g0v-jothon.kktix.cc/events/infrath7n"},{"id":"3558cac0-52b3-435e-9ba3-e20dd86f5402","projectId":"70e932c0-cb50-40f9-aba0-ced935f2d5de","name":"g0v 第陸次基礎建設「大平台」松 - 1/21","type":"實體活動","description":"g0v 社群由「人、坑、松」組成，如何讓參與者容易串連協作，需要更多好用的工具與平台。兩年前曾經召開過第零次基礎建設松，揪松團近期重啟社群基礎建設，希望持續常態經營！","startDate":"","endDate":"","annouceToContributors":false,"location":{"name":"摩茲工寮","address":"台北市八德路一段 94 號 3 樓"},"link":"https://g0v-jothon.kktix.cc/events/infrath6n"},{"id":"16d5835a-87b9-4be5-ae95-cd8646f710e7","projectId":"70e932c0-cb50-40f9-aba0-ced935f2d5de","name":"g0v hackath22n | 台灣零時政府第貳拾貳次公民科學黑客松","type":"實體活動","description":"（本次主圖由 @tuiry 繪製 CC0 釋出，主圖說明）   2016 年即將結束 不要錯過 12/17 週六，今年度最後一次黑客松 來吧！來提新專案、來做舊專案、來認識新朋友！ 讓開源、開幹、開花","startDate":"2016-12-17T01:00:00.000Z","endDate":"2016-12-17T10:00:00.000Z","annouceToContributors":false,"location":{"name":"中央研究院資訊科學所","address":""},"link":"https://g0v-jothon.kktix.cc/events/g0v-hackath22n"},{"id":"8bed7526-70c8-45ba-b408-a2a04ffd3439","projectId":"70e932c0-cb50-40f9-aba0-ced935f2d5de","name":"g0v hackath21n | 台灣零時政府根留台灣","type":"實體活動","description":"**本次黑客松與叡揚資訊聯名合作舉辦** 10/15 週六，第貳拾壹次根留台灣黑客松即將上場 只要開源，議題不限 歡迎大家來提新專案、接力舊專案， 讓開源、公民精神持續延燒！ 主圖 by @chiha","startDate":"2016-10-15T01:00:00.000Z","endDate":"2016-10-15T10:00:00.000Z","annouceToContributors":false,"location":{"name":"中央研究院資訊科學所","address":""},"link":"https://g0v-jothon.kktix.cc/events/g0v-hackath21n"},{"id":"6de7c6dd-19c5-497e-b235-41ccb14f28d1","projectId":"70e932c0-cb50-40f9-aba0-ced935f2d5de","name":"g0v 第伍次基礎建設松 - 10/8","type":"實體活動","description":"g0v 社群由「人、坑、松」組成，如何讓參與者容易串連協作，需要更多好用的工具與平台。兩年前曾經召開過第零次基礎建設松，揪松團近期重啟社群基礎建設，希望持續常態經營！","startDate":"2016-10-08T02:30:00.000Z","endDate":"2016-10-08T08:00:00.000Z","annouceToContributors":false,"location":{"name":"摩茲工寮","address":"台北市八德路一段 94 號 3 樓"},"link":"https://g0v-jothon.kktix.cc/events/infrath5n"},{"id":"ee368e65-e68e-4683-b88f-4c773838b5e9","projectId":"70e932c0-cb50-40f9-aba0-ced935f2d5de","name":"g0v 第肆次基礎建設緊急松 - Enspiral x g0v 社群發展經驗分享 8/26 ","type":"實體活動","description":"g0v 社群由「人、坑、松」組成，如何讓參與者容易串連協作，需要更多好用的工具與平台。兩年前曾經召開過第零次基礎建設松，揪松團近期重啟社群基礎建設，希望持續常態經營！","startDate":"2016-08-26T11:00:00.000Z","endDate":"2016-08-26T13:40:00.000Z","annouceToContributors":false,"location":{"name":"Gary&Emerson;_Space （近中山國中站）","address":"台北市中山區復興北路 350 號 3 樓"},"link":"https://g0v-jothon.kktix.cc/events/infrath4n"},{"id":"245d4d1a-ac78-4d24-8a0e-e1e682d2dfe6","projectId":"70e932c0-cb50-40f9-aba0-ced935f2d5de","name":"g0v hackath20n | 台灣零時政府第貳拾次總統直選黑客松","type":"實體活動","description":"一例一休勞基法爭議、血汗旅遊業.......議題好多，公民好忙!想做些甚麼，帶來改變嗎？快來跟大家一起挖坑與入坑吧!不要錯過 8/6 週六，第貳拾次總統直選黑客松你有許多想法嗎？想找夥伴實現嗎？別猶豫，快來 g0v 黑客松!只要開源，議題不限歡迎大家來提新專案、接力舊專案，讓開源、公民精神持續延燒。8/6，等你  一  同 開  幹。","startDate":"2016-08-06T01:00:00.000Z","endDate":"2016-08-06T10:00:00.000Z","annouceToContributors":false,"location":{"name":"中央研究院資訊科學所","address":"台北市南港區研究院路二段128號"},"link":"https://g0v-jothon.kktix.cc/events/g0v-hackath20n"},{"id":"14aaf30a-ca5d-4069-a87b-3332d38e5b1e","projectId":"70e932c0-cb50-40f9-aba0-ced935f2d5de","name":"g0v 第參次基礎建設閃電松 - 7/23","type":"實體活動","description":"g0v 社群由「人、坑、松」組成，如何讓參與者容易串連協作，需要更多好用的工具與平台。兩年前曾經召開過第零次基礎建設松，揪松團近期重啟社群基礎建設，希望持續常態經營！","startDate":"2016-07-23T05:30:00.000Z","endDate":"2016-07-23T09:00:00.000Z","annouceToContributors":false,"location":{"name":"摩茲工寮","address":"台北市八德路一段 94 號 3 樓"},"link":"https://g0v-jothon.kktix.cc/events/infrath3n"},{"id":"9c95e319-b413-4027-8778-e3abba27c526","projectId":"70e932c0-cb50-40f9-aba0-ced935f2d5de","name":"g0v 第貳次基礎建設黑客松 - 7/3","type":"實體活動","description":"g0v 社群由「人、坑、松」組成，如何讓參與者容易串連協作，需要更多好用的工具與平台。兩年前曾經召開過第零次基礎建設松，揪松團近期重啟社群基礎建設，希望持續常態經營！","startDate":"2016-07-03T02:30:00.000Z","endDate":"2016-07-03T09:00:00.000Z","annouceToContributors":false,"location":{"name":"摩茲工寮","address":"台北市八德路一段 94 號 3 樓"},"link":"https://g0v-jothon.kktix.cc/events/infrath2n"},{"id":"bf028b9d-7218-49cd-b990-1f878242c87d","projectId":"70e932c0-cb50-40f9-aba0-ced935f2d5de","name":"g0v hackath19n | 台灣零時政府第拾玖次飛彈試射黑客松","type":"實體活動","description":"g0v Summit 2016 年會結束後是不是有滿滿強烈挖坑、填坑的動力呢？不要錯過 6/18 週六，第拾玖次飛彈試射黑客松來吧！來提新專案、來做舊專案、來認識新朋友！讓開源、開幹、開花的公民行動精神繼續延燒。","startDate":"2016-06-18T01:00:00.000Z","endDate":"2016-06-18T10:00:00.000Z","annouceToContributors":false,"location":{"name":"中央研究院資訊科學所","address":"台北市南港區研究院路二段128號"},"link":"https://g0v-jothon.kktix.cc/events/g0v-hackath19n"},{"id":"c102717b-27e9-473e-92fe-1d62887b4da3","projectId":"70e932c0-cb50-40f9-aba0-ced935f2d5de","name":"g0v 第壹次基礎建設黑客松 - 6/12","type":"實體活動","description":"g0v 社群由「人、坑、松」組成，如何讓參與者容易串連協作，需要更多好用的工具與平台。兩年前曾經召開過第零次基礎建設松，揪松團近期重啟社群基礎建設，希望持續常態經營！","startDate":"2016-06-12T02:30:00.000Z","endDate":"2016-06-12T09:30:00.000Z","annouceToContributors":false,"location":{"name":"OCF 辦公室（摩茲工寮樓上）","address":"台北市八德路一段 94 號 4 樓"},"link":"https://g0v-jothon.kktix.cc/events/infrath1n"},{"id":"4dcb4650-2b07-443b-ac9d-91d3c13d36cb","projectId":"70e932c0-cb50-40f9-aba0-ced935f2d5de","name":"g0v hackath18n | 台灣零時政府第拾捌次亞太營運黑客松","type":"實體活動","description":"大選剛過，新局將啟以開源實作精神關注公共議題的 g0v 黑客松依舊持續上場！本次黑客松與國際 Open Data Day 同步開跑來吧！來提新專案、來做舊專案、來認識新朋友讓開源、開幹、開花的公民行動精神繼續延燒！","startDate":"2016-03-05T01:00:00.000Z","endDate":"2016-03-05T10:00:00.000Z","annouceToContributors":false,"location":{"name":"中央研究院資訊科學所","address":"台北市南港區研究院路二段128號"},"link":"https://g0v-jothon.kktix.cc/events/g0v-hackath18n"},{"id":"8992da78-c02c-4857-a4f7-f7fa21c038f6","projectId":"70e932c0-cb50-40f9-aba0-ced935f2d5de","name":"g0v hackath17n | 台灣零時政府第拾柒次立委改選黑客松","type":"實體活動","description":"從 2012 年底開始，g0v 社群持續舉辦每兩個月一次百人黑客松，提供推動資訊透明、開放參與的公民協作平台，大家一起吃了很多披薩炸雞，同時催生多項專案。開放政府、太陽花運動、社會議題都有 g0v 貢獻者的身影。","startDate":"2015-12-26T01:00:00.000Z","endDate":"2015-12-26T10:00:00.000Z","annouceToContributors":false,"location":{"name":"中央研究院資訊科學所","address":"台北市南港區研究院路二段128號"},"link":"https://g0v-jothon.kktix.cc/events/g0v-hackath17n"},{"id":"be7bfee7-bf88-4e40-9c64-00b88cd0b631","projectId":"70e932c0-cb50-40f9-aba0-ced935f2d5de","name":"g0v hackath16n | 第拾陸次刑法一百黑客松","type":"實體活動","description":"從 2012 年底開始，g0v 社群持續舉辦每兩個月一次百人黑客松，提供推動資訊透明、開放參與的公民協作平台，大家一起吃了很多披薩炸雞，同時催生多項專案。開放政府、太陽花運動、社會議題都有 g0v 貢獻者的身影。","startDate":"2015-10-24T01:00:00.000Z","endDate":"2015-10-24T10:00:00.000Z","annouceToContributors":false,"location":{"name":"中央研究院資訊科學所","address":"台北市南港區研究院路二段128號"},"link":"https://g0v-jothon.kktix.cc/events/g0v-hackath16n"},{"id":"85d1cfa1-cf58-42d7-999c-fccacb4983fc","projectId":"70e932c0-cb50-40f9-aba0-ced935f2d5de","name":"g0v.tw hackath15n | 台灣零時政府第拾伍次資料科學黑客松","type":"實體活動","description":"從 2012 年底開始，g0v 社群持續舉辦每兩個月一次百人黑客松，提供推動資訊透明、開放參與的公民協作平台，大家一起吃了很多披薩炸雞，同時催生多項專案。開放政府、太陽花運動、社會議題都有 g0v 貢獻者的身影。","startDate":"2015-08-22T01:00:00.000Z","endDate":"2015-08-23T09:00:00.000Z","annouceToContributors":false,"location":{"name":"中央研究院人文社會科學館","address":"台北市南港區研究院路二段128號"},"link":"https://g0v-jothon.kktix.cc/events/g0v-hackath15n"},{"id":"faac75da-f943-4f07-a036-d6f09abfee62","projectId":"70e932c0-cb50-40f9-aba0-ced935f2d5de","name":"g0v.tw hackath14n | 台灣零時政府第拾肆次野百合黑客松","type":"實體活動","description":"從一開始資料爬梳、資訊人為主，到現在已經演化出更多不同的類型：有公部門的參與、與 NGO 深度的協作，當然還有宅宅的投入與開源社群持續耕耘「開放」不是一時的口號，而是需要長期投入的社會參與。每一次爆發力都需要平時的鴨子滑水耕耘，大松是進度衝刺的好時機！來吧！來提新專案、來做舊專案、來認識新朋友，動動腦也吃炸雞！讓開源、開幹、開花的公民行動精神繼續延燒。","startDate":"2015-06-13T01:00:00.000Z","endDate":"2015-06-13T10:00:00.000Z","annouceToContributors":false,"location":{"name":"中央研究院資訊科學所","address":"台北市南港區研究院路二段128號"},"link":"https://g0v-jothon.kktix.cc/events/g0v-hackath14n"},{"id":"1d43765a-5055-4b2b-8fb2-517c4a8d3679","projectId":"70e932c0-cb50-40f9-aba0-ced935f2d5de","name":"g0v.tw hackath13n | 台灣零時政府第拾參次無殼蝸牛黑客松","type":"實體活動","description":"從一開始資料爬梳、資訊人為主，到現在已經演化出更多不同的類型：有公部門的參與、與 NGO 深度的協作，當然還有宅宅的投入與開源社群持續耕耘「開放」不是一時的口號，而是需要長期投入的社會參與。每一次爆發力都需要平時的鴨子滑水耕耘，大松是進度衝刺的好時機！來吧！來提新專案、來做舊專案、來認識新朋友，動動腦也吃炸雞！讓開源、開幹、開花的公民行動精神繼續延燒。","startDate":"2015-04-18T01:00:00.000Z","endDate":"2015-04-18T10:00:00.000Z","annouceToContributors":false,"location":{"name":"中央研究院資訊科學所","address":"台北市南港區研究院路二段128號"},"link":"https://g0v-jothon.kktix.cc/events/g0v-hackath13n"},{"id":"803f3910-c703-4f71-9ab8-c12b63c7c371","projectId":"70e932c0-cb50-40f9-aba0-ced935f2d5de","name":"g0v Hackath39n | 台灣零時政府第參拾玖次又在家黑客松 Stay Home","type":"線上活動","description":"從一開始資料爬梳、資訊人為主，到現在已經演化出更多不同的類型：有公部門的參與、與 NGO 深度的協作，當然還有宅宅的投入與開源社群持續耕耘「開放」不是一時的口號，而是需要長期投入的社會參與。每一次爆發力都需要平時的鴨子滑水耕耘，大松是進度衝刺的好時機！來吧！來提新專案、來做舊專案、來認識新朋友，動動腦也吃炸雞！讓開源、開幹、開花的公民行動精神繼續延燒。","startDate":"2020-05-23T01:00:00.000Z","endDate":"2020-05-23T10:00:00.000Z","annouceToContributors":false,"guestLimit":1000,"attendanceCount":103,"location":{"name":"Online Event","address":""},"link":"https://meet.jothon.online/event/show/g0v-hackath39n"},{"id":"4af34470-0cda-49ad-87ef-eecfa24c0a65","projectId":"70e932c0-cb50-40f9-aba0-ced935f2d5de","name":"g0v summit 2014 檢討^H^H回味松","type":"實體活動","description":"啥米零時政府已經結束大半年，但還沒檢討回味松，summit 2016 版也逐漸醞釀中，讓我們來個回味共筆松，也把經驗交接給下屆工頭們吧～ 時間地點： 2015/05/2 11:00-17:00 摩茲工","startDate":"2015-05-02T03:00:00.000Z","endDate":"2015-05-02T09:00:00.000Z","annouceToContributors":false,"location":{"name":"摩茲工寮","address":"100台北市中正區八德路一段94號3F"},"link":"https://g0v-tw.kktix.cc/events/summithon"},{"id":"c786554e-cf82-4028-8305-e72588acd952","projectId":"70e932c0-cb50-40f9-aba0-ced935f2d5de","name":"3/28 第九次萌典松 moed9ct","type":"實體活動","description":"【主題】固定於單月底舉辦的 g0v 零時政府中型黑客松，三月於 3/28 舉辦。 【同場舉行】 ... 松松相連募集中，歡迎到 Hackpad 頁面填寫。 【共筆】請見 Hackpad 頁面 及 活動","startDate":"2015-03-28T03:00:00.000Z","endDate":"2015-03-28T13:00:00.000Z","annouceToContributors":false,"location":{"name":"BOOKSHOW 說書會","address":"台北市信義區基隆路一段141號6樓之7"},"link":"https://g0v-tw.kktix.cc/events/moedict-3-28"},{"id":"c8efd2d5-54e2-4769-9bfc-099343149883","projectId":"70e932c0-cb50-40f9-aba0-ced935f2d5de","name":"g0v.tw hackath12n | 台灣零時政府第拾貳次不得宣傳罷免黑客松","type":"實體活動","description":"☞ 為何要來 來提新專案、來作舊專案、來認識新朋友，動動腦也吃炸雞！讓開源、開幹、開花的公民行動精神在新的一年繼續延燒。 2/14 是情人節，歡迎有情人作伙來 hacking。當天也是台灣二十年來首次","startDate":"2015-02-14T01:00:00.000Z","endDate":"2015-02-14T10:00:00.000Z","annouceToContributors":false,"location":{"name":"中央研究院資訊科學所 ","address":"台北市南港區研究院路二段128號"},"link":"https://g0v-tw.kktix.cc/events/g0v-hackath12n"},{"id":"da443a90-9873-4564-a958-ff8e052b07d5","projectId":"70e932c0-cb50-40f9-aba0-ced935f2d5de","name":"1/18 第八次萌典松 moed8ct","type":"實體活動","description":"【主題】固定於單月底舉辦的 g0v 零時政府中型黑客松，一月於 1/18 舉辦。 【同場舉行】 ... 松松相連募集中，歡迎到 Hackpad 頁面填寫。 【共筆】請見 Hackpad 頁面 及 活動","startDate":"2015-01-18T03:00:00.000Z","endDate":"2015-01-18T13:00:00.000Z","annouceToContributors":false,"location":{"name":"BOOKSHOW 說書會","address":"台北市信義區基隆路一段141號6樓之7"},"link":"https://g0v-tw.kktix.cc/events/moedict-1-18"},{"id":"3616a610-e7f5-490c-86f5-36ede09a7c13","projectId":"70e932c0-cb50-40f9-aba0-ced935f2d5de","name":"g0v.tw hackath11n | 台灣零時政府第拾壹次開放報禁黑客松","type":"實體活動","description":"☞ 為何要來 從 2012 年底的第零次動員戡亂黑客松開始，雙月一次的百人 g0v 黑客松，竟也已連續辦了兩年。今年，g0v 社群鴨子划水的協作成果逐漸浮出水面。從年初與國際串連，到 318 學運","startDate":"2014-12-20T01:00:00.000Z","endDate":"2014-12-20T10:00:00.000Z","annouceToContributors":false,"location":{"name":"中央研究院資訊科學所 ","address":"台北市南港區研究院路二段128號"},"link":"https://g0v-tw.kktix.cc/events/g0v-hackath11n"},{"id":"75de90fc-1e7e-4c08-90cd-814b5d6270f2","projectId":"70e932c0-cb50-40f9-aba0-ced935f2d5de","name":"11/22 第七次萌典松 moed7ct","type":"實體活動","description":"【主題】固定於單月底舉辦的 g0v 零時政府中型黑客松，十一月於 11/22 舉辦。 【同場舉行】 農域松、gxv 關係松、M Project、ig0v... 松松相連募集中，歡迎到 Hackpad","startDate":"2014-11-22T03:00:00.000Z","endDate":"2014-11-22T13:00:00.000Z","annouceToContributors":false,"location":{"name":"BOOKSHOW 說書會","address":"台北市信義區基隆路一段141號6樓之7"},"link":"https://g0v-tw.kktix.cc/events/moedict-11-22"},{"id":"126c9fd1-8dc3-4982-aa55-eed3bc404e99","projectId":"70e932c0-cb50-40f9-aba0-ced935f2d5de","name":"11/9 g0v Summit Unconference 開放工作坊","type":"實體活動","description":"g0v Summit 第二天「開放工作坊」 ☞  Unconference  時間：2014/11/9 0900-1800 地點：中央研究院 資訊科學研究所 議程：http://summit.g0","startDate":"2014-11-09T01:00:00.000Z","endDate":"2014-11-09T10:00:00.000Z","annouceToContributors":false,"location":{"name":"中央研究院人資訊科學研究所  (Institution of Information Science of Academia Sinica)","address":"台北市南港區研究院路二段128號 (No.128, Sec. 2, Academia Rd., Nangang Dist., Taipei City 115, Taiwan)"},"link":"https://g0v-tw.kktix.cc/events/g0v-summit-2014-unconf"},{"id":"97fac29c-b215-4e9b-b924-1a85a537ecd7","projectId":"70e932c0-cb50-40f9-aba0-ced935f2d5de","name":"g0v Summit 2014 - Conference - VIP and Early Bird","type":"實體活動","description":"此為【VIP貴賓】、【國際早鳥票】與【政府邀請票】的報名頁面 This page is for VIP invite code, International Early Bird and gov","startDate":"2014-11-08T01:00:00.000Z","endDate":"2014-11-08T09:00:00.000Z","annouceToContributors":false,"location":{"name":"中央研究院人文社會科學館 (HSS Bldg. of Academia Sinica)","address":"台北市南港區研究院路二段128號 (No.128, Sec. 2, Academia Rd., Nangang Dist., Taipei City 115, Taiwan)"},"link":"https://g0v-tw.kktix.cc/events/g0v-summit-2014-con-vip"},{"id":"f0207f30-a0a8-4e06-9198-2e3b7b292bb6","projectId":"70e932c0-cb50-40f9-aba0-ced935f2d5de","name":"g0v Summit 2014 - Conference - Contributor and Normal","type":"實體活動","description":"※ 此為【g0v貢獻者】與【一般票】的 Conference 報名頁面 This page is for registering with Contributor invite code and","startDate":"2014-11-08T01:00:00.000Z","endDate":"2014-11-08T09:00:00.000Z","annouceToContributors":false,"location":{"name":"中央研究院人文社會科學館 (HSS Bldg. of Academia Sinica)","address":"台北市南港區研究院路二段128號 (No.128, Sec. 2, Academia Rd., Nangang Dist., Taipei City 115, Taiwan)"},"link":"https://g0v-tw.kktix.cc/events/g0v-summit-2014-con-nor"},{"id":"ac4f0273-bfc1-4c6d-a0b1-5f8f47d59b8d","projectId":"70e932c0-cb50-40f9-aba0-ced935f2d5de","name":"9/20 第六次萌典松 moed6ct","type":"實體活動","description":"【主題】固定於單月底舉辦的 g0v 零時政府中型黑客松，九月於 9/20 舉辦。 【同場舉行】 松松相連募集中，歡迎到 Hackpad 頁面填寫。 【共筆】請見 Hackpad 頁面。 請注意，這不是","startDate":"2014-09-20T03:00:00.000Z","endDate":"2014-09-20T13:00:00.000Z","annouceToContributors":false,"location":{"name":"BOOKSHOW 說書會","address":"台北市信義區基隆路一段141號6樓之7"},"link":"https://g0v-tw.kktix.cc/events/moedict-9-20"},{"id":"1876fbd1-dcb8-425e-bd42-8c2705a1f7d9","projectId":"70e932c0-cb50-40f9-aba0-ced935f2d5de","name":"g0v Summit 2014 - Call for talks","type":"實體活動","description":"首屆 g0v 年會將在 2014 年 11 月 8 日，於台北中央研究院召開。 g0v 社群運作近兩年了，從一開始，g0v 零時政府社群便以數位世代的思維，以開源方式號召群眾參與著手開發新工具、新組織","startDate":"2014-08-31T15:50:00.000Z","endDate":"2014-08-31T15:59:00.000Z","annouceToContributors":false,"location":{"name":"Academia Sinica, Taipei, Taiwan","address":"Academia Sinica, Taipei, Taiwan"},"link":"https://g0v-tw.kktix.cc/events/g0v-summit-2014-talks"},{"id":"a0047070-44b2-4cef-8dcf-e96d05dd57ee","projectId":"70e932c0-cb50-40f9-aba0-ced935f2d5de","name":"8/16 零時前端教學松","type":"實體活動","description":"【主題】2014年8月第三次的零時前端教學松 【課程共筆】請見 Hackfoldr 2.0 頁面。 請注意，這是變相的填坑教學松，單純想學技術的人請慎入。 學生應具備基礎：了解js的變數宣告、迴圈及流","startDate":"2014-08-16T05:30:00.000Z","endDate":"2014-08-16T09:00:00.000Z","annouceToContributors":false,"location":{"name":"BOOKSHOW 說書會","address":"台北市信義區基隆路一段141號6樓之7"},"link":"https://g0v-tw.kktix.cc/events/fr0ntend-br3dge"},{"id":"b8582da7-7211-41df-a031-43842be0ccba","projectId":"70e932c0-cb50-40f9-aba0-ced935f2d5de","name":"8/2 第五次萌典松 moed5ct","type":"實體活動","description":"【主題】固定於單月底舉辦的 g0v 零時政府中型黑客松，七月底延至 8/2 舉辦。 【同場舉行】 議員松 (johnny)、農域松 (a0kman)、自表松 (Johnson)、智財松 (nchild","startDate":"2014-08-02T03:00:00.000Z","endDate":"2014-08-02T13:00:00.000Z","annouceToContributors":false,"location":{"name":"BOOKSHOW 說書會","address":"台北市信義區基隆路一段141號6樓之7"},"link":"https://g0v-tw.kktix.cc/events/moedict-8-2"},{"id":"11675dbe-0b0e-4999-91ca-a905c25f7d90","projectId":"70e932c0-cb50-40f9-aba0-ced935f2d5de","name":"g0v.tw hackath9n | 台灣零時政府第玖次還我土地黑客松","type":"實體活動","description":"☞ 為何要來 g0v.tw 每兩個月一回合黑客松，打造各式資訊透明化平台，從資料透明開始，用科技工具與開源協作參與社會。 ☞ 來者何人 歡迎開發者、設計者、社會運動工作者、法律專家、文字工作者、插","startDate":"2014-06-21T01:00:00.000Z","endDate":"2014-06-21T10:00:00.000Z","annouceToContributors":false,"location":{"name":"中央研究院資訊科學所","address":"台北市南港區研究院路二段128號"},"link":"https://g0v-tw.kktix.cc/events/g0v-hackath9n"},{"id":"b95524fa-7bbe-4f60-aa29-a57c70dc64df","projectId":"70e932c0-cb50-40f9-aba0-ced935f2d5de","name":"5/25 第四次萌典松 moed4ct","type":"實體活動","description":"【主題】固定於單月底舉辦的 g0v 零時政府中型黑客松，五月舉辦 5/25 一場。 【同場舉行】 農域松 (a0kman)、自經松 (weihung)、動民主家族松 (ETBlue)、政獻松 (ven","startDate":"2014-05-25T03:00:00.000Z","endDate":"2014-05-25T13:00:00.000Z","annouceToContributors":false,"location":{"name":"BOOKSHOW 說書會","address":"台北市信義區基隆路一段141號6樓之7"},"link":"https://g0v-tw.kktix.cc/events/moedict-5-25"},{"id":"bc0f137d-76aa-4c42-a8c8-ee68a6211ec8","projectId":"70e932c0-cb50-40f9-aba0-ced935f2d5de","name":"5/13 基礎建設迷你松","type":"實體活動","description":"hackpad 前言 二次謝頓危機後，社群基礎建設百廢待興，希望大家一起 brainstorm 一下目前的 priority，然後在十一月 summit 前集中火力解決一些問題。 形式 暫不開幹。每個","startDate":"2014-05-13T11:00:00.000Z","endDate":"2014-05-13T14:00:00.000Z","annouceToContributors":false,"location":{"name":"和多星際總部遺址","address":"忠孝東路四段170巷17弄12號"},"link":"https://g0v-tw.kktix.cc/events/g0v-infrath0n"},{"id":"37bab8f4-64ad-415c-9bdb-6de226c43075","projectId":"70e932c0-cb50-40f9-aba0-ced935f2d5de","name":"g0v.tw hackath8n | 台灣零時政府第捌次解除戒嚴黑客松","type":"實體活動","description":"【請注意，本次活動場地變更為「華山1914文創園區 中3拱廳」，並增開 25 張票，於 4/16 18:00 開放增額報名】   ☞ 為何要來 g0v.tw 每兩個月一回合黑客松，打造各式資訊透明化平","startDate":"2014-04-19T01:00:00.000Z","endDate":"2014-04-19T10:00:00.000Z","annouceToContributors":false,"location":{"name":"華山1914文化創意產業園區 中3拱廳","address":"台灣台北市中正區八德路一段1號"},"link":"https://g0v-tw.kktix.cc/events/g0v-hackath8n"},{"id":"567d43d4-4657-4396-8a8e-6bbe8da544e0","projectId":"70e932c0-cb50-40f9-aba0-ced935f2d5de","name":"3/29 第三次萌典松 moed3ct","type":"實體活動","description":"這是 3/29 場次。如果想報名 3/22 場次，請按這裡。 【主題】固定於單月底舉辦的 g0v 零時政府中型黑客松，三月共有 3/22、3/29 兩場，這是第二場。 【同場舉行】 農域松 (a0km","startDate":"2014-03-29T03:00:00.000Z","endDate":"2014-03-29T13:00:00.000Z","annouceToContributors":false,"location":{"name":"BOOKSHOW 說書會","address":"台北市信義區基隆路一段141號6樓之7"},"link":"https://g0v-tw.kktix.cc/events/moedict-3-29"},{"id":"6cd69404-b9ff-4be7-b12c-177c00a3038f","projectId":"70e932c0-cb50-40f9-aba0-ced935f2d5de","name":"3/22 第二次萌典松 moed2ct","type":"實體活動","description":"這是 3/22 場次，歡迎報名！ 【主題】固定於單月底舉辦的 g0v 零時政府中型黑客松，三月共有 3/22、3/29 兩場，這是第一場。 【同場舉行】 直播松 (bropheus)、廣場松(ETBl","startDate":"2014-03-22T03:00:00.000Z","endDate":"2014-03-22T13:00:00.000Z","annouceToContributors":false,"location":{"name":"BOOKSHOW 說書會","address":"台北市信義區基隆路一段141號6樓之7"},"link":"https://g0v-tw.kktix.cc/events/moedict-3-22"},{"id":"cdb6cd6f-2a5b-4277-8a63-6561662636b7","projectId":"70e932c0-cb50-40f9-aba0-ced935f2d5de","name":"3/8 線路松","type":"實體活動","description":"來者何人 \t手上有閒置的網路設備的人（需要設備見 hackpad） \t對網路管理有興趣 \t想把開源協作精神推廣出去，讓台灣的公民行動能夠累積共用的知識和資源 活動內容 詳情請見 線路松 Hackpad","startDate":"2014-03-08T03:00:00.000Z","endDate":"2014-03-08T13:30:00.000Z","annouceToContributors":false,"location":{"name":"2014 臺北廢核遊行媒體區","address":"台灣台北市中正區凱達格蘭大道1號"},"link":"https://g0v-tw.kktix.cc/events/router-3-8"},{"id":"e87d3b0a-8450-4e67-a0ff-63e8e586f650","projectId":"70e932c0-cb50-40f9-aba0-ced935f2d5de","name":"g0v.tw hackath7n | 台灣零時政府第柒次自由時代黑客松","type":"實體活動","description":"共100名額，現在陸續有人取消釋出票券囉。遠端也可以透過網路聊天室參與：http://hack.g0v.tw/irc  :) ☞ 為何要來 g0v.tw 每兩個月一回合黑客松，打造各式資訊透明化平台[","startDate":"2014-02-22T01:00:00.000Z","endDate":"2014-02-22T10:00:00.000Z","annouceToContributors":false,"location":{"name":"中研院資訊科學研究所","address":"台北市南港區研究院路二段128號"},"link":"https://g0v-tw.kktix.cc/events/g0v-hackath7n"},{"id":"090deef8-6b01-4def-a3a1-085a228f491b","projectId":"70e932c0-cb50-40f9-aba0-ced935f2d5de","name":"g0v.tw 立院組小松","type":"實體活動","description":"立院組小松 時間：1/20 14:00 - 20:50 協作共筆： https://g0v.hackpad.com/KJrp3C7RusA","startDate":"2014-01-20T06:00:00.000Z","endDate":"2014-01-20T12:50:00.000Z","annouceToContributors":false,"location":{"name":"前和多星際總部","address":"台北市忠孝東路四段170巷17弄12號2F"},"link":"https://g0v-tw.kktix.cc/events/g0vly-hackathon-2"},{"id":"797f97b0-481a-47c6-bc8c-23d72bed72c9","projectId":"70e932c0-cb50-40f9-aba0-ced935f2d5de","name":"g0v 2014 新年松","type":"實體活動","description":"【主題】在 g0v 歡慶週歲的一年之初，來個輕鬆的聯誼交流、回顧展望： 專案回顧、實作甘苦談 口述歷史、來年展望 新手教學、初心小講 混熟臉孔、好奇問答、各言爾志、促膝長談...... 與原訂於同一天","startDate":"2014-01-04T05:00:00.000Z","endDate":"2014-01-04T15:00:00.000Z","annouceToContributors":false,"location":{"name":"BOOKSHOW 說書會","address":"台北市信義區基隆路一段141號6樓之7"},"link":"https://g0v-tw.kktix.cc/events/g0v-newyear2014"},{"id":"b2848f86-a5cf-4c5a-8ccc-2a81b6059381","projectId":"70e932c0-cb50-40f9-aba0-ced935f2d5de","name":"g0v.tw hackath6n | 台灣零時政府第陸次勞動基準黑客松","type":"實體活動","description":"【為何要來】g0v.tw 滿一週年了！一年來大家從零開始，打造各式資訊透明化平台[1]，在實作串連、挖坑填坑的過程中，也凝聚出新的參與社會的模式。除了生氣翻桌，真的有太多事可以作，黑客松就是能量反應爐","startDate":"2013-12-21T01:00:00.000Z","endDate":"2013-12-21T10:00:00.000Z","annouceToContributors":false,"location":{"name":"中研院資訊科學研究所","address":"台北市南港區研究院路二段128號"},"link":"https://g0v-tw.kktix.cc/events/g0v-hackath6n"},{"id":"3eaa693a-e8db-4211-ba45-c33311d9c274","projectId":"70e932c0-cb50-40f9-aba0-ced935f2d5de","name":"g0v.tw 萌典松","type":"實體活動","description":"為慶祝 g0v.tw 萌典啄木鳥活動順利完成，加上第伍次美麗島黑客松時留下許多待辦事項，特舉行此次小松以加速進行。 【來者何人】 萌典的使用者、推廣者、測試者、開發者，以及對 g0v.tw 零時政府專","startDate":"2013-11-23T03:00:00.000Z","endDate":"2013-11-23T12:00:00.000Z","annouceToContributors":false,"location":{"name":"睡不著咖啡館","address":"台北市大安區泰順街60巷8號B1"},"link":"https://g0v-tw.kktix.cc/events/moedict"},{"id":"d5d583c7-aab6-4568-9838-878dafa95870","projectId":"70e932c0-cb50-40f9-aba0-ced935f2d5de","name":"g0v.tw 立院組小松","type":"實體活動","description":"g0v立院組經過一年的醞釀終於大爆發週日來加速進行一下吧！時間：11/10 12:00-18:00 （請吃飽再來喔） 共筆：https://g0v.hackpad.com/1110--KJrp3C7R","startDate":"2013-11-10T04:00:00.000Z","endDate":"2013-11-10T10:00:00.000Z","annouceToContributors":false,"location":{"name":"前和多星際總部","address":"台北市忠孝東路四段170巷17弄12號2F"},"link":"https://g0v-tw.kktix.cc/events/g0vly-hackathon-1"},{"id":"0e451154-289f-4838-9bda-f952dfd4cd67","projectId":"70e932c0-cb50-40f9-aba0-ced935f2d5de","name":"g0v.tw hackath5n | 台灣零時政府第伍次美麗島黑客松","type":"實體活動","description":"【源碼大明神香油票】   應無法現場參與但希望貢獻的朋友期待，本期開放香油票12張（三張已由「政大開放資料與社群協力創新計畫」包辦），每張 2,000 元，將募集 24,000 元作為下期黑客松餐","startDate":"2013-10-20T01:00:00.000Z","endDate":"2013-10-20T10:00:00.000Z","annouceToContributors":false,"location":{"name":"中研院資訊科學研究所","address":"台北市南港區研究院路二段128號"},"link":"https://g0v-tw.kktix.cc/events/g0v-hackath5n-taipei"},{"id":"ce462d69-cfda-4421-8f27-e7c248fdc4fa","projectId":"70e932c0-cb50-40f9-aba0-ced935f2d5de","name":"g0v 雙十 hackathon","type":"實體活動","description":"十月十，上街頭，上完街頭黑客松。（上街就各自糾囉）時間：13:30-18:00 歡迎老朋友、新朋友來混一下。要提新專案可以來吸收一下 0 氣，要衝舊專案的就 BJ4 了。 活動共筆（沿用上次&上上次）","startDate":"2013-10-10T05:30:00.000Z","endDate":"2013-10-10T10:00:00.000Z","annouceToContributors":false,"location":{"name":"和多聯合辦公室","address":" 台北市大安區忠孝東路四段170巷17弄12號2樓"},"link":"https://g0v-tw.kktix.cc/events/doubleten-hackathon"},{"id":"aa0f0d1c-2214-451e-8579-6f3d4755eeea","projectId":"70e932c0-cb50-40f9-aba0-ced935f2d5de","name":"g0v.tw g0v 台南小吃松","type":"實體活動","description":"大家好，我是雨蒼。這次從上海回來台南想要辦個黑客松，做點事情，順便和大家見見面。目前活動是選用成大的教室來寫程式，活動進行時會買小吃回來給各位吃。希望有人可以先寫好小吃點單系統XD 會買的小吃預計有：","startDate":"2013-10-05T02:00:00.000Z","endDate":"2013-10-05T09:00:00.000Z","annouceToContributors":false,"location":{"name":"成大資工系4202教室","address":"台南市大學路一號(成功校區)"},"link":"https://g0v-tw.kktix.cc/events/g0v-tainan"},{"id":"397c2c93-d074-4d02-aebd-a14205a5176b","projectId":"70e932c0-cb50-40f9-aba0-ced935f2d5de","name":"g0v emergency hackathon + Federico Pistono","type":"實體活動","description":"時間：19:00~22:00 邀請到來 TEDxTaipei 的講者 Frederico Pistono 來聊天，順便黑客松 （請大家吃過飯再過來，因為有義大利人，吃 pizza 的話太弱了 XD）","startDate":"2013-10-01T11:00:00.000Z","endDate":"2013-10-01T14:00:00.000Z","annouceToContributors":false,"location":{"name":"和多聯合辦公室","address":" 台北市大安區忠孝東路四段170巷17弄12號2樓"},"link":"https://g0v-tw.kktix.cc/events/emergency-hackathon-federico"},{"id":"2564d59d-4973-411c-ab3f-f9204b3cd599","projectId":"70e932c0-cb50-40f9-aba0-ced935f2d5de","name":"g0v pre-hackath5n 秋天松","type":"實體活動","description":"最近各組工作坊不少，但好久沒有小黑客松了。來聚聚一起做點什麼吧！（19:00會有pizza，直接來邊吃邊松吧。素食者請到以下共筆簽名） 活動共筆：https://g0v.hackpad.com/g0v","startDate":"2013-09-24T10:30:00.000Z","endDate":"2013-09-24T14:00:00.000Z","annouceToContributors":false,"location":{"name":"和多聯合辦公室","address":" 台北市大安區忠孝東路四段170巷17弄12號2樓"},"link":"https://g0v-tw.kktix.cc/events/g0v-pre-hackath5n"},{"id":"beaa248e-04ea-44ef-98f9-c1430bfd5e3d","projectId":"70e932c0-cb50-40f9-aba0-ced935f2d5de","name":"g0v.tw hackath4n | 台灣零時政府第肆次國民大會黑客松","type":"實體活動","description":"【最新消息】【國民大會增額票】由於報名踴躍，我們決定稍微修改開場流程以容納更多熱血朋友！增額票 30 名將於 8/7 (三) 中午 12:00 開放！  【為何要來】g0v.tw 是一個致力於打造資訊","startDate":"2013-08-10T01:00:00.000Z","endDate":"2013-08-10T10:00:00.000Z","annouceToContributors":false,"location":{"name":"中研院資訊科學研究所","address":"台北市南港區研究院路二段128號"},"link":"https://g0v-tw.kktix.cc/events/g0v-hackath4n-taipei"},{"id":"22e7d5e2-afc4-487a-a840-4a5a69801561","projectId":"70e932c0-cb50-40f9-aba0-ced935f2d5de","name":"g0v XD-talking-pre-hackath4n 跨設計哈拉松","type":"實體活動","description":"8/10 的國民大會黑客松之前，先來做點什麼吧！ 主題：Whatever - btw，XDesign 跨設計社群的負責人 Roy 會來被大家推坑 XD 可能的專案：https://g0v.hackpa","startDate":"2013-07-19T10:00:00.000Z","endDate":"2013-07-19T14:00:00.000Z","annouceToContributors":false,"location":{"name":"和多聯合辦公室","address":"台北市大安區忠孝東路四段170巷17弄12號2樓"},"link":"https://g0v-tw.kktix.cc/events/g0v-xd-talking-pre-hackath4n"},{"id":"f3431333-42f5-48c9-b48b-6d8a455e3a49","projectId":"70e932c0-cb50-40f9-aba0-ced935f2d5de","name":"g0v 緊急黑客松後松","type":"實體活動","description":"因為 walkingice 要到台北蹲一天，反正大家如果在家沒出門也是在用電腦，不如一塊來黑客松吧。   共筆：https://g0v.hackpad.com/g0v-post-hackath3n-S","startDate":"2013-06-23T02:00:00.000Z","endDate":"2013-06-23T10:00:00.000Z","annouceToContributors":false,"location":{"name":"和多聯合辦公室","address":"台北市大安區忠孝東路四段170巷17弄12號2樓"},"link":"https://g0v-tw.kktix.cc/events/g0v-post-hackath3n"},{"id":"e168950d-3eab-4b35-ad4e-e35e9a217062","projectId":"70e932c0-cb50-40f9-aba0-ced935f2d5de","name":"g0v.tw hackath3n | 台灣零時政府第參次客廳工廠黑客松 - 台北場","type":"實體活動","description":"【號外！】此次黑客松增設最佳專案獎或最佳貢獻獎，獎品備有 COSCUP 門票四張。（感謝 @hlb、@pofeng、＠legist 提供個人贊助票，@ronnywang 提供VIP票券） 【為何要","startDate":"2013-06-08T01:00:00.000Z","endDate":"2013-06-08T10:00:00.000Z","annouceToContributors":false,"location":{"name":"中研院資訊科學研究所","address":"台北市南港區研究院路二段128號"},"link":"https://g0v-tw.kktix.cc/events/g0v-hackath3n-taipei"},{"id":"816bed6a-e65c-4f71-ae99-0fa7ea0be452","projectId":"70e932c0-cb50-40f9-aba0-ced935f2d5de","name":"g0v post-pre-hackath3n","type":"實體活動","description":"6/8 的客廳工廠黑客松之前的 pre-hackath3n 之後但仍是在 6/8 的客廳工廠黑客松之前，先來做點什麼吧！ 主題：讓黑客松效果更佳 希望偏重在協作工具、共用資料等等。不過也歡迎實作特定專","startDate":"2013-06-06T10:30:00.000Z","endDate":"2013-06-06T12:30:00.000Z","annouceToContributors":false,"location":{"name":"和多聯合辦公室","address":"台北市大安區忠孝東路四段170巷17弄12號2樓"},"link":"https://g0v-tw.kktix.cc/events/g0v-postprehackath3n"},{"id":"d806a3a1-1daf-4d32-897e-19bb278b1b10","projectId":"70e932c0-cb50-40f9-aba0-ced935f2d5de","name":"g0v.tw hackath2n | 台灣零時政府第貳次九大建設黑客松 - 台北場","type":"實體活動","description":"（如果你是 Android 開發者，也可以考慮選擇參加 GTUG 舉辦的 Android Hackathon, 該活動中也可以進行 g0v 相關的主題！） 【為何要來】g0v.tw 是一個致力於打造資","startDate":"2013-03-23T01:00:00.000Z","endDate":"2013-03-23T10:00:00.000Z","annouceToContributors":false,"location":{"name":"中研院資訊科學研究所","address":"台北市南港區研究院路二段128號"},"link":"https://g0v-tw.kktix.cc/events/g0v-hackath2n-taipei"},{"id":"f6a87287-cddd-407a-87ff-862b8a8e1a74","projectId":"70e932c0-cb50-40f9-aba0-ced935f2d5de","name":"g0v.tw hackath1n | 台灣零時政府第壹次公地放領黑客松 - 台北場","type":"實體活動","description":"這裡是台北場的報名頁面，參加台中場的朋友請至 http://registrano.com/events/g0v-hackath1n-taichung 報名。參加高雄場的朋友請至 http://regi","startDate":"2013-01-27T01:00:00.000Z","endDate":"2013-01-27T10:00:00.000Z","annouceToContributors":false,"location":{"name":"中研院資訊科學研究所","address":"台北市南港區研究院路二段128號"},"link":"https://g0v-tw.kktix.cc/events/g0v-hackath1n"},{"id":"5ad7200c-80a1-49ff-aa19-b4a3d8b4ee3a","projectId":"70e932c0-cb50-40f9-aba0-ced935f2d5de","name":"g0v.tw hackath1n | 台灣零時政府第壹次公地放領黑客松 - 台中場","type":"實體活動","description":"這裡是台中場的報名頁面，參加台北場的朋友請至 http://registrano.com/events/g0v-hackath1n 報名。參加高雄場的朋友請至 http://registrano.co","startDate":"2013-01-27T01:00:00.000Z","endDate":"2013-01-27T10:00:00.000Z","annouceToContributors":false,"location":{"name":"默契咖啡","address":"台中市407中港路二段60-3號 電話：04-2313-4597  營業時間：9:00 am～11:00 pm"},"link":"https://g0v-tw.kktix.cc/events/g0v-hackath1n-taichung"},{"id":"4fb5fe51-d767-4df8-8be5-314a89cd2255","projectId":"70e932c0-cb50-40f9-aba0-ced935f2d5de","name":"g0v.tw hackath1n | 台灣零時政府第壹次公地放領黑客松 - 高雄場","type":"實體活動","description":"這裡是高雄場的報名頁面，參加台北場的朋友請至 http://registrano.com/events/g0v-hackath1n 報名，台中場的朋友請至 http://registrano.com/","startDate":"2013-01-27T01:00:00.000Z","endDate":"2013-01-27T10:00:00.000Z","annouceToContributors":false,"location":{"name":"高雄軟體園區B棟708會議室","address":"高雄市前鎮區復興四路12號 B708 電話：07-9700910分機16"},"link":"https://g0v-tw.kktix.cc/events/g0v-hackath1n-kaohsiung"},{"id":"7d188b71-72d3-48d0-a925-bed416beed75","projectId":"70e932c0-cb50-40f9-aba0-ced935f2d5de","name":"g0v.tw hackath0n | 台灣零時政府第零次動員戡亂黑客松","type":"實體活動","description":"台灣零時政府第零次動員戡亂黑客松 請注意！場地已變更至「中研院資創中心 」 感謝大家的熱情參與，本活動已額滿！若有興趣參與，請上 hackpad  與 irc 討論有興趣的主題。活動當天的開場介紹及結","startDate":"2012-12-01T01:00:00.000Z","endDate":"2012-12-01T10:00:00.000Z","annouceToContributors":false,"location":{"name":"中研院資訊科技創新研究中心","address":"台北市南港區研究院路二段128號"},"link":"https://g0v-tw.kktix.cc/events/dab224"},{"id":"463af6da-a112-454d-a9b9-e588b321e4e0","projectId":"70e932c0-cb50-40f9-aba0-ced935f2d5de","name":"g0v hackath10n | 台灣零時政府第拾次資料科學黑客松","type":"實體活動","description":"","startDate":"","endDate":"","annouceToContributors":false,"guestLimit":0,"attendanceCount":0,"location":{"name":"中央研究院人資訊科學研究所  (Institution of Information Science of Academia Sinica)","address":"台北市南港區研究院路二段128號 (No.128, Sec. 2, Academia Rd., Nangang Dist., Taipei City 115, Taiwan)"},"link":"https://beta.hackfoldr.org/g0v-hackath10n"}]
+[
+  {
+    "id": "120b4d7b-fdab-419e-b2dc-3a01a8425ed7",
+    "projectId": "70e932c0-cb50-40f9-aba0-ced935f2d5de",
+    "name": "g0v hackath66n | 台灣零時政府第陸拾陸次友愛青年黑客松",
+    "type": "實體活動",
+    "description": "Welcome to the 66th Hackathon of the g0v community on March 29, 2025！歡迎參加 g0v 黑客松活動！",
+    "startDate": "2025-03-29T02:00:00.000Z",
+    "endDate": "2025-03-29T09:00:00.000Z",
+    "annouceToContributors": false,
+    "location": {
+      "name": "友愛市場二樓 - 好想工作室",
+      "address": "台南市中西區友愛街117號2樓"
+    },
+    "link": "https://g0v-jothon.kktix.cc/events/g0v-hackath66n"
+  },
+  {
+    "id": "2c14d070-4ffa-4ee7-a46e-394fed8b9d0e",
+    "projectId": "70e932c0-cb50-40f9-aba0-ced935f2d5de",
+    "name": "g0v hackath65n | 台灣零時政府第陸拾伍次平凡而自由的黑客松 Ordinary Life with Freedom Hackathon",
+    "type": "實體活動",
+    "description": "Welcome to the 65th Hackathon of the g0v community on February 22, 2025！歡迎參加 平凡而自由的 g0v 黑客松活動！",
+    "startDate": "2025-02-22T01:30:00.000Z",
+    "endDate": "2025-02-22T09:30:00.000Z",
+    "annouceToContributors": false,
+    "location": {
+      "name": "National Taiwan University Innovation Hall (SPACE M) (國立臺灣大學 學新館 SPACE M)",
+      "address": "2F, No. 1, Section 4, Roosevelt Rd, Da’an District, Taipei City (台北市大安區舟山路10巷1弄4號)"
+    },
+    "link": "https://g0v-jothon.kktix.cc/events/g0v-hackath65n"
+  },
+  {
+    "id": "6a53161f-1a6f-4538-a970-dfeffa14daad",
+    "projectId": "70e932c0-cb50-40f9-aba0-ced935f2d5de",
+    "name": "戶政資料外洩 法庭觀察松",
+    "type": "實體活動",
+    "description": "2022 年 10 月，有駭客在暗網上以 5000USD 的加密貨幣販售台灣 2300 萬人的戶政資料，至今已過了超過 2 年，但是內政部仍未對此案件做出公開說明，持續不承認戶政外洩發生。",
+    "startDate": "2025-02-18T06:30:00.000Z",
+    "endDate": "2025-02-18T07:30:00.000Z",
+    "annouceToContributors": false,
+    "location": {
+      "name": "台北高等行政法院",
+      "address": "台北高等行政法院 111台北市士林區福國路101號"
+    },
+    "link": "https://g0v-jothon.kktix.cc/events/20250218"
+  },
+  {
+    "id": "6d3e9b72-7628-49bc-a3c9-6e8405329ba8",
+    "projectId": "70e932c0-cb50-40f9-aba0-ced935f2d5de",
+    "name": "20250104 第0次網路黑魔法防禦松",
+    "type": "實體活動",
+    "description": "網路充滿各種邪惡的黑魔法，兒少色情私密照片買賣、股市詐騙愛情詐騙。許多人深受這些黑魔法的傷害，想邀請有興趣的朋友一起動手協作，共享知識，希望能將 Miffy 的精神傳承下去，保護更多人免於在網路上受害",
+    "startDate": "2025-01-04T05:00:00.000Z",
+    "endDate": "2025-01-04T09:00:00.000Z",
+    "annouceToContributors": false,
+    "location": {
+      "name": "台北 NPO 聚落",
+      "address": "台北市中正區重慶南路三段2號"
+    },
+    "link": "https://g0v-jothon.kktix.cc/events/dadath0n"
+  },
+  {
+    "id": "b52271cf-ef76-4cb1-acd2-5b6af4fd2dd1",
+    "projectId": "70e932c0-cb50-40f9-aba0-ced935f2d5de",
+    "name": "g0v hackath64n | 台灣零時政府第陸拾肆次黃金比例黑客松",
+    "type": "實體活動",
+    "description": "g0v 第陸拾肆次大黑客松將在 2024.11.23（六）於中研院資訊所舉辦，歡迎公民、鄉民、憤青等諸眾，帶著熱血來盡一己之力，開源協作參與社會。",
+    "startDate": "2024-11-23T01:30:00.000Z",
+    "endDate": "2024-11-23T09:20:00.000Z",
+    "annouceToContributors": false,
+    "location": {
+      "name": "中央研究院資訊科學所",
+      "address": "台北市南港區研究院路二段128號"
+    },
+    "link": "https://g0v-jothon.kktix.cc/events/g0v-hackath64n"
+  },
+  {
+    "id": "4aec5c99-cb48-4e4e-8f1c-0d55911d5533",
+    "projectId": "70e932c0-cb50-40f9-aba0-ced935f2d5de",
+    "name": "[取消] g0v 第貳拾陸次基礎建設松",
+    "type": "實體活動",
+    "description": "g0v 第貳拾陸次基礎建設松將於 11/17（日）14:00 舉行，我們預計進行「g0v 官網更新進度分享與討論」，歡迎一起交流！",
+    "startDate": "2024-11-17T06:00:00.000Z",
+    "endDate": "2024-11-17T09:00:00.000Z",
+    "annouceToContributors": false,
+    "location": {
+      "name": "台北 NPO 聚落 論壇空間",
+      "address": "台北市中正區重慶南路三段2號2樓"
+    },
+    "link": "https://g0v-jothon.kktix.cc/events/infrath26n"
+  },
+  {
+    "id": "147b2aa7-e461-443e-ba29-d319beffa9c9",
+    "projectId": "70e932c0-cb50-40f9-aba0-ced935f2d5de",
+    "name": "g0v 第貳拾伍次基礎建設松",
+    "type": "實體活動",
+    "description": "g0v 第貳拾伍次基礎建設松將於 10/06（日）14:00 舉行，我們預計討論「g0v 官網視覺化與心得上傳」，歡迎一起交流！",
+    "startDate": "2024-10-06T08:00:00.000Z",
+    "endDate": "2024-10-06T11:00:00.000Z",
+    "annouceToContributors": false,
+    "location": {
+      "name": "台北 NPO 聚落 論壇空間",
+      "address": "台北市中正區重慶南路三段2號2樓"
+    },
+    "link": "https://g0v-jothon.kktix.cc/events/infrath25n"
+  },
+  {
+    "id": "d7c8d331-7c45-4dae-878a-2e50443cc240",
+    "projectId": "70e932c0-cb50-40f9-aba0-ced935f2d5de",
+    "name": "g0v hackath63n | 台灣零時政府第陸拾參次公民科技園遊會黑客松",
+    "type": "實體活動",
+    "description": "g0v 第陸拾參次公民科技園遊會黑客松將在 2024.09.29（日）於新店台北矽谷會議中心舉辦，歡迎公民、鄉民、憤青等諸眾，帶著熱血來盡一己之力，開源協作參與社會。",
+    "startDate": "2024-09-29T01:00:00.000Z",
+    "endDate": "2024-09-29T09:20:00.000Z",
+    "annouceToContributors": false,
+    "location": {
+      "name": "台北矽谷國際會議中心",
+      "address": "新北市新店區北新路三段223號"
+    },
+    "link": "https://g0v-jothon.kktix.cc/events/g0v-hackath63n"
+  },
+  {
+    "id": "660492bb-065a-484a-96c5-7307ae1ac929",
+    "projectId": "70e932c0-cb50-40f9-aba0-ced935f2d5de",
+    "name": "g0v hackath62n | 台灣零時政府第陸拾貳次帶我去月球黑客松",
+    "type": "實體活動",
+    "description": "g0v 第陸拾貳次大黑客松將在 2024.07.20（六）於中研院資訊所舉辦，歡迎公民、鄉民、憤青等諸眾，帶著熱血來盡一己之力，開源協作參與社會。",
+    "startDate": "2024-07-20T01:00:00.000Z",
+    "endDate": "2024-07-20T10:00:00.000Z",
+    "annouceToContributors": false,
+    "location": {
+      "name": "中央研究院資訊科學所",
+      "address": "台北市南港區研究院路二段128號"
+    },
+    "link": "https://g0v-jothon.kktix.cc/events/g0v-hackath62n"
+  },
+  {
+    "id": "7a8b540f-f64a-45cd-84bc-20f1aa62e757",
+    "projectId": "70e932c0-cb50-40f9-aba0-ced935f2d5de",
+    "name": "零時小學校 2024 夏日線上源力增能營 Sch001 for Source Raising",
+    "type": "線上活動",
+    "description": "本次「g0v 零時小學校 2024 夏日源力增能營」將一步步帶您認識 g0v 社群，分享這群公民黑客們，是如何用開源精神與行動力，一起用科技解決社會問題！",
+    "startDate": "2024-07-06T02:00:00.000Z",
+    "endDate": "2024-08-24T09:00:00.000Z",
+    "annouceToContributors": false,
+    "location": {
+      "name": "Online Event",
+      "address": ""
+    },
+    "link": "https://g0v-jothon.kktix.cc/events/sch001ssr2024"
+  },
+  {
+    "id": "ce260ad1-8303-4c24-a1b4-6654d818f0eb",
+    "projectId": "70e932c0-cb50-40f9-aba0-ced935f2d5de",
+    "name": "g0v 第貳拾肆次基礎建設松",
+    "type": "實體活動",
+    "description": "g0v 第貳拾肆次基礎建設松將於 4/20（六）12:00 舉行，我們預計討論「g0v 基礎建設更新機制」，歡迎一起交流！",
+    "startDate": "2024-04-20T04:00:00.000Z",
+    "endDate": "2024-04-20T07:00:00.000Z",
+    "annouceToContributors": false,
+    "location": {
+      "name": "台北 NPO 聚落 社群廚房",
+      "address": "台北市中正區重慶南路三段2號4樓"
+    },
+    "link": "https://g0v-jothon.kktix.cc/events/infrath24n"
+  },
+  {
+    "id": "8ed895d1-94ee-41f2-a115-dc923c4c6a90",
+    "projectId": "70e932c0-cb50-40f9-aba0-ced935f2d5de",
+    "name": "g0v hackath61n | 台灣零時政府第陸拾壹次龍來 Open Data Day 黑客松暨零時小學校 4th 專案孵化競賽決選日",
+    "type": "實體活動",
+    "description": "g0v 第陸拾壹次大黑客松將在 2024.3.2（六）於臺大學新館二樓 SPACE M 空間舉辦，歡迎公民、鄉民、憤青等諸眾，帶著熱血來盡一己之力，開源協作參與社會。",
+    "startDate": "2024-03-02T01:30:00.000Z",
+    "endDate": "2024-03-02T10:00:00.000Z",
+    "annouceToContributors": false,
+    "location": {
+      "name": "國立臺灣大學學新館二樓 SPACE M 空間",
+      "address": "台北市大安區舟山路 10 巷 1 弄 4 號 2 樓"
+    },
+    "link": "https://g0v-jothon.kktix.cc/events/g0v-hackath61n"
+  },
+  {
+    "id": "c271b92b-e127-4fb7-afbc-cccf1b20f60f",
+    "projectId": "70e932c0-cb50-40f9-aba0-ced935f2d5de",
+    "name": "g0v hackath60n | 台灣零時政府第陸拾次記得投票黑客松",
+    "type": "實體活動",
+    "description": "g0v 第陸拾次大黑客松將在 2024.01.06（六）於中研院資訊所舉辦，歡迎公民、鄉民、憤青等諸眾，帶著熱血來盡一己之力，開源協作參與社會。",
+    "startDate": "2024-01-06T01:30:00.000Z",
+    "endDate": "2024-01-06T09:00:00.000Z",
+    "annouceToContributors": false,
+    "location": {
+      "name": "中央研究院資訊科學所",
+      "address": "台北市南港區研究院路二段128號"
+    },
+    "link": "https://g0v-jothon.kktix.cc/events/g0v-hackath60n"
+  },
+  {
+    "id": "1ac5e059-b435-457c-9760-dde49e92f6bb",
+    "projectId": "70e932c0-cb50-40f9-aba0-ced935f2d5de",
+    "name": "g0v hackath59n | 台灣零時政府第伍拾玖次輪班寫 code 救台灣黑客松",
+    "type": "實體活動",
+    "description": "g0v 第伍拾玖次大黑客松將在 2023.12.9（六）於新竹縣「竹北市中興里集會所」舉辦，歡迎公民、鄉民、憤青等諸眾，帶著熱血來盡一己之力，開源協作參與社會。",
+    "startDate": "2023-12-09T02:00:00.000Z",
+    "endDate": "2023-12-09T09:30:00.000Z",
+    "annouceToContributors": false,
+    "location": {
+      "name": "竹北市中興里集會所",
+      "address": "新竹縣竹北市嘉豐南路一段 11 號"
+    },
+    "link": "https://g0v-jothon.kktix.cc/events/g0v-hackath59n"
+  },
+  {
+    "id": "9c6dc45c-588b-4429-8e7b-d9b7b068f551",
+    "projectId": "70e932c0-cb50-40f9-aba0-ced935f2d5de",
+    "name": "g0v hackath58n | 台灣零時政府第伍拾捌次 11 歲生日快樂黑客松",
+    "type": "實體活動",
+    "description": "g0v 第伍拾捌次大黑客松將在 2023.10.15（六）於中研院資訊所舉辦，歡迎公民、鄉民、憤青等諸眾，帶著熱血來盡一己之力，開源協作參與社會。",
+    "startDate": "2023-10-15T01:30:00.000Z",
+    "endDate": "2023-10-15T09:00:00.000Z",
+    "annouceToContributors": false,
+    "location": {
+      "name": "中央研究院資訊科學所",
+      "address": "台北市南港區研究院路二段128號"
+    },
+    "link": "https://g0v-jothon.kktix.cc/events/g0v-hackath58n"
+  },
+  {
+    "id": "9872d3a3-ac4f-44df-be78-a7d540b63c77",
+    "projectId": "70e932c0-cb50-40f9-aba0-ced935f2d5de",
+    "name": "g0v hackath57n | 台灣零時政府第伍拾柒次開源普渡黑客松",
+    "type": "實體活動",
+    "description": "g0v 第伍拾柒次開源普渡黑客松將在 2023.08.26（六）於中研院資訊所舉辦，歡迎公民、鄉民、憤青等諸眾，帶著熱血來盡一己之力，開源協作參與社會。",
+    "startDate": "2023-08-26T01:30:00.000Z",
+    "endDate": "2023-08-26T09:00:00.000Z",
+    "annouceToContributors": false,
+    "location": {
+      "name": "中央研究院資訊科學所",
+      "address": "台北市南港區研究院路二段128號"
+    },
+    "link": "https://g0v-jothon.kktix.cc/events/g0v-hackath57n"
+  },
+  {
+    "id": "0e6626c2-a11e-483d-b948-5eb3c759c517",
+    "projectId": "70e932c0-cb50-40f9-aba0-ced935f2d5de",
+    "name": "2023 零時小學校ＸSITCON - 專案實作工作坊",
+    "type": "實體活動",
+    "description": "零時小學校與 SITCON 學生計算機年會將於 8/12 合辦一日實體「專案實作工作坊」，活動由零時小學校將引導學員從問題思辨與定義、解方發想，到團隊溝通與協作，過程也將安排一組一位隊輔協助專案進行。",
+    "startDate": "2023-08-12T02:00:00.000Z",
+    "endDate": "2023-08-12T10:00:00.000Z",
+    "annouceToContributors": false,
+    "location": {
+      "name": "NPO HUB TAIPEI",
+      "address": "台北市中正區重慶南路三段2號"
+    },
+    "link": "https://g0v-jothon.kktix.cc/events/sch001ssr2023-workshop"
+  },
+  {
+    "id": "e5388e24-37c6-41f3-a3f1-c6b316c3c97b",
+    "projectId": "70e932c0-cb50-40f9-aba0-ced935f2d5de",
+    "name": "零時小學校 2023 夏日線上源力增能營 Sch001 for Source Raising",
+    "type": "線上活動",
+    "description": "「AI 工具推成出新，我會被取代嗎？教育現場怎麼教？」、「Web3 去中心化時代來臨，會帶來混亂還是希望？」，究竟「如何與科技和平共處？」一起參加零時小學校 2023 夏日線上源力增能營找出生存之道！",
+    "startDate": "2023-07-22T02:00:00.000Z",
+    "endDate": "2023-08-26T02:00:00.000Z",
+    "annouceToContributors": false,
+    "location": {
+      "name": "Online Event",
+      "address": ""
+    },
+    "link": "https://g0v-jothon.kktix.cc/events/sch001ssr2023"
+  },
+  {
+    "id": "d19f4681-c42c-4977-85ca-3560b249e8f3",
+    "projectId": "70e932c0-cb50-40f9-aba0-ced935f2d5de",
+    "name": "g0v 揪松團 | 防衛松前講座 #2 - 躺著也中槍！資訊砲彈下老百姓的生存之道",
+    "type": "實體活動",
+    "description": "g0v 揪松團將在 7/16（日）舉辦松前講座，我們邀請到了陳廷豪及游知澔分享馬祖斷網及資訊戰經驗，並由《真相製造》作者劉致昕擔任主持人，一起探討資訊砲彈下老百姓的生存之道！",
+    "startDate": "2023-07-16T06:00:00.000Z",
+    "endDate": "2023-07-16T08:00:00.000Z",
+    "annouceToContributors": false,
+    "location": {
+      "name": "青平台「下一步」空間",
+      "address": "台北市中正區武昌街一段18號5樓"
+    },
+    "link": "https://g0v-jothon.kktix.cc/events/defense-2"
+  },
+  {
+    "id": "036586fa-16c3-4b9e-a1d0-1e086213f990",
+    "projectId": "70e932c0-cb50-40f9-aba0-ced935f2d5de",
+    "name": "g0v 揪松團 | 防衛松前講座 #1 - 日常生活轉為戰時避難生活的生存之道",
+    "type": "實體活動",
+    "description": "防衛黑客松系列活動來啦～g0v 揪松團 將在 7/8（六）舉辦松前講座，我們邀請到了蘇紫雲老師及沈伯洋老師，他們將與您分享「日常生活轉為戰時避難生活的生存之道」！",
+    "startDate": "2023-07-08T02:00:00.000Z",
+    "endDate": "2023-07-08T04:00:00.000Z",
+    "annouceToContributors": false,
+    "location": {
+      "name": "台北 NPO 聚落 社群廚房",
+      "address": "台北市中正區重慶南路三段2號4樓"
+    },
+    "link": "https://g0v-jothon.kktix.cc/events/defense-1"
+  },
+  {
+    "id": "d8b9b35b-33d9-4d3e-99f6-d15fdc6a2af8",
+    "projectId": "70e932c0-cb50-40f9-aba0-ced935f2d5de",
+    "name": "g0v hackath56n | 台灣零時政府第伍拾陸次真的假的黑客松 x 水保局",
+    "type": "實體活動",
+    "description": "g0v 第伍拾陸次真的假的黑客松 x 水保局 將在 2023.07.01（六）於「集思台中新烏日會議中心」舉辦，歡迎公民、鄉民、憤青等諸眾，帶著熱血來盡一己之力，開源協作參與社會。",
+    "startDate": "2023-07-01T01:30:00.000Z",
+    "endDate": "2023-07-01T09:00:00.000Z",
+    "annouceToContributors": false,
+    "location": {
+      "name": "集思台中新烏日會議中心",
+      "address": "台中市烏日區高鐵東一路26號4樓"
+    },
+    "link": "https://g0v-jothon.kktix.cc/events/g0v-hackath56n"
+  },
+  {
+    "id": "4d4309f5-0b60-44b8-a982-68fa22efda4e",
+    "projectId": "70e932c0-cb50-40f9-aba0-ced935f2d5de",
+    "name": "g0v 第貳拾參次基礎建設松",
+    "type": "線上活動",
+    "description": "g0v 第貳拾參次基礎建設松將於 5/9（二）19:00 舉行，歡迎一起交流、開幹！",
+    "startDate": "2023-05-09T11:00:00.000Z",
+    "endDate": "2023-05-09T13:30:00.000Z",
+    "annouceToContributors": false,
+    "location": {
+      "name": "Online Event",
+      "address": ""
+    },
+    "link": "https://g0v-jothon.kktix.cc/events/infrath23n"
+  },
+  {
+    "id": "04c1af45-a81c-4412-9002-52cc136a045e",
+    "projectId": "70e932c0-cb50-40f9-aba0-ced935f2d5de",
+    "name": "g0v 南庄桐花松 2023",
+    "type": "實體活動",
+    "description": "g0v 南庄桐花松 2023 揪松團想和大家一起出去玩！ 自 2020 年起，#揪松團 和 #數位農民組合 每年共同舉辦「南庄桐花松」，與當地農民進行一場公民科技協作交流。 今年「g0v 南庄桐花松 ",
+    "startDate": "2023-04-29T03:00:00.000Z",
+    "endDate": "2023-04-30T10:00:00.000Z",
+    "annouceToContributors": false,
+    "location": {
+      "name": "數位農民組合大南埔共學空間",
+      "address": "苗栗縣南庄鄉南富村大南埔133-1號"
+    },
+    "link": "https://g0v-jothon.kktix.cc/events/tungflowerthon2023"
+  },
+  {
+    "id": "8e0c0136-e89f-4f13-afe7-856bd1a4d971",
+    "projectId": "70e932c0-cb50-40f9-aba0-ced935f2d5de",
+    "name": "g0v hackath55n | 台灣零時政府第伍拾伍次 AI 也想參加黑客松",
+    "type": "實體活動",
+    "description": "g0v 第伍拾伍次大黑客松將在 2023.04.08（六）於中研院資訊所舉辦，歡迎公民、鄉民、憤青等諸眾，帶著熱血來盡一己之力，開源協作參與社會。",
+    "startDate": "2023-04-08T01:30:00.000Z",
+    "endDate": "2023-04-08T09:00:00.000Z",
+    "annouceToContributors": false,
+    "location": {
+      "name": "中央研究院資訊科學所",
+      "address": "台北市南港區研究院路二段128號"
+    },
+    "link": "https://g0v-jothon.kktix.cc/events/g0v-hackath55n"
+  },
+  {
+    "id": "61c40d03-f707-4200-8cab-8b20d50a7823",
+    "projectId": "70e932c0-cb50-40f9-aba0-ced935f2d5de",
+    "name": "g0v 第貳拾貳次基礎建設松",
+    "type": "實體活動",
+    "description": "g0v 第貳拾貳次基礎建設松將於 3/4（六）13:30 舉行，歡迎自由登記提案，一起交流、開幹！",
+    "startDate": "2023-03-04T05:30:00.000Z",
+    "endDate": "2023-03-04T09:00:00.000Z",
+    "annouceToContributors": false,
+    "location": {
+      "name": "NPO HUB 2 樓影響力工場",
+      "address": "台北市中正區重慶南路三段2號"
+    },
+    "link": "https://g0v-jothon.kktix.cc/events/infrath22n"
+  },
+  {
+    "id": "f6934f5d-ccb3-446a-b8e4-c194f989246f",
+    "projectId": "70e932c0-cb50-40f9-aba0-ced935f2d5de",
+    "name": "g0v hackath54n | 台灣零時政府第伍拾肆次兔兔黑客松暨零時小學校專案孵化競賽決選日",
+    "type": "實體活動",
+    "description": "g0v 第伍拾肆次大黑客松將在 2023.02.11（六）於國教院臺北院區舉辦，歡迎公民、鄉民、憤青等諸眾，帶著熱血來盡一己之力，開源協作參與社會。",
+    "startDate": "2023-02-11T01:30:00.000Z",
+    "endDate": "2023-02-11T09:00:00.000Z",
+    "annouceToContributors": false,
+    "location": {
+      "name": "國家教育研究院 臺北院區",
+      "address": "台北市大安區和平東路一段179號"
+    },
+    "link": "https://g0v-jothon.kktix.cc/events/g0v-hackath54n"
+  },
+  {
+    "id": "128f653c-b71a-4107-9c91-fd927a90a9e7",
+    "projectId": "70e932c0-cb50-40f9-aba0-ced935f2d5de",
+    "name": "g0v hackath53n | 台灣零時政府第伍拾參次 18 歲公民權黑客松",
+    "type": "實體活動",
+    "description": "g0v 第伍拾參次黑客松將在 2022.12.17（六）於中研院資訊所舉辦，歡迎公民、鄉民、憤青等諸眾，帶著熱血來盡一己之力，開源協作參與社會。",
+    "startDate": "2022-12-17T01:30:00.000Z",
+    "endDate": "2022-12-17T09:00:00.000Z",
+    "annouceToContributors": false,
+    "location": {
+      "name": "中央研究院資訊科學所",
+      "address": "台北市南港區研究院路二段128號"
+    },
+    "link": "https://g0v-jothon.kktix.cc/events/g0v-hackath53n"
+  },
+  {
+    "id": "934218fd-ce6d-42d3-a41b-043cfaba5657",
+    "projectId": "70e932c0-cb50-40f9-aba0-ced935f2d5de",
+    "name": "［零時小學校新竹源力增能工作坊］公民科技探究與實作課程設計",
+    "type": "實體活動",
+    "description": "探究與實作課程如何更跨領域並與真實社會連結？活動邀請 LASS 創辦人哈爸與善於跨領域教學的竹東高中韓中梅老師引導大家，一同嘗試把公民科技專案融入探究與實作課程！",
+    "startDate": "2022-11-27T02:00:00.000Z",
+    "endDate": "2022-11-27T07:00:00.000Z",
+    "annouceToContributors": false,
+    "location": {
+      "name": "國立竹東高中",
+      "address": "新竹縣竹東鎮大林路2號"
+    },
+    "link": "https://g0v-jothon.kktix.cc/events/ssr2022hsinchu"
+  },
+  {
+    "id": "79dcc43b-0e30-4a30-a161-f2ca22a6747a",
+    "projectId": "70e932c0-cb50-40f9-aba0-ced935f2d5de",
+    "name": "g0v hackath52n | 台灣零時政府第伍拾貳次十週年黑客松＆論壇＆生日趴",
+    "type": "實體活動",
+    "description": "g0v 第伍拾貳次十週年黑客松 將在 2022.10.22（六）於「中央研究院 人文館 第一、二會議室」舉辦，歡迎公民、鄉民、憤青等諸眾，帶著熱血來盡一己之力，開源協作參與社會。",
+    "startDate": "2022-10-21T10:30:00.000Z",
+    "endDate": "2022-10-23T09:00:00.000Z",
+    "annouceToContributors": false,
+    "location": {
+      "name": "",
+      "address": ""
+    },
+    "link": "https://g0v-jothon.kktix.cc/events/g0v-hackath52n"
+  },
+  {
+    "id": "14775ae8-41b5-4ff8-9646-33d113767db4",
+    "projectId": "70e932c0-cb50-40f9-aba0-ced935f2d5de",
+    "name": "數位洄瀾黑客松",
+    "type": "實體活動",
+    "description": "數位洄瀾黑客松 將在 2022.09.24（六）於「花蓮縣政府 1 樓大禮堂」舉辦，歡迎公民、鄉民、憤青等諸眾，帶著熱血來盡一己之力，開源協作參與社會。",
+    "startDate": "2022-09-24T02:00:00.000Z",
+    "endDate": "2022-09-24T09:00:00.000Z",
+    "annouceToContributors": false,
+    "location": {
+      "name": "花蓮縣政府一樓大禮堂",
+      "address": "花蓮市府前路 17 號"
+    },
+    "link": "https://g0v-jothon.kktix.cc/events/g0v-hualienthon2022"
+  },
+  {
+    "id": "f5a52b82-7d96-49f4-a9ad-babf12b26d4e",
+    "projectId": "70e932c0-cb50-40f9-aba0-ced935f2d5de",
+    "name": "g0v 第貳拾壹次基礎建設松",
+    "type": "線上活動",
+    "description": "g0v 第貳拾壹次基礎建設松將於 9/3（六）13:30 舉行，歡迎自由登記提案，一起交流、開幹！",
+    "startDate": "2022-09-03T05:30:00.000Z",
+    "endDate": "2022-09-03T09:30:00.000Z",
+    "annouceToContributors": false,
+    "location": {
+      "name": "Online Event",
+      "address": ""
+    },
+    "link": "https://g0v-jothon.kktix.cc/events/infrath21n"
+  },
+  {
+    "id": "75f21177-338b-4f5d-a5d5-9ab2948e936f",
+    "projectId": "70e932c0-cb50-40f9-aba0-ced935f2d5de",
+    "name": "g0v hackath51n | 台灣零時政府第伍拾壹次大肚山海豚黑客松 x 水保局",
+    "type": "實體活動",
+    "description": "g0v 第伍拾壹次大肚山海豚黑客松 x 水保局 將在 2022.08.20（六）於「集思台中新烏日會議中心」舉辦，歡迎公民、鄉民、憤青等諸眾，帶著熱血來盡一己之力，開源協作參與社會。",
+    "startDate": "2022-08-20T01:30:00.000Z",
+    "endDate": "2022-08-20T09:00:00.000Z",
+    "annouceToContributors": false,
+    "location": {
+      "name": "集思台中新烏日會議中心",
+      "address": "台中市烏日區高鐵東一路26號4樓"
+    },
+    "link": "https://g0v-jothon.kktix.cc/events/g0v-hackath51n"
+  },
+  {
+    "id": "d30ce61c-840b-4d93-8422-3d822575f0df",
+    "projectId": "70e932c0-cb50-40f9-aba0-ced935f2d5de",
+    "name": "零時小學校 2022 夏日線上源力增能營 Sch001 for Source Raising",
+    "type": "實體活動",
+    "description": "g0v 如何協作出 818+ 件各領域的專案？來零時小學校 2022 夏日源力增能營找答案吧！ 7/24-8/27 你將經歷 22 堂數位公民課程、專題實作，培養數位公民力、共好行動力、跨界自學力！",
+    "startDate": "2022-07-24T01:00:00.000Z",
+    "endDate": "2022-08-27T10:00:00.000Z",
+    "annouceToContributors": false,
+    "location": {
+      "name": "",
+      "address": ""
+    },
+    "link": "https://g0v-jothon.kktix.cc/events/sch001ssr2022"
+  },
+  {
+    "id": "5b5e6c68-d991-4581-8d22-9e169a99e214",
+    "projectId": "70e932c0-cb50-40f9-aba0-ced935f2d5de",
+    "name": "g0v 第貳拾次基礎建設松",
+    "type": "實體活動",
+    "description": "g0v 第貳拾次基礎建設松將於 7/9（六）10:00 舉行，歡迎自由登記提案，一起交流、開幹！",
+    "startDate": "2022-07-09T02:00:00.000Z",
+    "endDate": "2022-07-09T07:00:00.000Z",
+    "annouceToContributors": false,
+    "location": {
+      "name": "NPO HUB 2 樓影響力論壇",
+      "address": "台北市中正區重慶南路三段2號"
+    },
+    "link": "https://g0v-jothon.kktix.cc/events/infrath20n"
+  },
+  {
+    "id": "864d7635-b45b-444c-8e29-6f18e6a330c2",
+    "projectId": "70e932c0-cb50-40f9-aba0-ced935f2d5de",
+    "name": "g0v hackath50n | 台灣零時政府第伍拾次來電五十黑客松 x COSCUP Open Source Contributor Workshop",
+    "type": "實體活動",
+    "description": "g0v 第伍拾次來電五十黑客松 x COSCUP 將在 2022.06.18（六）於升級會議中心-松江 101 館舉辦，歡迎公民、鄉民、憤青等諸眾，帶著熱血來盡一己之力，開源協作參與社會。",
+    "startDate": "2022-06-18T01:30:00.000Z",
+    "endDate": "2022-06-18T09:00:00.000Z",
+    "annouceToContributors": false,
+    "location": {
+      "name": "升級會議中心-松江101館",
+      "address": "台北市中山區松江路101號4樓"
+    },
+    "link": "https://g0v-jothon.kktix.cc/events/g0v-hackath50n"
+  },
+  {
+    "id": "9b1ea4c9-cea7-49c7-bebc-80185269fe57",
+    "projectId": "70e932c0-cb50-40f9-aba0-ced935f2d5de",
+    "name": "g0v 南庄桐花松 2022",
+    "type": "實體活動",
+    "description": "g0v 南庄桐花松 2022   2020 年，#揪松團 與 #數位農民組合 合辦了「南庄桐花松」，在「大南埔共學空間」開啟與「真 ● 農民」的公民科技協作交流，探討因時 / 因地制宜的台灣版農夫種植",
+    "startDate": "2022-05-01T02:00:00.000Z",
+    "endDate": "2022-05-01T10:00:00.000Z",
+    "annouceToContributors": false,
+    "location": {
+      "name": "數位農民組合大南埔共學空間",
+      "address": "苗栗縣南庄鄉南富村大南埔133-1號"
+    },
+    "link": "https://g0v-jothon.kktix.cc/events/tungflowerthon2022"
+  },
+  {
+    "id": "2a443376-e55c-450f-b34c-e44254f36fcd",
+    "projectId": "70e932c0-cb50-40f9-aba0-ced935f2d5de",
+    "name": "g0v hackath49n | 台灣零時政府第肆拾玖次全糖去冰黑客松 x 2022 亞太社會創新高峰會",
+    "type": "實體活動",
+    "description": "g0v 第肆拾貳次大黑客松將在 2022.04.09（六）於台南 C-Hub 成大創意中心舉辦，歡迎公民、鄉民、憤青等諸眾，帶著熱血來盡一己之力，開源協作參與社會。",
+    "startDate": "2022-04-09T02:00:00.000Z",
+    "endDate": "2022-04-09T10:00:00.000Z",
+    "annouceToContributors": false,
+    "location": {
+      "name": "C-Hub 成大創新中心",
+      "address": "C-Hub 成大創新中心"
+    },
+    "link": "https://g0v-jothon.kktix.cc/events/g0v-hackath49n"
+  },
+  {
+    "id": "d69b9a0e-869c-4d71-9809-8a05b2c9fcd8",
+    "projectId": "70e932c0-cb50-40f9-aba0-ced935f2d5de",
+    "name": "g0v 第拾玖次基礎建設松",
+    "type": "實體活動",
+    "description": "g0v 第拾柒次基礎建設松將於 03/12（六）13:30 舉行，歡迎自由登記提案，一起交流、開幹！",
+    "startDate": "2022-03-12T05:30:00.000Z",
+    "endDate": "2022-03-12T09:30:00.000Z",
+    "annouceToContributors": false,
+    "location": {
+      "name": "NPO HUB 2 樓影響力論壇",
+      "address": "台北市中正區重慶南路三段2號"
+    },
+    "link": "https://g0v-jothon.kktix.cc/events/infrath19n"
+  },
+  {
+    "id": "3eb49461-f252-44f1-be2b-e57fb247ba92",
+    "projectId": "70e932c0-cb50-40f9-aba0-ced935f2d5de",
+    "name": "g0v hackath48n | 台灣零時政府第肆拾捌次虎來俱進黑客松",
+    "type": "實體活動",
+    "description": "g0v 第肆拾捌次大黑客松將在 2022.2.19（六）於 Gather Town 線上會議室舉辦，歡迎公民、鄉民、憤青等諸眾，帶著熱血運用一己之力，開源協作參與社會。",
+    "startDate": "2022-02-19T02:00:00.000Z",
+    "endDate": "2022-02-19T09:00:00.000Z",
+    "annouceToContributors": false,
+    "location": {
+      "name": "",
+      "address": ""
+    },
+    "link": "https://g0v-jothon.kktix.cc/events/g0v-hackath48n"
+  },
+  {
+    "id": "027ab1fb-e0fe-478f-9f23-114affc4ab81",
+    "projectId": "70e932c0-cb50-40f9-aba0-ced935f2d5de",
+    "name": "g0v hackath47n | 台灣零時政府第肆拾柒次板橋油庫口黑客松",
+    "type": "實體活動",
+    "description": "g0v 第肆拾柒次大黑客松將在 2021.12.11（六）於線上舉辦，歡迎公民、鄉民、憤青等諸眾，帶著熱血來盡一己之力，開源協作參與社會。",
+    "startDate": "2021-12-11T01:00:00.000Z",
+    "endDate": "2021-12-11T10:00:00.000Z",
+    "annouceToContributors": false,
+    "location": {
+      "name": "新板傑仕堡A棟2樓（新北板橋中山國中大門對面）",
+      "address": "新北市板橋區文化路一段188巷57號"
+    },
+    "link": "https://g0v-jothon.kktix.cc/events/g0v-hackath47n"
+  },
+  {
+    "id": "f97792bf-8af2-4fee-a169-7f6d2f8cc855",
+    "projectId": "70e932c0-cb50-40f9-aba0-ced935f2d5de",
+    "name": "［零時小學校 × LASS］新竹小松",
+    "type": "實體活動",
+    "description": "緣起 零時小學校的實體活動回來了！這次我們要到新竹，試著將土地、河流與流域轉化為地理資料，用地理資訊系統說一個新竹的流域故事⋯⋯ 本次零時小學校的「新竹小松」將與 LASS 開源公益環境感測網路合作，",
+    "startDate": "2021-11-20T05:30:00.000Z",
+    "endDate": "2021-11-20T10:00:00.000Z",
+    "annouceToContributors": false,
+    "location": {
+      "name": "慕溪園",
+      "address": "新竹縣竹北市復興三路二段 82 號"
+    },
+    "link": "https://g0v-jothon.kktix.cc/events/sch001-hc211120"
+  },
+  {
+    "id": "907937b8-a03b-4d49-b7ff-04b3becc0094",
+    "projectId": "70e932c0-cb50-40f9-aba0-ced935f2d5de",
+    "name": "g0v hackath46n | 台灣零時政府第肆拾陸次九週年黑客松",
+    "type": "實體活動",
+    "description": "g0v 第肆拾陸次大黑客松將在 2021.10.23（六）於線上舉辦，歡迎公民、鄉民、憤青等諸眾，帶著熱血來盡一己之力，開源協作參與社會。",
+    "startDate": "2021-10-23T01:00:00.000Z",
+    "endDate": "2021-10-23T09:00:00.000Z",
+    "annouceToContributors": false,
+    "location": {
+      "name": "集思交通部國際會議中心 3F 國際會議廳／GIS MOTC 3F Plenary Hall",
+      "address": "台北市杭州南路一段24號"
+    },
+    "link": "https://g0v-jothon.kktix.cc/events/g0v-hackath46n"
+  },
+  {
+    "id": "c927d620-82c3-4515-9edb-a5166d95706e",
+    "projectId": "70e932c0-cb50-40f9-aba0-ced935f2d5de",
+    "name": "g0v hackath45n | 台灣零時政府第肆拾伍次原本在台中黑客松",
+    "type": "實體活動",
+    "description": "g0v 第肆拾伍次大黑客松將在 2021.08.21（六）於線上舉辦，歡迎公民、鄉民、憤青等諸眾，帶著熱血來盡一己之力，開源協作參與社會。",
+    "startDate": "2021-08-21T02:00:00.000Z",
+    "endDate": "2021-08-21T09:00:00.000Z",
+    "annouceToContributors": false,
+    "location": {
+      "name": "",
+      "address": ""
+    },
+    "link": "https://g0v-jothon.kktix.cc/events/g0v-hackath45n"
+  },
+  {
+    "id": "2da19919-e899-450e-93e2-0c64505a77dd",
+    "projectId": "70e932c0-cb50-40f9-aba0-ced935f2d5de",
+    "name": "【選修課】零時小學校「夏日源理」2021 線上源力增能營 Sch001 for Source Raising",
+    "type": "實體活動",
+    "description": "零時小學校「夏日源理」2021 線上源力增能營是 g0v 貢獻者與 g0v 揪松團協作推出的線上課程計畫，以「開源、協作、開放學習」為主軸，期盼以開放的方式，在線上陪伴所有學習者。",
+    "startDate": "2021-07-17T01:00:00.000Z",
+    "endDate": "2021-08-14T10:00:00.000Z",
+    "annouceToContributors": false,
+    "location": {
+      "name": "",
+      "address": ""
+    },
+    "link": "https://g0v-jothon.kktix.cc/events/codeforssrelective"
+  },
+  {
+    "id": "6cf64fdb-cdaf-4e78-bc4f-9ff61b22704b",
+    "projectId": "70e932c0-cb50-40f9-aba0-ced935f2d5de",
+    "name": "零時小學校「夏日源理」2021 線上源力增能營 Sch001 for Source Raising",
+    "type": "實體活動",
+    "description": "零時小學校「夏日源理」2021 線上源力增能營是 g0v 貢獻者與 g0v 揪松團協作推出的線上課程計畫，以「開源、協作、開放學習」為主軸，期盼以開放的方式，在線上陪伴所有學習者。",
+    "startDate": "2021-07-17T01:00:00.000Z",
+    "endDate": "2021-08-14T10:00:00.000Z",
+    "annouceToContributors": false,
+    "location": {
+      "name": "",
+      "address": ""
+    },
+    "link": "https://g0v-jothon.kktix.cc/events/sch001ssr2021"
+  },
+  {
+    "id": "337298bc-bc4d-429c-abac-5e06a674510e",
+    "projectId": "70e932c0-cb50-40f9-aba0-ced935f2d5de",
+    "name": "g0v hackath44n | 台灣零時政府第肆拾肆次世界最危險黑客松",
+    "type": "實體活動",
+    "description": "g0v 第肆拾肆次大黑客松將在 2021.06.26（六）於線上舉辦，歡迎公民、鄉民、憤青等諸眾，帶著熱血來盡一己之力，開源協作參與社會。",
+    "startDate": "2021-06-26T01:00:00.000Z",
+    "endDate": "2021-06-26T09:00:00.000Z",
+    "annouceToContributors": false,
+    "location": {
+      "name": "",
+      "address": ""
+    },
+    "link": "https://g0v-jothon.kktix.cc/events/g0v-hackath44n"
+  },
+  {
+    "id": "37456731-2f06-4a74-b735-5338f07afbe7",
+    "projectId": "70e932c0-cb50-40f9-aba0-ced935f2d5de",
+    "name": "「線上活動怎麼辦？」線上協作工作坊",
+    "type": "實體活動",
+    "description": "這是一場，教你怎麼辦線上活動的，線上工作坊。",
+    "startDate": "2021-06-19T11:30:00.000Z",
+    "endDate": "2021-06-19T13:30:00.000Z",
+    "annouceToContributors": false,
+    "location": {
+      "name": "",
+      "address": ""
+    },
+    "link": "https://g0v-jothon.kktix.cc/events/coworkshop2021"
+  },
+  {
+    "id": "6be598c0-dd23-496b-b600-c338c4e50501",
+    "projectId": "70e932c0-cb50-40f9-aba0-ced935f2d5de",
+    "name": "g0v infrath18n 第拾捌次基礎建設松",
+    "type": "實體活動",
+    "description": "g0v 第拾捌次基礎建設松將於 05/22（六）14:00 「線上」舉行，歡迎自由登記提案，一起交流、開幹！",
+    "startDate": "2021-05-22T06:00:00.000Z",
+    "endDate": "2021-05-22T10:00:00.000Z",
+    "annouceToContributors": false,
+    "location": {
+      "name": "",
+      "address": ""
+    },
+    "link": "https://g0v-jothon.kktix.cc/events/infrath18n"
+  },
+  {
+    "id": "13c891ae-b03f-4c47-bc4d-6baceec80246",
+    "projectId": "70e932c0-cb50-40f9-aba0-ced935f2d5de",
+    "name": "g0v hackath44n | 台灣零時政府第肆拾肆次世界最危險黑客松",
+    "type": "實體活動",
+    "description": "g0v 第肆拾肆次大黑客松將在 2021.05.22（六）於中研院資訊所舉辦，歡迎公民、鄉民、憤青等諸眾，帶著熱血來盡一己之力，開源協作參與社會。",
+    "startDate": "2021-05-22T01:00:00.000Z",
+    "endDate": "2021-05-22T10:00:00.000Z",
+    "annouceToContributors": false,
+    "location": {
+      "name": "中央研究院資訊科學所",
+      "address": "台北市南港區研究院路二段128號"
+    },
+    "link": "https://g0v-jothon.kktix.cc/events/g0v-hackath44narchived"
+  },
+  {
+    "id": "c4453d96-72f0-495e-b52a-f4704ef1d28d",
+    "projectId": "70e932c0-cb50-40f9-aba0-ced935f2d5de",
+    "name": "g0v 南庄桐花松 2021",
+    "type": "實體活動",
+    "description": "g0v 南庄桐花松 2021，農業、賞花、Hacking！",
+    "startDate": "2021-05-01T02:00:00.000Z",
+    "endDate": "2021-05-01T10:00:00.000Z",
+    "annouceToContributors": false,
+    "location": {
+      "name": "",
+      "address": ""
+    },
+    "link": "https://g0v-jothon.kktix.cc/events/tungflowerthon2021"
+  },
+  {
+    "id": "1aad4cf2-55bc-44f1-a52f-6fe1c01d0b81",
+    "projectId": "70e932c0-cb50-40f9-aba0-ced935f2d5de",
+    "name": "g0v Hackath43n | 台灣零時政府第肆拾參次源力犇騰黑客松",
+    "type": "實體活動",
+    "description": "g0v 第肆拾參次大黑客松將在 2021.03.20（六）於中研院資訊所舉辦，歡迎公民、鄉民、憤青等諸眾，帶著熱血來盡一己之力，開源協作參與社會。",
+    "startDate": "",
+    "endDate": "",
+    "annouceToContributors": false,
+    "location": {
+      "name": "中央研究院資訊科學所",
+      "address": "台北市南港區研究院路二段128號"
+    },
+    "link": "https://g0v-jothon.kktix.cc/events/g0v-hackath43n"
+  },
+  {
+    "id": "7ed4a635-4ce5-4ec9-aee5-5b49f063ecba",
+    "projectId": "70e932c0-cb50-40f9-aba0-ced935f2d5de",
+    "name": "小學校松 Sch001 2021 Workshop I",
+    "type": "實體活動",
+    "description": "零時小學校的 2021 年第一次「小學校松」將於 02/20（六）14:00 舉行，歡迎一起來交流和協作！",
+    "startDate": "2021-02-20T06:00:00.000Z",
+    "endDate": "2021-02-20T10:00:00.000Z",
+    "annouceToContributors": false,
+    "location": {
+      "name": "NPO HUB Taipei",
+      "address": "台北市中正區重慶南路三段2號"
+    },
+    "link": "https://g0v-jothon.kktix.cc/events/sch001-2021-wsi"
+  },
+  {
+    "id": "265785e2-d2a3-45df-bc27-9458d33c23c3",
+    "projectId": "70e932c0-cb50-40f9-aba0-ced935f2d5de",
+    "name": "g0v hackath42n | 台灣零時政府第肆拾貳次生命、宇宙以及萬事萬物的終極答案黑客松",
+    "type": "實體活動",
+    "description": "g0v 第肆拾貳次大黑客松將在 2021.01.23（六）於中研院資訊所舉辦，歡迎公民、鄉民、憤青等諸眾，帶著熱血來盡一己之力，開源協作參與社會。",
+    "startDate": "2021-01-23T01:00:00.000Z",
+    "endDate": "2021-01-23T10:00:00.000Z",
+    "annouceToContributors": false,
+    "location": {
+      "name": "中央研究院資訊科學所",
+      "address": "台北市南港區研究院路二段128號"
+    },
+    "link": "https://g0v-jothon.kktix.cc/events/g0v-hackath42n"
+  },
+  {
+    "id": "3d0c06c6-666b-416f-a7f9-bb2859efd3c9",
+    "projectId": "70e932c0-cb50-40f9-aba0-ced935f2d5de",
+    "name": "g0v 第拾柒次基礎建設松",
+    "type": "實體活動",
+    "description": "g0v 第拾柒次基礎建設松將於 01/10（日）14:00 舉行，歡迎自由登記提案，一起交流、開幹！",
+    "startDate": "2021-01-10T06:00:00.000Z",
+    "endDate": "2021-01-10T10:00:00.000Z",
+    "annouceToContributors": false,
+    "location": {
+      "name": "NPO Hub 4F Kitchen",
+      "address": "台北市中正區重慶南路三段2號"
+    },
+    "link": "https://g0v-jothon.kktix.cc/events/infrath17n"
+  },
+  {
+    "id": "3676aafe-0767-4179-9313-a449aa048d03",
+    "projectId": "70e932c0-cb50-40f9-aba0-ced935f2d5de",
+    "name": "g0v hackath41n | 台灣零時政府第肆拾壹次八週年黑客松",
+    "type": "實體活動",
+    "description": "歡迎公民、鄉民、憤青、開發者、設計者、社會運動工作者、公務員、法律專家、文字工作者、插畫家與媒體工作者等諸眾，帶著熱血來盡一己之力，開源協作參與社會。",
+    "startDate": "2020-10-24T01:00:00.000Z",
+    "endDate": "2020-10-24T10:00:00.000Z",
+    "annouceToContributors": false,
+    "location": {
+      "name": "中央研究院資訊科學所",
+      "address": "台北市南港區研究院路二段128號"
+    },
+    "link": "https://g0v-jothon.kktix.cc/events/g0v-hackath41n"
+  },
+  {
+    "id": "a3c78e51-c822-4302-a16c-8da190a2c6fd",
+    "projectId": "70e932c0-cb50-40f9-aba0-ced935f2d5de",
+    "name": "零時小學校 Demo Day 2020",
+    "type": "實體活動",
+    "description": "零時小學校（Sch001）是聚焦在教育的 g0v 專案，將代表數位原生世代的 0 與 1 放入代表教育的「學校（School）」，從零重新思考學校的角色，代表教育與數位社群的連結與協作。",
+    "startDate": "2020-08-30T05:30:00.000Z",
+    "endDate": "2020-08-30T10:00:00.000Z",
+    "annouceToContributors": false,
+    "location": {
+      "name": "華山 1914 文化創意產業園區中 3 館 2 樓拱廳",
+      "address": "台北市中正區八德路一段1號"
+    },
+    "link": "https://g0v-jothon.kktix.cc/events/sch001-demo-2020"
+  },
+  {
+    "id": "d6e9f806-02eb-4b49-80d6-f43b2e73c997",
+    "projectId": "70e932c0-cb50-40f9-aba0-ced935f2d5de",
+    "name": "g0v hackath40n | 台灣零時政府第肆拾次集合啦！老地方黑客松",
+    "type": "實體活動",
+    "description": "歡迎公民、鄉民、憤青、開發者、設計者、社會運動工作者、公務員、法律專家、文字工作者、插畫家與媒體工作者等諸眾，帶著熱血來盡一己之力，開源協作參與社會。",
+    "startDate": "2020-07-25T01:00:00.000Z",
+    "endDate": "2020-07-25T10:00:00.000Z",
+    "annouceToContributors": false,
+    "location": {
+      "name": "中研院資訊所",
+      "address": "11529台灣台北市南港區研究院路二段128號"
+    },
+    "link": "https://g0v-jothon.kktix.cc/events/g0v-hackath40n"
+  },
+  {
+    "id": "02bc63a8-a72e-4716-b6f2-dcbef9bfc493",
+    "projectId": "70e932c0-cb50-40f9-aba0-ced935f2d5de",
+    "name": "零時小學校：第三次工作坊 Sch001 Workshop III",
+    "type": "實體活動",
+    "description": "零時小學校（Sch001）是聚焦在教育的 g0v 專案，將代表數位原生世代的 0 與 1 放入代表教育的「學校（School）」，從零重新思考學校的角色，代表教育與數位社群的連結與協作。",
+    "startDate": "2020-06-21T06:00:00.000Z",
+    "endDate": "2020-06-21T11:00:00.000Z",
+    "annouceToContributors": false,
+    "location": {
+      "name": "台北 NPO 聚落",
+      "address": "NPO HUB Taipei 4F Kitchen Lab"
+    },
+    "link": "https://g0v-jothon.kktix.cc/events/sch001-wsiii"
+  },
+  {
+    "id": "253a9e7f-2500-425c-a018-9cdfdad4be12",
+    "projectId": "70e932c0-cb50-40f9-aba0-ced935f2d5de",
+    "name": "g0v 南庄桐花松",
+    "type": "實體活動",
+    "description": "g0v 南庄桐花松，邊吃邊聊邊 Hacking！",
+    "startDate": "2020-05-16T02:00:00.000Z",
+    "endDate": "2020-05-16T10:00:00.000Z",
+    "annouceToContributors": false,
+    "location": {
+      "name": "苗栗南庄南埔國小",
+      "address": "苗栗縣南庄鄉南富村134號"
+    },
+    "link": "https://g0v-jothon.kktix.cc/events/tungflowerthon"
+  },
+  {
+    "id": "9c3a3e91-5960-4481-8cd0-e9e1b9a0cf5f",
+    "projectId": "70e932c0-cb50-40f9-aba0-ced935f2d5de",
+    "name": "零時小學校：三月大松日 Sch001 @ g0v Hackath38n",
+    "type": "實體活動",
+    "description": "零時小學校（Sch001）是聚焦在教育的 g0v 專案，將代表數位原生世代的 0 與 1 放入代表教育的「學校（School）」，從零重新思考學校的角色，代表教育與數位社群的連結與協作。",
+    "startDate": "2020-03-14T01:00:00.000Z",
+    "endDate": "2020-03-14T10:00:00.000Z",
+    "annouceToContributors": false,
+    "location": {
+      "name": "台北 NPO 聚落",
+      "address": "NPO HUB Taipei 4F Kitchen"
+    },
+    "link": "https://g0v-jothon.kktix.cc/events/sch001-hackath38n"
+  },
+  {
+    "id": "ebd9887a-f421-4b99-8473-c9848cd3419d",
+    "projectId": "70e932c0-cb50-40f9-aba0-ced935f2d5de",
+    "name": "2020 g0v 坑抗 Keng of Conf ── 坑主小聚",
+    "type": "實體活動",
+    "description": "g0v 揪松團想舉辦坑主小聚（a.k.a. g0v Keng of Conf 簡稱「坑抗」），希望可以給不同階段的坑主（初坑、中坑或深坑）一些經驗分享或共同討論解決方式。",
+    "startDate": "2020-02-02T06:00:00.000Z",
+    "endDate": "2020-02-02T10:00:00.000Z",
+    "annouceToContributors": false,
+    "location": {
+      "name": "",
+      "address": ""
+    },
+    "link": "https://g0v-jothon.kktix.cc/events/kengconf01"
+  },
+  {
+    "id": "2b00958a-9642-4f8c-9382-916a6b44b38c",
+    "projectId": "70e932c0-cb50-40f9-aba0-ced935f2d5de",
+    "name": "「US Taiwan Watch：美國國會台灣觀測站」首次台灣分享會",
+    "type": "實體活動",
+    "description": "「US Taiwan Watch：美國國會台灣觀測站」首次台灣分享會來了！",
+    "startDate": "2020-01-18T11:00:00.000Z",
+    "endDate": "2020-01-18T13:00:00.000Z",
+    "annouceToContributors": false,
+    "location": {
+      "name": "台北NPO聚落",
+      "address": "NPO HUB Taipei 4F 大廳"
+    },
+    "link": "https://g0v-jothon.kktix.cc/events/ustwatch2020tp"
+  },
+  {
+    "id": "c838037a-4a2f-49a3-b554-84f4d0ab1796",
+    "projectId": "70e932c0-cb50-40f9-aba0-ced935f2d5de",
+    "name": "g0v 第拾伍次基礎建設松",
+    "type": "實體活動",
+    "description": "g0v 第拾伍次基礎建設松將於 01/18（六）14:00 舉行，歡迎自由登記提案，一起交流、開幹、吃午餐！",
+    "startDate": "2020-01-18T06:00:00.000Z",
+    "endDate": "2020-01-18T10:00:00.000Z",
+    "annouceToContributors": false,
+    "location": {
+      "name": "NPO Hub ",
+      "address": "台北市中正區重慶南路三段2號"
+    },
+    "link": "https://g0v-jothon.kktix.cc/events/infrath15n"
+  },
+  {
+    "id": "a141a799-2b0d-48cf-9199-5ca8d55be289",
+    "projectId": "70e932c0-cb50-40f9-aba0-ced935f2d5de",
+    "name": "g0v hackath37n | 台灣零時政府第參拾柒次全臺首學黑客松",
+    "type": "實體活動",
+    "description": "歡迎公民、鄉民、憤青、開發者、設計者、社會運動工作者、公務員、法律專家、文字工作者、插畫家與媒體工作者等諸眾，帶著熱血來盡一己之力，開源協作參與社會。",
+    "startDate": "2019-12-21T01:00:00.000Z",
+    "endDate": "2019-12-21T10:00:00.000Z",
+    "annouceToContributors": false,
+    "location": {
+      "name": "吳園藝文中心",
+      "address": "台南市中西區民權路二段30號"
+    },
+    "link": "https://g0v-jothon.kktix.cc/events/g0v-hackath37n"
+  },
+  {
+    "id": "ea793913-d8c4-4456-a90e-3292eb064cf5",
+    "projectId": "70e932c0-cb50-40f9-aba0-ced935f2d5de",
+    "name": "g0v 台南新手村：首場台南大松說明會",
+    "type": "實體活動",
+    "description": "「g0v 是什麼？」如果你對 g0v 黑客松有過上述疑問，g0v 首場台南大松說明會「g0v 台南新手村」就是你可以來參加的活動囉！",
+    "startDate": "2019-11-30T06:00:00.000Z",
+    "endDate": "2019-11-30T08:00:00.000Z",
+    "annouceToContributors": false,
+    "location": {
+      "name": "好想工作室",
+      "address": "台南市東區北門路二段16號L2A"
+    },
+    "link": "https://g0v-jothon.kktix.cc/events/g0villagetainan"
+  },
+  {
+    "id": "9df8f86f-f17e-45d1-93e4-613e382432cb",
+    "projectId": "70e932c0-cb50-40f9-aba0-ced935f2d5de",
+    "name": "g0v Year-End Banquet | g0v 公民科技創新獎助金 2019 成果發表會暨 g0v 社群忘年會",
+    "type": "實體活動",
+    "description": "g0v 社群首次忘年會！活動包含「g0v 公民科技創新獎助金」今年獲獎團隊的成果發表會、g0v 社群閃電講與義賣競拍，邀請所有熱血公民，與 g0v 社群參與者一同參加這場史無前例的宴會。",
+    "startDate": "2019-11-16T06:00:00.000Z",
+    "endDate": "2019-11-16T11:00:00.000Z",
+    "annouceToContributors": false,
+    "location": {
+      "name": "華山文創園區中 3 館 2 樓拱廳",
+      "address": "台北市中正區八德路一段1號"
+    },
+    "link": "https://g0v-jothon.kktix.cc/events/g0v-year-end-banquet-2019"
+  },
+  {
+    "id": "265bbfe1-c657-4ba8-93bf-ecaafc25370a",
+    "projectId": "70e932c0-cb50-40f9-aba0-ced935f2d5de",
+    "name": "g0v 第拾肆次基礎建設松",
+    "type": "實體活動",
+    "description": "g0v 第拾肆次基礎建設松將於 10/20（日）10:00 舉行，歡迎自由登記提案，一起交流、開幹、吃午餐！",
+    "startDate": "2019-10-20T02:00:00.000Z",
+    "endDate": "2019-10-20T10:00:00.000Z",
+    "annouceToContributors": false,
+    "location": {
+      "name": "NPO Hub ",
+      "address": "台北市中正區重慶南路三段2號"
+    },
+    "link": "https://g0v-jothon.kktix.cc/events/infrath14n"
+  },
+  {
+    "id": "8c286d65-1a63-4818-84c1-99e40969f150",
+    "projectId": "70e932c0-cb50-40f9-aba0-ced935f2d5de",
+    "name": "g0v hackath36n | 台灣零時政府第參拾陸次開放台北市議會黑客松",
+    "type": "實體活動",
+    "description": "歡迎公民、鄉民、憤青、開發者、設計者、社會運動工作者、公務員、法律專家、文字工作者、插畫家與媒體工作者等諸眾，帶著熱血來盡一己之力，開源協作參與社會。",
+    "startDate": "2019-09-07T01:00:00.000Z",
+    "endDate": "2019-09-07T10:00:00.000Z",
+    "annouceToContributors": false,
+    "location": {
+      "name": "台北市議會",
+      "address": "台北市信義區仁愛路四段507號"
+    },
+    "link": "https://g0v-jothon.kktix.cc/events/g0v-hackath36n"
+  },
+  {
+    "id": "3fbfa31f-bc85-4591-afbd-c6be21ae7e89",
+    "projectId": "70e932c0-cb50-40f9-aba0-ced935f2d5de",
+    "name": "g0v hackath35n | 台灣零時政府第參拾伍次最旁邊黑客松",
+    "type": "實體活動",
+    "description": "歡迎公民、鄉民、憤青、開發者、設計者、社會運動工作者、公務員、法律專家、文字工作者、插畫家與媒體工作者等諸眾，帶著熱血來盡一己之力，開源協作參與社會。",
+    "startDate": "2019-07-20T01:00:00.000Z",
+    "endDate": "2019-07-20T10:00:00.000Z",
+    "annouceToContributors": false,
+    "location": {
+      "name": "中央研究院資訊科學所",
+      "address": "台北市南港區研究院路二段128號"
+    },
+    "link": "https://g0v-jothon.kktix.cc/events/g0v-hackath35n"
+  },
+  {
+    "id": "c9c14188-b9f1-42de-8972-a0e97f10d6c4",
+    "projectId": "70e932c0-cb50-40f9-aba0-ced935f2d5de",
+    "name": "第壹次電視松 × 公視       hackatv1n × PTS",
+    "type": "實體活動",
+    "description": "繼四月第零次《電視松》，這次第壹次《電視松》與公視合作，對於現在電視新聞環境感到不滿，有想法想要動手做事的，或是沒想法但想幫幫忙的，都歡迎可以來參加！",
+    "startDate": "2019-06-22T01:30:00.000Z",
+    "endDate": "2019-06-22T09:30:00.000Z",
+    "annouceToContributors": false,
+    "location": {
+      "name": "公視 A 棟 2 樓永久會員聯誼室",
+      "address": "114台北市內湖區康寧路三段75巷50號"
+    },
+    "link": "https://g0v-jothon.kktix.cc/events/hackatv1n"
+  },
+  {
+    "id": "e70985aa-b384-4dce-8a3d-6fa5a7d6a9cd",
+    "projectId": "70e932c0-cb50-40f9-aba0-ced935f2d5de",
+    "name": "g0v hackath34n | 台灣零時政府第參拾肆次再開放空總黑客松",
+    "type": "實體活動",
+    "description": "歡迎公民、鄉民、憤青、開發者、設計者、社會運動工作者、公務員、法律專家、文字工作者、插畫家與媒體工作者等諸眾，帶著熱血來盡一己之力，開源協作參與社會。",
+    "startDate": "2019-05-25T01:00:00.000Z",
+    "endDate": "2019-05-25T10:00:00.000Z",
+    "annouceToContributors": false,
+    "location": {
+      "name": "空總臺灣當代文化實驗場·聯合餐廳",
+      "address": "106台北市大安區建國南路一段177號"
+    },
+    "link": "https://g0v-jothon.kktix.cc/events/g0v-hackath34n"
+  },
+  {
+    "id": "d21e5b69-b9c6-44c5-8032-0a5a7199786b",
+    "projectId": "70e932c0-cb50-40f9-aba0-ced935f2d5de",
+    "name": "第零次電視松",
+    "type": "實體活動",
+    "description": "電視媒體至今仍有很大的影響力，無論是在小吃店內或是家中客廳。但現在的電視媒體充滿許多亂象。該是由政府來管控，還是要透過市場機制，又或是要推動媒體自律？怎麼做？來電視松討論協作吧～",
+    "startDate": "2019-04-28T06:00:00.000Z",
+    "endDate": "2019-04-28T10:00:00.000Z",
+    "annouceToContributors": false,
+    "location": {
+      "name": "群島 archipiélago",
+      "address": "圓山花博爭艷館"
+    },
+    "link": "https://g0v-jothon.kktix.cc/events/hackatv0n"
+  },
+  {
+    "id": "6437738b-f027-4be8-9b6f-f759d51e1af5",
+    "projectId": "70e932c0-cb50-40f9-aba0-ced935f2d5de",
+    "name": "g0v hackath33n | 台灣零時政府第參拾參次不顧北京反對___黑客松",
+    "type": "實體活動",
+    "description": "歡迎公民、鄉民、憤青、開發者、設計者、社會運動工作者、公務員、法律專家、文字工作者、插畫家與媒體工作者等諸眾，帶著熱血來盡一己之力，開源協作參與社會。",
+    "startDate": "2019-03-09T01:00:00.000Z",
+    "endDate": "2019-03-09T10:00:00.000Z",
+    "annouceToContributors": false,
+    "location": {
+      "name": "中央研究院資訊科學所",
+      "address": "台北市南港區研究院路二段128號"
+    },
+    "link": "https://g0v-jothon.kktix.cc/events/g0v-hackath33n"
+  },
+  {
+    "id": "dcb100ad-73cf-4ab3-accf-dd97c34bfcc7",
+    "projectId": "70e932c0-cb50-40f9-aba0-ced935f2d5de",
+    "name": "g0v hackath32n | 台灣零時政府第参拾貳次蜂蜜檸檬黑客松",
+    "type": "實體活動",
+    "description": "歡迎公民、鄉民、憤青、開發者、設計者、社會運動工作者、公務員、法律專家、文字工作者、插畫家與媒體工作者等諸眾，帶著熱血來盡一己之力，開源協作參與社會。",
+    "startDate": "2018-12-08T01:00:00.000Z",
+    "endDate": "2018-12-08T10:00:00.000Z",
+    "annouceToContributors": false,
+    "location": {
+      "name": "中央研究院資訊科學所",
+      "address": "台北市南港區研究院路二段128號"
+    },
+    "link": "https://g0v-jothon.kktix.cc/events/g0v-hackath32n"
+  },
+  {
+    "id": "0a7729b5-08f9-492a-a888-1d00dc0b43cd",
+    "projectId": "70e932c0-cb50-40f9-aba0-ced935f2d5de",
+    "name": "11/11 g0v 第拾參次基礎建設松",
+    "type": "實體活動",
+    "description": "g0v 第拾參次基礎建設松將於 11/11（日）14:00 舉行，歡迎自由登記提案，一起交流、開幹、喝啤酒！",
+    "startDate": "2018-11-11T05:30:00.000Z",
+    "endDate": "2018-11-11T10:00:00.000Z",
+    "annouceToContributors": false,
+    "location": {
+      "name": "Cymking Space",
+      "address": "台北市南港區南港路三段52號"
+    },
+    "link": "https://g0v-jothon.kktix.cc/events/infrath13n"
+  },
+  {
+    "id": "0e818a31-0cf9-4890-9e48-d9e06ed02458",
+    "projectId": "70e932c0-cb50-40f9-aba0-ced935f2d5de",
+    "name": "9/2 g0v 第拾貳次基礎建設松",
+    "type": "實體活動",
+    "description": "g0v 第拾貳次基礎建設松將於 9/2（日）14:00 舉行，歡迎自由登記提案，一起交流、開幹、喝啤酒！",
+    "startDate": "2018-09-02T06:00:00.000Z",
+    "endDate": "2018-09-02T09:00:00.000Z",
+    "annouceToContributors": false,
+    "location": {
+      "name": "摩茲工寮",
+      "address": "台北市中正區八德路一段94號3樓"
+    },
+    "link": "https://g0v-jothon.kktix.cc/events/infrath12n"
+  },
+  {
+    "id": "c3c72b07-8a2a-4e8b-b7ec-f62d0bbb7c9e",
+    "projectId": "70e932c0-cb50-40f9-aba0-ced935f2d5de",
+    "name": "g0v hackath31n | 台灣零時政府第參拾壹次香蕉吃到飽松",
+    "type": "實體活動",
+    "description": "歡迎公民、鄉民、憤青、開發者、設計者、社會運動工作者、公務員、法律專家、文字工作者、插畫家與媒體工作者等諸眾，帶著熱血來盡一己之力，開源協作參與社會。",
+    "startDate": "2018-07-07T01:00:00.000Z",
+    "endDate": "2018-07-07T10:00:00.000Z",
+    "annouceToContributors": false,
+    "location": {
+      "name": "中央研究院資訊科學所",
+      "address": "台北市南港區研究院路二段128號"
+    },
+    "link": "https://g0v-jothon.kktix.cc/events/g0v-hackath31n"
+  },
+  {
+    "id": "86e7febe-6f85-4c15-bf81-c10c8f7c9222",
+    "projectId": "70e932c0-cb50-40f9-aba0-ced935f2d5de",
+    "name": "6/19 g0v 第拾壹次基礎建設「傍晚熱炒晚上松」 ft. Frank Pasquale",
+    "type": "實體活動",
+    "description": "本次 g0v 第拾壹次基礎建設「傍晚熱炒晚上松」ft. Frank Pasquale & Ray Cha 將於 6/19（二）19:00 舉行，難得短講與交流機會，一起來 hacking 吧！",
+    "startDate": "2018-06-19T11:00:00.000Z",
+    "endDate": "2018-06-19T14:00:00.000Z",
+    "annouceToContributors": false,
+    "location": {
+      "name": "群島",
+      "address": "台北市中山區長安東路一段45-2號3樓"
+    },
+    "link": "https://g0v-jothon.kktix.cc/events/infrath11n"
+  },
+  {
+    "id": "ccf9377b-92ba-4307-b945-0c39181ac187",
+    "projectId": "70e932c0-cb50-40f9-aba0-ced935f2d5de",
+    "name": "g0v hackath30n | 台灣零時政府第參拾次佛系黑客松",
+    "type": "實體活動",
+    "description": "本次 g0v 大黑客松將於 5/5 舉辦，歡迎公民、鄉民、憤青、開發者、設計者、社會運動工作者、公務員、法律專家、文字工作者、插畫家與媒體工作者等諸眾，帶著熱血來盡一己之力，開源協作參與社會。",
+    "startDate": "2018-05-05T01:00:00.000Z",
+    "endDate": "2018-05-05T10:00:00.000Z",
+    "annouceToContributors": false,
+    "location": {
+      "name": "中央研究院資訊科學所",
+      "address": "115台北市南港區研究院路二段128號"
+    },
+    "link": "https://g0v-jothon.kktix.cc/events/g0v-hackath30n"
+  },
+  {
+    "id": "807fa502-35cf-4646-9ed1-bbffc3b213f5",
+    "projectId": "70e932c0-cb50-40f9-aba0-ced935f2d5de",
+    "name": "g0v 復活節第拾次基礎建設松",
+    "type": "實體活動",
+    "description": "本次 g0v 基礎建設松將於 4/14（六）14:00 舉行，一起組裝 g0v 社群工具模組，促進人坑松的交流吧！",
+    "startDate": "2018-04-14T06:00:00.000Z",
+    "endDate": "2018-04-14T10:00:00.000Z",
+    "annouceToContributors": false,
+    "location": {
+      "name": "摩茲工寮 Mozilla Space ",
+      "address": "台北市八德路一段 94 號 3 樓"
+    },
+    "link": "https://g0v-jothon.kktix.cc/events/infrath10n"
+  },
+  {
+    "id": "747fb2de-7ae4-402a-9d98-0a819c76ab61",
+    "projectId": "70e932c0-cb50-40f9-aba0-ced935f2d5de",
+    "name": "g0v hackath29n | 台灣零時政府第貳拾玖次開放資料黑客松",
+    "type": "實體活動",
+    "description": "台灣零時政府 g0v.tw 雙月大黑客松 不只寫程式改造社會 不要問為什麼沒有人做這個，先承認你就是沒有人 本次 g0v 大黑客松將於 3/3 日 與全世界 128 個活動共同響應「世界開放資料日」 ",
+    "startDate": "2018-03-03T01:00:00.000Z",
+    "endDate": "2018-03-03T10:00:00.000Z",
+    "annouceToContributors": false,
+    "location": {
+      "name": "中央研究院資訊科學所",
+      "address": ""
+    },
+    "link": "https://g0v-jothon.kktix.cc/events/g0v-hackath29n"
+  },
+  {
+    "id": "2cecd21f-eefe-4d0a-9730-67bbdcedcbe1",
+    "projectId": "70e932c0-cb50-40f9-aba0-ced935f2d5de",
+    "name": "g0v hackath28n | 台灣零時政府第貳拾捌次高牆功德黑客松",
+    "type": "實體活動",
+    "description": "台灣零時政府 g0v.tw 雙月大黑客松 不只寫程式改造社會 還要有菩薩心會許願蓋高牆做功德 不要問為什麼沒有人做功德，先承認你就是沒有人 來吧！來提新專案、來做舊專案、來認識新朋友！ 拓展開源、開幹",
+    "startDate": "2018-01-13T01:00:00.000Z",
+    "endDate": "2018-01-13T10:00:00.000Z",
+    "annouceToContributors": false,
+    "location": {
+      "name": "中央研究院資訊科學所",
+      "address": ""
+    },
+    "link": "https://g0v-jothon.kktix.cc/events/g0v-hackath28n"
+  },
+  {
+    "id": "86b098db-32ba-4cc1-a9d7-02ca038dddd9",
+    "projectId": "70e932c0-cb50-40f9-aba0-ced935f2d5de",
+    "name": "在開源社群改造社會：2018 年 g0v 公民科技創新獎助金提案說明工作坊",
+    "type": "實體活動",
+    "description": "2018 g0v 公民科技創新獎助金上線啦！1/1-1/21 線上公開提案。不知道怎麼提案嗎？不會寫程式嗎？歡迎來參加 12/27 的提案說明工作坊，一起入坑。",
+    "startDate": "2018-01-03T11:00:00.000Z",
+    "endDate": "2018-01-03T13:00:00.000Z",
+    "annouceToContributors": false,
+    "location": {
+      "name": "摩茲工寮 Mozilla Space",
+      "address": "台北市八德路一段 94 號 3 樓"
+    },
+    "link": "https://g0v-jothon.kktix.cc/events/grant-apply-worksh0p-moz"
+  },
+  {
+    "id": "13593868-5102-4eaa-a2bf-3dc5f59ab9fb",
+    "projectId": "70e932c0-cb50-40f9-aba0-ced935f2d5de",
+    "name": "公民團體與科技協力：從透明足跡到 g0v 獎助金（2018 年 g0v 公民科技創新獎助金提案說明工作坊）",
+    "type": "實體活動",
+    "description": "2018 g0v 公民科技創新獎助金上線啦！1/1-1/21 線上公開提案。不知道怎麼提案嗎？不會寫程式嗎？歡迎來參加 12/27 的提案說明工作坊，一起入坑。",
+    "startDate": "2017-12-27T11:00:00.000Z",
+    "endDate": "2017-12-27T13:00:00.000Z",
+    "annouceToContributors": false,
+    "location": {
+      "name": "綠盟辦公室",
+      "address": "台北市羅斯福路二段 70 號 8 樓之 3"
+    },
+    "link": "https://g0v-jothon.kktix.cc/events/grant-apply-worksh0p-gcaa"
+  },
+  {
+    "id": "43a7287d-3e08-4f8d-bfd8-1cdb49fa912b",
+    "projectId": "70e932c0-cb50-40f9-aba0-ced935f2d5de",
+    "name": "g0v hackath27n | 台灣零時政府全球開放立法松",
+    "type": "實體活動",
+    "description": "台灣零時政府 g0v.tw 雙月大黑客松 不只寫程式改造社會 不要問為什麼沒有人做這個，先承認你就是沒有人   \t \t\t \t\t\t \t\t\tGLOW^4 是開放政府夥伴聯盟（OGP）開放立法工作小組所舉辦",
+    "startDate": "2017-11-25T01:00:00.000Z",
+    "endDate": "2017-11-25T10:00:00.000Z",
+    "annouceToContributors": false,
+    "location": {
+      "name": "中央研究院資訊科學所",
+      "address": "中央研究院資訊科學所"
+    },
+    "link": "https://g0v-jothon.kktix.cc/events/g0v-hackath27n"
+  },
+  {
+    "id": "0712b6d8-58ae-487b-88de-5a7556681b34",
+    "projectId": "70e932c0-cb50-40f9-aba0-ced935f2d5de",
+    "name": "g0v 第玖次基礎建設松",
+    "type": "實體活動",
+    "description": "本次 g0v 基礎建設松將於 10/21（六）13:30 舉行，一起組裝 g0v 社群工具模組，促進人坑松的交流吧！",
+    "startDate": "2017-10-21T05:30:00.000Z",
+    "endDate": "2017-10-21T10:00:00.000Z",
+    "annouceToContributors": false,
+    "location": {
+      "name": "摩茲工寮 Mozilla Space ",
+      "address": "台北市八德路一段 94 號 3 樓"
+    },
+    "link": "https://g0v-jothon.kktix.cc/events/infrath9n"
+  },
+  {
+    "id": "b4b42b63-a516-40da-bc78-47ff3e217e6e",
+    "projectId": "70e932c0-cb50-40f9-aba0-ced935f2d5de",
+    "name": "g0v hackath26n | 台灣零時政府五週年黑客松",
+    "type": "實體活動",
+    "description": "g0v 五週年啦，要擴大舉辦，一起跨界公民協作，吃吃喝喝做專案！Join g0v 5th anniversary hackathon to do cool civic tech projects. ",
+    "startDate": "2017-09-16T01:00:00.000Z",
+    "endDate": "2017-09-16T10:00:00.000Z",
+    "annouceToContributors": false,
+    "location": {
+      "name": "TAF 空總創新基地聯合餐廳",
+      "address": "106台北市大安區建國南路一段177號"
+    },
+    "link": "https://g0v-jothon.kktix.cc/events/g0v-hackath26n"
+  },
+  {
+    "id": "114677db-ed15-4e30-bb61-f44cd69284d1",
+    "projectId": "70e932c0-cb50-40f9-aba0-ced935f2d5de",
+    "name": "g0v 公民科技創新獎助金— 2017 春季成果發表會",
+    "type": "實體活動",
+    "description": "2017 年春季 g0v 公民科技創新獎助金獲獎專案，將在 Google 台北辦公室分享 6 個月加速開發所創造的社會改變。會後為 WCIT x Civic Tech Fest 合辦的國際交流晚會。",
+    "startDate": "2017-09-11T09:30:00.000Z",
+    "endDate": "2017-09-11T12:30:00.000Z",
+    "annouceToContributors": false,
+    "location": {
+      "name": "Google 台北辦公室",
+      "address": "台北市信義區信義路五段 7 號台北 101 大樓 75 樓"
+    },
+    "link": "https://g0v-jothon.kktix.cc/events/2017a-g0v-grant-demo"
+  },
+  {
+    "id": "8b0f260b-e8be-4a49-ac3f-1713a0d4c214",
+    "projectId": "70e932c0-cb50-40f9-aba0-ced935f2d5de",
+    "name": "g0v@Bangkok hackath0n | Let's Make Some Data Open!",
+    "type": "實體活動",
+    "description": "Ask not why nobody is doing this. You are the \"nobody\"! Join the frist g0v's hackathon @ Bangkok to ",
+    "startDate": "2017-07-29T01:00:00.000Z",
+    "endDate": "2017-07-29T10:00:00.000Z",
+    "annouceToContributors": false,
+    "location": {
+      "name": "Room 710 (7th Floor)",
+      "address": "Mahitaladhibesra Building, Chulalongkorn University "
+    },
+    "link": "https://g0v-jothon.kktix.cc/events/bangkok-hackath0n"
+  },
+  {
+    "id": "9cc4f440-f6e1-4bd8-9f4b-2eb637e03e4f",
+    "projectId": "70e932c0-cb50-40f9-aba0-ced935f2d5de",
+    "name": "g0v hackath25n | 台灣零時政府第貳拾伍次一綱多本黑客松",
+    "type": "實體活動",
+    "description": "台灣零時政府 g0v.tw 雙月大黑客松 不只寫程式改造社會 不要問為什麼沒有人做這個，先承認你就是沒有人 來吧！來提新專案、來做舊專案、來認識新朋友！ 拓展開源、開幹、開花的公民行動精神 ‣ 本活動",
+    "startDate": "2017-07-01T01:00:00.000Z",
+    "endDate": "2017-07-01T10:00:00.000Z",
+    "annouceToContributors": false,
+    "location": {
+      "name": "中央研究院資訊科學所",
+      "address": ""
+    },
+    "link": "https://g0v-jothon.kktix.cc/events/g0v-hackath25n"
+  },
+  {
+    "id": "56cd1bd2-99e0-4ba1-a771-8837417cc64d",
+    "projectId": "70e932c0-cb50-40f9-aba0-ced935f2d5de",
+    "name": "2017 年秋季 g0v 公民科技創新獎助金提案說明工作坊",
+    "type": "實體活動",
+    "description": "下一期 g0v 公民科技創新獎助金即將開跑！7/1 -7/16 線上公開提案。不知道怎麼提案嗎？歡迎來參加 6/17 的提案說明工作坊，帶上你的點子和行動力，一起來挖坑。",
+    "startDate": "2017-06-17T06:00:00.000Z",
+    "endDate": "2017-06-17T09:00:00.000Z",
+    "annouceToContributors": false,
+    "location": {
+      "name": "摩茲工寮 Mozilla Space ",
+      "address": "台北市八德路一段 94 號 3 樓"
+    },
+    "link": "https://g0v-jothon.kktix.cc/events/grant-apply-worksh0p"
+  },
+  {
+    "id": "a4ad81ee-6fe6-42f5-8dd4-f3ee1f8199e8",
+    "projectId": "70e932c0-cb50-40f9-aba0-ced935f2d5de",
+    "name": "搶救 g0v Hackpad 松",
+    "type": "實體活動",
+    "description": "Hackpad 即將在 7/19 結束服務，需要大家一起搶救公民運動的資料！將討論如何備份g0v 眾多專案以及許多公民運動的紀錄，以及如何創造同樣友善有效的線上協作平台。",
+    "startDate": "2017-06-10T05:30:00.000Z",
+    "endDate": "2017-06-10T10:00:00.000Z",
+    "annouceToContributors": false,
+    "location": {
+      "name": "摩茲工寮 Mozilla Space ",
+      "address": "台北市八德路一段 94 號 3 樓"
+    },
+    "link": "https://g0v-jothon.kktix.cc/events/hackpadthon"
+  },
+  {
+    "id": "1e80b25a-5402-4d09-bf30-3625081a25bb",
+    "projectId": "70e932c0-cb50-40f9-aba0-ced935f2d5de",
+    "name": "g0v hackath24n | 台灣零時政府第貳拾肆次凍省黑客松",
+    "type": "實體活動",
+    "description": "台灣零時政府 g0v.tw 雙月大黑客松 不只寫程式改造社會 不要問為什麼沒有人做這個，先承認你就是沒有人 來吧！來提新專案、來做舊專案、來認識新朋友！ 拓展開源、開幹、開花的公民行動精神 ‣ 本活動",
+    "startDate": "2017-05-06T01:00:00.000Z",
+    "endDate": "2017-05-06T10:00:00.000Z",
+    "annouceToContributors": false,
+    "location": {
+      "name": "中央研究院資訊科學所",
+      "address": ""
+    },
+    "link": "https://g0v-jothon.kktix.cc/events/g0v-hackath24n"
+  },
+  {
+    "id": "c381ae16-b306-4c39-b6ce-69d8271d3bb7",
+    "projectId": "70e932c0-cb50-40f9-aba0-ced935f2d5de",
+    "name": "g0v 第捌次基礎建設松",
+    "type": "實體活動",
+    "description": "本次 g0v 基礎建設松將於 4/20（四）19:00 舉行，一起組裝 g0v 社群工具模組，讓更多人使用吧！",
+    "startDate": "2017-04-20T11:00:00.000Z",
+    "endDate": "2017-04-20T13:30:00.000Z",
+    "annouceToContributors": false,
+    "location": {
+      "name": "摩茲工寮 Mozilla Space ",
+      "address": "台北市八德路一段 94 號 3 樓"
+    },
+    "link": "https://g0v-jothon.kktix.cc/events/infrath8n"
+  },
+  {
+    "id": "bcf412cb-0d13-48c7-88ac-5a5304d47d00",
+    "projectId": "70e932c0-cb50-40f9-aba0-ced935f2d5de",
+    "name": "g0v hackath23n | 台灣零時政府第貳拾參次開放資料黑客松",
+    "type": "實體活動",
+    "description": "本次 g0v 大黑客松將於 3/4 日舉行，並與全世界 130 個城市共同響應「世界開放資料日」！",
+    "startDate": "2017-03-04T01:00:00.000Z",
+    "endDate": "2017-03-04T10:00:00.000Z",
+    "annouceToContributors": false,
+    "location": {
+      "name": "中央研究院資訊科學所",
+      "address": ""
+    },
+    "link": "https://g0v-jothon.kktix.cc/events/g0v-hackath23n"
+  },
+  {
+    "id": "5ed38de5-c320-4cb1-83ae-9338836a1b16",
+    "projectId": "70e932c0-cb50-40f9-aba0-ced935f2d5de",
+    "name": "g0v 第柒次基礎建設緊急松 - 德國 Prototype Fund x g0v 獎助金 2/16",
+    "type": "實體活動",
+    "description": "德國開放知識基金會的 Eileen 在 Code For All 的交換計畫支持下，來台灣一個月在 OCF 辦公室 co-work，並將一起與社群的夥伴協作公民科技獎助金、g0v.news 等專案。我",
+    "startDate": "",
+    "endDate": "",
+    "annouceToContributors": false,
+    "location": {
+      "name": "摩茲工寮 Mozilla Space",
+      "address": "台北市八德路一段 94 號 3 樓"
+    },
+    "link": "https://g0v-jothon.kktix.cc/events/infrath7n"
+  },
+  {
+    "id": "3558cac0-52b3-435e-9ba3-e20dd86f5402",
+    "projectId": "70e932c0-cb50-40f9-aba0-ced935f2d5de",
+    "name": "g0v 第陸次基礎建設「大平台」松 - 1/21",
+    "type": "實體活動",
+    "description": "g0v 社群由「人、坑、松」組成，如何讓參與者容易串連協作，需要更多好用的工具與平台。兩年前曾經召開過第零次基礎建設松，揪松團近期重啟社群基礎建設，希望持續常態經營！",
+    "startDate": "",
+    "endDate": "",
+    "annouceToContributors": false,
+    "location": {
+      "name": "摩茲工寮",
+      "address": "台北市八德路一段 94 號 3 樓"
+    },
+    "link": "https://g0v-jothon.kktix.cc/events/infrath6n"
+  },
+  {
+    "id": "16d5835a-87b9-4be5-ae95-cd8646f710e7",
+    "projectId": "70e932c0-cb50-40f9-aba0-ced935f2d5de",
+    "name": "g0v hackath22n | 台灣零時政府第貳拾貳次公民科學黑客松",
+    "type": "實體活動",
+    "description": "（本次主圖由 @tuiry 繪製 CC0 釋出，主圖說明）   2016 年即將結束 不要錯過 12/17 週六，今年度最後一次黑客松 來吧！來提新專案、來做舊專案、來認識新朋友！ 讓開源、開幹、開花",
+    "startDate": "2016-12-17T01:00:00.000Z",
+    "endDate": "2016-12-17T10:00:00.000Z",
+    "annouceToContributors": false,
+    "location": {
+      "name": "中央研究院資訊科學所",
+      "address": ""
+    },
+    "link": "https://g0v-jothon.kktix.cc/events/g0v-hackath22n"
+  },
+  {
+    "id": "8bed7526-70c8-45ba-b408-a2a04ffd3439",
+    "projectId": "70e932c0-cb50-40f9-aba0-ced935f2d5de",
+    "name": "g0v hackath21n | 台灣零時政府根留台灣",
+    "type": "實體活動",
+    "description": "**本次黑客松與叡揚資訊聯名合作舉辦** 10/15 週六，第貳拾壹次根留台灣黑客松即將上場 只要開源，議題不限 歡迎大家來提新專案、接力舊專案， 讓開源、公民精神持續延燒！ 主圖 by @chiha",
+    "startDate": "2016-10-15T01:00:00.000Z",
+    "endDate": "2016-10-15T10:00:00.000Z",
+    "annouceToContributors": false,
+    "location": {
+      "name": "中央研究院資訊科學所",
+      "address": ""
+    },
+    "link": "https://g0v-jothon.kktix.cc/events/g0v-hackath21n"
+  },
+  {
+    "id": "6de7c6dd-19c5-497e-b235-41ccb14f28d1",
+    "projectId": "70e932c0-cb50-40f9-aba0-ced935f2d5de",
+    "name": "g0v 第伍次基礎建設松 - 10/8",
+    "type": "實體活動",
+    "description": "g0v 社群由「人、坑、松」組成，如何讓參與者容易串連協作，需要更多好用的工具與平台。兩年前曾經召開過第零次基礎建設松，揪松團近期重啟社群基礎建設，希望持續常態經營！",
+    "startDate": "2016-10-08T02:30:00.000Z",
+    "endDate": "2016-10-08T08:00:00.000Z",
+    "annouceToContributors": false,
+    "location": {
+      "name": "摩茲工寮",
+      "address": "台北市八德路一段 94 號 3 樓"
+    },
+    "link": "https://g0v-jothon.kktix.cc/events/infrath5n"
+  },
+  {
+    "id": "ee368e65-e68e-4683-b88f-4c773838b5e9",
+    "projectId": "70e932c0-cb50-40f9-aba0-ced935f2d5de",
+    "name": "g0v 第肆次基礎建設緊急松 - Enspiral x g0v 社群發展經驗分享 8/26 ",
+    "type": "實體活動",
+    "description": "g0v 社群由「人、坑、松」組成，如何讓參與者容易串連協作，需要更多好用的工具與平台。兩年前曾經召開過第零次基礎建設松，揪松團近期重啟社群基礎建設，希望持續常態經營！",
+    "startDate": "2016-08-26T11:00:00.000Z",
+    "endDate": "2016-08-26T13:40:00.000Z",
+    "annouceToContributors": false,
+    "location": {
+      "name": "Gary&Emerson;_Space （近中山國中站）",
+      "address": "台北市中山區復興北路 350 號 3 樓"
+    },
+    "link": "https://g0v-jothon.kktix.cc/events/infrath4n"
+  },
+  {
+    "id": "245d4d1a-ac78-4d24-8a0e-e1e682d2dfe6",
+    "projectId": "70e932c0-cb50-40f9-aba0-ced935f2d5de",
+    "name": "g0v hackath20n | 台灣零時政府第貳拾次總統直選黑客松",
+    "type": "實體活動",
+    "description": "一例一休勞基法爭議、血汗旅遊業.......議題好多，公民好忙!想做些甚麼，帶來改變嗎？快來跟大家一起挖坑與入坑吧!不要錯過 8/6 週六，第貳拾次總統直選黑客松你有許多想法嗎？想找夥伴實現嗎？別猶豫，快來 g0v 黑客松!只要開源，議題不限歡迎大家來提新專案、接力舊專案，讓開源、公民精神持續延燒。8/6，等你  一  同 開  幹。",
+    "startDate": "2016-08-06T01:00:00.000Z",
+    "endDate": "2016-08-06T10:00:00.000Z",
+    "annouceToContributors": false,
+    "location": {
+      "name": "中央研究院資訊科學所",
+      "address": "台北市南港區研究院路二段128號"
+    },
+    "link": "https://g0v-jothon.kktix.cc/events/g0v-hackath20n"
+  },
+  {
+    "id": "14aaf30a-ca5d-4069-a87b-3332d38e5b1e",
+    "projectId": "70e932c0-cb50-40f9-aba0-ced935f2d5de",
+    "name": "g0v 第參次基礎建設閃電松 - 7/23",
+    "type": "實體活動",
+    "description": "g0v 社群由「人、坑、松」組成，如何讓參與者容易串連協作，需要更多好用的工具與平台。兩年前曾經召開過第零次基礎建設松，揪松團近期重啟社群基礎建設，希望持續常態經營！",
+    "startDate": "2016-07-23T05:30:00.000Z",
+    "endDate": "2016-07-23T09:00:00.000Z",
+    "annouceToContributors": false,
+    "location": {
+      "name": "摩茲工寮",
+      "address": "台北市八德路一段 94 號 3 樓"
+    },
+    "link": "https://g0v-jothon.kktix.cc/events/infrath3n"
+  },
+  {
+    "id": "9c95e319-b413-4027-8778-e3abba27c526",
+    "projectId": "70e932c0-cb50-40f9-aba0-ced935f2d5de",
+    "name": "g0v 第貳次基礎建設黑客松 - 7/3",
+    "type": "實體活動",
+    "description": "g0v 社群由「人、坑、松」組成，如何讓參與者容易串連協作，需要更多好用的工具與平台。兩年前曾經召開過第零次基礎建設松，揪松團近期重啟社群基礎建設，希望持續常態經營！",
+    "startDate": "2016-07-03T02:30:00.000Z",
+    "endDate": "2016-07-03T09:00:00.000Z",
+    "annouceToContributors": false,
+    "location": {
+      "name": "摩茲工寮",
+      "address": "台北市八德路一段 94 號 3 樓"
+    },
+    "link": "https://g0v-jothon.kktix.cc/events/infrath2n"
+  },
+  {
+    "id": "bf028b9d-7218-49cd-b990-1f878242c87d",
+    "projectId": "70e932c0-cb50-40f9-aba0-ced935f2d5de",
+    "name": "g0v hackath19n | 台灣零時政府第拾玖次飛彈試射黑客松",
+    "type": "實體活動",
+    "description": "g0v Summit 2016 年會結束後是不是有滿滿強烈挖坑、填坑的動力呢？不要錯過 6/18 週六，第拾玖次飛彈試射黑客松來吧！來提新專案、來做舊專案、來認識新朋友！讓開源、開幹、開花的公民行動精神繼續延燒。",
+    "startDate": "2016-06-18T01:00:00.000Z",
+    "endDate": "2016-06-18T10:00:00.000Z",
+    "annouceToContributors": false,
+    "location": {
+      "name": "中央研究院資訊科學所",
+      "address": "台北市南港區研究院路二段128號"
+    },
+    "link": "https://g0v-jothon.kktix.cc/events/g0v-hackath19n"
+  },
+  {
+    "id": "c102717b-27e9-473e-92fe-1d62887b4da3",
+    "projectId": "70e932c0-cb50-40f9-aba0-ced935f2d5de",
+    "name": "g0v 第壹次基礎建設黑客松 - 6/12",
+    "type": "實體活動",
+    "description": "g0v 社群由「人、坑、松」組成，如何讓參與者容易串連協作，需要更多好用的工具與平台。兩年前曾經召開過第零次基礎建設松，揪松團近期重啟社群基礎建設，希望持續常態經營！",
+    "startDate": "2016-06-12T02:30:00.000Z",
+    "endDate": "2016-06-12T09:30:00.000Z",
+    "annouceToContributors": false,
+    "location": {
+      "name": "OCF 辦公室（摩茲工寮樓上）",
+      "address": "台北市八德路一段 94 號 4 樓"
+    },
+    "link": "https://g0v-jothon.kktix.cc/events/infrath1n"
+  },
+  {
+    "id": "4dcb4650-2b07-443b-ac9d-91d3c13d36cb",
+    "projectId": "70e932c0-cb50-40f9-aba0-ced935f2d5de",
+    "name": "g0v hackath18n | 台灣零時政府第拾捌次亞太營運黑客松",
+    "type": "實體活動",
+    "description": "大選剛過，新局將啟以開源實作精神關注公共議題的 g0v 黑客松依舊持續上場！本次黑客松與國際 Open Data Day 同步開跑來吧！來提新專案、來做舊專案、來認識新朋友讓開源、開幹、開花的公民行動精神繼續延燒！",
+    "startDate": "2016-03-05T01:00:00.000Z",
+    "endDate": "2016-03-05T10:00:00.000Z",
+    "annouceToContributors": false,
+    "location": {
+      "name": "中央研究院資訊科學所",
+      "address": "台北市南港區研究院路二段128號"
+    },
+    "link": "https://g0v-jothon.kktix.cc/events/g0v-hackath18n"
+  },
+  {
+    "id": "8992da78-c02c-4857-a4f7-f7fa21c038f6",
+    "projectId": "70e932c0-cb50-40f9-aba0-ced935f2d5de",
+    "name": "g0v hackath17n | 台灣零時政府第拾柒次立委改選黑客松",
+    "type": "實體活動",
+    "description": "從 2012 年底開始，g0v 社群持續舉辦每兩個月一次百人黑客松，提供推動資訊透明、開放參與的公民協作平台，大家一起吃了很多披薩炸雞，同時催生多項專案。開放政府、太陽花運動、社會議題都有 g0v 貢獻者的身影。",
+    "startDate": "2015-12-26T01:00:00.000Z",
+    "endDate": "2015-12-26T10:00:00.000Z",
+    "annouceToContributors": false,
+    "location": {
+      "name": "中央研究院資訊科學所",
+      "address": "台北市南港區研究院路二段128號"
+    },
+    "link": "https://g0v-jothon.kktix.cc/events/g0v-hackath17n"
+  },
+  {
+    "id": "be7bfee7-bf88-4e40-9c64-00b88cd0b631",
+    "projectId": "70e932c0-cb50-40f9-aba0-ced935f2d5de",
+    "name": "g0v hackath16n | 第拾陸次刑法一百黑客松",
+    "type": "實體活動",
+    "description": "從 2012 年底開始，g0v 社群持續舉辦每兩個月一次百人黑客松，提供推動資訊透明、開放參與的公民協作平台，大家一起吃了很多披薩炸雞，同時催生多項專案。開放政府、太陽花運動、社會議題都有 g0v 貢獻者的身影。",
+    "startDate": "2015-10-24T01:00:00.000Z",
+    "endDate": "2015-10-24T10:00:00.000Z",
+    "annouceToContributors": false,
+    "location": {
+      "name": "中央研究院資訊科學所",
+      "address": "台北市南港區研究院路二段128號"
+    },
+    "link": "https://g0v-jothon.kktix.cc/events/g0v-hackath16n"
+  },
+  {
+    "id": "85d1cfa1-cf58-42d7-999c-fccacb4983fc",
+    "projectId": "70e932c0-cb50-40f9-aba0-ced935f2d5de",
+    "name": "g0v.tw hackath15n | 台灣零時政府第拾伍次資料科學黑客松",
+    "type": "實體活動",
+    "description": "從 2012 年底開始，g0v 社群持續舉辦每兩個月一次百人黑客松，提供推動資訊透明、開放參與的公民協作平台，大家一起吃了很多披薩炸雞，同時催生多項專案。開放政府、太陽花運動、社會議題都有 g0v 貢獻者的身影。",
+    "startDate": "2015-08-22T01:00:00.000Z",
+    "endDate": "2015-08-23T09:00:00.000Z",
+    "annouceToContributors": false,
+    "location": {
+      "name": "中央研究院人文社會科學館",
+      "address": "台北市南港區研究院路二段128號"
+    },
+    "link": "https://g0v-jothon.kktix.cc/events/g0v-hackath15n"
+  },
+  {
+    "id": "faac75da-f943-4f07-a036-d6f09abfee62",
+    "projectId": "70e932c0-cb50-40f9-aba0-ced935f2d5de",
+    "name": "g0v.tw hackath14n | 台灣零時政府第拾肆次野百合黑客松",
+    "type": "實體活動",
+    "description": "從一開始資料爬梳、資訊人為主，到現在已經演化出更多不同的類型：有公部門的參與、與 NGO 深度的協作，當然還有宅宅的投入與開源社群持續耕耘「開放」不是一時的口號，而是需要長期投入的社會參與。每一次爆發力都需要平時的鴨子滑水耕耘，大松是進度衝刺的好時機！來吧！來提新專案、來做舊專案、來認識新朋友，動動腦也吃炸雞！讓開源、開幹、開花的公民行動精神繼續延燒。",
+    "startDate": "2015-06-13T01:00:00.000Z",
+    "endDate": "2015-06-13T10:00:00.000Z",
+    "annouceToContributors": false,
+    "location": {
+      "name": "中央研究院資訊科學所",
+      "address": "台北市南港區研究院路二段128號"
+    },
+    "link": "https://g0v-jothon.kktix.cc/events/g0v-hackath14n"
+  },
+  {
+    "id": "1d43765a-5055-4b2b-8fb2-517c4a8d3679",
+    "projectId": "70e932c0-cb50-40f9-aba0-ced935f2d5de",
+    "name": "g0v.tw hackath13n | 台灣零時政府第拾參次無殼蝸牛黑客松",
+    "type": "實體活動",
+    "description": "從一開始資料爬梳、資訊人為主，到現在已經演化出更多不同的類型：有公部門的參與、與 NGO 深度的協作，當然還有宅宅的投入與開源社群持續耕耘「開放」不是一時的口號，而是需要長期投入的社會參與。每一次爆發力都需要平時的鴨子滑水耕耘，大松是進度衝刺的好時機！來吧！來提新專案、來做舊專案、來認識新朋友，動動腦也吃炸雞！讓開源、開幹、開花的公民行動精神繼續延燒。",
+    "startDate": "2015-04-18T01:00:00.000Z",
+    "endDate": "2015-04-18T10:00:00.000Z",
+    "annouceToContributors": false,
+    "location": {
+      "name": "中央研究院資訊科學所",
+      "address": "台北市南港區研究院路二段128號"
+    },
+    "link": "https://g0v-jothon.kktix.cc/events/g0v-hackath13n"
+  },
+  {
+    "id": "803f3910-c703-4f71-9ab8-c12b63c7c371",
+    "projectId": "70e932c0-cb50-40f9-aba0-ced935f2d5de",
+    "name": "g0v Hackath39n | 台灣零時政府第參拾玖次又在家黑客松 Stay Home",
+    "type": "線上活動",
+    "description": "從一開始資料爬梳、資訊人為主，到現在已經演化出更多不同的類型：有公部門的參與、與 NGO 深度的協作，當然還有宅宅的投入與開源社群持續耕耘「開放」不是一時的口號，而是需要長期投入的社會參與。每一次爆發力都需要平時的鴨子滑水耕耘，大松是進度衝刺的好時機！來吧！來提新專案、來做舊專案、來認識新朋友，動動腦也吃炸雞！讓開源、開幹、開花的公民行動精神繼續延燒。",
+    "startDate": "2020-05-23T01:00:00.000Z",
+    "endDate": "2020-05-23T10:00:00.000Z",
+    "annouceToContributors": false,
+    "guestLimit": 1000,
+    "attendanceCount": 103,
+    "location": {
+      "name": "Online Event",
+      "address": ""
+    },
+    "link": "https://meet.jothon.online/event/show/g0v-hackath39n"
+  },
+  {
+    "id": "4af34470-0cda-49ad-87ef-eecfa24c0a65",
+    "projectId": "70e932c0-cb50-40f9-aba0-ced935f2d5de",
+    "name": "g0v summit 2014 檢討^H^H回味松",
+    "type": "實體活動",
+    "description": "啥米零時政府已經結束大半年，但還沒檢討回味松，summit 2016 版也逐漸醞釀中，讓我們來個回味共筆松，也把經驗交接給下屆工頭們吧～ 時間地點： 2015/05/2 11:00-17:00 摩茲工",
+    "startDate": "2015-05-02T03:00:00.000Z",
+    "endDate": "2015-05-02T09:00:00.000Z",
+    "annouceToContributors": false,
+    "location": {
+      "name": "摩茲工寮",
+      "address": "100台北市中正區八德路一段94號3F"
+    },
+    "link": "https://g0v-tw.kktix.cc/events/summithon"
+  },
+  {
+    "id": "c786554e-cf82-4028-8305-e72588acd952",
+    "projectId": "70e932c0-cb50-40f9-aba0-ced935f2d5de",
+    "name": "3/28 第九次萌典松 moed9ct",
+    "type": "實體活動",
+    "description": "【主題】固定於單月底舉辦的 g0v 零時政府中型黑客松，三月於 3/28 舉辦。 【同場舉行】 ... 松松相連募集中，歡迎到 Hackpad 頁面填寫。 【共筆】請見 Hackpad 頁面 及 活動",
+    "startDate": "2015-03-28T03:00:00.000Z",
+    "endDate": "2015-03-28T13:00:00.000Z",
+    "annouceToContributors": false,
+    "location": {
+      "name": "BOOKSHOW 說書會",
+      "address": "台北市信義區基隆路一段141號6樓之7"
+    },
+    "link": "https://g0v-tw.kktix.cc/events/moedict-3-28"
+  },
+  {
+    "id": "c8efd2d5-54e2-4769-9bfc-099343149883",
+    "projectId": "70e932c0-cb50-40f9-aba0-ced935f2d5de",
+    "name": "g0v.tw hackath12n | 台灣零時政府第拾貳次不得宣傳罷免黑客松",
+    "type": "實體活動",
+    "description": "☞ 為何要來 來提新專案、來作舊專案、來認識新朋友，動動腦也吃炸雞！讓開源、開幹、開花的公民行動精神在新的一年繼續延燒。 2/14 是情人節，歡迎有情人作伙來 hacking。當天也是台灣二十年來首次",
+    "startDate": "2015-02-14T01:00:00.000Z",
+    "endDate": "2015-02-14T10:00:00.000Z",
+    "annouceToContributors": false,
+    "location": {
+      "name": "中央研究院資訊科學所 ",
+      "address": "台北市南港區研究院路二段128號"
+    },
+    "link": "https://g0v-tw.kktix.cc/events/g0v-hackath12n"
+  },
+  {
+    "id": "da443a90-9873-4564-a958-ff8e052b07d5",
+    "projectId": "70e932c0-cb50-40f9-aba0-ced935f2d5de",
+    "name": "1/18 第八次萌典松 moed8ct",
+    "type": "實體活動",
+    "description": "【主題】固定於單月底舉辦的 g0v 零時政府中型黑客松，一月於 1/18 舉辦。 【同場舉行】 ... 松松相連募集中，歡迎到 Hackpad 頁面填寫。 【共筆】請見 Hackpad 頁面 及 活動",
+    "startDate": "2015-01-18T03:00:00.000Z",
+    "endDate": "2015-01-18T13:00:00.000Z",
+    "annouceToContributors": false,
+    "location": {
+      "name": "BOOKSHOW 說書會",
+      "address": "台北市信義區基隆路一段141號6樓之7"
+    },
+    "link": "https://g0v-tw.kktix.cc/events/moedict-1-18"
+  },
+  {
+    "id": "3616a610-e7f5-490c-86f5-36ede09a7c13",
+    "projectId": "70e932c0-cb50-40f9-aba0-ced935f2d5de",
+    "name": "g0v.tw hackath11n | 台灣零時政府第拾壹次開放報禁黑客松",
+    "type": "實體活動",
+    "description": "☞ 為何要來 從 2012 年底的第零次動員戡亂黑客松開始，雙月一次的百人 g0v 黑客松，竟也已連續辦了兩年。今年，g0v 社群鴨子划水的協作成果逐漸浮出水面。從年初與國際串連，到 318 學運",
+    "startDate": "2014-12-20T01:00:00.000Z",
+    "endDate": "2014-12-20T10:00:00.000Z",
+    "annouceToContributors": false,
+    "location": {
+      "name": "中央研究院資訊科學所 ",
+      "address": "台北市南港區研究院路二段128號"
+    },
+    "link": "https://g0v-tw.kktix.cc/events/g0v-hackath11n"
+  },
+  {
+    "id": "75de90fc-1e7e-4c08-90cd-814b5d6270f2",
+    "projectId": "70e932c0-cb50-40f9-aba0-ced935f2d5de",
+    "name": "11/22 第七次萌典松 moed7ct",
+    "type": "實體活動",
+    "description": "【主題】固定於單月底舉辦的 g0v 零時政府中型黑客松，十一月於 11/22 舉辦。 【同場舉行】 農域松、gxv 關係松、M Project、ig0v... 松松相連募集中，歡迎到 Hackpad",
+    "startDate": "2014-11-22T03:00:00.000Z",
+    "endDate": "2014-11-22T13:00:00.000Z",
+    "annouceToContributors": false,
+    "location": {
+      "name": "BOOKSHOW 說書會",
+      "address": "台北市信義區基隆路一段141號6樓之7"
+    },
+    "link": "https://g0v-tw.kktix.cc/events/moedict-11-22"
+  },
+  {
+    "id": "126c9fd1-8dc3-4982-aa55-eed3bc404e99",
+    "projectId": "70e932c0-cb50-40f9-aba0-ced935f2d5de",
+    "name": "11/9 g0v Summit Unconference 開放工作坊",
+    "type": "實體活動",
+    "description": "g0v Summit 第二天「開放工作坊」 ☞  Unconference  時間：2014/11/9 0900-1800 地點：中央研究院 資訊科學研究所 議程：http://summit.g0",
+    "startDate": "2014-11-09T01:00:00.000Z",
+    "endDate": "2014-11-09T10:00:00.000Z",
+    "annouceToContributors": false,
+    "location": {
+      "name": "中央研究院人資訊科學研究所  (Institution of Information Science of Academia Sinica)",
+      "address": "台北市南港區研究院路二段128號 (No.128, Sec. 2, Academia Rd., Nangang Dist., Taipei City 115, Taiwan)"
+    },
+    "link": "https://g0v-tw.kktix.cc/events/g0v-summit-2014-unconf"
+  },
+  {
+    "id": "97fac29c-b215-4e9b-b924-1a85a537ecd7",
+    "projectId": "70e932c0-cb50-40f9-aba0-ced935f2d5de",
+    "name": "g0v Summit 2014 - Conference - VIP and Early Bird",
+    "type": "實體活動",
+    "description": "此為【VIP貴賓】、【國際早鳥票】與【政府邀請票】的報名頁面 This page is for VIP invite code, International Early Bird and gov",
+    "startDate": "2014-11-08T01:00:00.000Z",
+    "endDate": "2014-11-08T09:00:00.000Z",
+    "annouceToContributors": false,
+    "location": {
+      "name": "中央研究院人文社會科學館 (HSS Bldg. of Academia Sinica)",
+      "address": "台北市南港區研究院路二段128號 (No.128, Sec. 2, Academia Rd., Nangang Dist., Taipei City 115, Taiwan)"
+    },
+    "link": "https://g0v-tw.kktix.cc/events/g0v-summit-2014-con-vip"
+  },
+  {
+    "id": "f0207f30-a0a8-4e06-9198-2e3b7b292bb6",
+    "projectId": "70e932c0-cb50-40f9-aba0-ced935f2d5de",
+    "name": "g0v Summit 2014 - Conference - Contributor and Normal",
+    "type": "實體活動",
+    "description": "※ 此為【g0v貢獻者】與【一般票】的 Conference 報名頁面 This page is for registering with Contributor invite code and",
+    "startDate": "2014-11-08T01:00:00.000Z",
+    "endDate": "2014-11-08T09:00:00.000Z",
+    "annouceToContributors": false,
+    "location": {
+      "name": "中央研究院人文社會科學館 (HSS Bldg. of Academia Sinica)",
+      "address": "台北市南港區研究院路二段128號 (No.128, Sec. 2, Academia Rd., Nangang Dist., Taipei City 115, Taiwan)"
+    },
+    "link": "https://g0v-tw.kktix.cc/events/g0v-summit-2014-con-nor"
+  },
+  {
+    "id": "ac4f0273-bfc1-4c6d-a0b1-5f8f47d59b8d",
+    "projectId": "70e932c0-cb50-40f9-aba0-ced935f2d5de",
+    "name": "9/20 第六次萌典松 moed6ct",
+    "type": "實體活動",
+    "description": "【主題】固定於單月底舉辦的 g0v 零時政府中型黑客松，九月於 9/20 舉辦。 【同場舉行】 松松相連募集中，歡迎到 Hackpad 頁面填寫。 【共筆】請見 Hackpad 頁面。 請注意，這不是",
+    "startDate": "2014-09-20T03:00:00.000Z",
+    "endDate": "2014-09-20T13:00:00.000Z",
+    "annouceToContributors": false,
+    "location": {
+      "name": "BOOKSHOW 說書會",
+      "address": "台北市信義區基隆路一段141號6樓之7"
+    },
+    "link": "https://g0v-tw.kktix.cc/events/moedict-9-20"
+  },
+  {
+    "id": "1876fbd1-dcb8-425e-bd42-8c2705a1f7d9",
+    "projectId": "70e932c0-cb50-40f9-aba0-ced935f2d5de",
+    "name": "g0v Summit 2014 - Call for talks",
+    "type": "實體活動",
+    "description": "首屆 g0v 年會將在 2014 年 11 月 8 日，於台北中央研究院召開。 g0v 社群運作近兩年了，從一開始，g0v 零時政府社群便以數位世代的思維，以開源方式號召群眾參與著手開發新工具、新組織",
+    "startDate": "2014-08-31T15:50:00.000Z",
+    "endDate": "2014-08-31T15:59:00.000Z",
+    "annouceToContributors": false,
+    "location": {
+      "name": "Academia Sinica, Taipei, Taiwan",
+      "address": "Academia Sinica, Taipei, Taiwan"
+    },
+    "link": "https://g0v-tw.kktix.cc/events/g0v-summit-2014-talks"
+  },
+  {
+    "id": "a0047070-44b2-4cef-8dcf-e96d05dd57ee",
+    "projectId": "70e932c0-cb50-40f9-aba0-ced935f2d5de",
+    "name": "8/16 零時前端教學松",
+    "type": "實體活動",
+    "description": "【主題】2014年8月第三次的零時前端教學松 【課程共筆】請見 Hackfoldr 2.0 頁面。 請注意，這是變相的填坑教學松，單純想學技術的人請慎入。 學生應具備基礎：了解js的變數宣告、迴圈及流",
+    "startDate": "2014-08-16T05:30:00.000Z",
+    "endDate": "2014-08-16T09:00:00.000Z",
+    "annouceToContributors": false,
+    "location": {
+      "name": "BOOKSHOW 說書會",
+      "address": "台北市信義區基隆路一段141號6樓之7"
+    },
+    "link": "https://g0v-tw.kktix.cc/events/fr0ntend-br3dge"
+  },
+  {
+    "id": "b8582da7-7211-41df-a031-43842be0ccba",
+    "projectId": "70e932c0-cb50-40f9-aba0-ced935f2d5de",
+    "name": "8/2 第五次萌典松 moed5ct",
+    "type": "實體活動",
+    "description": "【主題】固定於單月底舉辦的 g0v 零時政府中型黑客松，七月底延至 8/2 舉辦。 【同場舉行】 議員松 (johnny)、農域松 (a0kman)、自表松 (Johnson)、智財松 (nchild",
+    "startDate": "2014-08-02T03:00:00.000Z",
+    "endDate": "2014-08-02T13:00:00.000Z",
+    "annouceToContributors": false,
+    "location": {
+      "name": "BOOKSHOW 說書會",
+      "address": "台北市信義區基隆路一段141號6樓之7"
+    },
+    "link": "https://g0v-tw.kktix.cc/events/moedict-8-2"
+  },
+  {
+    "id": "11675dbe-0b0e-4999-91ca-a905c25f7d90",
+    "projectId": "70e932c0-cb50-40f9-aba0-ced935f2d5de",
+    "name": "g0v.tw hackath9n | 台灣零時政府第玖次還我土地黑客松",
+    "type": "實體活動",
+    "description": "☞ 為何要來 g0v.tw 每兩個月一回合黑客松，打造各式資訊透明化平台，從資料透明開始，用科技工具與開源協作參與社會。 ☞ 來者何人 歡迎開發者、設計者、社會運動工作者、法律專家、文字工作者、插",
+    "startDate": "2014-06-21T01:00:00.000Z",
+    "endDate": "2014-06-21T10:00:00.000Z",
+    "annouceToContributors": false,
+    "location": {
+      "name": "中央研究院資訊科學所",
+      "address": "台北市南港區研究院路二段128號"
+    },
+    "link": "https://g0v-tw.kktix.cc/events/g0v-hackath9n"
+  },
+  {
+    "id": "b95524fa-7bbe-4f60-aa29-a57c70dc64df",
+    "projectId": "70e932c0-cb50-40f9-aba0-ced935f2d5de",
+    "name": "5/25 第四次萌典松 moed4ct",
+    "type": "實體活動",
+    "description": "【主題】固定於單月底舉辦的 g0v 零時政府中型黑客松，五月舉辦 5/25 一場。 【同場舉行】 農域松 (a0kman)、自經松 (weihung)、動民主家族松 (ETBlue)、政獻松 (ven",
+    "startDate": "2014-05-25T03:00:00.000Z",
+    "endDate": "2014-05-25T13:00:00.000Z",
+    "annouceToContributors": false,
+    "location": {
+      "name": "BOOKSHOW 說書會",
+      "address": "台北市信義區基隆路一段141號6樓之7"
+    },
+    "link": "https://g0v-tw.kktix.cc/events/moedict-5-25"
+  },
+  {
+    "id": "bc0f137d-76aa-4c42-a8c8-ee68a6211ec8",
+    "projectId": "70e932c0-cb50-40f9-aba0-ced935f2d5de",
+    "name": "5/13 基礎建設迷你松",
+    "type": "實體活動",
+    "description": "hackpad 前言 二次謝頓危機後，社群基礎建設百廢待興，希望大家一起 brainstorm 一下目前的 priority，然後在十一月 summit 前集中火力解決一些問題。 形式 暫不開幹。每個",
+    "startDate": "2014-05-13T11:00:00.000Z",
+    "endDate": "2014-05-13T14:00:00.000Z",
+    "annouceToContributors": false,
+    "location": {
+      "name": "和多星際總部遺址",
+      "address": "忠孝東路四段170巷17弄12號"
+    },
+    "link": "https://g0v-tw.kktix.cc/events/g0v-infrath0n"
+  },
+  {
+    "id": "37bab8f4-64ad-415c-9bdb-6de226c43075",
+    "projectId": "70e932c0-cb50-40f9-aba0-ced935f2d5de",
+    "name": "g0v.tw hackath8n | 台灣零時政府第捌次解除戒嚴黑客松",
+    "type": "實體活動",
+    "description": "【請注意，本次活動場地變更為「華山1914文創園區 中3拱廳」，並增開 25 張票，於 4/16 18:00 開放增額報名】   ☞ 為何要來 g0v.tw 每兩個月一回合黑客松，打造各式資訊透明化平",
+    "startDate": "2014-04-19T01:00:00.000Z",
+    "endDate": "2014-04-19T10:00:00.000Z",
+    "annouceToContributors": false,
+    "location": {
+      "name": "華山1914文化創意產業園區 中3拱廳",
+      "address": "台灣台北市中正區八德路一段1號"
+    },
+    "link": "https://g0v-tw.kktix.cc/events/g0v-hackath8n"
+  },
+  {
+    "id": "567d43d4-4657-4396-8a8e-6bbe8da544e0",
+    "projectId": "70e932c0-cb50-40f9-aba0-ced935f2d5de",
+    "name": "3/29 第三次萌典松 moed3ct",
+    "type": "實體活動",
+    "description": "這是 3/29 場次。如果想報名 3/22 場次，請按這裡。 【主題】固定於單月底舉辦的 g0v 零時政府中型黑客松，三月共有 3/22、3/29 兩場，這是第二場。 【同場舉行】 農域松 (a0km",
+    "startDate": "2014-03-29T03:00:00.000Z",
+    "endDate": "2014-03-29T13:00:00.000Z",
+    "annouceToContributors": false,
+    "location": {
+      "name": "BOOKSHOW 說書會",
+      "address": "台北市信義區基隆路一段141號6樓之7"
+    },
+    "link": "https://g0v-tw.kktix.cc/events/moedict-3-29"
+  },
+  {
+    "id": "6cd69404-b9ff-4be7-b12c-177c00a3038f",
+    "projectId": "70e932c0-cb50-40f9-aba0-ced935f2d5de",
+    "name": "3/22 第二次萌典松 moed2ct",
+    "type": "實體活動",
+    "description": "這是 3/22 場次，歡迎報名！ 【主題】固定於單月底舉辦的 g0v 零時政府中型黑客松，三月共有 3/22、3/29 兩場，這是第一場。 【同場舉行】 直播松 (bropheus)、廣場松(ETBl",
+    "startDate": "2014-03-22T03:00:00.000Z",
+    "endDate": "2014-03-22T13:00:00.000Z",
+    "annouceToContributors": false,
+    "location": {
+      "name": "BOOKSHOW 說書會",
+      "address": "台北市信義區基隆路一段141號6樓之7"
+    },
+    "link": "https://g0v-tw.kktix.cc/events/moedict-3-22"
+  },
+  {
+    "id": "cdb6cd6f-2a5b-4277-8a63-6561662636b7",
+    "projectId": "70e932c0-cb50-40f9-aba0-ced935f2d5de",
+    "name": "3/8 線路松",
+    "type": "實體活動",
+    "description": "來者何人 \t手上有閒置的網路設備的人（需要設備見 hackpad） \t對網路管理有興趣 \t想把開源協作精神推廣出去，讓台灣的公民行動能夠累積共用的知識和資源 活動內容 詳情請見 線路松 Hackpad",
+    "startDate": "2014-03-08T03:00:00.000Z",
+    "endDate": "2014-03-08T13:30:00.000Z",
+    "annouceToContributors": false,
+    "location": {
+      "name": "2014 臺北廢核遊行媒體區",
+      "address": "台灣台北市中正區凱達格蘭大道1號"
+    },
+    "link": "https://g0v-tw.kktix.cc/events/router-3-8"
+  },
+  {
+    "id": "e87d3b0a-8450-4e67-a0ff-63e8e586f650",
+    "projectId": "70e932c0-cb50-40f9-aba0-ced935f2d5de",
+    "name": "g0v.tw hackath7n | 台灣零時政府第柒次自由時代黑客松",
+    "type": "實體活動",
+    "description": "共100名額，現在陸續有人取消釋出票券囉。遠端也可以透過網路聊天室參與：http://hack.g0v.tw/irc  :) ☞ 為何要來 g0v.tw 每兩個月一回合黑客松，打造各式資訊透明化平台[",
+    "startDate": "2014-02-22T01:00:00.000Z",
+    "endDate": "2014-02-22T10:00:00.000Z",
+    "annouceToContributors": false,
+    "location": {
+      "name": "中研院資訊科學研究所",
+      "address": "台北市南港區研究院路二段128號"
+    },
+    "link": "https://g0v-tw.kktix.cc/events/g0v-hackath7n"
+  },
+  {
+    "id": "090deef8-6b01-4def-a3a1-085a228f491b",
+    "projectId": "70e932c0-cb50-40f9-aba0-ced935f2d5de",
+    "name": "g0v.tw 立院組小松",
+    "type": "實體活動",
+    "description": "立院組小松 時間：1/20 14:00 - 20:50 協作共筆： https://g0v.hackpad.com/KJrp3C7RusA",
+    "startDate": "2014-01-20T06:00:00.000Z",
+    "endDate": "2014-01-20T12:50:00.000Z",
+    "annouceToContributors": false,
+    "location": {
+      "name": "前和多星際總部",
+      "address": "台北市忠孝東路四段170巷17弄12號2F"
+    },
+    "link": "https://g0v-tw.kktix.cc/events/g0vly-hackathon-2"
+  },
+  {
+    "id": "797f97b0-481a-47c6-bc8c-23d72bed72c9",
+    "projectId": "70e932c0-cb50-40f9-aba0-ced935f2d5de",
+    "name": "g0v 2014 新年松",
+    "type": "實體活動",
+    "description": "【主題】在 g0v 歡慶週歲的一年之初，來個輕鬆的聯誼交流、回顧展望： 專案回顧、實作甘苦談 口述歷史、來年展望 新手教學、初心小講 混熟臉孔、好奇問答、各言爾志、促膝長談...... 與原訂於同一天",
+    "startDate": "2014-01-04T05:00:00.000Z",
+    "endDate": "2014-01-04T15:00:00.000Z",
+    "annouceToContributors": false,
+    "location": {
+      "name": "BOOKSHOW 說書會",
+      "address": "台北市信義區基隆路一段141號6樓之7"
+    },
+    "link": "https://g0v-tw.kktix.cc/events/g0v-newyear2014"
+  },
+  {
+    "id": "b2848f86-a5cf-4c5a-8ccc-2a81b6059381",
+    "projectId": "70e932c0-cb50-40f9-aba0-ced935f2d5de",
+    "name": "g0v.tw hackath6n | 台灣零時政府第陸次勞動基準黑客松",
+    "type": "實體活動",
+    "description": "【為何要來】g0v.tw 滿一週年了！一年來大家從零開始，打造各式資訊透明化平台[1]，在實作串連、挖坑填坑的過程中，也凝聚出新的參與社會的模式。除了生氣翻桌，真的有太多事可以作，黑客松就是能量反應爐",
+    "startDate": "2013-12-21T01:00:00.000Z",
+    "endDate": "2013-12-21T10:00:00.000Z",
+    "annouceToContributors": false,
+    "location": {
+      "name": "中研院資訊科學研究所",
+      "address": "台北市南港區研究院路二段128號"
+    },
+    "link": "https://g0v-tw.kktix.cc/events/g0v-hackath6n"
+  },
+  {
+    "id": "3eaa693a-e8db-4211-ba45-c33311d9c274",
+    "projectId": "70e932c0-cb50-40f9-aba0-ced935f2d5de",
+    "name": "g0v.tw 萌典松",
+    "type": "實體活動",
+    "description": "為慶祝 g0v.tw 萌典啄木鳥活動順利完成，加上第伍次美麗島黑客松時留下許多待辦事項，特舉行此次小松以加速進行。 【來者何人】 萌典的使用者、推廣者、測試者、開發者，以及對 g0v.tw 零時政府專",
+    "startDate": "2013-11-23T03:00:00.000Z",
+    "endDate": "2013-11-23T12:00:00.000Z",
+    "annouceToContributors": false,
+    "location": {
+      "name": "睡不著咖啡館",
+      "address": "台北市大安區泰順街60巷8號B1"
+    },
+    "link": "https://g0v-tw.kktix.cc/events/moedict"
+  },
+  {
+    "id": "d5d583c7-aab6-4568-9838-878dafa95870",
+    "projectId": "70e932c0-cb50-40f9-aba0-ced935f2d5de",
+    "name": "g0v.tw 立院組小松",
+    "type": "實體活動",
+    "description": "g0v立院組經過一年的醞釀終於大爆發週日來加速進行一下吧！時間：11/10 12:00-18:00 （請吃飽再來喔） 共筆：https://g0v.hackpad.com/1110--KJrp3C7R",
+    "startDate": "2013-11-10T04:00:00.000Z",
+    "endDate": "2013-11-10T10:00:00.000Z",
+    "annouceToContributors": false,
+    "location": {
+      "name": "前和多星際總部",
+      "address": "台北市忠孝東路四段170巷17弄12號2F"
+    },
+    "link": "https://g0v-tw.kktix.cc/events/g0vly-hackathon-1"
+  },
+  {
+    "id": "0e451154-289f-4838-9bda-f952dfd4cd67",
+    "projectId": "70e932c0-cb50-40f9-aba0-ced935f2d5de",
+    "name": "g0v.tw hackath5n | 台灣零時政府第伍次美麗島黑客松",
+    "type": "實體活動",
+    "description": "【源碼大明神香油票】   應無法現場參與但希望貢獻的朋友期待，本期開放香油票12張（三張已由「政大開放資料與社群協力創新計畫」包辦），每張 2,000 元，將募集 24,000 元作為下期黑客松餐",
+    "startDate": "2013-10-20T01:00:00.000Z",
+    "endDate": "2013-10-20T10:00:00.000Z",
+    "annouceToContributors": false,
+    "location": {
+      "name": "中研院資訊科學研究所",
+      "address": "台北市南港區研究院路二段128號"
+    },
+    "link": "https://g0v-tw.kktix.cc/events/g0v-hackath5n-taipei"
+  },
+  {
+    "id": "ce462d69-cfda-4421-8f27-e7c248fdc4fa",
+    "projectId": "70e932c0-cb50-40f9-aba0-ced935f2d5de",
+    "name": "g0v 雙十 hackathon",
+    "type": "實體活動",
+    "description": "十月十，上街頭，上完街頭黑客松。（上街就各自糾囉）時間：13:30-18:00 歡迎老朋友、新朋友來混一下。要提新專案可以來吸收一下 0 氣，要衝舊專案的就 BJ4 了。 活動共筆（沿用上次&上上次）",
+    "startDate": "2013-10-10T05:30:00.000Z",
+    "endDate": "2013-10-10T10:00:00.000Z",
+    "annouceToContributors": false,
+    "location": {
+      "name": "和多聯合辦公室",
+      "address": " 台北市大安區忠孝東路四段170巷17弄12號2樓"
+    },
+    "link": "https://g0v-tw.kktix.cc/events/doubleten-hackathon"
+  },
+  {
+    "id": "aa0f0d1c-2214-451e-8579-6f3d4755eeea",
+    "projectId": "70e932c0-cb50-40f9-aba0-ced935f2d5de",
+    "name": "g0v.tw g0v 台南小吃松",
+    "type": "實體活動",
+    "description": "大家好，我是雨蒼。這次從上海回來台南想要辦個黑客松，做點事情，順便和大家見見面。目前活動是選用成大的教室來寫程式，活動進行時會買小吃回來給各位吃。希望有人可以先寫好小吃點單系統XD 會買的小吃預計有：",
+    "startDate": "2013-10-05T02:00:00.000Z",
+    "endDate": "2013-10-05T09:00:00.000Z",
+    "annouceToContributors": false,
+    "location": {
+      "name": "成大資工系4202教室",
+      "address": "台南市大學路一號(成功校區)"
+    },
+    "link": "https://g0v-tw.kktix.cc/events/g0v-tainan"
+  },
+  {
+    "id": "397c2c93-d074-4d02-aebd-a14205a5176b",
+    "projectId": "70e932c0-cb50-40f9-aba0-ced935f2d5de",
+    "name": "g0v emergency hackathon + Federico Pistono",
+    "type": "實體活動",
+    "description": "時間：19:00~22:00 邀請到來 TEDxTaipei 的講者 Frederico Pistono 來聊天，順便黑客松 （請大家吃過飯再過來，因為有義大利人，吃 pizza 的話太弱了 XD）",
+    "startDate": "2013-10-01T11:00:00.000Z",
+    "endDate": "2013-10-01T14:00:00.000Z",
+    "annouceToContributors": false,
+    "location": {
+      "name": "和多聯合辦公室",
+      "address": " 台北市大安區忠孝東路四段170巷17弄12號2樓"
+    },
+    "link": "https://g0v-tw.kktix.cc/events/emergency-hackathon-federico"
+  },
+  {
+    "id": "2564d59d-4973-411c-ab3f-f9204b3cd599",
+    "projectId": "70e932c0-cb50-40f9-aba0-ced935f2d5de",
+    "name": "g0v pre-hackath5n 秋天松",
+    "type": "實體活動",
+    "description": "最近各組工作坊不少，但好久沒有小黑客松了。來聚聚一起做點什麼吧！（19:00會有pizza，直接來邊吃邊松吧。素食者請到以下共筆簽名） 活動共筆：https://g0v.hackpad.com/g0v",
+    "startDate": "2013-09-24T10:30:00.000Z",
+    "endDate": "2013-09-24T14:00:00.000Z",
+    "annouceToContributors": false,
+    "location": {
+      "name": "和多聯合辦公室",
+      "address": " 台北市大安區忠孝東路四段170巷17弄12號2樓"
+    },
+    "link": "https://g0v-tw.kktix.cc/events/g0v-pre-hackath5n"
+  },
+  {
+    "id": "beaa248e-04ea-44ef-98f9-c1430bfd5e3d",
+    "projectId": "70e932c0-cb50-40f9-aba0-ced935f2d5de",
+    "name": "g0v.tw hackath4n | 台灣零時政府第肆次國民大會黑客松",
+    "type": "實體活動",
+    "description": "【最新消息】【國民大會增額票】由於報名踴躍，我們決定稍微修改開場流程以容納更多熱血朋友！增額票 30 名將於 8/7 (三) 中午 12:00 開放！  【為何要來】g0v.tw 是一個致力於打造資訊",
+    "startDate": "2013-08-10T01:00:00.000Z",
+    "endDate": "2013-08-10T10:00:00.000Z",
+    "annouceToContributors": false,
+    "location": {
+      "name": "中研院資訊科學研究所",
+      "address": "台北市南港區研究院路二段128號"
+    },
+    "link": "https://g0v-tw.kktix.cc/events/g0v-hackath4n-taipei"
+  },
+  {
+    "id": "22e7d5e2-afc4-487a-a840-4a5a69801561",
+    "projectId": "70e932c0-cb50-40f9-aba0-ced935f2d5de",
+    "name": "g0v XD-talking-pre-hackath4n 跨設計哈拉松",
+    "type": "實體活動",
+    "description": "8/10 的國民大會黑客松之前，先來做點什麼吧！ 主題：Whatever - btw，XDesign 跨設計社群的負責人 Roy 會來被大家推坑 XD 可能的專案：https://g0v.hackpa",
+    "startDate": "2013-07-19T10:00:00.000Z",
+    "endDate": "2013-07-19T14:00:00.000Z",
+    "annouceToContributors": false,
+    "location": {
+      "name": "和多聯合辦公室",
+      "address": "台北市大安區忠孝東路四段170巷17弄12號2樓"
+    },
+    "link": "https://g0v-tw.kktix.cc/events/g0v-xd-talking-pre-hackath4n"
+  },
+  {
+    "id": "f3431333-42f5-48c9-b48b-6d8a455e3a49",
+    "projectId": "70e932c0-cb50-40f9-aba0-ced935f2d5de",
+    "name": "g0v 緊急黑客松後松",
+    "type": "實體活動",
+    "description": "因為 walkingice 要到台北蹲一天，反正大家如果在家沒出門也是在用電腦，不如一塊來黑客松吧。   共筆：https://g0v.hackpad.com/g0v-post-hackath3n-S",
+    "startDate": "2013-06-23T02:00:00.000Z",
+    "endDate": "2013-06-23T10:00:00.000Z",
+    "annouceToContributors": false,
+    "location": {
+      "name": "和多聯合辦公室",
+      "address": "台北市大安區忠孝東路四段170巷17弄12號2樓"
+    },
+    "link": "https://g0v-tw.kktix.cc/events/g0v-post-hackath3n"
+  },
+  {
+    "id": "e168950d-3eab-4b35-ad4e-e35e9a217062",
+    "projectId": "70e932c0-cb50-40f9-aba0-ced935f2d5de",
+    "name": "g0v.tw hackath3n | 台灣零時政府第參次客廳工廠黑客松 - 台北場",
+    "type": "實體活動",
+    "description": "【號外！】此次黑客松增設最佳專案獎或最佳貢獻獎，獎品備有 COSCUP 門票四張。（感謝 @hlb、@pofeng、＠legist 提供個人贊助票，@ronnywang 提供VIP票券） 【為何要",
+    "startDate": "2013-06-08T01:00:00.000Z",
+    "endDate": "2013-06-08T10:00:00.000Z",
+    "annouceToContributors": false,
+    "location": {
+      "name": "中研院資訊科學研究所",
+      "address": "台北市南港區研究院路二段128號"
+    },
+    "link": "https://g0v-tw.kktix.cc/events/g0v-hackath3n-taipei"
+  },
+  {
+    "id": "816bed6a-e65c-4f71-ae99-0fa7ea0be452",
+    "projectId": "70e932c0-cb50-40f9-aba0-ced935f2d5de",
+    "name": "g0v post-pre-hackath3n",
+    "type": "實體活動",
+    "description": "6/8 的客廳工廠黑客松之前的 pre-hackath3n 之後但仍是在 6/8 的客廳工廠黑客松之前，先來做點什麼吧！ 主題：讓黑客松效果更佳 希望偏重在協作工具、共用資料等等。不過也歡迎實作特定專",
+    "startDate": "2013-06-06T10:30:00.000Z",
+    "endDate": "2013-06-06T12:30:00.000Z",
+    "annouceToContributors": false,
+    "location": {
+      "name": "和多聯合辦公室",
+      "address": "台北市大安區忠孝東路四段170巷17弄12號2樓"
+    },
+    "link": "https://g0v-tw.kktix.cc/events/g0v-postprehackath3n"
+  },
+  {
+    "id": "d806a3a1-1daf-4d32-897e-19bb278b1b10",
+    "projectId": "70e932c0-cb50-40f9-aba0-ced935f2d5de",
+    "name": "g0v.tw hackath2n | 台灣零時政府第貳次九大建設黑客松 - 台北場",
+    "type": "實體活動",
+    "description": "（如果你是 Android 開發者，也可以考慮選擇參加 GTUG 舉辦的 Android Hackathon, 該活動中也可以進行 g0v 相關的主題！） 【為何要來】g0v.tw 是一個致力於打造資",
+    "startDate": "2013-03-23T01:00:00.000Z",
+    "endDate": "2013-03-23T10:00:00.000Z",
+    "annouceToContributors": false,
+    "location": {
+      "name": "中研院資訊科學研究所",
+      "address": "台北市南港區研究院路二段128號"
+    },
+    "link": "https://g0v-tw.kktix.cc/events/g0v-hackath2n-taipei"
+  },
+  {
+    "id": "f6a87287-cddd-407a-87ff-862b8a8e1a74",
+    "projectId": "70e932c0-cb50-40f9-aba0-ced935f2d5de",
+    "name": "g0v.tw hackath1n | 台灣零時政府第壹次公地放領黑客松 - 台北場",
+    "type": "實體活動",
+    "description": "這裡是台北場的報名頁面，參加台中場的朋友請至 http://registrano.com/events/g0v-hackath1n-taichung 報名。參加高雄場的朋友請至 http://regi",
+    "startDate": "2013-01-27T01:00:00.000Z",
+    "endDate": "2013-01-27T10:00:00.000Z",
+    "annouceToContributors": false,
+    "location": {
+      "name": "中研院資訊科學研究所",
+      "address": "台北市南港區研究院路二段128號"
+    },
+    "link": "https://g0v-tw.kktix.cc/events/g0v-hackath1n"
+  },
+  {
+    "id": "5ad7200c-80a1-49ff-aa19-b4a3d8b4ee3a",
+    "projectId": "70e932c0-cb50-40f9-aba0-ced935f2d5de",
+    "name": "g0v.tw hackath1n | 台灣零時政府第壹次公地放領黑客松 - 台中場",
+    "type": "實體活動",
+    "description": "這裡是台中場的報名頁面，參加台北場的朋友請至 http://registrano.com/events/g0v-hackath1n 報名。參加高雄場的朋友請至 http://registrano.co",
+    "startDate": "2013-01-27T01:00:00.000Z",
+    "endDate": "2013-01-27T10:00:00.000Z",
+    "annouceToContributors": false,
+    "location": {
+      "name": "默契咖啡",
+      "address": "台中市407中港路二段60-3號 電話：04-2313-4597  營業時間：9:00 am～11:00 pm"
+    },
+    "link": "https://g0v-tw.kktix.cc/events/g0v-hackath1n-taichung"
+  },
+  {
+    "id": "4fb5fe51-d767-4df8-8be5-314a89cd2255",
+    "projectId": "70e932c0-cb50-40f9-aba0-ced935f2d5de",
+    "name": "g0v.tw hackath1n | 台灣零時政府第壹次公地放領黑客松 - 高雄場",
+    "type": "實體活動",
+    "description": "這裡是高雄場的報名頁面，參加台北場的朋友請至 http://registrano.com/events/g0v-hackath1n 報名，台中場的朋友請至 http://registrano.com/",
+    "startDate": "2013-01-27T01:00:00.000Z",
+    "endDate": "2013-01-27T10:00:00.000Z",
+    "annouceToContributors": false,
+    "location": {
+      "name": "高雄軟體園區B棟708會議室",
+      "address": "高雄市前鎮區復興四路12號 B708 電話：07-9700910分機16"
+    },
+    "link": "https://g0v-tw.kktix.cc/events/g0v-hackath1n-kaohsiung"
+  },
+  {
+    "id": "7d188b71-72d3-48d0-a925-bed416beed75",
+    "projectId": "70e932c0-cb50-40f9-aba0-ced935f2d5de",
+    "name": "g0v.tw hackath0n | 台灣零時政府第零次動員戡亂黑客松",
+    "type": "實體活動",
+    "description": "台灣零時政府第零次動員戡亂黑客松 請注意！場地已變更至「中研院資創中心 」 感謝大家的熱情參與，本活動已額滿！若有興趣參與，請上 hackpad  與 irc 討論有興趣的主題。活動當天的開場介紹及結",
+    "startDate": "2012-12-01T01:00:00.000Z",
+    "endDate": "2012-12-01T10:00:00.000Z",
+    "annouceToContributors": false,
+    "location": {
+      "name": "中研院資訊科技創新研究中心",
+      "address": "台北市南港區研究院路二段128號"
+    },
+    "link": "https://g0v-tw.kktix.cc/events/dab224"
+  },
+  {
+    "id": "463af6da-a112-454d-a9b9-e588b321e4e0",
+    "projectId": "70e932c0-cb50-40f9-aba0-ced935f2d5de",
+    "name": "g0v hackath10n | 台灣零時政府第拾次資料科學黑客松",
+    "type": "實體活動",
+    "description": "",
+    "startDate": "",
+    "endDate": "",
+    "annouceToContributors": false,
+    "guestLimit": 0,
+    "attendanceCount": 0,
+    "location": {
+      "name": "中央研究院人資訊科學研究所  (Institution of Information Science of Academia Sinica)",
+      "address": "台北市南港區研究院路二段128號 (No.128, Sec. 2, Academia Rd., Nangang Dist., Taipei City 115, Taiwan)"
+    },
+    "link": "https://beta.hackfoldr.org/g0v-hackath10n"
+  }
+]

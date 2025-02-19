@@ -1,13 +1,18 @@
 [
   {
-    "id": "a321d3fd-ea81-4b71-816c-4b9db4eda66d",
+    "id": "70e932c0-cb50-40f9-aba0-ced935f2d5de",
     "status": "active",
-    "owner": "揪松團_ecbdaa58-8eac-46a2-a02b-a553599140b1",
+    "owner": "Isabel_23ffbaae-3451-4e07-9f93-4657eafbe447",
     "name": "零時政府黑客松",
     "description": "",
     "managers": [],
-    "links": [],
-    "slackChannel": ""
+    "links": [
+      {
+        "name": "官網",
+        "url": "https://jothon.g0v.tw/"
+      }
+    ],
+    "slackChannel": "#jothon"
   },
   {
     "id": "02d3a6fe-9d43-4aa1-a8ed-3ea186ea792b",
@@ -9545,21 +9550,6 @@
       }
     ],
     "slackChannel": "#edu-aray"
-  },
-  {
-    "id": "70e932c0-cb50-40f9-aba0-ced935f2d5de",
-    "status": "active",
-    "owner": "Isabel_23ffbaae-3451-4e07-9f93-4657eafbe447",
-    "name": "零時政府黑客松",
-    "description": "",
-    "managers": [],
-    "links": [
-      {
-        "name": "官網",
-        "url": "https://jothon.g0v.tw/"
-      }
-    ],
-    "slackChannel": "#jothon"
   },
   {
     "id": "887d951c-ae32-46de-86bf-360af2da61c7",

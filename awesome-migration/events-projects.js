@@ -34,8 +34,8 @@ function eventsProject(projects) {
         const g0vProject = getProjectFromG0v(g0vDbRow);
         console.log('g0vProject', g0vProject);
         const eventName = formatEventName(g0vProject['event name']);
-        const event = getEventFromKktix(eventName.nth);
         console.log('eventName', eventName);
+        const event = getEventFromAray(eventName.nth);
         console.log('g0vProject', g0vProject);
         console.log('event', event);
         eventsProject.push(createEventProject(event, project, g0vProject));
@@ -53,10 +53,11 @@ function eventsProject(projects) {
  * @return {*} json
  */
 function formatEventName(eventName) {
-  const splitStr = eventName.indexOf('｜') > -1 ? '｜' : '|';
+  const splitReg = new RegExp('(\\s[\\|｜]\\s)|｜');
+  const exec = splitReg.exec(eventName);
+  const splitStr = exec[0];
   const [hackath, name] = eventName.split(splitStr);
-  const [g0v, nth] = hackath.split(' ');
-  return { nth: nth, name };
+  return { nth: hackath.replace('g0v ', ''), name };
 }
 
 function createEventProject(event, arayProjects, g0vProject) {
@@ -78,8 +79,7 @@ function getProjectFromG0v(projectIdx) {
   return g0vDB[parseInt(idx-2)];
 }
 
-function getEventFromKktix(eventName) {
-  console.log('eventName', eventName);
+function getEventFromAray(eventName) {
   return events.find((event) => event.name.toLowerCase().indexOf(eventName.toLowerCase()) > -1);
 }
 

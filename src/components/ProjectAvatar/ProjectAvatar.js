@@ -39,7 +39,7 @@ export default function ProjectAvatar({
       showEditor={showEditor}
       canEdit={canEdit}
       src={uri}
-      fallbackSrc={`https://avatars.dicebear.com/api/jdenticon/${projectId}.svg`}
+      fallbackSrc={`https://api.dicebear.com/9.x/shapes/svg?seed=${projectId}`}
       s3Key={s3Key}
       editorTitle={t('projectAvatar_updateAvatar')}
       onUpdate={() => setLastUpdatedAt(Date.now())}

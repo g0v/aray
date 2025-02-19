@@ -1,4 +1,6 @@
 const path = require('path');
+// const fs = require('fs');
+// const { v1: uuidv1 } = require('uuid');
 
 const prompt = require('../prompt');
 const { writeData } = require('../helper');
@@ -19,6 +21,10 @@ const importDataSets = [
   {
     typeName: 'User',
     fileName: 'aray-users.json',
+  },
+  {
+    typeName: 'UserProject',
+    fileName: 'aray-users-projects.json',
   },
 ];
 
@@ -54,6 +60,27 @@ const importDataSets = [
           item.rsvpCloseTime = item.rsvpCloseTime || item.startDate;
         });
       }
+
+      // if (typeName === 'Project') {
+      //   const userProjects = [];
+      //   data.forEach(({ id: projectId, owner, managers }) => {
+      //     const allManagers = [owner, ...managers];
+      //     allManagers.forEach((username) => {
+      //       const userProject = {
+      //         id: uuidv1(),
+      //         projectId,
+      //         username,
+      //         role: 'manager',
+      //         completedHours: 0,
+      //         completedTasks: 0,
+      //       };
+
+      //       userProjects.push(userProject);
+      //     });
+      //   });
+
+      //   fs.writeFileSync(path.join(__dirname, 'aray-users-projects.json'), JSON.stringify(userProjects, null, 2))
+      // }
 
       await writeData(tableName, typeName, data);
     }));

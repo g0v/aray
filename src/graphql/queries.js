@@ -356,6 +356,78 @@ export const getEventAttendancesByUsernameByCreatedAt = /* GraphQL */ `
     }
   }
 `;
+export const getEventProject = /* GraphQL */ `
+  query GetEventProject($id: ID!) {
+    getEventProject(id: $id) {
+      id
+      eventId
+      projectId
+      status
+      title
+      description
+      createdAt
+      createdBy
+      updatedAt
+      updatedBy
+    }
+  }
+`;
+export const listEventProjects = /* GraphQL */ `
+  query ListEventProjects(
+    $filter: ModelEventProjectFilterInput
+    $limit: Int
+    $nextToken: String
+  ) {
+    listEventProjects(filter: $filter, limit: $limit, nextToken: $nextToken) {
+      items {
+        id
+        eventId
+        projectId
+        status
+        title
+        description
+        createdAt
+        createdBy
+        updatedAt
+        updatedBy
+      }
+      nextToken
+    }
+  }
+`;
+export const getEventProjectsByEventIdByStatus = /* GraphQL */ `
+  query GetEventProjectsByEventIdByStatus(
+    $eventId: ID
+    $status: ModelStringKeyConditionInput
+    $sortDirection: ModelSortDirection
+    $filter: ModelEventProjectFilterInput
+    $limit: Int
+    $nextToken: String
+  ) {
+    getEventProjectsByEventIdByStatus(
+      eventId: $eventId
+      status: $status
+      sortDirection: $sortDirection
+      filter: $filter
+      limit: $limit
+      nextToken: $nextToken
+    ) {
+      items {
+        id
+        eventId
+        projectId
+        status
+        title
+        description
+        createdAt
+        createdBy
+        updatedAt
+        updatedBy
+      }
+      nextToken
+    }
+  }
+`;
 export const getGovernmentAgency = /* GraphQL */ `
   query GetGovernmentAgency($id: ID!) {
     getGovernmentAgency(id: $id) {

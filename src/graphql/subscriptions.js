@@ -220,6 +220,54 @@ export const onDeleteEventAttendance = /* GraphQL */ `
     }
   }
 `;
+export const onCreateEventProject = /* GraphQL */ `
+  subscription OnCreateEventProject {
+    onCreateEventProject {
+      id
+      eventId
+      projectId
+      status
+      title
+      description
+      createdAt
+      createdBy
+      updatedAt
+      updatedBy
+    }
+  }
+`;
+export const onUpdateEventProject = /* GraphQL */ `
+  subscription OnUpdateEventProject {
+    onUpdateEventProject {
+      id
+      eventId
+      projectId
+      status
+      title
+      description
+      createdAt
+      createdBy
+      updatedAt
+      updatedBy
+    }
+  }
+`;
+export const onDeleteEventProject = /* GraphQL */ `
+  subscription OnDeleteEventProject {
+    onDeleteEventProject {
+      id
+      eventId
+      projectId
+      status
+      title
+      description
+      createdAt
+      createdBy
+      updatedAt
+      updatedBy
+    }
+  }
+`;
 export const onCreateGovernmentAgency = /* GraphQL */ `
   subscription OnCreateGovernmentAgency {
     onCreateGovernmentAgency {

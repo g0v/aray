@@ -288,6 +288,63 @@ export const deleteEventAttendance = /* GraphQL */ `
     }
   }
 `;
+export const createEventProject = /* GraphQL */ `
+  mutation CreateEventProject(
+    $input: CreateEventProjectInput!
+    $condition: ModelEventProjectConditionInput
+  ) {
+    createEventProject(input: $input, condition: $condition) {
+      id
+      eventId
+      projectId
+      status
+      title
+      description
+      createdAt
+      createdBy
+      updatedAt
+      updatedBy
+    }
+  }
+`;
+export const updateEventProject = /* GraphQL */ `
+  mutation UpdateEventProject(
+    $input: UpdateEventProjectInput!
+    $condition: ModelEventProjectConditionInput
+  ) {
+    updateEventProject(input: $input, condition: $condition) {
+      id
+      eventId
+      projectId
+      status
+      title
+      description
+      createdAt
+      createdBy
+      updatedAt
+      updatedBy
+    }
+  }
+`;
+export const deleteEventProject = /* GraphQL */ `
+  mutation DeleteEventProject(
+    $input: DeleteEventProjectInput!
+    $condition: ModelEventProjectConditionInput
+  ) {
+    deleteEventProject(input: $input, condition: $condition) {
+      id
+      eventId
+      projectId
+      status
+      title
+      description
+      createdAt
+      createdBy
+      updatedAt
+      updatedBy
+    }
+  }
+`;
 export const createGovernmentAgency = /* GraphQL */ `
   mutation CreateGovernmentAgency(
     $input: CreateGovernmentAgencyInput!

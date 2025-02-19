@@ -86,7 +86,7 @@ export default function UserCard({
       <Card className={classes.root} variant={variant}>
         <CardHeader
           avatar={
-            <UserAvatar username={user.username} size={50} />
+            <UserAvatar user={user} size={50} />
           }
           title={user.name}
           subheader={user.username}

@@ -104,7 +104,7 @@ export default function Project({ id: inId, computedMatch, match }) {
     {
       label: t('project_contributors'),
       component: () => <React.Fragment>
-        {project.contributors.items.map((item, index)=>(
+        {project.contributors.items.map((item, index) => (
           <Grid item xs={12} sm={6} md={4} lg={3} key={index}>
             <UserCard userProject={item} variant="outlined" />
           </Grid>
@@ -168,8 +168,7 @@ export default function Project({ id: inId, computedMatch, match }) {
             <Grid item xs={12} container spacing={2}>
               <Grid item xs={12} align="center">
                 <ProjectAvatar
-                  projectId={project.id}
-                  name={project.name}
+                  project={project}
                   size={150}
                   showEditor={true}
                   canEdit={canEdit}
@@ -188,48 +187,48 @@ export default function Project({ id: inId, computedMatch, match }) {
                 <Typography variant="body1" gutterBottom>
                   {t('project_owner')}
                   {canEdit &&
-                  <ProjectOwnerEditor
-                    project={project}
-                    onUpdate={() => setLastUpdatedAt(Date.now())}
-                  />}
+                    <ProjectOwnerEditor
+                      project={project}
+                      onUpdate={() => setLastUpdatedAt(Date.now())}
+                    />}
                 </Typography>
                 <div className={classes.userChipContainer}>
-                  <UserChip username={project.owner}/>
+                  <UserChip username={project.owner} />
                 </div>
               </Grid>
               <Grid item xs={12}>
                 <Typography variant="body1" gutterBottom>
                   {t('project_managers')}
                   {canEdit &&
-                  <ProjectManagerEditor
-                    project={project}
-                    onUpdate={() => setLastUpdatedAt(Date.now())}
-                  />}
+                    <ProjectManagerEditor
+                      project={project}
+                      onUpdate={() => setLastUpdatedAt(Date.now())}
+                    />}
                 </Typography>
                 <div className={classes.userChipContainer}>
-                  {project.managers.map((username, index)=>(
-                    <UserChip key={index} username={username}/>
+                  {project.managers.map((username, index) => (
+                    <UserChip key={index} username={username} />
                   ))}
                 </div>
               </Grid>
               {(project.slackChannel || project.slackChannelUrl) &&
-              <Grid item xs={12}>
-                <Typography variant="body1" gutterBottom>
-                  {t('project_slackChannel')}
-                </Typography>
-                <VisitButton
-                  title={`#${(project.slackChannel || '專案頻道').replace('#', '')}`}
-                  url={project.slackChannelUrl || 'https://g0v-tw.slack.com/'}
-                  variant={'text'}
-                  color={'secondary'}
-                  style={{ padding: 0, minWidth: 0, textTransform: 'none' }}
-                />
-              </Grid>}
+                <Grid item xs={12}>
+                  <Typography variant="body1" gutterBottom>
+                    {t('project_slackChannel')}
+                  </Typography>
+                  <VisitButton
+                    title={`#${(project.slackChannel || '專案頻道').replace('#', '')}`}
+                    url={project.slackChannelUrl || 'https://g0v-tw.slack.com/'}
+                    variant={'text'}
+                    color={'secondary'}
+                    style={{ padding: 0, minWidth: 0, textTransform: 'none' }}
+                  />
+                </Grid>}
               <Grid item xs={12}>
                 <Typography variant="body1" gutterBottom>
                   {t('project_links')}
                 </Typography>
-                {project.links.map((link, index)=>(
+                {project.links.map((link, index) => (
                   <div key={index} style={{ margin: 1, display: 'block' }}>
                     <VisitButton
                       title={link.name}
@@ -242,27 +241,27 @@ export default function Project({ id: inId, computedMatch, match }) {
                 ))}
               </Grid>
               {canEdit &&
-              <Grid item xs={12} className={classes.chipContainer}>
-                <ProjectEditButton
-                  mode={'edit'}
-                  item={project}
-                  onUpdate={() => setLastUpdatedAt(Date.now())}
-                />
-              </Grid>}
+                <Grid item xs={12} className={classes.chipContainer}>
+                  <ProjectEditButton
+                    mode={'edit'}
+                    item={project}
+                    onUpdate={() => setLastUpdatedAt(Date.now())}
+                  />
+                </Grid>}
               <Grid item xs={12}>
                 <Typography variant="body1" gutterBottom>
                   {t('project_categorys')}
                   {canEdit &&
-                  <DataJoinEditor
-                    title={t('project_categorys')}
-                    mode={'project-category'}
-                    projectId={project.id}
-                    joinData={project.categorys.items}
-                    onUpdate={() => setLastUpdatedAt(Date.now())}
-                    showHelperText={false}
-                  />}
+                    <DataJoinEditor
+                      title={t('project_categorys')}
+                      mode={'project-category'}
+                      projectId={project.id}
+                      joinData={project.categorys.items}
+                      onUpdate={() => setLastUpdatedAt(Date.now())}
+                      showHelperText={false}
+                    />}
                 </Typography>
-                {categorys.map((item, index)=>(
+                {categorys.map((item, index) => (
                   <CategoryChip key={index} data={item} target="project" />
                 ))}
               </Grid>
@@ -270,15 +269,15 @@ export default function Project({ id: inId, computedMatch, match }) {
                 <Typography variant="body1" gutterBottom>
                   {t('project_governmentAgencies')}
                   {canEdit &&
-                  <DataJoinEditor
-                    title={t('project_governmentAgencies')}
-                    mode={'project-governmentAgency'}
-                    projectId={project.id}
-                    joinData={project.governmentAgencies.items}
-                    onUpdate={() => setLastUpdatedAt(Date.now())}
-                  />}
+                    <DataJoinEditor
+                      title={t('project_governmentAgencies')}
+                      mode={'project-governmentAgency'}
+                      projectId={project.id}
+                      joinData={project.governmentAgencies.items}
+                      onUpdate={() => setLastUpdatedAt(Date.now())}
+                    />}
                 </Typography>
-                {governmentAgencies.map((item, index)=>(
+                {governmentAgencies.map((item, index) => (
                   <GovernmentAgencyChip key={index} data={item} target="project" />
                 ))}
               </Grid>
@@ -286,15 +285,15 @@ export default function Project({ id: inId, computedMatch, match }) {
                 <Typography variant="body1" gutterBottom>
                   {t('project_tags')}
                   {canEdit &&
-                  <DataJoinEditor
-                    title={t('project_tags')}
-                    mode={'project-tag'}
-                    projectId={project.id}
-                    joinData={project.tags.items}
-                    onUpdate={() => setLastUpdatedAt(Date.now())}
-                  />}
+                    <DataJoinEditor
+                      title={t('project_tags')}
+                      mode={'project-tag'}
+                      projectId={project.id}
+                      joinData={project.tags.items}
+                      onUpdate={() => setLastUpdatedAt(Date.now())}
+                    />}
                 </Typography>
-                {tags.map((item, index)=>(
+                {tags.map((item, index) => (
                   <TagChip key={index} data={item} target="project" />
                 ))}
               </Grid>
@@ -302,15 +301,15 @@ export default function Project({ id: inId, computedMatch, match }) {
                 <Typography variant="body1" gutterBottom>
                   {t('project_needs')}
                   {canEdit &&
-                  <DataJoinEditor
-                    title={t('project_needs')}
-                    mode={'project-need'}
-                    projectId={project.id}
-                    joinData={project.needs.items}
-                    onUpdate={() => setLastUpdatedAt(Date.now())}
-                  />}
+                    <DataJoinEditor
+                      title={t('project_needs')}
+                      mode={'project-need'}
+                      projectId={project.id}
+                      joinData={project.needs.items}
+                      onUpdate={() => setLastUpdatedAt(Date.now())}
+                    />}
                 </Typography>
-                {needs.map((item, index)=>(
+                {needs.map((item, index) => (
                   <NeedChip key={index} data={item} target="project" />
                 ))}
               </Grid>
@@ -324,15 +323,15 @@ export default function Project({ id: inId, computedMatch, match }) {
                 textColor="primary"
                 onChange={(e, newValue) => handleTabChange(newValue)}
                 aria-label="Project Tabs"
-                // centered
+              // centered
               >
-                {tabs.map(({ label, disabled }, index)=>(
+                {tabs.map(({ label, disabled }, index) => (
                   <Tab key={index} label={label} disabled={disabled} />
                 ))}
               </Tabs>
             </Grid>
             <Grid item xs={12} container alignItems="flex-start" justify="flex-start" spacing={2}>
-              {tabs.filter((x, index) => index === tabIndex).map((item, index)=>(
+              {tabs.filter((x, index) => index === tabIndex).map((item, index) => (
                 <item.component key={index} />
               ))}
             </Grid>

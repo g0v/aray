@@ -87,7 +87,7 @@ export default function ProjectCard({
           /> */}
           <CardContent style={{ height: '100%' }}>
             <Box align="center" justify="center" mb={2}>
-              <ProjectAvatar projectId={project.id} size={100} />
+              <ProjectAvatar project={project} size={100} />
             </Box>
             <Typography gutterBottom variant="h5" component="h2">
               {project.name}

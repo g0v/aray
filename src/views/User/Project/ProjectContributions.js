@@ -63,15 +63,15 @@ export default function ProjectContributions({ project }) {
   return (
     <React.Fragment>
       {canEdit &&
-      <ContributionEditButton
-        mode="add"
-        type="floating-button"
-        item={{ projectId: project.id }}
-        onUpdate={handleRefresh}
-      />}
+        <ContributionEditButton
+          mode="add"
+          type="floating-button"
+          item={{ projectId: project.id }}
+          onUpdate={handleRefresh}
+        />}
       {/* TODO: pagination */}
       <List className={classes.root}>
-        {data.map((item, index)=>(
+        {data.map((item, index) => (
           <ListItemWithWiderSecondaryAction
             key={index}
             dense

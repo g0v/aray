@@ -33,6 +33,8 @@ type Project
   totalCompletedTasks: Int
   totalContributors: Int
 
+  avatarS3Key: String
+
   contributors: [UserProject] @connection(keyName: "byProject", fields: ["id"])
   tags: [ProjectTag] @connection(keyName: "byProject", fields: ["id"])
   categorys: [ProjectCategory] @connection(keyName: "byProject", fields: ["id"])

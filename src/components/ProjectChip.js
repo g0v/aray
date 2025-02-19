@@ -20,19 +20,17 @@ const StyleChip = withStyles({
 })(Chip);
 
 export default function ProjectChip({
-  projectId,
-  projectName,
+  project,
 }) {
   const avatar = <ProjectAvatar
-    projectId={projectId}
-    name={projectName}
+    project={project}
     size={24}
     variant={'square'}
   />;
 
   return (
     <Link
-      to={`/project/${projectId}`}
+      to={`/project/${project.id}`}
       component={RouteLink}
       style={{
         textDecoration: 'none',
@@ -40,7 +38,7 @@ export default function ProjectChip({
     >
       <StyleChip
         avatar={avatar}
-        label={projectName}
+        label={project.name}
         clickable
         color="default"
       />
@@ -49,6 +47,5 @@ export default function ProjectChip({
 }
 
 ProjectChip.propTypes = {
-  projectId: PropTypes.string.isRequired,
-  projectName: PropTypes.string.isRequired,
+  project: PropTypes.object,
 };

@@ -14,7 +14,8 @@
     "react-hooks/rules-of-hooks": "error",
     "react-hooks/exhaustive-deps": "warn",
     "require-jsdoc": 0,
-    "react/display-name": 0
+    "react/display-name": 0,
+    "no-unused-vars": "warn"
   },
   "settings": {
     "react": {

@@ -200,7 +200,7 @@ export default function User({ id: inId, computedMatch, match }) {
         url: data.urlWebsite || '',
         color: 'default',
       }, {
-        icon: <GitHubIcon/>,
+        icon: <GitHubIcon />,
         url: data.urlGithub || '',
         color: 'default',
       }, {
@@ -251,6 +251,8 @@ export default function User({ id: inId, computedMatch, match }) {
     })();
   }, [id, lastUpdatedAt]);
 
+  console.log({ user, id });
+
   if (!user) {
     return <Loading fullScreen={false} />;
   }
@@ -266,27 +268,27 @@ export default function User({ id: inId, computedMatch, match }) {
   const formatDate = (date) => date.substring(0, 10);
 
   return (
-    <Container className={classes.container}>
+    <Container className={classes.container} data-test-id="user-container">
       <Dialog open={open}>
         <Card variant="outlined" ref={componentRef} className={classes.certification}>
           <div>
-            <img src="/assets/images/pring-logo.png"/>
+            <img src="/assets/images/pring-logo.png" />
           </div>
           <p>
             Congratulation to {user.name} for contributing {userProjects.length} project,
-            to finshed {user.totalCompletedTasks} missions in {user.totalCompletedHours} hours.<br/>
-            <br/>
+            to finshed {user.totalCompletedTasks} missions in {user.totalCompletedHours} hours.<br />
+            <br />
             You are the best!......Hooray!!!!!
           </p>
           <h2>
-          Contribution Summarize
+            Contribution Summarize
           </h2>
           Contributed Projects {userProjects.length}, Total Contributed Hours {user.totalCompletedHours},
           Total Completed Tasks {user.totalCompletedTasks}
 
           <Table>
             <TableBody>
-              {userProjects.map((up)=>(
+              {userProjects.map((up) => (
                 <TableRow key={up.project.name}>
                   <TableCell style={{ borderBottom: 'none' }}>{up.project.name}</TableCell>
                   <TableCell style={{ borderBottom: 'none' }}>{up.completedTasks} Missions,
@@ -295,8 +297,8 @@ export default function User({ id: inId, computedMatch, match }) {
               ))}
             </TableBody>
           </Table>
-          <h2>POWERED BY <img className={classes.g0vOnly} src="/assets/images/g0v-only.svg"/></h2>
-          {new Date().getFullYear()}&sdot;{new Date().getMonth()+1}&sdot;{new Date().getDate()}
+          <h2>POWERED BY <img className={classes.g0vOnly} src="/assets/images/g0v-only.svg" /></h2>
+          {new Date().getFullYear()}&sdot;{new Date().getMonth() + 1}&sdot;{new Date().getDate()}
         </Card>
         <DialogActions>
           <Button onClick={handleClose}>Cancel</Button>
@@ -313,8 +315,7 @@ export default function User({ id: inId, computedMatch, match }) {
             <Grid container spacing={2}>
               <Grid item xs={12} align="center">
                 <UserAvatar
-                  username={user.username}
-                  name={user.name}
+                  user={user}
                   size={150}
                   showEditor={true}
                   canEdit={canEdit}
@@ -330,18 +331,18 @@ export default function User({ id: inId, computedMatch, match }) {
                 <RichText data={user.selfIntroduction} />
               </Grid>
               {canEdit &&
-              <Grid item xs={12}>
-                <UserEditButton
-                  mode={'edit'}
-                  item={user}
-                  onUpdate={() => setLastUpdatedAt(Date.now())}
-                />
-              </Grid>}
+                <Grid item xs={12}>
+                  <UserEditButton
+                    mode={'edit'}
+                    item={user}
+                    onUpdate={() => setLastUpdatedAt(Date.now())}
+                  />
+                </Grid>}
               <Grid item xs={12}>
                 <Button fullWidth={true} size='small' variant='outlined' onClick={handleClickOpen}>Certification</Button>
               </Grid>
               <Grid item xs={12}>
-                {details.map((item, index)=>(
+                {details.map((item, index) => (
                   <div key={index} className={classes.listItem}>
                     {item.icon}
                     <span className={classes.listItemText}>
@@ -359,28 +360,28 @@ export default function User({ id: inId, computedMatch, match }) {
                 ))}
               </Grid>
               {links.length > 0 &&
-              <Grid item xs={12}>
-                {links.map((link, index)=>(
-                  <VisitButton
-                    key={index}
-                    url={link.url}
-                    icon={link.icon}
-                    color={link.color}
-                  />
-                ))}
-              </Grid>}
+                <Grid item xs={12}>
+                  {links.map((link, index) => (
+                    <VisitButton
+                      key={index}
+                      url={link.url}
+                      icon={link.icon}
+                      color={link.color}
+                    />
+                  ))}
+                </Grid>}
               <Grid item xs={12}>
                 <Typography variant="body1" gutterBottom>
                   {t('user_tags')}
                   {canEdit &&
-                  <DataJoinEditor
-                    title={t('user_tags')}
-                    mode={'user-tag'}
-                    joinData={user.tags.items}
-                    onUpdate={() => setLastUpdatedAt(Date.now())}
-                  />}
+                    <DataJoinEditor
+                      title={t('user_tags')}
+                      mode={'user-tag'}
+                      joinData={user.tags.items}
+                      onUpdate={() => setLastUpdatedAt(Date.now())}
+                    />}
                 </Typography>
-                {tags.map((item, index)=>(
+                {tags.map((item, index) => (
                   <TagChip key={index} data={item} target="user" />
                 ))}
               </Grid>
@@ -388,14 +389,14 @@ export default function User({ id: inId, computedMatch, match }) {
                 <Typography variant="body1" gutterBottom>
                   {t('user_needs')}
                   {canEdit &&
-                  <DataJoinEditor
-                    title={t('user_needs')}
-                    mode={'user-need'}
-                    joinData={user.needs.items}
-                    onUpdate={() => setLastUpdatedAt(Date.now())}
-                  />}
+                    <DataJoinEditor
+                      title={t('user_needs')}
+                      mode={'user-need'}
+                      joinData={user.needs.items}
+                      onUpdate={() => setLastUpdatedAt(Date.now())}
+                    />}
                 </Typography>
-                {needs.map((item, index)=>(
+                {needs.map((item, index) => (
                   <NeedChip key={index} data={item} target="user" />
                 ))}
               </Grid>
@@ -439,7 +440,7 @@ export default function User({ id: inId, computedMatch, match }) {
               </Typography>
             </Grid>
             <Grid item xs={12} container spacing={2}>
-              {userProjects.map((item, index)=>(
+              {userProjects.map((item, index) => (
                 <Grid item xs={12} sm={6} md={4} lg={3} key={index}>
                   <ProjectCard
                     userProject={item}

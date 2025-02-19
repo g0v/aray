@@ -43,7 +43,7 @@ export async function request(query, params, authMode) {
 
 export async function asyncListAll(operation, input = {}, allItems = []) {
   const res = await request(operation, {
-    limit: 100,
+    limit: 1000,
     ...input,
   });
 

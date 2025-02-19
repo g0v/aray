@@ -159,14 +159,6 @@
         }
       ]
     },
-    "AMPLIFY_function_aray6131feb9PostConfirmation_GROUP": {
-      "usedBy": [
-        {
-          "category": "function",
-          "resourceName": "aray6131feb9PostConfirmation"
-        }
-      ]
-    },
     "AMPLIFY_function_aray6131feb9PostConfirmation_deploymentBucketName": {
       "usedBy": [
         {

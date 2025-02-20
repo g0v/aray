@@ -20,7 +20,7 @@
     "got": "^11.6.2",
     "graphql": "^15.3.0",
     "graphql-2-json-schema": "^0.2.0",
-    "inquirer": "^7.1.0",
+    "inquirer": "^7.3.3",
     "json2csv": "^5.0.1",
     "jsonexport": "^3.0.1",
     "moment": "^2.24.0",

@@ -472,6 +472,7 @@ export const createProject = /* GraphQL */ `
       totalCompletedHours
       totalCompletedTasks
       totalContributors
+      avatarS3Key
       createdAt
       createdBy
       updatedAt
@@ -508,6 +509,7 @@ export const createProject = /* GraphQL */ `
             totalCompletedHours
             totalCompletedTasks
             totalContributors
+            avatarS3Key
             createdAt
             createdBy
             updatedAt
@@ -549,6 +551,7 @@ export const createProject = /* GraphQL */ `
             totalCompletedHours
             totalCompletedTasks
             totalContributors
+            avatarS3Key
             createdAt
             createdBy
             updatedAt
@@ -588,6 +591,7 @@ export const createProject = /* GraphQL */ `
             totalCompletedHours
             totalCompletedTasks
             totalContributors
+            avatarS3Key
             createdAt
             createdBy
             updatedAt
@@ -619,6 +623,7 @@ export const createProject = /* GraphQL */ `
             totalCompletedHours
             totalCompletedTasks
             totalContributors
+            avatarS3Key
             createdAt
             createdBy
             updatedAt
@@ -661,6 +666,7 @@ export const createProject = /* GraphQL */ `
             totalCompletedHours
             totalCompletedTasks
             totalContributors
+            avatarS3Key
             createdAt
             createdBy
             updatedAt
@@ -684,6 +690,7 @@ export const createProject = /* GraphQL */ `
             urlInstagram
             totalCompletedHours
             totalCompletedTasks
+            avatarS3Key
             createdAt
             createdBy
             updatedAt
@@ -726,6 +733,7 @@ export const updateProject = /* GraphQL */ `
       totalCompletedHours
       totalCompletedTasks
       totalContributors
+      avatarS3Key
       createdAt
       createdBy
       updatedAt
@@ -762,6 +770,7 @@ export const updateProject = /* GraphQL */ `
             totalCompletedHours
             totalCompletedTasks
             totalContributors
+            avatarS3Key
             createdAt
             createdBy
             updatedAt
@@ -803,6 +812,7 @@ export const updateProject = /* GraphQL */ `
             totalCompletedHours
             totalCompletedTasks
             totalContributors
+            avatarS3Key
             createdAt
             createdBy
             updatedAt
@@ -842,6 +852,7 @@ export const updateProject = /* GraphQL */ `
             totalCompletedHours
             totalCompletedTasks
             totalContributors
+            avatarS3Key
             createdAt
             createdBy
             updatedAt
@@ -873,6 +884,7 @@ export const updateProject = /* GraphQL */ `
             totalCompletedHours
             totalCompletedTasks
             totalContributors
+            avatarS3Key
             createdAt
             createdBy
             updatedAt
@@ -915,6 +927,7 @@ export const updateProject = /* GraphQL */ `
             totalCompletedHours
             totalCompletedTasks
             totalContributors
+            avatarS3Key
             createdAt
             createdBy
             updatedAt
@@ -938,6 +951,7 @@ export const updateProject = /* GraphQL */ `
             urlInstagram
             totalCompletedHours
             totalCompletedTasks
+            avatarS3Key
             createdAt
             createdBy
             updatedAt
@@ -980,6 +994,7 @@ export const deleteProject = /* GraphQL */ `
       totalCompletedHours
       totalCompletedTasks
       totalContributors
+      avatarS3Key
       createdAt
       createdBy
       updatedAt
@@ -1016,6 +1031,7 @@ export const deleteProject = /* GraphQL */ `
             totalCompletedHours
             totalCompletedTasks
             totalContributors
+            avatarS3Key
             createdAt
             createdBy
             updatedAt
@@ -1057,6 +1073,7 @@ export const deleteProject = /* GraphQL */ `
             totalCompletedHours
             totalCompletedTasks
             totalContributors
+            avatarS3Key
             createdAt
             createdBy
             updatedAt
@@ -1096,6 +1113,7 @@ export const deleteProject = /* GraphQL */ `
             totalCompletedHours
             totalCompletedTasks
             totalContributors
+            avatarS3Key
             createdAt
             createdBy
             updatedAt
@@ -1127,6 +1145,7 @@ export const deleteProject = /* GraphQL */ `
             totalCompletedHours
             totalCompletedTasks
             totalContributors
+            avatarS3Key
             createdAt
             createdBy
             updatedAt
@@ -1169,6 +1188,7 @@ export const deleteProject = /* GraphQL */ `
             totalCompletedHours
             totalCompletedTasks
             totalContributors
+            avatarS3Key
             createdAt
             createdBy
             updatedAt
@@ -1192,6 +1212,7 @@ export const deleteProject = /* GraphQL */ `
             urlInstagram
             totalCompletedHours
             totalCompletedTasks
+            avatarS3Key
             createdAt
             createdBy
             updatedAt
@@ -1251,6 +1272,7 @@ export const createProjectCategory = /* GraphQL */ `
         totalCompletedHours
         totalCompletedTasks
         totalContributors
+        avatarS3Key
         createdAt
         createdBy
         updatedAt
@@ -1370,6 +1392,7 @@ export const updateProjectCategory = /* GraphQL */ `
         totalCompletedHours
         totalCompletedTasks
         totalContributors
+        avatarS3Key
         createdAt
         createdBy
         updatedAt
@@ -1489,6 +1512,7 @@ export const deleteProjectCategory = /* GraphQL */ `
         totalCompletedHours
         totalCompletedTasks
         totalContributors
+        avatarS3Key
         createdAt
         createdBy
         updatedAt
@@ -1609,6 +1633,7 @@ export const createProjectGovernmentAgency = /* GraphQL */ `
         totalCompletedHours
         totalCompletedTasks
         totalContributors
+        avatarS3Key
         createdAt
         createdBy
         updatedAt
@@ -1729,6 +1754,7 @@ export const updateProjectGovernmentAgency = /* GraphQL */ `
         totalCompletedHours
         totalCompletedTasks
         totalContributors
+        avatarS3Key
         createdAt
         createdBy
         updatedAt
@@ -1849,6 +1875,7 @@ export const deleteProjectGovernmentAgency = /* GraphQL */ `
         totalCompletedHours
         totalCompletedTasks
         totalContributors
+        avatarS3Key
         createdAt
         createdBy
         updatedAt
@@ -1967,6 +1994,7 @@ export const createProjectNeed = /* GraphQL */ `
         totalCompletedHours
         totalCompletedTasks
         totalContributors
+        avatarS3Key
         createdAt
         createdBy
         updatedAt
@@ -2085,6 +2113,7 @@ export const updateProjectNeed = /* GraphQL */ `
         totalCompletedHours
         totalCompletedTasks
         totalContributors
+        avatarS3Key
         createdAt
         createdBy
         updatedAt
@@ -2203,6 +2232,7 @@ export const deleteProjectNeed = /* GraphQL */ `
         totalCompletedHours
         totalCompletedTasks
         totalContributors
+        avatarS3Key
         createdAt
         createdBy
         updatedAt
@@ -2313,6 +2343,7 @@ export const createProjectTag = /* GraphQL */ `
         totalCompletedHours
         totalCompletedTasks
         totalContributors
+        avatarS3Key
         createdAt
         createdBy
         updatedAt
@@ -2431,6 +2462,7 @@ export const updateProjectTag = /* GraphQL */ `
         totalCompletedHours
         totalCompletedTasks
         totalContributors
+        avatarS3Key
         createdAt
         createdBy
         updatedAt
@@ -2549,6 +2581,7 @@ export const deleteProjectTag = /* GraphQL */ `
         totalCompletedHours
         totalCompletedTasks
         totalContributors
+        avatarS3Key
         createdAt
         createdBy
         updatedAt
@@ -2816,6 +2849,7 @@ export const createUser = /* GraphQL */ `
       urlInstagram
       totalCompletedHours
       totalCompletedTasks
+      avatarS3Key
       createdAt
       createdBy
       updatedAt
@@ -2855,6 +2889,7 @@ export const createUser = /* GraphQL */ `
             urlInstagram
             totalCompletedHours
             totalCompletedTasks
+            avatarS3Key
             createdAt
             createdBy
             updatedAt
@@ -2889,6 +2924,7 @@ export const createUser = /* GraphQL */ `
             totalCompletedHours
             totalCompletedTasks
             totalContributors
+            avatarS3Key
             createdAt
             createdBy
             updatedAt
@@ -2912,6 +2948,7 @@ export const createUser = /* GraphQL */ `
             urlInstagram
             totalCompletedHours
             totalCompletedTasks
+            avatarS3Key
             createdAt
             createdBy
             updatedAt
@@ -2955,6 +2992,7 @@ export const createUser = /* GraphQL */ `
             urlInstagram
             totalCompletedHours
             totalCompletedTasks
+            avatarS3Key
             createdAt
             createdBy
             updatedAt
@@ -2989,6 +3027,7 @@ export const updateUser = /* GraphQL */ `
       urlInstagram
       totalCompletedHours
       totalCompletedTasks
+      avatarS3Key
       createdAt
       createdBy
       updatedAt
@@ -3028,6 +3067,7 @@ export const updateUser = /* GraphQL */ `
             urlInstagram
             totalCompletedHours
             totalCompletedTasks
+            avatarS3Key
             createdAt
             createdBy
             updatedAt
@@ -3062,6 +3102,7 @@ export const updateUser = /* GraphQL */ `
             totalCompletedHours
             totalCompletedTasks
             totalContributors
+            avatarS3Key
             createdAt
             createdBy
             updatedAt
@@ -3085,6 +3126,7 @@ export const updateUser = /* GraphQL */ `
             urlInstagram
             totalCompletedHours
             totalCompletedTasks
+            avatarS3Key
             createdAt
             createdBy
             updatedAt
@@ -3128,6 +3170,7 @@ export const updateUser = /* GraphQL */ `
             urlInstagram
             totalCompletedHours
             totalCompletedTasks
+            avatarS3Key
             createdAt
             createdBy
             updatedAt
@@ -3162,6 +3205,7 @@ export const deleteUser = /* GraphQL */ `
       urlInstagram
       totalCompletedHours
       totalCompletedTasks
+      avatarS3Key
       createdAt
       createdBy
       updatedAt
@@ -3201,6 +3245,7 @@ export const deleteUser = /* GraphQL */ `
             urlInstagram
             totalCompletedHours
             totalCompletedTasks
+            avatarS3Key
             createdAt
             createdBy
             updatedAt
@@ -3235,6 +3280,7 @@ export const deleteUser = /* GraphQL */ `
             totalCompletedHours
             totalCompletedTasks
             totalContributors
+            avatarS3Key
             createdAt
             createdBy
             updatedAt
@@ -3258,6 +3304,7 @@ export const deleteUser = /* GraphQL */ `
             urlInstagram
             totalCompletedHours
             totalCompletedTasks
+            avatarS3Key
             createdAt
             createdBy
             updatedAt
@@ -3301,6 +3348,7 @@ export const deleteUser = /* GraphQL */ `
             urlInstagram
             totalCompletedHours
             totalCompletedTasks
+            avatarS3Key
             createdAt
             createdBy
             updatedAt
@@ -3351,6 +3399,7 @@ export const createUserNeed = /* GraphQL */ `
         urlInstagram
         totalCompletedHours
         totalCompletedTasks
+        avatarS3Key
         createdAt
         createdBy
         updatedAt
@@ -3437,6 +3486,7 @@ export const updateUserNeed = /* GraphQL */ `
         urlInstagram
         totalCompletedHours
         totalCompletedTasks
+        avatarS3Key
         createdAt
         createdBy
         updatedAt
@@ -3523,6 +3573,7 @@ export const deleteUserNeed = /* GraphQL */ `
         urlInstagram
         totalCompletedHours
         totalCompletedTasks
+        avatarS3Key
         createdAt
         createdBy
         updatedAt
@@ -3612,6 +3663,7 @@ export const createUserProject = /* GraphQL */ `
         totalCompletedHours
         totalCompletedTasks
         totalContributors
+        avatarS3Key
         createdAt
         createdBy
         updatedAt
@@ -3698,6 +3750,7 @@ export const createUserProject = /* GraphQL */ `
         urlInstagram
         totalCompletedHours
         totalCompletedTasks
+        avatarS3Key
         createdAt
         createdBy
         updatedAt
@@ -3787,6 +3840,7 @@ export const updateUserProject = /* GraphQL */ `
         totalCompletedHours
         totalCompletedTasks
         totalContributors
+        avatarS3Key
         createdAt
         createdBy
         updatedAt
@@ -3873,6 +3927,7 @@ export const updateUserProject = /* GraphQL */ `
         urlInstagram
         totalCompletedHours
         totalCompletedTasks
+        avatarS3Key
         createdAt
         createdBy
         updatedAt
@@ -3962,6 +4017,7 @@ export const deleteUserProject = /* GraphQL */ `
         totalCompletedHours
         totalCompletedTasks
         totalContributors
+        avatarS3Key
         createdAt
         createdBy
         updatedAt
@@ -4048,6 +4104,7 @@ export const deleteUserProject = /* GraphQL */ `
         urlInstagram
         totalCompletedHours
         totalCompletedTasks
+        avatarS3Key
         createdAt
         createdBy
         updatedAt
@@ -4134,6 +4191,7 @@ export const createUserTag = /* GraphQL */ `
         urlInstagram
         totalCompletedHours
         totalCompletedTasks
+        avatarS3Key
         createdAt
         createdBy
         updatedAt
@@ -4220,6 +4278,7 @@ export const updateUserTag = /* GraphQL */ `
         urlInstagram
         totalCompletedHours
         totalCompletedTasks
+        avatarS3Key
         createdAt
         createdBy
         updatedAt
@@ -4306,6 +4365,7 @@ export const deleteUserTag = /* GraphQL */ `
         urlInstagram
         totalCompletedHours
         totalCompletedTasks
+        avatarS3Key
         createdAt
         createdBy
         updatedAt

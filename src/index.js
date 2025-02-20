@@ -70,7 +70,7 @@ const theme = createTheme({
 const useStyles = makeStyles((theme) => ({
   content: {
     marginTop: 64,
-    overflow: 'auto',
+    overflow: 'hidden',
     flexGrow: 1,
     // padding: theme.spacing(3),
     transition: theme.transitions.create('margin', {
@@ -78,7 +78,7 @@ const useStyles = makeStyles((theme) => ({
       duration: theme.transitions.duration.leavingScreen,
     }),
     marginLeft: DRAWER_WIDTH,
-    minHeight: 'calc(100vh - 64px)',
+    minHeight: 'calc(100vh - 68px)',
   },
   contentShift: {
     transition: theme.transitions.create('margin', {

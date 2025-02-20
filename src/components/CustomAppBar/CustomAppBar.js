@@ -182,12 +182,12 @@ export default function CustomAppBar({ user = {}, routes, open, onUpdate }) {
             <IconButton
               color="inherit"
               aria-label="toggle drawer"
-              onClick={open ? handleDrawerClose: handleDrawerOpen}
+              onClick={open ? handleDrawerClose : handleDrawerOpen}
               edge="start"
               className={clsx(classes.menuButton)}
             >
               {open ? <VerticalSplitIcon /> : <MenuIcon />}
-            </IconButton>:
+            </IconButton> :
             <Hidden mdUp={true}>
               <IconButton
                 color="inherit"
@@ -237,14 +237,14 @@ export default function CustomAppBar({ user = {}, routes, open, onUpdate }) {
                 aria-controls={open ? 'user-menu' : undefined}
                 aria-haspopup="true"
                 onClick={handleToggleMenu}
-                startIcon={<UserAvatar username={username} size={30} />}
+                startIcon={<UserAvatar user={user} size={30} />}
                 className={classes.titleButton}
               >
                 <Hidden smDown={true}>
                   {username}
                 </Hidden>
               </Button>
-            </React.Fragment>:
+            </React.Fragment> :
             <React.Fragment>
               <Button
                 color="inherit"

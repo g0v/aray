@@ -13,6 +13,9 @@ import Resizer from 'react-image-file-resizer';
 import { useTranslation } from 'react-i18next';
 import { Storage } from 'aws-amplify';
 
+import { updateUser, updateProject } from 'graphql/mutations';
+import { request } from 'utils/graph';
+
 import FormDialog from 'forms/components/FormDialog';
 
 export default function AvatarEditor({
@@ -22,7 +25,9 @@ export default function AvatarEditor({
   type = 'icon',
   size = 24,
   cropSize = 300,
-  s3Key,
+  projectId,
+  username,
+  // s3Key,
   onUpdate,
 }) {
   const { t } = useTranslation();
@@ -42,6 +47,31 @@ export default function AvatarEditor({
   const handleSubmit = async () => {
     try {
       setIsLoading(true);
+
+      let s3Key;
+
+      if (projectId) {
+        s3Key = `projects/${projectId}/avatar.jpeg`;
+
+        await request(updateProject, {
+          input: {
+            id: projectId,
+            avatarS3Key: s3Key,
+          },
+        });
+      }
+
+      if (username) {
+        s3Key = `users/${username}/avatar.png`;
+
+        await request(updateUser, {
+          input: {
+            username,
+            avatarS3Key: s3Key,
+          },
+        });
+      }
+
       const res = await fetch(preview);
       const blob = await res.blob();
       const file = await new Promise((resolve) => {
@@ -60,10 +90,11 @@ export default function AvatarEditor({
       });
 
       await Storage.put(s3Key, file);
+
       setOpen(false);
 
       if (onUpdate) {
-        onUpdate();
+        onUpdate(s3Key);
       }
     } catch (e) {
       console.log(e);
@@ -111,7 +142,7 @@ export default function AvatarEditor({
             </Box>
             <Grid container align="center" justify="center">
               <Button
-                onClick={()=> setOpen(false)}
+                onClick={() => setOpen(false)}
                 variant="outlined"
                 disabled={isLoading}
               >
@@ -138,7 +169,9 @@ AvatarEditor.propTypes = {
   type: PropTypes.string,
   size: PropTypes.number,
   cropSize: PropTypes.number,
-  s3Key: PropTypes.string,
+  projectId: PropTypes.string,
+  username: PropTypes.string,
+  // s3Key: PropTypes.string,
   exportAsSquare: PropTypes.bool,
   onUpdate: PropTypes.func,
 };

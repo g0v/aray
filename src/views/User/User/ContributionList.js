@@ -33,7 +33,7 @@ export default function ContributionList({ data, max = 10 }) {
                 {item.description || ''}
               </Typography>
               <Typography variant="body2" color="textSecondary">
-                <ProjectChip projectId={item.project.id} projectName={item.project.name} /> @ {moment(item.createdAt).format('YYYY-MM-DD')}
+                <ProjectChip project={item.project} /> @ {moment(item.createdAt).format('YYYY-MM-DD')}
               </Typography>
             </React.Fragment>}
           />

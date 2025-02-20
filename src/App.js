@@ -23,7 +23,7 @@ const useStyles = makeStyles((theme) => ({
     display: 'flex',
     overflow: 'hidden',
     backgroundColor: Colors.background.light,
-    minHeight: 'calc(100vh - 64px)',
+    minHeight: 'calc(100vh - 68px)',
   },
 }));
 

@@ -36,7 +36,7 @@ export default function UserProjectList() {
 
     history.push({
       search: `?${Object.keys(newFilters)
-        .map((key)=>`${key}=${key === 'text' ? newFilters[key] : newFilters[key].join(',')}`)
+        .map((key) => `${key}=${key === 'text' ? newFilters[key] : newFilters[key].join(',')}`)
         .join('&')}`,
     });
   };
@@ -119,7 +119,7 @@ export default function UserProjectList() {
               joinData={[]}
               defaultValues={filters.categorys || []}
               onChange={handleFilter('categorys')}
-              onUpdateOptions={()=>{}}
+              onUpdateOptions={() => { }}
               disabled={isLoading}
               showHelperText={false}
             />
@@ -130,7 +130,7 @@ export default function UserProjectList() {
               mode={'project-governmentAgency'}
               defaultValues={filters.governmentAgencies || []}
               onChange={handleFilter('governmentAgencies')}
-              onUpdateOptions={()=>{}}
+              onUpdateOptions={() => { }}
               disabled={isLoading}
               showHelperText={false}
             />
@@ -142,7 +142,7 @@ export default function UserProjectList() {
               joinData={[]}
               defaultValues={filters.tags || []}
               onChange={handleFilter('tags')}
-              onUpdateOptions={()=>{}}
+              onUpdateOptions={() => { }}
               disabled={isLoading}
               showHelperText={false}
             />
@@ -153,7 +153,7 @@ export default function UserProjectList() {
               mode={'project-need'}
               defaultValues={filters.needs || []}
               onChange={handleFilter('needs')}
-              onUpdateOptions={()=>{}}
+              onUpdateOptions={() => { }}
               disabled={isLoading}
               showHelperText={false}
             />
@@ -164,7 +164,7 @@ export default function UserProjectList() {
               label={t('projectList_searchByText')}
               variant="outlined"
               value={filters.text}
-              onChange={(e)=>{
+              onChange={(e) => {
                 handleFilter('text')(e.target.value.toLowerCase());
               }}
               fullWidth
@@ -173,7 +173,7 @@ export default function UserProjectList() {
         </Grid>
       </Card>
       <Grid container spacing={2}>
-        {filteredProjects.map((item, index)=>(
+        {filteredProjects.map((item, index) => (
           <Grid item xs={12} sm={6} md={3} lg={2} key={index}>
             <ProjectCard project={item} />
           </Grid>

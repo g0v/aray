@@ -1,12 +1,15 @@
 import React, { useState, useEffect } from 'react';
 import PropTypes from 'prop-types';
-import { Storage } from 'aws-amplify';
 import { useTranslation } from 'react-i18next';
 
 import Avatar from 'components/Avatar';
 
+import { getUser } from 'graphql/queries';
+import { request } from 'utils/graph';
+
 export default function UserAvatar({
   username,
+  user: inUser,
   size = 24,
   variant = 'circular',
   showEditor = false,
@@ -14,24 +17,18 @@ export default function UserAvatar({
 }) {
   const { t } = useTranslation();
 
-  const [uri, setUri] = useState();
-  const [s3Key, setS3Key] = useState();
-  const [lastUpdatedAt, setLastUpdatedAt] = useState(Date.now());
-
-  useEffect(() => {
-    if (!s3Key) return;
-
-    (async () => {
-      const uri = await Storage.get(s3Key);
-      setUri(uri);
-    })();
-  }, [lastUpdatedAt, s3Key]);
+  const [user, setUser] = useState(inUser);
 
   useEffect(() => {
     if (!username) return;
 
-    setS3Key(`users/${username}/avatar.png`);
+    (async () => {
+      const { data: { getUser: data } } = await request(getUser, { username });
+      setUser(data);
+    })();
   }, [username]);
+
+  if (!user) return null;
 
   return (
     <Avatar
@@ -39,18 +36,15 @@ export default function UserAvatar({
       variant={variant}
       showEditor={showEditor}
       canEdit={canEdit}
-      src={uri}
-      // fallbackSrc={`https://avatars.dicebear.com/api/bottts/${username}.svg`}
-      fallbackSrc={`https://robohash.org/${username}.png?set=set4`}
-      s3Key={s3Key}
+      username={user.username}
+      s3Key={user.avatarS3Key}
       editorTitle={t('userAvatar_updateAvatar')}
-      onUpdate={() => setLastUpdatedAt(Date.now())}
     />);
 }
 
 UserAvatar.propTypes = {
-  username: PropTypes.string.isRequired,
-  name: PropTypes.string,
+  user: PropTypes.object.isRequired,
+  username: PropTypes.string,
   size: PropTypes.number,
   variant: PropTypes.string,
   showEditor: PropTypes.bool,

@@ -25,6 +25,9 @@ export default function MyProjectList() {
     (async () => {
       const username = localStorage.getItem('app:username');
       const { data: { getUser: userData } } = await request(getUser, { username });
+
+      if (!userData) return;
+
       console.log(userData);
       const projects = userData.projects.items;
       setOwnProjects(projects.filter(({ role }) => role === 'manager'));
@@ -40,7 +43,7 @@ export default function MyProjectList() {
         {t('myProjectList_myProjects')}
       </Typography>
       <Grid container spacing={2}>
-        {ownProjects.map((item, index)=>(
+        {ownProjects.map((item, index) => (
           <Grid item xs={12} sm={6} md={4} lg={3} key={index}>
             <ProjectCard project={item.project} />
           </Grid>
@@ -50,7 +53,7 @@ export default function MyProjectList() {
         {t('myProjectList_otherProjects')}
       </Typography>
       <Grid container spacing={2}>
-        {otherProjects.map((item, index)=>(
+        {otherProjects.map((item, index) => (
           <Grid item xs={12} sm={6} md={4} lg={3} key={index}>
             <ProjectCard project={item.project} />
           </Grid>

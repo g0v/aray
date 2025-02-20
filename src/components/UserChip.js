@@ -24,7 +24,6 @@ export default function UserChip({
 }) {
   const avatar = <UserAvatar
     username={username}
-    name={username}
     // size={24}
     // variant={'square'}
   />;

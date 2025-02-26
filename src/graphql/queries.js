@@ -369,6 +369,140 @@ export const getEventProject = /* GraphQL */ `
       createdBy
       updatedAt
       updatedBy
+      event {
+        id
+        projectId
+        name
+        type
+        description
+        startDate
+        endDate
+        duration
+        hosts
+        annouceToContributors
+        guestLimit
+        attendanceCount
+        rsvpQuestion
+        rsvpLimit
+        rsvpOpenTime
+        rsvpCloseTime
+        location
+        link
+        createdAt
+        createdBy
+        updatedAt
+        updatedBy
+      }
+      project {
+        id
+        status
+        owner
+        managers
+        name
+        altName
+        summary
+        description
+        intros {
+          languageCode
+          name
+          altName
+          summary
+          description
+        }
+        slackChannel
+        slackChannelUrl
+        links {
+          name
+          description
+          url
+        }
+        totalCompletedHours
+        totalCompletedTasks
+        totalContributors
+        avatarS3Key
+        createdAt
+        createdBy
+        updatedAt
+        updatedBy
+        events {
+          items {
+            id
+            eventId
+            projectId
+            status
+            title
+            description
+            createdAt
+            createdBy
+            updatedAt
+            updatedBy
+          }
+          nextToken
+        }
+        categorys {
+          items {
+            id
+            projectId
+            categoryId
+            createdAt
+            createdBy
+            updatedAt
+            updatedBy
+          }
+          nextToken
+        }
+        governmentAgencies {
+          items {
+            id
+            projectId
+            governmentAgencyId
+            createdAt
+            createdBy
+            updatedAt
+            updatedBy
+          }
+          nextToken
+        }
+        needs {
+          items {
+            id
+            projectId
+            needId
+            createdAt
+            createdBy
+            updatedAt
+            updatedBy
+          }
+          nextToken
+        }
+        tags {
+          items {
+            id
+            projectId
+            tagId
+            createdAt
+            createdBy
+            updatedAt
+            updatedBy
+          }
+          nextToken
+        }
+        contributors {
+          items {
+            id
+            projectId
+            username
+            role
+            completedHours
+            completedTasks
+            createdAt
+            createdBy
+            updatedAt
+            updatedBy
+          }
+          nextToken
+        }
+      }
     }
   }
 `;
@@ -390,6 +524,80 @@ export const listEventProjects = /* GraphQL */ `
         createdBy
         updatedAt
         updatedBy
+        event {
+          id
+          projectId
+          name
+          type
+          description
+          startDate
+          endDate
+          duration
+          hosts
+          annouceToContributors
+          guestLimit
+          attendanceCount
+          rsvpQuestion
+          rsvpLimit
+          rsvpOpenTime
+          rsvpCloseTime
+          location
+          link
+          createdAt
+          createdBy
+          updatedAt
+          updatedBy
+        }
+        project {
+          id
+          status
+          owner
+          managers
+          name
+          altName
+          summary
+          description
+          intros {
+            languageCode
+            name
+            altName
+            summary
+            description
+          }
+          slackChannel
+          slackChannelUrl
+          links {
+            name
+            description
+            url
+          }
+          totalCompletedHours
+          totalCompletedTasks
+          totalContributors
+          avatarS3Key
+          createdAt
+          createdBy
+          updatedAt
+          updatedBy
+          events {
+            nextToken
+          }
+          categorys {
+            nextToken
+          }
+          governmentAgencies {
+            nextToken
+          }
+          needs {
+            nextToken
+          }
+          tags {
+            nextToken
+          }
+          contributors {
+            nextToken
+          }
+        }
       }
       nextToken
     }
@@ -423,6 +631,185 @@ export const getEventProjectsByEventIdByStatus = /* GraphQL */ `
         createdBy
         updatedAt
         updatedBy
+        event {
+          id
+          projectId
+          name
+          type
+          description
+          startDate
+          endDate
+          duration
+          hosts
+          annouceToContributors
+          guestLimit
+          attendanceCount
+          rsvpQuestion
+          rsvpLimit
+          rsvpOpenTime
+          rsvpCloseTime
+          location
+          link
+          createdAt
+          createdBy
+          updatedAt
+          updatedBy
+        }
+        project {
+          id
+          status
+          owner
+          managers
+          name
+          altName
+          summary
+          description
+          intros {
+            languageCode
+            name
+            altName
+            summary
+            description
+          }
+          slackChannel
+          slackChannelUrl
+          links {
+            name
+            description
+            url
+          }
+          totalCompletedHours
+          totalCompletedTasks
+          totalContributors
+          avatarS3Key
+          createdAt
+          createdBy
+          updatedAt
+          updatedBy
+          events {
+            nextToken
+          }
+          categorys {
+            nextToken
+          }
+          governmentAgencies {
+            nextToken
+          }
+          needs {
+            nextToken
+          }
+          tags {
+            nextToken
+          }
+          contributors {
+            nextToken
+          }
+        }
+      }
+      nextToken
+    }
+  }
+`;
+export const getEventProjectsByProjectId = /* GraphQL */ `
+  query GetEventProjectsByProjectId(
+    $projectId: ID
+    $sortDirection: ModelSortDirection
+    $filter: ModelEventProjectFilterInput
+    $limit: Int
+    $nextToken: String
+  ) {
+    getEventProjectsByProjectId(
+      projectId: $projectId
+      sortDirection: $sortDirection
+      filter: $filter
+      limit: $limit
+      nextToken: $nextToken
+    ) {
+      items {
+        id
+        eventId
+        projectId
+        status
+        title
+        description
+        createdAt
+        createdBy
+        updatedAt
+        updatedBy
+        event {
+          id
+          projectId
+          name
+          type
+          description
+          startDate
+          endDate
+          duration
+          hosts
+          annouceToContributors
+          guestLimit
+          attendanceCount
+          rsvpQuestion
+          rsvpLimit
+          rsvpOpenTime
+          rsvpCloseTime
+          location
+          link
+          createdAt
+          createdBy
+          updatedAt
+          updatedBy
+        }
+        project {
+          id
+          status
+          owner
+          managers
+          name
+          altName
+          summary
+          description
+          intros {
+            languageCode
+            name
+            altName
+            summary
+            description
+          }
+          slackChannel
+          slackChannelUrl
+          links {
+            name
+            description
+            url
+          }
+          totalCompletedHours
+          totalCompletedTasks
+          totalContributors
+          avatarS3Key
+          createdAt
+          createdBy
+          updatedAt
+          updatedBy
+          events {
+            nextToken
+          }
+          categorys {
+            nextToken
+          }
+          governmentAgencies {
+            nextToken
+          }
+          needs {
+            nextToken
+          }
+          tags {
+            nextToken
+          }
+          contributors {
+            nextToken
+          }
+        }
       }
       nextToken
     }
@@ -531,6 +918,65 @@ export const getProject = /* GraphQL */ `
       createdBy
       updatedAt
       updatedBy
+      events {
+        items {
+          id
+          eventId
+          projectId
+          status
+          title
+          description
+          createdAt
+          createdBy
+          updatedAt
+          updatedBy
+          event {
+            id
+            projectId
+            name
+            type
+            description
+            startDate
+            endDate
+            duration
+            hosts
+            annouceToContributors
+            guestLimit
+            attendanceCount
+            rsvpQuestion
+            rsvpLimit
+            rsvpOpenTime
+            rsvpCloseTime
+            location
+            link
+            createdAt
+            createdBy
+            updatedAt
+            updatedBy
+          }
+          project {
+            id
+            status
+            owner
+            managers
+            name
+            altName
+            summary
+            description
+            slackChannel
+            slackChannelUrl
+            totalCompletedHours
+            totalCompletedTasks
+            totalContributors
+            avatarS3Key
+            createdAt
+            createdBy
+            updatedAt
+            updatedBy
+          }
+        }
+        nextToken
+      }
       categorys {
         items {
           id
@@ -794,6 +1240,152 @@ export const listProjects = /* GraphQL */ `
         createdBy
         updatedAt
         updatedBy
+        events {
+          items {
+            id
+            eventId
+            projectId
+            status
+            title
+            description
+            createdAt
+            createdBy
+            updatedAt
+            updatedBy
+          }
+          nextToken
+        }
+        categorys {
+          items {
+            id
+            projectId
+            categoryId
+            createdAt
+            createdBy
+            updatedAt
+            updatedBy
+          }
+          nextToken
+        }
+        governmentAgencies {
+          items {
+            id
+            projectId
+            governmentAgencyId
+            createdAt
+            createdBy
+            updatedAt
+            updatedBy
+          }
+          nextToken
+        }
+        needs {
+          items {
+            id
+            projectId
+            needId
+            createdAt
+            createdBy
+            updatedAt
+            updatedBy
+          }
+          nextToken
+        }
+        tags {
+          items {
+            id
+            projectId
+            tagId
+            createdAt
+            createdBy
+            updatedAt
+            updatedBy
+          }
+          nextToken
+        }
+        contributors {
+          items {
+            id
+            projectId
+            username
+            role
+            completedHours
+            completedTasks
+            createdAt
+            createdBy
+            updatedAt
+            updatedBy
+          }
+          nextToken
+        }
+      }
+      nextToken
+    }
+  }
+`;
+export const getProjectsByOwnerByStatus = /* GraphQL */ `
+  query GetProjectsByOwnerByStatus(
+    $owner: String
+    $status: ModelStringKeyConditionInput
+    $sortDirection: ModelSortDirection
+    $filter: ModelProjectFilterInput
+    $limit: Int
+    $nextToken: String
+  ) {
+    getProjectsByOwnerByStatus(
+      owner: $owner
+      status: $status
+      sortDirection: $sortDirection
+      filter: $filter
+      limit: $limit
+      nextToken: $nextToken
+    ) {
+      items {
+        id
+        status
+        owner
+        managers
+        name
+        altName
+        summary
+        description
+        intros {
+          languageCode
+          name
+          altName
+          summary
+          description
+        }
+        slackChannel
+        slackChannelUrl
+        links {
+          name
+          description
+          url
+        }
+        totalCompletedHours
+        totalCompletedTasks
+        totalContributors
+        avatarS3Key
+        createdAt
+        createdBy
+        updatedAt
+        updatedBy
+        events {
+          items {
+            id
+            eventId
+            projectId
+            status
+            title
+            description
+            createdAt
+            createdBy
+            updatedAt
+            updatedBy
+          }
+          nextToken
+        }
         categorys {
           items {
             id
@@ -912,6 +1504,21 @@ export const getProjectCategory = /* GraphQL */ `
         createdBy
         updatedAt
         updatedBy
+        events {
+          items {
+            id
+            eventId
+            projectId
+            status
+            title
+            description
+            createdAt
+            createdBy
+            updatedAt
+            updatedBy
+          }
+          nextToken
+        }
         categorys {
           items {
             id
@@ -1038,6 +1645,9 @@ export const listProjectCategorys = /* GraphQL */ `
           createdBy
           updatedAt
           updatedBy
+          events {
+            nextToken
+          }
           categorys {
             nextToken
           }
@@ -1110,6 +1720,21 @@ export const getProjectGovernmentAgency = /* GraphQL */ `
         createdBy
         updatedAt
         updatedBy
+        events {
+          items {
+            id
+            eventId
+            projectId
+            status
+            title
+            description
+            createdAt
+            createdBy
+            updatedAt
+            updatedBy
+          }
+          nextToken
+        }
         categorys {
           items {
             id
@@ -1237,6 +1862,9 @@ export const listProjectGovernmentAgencys = /* GraphQL */ `
           createdBy
           updatedAt
           updatedBy
+          events {
+            nextToken
+          }
           categorys {
             nextToken
           }
@@ -1307,6 +1935,21 @@ export const getProjectNeed = /* GraphQL */ `
         createdBy
         updatedAt
         updatedBy
+        events {
+          items {
+            id
+            eventId
+            projectId
+            status
+            title
+            description
+            createdAt
+            createdBy
+            updatedAt
+            updatedBy
+          }
+          nextToken
+        }
         categorys {
           items {
             id
@@ -1428,6 +2071,9 @@ export const listProjectNeeds = /* GraphQL */ `
           createdBy
           updatedAt
           updatedBy
+          events {
+            nextToken
+          }
           categorys {
             nextToken
           }
@@ -1490,6 +2136,21 @@ export const getProjectTag = /* GraphQL */ `
         createdBy
         updatedAt
         updatedBy
+        events {
+          items {
+            id
+            eventId
+            projectId
+            status
+            title
+            description
+            createdAt
+            createdBy
+            updatedAt
+            updatedBy
+          }
+          nextToken
+        }
         categorys {
           items {
             id
@@ -1611,6 +2272,9 @@ export const listProjectTags = /* GraphQL */ `
           createdBy
           updatedAt
           updatedBy
+          events {
+            nextToken
+          }
           categorys {
             nextToken
           }
@@ -2267,6 +2931,21 @@ export const getUserProject = /* GraphQL */ `
         createdBy
         updatedAt
         updatedBy
+        events {
+          items {
+            id
+            eventId
+            projectId
+            status
+            title
+            description
+            createdAt
+            createdBy
+            updatedAt
+            updatedBy
+          }
+          nextToken
+        }
         categorys {
           items {
             id
@@ -2446,6 +3125,9 @@ export const listUserProjects = /* GraphQL */ `
           createdBy
           updatedAt
           updatedBy
+          events {
+            nextToken
+          }
           categorys {
             nextToken
           }

@@ -41,11 +41,13 @@ type Project
   categorys: [ProjectCategory] @connection(keyName: "byProject", fields: ["id"])
   needs: [ProjectNeed] @connection(keyName: "byProject", fields: ["id"])
   governmentAgencies: [ProjectGovernmentAgency] @connection(keyName: "byProject", fields: ["id"])
-
+  events: [EventProject] @connection(keyName: "byProject", fields: ["id"])
   createdAt: AWSDateTime!
   createdBy: String!
   updatedAt: AWSDateTime!
   updatedBy: String!
+
+ 
 }
 
 enum ProjectStatus {

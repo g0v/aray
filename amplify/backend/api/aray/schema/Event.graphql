@@ -11,7 +11,6 @@ type Event
 {
   id: ID!
   projectId: ID!
-
   # https://www.meetup.com/meetup_api/docs/:urlname/events/#create
   name: String!
   type: String! # ex: 會議 活動 表演

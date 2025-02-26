@@ -2,6 +2,7 @@ type EventProject
   @model
   @key(name: "byEventIdByStatus",
     fields: ["eventId","status"], queryField: "getEventProjectsByEventIdByStatus")
+  @key(name: "byProject", fields: ["projectId"], queryField: "getEventProjectsByProjectId")
   @auth(rules: [
     { allow: public, operations: [read] },
     # update through custom resovler (need to update the event.attendanceCount)
@@ -15,7 +16,8 @@ type EventProject
   status: EventProjectStatus!
   title: String
   description: String
-
+  event: Event! @connection(fields: ["eventId"])
+  project: Project! @connection(fields: ["projectId"])
   createdAt: AWSDateTime!
   createdBy: String!
   updatedAt: AWSDateTime!

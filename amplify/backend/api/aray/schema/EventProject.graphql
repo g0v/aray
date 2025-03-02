@@ -20,7 +20,7 @@ type EventProject
   project: Project! @connection(fields: ["projectId"])
   links: [EventProjectLink]
   createdAt: AWSDateTime!
-  createdBy: String!
+  createdBy: ID!
   updatedAt: AWSDateTime!
   updatedBy: String!
 }

@@ -64,7 +64,7 @@ function formatEventName(eventName) {
 }
 
 function createEventProject(event, arayProjects, g0vProject) {
-  return {
+  eventProject = {
     id: crypto.randomUUID(),
     eventId: event.id, // from kktix event
     projectId: arayProjects.id, // from arayProjects
@@ -73,8 +73,11 @@ function createEventProject(event, arayProjects, g0vProject) {
     links: getLinks(g0vProject),
     description: g0vProject["three brief"],
     createdAt: moment(g0vProject["date"]).utc(8).toISOString(),
-    createdBy: getUserId(g0vProject["owner name"]),
-  };
+  }
+  if(getUserId(g0vProject["owner name"])) {
+    eventProject['createdBy'] = getUserId(g0vProject["owner name"]);
+  }
+  return eventProject
 }
 
 function getProjectFromAwesome(arayProjectName) {
@@ -127,7 +130,7 @@ function getUserId(name) {
   }
   console.log('getUserId',name)
   const user = users.find((user) => user.name.toLowerCase() === name.toLowerCase());
-  return user ? user.username  : '';
+  return user ? user.username  : 'SEED';
 }
 
 fs.writeFile(

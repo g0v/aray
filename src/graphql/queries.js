@@ -365,6 +365,11 @@ export const getEventProject = /* GraphQL */ `
       status
       title
       description
+      links {
+        name
+        description
+        url
+      }
       createdAt
       createdBy
       updatedAt
@@ -520,6 +525,11 @@ export const listEventProjects = /* GraphQL */ `
         status
         title
         description
+        links {
+          name
+          description
+          url
+        }
         createdAt
         createdBy
         updatedAt
@@ -627,6 +637,11 @@ export const getEventProjectsByEventIdByStatus = /* GraphQL */ `
         status
         title
         description
+        links {
+          name
+          description
+          url
+        }
         createdAt
         createdBy
         updatedAt
@@ -734,6 +749,11 @@ export const getEventProjectsByProjectId = /* GraphQL */ `
         status
         title
         description
+        links {
+          name
+          description
+          url
+        }
         createdAt
         createdBy
         updatedAt
@@ -928,6 +948,11 @@ export const getProject = /* GraphQL */ `
           status
           title
           description
+          links {
+            name
+            description
+            url
+          }
           createdAt
           createdBy
           updatedAt

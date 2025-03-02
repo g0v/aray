@@ -4,6 +4,9 @@ const events = require('../data/scripts/aray-events.json');
 const projects = require('../data/scripts/aray-projects.json');
 const g0vDB = require('./g0vDb.json');
 const awesomeProjects = require('./projects.json');
+const moment = require('moment');
+const users = require('../data/scripts/aray-users.json');
+const { get } = require('node:http');
 
 /**
  * 這個檔案是用來處理每次大松活動與提案 mapping
@@ -67,6 +70,10 @@ function createEventProject(event, arayProjects, g0vProject) {
     projectId: arayProjects.id, // from arayProjects
     status: 'confirmed',
     title: g0vProject.project, // from g0v project
+    links: getLinks(g0vProject),
+    description: g0vProject["three brief"],
+    createdAt: moment(g0vProject["date"]).utc(8).toISOString(),
+    createdBy: getUserId(g0vProject["owner name"]),
   };
 }
 
@@ -83,6 +90,45 @@ function getEventFromAray(eventName) {
   return events.find((event) => event.name.toLowerCase().indexOf(eventName.toLowerCase()) > -1);
 }
 
+function getLinks(g0vProject) {
+  const guideline = isURL(g0vProject["guideline"]);
+  const document = isURL(g0vProject["other document"]);
+  const document2 = isURL(g0vProject["other document 2"]);
+  const document3 = isURL(g0vProject["other document 3"]);
+  const video = isURL(g0vProject["video link"]);
+  const links = []
+  if(guideline) links.push(formatLink(guideline));
+  if(document) links.push(formatLink(document));
+  if(document2) links.push(formatLink(document2));
+  if(document3) links.push(formatLink(document3));
+  if(video) links.push(formatLink(video));
+  return links;
+}
+
+function isURL(link) {
+try {
+  return new URL(link).href;
+} catch (e) {
+  return false;
+}
+}
+
+function formatLink(link) {
+  return {
+      name: link.indexOf("http") != 0 ? link : new URL(link).host,
+      link,
+  };
+}
+
+function getUserId(name) {
+  if (!name) return null;
+  if(name.indexOf(',') > -1) {
+    name = name.split(',')[0];
+  }
+  console.log('getUserId',name)
+  const user = users.find((user) => user.name.toLowerCase() === name.toLowerCase());
+  return user ? user.username  : '';
+}
 
 fs.writeFile(
   './data/scripts/aray-events-projects.json',

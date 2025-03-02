@@ -18,6 +18,7 @@ type EventProject
   description: String
   event: Event! @connection(fields: ["eventId"])
   project: Project! @connection(fields: ["projectId"])
+  links: [EventProjectLink]
   createdAt: AWSDateTime!
   createdBy: String!
   updatedAt: AWSDateTime!
@@ -27,4 +28,10 @@ type EventProject
 enum EventProjectStatus {
   pending
   confirmed
+}
+
+type EventProjectLink {
+  name: String!
+  description: String
+  url: String!
 }

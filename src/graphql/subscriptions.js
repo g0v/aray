@@ -229,6 +229,11 @@ export const onCreateEventProject = /* GraphQL */ `
       status
       title
       description
+      links {
+        name
+        description
+        url
+      }
       createdAt
       createdBy
       updatedAt
@@ -379,6 +384,11 @@ export const onUpdateEventProject = /* GraphQL */ `
       status
       title
       description
+      links {
+        name
+        description
+        url
+      }
       createdAt
       createdBy
       updatedAt
@@ -529,6 +539,11 @@ export const onDeleteEventProject = /* GraphQL */ `
       status
       title
       description
+      links {
+        name
+        description
+        url
+      }
       createdAt
       createdBy
       updatedAt
@@ -789,6 +804,11 @@ export const onCreateProject = /* GraphQL */ `
           status
           title
           description
+          links {
+            name
+            description
+            url
+          }
           createdAt
           createdBy
           updatedAt
@@ -1106,6 +1126,11 @@ export const onUpdateProject = /* GraphQL */ `
           status
           title
           description
+          links {
+            name
+            description
+            url
+          }
           createdAt
           createdBy
           updatedAt
@@ -1423,6 +1448,11 @@ export const onDeleteProject = /* GraphQL */ `
           status
           title
           description
+          links {
+            name
+            description
+            url
+          }
           createdAt
           createdBy
           updatedAt

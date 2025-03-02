@@ -972,7 +972,7 @@
     "status": "active",
     "name": "Mg Lee",
     "email": "",
-    "slackId": "",
+    "slackId": "mglee",
     "githubId": ""
   },
   {
@@ -980,7 +980,7 @@
     "status": "active",
     "name": "Michael LI",
     "email": "",
-    "slackId": "",
+    "slackId": "@Michael_LI",
     "githubId": ""
   },
   {
@@ -2448,9 +2448,9 @@
     "githubId": ""
   },
   {
-    "username": "易樓網_aef066f4-3c91-4334-bd17-b8c142608bb6",
+    "username": "易樓網 鄭淑麗_aef066f4-3c91-4334-bd17-b8c142608bb6",
     "status": "active",
-    "name": "易樓網",
+    "name": "易樓網 鄭淑麗",
     "email": "",
     "slackId": "",
     "githubId": ""
@@ -3196,7 +3196,7 @@
     "status": "active",
     "name": "Ted",
     "email": "",
-    "slackId": "",
+    "slackId": "@Ted (顥天)",
     "githubId": ""
   },
   {
@@ -3212,7 +3212,7 @@
     "status": "active",
     "name": "Yvonne",
     "email": "",
-    "slackId": "",
+    "slackId": "@yvonne",
     "githubId": ""
   },
   {
@@ -3620,7 +3620,7 @@
     "status": "active",
     "name": "Jasmine",
     "email": "",
-    "slackId": "",
+    "slackId": "@Jasmine Ta",
     "githubId": ""
   },
   {
@@ -4069,6 +4069,106 @@
     "name": "Phoebe",
     "email": "",
     "slackId": "@phoebe",
+    "githubId": ""
+  },
+  {
+  "username": "健保署_b317582a-4ed2-4022-9c17-411708bb3242",
+  "status": "active",
+  "name": "健保署",
+  "email": "",
+  "slackId": "",
+  "githubId": ""
+  },{
+    "username": "淵智_a6b78e4a-30b3-4a6f-93a2-6e0877971308",
+    "status": "active",
+    "name": "淵智",
+    "email": "",
+    "slackId": "",
+    "githubId": ""
+
+  },{
+  "username": "BertWang_fec25da5-abca-469b-b1b5-5dd17a14927c",
+  "status": "active",
+  "name": "BertWang",
+  "email": "",
+  "slackId": "",
+  "githubId": ""
+  },{
+    "username": "Charlie_9feddf96-1ffd-4338-b9d5-6fa2b216cfe4",
+    "status": "active",  
+    "name": "Charlie",
+    "email": "",
+    "slackId": "",
+    "githubId": ""
+  },{
+    "username": "Jason Kuan_e63eaaab-8a2c-469a-ba20-43e0b6f839f0",
+    "status": "active",  
+    "name": "Jason Kuan",
+    "email": "",
+    "slackId": "",
+    "githubId": ""
+  },{
+    "username": "Lafin_1c1c56d3-6dff-49a2-b75e-1fbec0c9ad7a",
+    "status": "active",  
+    "name": "Lafin",
+    "email": "",
+    "slackId": "",
+    "githubId": ""
+  },{
+  "username": "wildjcrt_6fe71f85-9749-4a04-afba-fe92c696c2b6",
+    "status": "active",  
+    "name": "wildjcrt",
+    "email": "",
+    "slackId": "@wildjcrt",
+    "githubId": ""
+  },{
+  "username": "yan_58363c61-0aa8-4929-94d8-c703ce7b7f9f",
+    "status": "active",  
+    "name": "yan",
+    "email": "",
+    "slackId": "",
+    "githubId": ""
+  },{
+    "username": "宗浩_47363e73-419d-40ef-bd63-a84ad398d92a",
+    "status": "active",  
+    "name": "宗浩",
+    "email": "",
+    "slackId": "",
+    "githubId": ""
+  },{
+    "username": "monjour_02499244-5290-4049-82c4-c54744039647",
+    "status": "active",  
+    "name": "monjour",
+    "email": "",
+    "slackId": "",
+    "githubId": ""
+  },{
+    "username": "weting_05d62858-2251-4312-ac4d-b782e13fcd6b",
+    "status": "active",  
+    "name": "weting",
+    "email": "",
+    "slackId": "",
+    "githubId": ""
+  },{
+    "username": "潘奕濬_60cadaf7-777a-423e-b6bc-33de5e87d862",
+    "status": "active",  
+    "name": "潘奕濬",
+    "email": "",
+    "slackId": "",
+    "githubId": ""
+  },{
+    "username": "易樓網_ad596fa1-d452-46c6-8c35-77ea96a095b6",
+    "status": "active",  
+    "name": "易樓網",
+    "email": "",
+    "slackId": "",
+    "githubId": ""
+  },{
+    "username": "Cartus_257ff97d-fa5a-4208-b5bb-1a85f0c6e295",
+    "status": "active",  
+    "name": "Cartus",
+    "email": "",
+    "slackId": "",
     "githubId": ""
   }
 ]

@@ -22,6 +22,18 @@ const useStyles = makeStyles((theme) => ({
   },
 }));
 
+const formatEventName = (eventName) => {
+  const splitReg = new RegExp('(\\s[\\|｜]\\s)|｜');
+  const exec = splitReg.exec(eventName);
+  if (!exec) {
+    return { nth: eventName, name: eventName };
+  } else {
+    const splitStr = exec[0];
+    const [hackath, name] = eventName.split(splitStr);
+    return { nth: hackath, name };
+  }
+};
+
 export default function ProjectPastProposals({ project }) {
   const classes = useStyles();
   const { t } = useTranslation();
@@ -36,7 +48,7 @@ export default function ProjectPastProposals({ project }) {
       } = await request(getEventProjectsByProjectId, {
         projectId: project.id,
       });
-      results.sort((first, second ) => new Date(second.event.startDate) - new Date(first.event.startDate));
+      results.sort((first, second) => new Date(second.event.startDate) - new Date(first.event.startDate));
       setData(results);
     })();
   }, [project]);
@@ -53,8 +65,10 @@ export default function ProjectPastProposals({ project }) {
       <TableBody>
         {data.map((item) => (
           <TableRow key={item.id}>
-            <TableCell>{item.event.name}</TableCell>
-            <TableCell>{moment(item.event.startDate).format('YYYY-MM-DD')}</TableCell>
+            <TableCell>{formatEventName(item.event.name).nth}</TableCell>
+            <TableCell>
+              {moment(item.event.startDate).format('YYYY-MM-DD')}
+            </TableCell>
             <TableCell>{item.title}</TableCell>
           </TableRow>
         ))}

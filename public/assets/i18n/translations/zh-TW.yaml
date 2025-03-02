@@ -58,6 +58,8 @@ project_managers: 共同管理員
 project_main: 首頁
 project_slackChannel: Slack 頻道
 project_events: 行事曆
+project_proposalName: 提案名稱
+
 
 projectManagerEditor_update: 更新
 projectManagerEditor_title: 共同管理員
@@ -164,3 +166,6 @@ contributionFormSchema_description: 內容
 contributionFormSchema_hours: 時數
 
 landing_page_description: 
+
+event_name: 活動名稱
+event_StartDate: 活動日期

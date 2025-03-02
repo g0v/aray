@@ -32,6 +32,7 @@ import ProjectOwnerEditor from 'components/ProjectOwnerEditor';
 import ProjectManagerEditor from 'components/ProjectManagerEditor';
 import Loading from 'components/Loading';
 import EventCalendar from 'components/EventCalendar';
+import ProjectPastProposals from './ProjectPastProposals';
 
 const useStyles = makeStyles((theme) => ({
   container: {
@@ -119,12 +120,10 @@ export default function Project({ id: inId, computedMatch, match }) {
       label: t('project_tasks'),
       component: () => <ProjectTasks project={project} />,
     },
-    // {
-    //   label: t('project_pastProposals'),
-    //   component: <React.Fragment>
-    //   </React.Fragment>,
-    //   disabled: true,
-    // },
+    {
+      label: t('project_pastProposals'),
+      component: () => <ProjectPastProposals project={project}></ProjectPastProposals>,
+    },
   ];
 
   useEffect(() => {

@@ -62,7 +62,7 @@ export default function ProjectPastProposals({ project }) {
       });
       results.sort(
         (first, second) =>
-          new Date(second.event.startDate) - new Date(first.event.startDate),
+          new Date(second.createdAt) - new Date(first.createdAt),
       );
       if (!isMountedRef.current) return;
       setData(results);

@@ -14,7 +14,7 @@ import CardContent from '@material-ui/core/CardContent';
 import Typography from '@material-ui/core/Typography';
 import { useTranslation } from 'react-i18next';
 import NumberFormat from 'react-number-format';
-import { fade } from '@material-ui/core/styles/colorManipulator';
+import { alpha } from '@material-ui/core/styles';
 
 import { request } from 'utils/graph';
 import { getUser } from 'graphql/queries';
@@ -28,7 +28,7 @@ const useStyles = makeStyles((theme) => ({
     // margin: theme.spacing(1),
     'height': '100%',
     '&:hover': {
-      backgroundColor: fade(theme.palette.secondary.light, 0.1),
+      backgroundColor: alpha(theme.palette.secondary.light, 0.1),
     },
   },
   media: {

@@ -1,15 +1,18 @@
-import React, { useEffect, useState } from 'react';
+import React, { useEffect, useState, useRef } from 'react';
 import PropTypes from 'prop-types';
 import { makeStyles } from '@material-ui/core/styles';
 import { useTranslation } from 'react-i18next';
 import { request } from 'utils/graph';
 import { getEventProjectsByProjectId } from 'graphql/queries';
-import Table from '@material-ui/core/Table';
-import TableBody from '@material-ui/core/TableBody';
-import TableRow from '@material-ui/core/TableRow';
-import TableCell from '@material-ui/core/TableCell';
-import TableHead from '@material-ui/core/TableHead';
 import moment from 'moment';
+import {
+  Table,
+  TableBody,
+  TableCell,
+  TableContainer,
+  TableHead,
+  TableRow,
+} from '@material-ui/core';
 
 const useStyles = makeStyles((theme) => ({
   root: {
@@ -19,6 +22,12 @@ const useStyles = makeStyles((theme) => ({
   },
   hoursContainer: {
     paddingRight: theme.spacing(2),
+  },
+  links: {
+    padding: 0,
+  },
+  tableContainer: {
+    maxHeight: '70vh',
   },
 }));
 
@@ -38,7 +47,10 @@ export default function ProjectPastProposals({ project }) {
   const classes = useStyles();
   const { t } = useTranslation();
   const [data, setData] = useState([]);
+  const isMountedRef = useRef(true);
+
   useEffect(() => {
+    isMountedRef.current = true;
     if (!project) return;
     (async () => {
       const {
@@ -48,32 +60,59 @@ export default function ProjectPastProposals({ project }) {
       } = await request(getEventProjectsByProjectId, {
         projectId: project.id,
       });
-      results.sort((first, second) => new Date(second.event.startDate) - new Date(first.event.startDate));
+      results.sort(
+        (first, second) =>
+          new Date(second.event.startDate) - new Date(first.event.startDate),
+      );
+      if (!isMountedRef.current) return;
       setData(results);
     })();
   }, [project]);
 
   return (
-    <Table className={classes.root}>
-      <TableHead>
-        <TableRow>
-          <TableCell>{t('event_name')}</TableCell>
-          <TableCell>{t('event_StartDate')}</TableCell>
-          <TableCell>{t('project_proposalName')}</TableCell>
-        </TableRow>
-      </TableHead>
-      <TableBody>
-        {data.map((item) => (
-          <TableRow key={item.id}>
-            <TableCell>{formatEventName(item.event.name).nth}</TableCell>
-            <TableCell>
-              {moment(item.event.startDate).format('YYYY-MM-DD')}
-            </TableCell>
-            <TableCell>{item.title}</TableCell>
+    <TableContainer className={classes.tableContainer}>
+      <Table className={classes.root} stickyHeader aria-label="sticky table">
+        <TableHead>
+          <TableRow>
+            <TableCell>{t('event_name')}</TableCell>
+            <TableCell>{t('event_StartDate')}</TableCell>
+            <TableCell>{t('project_proposalName')}</TableCell>
+            <TableCell>{t('project_proposalDescription')}</TableCell>
+            <TableCell>{t('project_createdBy')}</TableCell>
+            <TableCell>{t('project_proposalLinks')}</TableCell>
           </TableRow>
-        ))}
-      </TableBody>
-    </Table>
+        </TableHead>
+        <TableBody>
+          {data.map((item) => (
+            <TableRow key={item.id}>
+              <TableCell>{formatEventName(item.event.name).nth}</TableCell>
+              <TableCell>
+                {moment(item.event.startDate).format('YYYY-MM-DD')}
+              </TableCell>
+              <TableCell>{item.title}</TableCell>
+              <TableCell>{item.description}</TableCell>
+              <TableCell>{item.user.name}</TableCell>
+              <TableCell>
+                <ul className={classes.links}>
+                  {item.links.map((link, idx) => (
+                    <li key={idx}>
+                      <a
+                        href={link.url}
+                        target="_blank"
+                        rel="noreferrer"
+                        title={link.name}
+                      >
+                        {link.name}
+                      </a>
+                    </li>
+                  ))}
+                </ul>
+              </TableCell>
+            </TableRow>
+          ))}
+        </TableBody>
+      </Table>
+    </TableContainer>
   );
 }
 

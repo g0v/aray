@@ -119,7 +119,7 @@ try {
 function formatLink(link) {
   return {
       name: link.indexOf("http") != 0 ? link : new URL(link).host,
-      link,
+      url:link,
   };
 }
 

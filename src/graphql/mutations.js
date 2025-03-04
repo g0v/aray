@@ -443,6 +443,84 @@ export const createEventProject = /* GraphQL */ `
           nextToken
         }
       }
+      user {
+        username
+        status
+        name
+        email
+        selfIntroduction
+        location
+        timeZone
+        slackId
+        slackIdUrl
+        urlWebsite
+        urlGithub
+        urlLinkedIn
+        urlFacebook
+        urlTwitter
+        urlInstagram
+        totalCompletedHours
+        totalCompletedTasks
+        avatarS3Key
+        createdAt
+        createdBy
+        updatedAt
+        updatedBy
+        events {
+          items {
+            id
+            eventId
+            projectId
+            status
+            title
+            description
+            createdAt
+            createdBy
+            updatedAt
+            updatedBy
+          }
+          nextToken
+        }
+        needs {
+          items {
+            id
+            needId
+            username
+            createdAt
+            createdBy
+            updatedAt
+            updatedBy
+          }
+          nextToken
+        }
+        projects {
+          items {
+            id
+            projectId
+            username
+            role
+            completedHours
+            completedTasks
+            createdAt
+            createdBy
+            updatedAt
+            updatedBy
+          }
+          nextToken
+        }
+        tags {
+          items {
+            id
+            tagId
+            username
+            createdAt
+            createdBy
+            updatedAt
+            updatedBy
+          }
+          nextToken
+        }
+      }
     }
   }
 `;
@@ -601,6 +679,84 @@ export const updateEventProject = /* GraphQL */ `
           nextToken
         }
       }
+      user {
+        username
+        status
+        name
+        email
+        selfIntroduction
+        location
+        timeZone
+        slackId
+        slackIdUrl
+        urlWebsite
+        urlGithub
+        urlLinkedIn
+        urlFacebook
+        urlTwitter
+        urlInstagram
+        totalCompletedHours
+        totalCompletedTasks
+        avatarS3Key
+        createdAt
+        createdBy
+        updatedAt
+        updatedBy
+        events {
+          items {
+            id
+            eventId
+            projectId
+            status
+            title
+            description
+            createdAt
+            createdBy
+            updatedAt
+            updatedBy
+          }
+          nextToken
+        }
+        needs {
+          items {
+            id
+            needId
+            username
+            createdAt
+            createdBy
+            updatedAt
+            updatedBy
+          }
+          nextToken
+        }
+        projects {
+          items {
+            id
+            projectId
+            username
+            role
+            completedHours
+            completedTasks
+            createdAt
+            createdBy
+            updatedAt
+            updatedBy
+          }
+          nextToken
+        }
+        tags {
+          items {
+            id
+            tagId
+            username
+            createdAt
+            createdBy
+            updatedAt
+            updatedBy
+          }
+          nextToken
+        }
+      }
     }
   }
 `;
@@ -751,6 +907,84 @@ export const deleteEventProject = /* GraphQL */ `
             role
             completedHours
             completedTasks
+            createdAt
+            createdBy
+            updatedAt
+            updatedBy
+          }
+          nextToken
+        }
+      }
+      user {
+        username
+        status
+        name
+        email
+        selfIntroduction
+        location
+        timeZone
+        slackId
+        slackIdUrl
+        urlWebsite
+        urlGithub
+        urlLinkedIn
+        urlFacebook
+        urlTwitter
+        urlInstagram
+        totalCompletedHours
+        totalCompletedTasks
+        avatarS3Key
+        createdAt
+        createdBy
+        updatedAt
+        updatedBy
+        events {
+          items {
+            id
+            eventId
+            projectId
+            status
+            title
+            description
+            createdAt
+            createdBy
+            updatedAt
+            updatedBy
+          }
+          nextToken
+        }
+        needs {
+          items {
+            id
+            needId
+            username
+            createdAt
+            createdBy
+            updatedAt
+            updatedBy
+          }
+          nextToken
+        }
+        projects {
+          items {
+            id
+            projectId
+            username
+            role
+            completedHours
+            completedTasks
+            createdAt
+            createdBy
+            updatedAt
+            updatedBy
+          }
+          nextToken
+        }
+        tags {
+          items {
+            id
+            tagId
+            username
             createdAt
             createdBy
             updatedAt
@@ -949,6 +1183,30 @@ export const createProject = /* GraphQL */ `
             totalCompletedHours
             totalCompletedTasks
             totalContributors
+            avatarS3Key
+            createdAt
+            createdBy
+            updatedAt
+            updatedBy
+          }
+          user {
+            username
+            status
+            name
+            email
+            selfIntroduction
+            location
+            timeZone
+            slackId
+            slackIdUrl
+            urlWebsite
+            urlGithub
+            urlLinkedIn
+            urlFacebook
+            urlTwitter
+            urlInstagram
+            totalCompletedHours
+            totalCompletedTasks
             avatarS3Key
             createdAt
             createdBy
@@ -1280,6 +1538,30 @@ export const updateProject = /* GraphQL */ `
             updatedAt
             updatedBy
           }
+          user {
+            username
+            status
+            name
+            email
+            selfIntroduction
+            location
+            timeZone
+            slackId
+            slackIdUrl
+            urlWebsite
+            urlGithub
+            urlLinkedIn
+            urlFacebook
+            urlTwitter
+            urlInstagram
+            totalCompletedHours
+            totalCompletedTasks
+            avatarS3Key
+            createdAt
+            createdBy
+            updatedAt
+            updatedBy
+          }
         }
         nextToken
       }
@@ -1599,6 +1881,30 @@ export const deleteProject = /* GraphQL */ `
             totalCompletedHours
             totalCompletedTasks
             totalContributors
+            avatarS3Key
+            createdAt
+            createdBy
+            updatedAt
+            updatedBy
+          }
+          user {
+            username
+            status
+            name
+            email
+            selfIntroduction
+            location
+            timeZone
+            slackId
+            slackIdUrl
+            urlWebsite
+            urlGithub
+            urlLinkedIn
+            urlFacebook
+            urlTwitter
+            urlInstagram
+            totalCompletedHours
+            totalCompletedTasks
             avatarS3Key
             createdAt
             createdBy
@@ -3643,6 +3949,94 @@ export const createUser = /* GraphQL */ `
       createdBy
       updatedAt
       updatedBy
+      events {
+        items {
+          id
+          eventId
+          projectId
+          status
+          title
+          description
+          links {
+            name
+            description
+            url
+          }
+          createdAt
+          createdBy
+          updatedAt
+          updatedBy
+          event {
+            id
+            projectId
+            name
+            type
+            description
+            startDate
+            endDate
+            duration
+            hosts
+            annouceToContributors
+            guestLimit
+            attendanceCount
+            rsvpQuestion
+            rsvpLimit
+            rsvpOpenTime
+            rsvpCloseTime
+            location
+            link
+            createdAt
+            createdBy
+            updatedAt
+            updatedBy
+          }
+          project {
+            id
+            status
+            owner
+            managers
+            name
+            altName
+            summary
+            description
+            slackChannel
+            slackChannelUrl
+            totalCompletedHours
+            totalCompletedTasks
+            totalContributors
+            avatarS3Key
+            createdAt
+            createdBy
+            updatedAt
+            updatedBy
+          }
+          user {
+            username
+            status
+            name
+            email
+            selfIntroduction
+            location
+            timeZone
+            slackId
+            slackIdUrl
+            urlWebsite
+            urlGithub
+            urlLinkedIn
+            urlFacebook
+            urlTwitter
+            urlInstagram
+            totalCompletedHours
+            totalCompletedTasks
+            avatarS3Key
+            createdAt
+            createdBy
+            updatedAt
+            updatedBy
+          }
+        }
+        nextToken
+      }
       needs {
         items {
           id
@@ -3821,6 +4215,94 @@ export const updateUser = /* GraphQL */ `
       createdBy
       updatedAt
       updatedBy
+      events {
+        items {
+          id
+          eventId
+          projectId
+          status
+          title
+          description
+          links {
+            name
+            description
+            url
+          }
+          createdAt
+          createdBy
+          updatedAt
+          updatedBy
+          event {
+            id
+            projectId
+            name
+            type
+            description
+            startDate
+            endDate
+            duration
+            hosts
+            annouceToContributors
+            guestLimit
+            attendanceCount
+            rsvpQuestion
+            rsvpLimit
+            rsvpOpenTime
+            rsvpCloseTime
+            location
+            link
+            createdAt
+            createdBy
+            updatedAt
+            updatedBy
+          }
+          project {
+            id
+            status
+            owner
+            managers
+            name
+            altName
+            summary
+            description
+            slackChannel
+            slackChannelUrl
+            totalCompletedHours
+            totalCompletedTasks
+            totalContributors
+            avatarS3Key
+            createdAt
+            createdBy
+            updatedAt
+            updatedBy
+          }
+          user {
+            username
+            status
+            name
+            email
+            selfIntroduction
+            location
+            timeZone
+            slackId
+            slackIdUrl
+            urlWebsite
+            urlGithub
+            urlLinkedIn
+            urlFacebook
+            urlTwitter
+            urlInstagram
+            totalCompletedHours
+            totalCompletedTasks
+            avatarS3Key
+            createdAt
+            createdBy
+            updatedAt
+            updatedBy
+          }
+        }
+        nextToken
+      }
       needs {
         items {
           id
@@ -3999,6 +4481,94 @@ export const deleteUser = /* GraphQL */ `
       createdBy
       updatedAt
       updatedBy
+      events {
+        items {
+          id
+          eventId
+          projectId
+          status
+          title
+          description
+          links {
+            name
+            description
+            url
+          }
+          createdAt
+          createdBy
+          updatedAt
+          updatedBy
+          event {
+            id
+            projectId
+            name
+            type
+            description
+            startDate
+            endDate
+            duration
+            hosts
+            annouceToContributors
+            guestLimit
+            attendanceCount
+            rsvpQuestion
+            rsvpLimit
+            rsvpOpenTime
+            rsvpCloseTime
+            location
+            link
+            createdAt
+            createdBy
+            updatedAt
+            updatedBy
+          }
+          project {
+            id
+            status
+            owner
+            managers
+            name
+            altName
+            summary
+            description
+            slackChannel
+            slackChannelUrl
+            totalCompletedHours
+            totalCompletedTasks
+            totalContributors
+            avatarS3Key
+            createdAt
+            createdBy
+            updatedAt
+            updatedBy
+          }
+          user {
+            username
+            status
+            name
+            email
+            selfIntroduction
+            location
+            timeZone
+            slackId
+            slackIdUrl
+            urlWebsite
+            urlGithub
+            urlLinkedIn
+            urlFacebook
+            urlTwitter
+            urlInstagram
+            totalCompletedHours
+            totalCompletedTasks
+            avatarS3Key
+            createdAt
+            createdBy
+            updatedAt
+            updatedBy
+          }
+        }
+        nextToken
+      }
       needs {
         items {
           id
@@ -4193,6 +4763,21 @@ export const createUserNeed = /* GraphQL */ `
         createdBy
         updatedAt
         updatedBy
+        events {
+          items {
+            id
+            eventId
+            projectId
+            status
+            title
+            description
+            createdAt
+            createdBy
+            updatedAt
+            updatedBy
+          }
+          nextToken
+        }
         needs {
           items {
             id
@@ -4280,6 +4865,21 @@ export const updateUserNeed = /* GraphQL */ `
         createdBy
         updatedAt
         updatedBy
+        events {
+          items {
+            id
+            eventId
+            projectId
+            status
+            title
+            description
+            createdAt
+            createdBy
+            updatedAt
+            updatedBy
+          }
+          nextToken
+        }
         needs {
           items {
             id
@@ -4367,6 +4967,21 @@ export const deleteUserNeed = /* GraphQL */ `
         createdBy
         updatedAt
         updatedBy
+        events {
+          items {
+            id
+            eventId
+            projectId
+            status
+            title
+            description
+            createdAt
+            createdBy
+            updatedAt
+            updatedBy
+          }
+          nextToken
+        }
         needs {
           items {
             id
@@ -4559,6 +5174,21 @@ export const createUserProject = /* GraphQL */ `
         createdBy
         updatedAt
         updatedBy
+        events {
+          items {
+            id
+            eventId
+            projectId
+            status
+            title
+            description
+            createdAt
+            createdBy
+            updatedAt
+            updatedBy
+          }
+          nextToken
+        }
         needs {
           items {
             id
@@ -4751,6 +5381,21 @@ export const updateUserProject = /* GraphQL */ `
         createdBy
         updatedAt
         updatedBy
+        events {
+          items {
+            id
+            eventId
+            projectId
+            status
+            title
+            description
+            createdAt
+            createdBy
+            updatedAt
+            updatedBy
+          }
+          nextToken
+        }
         needs {
           items {
             id
@@ -4943,6 +5588,21 @@ export const deleteUserProject = /* GraphQL */ `
         createdBy
         updatedAt
         updatedBy
+        events {
+          items {
+            id
+            eventId
+            projectId
+            status
+            title
+            description
+            createdAt
+            createdBy
+            updatedAt
+            updatedBy
+          }
+          nextToken
+        }
         needs {
           items {
             id
@@ -5030,6 +5690,21 @@ export const createUserTag = /* GraphQL */ `
         createdBy
         updatedAt
         updatedBy
+        events {
+          items {
+            id
+            eventId
+            projectId
+            status
+            title
+            description
+            createdAt
+            createdBy
+            updatedAt
+            updatedBy
+          }
+          nextToken
+        }
         needs {
           items {
             id
@@ -5117,6 +5792,21 @@ export const updateUserTag = /* GraphQL */ `
         createdBy
         updatedAt
         updatedBy
+        events {
+          items {
+            id
+            eventId
+            projectId
+            status
+            title
+            description
+            createdAt
+            createdBy
+            updatedAt
+            updatedBy
+          }
+          nextToken
+        }
         needs {
           items {
             id
@@ -5204,6 +5894,21 @@ export const deleteUserTag = /* GraphQL */ `
         createdBy
         updatedAt
         updatedBy
+        events {
+          items {
+            id
+            eventId
+            projectId
+            status
+            title
+            description
+            createdAt
+            createdBy
+            updatedAt
+            updatedBy
+          }
+          nextToken
+        }
         needs {
           items {
             id

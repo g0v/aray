@@ -59,7 +59,9 @@ project_main: 首頁
 project_slackChannel: Slack 頻道
 project_events: 行事曆
 project_proposalName: 提案名稱
-
+project_proposalDescription: 三個關鍵字
+project_proposalLinks: 提案連結
+project_createdBy: 發表者
 
 projectManagerEditor_update: 更新
 projectManagerEditor_title: 共同管理員

@@ -45,6 +45,7 @@ type User
   avatarS3Key: String
 
   projects: [UserProject] @connection(keyName: "byUser", fields: ["username"])
+  events: [EventProject] @connection(keyName: "byCreatedBy", fields: ["username"])
   tags: [UserTag] @connection(keyName: "byUser", fields: ["username"])
   needs: [UserNeed] @connection(keyName: "byUser", fields: ["username"])
 

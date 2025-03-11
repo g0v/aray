@@ -2,8 +2,8 @@ type EventProject
   @model
   @key(name: "byEventIdByStatus",
     fields: ["eventId","status"], queryField: "getEventProjectsByEventIdByStatus")
-  @key(name: "byProjectId", fields: ["projectId", "status"], queryField: "getEventProjectsByProjectId")
-  @key(name: "byCreatedBy", fields: ["createdBy", "status"], queryField: "getEventProjectsByCreatedBy")
+  @key(name: "byProjectId", fields: ["projectId"], queryField: "getEventProjectsByProjectId")
+  @key(name: "byCreatedBy", fields: ["createdBy"], queryField: "getEventProjectsByCreatedBy")
   @auth(rules: [
     { allow: public, operations: [read] },
     # update through custom resovler (need to update the event.attendanceCount)

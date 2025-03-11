@@ -12,6 +12,7 @@ import {
   TableContainer,
   TableHead,
   TableRow,
+  TablePagination,
 } from '@material-ui/core';
 
 const useStyles = makeStyles((theme) => ({
@@ -48,71 +49,99 @@ export default function ProjectPastProposals({ project }) {
   const { t } = useTranslation();
   const [data, setData] = useState([]);
   const isMountedRef = useRef(true);
+  const [rowsPerPage, setRowsPerPage] = React.useState(5);
+  const [page, setPage] = React.useState(0);
+  const [fetchNextToken, setNextToken] = useState(null); // 分頁的 cursor
+
+  const handleChangePage = (event, newPage) => {
+    setPage(newPage);
+    fetchgetEventProjectsByProjectId();
+  };
+
+  const handleChangeRowsPerPage = (event) => {
+    setRowsPerPage(parseInt(event.target.value, 10));
+    setPage(0);
+  };
+
+  const fetchgetEventProjectsByProjectId = async () => {
+    const {
+      data: {
+        getEventProjectsByProjectId: { items: results, nextToken },
+      },
+    } = await request(getEventProjectsByProjectId, {
+      projectId: project.id,
+      limit: rowsPerPage,
+      nextToken: fetchNextToken,
+      sortDirection: 'DESC',
+    });
+    results.sort((first, second) => new Date(second.createdAt) - new Date(first.createdAt) );
+    if (!isMountedRef.current) return;
+    setData(results);
+    setNextToken(nextToken);
+  };
 
   useEffect(() => {
     isMountedRef.current = true;
     if (!project) return;
-    (async () => {
-      const {
-        data: {
-          getEventProjectsByProjectId: { items: results },
-        },
-      } = await request(getEventProjectsByProjectId, {
-        projectId: project.id,
-      });
-      results.sort(
-        (first, second) =>
-          new Date(second.createdAt) - new Date(first.createdAt),
-      );
-      if (!isMountedRef.current) return;
-      setData(results);
-    })();
-  }, [project]);
+    fetchgetEventProjectsByProjectId();
+  }, [project, rowsPerPage]);
 
   return (
-    <TableContainer className={classes.tableContainer}>
-      <Table className={classes.root} stickyHeader aria-label="sticky table">
-        <TableHead>
-          <TableRow>
-            <TableCell>{t('event_name')}</TableCell>
-            <TableCell>{t('event_StartDate')}</TableCell>
-            <TableCell>{t('project_proposalName')}</TableCell>
-            <TableCell>{t('project_proposalDescription')}</TableCell>
-            <TableCell>{t('project_createdBy')}</TableCell>
-            <TableCell>{t('project_proposalLinks')}</TableCell>
-          </TableRow>
-        </TableHead>
-        <TableBody>
-          {data.map((item) => (
-            <TableRow key={item.id}>
-              <TableCell>{formatEventName(item.event.name).nth}</TableCell>
-              <TableCell>
-                {moment(item.event.startDate).format('YYYY-MM-DD')}
-              </TableCell>
-              <TableCell>{item.title}</TableCell>
-              <TableCell>{item.description}</TableCell>
-              <TableCell>{item.user.name}</TableCell>
-              <TableCell>
-                <ul className={classes.links}>
-                  {item.links.map((link, idx) => (
-                    <li key={idx}>
-                      <a
-                        href={link.url}
-                        target="_blank"
-                        rel="noreferrer"
-                        title={link.name}
-                      >
-                        {link.name}
-                      </a>
-                    </li>
-                  ))}
-                </ul>
-              </TableCell>
+    <div>
+      <TableContainer className={classes.tableContainer}>
+        <Table className={classes.root} stickyHeader aria-label="sticky table">
+          <TableHead>
+            <TableRow>
+              <TableCell>{t('event_name')}</TableCell>
+              <TableCell>{t('event_StartDate')}</TableCell>
+              <TableCell>{t('project_proposalName')}</TableCell>
+              <TableCell>{t('project_proposalDescription')}</TableCell>
+              <TableCell>{t('project_createdBy')}</TableCell>
+              <TableCell>{t('project_proposalLinks')}</TableCell>
             </TableRow>
-          ))}
-        </TableBody>
-      </Table>
-    </TableContainer>
+          </TableHead>
+          <TableBody>
+            {data.map((item) => (
+              <TableRow key={item.id}>
+                <TableCell>{formatEventName(item.event.name).nth}</TableCell>
+                <TableCell>
+                  {moment(item.event.startDate).format('YYYY-MM-DD')}
+                </TableCell>
+                <TableCell>{item.title}</TableCell>
+                <TableCell>{item.description}</TableCell>
+                <TableCell>{item.user.name}</TableCell>
+                <TableCell>
+                  <ul className={classes.links}>
+                    {item.links.map((link, idx) => (
+                      <li key={idx}>
+                        <a
+                          href={link.url}
+                          target="_blank"
+                          rel="noreferrer"
+                          title={link.name}
+                        >
+                          {link.name}
+                        </a>
+                      </li>
+                    ))}
+                  </ul>
+                </TableCell>
+              </TableRow>
+            ))}
+          </TableBody>
+        </Table>
+      </TableContainer>
+      <TablePagination
+        rowsPerPageOptions={[5, 10, 25]}
+        component="div"
+        count={-1}
+        rowsPerPage={rowsPerPage}
+        page={page}
+        onPageChange={handleChangePage}
+        onRowsPerPageChange={handleChangeRowsPerPage}
+        nextIconButtonProps={{ disabled: !fetchNextToken }} // 如果沒有下一頁，禁用按鈕
+      />
+    </div>
   );
 }
 

@@ -878,6 +878,7 @@ export const getEventProjectsByEventIdByStatus = /* GraphQL */ `
 export const getEventProjectsByProjectId = /* GraphQL */ `
   query GetEventProjectsByProjectId(
     $projectId: ID
+    $createdAt: ModelStringKeyConditionInput
     $sortDirection: ModelSortDirection
     $filter: ModelEventProjectFilterInput
     $limit: Int
@@ -885,6 +886,7 @@ export const getEventProjectsByProjectId = /* GraphQL */ `
   ) {
     getEventProjectsByProjectId(
       projectId: $projectId
+      createdAt: $createdAt
       sortDirection: $sortDirection
       filter: $filter
       limit: $limit
@@ -1024,6 +1026,7 @@ export const getEventProjectsByProjectId = /* GraphQL */ `
 export const getEventProjectsByCreatedBy = /* GraphQL */ `
   query GetEventProjectsByCreatedBy(
     $createdBy: String
+    $createdAt: ModelStringKeyConditionInput
     $sortDirection: ModelSortDirection
     $filter: ModelEventProjectFilterInput
     $limit: Int
@@ -1031,6 +1034,7 @@ export const getEventProjectsByCreatedBy = /* GraphQL */ `
   ) {
     getEventProjectsByCreatedBy(
       createdBy: $createdBy
+      createdAt: $createdAt
       sortDirection: $sortDirection
       filter: $filter
       limit: $limit

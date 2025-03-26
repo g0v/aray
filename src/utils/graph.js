@@ -20,8 +20,13 @@ export async function request(query, params, authMode) {
     // global.logger.debug(JSON.stringify(res, null, 2));
 
     const time = Date.now() - startedAt;
-    const name = `${query.split('(')[0].replace(/ +/g, ' ').replace(/\n+/g, '')}`;
-    global.logger.info(`API:${name} ${time} ms ${time>THRESHOLD?'***':''}`);
+    const name = `${query
+      .split('(')[0]
+      .replace(/ +/g, ' ')
+      .replace(/\n+/g, '')}`;
+    global.logger.info(
+      `API:${name} ${time} ms ${time > THRESHOLD ? '***' : ''}`,
+    );
   }
 
   if (err) {
@@ -56,3 +61,48 @@ export async function asyncListAll(operation, input = {}, allItems = []) {
 
   return allItems;
 }
+
+export async function fetchPaginatedData({ query, limit, setState, setIsLoading, initialData = [] }) {
+  let allData = initialData;
+  let nextToken = null;
+
+  const username = localStorage.getItem('app:username');
+  const authMode = username ? 'AMAZON_COGNITO_USER_POOLS' : 'API_KEY';
+
+  setIsLoading(true); // 設定 loading state 為 true
+
+  async function fetchData(nextToken) {
+    const params = { limit: limit, nextToken: nextToken };
+    console.log(`[fetchData] Requesting data with params: ${JSON.stringify(params)}`);
+
+    try {
+      const response = await request(query, params, authMode);
+      const { items, nextToken: newNextToken } = response.data[Object.keys(response.data)[0]];
+      console.log(`[fetchData] Received ${items.length} items`);
+      allData = [...allData, ...items];
+      setState(allData); // 使用 setState 更新 state
+
+      if (newNextToken) {
+        console.log(`[fetchData] Next token found: ${newNextToken}`);
+        return newNextToken;
+      } else {
+        console.log('[fetchData] No next token found, request finished.');
+        return null;
+      }
+    } catch (error) {
+      console.error(error);
+      setIsLoading(false);
+      throw error;
+    }
+  }
+
+  nextToken = await fetchData(nextToken);
+
+  while (nextToken) {
+    nextToken = await fetchData(nextToken);
+  }
+
+  setIsLoading(false);
+  console.log('[fetchPaginatedData] All data fetched, total items: ', allData.length);
+}
+

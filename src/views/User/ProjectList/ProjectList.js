@@ -9,7 +9,7 @@ import Card from '@material-ui/core/Card';
 import { useHistory } from 'react-router-dom';
 import querystring from 'query-string';
 
-import { asyncListAll } from 'utils/graph';
+import { fetchPaginatedData } from 'utils/graph';
 import { listProjects } from './ProjectListQueries';
 import ProjectCard from 'components/ProjectCard';
 import DataJoinEditorInput from 'components/DataJoinEditor/DataJoinEditorInput';
@@ -72,31 +72,33 @@ export default function UserProjectList() {
     setFilteredProjects(filtered);
   }, [filters, projects, history]);
 
+  const fetchListProjects = async () => {
+    // TODO: indexing and pagination
+    // const data = await asyncListAll(listProjects, { limit: 100 });
+    fetchPaginatedData({ query: listProjects, limit: 500, setState: setProjects, setIsLoading: setIsLoading });
+    // setProjects(data.sort(sortBy('updatedAt', true)).map((project) => {
+    //   project.tagsString = project.tags.items.map((item) => item.tag.label).join(', ');
+    //   project.categorysString = project.categorys.items.map((item) => item.category.label).join(', ');
+    //   project.needsString = project.needs.items.map((item) => item.need.label).join(', ');
+    //   project.governmentAgencyString = project.governmentAgencies.items.map((item) => item.governmentAgency.label).join(', ');
+    //   return project;
+    // }));
+
+    const filters = querystring.parse(window.location.search);
+    Object.keys(filters).forEach((key) => {
+      if (key !== 'text') {
+        filters[key] = filters[key].split(',');
+      }
+    });
+    console.log(filters);
+    setFilters(filters);
+    setIsInit(true);
+  };
+
   useEffect(() => {
-    (async () => {
-      setIsLoading(true);
-      // TODO: indexing and pagination
-      const data = await asyncListAll(listProjects);
-      setProjects(data.sort(sortBy('updatedAt', true)).map((project) => {
-        project.tagsString = project.tags.items.map((item) => item.tag.label).join(', ');
-        project.categorysString = project.categorys.items.map((item) => item.category.label).join(', ');
-        project.needsString = project.needs.items.map((item) => item.need.label).join(', ');
-        project.governmentAgencyString = project.governmentAgencies.items.map((item) => item.governmentAgency.label).join(', ');
-        return project;
-      }));
-
-      const filters = querystring.parse(window.location.search);
-      Object.keys(filters).forEach((key) => {
-        if (key !== 'text') {
-          filters[key] = filters[key].split(',');
-        }
-      });
-      console.log(filters);
-      setFilters(filters);
-
-      setIsInit(true);
-      setIsLoading(false);
-    })();
+    // setIsLoading(true);
+    fetchListProjects();
+    // setIsLoading(false);
   }, []);
 
   if (!isInit) {

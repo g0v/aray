@@ -24,6 +24,7 @@ export default function UserProjectList() {
   const [isLoading, setIsLoading] = useState(false);
   const [filters, setFilters] = useState({});
   const [filteredProjects, setFilteredProjects] = useState([]);
+  const [sortedAndMappedProjects, setSortedAndMappedProjects] = useState([]);
   const [isInit, setIsInit] = useState(false);
 
   const handleFilter = (key) => (values) => {
@@ -42,40 +43,44 @@ export default function UserProjectList() {
   };
 
   useEffect(() => {
-    const filtered = projects.filter((project) => {
-      let shouldDisplay = true;
-      Object.keys(filters).forEach((key) => {
-        if (key === 'text') {
-          shouldDisplay = [
-            project.name, project.altName, project.summary, project.description,
-            project.tagsString, project.categorysString, project.needsString, project.governmentAgencyString,
-          ].some((value) => {
-            return value ? value.toLowerCase().includes(filters[key]) : false;
-          });
-          return;
-        }
-        const targetValues = filters[key];
-        if (targetValues.length === 0) {
-          return;
-        }
-        const result = project[key].items.some((item) => {
-          return targetValues.includes(item[Object.keys(item)[0]].label);
-        });
-        if (!result) {
-          shouldDisplay = false;
-        }
+    if (projects.length > 0) {
+      const filtered = projects.filter((project) => {
+        const tags = project.tags.items.map((item) => item.tag.label);
+        const categorys = project.categorys.items.map((item) => item.category.label);
+        const needs = project.needs.items.map((item) => item.need.label);
+        const governmentAgencies = project.governmentAgencies.items.map((item) => item.governmentAgency.label);
+
+        return (
+          (filters.text ? project.name.toLowerCase().includes(filters.text.toLowerCase()) : true) &&
+          (filters.tags ? filters.tags.every((tag) => tags.includes(tag)) : true) &&
+          (filters.categorys ? filters.categorys.every((category) => categorys.includes(category)) : true) &&
+          (filters.needs ? filters.needs.every((need) => needs.includes(need)) : true) &&
+          (filters.governmentAgencies ? filters.governmentAgencies.every((agency) => governmentAgencies.includes(agency)) : true)
+        );
       });
+      setFilteredProjects(filtered);
+    }
+  }, [filters]);
 
-      return shouldDisplay;
-    });
-
-    setFilteredProjects(filtered);
-  }, [filters, projects, history]);
+  useEffect(() => {
+    if (projects.length > 0) {
+      const sortedProjects = [...projects].sort(sortBy('updatedAt', true));
+      const mappedProjects = sortedProjects.map((project) => {
+        project.tagsString = project.tags.items.map((item) => item.tag.label).join(', ');
+        project.categorysString = project.categorys.items.map((item) => item.category.label).join(', ');
+        project.needsString = project.needs.items.map((item) => item.need.label).join(', ');
+        project.governmentAgencyString = project.governmentAgencies.items.map((item) => item.governmentAgency.label).join(', ');
+        return project;
+      });
+      setSortedAndMappedProjects(mappedProjects);
+      setFilteredProjects(mappedProjects);
+    }
+  }, [projects]);
 
   const fetchListProjects = async () => {
     // TODO: indexing and pagination
     // const data = await asyncListAll(listProjects, { limit: 100 });
-    fetchPaginatedData({ query: listProjects, limit: 500, setState: setProjects, setIsLoading: setIsLoading });
+    fetchPaginatedData({ query: listProjects, limit: 100, setState: setProjects, setIsLoading: setIsLoading });
     // setProjects(data.sort(sortBy('updatedAt', true)).map((project) => {
     //   project.tagsString = project.tags.items.map((item) => item.tag.label).join(', ');
     //   project.categorysString = project.categorys.items.map((item) => item.category.label).join(', ');
@@ -96,9 +101,9 @@ export default function UserProjectList() {
   };
 
   useEffect(() => {
-    // setIsLoading(true);
+    setIsLoading(true);
     fetchListProjects();
-    // setIsLoading(false);
+    setIsLoading(false);
   }, []);
 
   if (!isInit) {

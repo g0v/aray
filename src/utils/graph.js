@@ -83,7 +83,6 @@ export async function fetchPaginatedData({ query, limit, setState, setIsLoading,
       setState(allData); // 使用 setState 更新 state
 
       if (newNextToken) {
-        console.log(`[fetchData] Next token found: ${newNextToken}`);
         return newNextToken;
       } else {
         console.log('[fetchData] No next token found, request finished.');
@@ -102,7 +101,6 @@ export async function fetchPaginatedData({ query, limit, setState, setIsLoading,
     nextToken = await fetchData(nextToken);
   }
 
-  setIsLoading(false);
   console.log('[fetchPaginatedData] All data fetched, total items: ', allData.length);
 }
 

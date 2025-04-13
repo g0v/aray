@@ -24,14 +24,19 @@ export default function LandingPage() {
   return (
     <Container>
       <Grid className={classes.content} container>
-        <Grid item xs={12} md={6} container justifyContent="center">
+        <Grid item xs={12} md={4} container justifyContent="center">
           <Button size="large" variant="contained" color="secondary" className={classes.button} to={'/projects'} component={Link}>
             {t('title_projectList')}
           </Button>
         </Grid>
-        <Grid item xs={12} md={6} container justifyContent="center">
+        <Grid item xs={12} md={4} container justifyContent="center">
           <Button size="large" variant="contained" color="secondary" className={classes.button} to={'/users'} component={Link}>
             {t('title_userList')}
+          </Button>
+        </Grid>
+        <Grid item xs={12} md={4} container justifyContent="center">
+          <Button size="large" variant="contained" color="secondary" className={classes.button} to={'/events'} component={Link}>
+            {t('title_eventList')}
           </Button>
         </Grid>
       </Grid>

@@ -14,14 +14,12 @@ async function kktixpage(url) {
       const doc = parse(page);
       const attendance = doc.querySelector('.info-count');
       console.log('attendance', trimSpace(attendance.innerText));
-      return {
-        attendance: parseAttentence(trimSpace( attendance.innerText)),
-      };
+      return  parseAttentence(trimSpace( attendance.innerText));
     } else {
-      return { attendance: { current: 0, limit: 0 } };
+      return { current: 0, limit: 0 };
     }
   } catch (error) {
-    return { attendance: { current: 0, limit: 0 } };
+    return { current: 0, limit: 0 } ;
   }
 }
 
@@ -33,7 +31,7 @@ async function kktixpage(url) {
  */
 function parseAttentence(attentence) {
   const [current, limit] = attentence.split(' / ');
-  return { current, limit };
+  return { current: parseInt(current), limit: parseInt(limit) };
 }
 
 /**

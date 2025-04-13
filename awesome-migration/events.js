@@ -141,7 +141,7 @@ function sleep(ms) {
   events.then((data) => {
     console.log(data);
     fs.writeFileSync(
-      './data/scripts/aray-events.json',
+      './data/scripts/aray-events-with-attendance.json',
       JSON.stringify(data),
       () => {},
     );

@@ -17,6 +17,7 @@ import ProjectList from 'views/User/ProjectList';
 import Project from 'views/User/Project';
 import UserList from 'views/User/UserList';
 import User from 'views/User/User';
+import EventList from 'views/Event/EventList';
 
 export const generalRoutes = [
   {
@@ -48,6 +49,13 @@ export const generalRoutes = [
     icon: PersonIcon,
     paths: [{ path: '/user/:id', exact: true }],
     component: User,
+    hideFromMenu: true,
+  },
+  {
+    title: 'title_eventList',
+    icon: PersonIcon,
+    paths: [{ path: '/events', exact: true }],
+    component: EventList,
     hideFromMenu: true,
   },
 ].map((item) => {

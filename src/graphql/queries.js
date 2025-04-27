@@ -162,7 +162,10 @@ export const getEvent = /* GraphQL */ `
       rsvpLimit
       rsvpOpenTime
       rsvpCloseTime
-      location
+      location {
+        name
+        address
+      }
       link
       createdAt
       createdBy
@@ -195,7 +198,10 @@ export const listEvents = /* GraphQL */ `
         rsvpLimit
         rsvpOpenTime
         rsvpCloseTime
-        location
+        location {
+          name
+          address
+        }
         link
         createdAt
         createdBy
@@ -240,7 +246,10 @@ export const getEventsByProjectIdByStartDate = /* GraphQL */ `
         rsvpLimit
         rsvpOpenTime
         rsvpCloseTime
-        location
+        location {
+          name
+          address
+        }
         link
         createdAt
         createdBy
@@ -391,7 +400,10 @@ export const getEventProject = /* GraphQL */ `
         rsvpLimit
         rsvpOpenTime
         rsvpCloseTime
-        location
+        location {
+          name
+          address
+        }
         link
         createdAt
         createdBy
@@ -629,7 +641,10 @@ export const listEventProjects = /* GraphQL */ `
           rsvpLimit
           rsvpOpenTime
           rsvpCloseTime
-          location
+          location {
+            name
+            address
+          }
           link
           createdAt
           createdBy
@@ -777,7 +792,10 @@ export const getEventProjectsByEventIdByStatus = /* GraphQL */ `
           rsvpLimit
           rsvpOpenTime
           rsvpCloseTime
-          location
+          location {
+            name
+            address
+          }
           link
           createdAt
           createdBy
@@ -925,7 +943,10 @@ export const getEventProjectsByProjectId = /* GraphQL */ `
           rsvpLimit
           rsvpOpenTime
           rsvpCloseTime
-          location
+          location {
+            name
+            address
+          }
           link
           createdAt
           createdBy
@@ -1073,7 +1094,10 @@ export const getEventProjectsByCreatedBy = /* GraphQL */ `
           rsvpLimit
           rsvpOpenTime
           rsvpCloseTime
-          location
+          location {
+            name
+            address
+          }
           link
           createdAt
           createdBy
@@ -1308,7 +1332,6 @@ export const getProject = /* GraphQL */ `
             rsvpLimit
             rsvpOpenTime
             rsvpCloseTime
-            location
             link
             createdAt
             createdBy
@@ -2929,7 +2952,6 @@ export const getUser = /* GraphQL */ `
             rsvpLimit
             rsvpOpenTime
             rsvpCloseTime
-            location
             link
             createdAt
             createdBy

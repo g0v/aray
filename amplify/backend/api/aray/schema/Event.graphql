@@ -33,7 +33,7 @@ type Event
   rsvpCloseTime: AWSDateTime!
 
   # what about online event?
-  location: String # address
+  location: [Location] # address
   link: AWSURL # meeting url
 
   # how to handle repeat event and attendance?
@@ -49,4 +49,9 @@ type Event
   createdBy: String!
   updatedAt: AWSDateTime!
   updatedBy: String!
+}
+
+type Location {
+  name: String!
+  address: String!
 }

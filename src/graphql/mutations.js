@@ -163,7 +163,10 @@ export const createEvent = /* GraphQL */ `
       rsvpLimit
       rsvpOpenTime
       rsvpCloseTime
-      location
+      location {
+        name
+        address
+      }
       link
       createdAt
       createdBy
@@ -194,7 +197,10 @@ export const updateEvent = /* GraphQL */ `
       rsvpLimit
       rsvpOpenTime
       rsvpCloseTime
-      location
+      location {
+        name
+        address
+      }
       link
       createdAt
       createdBy
@@ -225,7 +231,10 @@ export const deleteEvent = /* GraphQL */ `
       rsvpLimit
       rsvpOpenTime
       rsvpCloseTime
-      location
+      location {
+        name
+        address
+      }
       link
       createdAt
       createdBy
@@ -326,7 +335,10 @@ export const createEventProject = /* GraphQL */ `
         rsvpLimit
         rsvpOpenTime
         rsvpCloseTime
-        location
+        location {
+          name
+          address
+        }
         link
         createdAt
         createdBy
@@ -562,7 +574,10 @@ export const updateEventProject = /* GraphQL */ `
         rsvpLimit
         rsvpOpenTime
         rsvpCloseTime
-        location
+        location {
+          name
+          address
+        }
         link
         createdAt
         createdBy
@@ -798,7 +813,10 @@ export const deleteEventProject = /* GraphQL */ `
         rsvpLimit
         rsvpOpenTime
         rsvpCloseTime
-        location
+        location {
+          name
+          address
+        }
         link
         createdAt
         createdBy
@@ -1162,7 +1180,6 @@ export const createProject = /* GraphQL */ `
             rsvpLimit
             rsvpOpenTime
             rsvpCloseTime
-            location
             link
             createdAt
             createdBy
@@ -1511,7 +1528,6 @@ export const updateProject = /* GraphQL */ `
             rsvpLimit
             rsvpOpenTime
             rsvpCloseTime
-            location
             link
             createdAt
             createdBy
@@ -1860,7 +1876,6 @@ export const deleteProject = /* GraphQL */ `
             rsvpLimit
             rsvpOpenTime
             rsvpCloseTime
-            location
             link
             createdAt
             createdBy
@@ -3983,7 +3998,6 @@ export const createUser = /* GraphQL */ `
             rsvpLimit
             rsvpOpenTime
             rsvpCloseTime
-            location
             link
             createdAt
             createdBy
@@ -4249,7 +4263,6 @@ export const updateUser = /* GraphQL */ `
             rsvpLimit
             rsvpOpenTime
             rsvpCloseTime
-            location
             link
             createdAt
             createdBy
@@ -4515,7 +4528,6 @@ export const deleteUser = /* GraphQL */ `
             rsvpLimit
             rsvpOpenTime
             rsvpCloseTime
-            location
             link
             createdAt
             createdBy

@@ -110,7 +110,10 @@ export const onCreateEvent = /* GraphQL */ `
       rsvpLimit
       rsvpOpenTime
       rsvpCloseTime
-      location
+      location {
+        name
+        address
+      }
       link
       createdAt
       createdBy
@@ -138,7 +141,10 @@ export const onUpdateEvent = /* GraphQL */ `
       rsvpLimit
       rsvpOpenTime
       rsvpCloseTime
-      location
+      location {
+        name
+        address
+      }
       link
       createdAt
       createdBy
@@ -166,7 +172,10 @@ export const onDeleteEvent = /* GraphQL */ `
       rsvpLimit
       rsvpOpenTime
       rsvpCloseTime
-      location
+      location {
+        name
+        address
+      }
       link
       createdAt
       createdBy
@@ -255,7 +264,10 @@ export const onCreateEventProject = /* GraphQL */ `
         rsvpLimit
         rsvpOpenTime
         rsvpCloseTime
-        location
+        location {
+          name
+          address
+        }
         link
         createdAt
         createdBy
@@ -488,7 +500,10 @@ export const onUpdateEventProject = /* GraphQL */ `
         rsvpLimit
         rsvpOpenTime
         rsvpCloseTime
-        location
+        location {
+          name
+          address
+        }
         link
         createdAt
         createdBy
@@ -721,7 +736,10 @@ export const onDeleteEventProject = /* GraphQL */ `
         rsvpLimit
         rsvpOpenTime
         rsvpCloseTime
-        location
+        location {
+          name
+          address
+        }
         link
         createdAt
         createdBy
@@ -1064,7 +1082,6 @@ export const onCreateProject = /* GraphQL */ `
             rsvpLimit
             rsvpOpenTime
             rsvpCloseTime
-            location
             link
             createdAt
             createdBy
@@ -1410,7 +1427,6 @@ export const onUpdateProject = /* GraphQL */ `
             rsvpLimit
             rsvpOpenTime
             rsvpCloseTime
-            location
             link
             createdAt
             createdBy
@@ -1756,7 +1772,6 @@ export const onDeleteProject = /* GraphQL */ `
             rsvpLimit
             rsvpOpenTime
             rsvpCloseTime
-            location
             link
             createdAt
             createdBy
@@ -3813,7 +3828,6 @@ export const onCreateUser = /* GraphQL */ `
             rsvpLimit
             rsvpOpenTime
             rsvpCloseTime
-            location
             link
             createdAt
             createdBy
@@ -4076,7 +4090,6 @@ export const onUpdateUser = /* GraphQL */ `
             rsvpLimit
             rsvpOpenTime
             rsvpCloseTime
-            location
             link
             createdAt
             createdBy
@@ -4339,7 +4352,6 @@ export const onDeleteUser = /* GraphQL */ `
             rsvpLimit
             rsvpOpenTime
             rsvpCloseTime
-            location
             link
             createdAt
             createdBy

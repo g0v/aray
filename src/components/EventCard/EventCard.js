@@ -20,7 +20,7 @@ import PersonIcon from '@material-ui/icons/Person';
     "hosts": null,
     "id": "c36a2384-468f-4413-b7c2-150c145507c1",
     "link": "https://g0v-jothon.kktix.cc/events/g0v-hackath50n",
-    "location": "{address=台北市中山區松江路101號4樓, name=升級會議中心-松江101館}",
+    "location": {address:台北市中山區松江路101號4樓, name:升級會議中心-松江101館},
     "name": "g0v hackath50n | 台灣零時政府第伍拾次來電五十黑客松 x COSCUP Open Source Contributor Workshop",
     "projectId": "70e932c0-cb50-40f9-aba0-ced935f2d5de",
     "startDate": "2022-06-18T01:30:00.000Z",
@@ -47,7 +47,7 @@ export default function EventCard({ event }) {
     >
       <Card>
         <CardContent>
-          <Typography variant="h3" color="textSecondary" component="h3">
+          <Typography variant="body2" color="textSecondary" component="p">
             {event.name}
           </Typography>
           <Typography variant="body2" color="textSecondary" component="p">
@@ -57,13 +57,13 @@ export default function EventCard({ event }) {
             {event.startDate} ~ {event.endDate}
           </Typography>
           <Typography variant="body2" color="textSecondary" component="p">
-            {event.location}
+            {event.location.name }
           </Typography>
           <Typography variant="body2" color="textSecondary" component="p">
             <PersonIcon></PersonIcon> {event.attendanceCount} / {event.guestLimit}
           </Typography>
           <Typography variant="body2" color="textSecondary" component="p">
-            {event.hosts}
+            {event.hosts || ''}
           </Typography>
           <Typography variant="body2" color="textSecondary" component="p">
             {event.link}
@@ -82,7 +82,7 @@ EventCard.propTypes = {
     description: PropTypes.string.isRequired,
     startDate: PropTypes.string.isRequired,
     endDate: PropTypes.string.isRequired,
-    location: PropTypes.string.isRequired,
+    location: PropTypes.object,
     createdAt: PropTypes.string.isRequired,
     updatedAt: PropTypes.string.isRequired,
     attendanceCount: PropTypes.number.isRequired,

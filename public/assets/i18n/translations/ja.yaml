@@ -138,3 +138,5 @@ user_tags: タグ
 user_totalCompletedHours: 総コントリビューション時間
 user_totalCompletedTasks: 総完了タスク数
 user_totalHoursInThePastYear: 過去１年間のコントリビューション時間
+
+eventList_events: Event List

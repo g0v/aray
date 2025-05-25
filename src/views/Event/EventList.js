@@ -7,10 +7,10 @@ import DataJoinEditorInput from 'components/DataJoinEditor/DataJoinEditorInput';
 import { request } from 'utils/graph';
 import { listEvents } from 'graphql/queries';
 import { sortBy } from 'utils/sorting';
-import { use } from 'react';
+import { useTranslation } from 'react-i18next';
 
 export default function EventList() {
-  // Sample event data
+  const { t } = useTranslation();
   const [events, setEvents] = useState([]);
   const [sortedEvents, setSortedEvents] = useState([]);
   const [filters, setFilters] = useState({});
@@ -53,7 +53,7 @@ export default function EventList() {
               align="center"
               style={{ marginTop: 16 }}
             >
-              Event List
+              {t('eventList_events')}
             </Typography>
           </Grid>
           <Grid item xs={12} md={3}>

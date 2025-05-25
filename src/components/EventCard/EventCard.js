@@ -65,9 +65,6 @@ export default function EventCard({ event }) {
           <Typography variant="body2" color="textSecondary" component="p">
             {event.hosts || ''}
           </Typography>
-          <Typography variant="body2" color="textSecondary" component="p">
-            {event.link}
-          </Typography>
         </CardContent>
       </Card>
     </Link>

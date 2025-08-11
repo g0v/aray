@@ -7,7 +7,10 @@ import Typography from '@material-ui/core/Typography';
 import { useTranslation } from 'react-i18next';
 import Card from '@material-ui/core/Card';
 import CardContent from '@material-ui/core/CardContent';
+import CardMedia from '@material-ui/core/CardMedia';
 import PersonIcon from '@material-ui/icons/Person';
+import LocationOnIcon from '@material-ui/icons/LocationOn';
+import EventIcon from '@material-ui/icons/Event';
 
 /**
  * data sample
@@ -29,11 +32,29 @@ import PersonIcon from '@material-ui/icons/Person';
 }
  */
 const useStyles = makeStyles((theme) => ({
+  root: {
+    display: 'flex',
+  },
+  eventImg: {
+    width: 140,
+    height: 140,
+    alignSelf: 'center',
+    padding: theme.spacing(2),
+  },
+  alignItems: {
+    alignItems: 'center', // 垂直方向居中
+    display: 'flex',
+  },
+  iconSpacing: {
+    marginRight: theme.spacing(1), // 添加右邊間距
+  },
+  description: {
+    fontSize: '1.25rem', // 14px
+  },
 }));
 
 export default function EventCard({ event }) {
   const classes = useStyles();
-  const { t } = useTranslation();
 
   if (!event) return null;
   return (
@@ -45,22 +66,32 @@ export default function EventCard({ event }) {
         height: '100%',
       }}
     >
-      <Card>
+      <Card className={classes.root} variant='elevation'>
+        <CardMedia
+          className={classes.eventImg}
+          component="img"
+          alt={event.name}
+          height="140"
+          width={140}
+          image={`https://api.dicebear.com/9.x/shapes/svg?seed=${event.id}`}
+          title={event.name}
+        />
         <CardContent>
-          <Typography variant="body2" color="textSecondary" component="p">
+          <Typography variant="h5" component="h3" color="primary" gutterBottom>
             {event.name}
           </Typography>
-          <Typography variant="body2" color="textSecondary" component="p">
+          <Typography variant="body2" color="textPrimary" component="p" className={classes.description} gutterBottom>
             {event.description}
           </Typography>
-          <Typography variant="body2" color="textSecondary" component="p">
-            {event.startDate} ~ {event.endDate}
+          <Typography variant="body2" color="textSecondary" component="p" className={classes.alignItems}>
+            <EventIcon className={classes.iconSpacing} ></EventIcon> {event.startDate} ~ {event.endDate}
           </Typography>
-          <Typography variant="body2" color="textSecondary" component="p">
-            {event.location.name }
+          <Typography variant="body2" color="textSecondary" component="p" className={classes.alignItems}>
+            <LocationOnIcon className={classes.iconSpacing} ></LocationOnIcon> {event.location.name} {event.location.address}
           </Typography>
-          <Typography variant="body2" color="textSecondary" component="p">
-            <PersonIcon></PersonIcon> {event.attendanceCount} / {event.guestLimit}
+          <Typography variant="body2" color="textSecondary" component="p" className={classes.alignItems}>
+            <PersonIcon className={classes.iconSpacing} ></PersonIcon> {event.attendanceCount} /{' '}
+            {event.guestLimit}
           </Typography>
           <Typography variant="body2" color="textSecondary" component="p">
             {event.hosts || ''}
@@ -76,14 +107,14 @@ EventCard.propTypes = {
     id: PropTypes.string.isRequired,
     projectId: PropTypes.string.isRequired,
     name: PropTypes.string.isRequired,
-    description: PropTypes.string.isRequired,
+    description: PropTypes.string,
     startDate: PropTypes.string.isRequired,
     endDate: PropTypes.string.isRequired,
     location: PropTypes.object,
     createdAt: PropTypes.string.isRequired,
     updatedAt: PropTypes.string.isRequired,
-    attendanceCount: PropTypes.number.isRequired,
-    guestLimit: PropTypes.number.isRequired,
+    attendanceCount: PropTypes.number,
+    guestLimit: PropTypes.number,
     type: PropTypes.string.isRequired,
     link: PropTypes.string.isRequired,
     hosts: PropTypes.string,

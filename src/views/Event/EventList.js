@@ -3,7 +3,6 @@ import EventCard from 'components/EventCard/EventCard';
 import { Container, Grid } from '@material-ui/core';
 import Card from '@material-ui/core/Card';
 import Typography from '@material-ui/core/Typography';
-import DataJoinEditorInput from 'components/DataJoinEditor/DataJoinEditorInput';
 import { request } from 'utils/graph';
 import { listEvents } from 'graphql/queries';
 import { sortBy } from 'utils/sorting';
@@ -13,7 +12,6 @@ export default function EventList() {
   const { t } = useTranslation();
   const [events, setEvents] = useState([]);
   const [sortedEvents, setSortedEvents] = useState([]);
-  const [filters, setFilters] = useState({});
   const [isLoading, setIsLoading] = useState(false);
   const handleFilter = (key) => (values) => {};
   const fetchEvents = async () => {
@@ -57,16 +55,7 @@ export default function EventList() {
             </Typography>
           </Grid>
           <Grid item xs={12} md={3}>
-            {/* <DataJoinEditorInput
-              title="Search by Title"
-              mode={''}
-              joinData={[]}
-              defaultValues={[]}
-              onChange={handleFilter('categorys')}
-              onUpdateOptions={() => {}}
-              disabled={isLoading}
-              showHelperText={false}
-            /> */}
+            {/* Add filter components here, e.g., date range, type, etc. */}
           </Grid>
           {/* Add more filters as needed */}
         </Grid>

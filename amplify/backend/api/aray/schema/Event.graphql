@@ -33,7 +33,7 @@ type Event
   rsvpCloseTime: AWSDateTime!
 
   # what about online event?
-  location: [Location] # address
+  location: Location # address
   link: AWSURL # meeting url
 
   # how to handle repeat event and attendance?
